@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A practical Codex field guide for technical minds.">
+<title>Codex Field Guide</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f6f7;--panel:#fff;--alt:#e9eef0;--text:#172126;--muted:#5d6a70;--line:#cbd5d9;--a:#155b66;--soft:#dcebed;--code:#152026;--codet:#edf6f7;--max:1100px}
+@media(prefers-color-scheme:dark){:root{--bg:#101619;--panel:#182126;--alt:#202c31;--text:#edf3f5;--muted:#b6c3c8;--line:#39494f;--a:#8dd2dc;--soft:#20383d;--code:#0c1114;--codet:#eef7f8}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}.wrap{width:min(calc(100% - 30px),var(--max));margin:auto}header{background:var(--panel);border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:22px 0}h1,h2,h3,p{margin-top:0}h1{margin-bottom:4px;font-size:2rem}h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.08;margin-bottom:12px}nav{display:flex;gap:16px;flex-wrap:wrap}a{color:var(--a)}nav a{text-decoration:none;font-weight:700}.eyebrow{color:var(--a);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}.muted{color:var(--muted)}section{padding:64px 0}.alt{background:var(--alt);border-block:1px solid var(--line)}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}.card,.panel,details,.template{background:var(--panel);border:1px solid var(--line);border-radius:10px}.card{display:block;padding:22px;text-decoration:none;color:var(--text)}.card strong{display:block;font-size:1.25rem;margin:4px 0}.card span{color:var(--muted)}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.panel{padding:22px}.map div{display:grid;grid-template-columns:1fr 28px 1fr;padding:9px 0;border-top:1px solid var(--line)}.map div:first-child{border-top:0}.map div:after{content:"→";grid-column:2;grid-row:1;color:var(--muted)}.map b{grid-column:1}.map span{grid-column:3}.callout{padding:20px 22px;background:var(--soft);border-left:5px solid var(--a);border-radius:0 10px 10px 0}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0;list-style:none}.workflow li{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:16px;min-height:125px}.n{display:inline-grid;place-items:center;width:28px;height:28px;border:1px solid var(--a);border-radius:50%;color:var(--a);font-weight:800;margin-bottom:8px}.procedure{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}.procedure div{display:grid;grid-template-columns:44px 1fr;padding:18px;border-top:1px solid var(--line)}.procedure div:first-child{border-top:0}.procedure b:first-child{color:var(--a);font-size:1.2rem}.search{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}.search input{width:min(360px,100%);padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text)}.glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}details{overflow:hidden}summary{cursor:pointer;padding:16px 18px;font-weight:800}.term{padding:0 18px 18px;border-top:1px solid var(--line)}.term h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--a);margin:16px 0 4px}.templates{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.template{overflow:hidden}.thead{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px}.thead h3{margin:0}.copy{border:1px solid var(--a);background:transparent;color:var(--text);padding:7px 11px;border-radius:6px;cursor:pointer;font-weight:700}pre{margin:0;background:var(--code);color:var(--codet);padding:18px;white-space:pre-wrap;overflow:auto;border-top:1px solid var(--line);font-size:.88rem;line-height:1.48}.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chain span{background:var(--soft);padding:8px 10px;border-radius:6px;font-weight:700}footer{padding:34px 0;color:var(--muted)}@media(max-width:800px){header .wrap{align-items:flex-start;flex-direction:column}.cards,.grid2,.glossary,.templates{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}.search{align-items:stretch;flex-direction:column}.search input{width:100%}}@media(max-width:520px){.workflow{grid-template-columns:1fr}.map div{grid-template-columns:1fr}.map div:after{display:none}.map b,.map span{grid-column:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div><div class="eyebrow">Technical reference · v0.1</div><h1>Codex Field Guide</h1><div class="muted">Software engineering for technical minds.</div></div><nav><a href="#start">Start Here</a><a href="#workflow">Workflow</a><a href="#glossary">Glossary</a><a href="#orders">Work Orders</a></nav></div></header>
+<main>
+<section><div class="wrap"><div class="eyebrow">Use this like a field manual, not a textbook.</div><h2>What are you trying to do?</h2><p class="muted">You do not need to read this site in order. Pick the task that matches the problem in front of you.</p><div class="cards">
+<a class="card" href="#diagnose"><small class="eyebrow">I have a problem</small><strong>Troubleshoot</strong><span>Trace the fault before changing the system.</span></a>
+<a class="card" href="#orders"><small class="eyebrow">I want to build or change something</small><strong>Give Codex a Work Order</strong><span>State the goal, limits, and acceptance test.</span></a>
+<a class="card" href="#glossary"><small class="eyebrow">I found an unfamiliar term</small><strong>Look It Up</strong><span>Literal definition first, engineering parallel second.</span></a>
+<a class="card" href="#start"><small class="eyebrow">I want to understand the system</small><strong>Use the Circuit Model</strong><span>Map software structure to familiar engineering concepts.</span></a>
+</div></div></section>
+
+<section id="start" class="alt"><div class="wrap"><div class="eyebrow">Start here</div><h2>The core idea</h2>
+<div class="callout"><strong>Treat Codex like a skilled technician working from a controlled drawing package.</strong><p style="margin:8px 0 0">You provide the required behavior, observed condition, constraints, and acceptance test. Codex can inspect the system, trace how it works, make changes, and run tests. You still verify the result.</p></div>
+<div class="grid2" style="margin-top:20px">
+<div class="panel"><h3>Electrical / engineering model</h3><div class="map">
+<div><b>Drawing package</b><span>Repository</span></div><div><b>Drawing sheet</b><span>File</span></div><div><b>Functional block</b><span>Function / module</span></div><div><b>Signal</b><span>Data</span></div><div><b>Defined interface</b><span>API</span></div><div><b>Diagnostic output</b><span>Logs</span></div><div><b>Test fixture</b><span>Automated tests</span></div><div><b>Engineering change</b><span>Git diff / commit</span></div>
+</div></div>
+<div class="panel"><h3>What Codex needs from you</h3><p><b>1. Goal:</b> what the system must do.</p><p><b>2. Current condition:</b> what it does now.</p><p><b>3. Constraints:</b> what must not be disturbed.</p><p><b>4. Verification:</b> how success will be proven.</p><p class="muted">You do not need to tell Codex how to write every line. Give it the engineering problem and the operating limits.</p></div>
+</div></div></section>
+
+<section id="workflow"><div class="wrap"><div class="eyebrow">Working with Codex</div><h2>The engineering loop</h2><p class="muted">For important work, follow the same sequence every time.</p>
+<ol class="workflow">
+<li><span class="n">1</span><br><b>Requirement</b><p class="muted">Define the desired result and constraints.</p></li>
+<li><span class="n">2</span><br><b>Inspect</b><p class="muted">Read the existing implementation first.</p></li>
+<li><span class="n">3</span><br><b>Trace / Reproduce</b><p class="muted">Follow the data path or reproduce the fault.</p></li>
+<li><span class="n">4</span><br><b>Plan</b><p class="muted">Find the smallest clean integration point.</p></li>
+<li><span class="n">5</span><br><b>Modify</b><p class="muted">Make the bounded change.</p></li>
+<li><span class="n">6</span><br><b>Test</b><p class="muted">Run appropriate checks.</p></li>
+<li><span class="n">7</span><br><b>Review the diff</b><p class="muted">Inspect exactly what changed.</p></li>
+<li><span class="n">8</span><br><b>Verify</b><p class="muted">Compare the result to the original requirement.</p></li>
+</ol>
+<div class="callout"><b>Default instruction:</b><p style="margin:8px 0 0">“Inspect the existing system first. Trace the relevant path, identify the best integration point or root cause, make the smallest clean change, run the appropriate tests, and report what changed and how you verified it.”</p></div>
+</div></section>
+
+<section id="diagnose" class="alt"><div class="wrap"><div class="eyebrow">Troubleshooting</div><h2>Fault-finding procedure</h2>
+<div class="procedure">
+<div><b>1</b><span><b>Define expected behavior.</b><br><span class="muted">State exactly what should happen.</span></span></div>
+<div><b>2</b><span><b>Record observed behavior.</b><br><span class="muted">State what actually happens, including errors or logs.</span></span></div>
+<div><b>3</b><span><b>Reproduce the fault.</b><br><span class="muted">Make the failure repeatable when possible.</span></span></div>
+<div><b>4</b><span><b>Trace the path.</b><br><span class="muted">Follow input → processing → output and find the first divergence.</span></span></div>
+<div><b>5</b><span><b>Identify root cause.</b><br><span class="muted">Do not patch the visible symptom if the fault is upstream.</span></span></div>
+<div><b>6</b><span><b>Correct and verify.</b><br><span class="muted">Make the smallest repair, test it, then check for regressions.</span></span></div>
+</div></div></section>
+
+<section id="glossary"><div class="wrap"><div class="search"><div><div class="eyebrow">Reference</div><h2>Starter glossary</h2><p class="muted">Literal definition first. Engineering analogy second.</p></div><input id="q" type="search" placeholder="Filter terms…"></div>
+<div id="terms" class="glossary">
+<details data-key="repository repo project drawing package"><summary>Repository (repo)</summary><div class="term"><h3>What it is</h3><p>The complete version-controlled collection of files that make up a software project.</p><h3>Engineering parallel</h3><p>The controlled drawing and documentation package for the complete system.</p></div></details>
+<details data-key="file sheet document source"><summary>File</summary><div class="term"><h3>What it is</h3><p>A single stored unit of source code, configuration, documentation, or other project data.</p><h3>Engineering parallel</h3><p>One sheet or document inside the drawing package.</p></div></details>
+<details data-key="function method circuit block input output"><summary>Function</summary><div class="term"><h3>What it is</h3><p>A named block of code that performs an operation. It may receive inputs and return an output.</p><h3>Engineering parallel</h3><p>A functional circuit block with a defined job and interface.</p><h3>Where the analogy breaks</h3><p>Functions can call other functions, modify shared state, and behave in ways with no direct physical equivalent.</p></div></details>
+<details data-key="module subsystem assembly"><summary>Module</summary><div class="term"><h3>What it is</h3><p>A logical unit that groups related code and exposes useful behavior.</p><h3>Engineering parallel</h3><p>A subsystem or assembly made from several cooperating functional blocks.</p></div></details>
+<details data-key="dependency library package external"><summary>Dependency</summary><div class="term"><h3>What it is</h3><p>External code, a library, service, or component another part of the system requires.</p><h3>Engineering parallel</h3><p>A supplied subsystem or component required by your design.</p></div></details>
+<details data-key="api interface endpoint request response"><summary>API</summary><div class="term"><h3>What it is</h3><p>An Application Programming Interface defines how software components communicate: requests, accepted inputs, and returned results.</p><h3>Engineering parallel</h3><p>A defined electrical or communications interface with specified signals and expected behavior.</p><h3>Optional 40K mnemonic</h3><p>A standardized interface between ship systems: internal construction can differ as long as both systems obey the interface.</p></div></details>
+<details data-key="server host client service"><summary>Server</summary><div class="term"><h3>What it is</h3><p>A program or machine that listens for requests and provides data or services to clients.</p><h3>Engineering parallel</h3><p>A shared subsystem providing a defined service to connected systems.</p></div></details>
+<details data-key="database storage records data memory"><summary>Database</summary><div class="term"><h3>What it is</h3><p>A system for storing, organizing, retrieving, and changing persistent structured information.</p><h3>Engineering parallel</h3><p>A controlled records store queried by other systems.</p></div></details>
+<details data-key="commit revision git checkpoint"><summary>Commit</summary><div class="term"><h3>What it is</h3><p>A recorded Git revision containing a specific set of project changes and a message describing them.</p><h3>Engineering parallel</h3><p>A controlled revision checkpoint in the engineering record.</p></div></details>
+<details data-key="diff redline comparison git change"><summary>Diff</summary><div class="term"><h3>What it is</h3><p>A line-by-line comparison showing what was added, removed, or changed between versions.</p><h3>Engineering parallel</h3><p>Redlines or an engineering change comparison between revisions.</p></div></details>
+</div><p id="none" hidden>No matching glossary terms.</p></div></section>
+
+<section id="orders" class="alt"><div class="wrap"><div class="eyebrow">Reusable instructions</div><h2>Codex work orders</h2><p class="muted">Copy one, replace the brackets, and give it to Codex.</p>
+<div class="templates">
+<article class="template"><div class="thead"><h3>Engineering Work Order</h3><button class="copy" data-id="wo1">Copy</button></div><pre id="wo1">GOAL
+[What needs to happen]
+
+CURRENT CONDITION
+[What happens now]
+
+EXPECTED CONDITION
+[What should happen instead]
+
+SCOPE
+[Relevant system or subsystem]
+
+CONSTRAINTS
+[What must not change]
+
+VERIFY
+[How success can be proven]
+
+INSTRUCTIONS
+Inspect the existing implementation before making changes.
+Trace the relevant path and identify the best integration point.
+Make the smallest clean change that satisfies the requirement.
+Run the appropriate tests.
+
+REPORT
+- What you found
+- What you changed
+- Files affected
+- Tests performed
+- Result
+- Remaining risks</pre></article>
+
+<article class="template"><div class="thead"><h3>Diagnose a Fault</h3><button class="copy" data-id="wo2">Copy</button></div><pre id="wo2">EXPECTED BEHAVIOR
+[What should happen]
+
+OBSERVED BEHAVIOR
+[What actually happens]
+
+EVIDENCE
+[Errors, logs, screenshots, measurements, reproduction steps]
+
+CONSTRAINTS
+[What must not change]
+
+Before modifying anything, reproduce the problem if possible.
+Trace the relevant path from input to output.
+Identify where behavior first diverges from expectation.
+Find the root cause rather than patching the symptom.
+
+Make the smallest clean correction, run the appropriate tests,
+and explain how the result was verified.</pre></article>
+
+<article class="template"><div class="thead"><h3>Explain an Existing System</h3><button class="copy" data-id="wo3">Copy</button></div><pre id="wo3">Do not change anything yet.
+
+Inspect how [feature/system] currently works.
+
+Trace it from input to output and identify:
+- the main files involved
+- the important functions/modules
+- external dependencies
+- where data enters
+- where decisions are made
+- where data leaves
+- relevant tests
+
+Explain the architecture in plain technical language.
+Call out anything uncertain rather than guessing.</pre></article>
+
+<article class="template"><div class="thead"><h3>Add a Capability</h3><button class="copy" data-id="wo4">Copy</button></div><pre id="wo4">GOAL
+[Capability to add]
+
+REQUIRED BEHAVIOR
+[Inputs, outputs, and important cases]
+
+CONSTRAINTS
+[Compatibility, interfaces, files, dependencies, performance]
+
+DONE WHEN
+[Acceptance criteria]
+
+First inspect the existing architecture and identify the cleanest
+place for this capability. Reuse existing patterns where practical.
+
+Then implement the smallest maintainable change, add or update tests,
+run verification, and summarize the final diff and any remaining risks.</pre></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="eyebrow">Verification</div><h2>Codex is part of the test process, not the test instrument.</h2><div class="chain"><span>Codex result</span><b>→</b><span>Review diff</span><b>→</b><span>Run tests</span><b>→</b><span>Exercise real behavior</span><b>→</b><span>Confirmed</span></div><p class="muted" style="margin-top:16px">For engineering facts, calculations, component specifications, standards, or safety-critical work, verify against authoritative documentation and appropriate real-world tests.</p></div></section>
+</main>
+<footer><div class="wrap"><b>Codex Field Guide</b> · High information density. Low ambiguity.<br><small>Independent educational reference. Not affiliated with Games Workshop.</small></div></footer>
+<script>
+const q=document.getElementById('q'),terms=[...document.querySelectorAll('#terms details')],none=document.getElementById('none');
+q.addEventListener('input',()=>{const s=q.value.trim().toLowerCase();let n=0;terms.forEach(t=>{const ok=!s||(t.dataset.key+' '+t.textContent).toLowerCase().includes(s);t.hidden=!ok;if(ok)n++});none.hidden=n>0});
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{const t=document.getElementById(b.dataset.id).innerText,o=b.textContent;try{await navigator.clipboard.writeText(t)}catch(e){const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove()}b.textContent='Copied';setTimeout(()=>b.textContent=o,1200)}));
+</script>
+</body>
+</html>
