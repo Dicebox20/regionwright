@@ -174,7 +174,7 @@ At the beginning of each turn:
 
 | Checkpoint | State | Evidence / result | Next action |
 | --- | --- | --- | --- |
-| CP0 | Plan recorded; contract approval pending | Read-only source audit 2026-10-24; focused tests 81/84 pass, 3 existing foundation UI failures; no runtime edits | Freeze proposed contracts, agree to pilot |
+| CP0 | Local source HEAD established; contract approval pending | Initial root commit 5c25513632e33710f88c02037c90f35bc27b733d on master: 420 selected source/docs/tests/tool files, not pushed. Excluded large archives, assets, art-source, database, diagnostics, tmp and outputs remain untracked. Prior test baseline: 81/84 pass, 3 existing foundation UI failures; no runtime edits. Bridge Foreman native connection unverified. | Review descriptor/pilot defaults, then R01 |
 | CP1 | Not started | — | Start ownership-scoped stacking |
 | CP2 | Not started | — | Script registry and compiler |
 | CP3 | Not started | — | GM runtime and one midpoint review |
