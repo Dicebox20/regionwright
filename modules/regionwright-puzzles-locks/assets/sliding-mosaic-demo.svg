@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#29a8ee"/><stop offset="1" stop-color="#8ce0d1"/></linearGradient>
+    <linearGradient id="fur" x2="0" y2="1"><stop stop-color="#ffbd56"/><stop offset="1" stop-color="#dc6428"/></linearGradient>
+  </defs>
+  <rect width="480" height="360" fill="url(#sky)"/>
+  <circle cx="390" cy="72" r="38" fill="#ffdf65"/>
+  <path d="M0 245 Q100 177 208 238 T480 213 V360 H0Z" fill="#36b87d"/>
+  <path d="M0 283 Q118 225 246 280 T480 258 V360 H0Z" fill="#17835f"/>
+  <g fill="#ffd15d"><path d="M73 183l8-20 8 20 20 8-20 8-8 20-8-20-20-8z"/><path d="M390 180l6-15 6 15 15 6-15 6-6 15-6-15-15-6z"/></g>
+  <g stroke="#783b27" stroke-width="7" stroke-linejoin="round">
+    <path d="M153 140 124 68q49 5 78 45l38-12 39 12q29-40 78-45l-29 72q31 32 24 90-10 75-99 81-93-1-106-80-9-59 6-91z" fill="url(#fur)"/>
+    <path d="M129 83q24 10 43 40l-19 47q-26-21-24-52zM352 123q19-30 43-40l0 35q2 31-24 52z" fill="#fff0d6"/>
+    <path d="M169 232q21-37 55-12l18 54q-40 19-71-10zM250 274l19-54q35-25 55 12l-2 32q-31 29-72 10z" fill="#fff1df"/>
+    <path d="M217 270q23-19 46 0l-6 31q-18 17-36 0z" fill="#fff"/>
+    <path d="M225 282q14 10 29 0" fill="none" stroke="#4c2a25" stroke-width="5"/>
+    <ellipse cx="198" cy="203" rx="13" ry="18" fill="#231d25"/>
+    <ellipse cx="282" cy="203" rx="13" ry="18" fill="#231d25"/>
+  </g>
+  <circle cx="202" cy="197" r="4" fill="#fff"/><circle cx="286" cy="197" r="4" fill="#fff"/>
+  <path d="M0 332q74-28 148 0t148 0 184 0v28H0z" fill="#f4da70" opacity=".78"/>
+</svg>

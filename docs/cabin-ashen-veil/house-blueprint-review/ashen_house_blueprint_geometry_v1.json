@@ -1,0 +1,1267 @@
+{
+  "title": "Cabin in the Ashen Veil - House Master Blueprint v1",
+  "status": "PROPOSED DIMENSIONED CONCEPT, NOT AUTHORITATIVE SPATIAL BLUEPRINT",
+  "orientation": "north up",
+  "unit": "feet",
+  "coordinate_origin": "southwest corner of main rectangular structural core (0,0); x increases east; y increases north",
+  "core_footprint_ft": {
+    "width": 76,
+    "depth": 52
+  },
+  "overall_extent_ft": {
+    "xmin": -10,
+    "xmax": 90,
+    "ymin": -7,
+    "ymax": 57
+  },
+  "wall_thickness_ft": {
+    "external_nominal": 1.0,
+    "internal_nominal": 0.6
+  },
+  "default_foundry_profile": "gridless, logical 120px/5ft, no painted grid",
+  "rooms": {
+    "ground": [
+      {
+        "id": "H-G01",
+        "name": "Dining Room",
+        "category": "proposed-story",
+        "polygons_ft": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              24.0,
+              0.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              0.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 384.0,
+        "fixtures": [
+          "Dining table",
+          "household place settings"
+        ],
+        "story_purpose": "Meals once shared by the family",
+        "label_point_ft": [
+          12,
+          8
+        ]
+      },
+      {
+        "id": "H-G02",
+        "name": "Foyer",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              24.0,
+              0.0
+            ],
+            [
+              52.0,
+              0.0
+            ],
+            [
+              52.0,
+              16.0
+            ],
+            [
+              24.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 448.0,
+        "fixtures": [
+          "Grandfather clock",
+          "two separate stair flights",
+          "front porch"
+        ],
+        "story_purpose": "Familial welcome, clocks built for Sophia",
+        "label_point_ft": [
+          38,
+          12
+        ]
+      },
+      {
+        "id": "H-G03",
+        "name": "Kitchen",
+        "category": "proposed-story",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              0.0
+            ],
+            [
+              76.0,
+              0.0
+            ],
+            [
+              76.0,
+              16.0
+            ],
+            [
+              52.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 384.0,
+        "fixtures": [
+          "Family worktable",
+          "warm hearth",
+          "cookware"
+        ],
+        "story_purpose": "Ordinary domestic life",
+        "label_point_ft": [
+          64,
+          9
+        ]
+      },
+      {
+        "id": "H-G04",
+        "name": "Pantry",
+        "category": "proposed-story",
+        "polygons_ft": [
+          [
+            [
+              76.0,
+              0.0
+            ],
+            [
+              90.0,
+              0.0
+            ],
+            [
+              90.0,
+              16.0
+            ],
+            [
+              76.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 224.0,
+        "fixtures": [
+          "Dry stores",
+          "shelves"
+        ],
+        "story_purpose": "Practical household inventory",
+        "label_point_ft": [
+          83,
+          8
+        ]
+      },
+      {
+        "id": "H-G05",
+        "name": "Allen’s Study",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              0.0,
+              52.0
+            ],
+            [
+              24.0,
+              52.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              0.0,
+              16.0
+            ],
+            [
+              0.0,
+              26.0
+            ],
+            [
+              -10.0,
+              26.0
+            ],
+            [
+              -10.0,
+              46.0
+            ],
+            [
+              0.0,
+              46.0
+            ]
+          ]
+        ],
+        "area_sqft": 1064.0,
+        "fixtures": [
+          "Rufus—both eyes missing",
+          "587 note",
+          "Gond drafts"
+        ],
+        "story_purpose": "Practical maker and caring father",
+        "label_point_ft": [
+          12,
+          37
+        ]
+      },
+      {
+        "id": "H-G06",
+        "name": "Great Room",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              52.0
+            ],
+            [
+              52.0,
+              16.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              24.0,
+              52.0
+            ],
+            [
+              28.0,
+              52.0
+            ],
+            [
+              28.0,
+              57.0
+            ],
+            [
+              48.0,
+              57.0
+            ],
+            [
+              48.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 1108.0,
+        "fixtures": [
+          "Blueprint displayed on table",
+          "027 combination box",
+          "family portraits",
+          "double-height fireplace"
+        ],
+        "story_purpose": "Return hub: family history and altered construction drawing",
+        "label_point_ft": [
+          38,
+          31
+        ]
+      },
+      {
+        "id": "H-G07",
+        "name": "Dahlia’s Art Studio",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              16.0
+            ],
+            [
+              76.0,
+              16.0
+            ],
+            [
+              76.0,
+              52.0
+            ],
+            [
+              52.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 864.0,
+        "fixtures": [
+          "Empty-mirror vanity",
+          "painting containing 027 clue",
+          "Sune altar"
+        ],
+        "story_purpose": "Creativity, love, faith; apparent erased wall section on blueprint",
+        "label_point_ft": [
+          64,
+          35
+        ]
+      },
+      {
+        "id": "H-G08",
+        "name": "Hidden Candle Workshop",
+        "category": "hidden",
+        "polygons_ft": [
+          [
+            [
+              76.0,
+              30.0
+            ],
+            [
+              90.0,
+              30.0
+            ],
+            [
+              90.0,
+              52.0
+            ],
+            [
+              76.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 308.0,
+        "fixtures": [
+          "wick",
+          "wax trays",
+          "safety lantern"
+        ],
+        "story_purpose": "Parental fear of fire, protected craft room",
+        "label_point_ft": [
+          83,
+          41
+        ]
+      }
+    ],
+    "upper": [
+      {
+        "id": "H-U01",
+        "name": "Unused Nursery",
+        "category": "proposed-story",
+        "polygons_ft": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              24.0,
+              0.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              0.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 384.0,
+        "fixtures": [
+          "Empty cradle",
+          "carefully folded linens"
+        ],
+        "story_purpose": "Unrealized plans for unborn son",
+        "label_point_ft": [
+          12,
+          8
+        ]
+      },
+      {
+        "id": "H-U02",
+        "name": "Upper Gallery / Landing",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              0.0
+            ],
+            [
+              24.0,
+              0.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              24.0,
+              52.0
+            ],
+            [
+              29.0,
+              52.0
+            ],
+            [
+              47.0,
+              52.0
+            ],
+            [
+              52.0,
+              52.0
+            ],
+            [
+              52.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 898.0,
+        "fixtures": [
+          "Stair arrival",
+          "attic pull-down hatch",
+          "roof access dormer"
+        ],
+        "story_purpose": "Open view down into Great Room and family hearth",
+        "label_point_ft": [
+          37,
+          10
+        ]
+      },
+      {
+        "id": "H-U03",
+        "name": "Guest Bedroom",
+        "category": "proposed-story",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              0.0
+            ],
+            [
+              76.0,
+              0.0
+            ],
+            [
+              76.0,
+              16.0
+            ],
+            [
+              52.0,
+              16.0
+            ]
+          ]
+        ],
+        "area_sqft": 384.0,
+        "fixtures": [
+          "Spare bed",
+          "worn suitcase"
+        ],
+        "story_purpose": "A home intended to welcome visitors",
+        "label_point_ft": [
+          64,
+          8
+        ]
+      },
+      {
+        "id": "H-U04",
+        "name": "Parents’ Bedroom",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              0.0,
+              52.0
+            ],
+            [
+              24.0,
+              52.0
+            ],
+            [
+              24.0,
+              16.0
+            ],
+            [
+              0.0,
+              16.0
+            ],
+            [
+              0.0,
+              26.0
+            ],
+            [
+              -10.0,
+              26.0
+            ],
+            [
+              -10.0,
+              46.0
+            ],
+            [
+              0.0,
+              46.0
+            ]
+          ]
+        ],
+        "area_sqft": 1064.0,
+        "fixtures": [
+          "Coat with Old Iron Key",
+          "broken nightstand—Gate Handle",
+          "Hope Chest—Music Box"
+        ],
+        "story_purpose": "Care and loss in a normal family bedroom",
+        "label_point_ft": [
+          12,
+          35
+        ]
+      },
+      {
+        "id": "H-U05",
+        "name": "Sophia’s Bedroom",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              16.0
+            ],
+            [
+              76.0,
+              16.0
+            ],
+            [
+              76.0,
+              52.0
+            ],
+            [
+              52.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 864.0,
+        "fixtures": [
+          "Stuffed bear—first Rufus eye",
+          "six-book Spine Mosaic",
+          "Veil-only final book on bed"
+        ],
+        "story_purpose": "Childhood and adaptation to blindness",
+        "label_point_ft": [
+          64,
+          35
+        ]
+      },
+      {
+        "id": "H-U06",
+        "name": "Spine Mosaic Hidden Room",
+        "category": "hidden",
+        "polygons_ft": [
+          [
+            [
+              76.0,
+              30.0
+            ],
+            [
+              90.0,
+              30.0
+            ],
+            [
+              90.0,
+              52.0
+            ],
+            [
+              76.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 308.0,
+        "fixtures": [
+          "Gond emblem half",
+          "hidden bookshelf entrance"
+        ],
+        "story_purpose": "Allen’s concealed workmanship, upstairs counterpart to studio void",
+        "label_point_ft": [
+          83,
+          41
+        ]
+      }
+    ],
+    "basement": [
+      {
+        "id": "H-B01",
+        "name": "Allen’s Workshop",
+        "category": "required",
+        "polygons_ft": [
+          [
+            [
+              24.0,
+              0.0
+            ],
+            [
+              52.0,
+              0.0
+            ],
+            [
+              52.0,
+              52.0
+            ],
+            [
+              24.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 1456.0,
+        "fixtures": [
+          "Weathered-Key stairs from Foyer",
+          "repair benches",
+          "four-branch Vault mechanism doorway"
+        ],
+        "story_purpose": "A tinkerer’s beloved craft: practical, not evil",
+        "label_point_ft": [
+          38,
+          29
+        ]
+      },
+      {
+        "id": "H-B02",
+        "name": "Secured Vault",
+        "category": "hidden",
+        "polygons_ft": [
+          [
+            [
+              52.0,
+              26.0
+            ],
+            [
+              76.0,
+              26.0
+            ],
+            [
+              76.0,
+              52.0
+            ],
+            [
+              52.0,
+              52.0
+            ]
+          ]
+        ],
+        "area_sqft": 624.0,
+        "fixtures": [
+          "Four-input lock mechanism",
+          "Keystone display"
+        ],
+        "story_purpose": "Last security barrier meant to protect family, reward Keystone only",
+        "label_point_ft": [
+          64,
+          39
+        ]
+      }
+    ]
+  },
+  "horizontal_portals": {
+    "ground": [
+      {
+        "id": "P-EXT-FOYER",
+        "label": "Exterior / Foyer",
+        "point_ft": [
+          38,
+          0
+        ],
+        "from": "H-G02",
+        "to": "OUTSIDE",
+        "gate": "regular",
+        "wall_axis": "SOUTH"
+      },
+      {
+        "id": "P-FOYER-GREAT",
+        "label": "Foyer / Great Room",
+        "point_ft": [
+          38,
+          16
+        ],
+        "from": "H-G02",
+        "to": "H-G06",
+        "gate": "regular",
+        "wall_axis": "HORIZONTAL"
+      },
+      {
+        "id": "P-FOYER-DINING",
+        "label": "Foyer / Dining",
+        "point_ft": [
+          24,
+          8
+        ],
+        "from": "H-G02",
+        "to": "H-G01",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-FOYER-KITCHEN",
+        "label": "Foyer / Kitchen",
+        "point_ft": [
+          52,
+          8
+        ],
+        "from": "H-G02",
+        "to": "H-G03",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-GREAT-STUDY",
+        "label": "Great Room / Study",
+        "point_ft": [
+          24,
+          34
+        ],
+        "from": "H-G06",
+        "to": "H-G05",
+        "gate": "locked:BrassStudyKey",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-GREAT-STUDIO",
+        "label": "Great Room / Art Studio",
+        "point_ft": [
+          52,
+          34
+        ],
+        "from": "H-G06",
+        "to": "H-G07",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-KITCHEN-PANTRY",
+        "label": "Kitchen / Pantry",
+        "point_ft": [
+          76,
+          8
+        ],
+        "from": "H-G03",
+        "to": "H-G04",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-STUDIO-CANDLE",
+        "label": "Art Studio / Candle Workshop",
+        "point_ft": [
+          76,
+          41
+        ],
+        "from": "H-G07",
+        "to": "H-G08",
+        "gate": "hidden:PrayerProtection",
+        "wall_axis": "VERTICAL"
+      }
+    ],
+    "upper": [
+      {
+        "id": "P-UPPER-NURSERY",
+        "label": "Landing / Nursery",
+        "point_ft": [
+          24,
+          8
+        ],
+        "from": "H-U02",
+        "to": "H-U01",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-UPPER-GUEST",
+        "label": "Landing / Guest",
+        "point_ft": [
+          52,
+          8
+        ],
+        "from": "H-U02",
+        "to": "H-U03",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-UPPER-PARENTS",
+        "label": "Gallery / Parents",
+        "point_ft": [
+          24,
+          34
+        ],
+        "from": "H-U02",
+        "to": "H-U04",
+        "gate": "regular",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-UPPER-SOPHIA",
+        "label": "Gallery / Sophia",
+        "point_ft": [
+          52,
+          34
+        ],
+        "from": "H-U02",
+        "to": "H-U05",
+        "gate": "locked:OldIronKey",
+        "wall_axis": "VERTICAL"
+      },
+      {
+        "id": "P-SOPHIA-SPINE",
+        "label": "Sophia / Spine Hidden",
+        "point_ft": [
+          76,
+          41
+        ],
+        "from": "H-U05",
+        "to": "H-U06",
+        "gate": "hidden:SixBooks",
+        "wall_axis": "VERTICAL"
+      }
+    ],
+    "basement": [
+      {
+        "id": "P-WORKSHOP-VAULT",
+        "label": "Workshop / Keystone Vault",
+        "point_ft": [
+          52,
+          38
+        ],
+        "from": "H-B01",
+        "to": "H-B02",
+        "gate": "locked:FourVaultInputs",
+        "wall_axis": "VERTICAL"
+      }
+    ]
+  },
+  "vertical_portals": [
+    {
+      "id": "V-FOYER-UPPER",
+      "from": "H-G02",
+      "to": "H-U02",
+      "at": [
+        43,
+        8
+      ],
+      "kind": "stair_up",
+      "status": "required"
+    },
+    {
+      "id": "V-FOYER-BASEMENT",
+      "from": "H-G02",
+      "to": "H-B01",
+      "at": [
+        31,
+        8
+      ],
+      "kind": "stair_down",
+      "gate": "WeatheredKey",
+      "status": "required"
+    },
+    {
+      "id": "V-UPPER-ATTIC",
+      "from": "H-U02",
+      "to": "H-A01",
+      "at": [
+        38,
+        49
+      ],
+      "kind": "hook_ladder",
+      "gate": "LadderHook",
+      "status": "required"
+    },
+    {
+      "id": "V-UPPER-ROOF",
+      "from": "H-U04",
+      "to": "H-R01",
+      "at": [
+        12,
+        52
+      ],
+      "kind": "parents_north_window",
+      "status": "proposal"
+    }
+  ],
+  "windows": {
+    "ground": [
+      {
+        "id": "W-STUDY-W",
+        "point_ft": [
+          -10,
+          35
+        ],
+        "wall_axis": "V"
+      },
+      {
+        "id": "W-STUDY-N",
+        "point_ft": [
+          12,
+          52
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-GREAT-N",
+        "point_ft": [
+          38,
+          57
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-STUDIO-N",
+        "point_ft": [
+          64,
+          52
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-STUDIO-E",
+        "point_ft": [
+          76,
+          24
+        ],
+        "wall_axis": "V"
+      },
+      {
+        "id": "W-DINING-S",
+        "point_ft": [
+          12,
+          0
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-KITCHEN-S",
+        "point_ft": [
+          65,
+          0
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-CANDLE-E",
+        "point_ft": [
+          90,
+          40
+        ],
+        "wall_axis": "V"
+      }
+    ],
+    "upper": [
+      {
+        "id": "W-PARENTS-N",
+        "point_ft": [
+          12,
+          52
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-PARENTS-W",
+        "point_ft": [
+          -10,
+          35
+        ],
+        "wall_axis": "V"
+      },
+      {
+        "id": "W-SOPHIA-N",
+        "point_ft": [
+          64,
+          52
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-GUEST-S",
+        "point_ft": [
+          65,
+          0
+        ],
+        "wall_axis": "H"
+      },
+      {
+        "id": "W-NURSERY-S",
+        "point_ft": [
+          12,
+          0
+        ],
+        "wall_axis": "H"
+      }
+    ],
+    "basement": []
+  },
+  "checks": {
+    "ground": {
+      "room_count": 8,
+      "positive_room_overlaps": [],
+      "min_piece_area": 224.0,
+      "total_room_area": 4784.0
+    },
+    "upper": {
+      "room_count": 6,
+      "positive_room_overlaps": [],
+      "min_piece_area": 308.0,
+      "total_room_area": 3902.0
+    },
+    "basement": {
+      "room_count": 2,
+      "positive_room_overlaps": [],
+      "min_piece_area": 624.0,
+      "total_room_area": 2080.0
+    }
+  },
+  "pending": [
+    "actual owner approval of external footprint and floor geometry",
+    "optional story-room scene inclusion and map total recalculation",
+    "stair riser/landing / roof access structural design",
+    "scene stage transition adapter verification",
+    "Foundry authoritative Scene IDs and runtime receipt",
+    "room-specific Map PREPARE approval and Feature Manifest reconciliation"
+  ],
+  "scene_graph_contract": {
+    "links": [
+      {
+        "floor": "ground",
+        "source": "H-G02",
+        "target": "OUTSIDE",
+        "id": "P-EXT-FOYER",
+        "gate": "regular",
+        "position_ft": [
+          38,
+          0
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G02",
+        "target": "H-G06",
+        "id": "P-FOYER-GREAT",
+        "gate": "regular",
+        "position_ft": [
+          38,
+          16
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G02",
+        "target": "H-G01",
+        "id": "P-FOYER-DINING",
+        "gate": "regular",
+        "position_ft": [
+          24,
+          8
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G02",
+        "target": "H-G03",
+        "id": "P-FOYER-KITCHEN",
+        "gate": "regular",
+        "position_ft": [
+          52,
+          8
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G06",
+        "target": "H-G05",
+        "id": "P-GREAT-STUDY",
+        "gate": "locked:BrassStudyKey",
+        "position_ft": [
+          24,
+          34
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G06",
+        "target": "H-G07",
+        "id": "P-GREAT-STUDIO",
+        "gate": "regular",
+        "position_ft": [
+          52,
+          34
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G03",
+        "target": "H-G04",
+        "id": "P-KITCHEN-PANTRY",
+        "gate": "regular",
+        "position_ft": [
+          76,
+          8
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "ground",
+        "source": "H-G07",
+        "target": "H-G08",
+        "id": "P-STUDIO-CANDLE",
+        "gate": "hidden:PrayerProtection",
+        "position_ft": [
+          76,
+          41
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "upper",
+        "source": "H-U02",
+        "target": "H-U01",
+        "id": "P-UPPER-NURSERY",
+        "gate": "regular",
+        "position_ft": [
+          24,
+          8
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "upper",
+        "source": "H-U02",
+        "target": "H-U03",
+        "id": "P-UPPER-GUEST",
+        "gate": "regular",
+        "position_ft": [
+          52,
+          8
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "upper",
+        "source": "H-U02",
+        "target": "H-U04",
+        "id": "P-UPPER-PARENTS",
+        "gate": "regular",
+        "position_ft": [
+          24,
+          34
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "upper",
+        "source": "H-U02",
+        "target": "H-U05",
+        "id": "P-UPPER-SOPHIA",
+        "gate": "locked:OldIronKey",
+        "position_ft": [
+          52,
+          34
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "upper",
+        "source": "H-U05",
+        "target": "H-U06",
+        "id": "P-SOPHIA-SPINE",
+        "gate": "hidden:SixBooks",
+        "position_ft": [
+          76,
+          41
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "basement",
+        "source": "H-B01",
+        "target": "H-B02",
+        "id": "P-WORKSHOP-VAULT",
+        "gate": "locked:FourVaultInputs",
+        "position_ft": [
+          52,
+          38
+        ],
+        "transition_type": "horizontal"
+      },
+      {
+        "floor": "cross-level",
+        "source": "H-G02",
+        "target": "H-U02",
+        "id": "V-FOYER-UPPER",
+        "gate": "regular",
+        "position_ft": [
+          43,
+          8
+        ],
+        "transition_type": "stair_up"
+      },
+      {
+        "floor": "cross-level",
+        "source": "H-G02",
+        "target": "H-B01",
+        "id": "V-FOYER-BASEMENT",
+        "gate": "WeatheredKey",
+        "position_ft": [
+          31,
+          8
+        ],
+        "transition_type": "stair_down"
+      },
+      {
+        "floor": "cross-level",
+        "source": "H-U02",
+        "target": "H-A01",
+        "id": "V-UPPER-ATTIC",
+        "gate": "LadderHook",
+        "position_ft": [
+          38,
+          49
+        ],
+        "transition_type": "hook_ladder"
+      },
+      {
+        "floor": "cross-level",
+        "source": "H-U04",
+        "target": "H-R01",
+        "id": "V-UPPER-ROOF",
+        "gate": "regular",
+        "position_ft": [
+          12,
+          52
+        ],
+        "transition_type": "parents_north_window"
+      }
+    ],
+    "tests": {
+      "early_reachable_from_foyer": [
+        "H-G01",
+        "H-G02",
+        "H-G03",
+        "H-G04",
+        "H-G06",
+        "H-G07",
+        "H-R01",
+        "H-U01",
+        "H-U02",
+        "H-U03",
+        "H-U04"
+      ],
+      "study_with_brass_key": true,
+      "hidden_candle_without_prayer": false,
+      "hidden_spine_without_books": false,
+      "vault_with_four_inputs_and_weathered_key": true
+    }
+  }
+}

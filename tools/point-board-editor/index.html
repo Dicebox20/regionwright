@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regionwright Point Board</title>
+  <style>
+    :root { color-scheme: dark; font-family: ui-sans-serif, system-ui, Segoe UI, sans-serif; background: #111820; color: #e8edf1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    button, input, select { font: inherit; }
+    button { min-height: 36px; padding: 7px 12px; color: inherit; background: #283642; border: 1px solid #465766; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #344754; }
+    button.active { border-color: #eabf71; color: #ffdda1; background: #51422d; }
+    button:disabled { opacity: .45; cursor: default; }
+    input, select { min-height: 34px; padding: 5px 8px; color: inherit; background: #18232c; border: 1px solid #465766; border-radius: 5px; }
+    input[type="number"] { width: 78px; }
+    input[type="color"] { width: 42px; height: 36px; padding: 2px; }
+    label { display: grid; gap: 5px; color: #b8c5ce; font-size: 12px; }
+    .app { max-width: 1440px; margin: 0 auto; padding: 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+    h1 { margin: 0; font-size: 22px; letter-spacing: .02em; }
+    .subtitle { margin: 4px 0 0; color: #9caab4; font-size: 13px; }
+    .header-actions, .toolbar, .inline, .frame-row, .palette-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .toolbar { padding: 10px; background: #1b2731; border: 1px solid #31414d; border-radius: 9px; margin-bottom: 14px; }
+    .toolbar .spacer { flex: 1; }
+    .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 14px; align-items: start; }
+    aside, .workspace { background: #1b2731; border: 1px solid #31414d; border-radius: 9px; }
+    aside { padding: 14px; display: grid; gap: 16px; }
+    .group { display: grid; gap: 9px; padding-bottom: 14px; border-bottom: 1px solid #31414d; }
+    .group:last-child { padding-bottom: 0; border-bottom: 0; }
+    .group h2 { margin: 0; color: #e0e8ed; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; }
+    .dimensions { display: flex; gap: 8px; }
+    .dimensions label { flex: 1; }
+    .frame-row { gap: 5px; }
+    .frame-chip { min-width: 34px; min-height: 32px; padding: 4px 8px; }
+    .frame-chip.active { border-color: #eabf71; color: #ffdda1; background: #51422d; }
+    .palette-row { align-items: center; }
+    .palette-chip { width: 29px; height: 29px; min-height: 29px; padding: 0; border-radius: 50%; border: 2px solid #667781; }
+    .palette-chip.selected { outline: 2px solid #ffdda1; outline-offset: 2px; }
+    .palette-row input[type="color"] { margin-left: auto; }
+    .workspace { padding: 14px; min-width: 0; overflow: hidden; }
+    .canvas-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; color: #acbac3; font-size: 12px; }
+    .canvas-wrap { overflow: auto; max-height: calc(100vh - 190px); min-height: 260px; padding: 20px; border: 1px solid #344550; border-radius: 7px; background-color: #0d141a; background-image: radial-gradient(#283743 1px, transparent 1px); background-size: 16px 16px; }
+    #board { display: block; image-rendering: pixelated; image-rendering: crisp-edges; touch-action: none; cursor: crosshair; box-shadow: 0 8px 28px #0008; }
+    .status { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 10px; color: #9eadb7; font-size: 12px; }
+    .notice { color: #d6c39d; }
+    .danger { border-color: #79534e; }
+    .toggle { display: flex; align-items: center; gap: 7px; }
+    .toggle input { min-height: auto; }
+    .small { color: #8797a2; font-size: 11px; line-height: 1.4; }
+    @media (max-width: 760px) { .app { padding: 12px; } header { align-items: flex-start; flex-direction: column; } .layout { grid-template-columns: 1fr; } aside { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } .canvas-wrap { max-height: 65vh; } }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Regionwright Point Board</h1>
+        <p class="subtitle">Compose active cells by hand. The board data is the artwork; Canvas only lights and animates the cells.</p>
+      </div>
+      <div class="header-actions">
+        <button id="new-board">New blank board</button>
+        <button id="load">Load board JSON</button>
+        <button id="export">Download board JSON</button>
+        <button id="preview">Download frame PNG</button>
+        <input id="file" type="file" accept="application/json,.json" hidden>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button id="draw" class="active">Draw</button>
+      <button id="erase">Erase</button>
+      <button id="clear-frame" class="danger">Clear frame</button>
+      <span class="spacer"></span>
+      <label class="toggle"><input id="onion" type="checkbox"> Previous frame guide</label>
+      <button id="play">Play frames</button>
+    </div>
+
+    <div class="layout">
+      <aside>
+        <section class="group">
+          <h2>Board size</h2>
+          <div class="dimensions">
+            <label>Width<input id="board-width" type="number" min="1" max="512" value="240"></label>
+            <label>Height<input id="board-height" type="number" min="1" max="512" value="160"></label>
+          </div>
+          <button id="resize">Resize board</button>
+          <span class="small">Hunting uses a 240 × 160 Game Boy Advance logical board. The deer fits a centered 192 × 160 area; forest art may use the full board.</span>
+        </section>
+
+        <section class="group">
+          <h2>Layer</h2>
+          <select id="layer-select" aria-label="Current layer"></select>
+          <div class="inline">
+            <input id="new-layer-id" type="text" maxlength="48" placeholder="new-layer-id" aria-label="New layer ID">
+            <button id="add-layer">Add</button>
+          </div>
+          <button id="remove-layer" class="danger">Remove current layer</button>
+        </section>
+
+        <section class="group">
+          <h2>Frames</h2>
+          <div id="frames" class="frame-row"></div>
+          <div class="inline">
+            <button id="add-frame">Add blank</button>
+            <button id="duplicate-frame">Duplicate</button>
+            <button id="remove-frame" class="danger">Delete</button>
+          </div>
+          <div class="dimensions">
+            <label>Idle frame<input id="idle-frame" type="number" min="0" value="0"></label>
+            <label>Walk start<input id="walk-start" type="number" min="0" value="1"></label>
+          </div>
+          <label>Walk rate (frames/sec)<input id="walk-fps" type="number" min="1" max="30" value="8"></label>
+          <span class="small">Set Walk start to the first frame in the loop. Leave the layer with one frame for a static scene layer.</span>
+        </section>
+
+        <section class="group">
+          <h2>Light colors</h2>
+          <div id="palette" class="palette-row"></div>
+          <div class="inline">
+            <input id="new-color" type="color" value="#ffd38a" aria-label="New palette color">
+            <button id="add-color">Add color</button>
+          </div>
+        </section>
+      </aside>
+
+      <section class="workspace" aria-label="Point board editor">
+        <div class="canvas-toolbar">
+          <label>Cell zoom <input id="zoom" type="range" min="1" max="12" value="6"> <span id="zoom-value">6×</span></label>
+          <span>Left-drag to light cells · right-drag to erase</span>
+        </div>
+        <div class="canvas-wrap"><canvas id="board" aria-label="Editable point board grid"></canvas></div>
+        <div class="status"><span id="frame-status">0 active cells</span><span id="save-status">Autosaves in this browser</span></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = "regionwright.point-board-editor.v1";
+      const FORMAT = "regionwright.point-board";
+      const FORMAT_VERSION = 1;
+      const initialProject = () => ({
+        format: FORMAT,
+        formatVersion: FORMAT_VERSION,
+        width: 240,
+        height: 160,
+        palette: ["#ffd38a", "#fff1cf", "#92bdc7"],
+        layers: [{ id: "deer", frames: [[]], animation: { idleFrame: 0 } }]
+      });
+      const byId = id => document.getElementById(id);
+      const elements = {
+        board: byId("board"), wrap: document.querySelector(".canvas-wrap"),
+        width: byId("board-width"), height: byId("board-height"), layer: byId("layer-select"),
+        frames: byId("frames"), palette: byId("palette"), idle: byId("idle-frame"),
+        walkStart: byId("walk-start"), fps: byId("walk-fps"), zoom: byId("zoom"), zoomValue: byId("zoom-value"),
+        frameStatus: byId("frame-status"), saveStatus: byId("save-status"), file: byId("file"), onion: byId("onion")
+      };
+      let project = initialProject();
+      let selectedLayer = "deer";
+      let selectedFrame = 0;
+      let selectedColor = 0;
+      let tool = "draw";
+      let pointerDown = false;
+      let pointerErase = false;
+      let lastCell = "";
+      let playback = null;
+
+      function currentLayer() { return project.layers.find(layer => layer.id === selectedLayer); }
+      function currentFrame() { return currentLayer()?.frames[selectedFrame] ?? []; }
+      function findCell(frame, x, y) { return frame.findIndex(point => point[0] === x && point[1] === y); }
+      function cloneFrame(frame) { return frame.map(point => [...point]); }
+
+      function validateProject(value) {
+        if (!value || value.format !== FORMAT || value.formatVersion !== FORMAT_VERSION) throw new Error("Unsupported point-board data format.");
+        if (!Number.isInteger(value.width) || value.width < 1 || value.width > 512 || !Number.isInteger(value.height) || value.height < 1 || value.height > 512 || value.width * value.height > 262144) throw new Error("Board dimensions exceed the supported range.");
+        if (!Array.isArray(value.palette) || value.palette.length < 1 || value.palette.length > 16 || value.palette.some(color => typeof color !== "string" || !/^#[\da-f]{6}(?:[\da-f]{2})?$/i.test(color))) throw new Error("Palette must contain 1–16 hexadecimal colors.");
+        if (!Array.isArray(value.layers) || value.layers.length < 1 || value.layers.length > 16) throw new Error("Board must have 1–16 layers.");
+        const ids = new Set();
+        let totalFrames = 0;
+        let totalCells = 0;
+        for (const layer of value.layers) {
+          if (!layer || typeof layer.id !== "string" || !/^[a-z][a-z0-9-]{0,47}$/.test(layer.id) || ids.has(layer.id)) throw new Error("Each layer needs a unique lowercase ID.");
+          ids.add(layer.id);
+          if (!Array.isArray(layer.frames) || layer.frames.length < 1 || layer.frames.length > 64) throw new Error(`Layer ${layer.id} must have 1–64 frames.`);
+          totalFrames += layer.frames.length;
+          if (totalFrames > 128 || value.width * value.height * totalFrames > 4194304) throw new Error("Board frame caches exceed the supported size.");
+          for (const frame of layer.frames) {
+            if (!Array.isArray(frame)) throw new Error(`Layer ${layer.id} has an invalid frame.`);
+            const seen = new Set();
+            for (const point of frame) {
+              if (!Array.isArray(point) || point.length !== 3 || !Number.isInteger(point[0]) || point[0] < 0 || point[0] >= value.width || !Number.isInteger(point[1]) || point[1] < 0 || point[1] >= value.height || !Number.isInteger(point[2]) || point[2] < 0 || point[2] >= value.palette.length) throw new Error(`Layer ${layer.id} contains a cell outside the board or palette.`);
+              const cell = `${point[0]},${point[1]}`;
+              if (seen.has(cell)) throw new Error(`Layer ${layer.id} repeats a cell in one frame.`);
+              seen.add(cell);
+              totalCells += 1;
+              if (totalCells > 250000) throw new Error("Board has too many active cells.");
+            }
+          }
+        }
+        return value;
+      }
+
+      function activeAnimation(layer) {
+        const length = layer.frames.length;
+        const idleFrame = Math.max(0, Math.min(length - 1, Number(layer.animation?.idleFrame) || 0));
+        const walkStart = Number(layer.animation?.walk?.startFrame);
+        const walk = Number.isInteger(walkStart) && walkStart >= 0 && walkStart < length && length - walkStart > 0
+          ? { startFrame: walkStart, frameCount: length - walkStart, fps: Math.max(1, Math.min(30, Number(layer.animation.walk.fps) || 8)) }
+          : undefined;
+        return walk ? { idleFrame, walk } : { idleFrame };
+      }
+
+      function saveLocal() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(project));
+          elements.saveStatus.textContent = "Autosaved in this browser";
+        } catch {
+          elements.saveStatus.textContent = "Browser storage unavailable; download JSON to keep changes";
+        }
+      }
+
+      function refreshSelectors() {
+        elements.layer.replaceChildren(...project.layers.map(layer => {
+          const option = document.createElement("option"); option.value = layer.id; option.textContent = layer.id; return option;
+        }));
+        if (!project.layers.some(layer => layer.id === selectedLayer)) selectedLayer = project.layers[0].id;
+        elements.layer.value = selectedLayer;
+        const layer = currentLayer();
+        selectedFrame = Math.max(0, Math.min(layer.frames.length - 1, selectedFrame));
+        elements.frames.replaceChildren(...layer.frames.map((_, index) => {
+          const button = document.createElement("button");
+          button.type = "button"; button.className = `frame-chip${index === selectedFrame ? " active" : ""}`;
+          button.textContent = String(index); button.title = `Select frame ${index}`;
+          button.addEventListener("click", () => { selectedFrame = index; refresh(); });
+          return button;
+        }));
+        const animation = activeAnimation(layer);
+        elements.idle.max = String(layer.frames.length - 1);
+        elements.idle.value = String(animation.idleFrame);
+        elements.walkStart.max = String(layer.frames.length - 1);
+        elements.walkStart.value = animation.walk ? String(animation.walk.startFrame) : "";
+        elements.fps.value = String(animation.walk?.fps ?? 8);
+        byId("remove-layer").disabled = project.layers.length <= 1;
+        byId("remove-frame").disabled = layer.frames.length <= 1;
+        byId("duplicate-frame").disabled = layer.frames.length >= 64;
+        byId("add-frame").disabled = layer.frames.length >= 64;
+      }
+
+      function refreshPalette() {
+        elements.palette.replaceChildren(...project.palette.map((color, index) => {
+          const button = document.createElement("button");
+          button.type = "button"; button.className = `palette-chip${index === selectedColor ? " selected" : ""}`;
+          button.style.backgroundColor = color; button.title = `Select ${color}`;
+          button.addEventListener("click", () => { selectedColor = index; refreshPalette(); });
+          return button;
+        }));
+        selectedColor = Math.min(selectedColor, project.palette.length - 1);
+      }
+
+      function redraw() {
+        const requestedZoom = Number(elements.zoom.value);
+        const zoom = Math.min(requestedZoom, Math.max(1, Math.floor(1600 / Math.max(project.width, project.height))));
+        elements.zoomValue.textContent = zoom === requestedZoom ? `${zoom}×` : `${zoom}× (fit)`;
+        elements.board.width = project.width * zoom;
+        elements.board.height = project.height * zoom;
+        elements.board.style.width = `${project.width * zoom}px`;
+        elements.board.style.height = `${project.height * zoom}px`;
+        const context = elements.board.getContext("2d");
+        context.imageSmoothingEnabled = false;
+        context.fillStyle = "#0b1116";
+        context.fillRect(0, 0, elements.board.width, elements.board.height);
+        const layer = currentLayer();
+        if (elements.onion.checked && selectedFrame > 0) {
+          context.globalAlpha = 0.22;
+          paintFrame(context, layer.frames[selectedFrame - 1], zoom);
+          context.globalAlpha = 1;
+        }
+        paintFrame(context, currentFrame(), zoom);
+        if (zoom >= 3) {
+          context.strokeStyle = "rgba(205,225,233,.12)";
+          context.lineWidth = 1;
+          context.beginPath();
+          for (let x = 0; x <= project.width; x += 1) { context.moveTo(x * zoom + .5, 0); context.lineTo(x * zoom + .5, elements.board.height); }
+          for (let y = 0; y <= project.height; y += 1) { context.moveTo(0, y * zoom + .5); context.lineTo(elements.board.width, y * zoom + .5); }
+          context.stroke();
+        }
+        const count = currentFrame().length;
+        elements.frameStatus.textContent = `${layer.id} · frame ${selectedFrame} · ${count} active cells`;
+      }
+
+      function paintFrame(context, frame, zoom) {
+        for (const [x, y, colorIndex] of frame) {
+          context.fillStyle = project.palette[colorIndex];
+          context.fillRect(x * zoom, y * zoom, zoom, zoom);
+        }
+      }
+
+      function refresh({ persist = true } = {}) { refreshSelectors(); refreshPalette(); redraw(); if (persist) saveLocal(); }
+
+      function paintAt(event) {
+        const rect = elements.board.getBoundingClientRect();
+        const x = Math.floor((event.clientX - rect.left) / rect.width * project.width);
+        const y = Math.floor((event.clientY - rect.top) / rect.height * project.height);
+        if (x < 0 || y < 0 || x >= project.width || y >= project.height) return;
+        const cellKey = `${x},${y}`;
+        if (cellKey === lastCell) return;
+        lastCell = cellKey;
+        const frame = currentFrame();
+        const index = findCell(frame, x, y);
+        const erase = pointerErase || tool === "erase";
+        if (erase) { if (index >= 0) frame.splice(index, 1); }
+        else if (index >= 0) frame[index][2] = selectedColor;
+        else frame.push([x, y, selectedColor]);
+        redraw(); saveLocal();
+      }
+
+      elements.board.addEventListener("pointerdown", event => {
+        pointerDown = true; pointerErase = event.button === 2 || tool === "erase"; lastCell = ""; elements.board.setPointerCapture(event.pointerId); paintAt(event); event.preventDefault();
+      });
+      elements.board.addEventListener("pointermove", event => { if (pointerDown) paintAt(event); });
+      elements.board.addEventListener("pointerup", () => { pointerDown = false; pointerErase = false; lastCell = ""; });
+      elements.board.addEventListener("pointercancel", () => { pointerDown = false; pointerErase = false; lastCell = ""; });
+      elements.board.addEventListener("contextmenu", event => event.preventDefault());
+      elements.layer.addEventListener("change", () => { stopPlayback(); selectedLayer = elements.layer.value; selectedFrame = 0; refresh(); });
+      elements.zoom.addEventListener("input", redraw);
+      elements.onion.addEventListener("change", redraw);
+      byId("draw").addEventListener("click", () => { tool = "draw"; byId("draw").classList.add("active"); byId("erase").classList.remove("active"); });
+      byId("erase").addEventListener("click", () => { tool = "erase"; byId("erase").classList.add("active"); byId("draw").classList.remove("active"); });
+      byId("clear-frame").addEventListener("click", () => { if (!currentFrame().length || confirm("Clear every lit cell in this frame?")) { currentLayer().frames[selectedFrame] = []; refresh(); } });
+      byId("add-frame").addEventListener("click", () => { currentLayer().frames.splice(selectedFrame + 1, 0, []); selectedFrame += 1; refresh(); });
+      byId("duplicate-frame").addEventListener("click", () => { const layer = currentLayer(); layer.frames.splice(selectedFrame + 1, 0, cloneFrame(currentFrame())); selectedFrame += 1; refresh(); });
+      byId("remove-frame").addEventListener("click", () => {
+        const layer = currentLayer(); if (layer.frames.length <= 1) return;
+        layer.frames.splice(selectedFrame, 1); selectedFrame = Math.max(0, selectedFrame - 1);
+        const animation = activeAnimation(layer); layer.animation = animation; refresh();
+      });
+      byId("idle-frame").addEventListener("change", () => { const layer = currentLayer(); layer.animation = { ...activeAnimation(layer), idleFrame: Number(elements.idle.value) }; refresh(); });
+      byId("walk-start").addEventListener("change", () => {
+        const layer = currentLayer();
+        if (elements.walkStart.value === "") layer.animation = { idleFrame: activeAnimation(layer).idleFrame };
+        else {
+          const startFrame = Number(elements.walkStart.value);
+          layer.animation = { ...activeAnimation(layer), walk: { startFrame, frameCount: Math.max(1, layer.frames.length - startFrame), fps: Number(elements.fps.value) || 8 } };
+        }
+        refresh();
+      });
+      byId("walk-fps").addEventListener("change", () => { const layer = currentLayer(); if (layer.animation?.walk) layer.animation.walk.fps = Number(elements.fps.value) || 8; refresh(); });
+
+      byId("resize").addEventListener("click", () => {
+        const width = Number(elements.width.value), height = Number(elements.height.value);
+        if (!Number.isInteger(width) || !Number.isInteger(height) || width < 1 || width > 512 || height < 1 || height > 512 || width * height > 262144) { alert("Choose dimensions from 1–512 cells with a total area no greater than 262,144."); return; }
+        project.width = width; project.height = height;
+        for (const layer of project.layers) for (const frame of layer.frames) {
+          for (let index = frame.length - 1; index >= 0; index -= 1) if (frame[index][0] >= width || frame[index][1] >= height) frame.splice(index, 1);
+        }
+        refresh();
+      });
+      byId("new-board").addEventListener("click", () => {
+        const hasCells = project.layers.some(layer => layer.frames.some(frame => frame.length));
+        if (hasCells && !confirm("Start a blank 240 × 160 board? Download the current JSON first if you want to keep a portable copy.")) return;
+        project = initialProject(); selectedLayer = "deer"; selectedFrame = 0; selectedColor = 0;
+        elements.width.value = project.width; elements.height.value = project.height; stopPlayback(); refresh();
+      });
+      byId("add-layer").addEventListener("click", () => {
+        const id = byId("new-layer-id").value.trim();
+        if (project.layers.length >= 16) { alert("The board supports up to 16 layers."); return; }
+        if (!/^[a-z][a-z0-9-]{0,47}$/.test(id) || project.layers.some(layer => layer.id === id)) { alert("Use a unique lowercase ID beginning with a letter, such as forest or grass-front."); return; }
+        project.layers.push({ id, frames: [[]], animation: { idleFrame: 0 } }); selectedLayer = id; selectedFrame = 0; byId("new-layer-id").value = ""; refresh();
+      });
+      byId("remove-layer").addEventListener("click", () => {
+        if (project.layers.length <= 1 || !confirm(`Remove layer “${selectedLayer}” and all its frames?`)) return;
+        project.layers = project.layers.filter(layer => layer.id !== selectedLayer); selectedLayer = project.layers[0].id; selectedFrame = 0; refresh();
+      });
+      byId("add-color").addEventListener("click", () => {
+        if (project.palette.length >= 16) { alert("The board supports up to 16 colors."); return; }
+        project.palette.push(byId("new-color").value.toLowerCase()); selectedColor = project.palette.length - 1; refresh();
+      });
+      byId("export").addEventListener("click", () => {
+        const output = { format: FORMAT, formatVersion: FORMAT_VERSION, width: project.width, height: project.height, palette: [...project.palette], layers: project.layers.map(layer => ({ id: layer.id, frames: layer.frames.map(cloneFrame), animation: activeAnimation(layer) })) };
+        try { validateProject(output); }
+        catch (error) { alert(error.message); return; }
+        download(new Blob([`${JSON.stringify(output, null, 2)}\n`], { type: "application/json" }), "regionwright-point-board.json");
+        elements.saveStatus.textContent = "Board JSON downloaded";
+      });
+      byId("preview").addEventListener("click", () => {
+        const zoom = Number(elements.zoom.value);
+        const preview = document.createElement("canvas"); preview.width = project.width * zoom; preview.height = project.height * zoom;
+        paintFrame(preview.getContext("2d"), currentFrame(), zoom);
+        preview.toBlob(blob => { if (blob) download(blob, `${selectedLayer}-frame-${selectedFrame}.png`); }, "image/png");
+      });
+      byId("load").addEventListener("click", () => elements.file.click());
+      elements.file.addEventListener("change", async () => {
+        const file = elements.file.files?.[0]; if (!file) return;
+        try {
+          const hasCells = project.layers.some(layer => layer.frames.some(frame => frame.length));
+          if (hasCells && !confirm("Replace the current board with the selected file? Download the current JSON first if you want to keep a portable copy.")) { elements.file.value = ""; return; }
+          const loaded = validateProject(JSON.parse(await file.text()));
+          stopPlayback();
+          project = { format: FORMAT, formatVersion: FORMAT_VERSION, width: loaded.width, height: loaded.height, palette: [...loaded.palette], layers: loaded.layers.map(layer => ({ id: layer.id, frames: layer.frames.map(cloneFrame), animation: layer.animation ?? { idleFrame: 0 } })) };
+          selectedLayer = project.layers[0].id; selectedFrame = 0; selectedColor = 0; refresh();
+        } catch (error) { alert(`Could not load board: ${error.message}`); }
+        elements.file.value = "";
+      });
+      function stopPlayback() {
+        if (playback) clearInterval(playback);
+        playback = null;
+        byId("play").textContent = "Play frames";
+      }
+      byId("play").addEventListener("click", () => {
+        if (playback) { stopPlayback(); return; }
+        const layer = currentLayer();
+        const animation = activeAnimation(layer);
+        const start = animation.walk?.startFrame ?? 0;
+        const fps = animation.walk?.fps ?? 4;
+        playback = setInterval(() => { selectedFrame = selectedFrame < start || selectedFrame >= layer.frames.length - 1 ? start : selectedFrame + 1; refresh({ persist: false }); }, 1000 / fps);
+        byId("play").textContent = "Stop preview";
+      });
+
+      window.addEventListener("beforeunload", stopPlayback);
+
+      function download(blob, filename) {
+        const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = filename; link.click();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+      }
+
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = validateProject(JSON.parse(saved));
+          project = parsed;
+          selectedLayer = project.layers[0].id;
+        }
+      } catch { project = initialProject(); }
+      elements.width.value = project.width;
+      elements.height.value = project.height;
+      refresh();
+    })();
+  </script>
+</body>
+</html>

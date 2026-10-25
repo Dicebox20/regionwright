@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest an improvement for Regionwright.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What would you like to accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What is difficult about the current process?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your suggested approach

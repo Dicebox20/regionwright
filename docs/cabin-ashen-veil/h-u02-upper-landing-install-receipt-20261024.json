@@ -1,0 +1,632 @@
+{
+  "macro": {
+    "id": "cUXbawbdjcf7ZpUZ",
+    "name": "Cabin H-U02 — Install Upper Landing"
+  },
+  "outcome": {
+    "date": "2026-10-24T23:56:03.196Z",
+    "world": "cabin-in-the-ashen-veil",
+    "operation": "cav.h-u02.provisional-scene.install",
+    "status": "CONFIGURATION_VERIFIED",
+    "artApproval": "PROVISIONAL, not owner-approved",
+    "sourceStairs": {
+      "_id": "CAV06R0000000005",
+      "name": "H-G06 - Upstairs Staircase",
+      "levels": [
+        "defaultLevel0000"
+      ],
+      "shapes": [
+        {
+          "type": "polygon",
+          "points": [
+            669,
+            18.5,
+            763,
+            18.5,
+            763,
+            381.5,
+            669,
+            381.5
+          ],
+          "hole": false,
+          "origin": null
+        }
+      ],
+      "behaviors": [],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "objectKey": "cav:h-g06:region:5",
+          "intendedDestination": "H-U02",
+          "inertUntilPuzzleAndTransitionPhase": true
+        }
+      },
+      "color": "#7acc28",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 2
+      },
+      "_shapeConstraints": null
+    },
+    "greatLandingBefore": [
+      {
+        "_id": "CAV06R0000000001",
+        "name": "H-G06 - Foyer Doorway",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              342.5,
+              849.5,
+              523.5,
+              849.5,
+              523.5,
+              920.5,
+              342.5,
+              920.5
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [
+          {
+            "name": "Confirm: Do you wish to proceed?",
+            "type": "teleportToken",
+            "system": {
+              "destinations": [
+                "Scene.CAVHG02Scene0001.Region.2pa02tkPswd4Cn5b"
+              ],
+              "placement": "center",
+              "snap": false,
+              "choice": true,
+              "revealed": true,
+              "dialog": {
+                "revealed": "Do you wish to proceed?",
+                "unrevealed": "Do you wish to proceed?"
+              },
+              "transition": {
+                "type": null,
+                "duration": 1500
+              }
+            },
+            "flags": {
+              "dicebox-campaign-helper": {
+                "routeKey": "cav:travel:foyer-greatroom:v1"
+              }
+            },
+            "_id": "EZeDVLPQQ9t02Q6t",
+            "disabled": false,
+            "_stats": {
+              "coreVersion": "14.367",
+              "systemId": "dnd5e",
+              "systemVersion": "5.3.3",
+              "createdTime": 1792879649751,
+              "modifiedTime": 1792879649751,
+              "lastModifiedBy": "4c2ow5laZtzUNigr",
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "exportSource": null
+            }
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:h-g06:region:1",
+            "intendedDestination": "H-G02",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        "color": "#287ccc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV06R0000000002",
+        "name": "H-G06 - Dining Room Doorway",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              47,
+              335,
+              140,
+              335,
+              140,
+              532,
+              47,
+              532
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:h-g06:region:2",
+            "intendedDestination": "H-G01",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        "color": "#9828cc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV06R0000000003",
+        "name": "H-G06 - Allen Study Doorway",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              723,
+              362,
+              807,
+              362,
+              807,
+              558,
+              723,
+              558
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:h-g06:region:3",
+            "intendedDestination": "H-G05",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        "color": "#5228cc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV06R0000000004",
+        "name": "H-G06 - Rear Family Room Doorway",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              347,
+              34,
+              515,
+              34,
+              515,
+              120,
+              347,
+              120
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:h-g06:region:4",
+            "intendedDestination": "H-G09",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        "color": "#cc28c8",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV06R0000000005",
+        "name": "H-G06 - Upstairs Staircase",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              669,
+              18.5,
+              763,
+              18.5,
+              763,
+              381.5,
+              669,
+              381.5
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:h-g06:region:5",
+            "intendedDestination": "H-U02",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        "color": "#7acc28",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "color": "#2847cc",
+        "elevation": {
+          "bottom": 0,
+          "top": 20,
+          "topInclusive": false
+        },
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 0,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "name": "H-G06 - Grandfather Clock",
+        "_id": "MrWgTyGg0d0DI53Q",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 86,
+            "y": 52,
+            "width": 60,
+            "height": 120,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "behaviors": [],
+        "locked": false,
+        "ownership": {
+          "default": 2,
+          "5DSCFNJJBNADbyPc": 3
+        },
+        "flags": {},
+        "_shapeConstraints": null
+      },
+      {
+        "color": "#abcc28",
+        "elevation": {
+          "bottom": 0,
+          "top": 20,
+          "topInclusive": false
+        },
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 0,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "name": "H-G06 - Fireplace",
+        "_id": "G0HM92QQtEfyZcFi",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 151,
+            "y": 21,
+            "width": 180,
+            "height": 180,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "behaviors": [
+          {
+            "_id": "CAV06FIRECLICK01",
+            "name": "H-G06 - Fireplace ? Click and Tinderbox",
+            "type": "executeScript",
+            "disabled": false,
+            "system": {
+              "events": [
+                "behaviorActivated",
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ],
+              "source": "// CAV H-G06 FIREPLACE — PLAYER CLICK BEHAVIOR (Foundry 14.367), v001\n// Embedded Region Execute Script. No Macro document, no player Macro permission.\n// Execute Script behavior fires this source on: behaviorActivated, behaviorViewed,\n// behaviorUnviewed, behaviorDeactivated. Click events are registered on the canvas.\n// All Foundry document mutations are performed only on the elected active GM.\nconst KEY = \"__CAV_HG06_FIREPLACE_SCRIPT_V001__\";\nconst CHANNEL = \"module.dicebox-campaign-helper\";\nconst PROTOCOL = \"cav.hg06.fireplace.v001\";\nconst SCENE_ID = \"CAVHG06GreatRoom\";\nconst REGION_ID = \"G0HM92QQtEfyZcFi\";\nconst LIGHT_ID = \"fuWonmPqjJX2SIVG\";\nconst current = globalThis[KEY] ?? (globalThis[KEY] = {\n  socketHandler: null, clickHandler: null, clickStage: null,\n  modalOpen: false, busy: false, seen: new Map()\n});\nconst evt = event?.name ?? \"\";\nconst removeClick = () => {\n  if (current.clickHandler && current.clickStage) {\n    current.clickStage.off(\"pointertap\", current.clickHandler);\n  }\n  current.clickHandler = null;\n  current.clickStage = null;\n};\nif (evt === \"behaviorUnviewed\" || evt === \"behaviorDeactivated\") {\n  removeClick();\n  if (evt === \"behaviorDeactivated\" && current.socketHandler) {\n    game.socket.off(CHANNEL, current.socketHandler);\n    current.socketHandler = null;\n    delete globalThis[KEY];\n  }\n  return;\n}\nif (![\"behaviorActivated\", \"behaviorViewed\"].includes(evt)) return;\nif (!game.ready || game.world?.id !== \"cabin-in-the-ashen-veil\") return;\nif (scene?.id !== SCENE_ID || region?.id !== REGION_ID) return;\nif (!game.modules.get(\"dicebox-campaign-helper\")?.active) return;\n\nconst getScene = () => game.scenes.get(SCENE_ID);\nconst isActiveGM = () => Boolean(game.user?.isGM && game.users.activeGM?.id === game.user.id);\nconst hasTinderbox = actor => Boolean(actor?.items?.contents?.some(item =>\n  /^tinder[\\s-]*box(?:\\b|$)/i.test(item.name?.trim() ?? \"\") &&\n  Number(item.system?.quantity ?? 1) > 0\n));\nconst actorForToken = (tokenId, user) => {\n  const t = getScene()?.tokens.get(tokenId);\n  const a = t?.actor;\n  if (!a || a.type !== \"character\" || !a.testUserPermission(user, \"OWNER\")) return null;\n  return a;\n};\n// The GM socket listener persists while visiting another Scene and is installed\n// whenever this behavior is activated/viewed in the currently open world.\nif (!current.socketHandler) {\n  current.socketHandler = async (data) => {\n    if (!data || data.protocol !== PROTOCOL || data.kind !== \"request\" || !isActiveGM()) return;\n    if (current.busy) return;\n    if (typeof data.nonce !== \"string\" || !/^[A-Za-z0-9]{8,40}$/.test(data.nonce)) return;\n    if (data.sceneId !== SCENE_ID || data.regionId !== REGION_ID ||\n        data.lightId !== LIGHT_ID || ![\"light\", \"extinguish\"].includes(data.action)) return;\n    const user = game.users.get(data.userId);\n    if (!user?.active || !data.tokenId || typeof data.tokenId !== \"string\") return;\n    const actor = actorForToken(data.tokenId, user);\n    if (!actor) return;\n    const key = data.userId + \":\" + data.nonce;\n    if (current.seen.has(key)) return;\n    current.seen.set(key, Date.now());\n    if (current.seen.size > 80) {\n      const oldest = current.seen.keys().next().value;\n      current.seen.delete(oldest);\n    }\n    const reply = (success, message, nowLit) =>\n      game.socket.emit(CHANNEL, {\n        protocol: PROTOCOL, kind: \"result\", nonce: data.nonce,\n        userId: user.id, success, message, nowLit\n      });\n    const light = getScene()?.lights.get(LIGHT_ID);\n    if (!light) return void reply(false, \"The fireplace light is unavailable.\", null);\n    const lit = !light.hidden;\n    if (data.action === \"light\" && lit) return void reply(false, \"The fireplace is already lit.\", true);\n    if (data.action === \"extinguish\" && !lit) return void reply(false, \"The fireplace is already out.\", false);\n    // Lighting requires a carried, nonzero-quantity Tinderbox. Not consumed.\n    if (data.action === \"light\" && !hasTinderbox(actor)) {\n      return void reply(false, \"Requires Tinderbox in your character's inventory.\", false);\n    }\n    current.busy = true;\n    try {\n      await light.update({hidden: data.action === \"extinguish\"});\n      const live = getScene()?.lights.get(LIGHT_ID);\n      const nowLit = live ? !live.hidden : null;\n      if (nowLit !== (data.action === \"light\")) {\n        await reply(false, \"The fireplace state could not be verified.\", nowLit);\n      } else {\n        await reply(true, nowLit ? \"You light the old wood. The hearth catches fire.\" :\n          \"You put out the fireplace.\", nowLit);\n      }\n    } catch (err) {\n      console.error(\"[CAV Fireplace] Light toggle failed\", err);\n      await reply(false, \"The fire could not be changed. Ask the GM to check the light.\", !light.hidden);\n    } finally {\n      current.busy = false;\n    }\n  };\n  game.socket.on(CHANNEL, current.socketHandler);\n}\n// No click registration when this Scene isn't currently viewed.\nif (canvas.scene?.id !== SCENE_ID || !canvas.stage) return;\nif (current.clickHandler && current.clickStage !== canvas.stage) removeClick();\nif (current.clickHandler) return;\ncurrent.clickHandler = async (pointer) => {\n  if (current.modalOpen || canvas.scene?.id !== SCENE_ID) return;\n  const r = getScene()?.regions.get(REGION_ID);\n  const light = getScene()?.lights.get(LIGHT_ID);\n  if (!r || !light || !pointer?.global) return;\n  const pos = canvas.stage.toLocal(pointer.global);\n  if (!Number.isFinite(pos.x) || !Number.isFinite(pos.y)) return;\n  // Geometric hit-test is independent of Region-outline visibility, token\n  // vision, fog and which canvas tool/layer is active.\n  if (!r.testPoint({x:pos.x, y:pos.y, elevation:0})) return;\n  current.modalOpen = true;\n  try {\n    const lit = !light.hidden;\n    const description = lit ?\n      \"The old wood is burning in the fireplace.\" :\n      \"The wood in the fireplace is old and dry, but it should still burn.\";\n    const question = lit ?\n      \"Do you wish to put out the fire?\" :\n      \"Do you wish to light the fire?\";\n    const requirement = lit ? \"\" :\n      '<p style=\"font-size:0.85em\"><strong>Required: Tinderbox</strong></p>';\n    const approved = await foundry.applications.api.DialogV2.confirm({\n      window: {title: \"Great Room Fireplace\"},\n      content: \"<p>\" + description + \"</p><p>\" + question + \"</p>\" + requirement,\n      yes: {label: lit ? \"Put Out Fire\" : \"Light Fire\"},\n      no: {label: \"Cancel\"}\n    });\n    if (!approved) return;\n    // The acting character must have a Token in this same Scene. Controlled\n    // owned token takes priority; fall back to the user's assigned character.\n    const user = game.user;\n    const tokens = getScene().tokens.contents.filter(t =>\n      t.actor?.type === \"character\" && t.actor.testUserPermission(user, \"OWNER\"));\n    let token = canvas.tokens.controlled.map(t => t.document).find(t =>\n      tokens.some(candidate => candidate.id === t.id));\n    token ??= tokens.find(t => t.actor?.id === user.character?.id);\n    token ??= tokens.length === 1 ? tokens[0] : null;\n    if (!token) {\n      ui.notifications.warn(\"Select your character token in this Scene to use the fireplace.\");\n      return;\n    }\n    if (!lit && !hasTinderbox(token.actor)) {\n      ui.notifications.warn(\"Required: Tinderbox in your character's inventory.\");\n      return;\n    }\n    const nonce = foundry.utils.randomID(16);\n    const resultHandler = (msg) => {\n      if (msg?.protocol !== PROTOCOL || msg?.kind !== \"result\" ||\n          msg.userId !== user.id || msg.nonce !== nonce) return;\n      game.socket.off(CHANNEL, resultHandler);\n      ui.notifications[msg.success ? \"info\" : \"warn\"](msg.message);\n    };\n    game.socket.on(CHANNEL, resultHandler);\n    await game.socket.emit(CHANNEL, {\n      protocol: PROTOCOL, kind:\"request\", nonce, userId:user.id,\n      sceneId:SCENE_ID, regionId:REGION_ID, lightId:LIGHT_ID,\n      tokenId:token.id, action:lit ? \"extinguish\" : \"light\"\n    });\n  } catch(err) {\n    console.error(\"[CAV Fireplace] Click interaction failed\", err);\n    ui.notifications.warn(\"The fireplace interaction could not open.\");\n  } finally {\n    current.modalOpen = false;\n  }\n};\ncurrent.clickStage = canvas.stage;\ncurrent.clickStage.on(\"pointertap\", current.clickHandler);\nconsole.info(\"[CAV Fireplace] Region click behavior registered for user\", game.user.id);"
+            },
+            "flags": {},
+            "_stats": {
+              "coreVersion": "14.367",
+              "systemId": "dnd5e",
+              "systemVersion": "5.3.3",
+              "createdTime": 1792822201998,
+              "modifiedTime": 1792822201998,
+              "lastModifiedBy": "5DSCFNJJBNADbyPc",
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "exportSource": null
+            }
+          }
+        ],
+        "locked": false,
+        "ownership": {
+          "default": 2,
+          "5DSCFNJJBNADbyPc": 3
+        },
+        "flags": {},
+        "_shapeConstraints": null
+      },
+      {
+        "name": "H-G06 - Arrival from Foyer",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 363,
+            "y": 736.5,
+            "width": 120,
+            "height": 120,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "routeKey": "cav:travel:foyer-greatroom:v1",
+            "kind": "landing"
+          }
+        },
+        "_id": "S7QJ3qEWYLWSdu3f",
+        "color": "#cc287f",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "levels": [],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "behaviors": [],
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 2,
+          "4c2ow5laZtzUNigr": 3
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "color": "#3fcc28",
+        "elevation": {
+          "bottom": 0,
+          "top": 20,
+          "topInclusive": false
+        },
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "name": "chest",
+        "_id": "ibN7AGsY4AlG582M",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 112,
+            "y": 654,
+            "width": 120,
+            "height": 60,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "behaviors": [],
+        "locked": false,
+        "ownership": {
+          "default": 2,
+          "5DSCFNJJBNADbyPc": 3
+        },
+        "flags": {},
+        "_shapeConstraints": null
+      }
+    ],
+    "asset": "Maps/cabin-in-the-ashen-veil/h-u02-upper-gallery-provisional-v001.png",
+    "created": {
+      "scene": "Scene.gGgUHlHdI7RFrbUh",
+      "upperReturn": "Scene.gGgUHlHdI7RFrbUh.Region.QunJFtigwByZndFV",
+      "upperLanding": "Scene.gGgUHlHdI7RFrbUh.Region.xPTEg7ce2Bliz9M0",
+      "greatLanding": "Scene.CAVHG06GreatRoom.Region.m3E7MaZTx6fvqXok",
+      "upBehavior": "Scene.CAVHG06GreatRoom.Region.CAV06R0000000005.RegionBehavior.shReQrRjUoub0D9y",
+      "downBehavior": "Scene.gGgUHlHdI7RFrbUh.Region.QunJFtigwByZndFV.RegionBehavior.e3adEyt0XRjbyY0y"
+    },
+    "behaviors": [
+      {
+        "uuid": "Scene.CAVHG06GreatRoom.Region.CAV06R0000000005.RegionBehavior.shReQrRjUoub0D9y",
+        "type": "teleportToken",
+        "disabled": false,
+        "destination": "Scene.gGgUHlHdI7RFrbUh.Region.xPTEg7ce2Bliz9M0",
+        "resolved": true,
+        "prompt": "Do you wish to proceed?"
+      },
+      {
+        "uuid": "Scene.gGgUHlHdI7RFrbUh.Region.QunJFtigwByZndFV.RegionBehavior.e3adEyt0XRjbyY0y",
+        "type": "teleportToken",
+        "disabled": false,
+        "destination": "Scene.CAVHG06GreatRoom.Region.m3E7MaZTx6fvqXok",
+        "resolved": true,
+        "prompt": "Do you wish to proceed?"
+      }
+    ],
+    "warning": "No non-GM token movement test. Temporary procedural map pending approved artwork, wall and navigation inspection."
+  }
+}

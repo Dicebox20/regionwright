@@ -1,0 +1,29 @@
+{
+  "name": "regionwright",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "verify:ascendancy-source": "node scripts/verify-ascendancy-source.mjs",
+    "verify:ascendancy-regions": "node scripts/verify-ascendancy-region-plan.mjs",
+    "verify:ascendancy-spatial": "node scripts/verify-ascendancy-spatial-projection.mjs",
+    "verify:ascendancy-installer-bridge": "node scripts/verify-ascendancy-installer-bridge.mjs",
+    "test:all": "npm run check && npm run test:e2e",
+    "build:modules": "node scripts/build-modules.mjs",
+    "build:studio": "node scripts/build-modules.mjs regionwright",
+    "build:puzzles-locks": "node scripts/build-modules.mjs regionwright-puzzles-locks",
+    "build:hunting-gathering": "node scripts/build-modules.mjs regionwright-hunting-gathering",
+    "package:modules": "npm run build:modules && node scripts/package-modules.mjs",
+    "package:studio": "npm run build:studio && node scripts/package-modules.mjs regionwright",
+    "package:puzzles-locks": "npm run build:puzzles-locks && node scripts/package-modules.mjs regionwright-puzzles-locks",
+    "package:hunting-gathering": "npm run build:hunting-gathering && node scripts/package-modules.mjs regionwright-hunting-gathering",
+    "prepare:github-release": "node scripts/prepare-github-release.mjs",
+    "check": "node scripts/check-module-sources.mjs && npm test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.1",
+    "playwright": "^1.62.1"
+  }
+}

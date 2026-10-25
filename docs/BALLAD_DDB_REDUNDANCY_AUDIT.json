@@ -1,0 +1,4738 @@
+{
+  "actors": {
+    "total": 2974,
+    "ddbLike": 2530,
+    "ddbLikeReferenced": 96,
+    "ddbLikeUnreferenced": 2434,
+    "custom": 444
+  },
+  "items": {
+    "total": 8758,
+    "ddbLike": 6750,
+    "ddbLikeReferenced": 1,
+    "ddbLikeUnreferenced": 6749,
+    "custom": 2008
+  },
+  "tokenReferencedActors": 197,
+  "ddbActorsUsedByTokens": 95,
+  "actorFolders": [
+    {
+      "folder": "DDB Monsters / Expanded Rules / Humanoid",
+      "count": 398,
+      "logicalMB": 22.61
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Undead",
+      "count": 110,
+      "logicalMB": 6.1
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Fiend",
+      "count": 94,
+      "logicalMB": 5.98
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Dragon",
+      "count": 88,
+      "logicalMB": 5.73
+    },
+    {
+      "folder": "The Crew",
+      "count": 14,
+      "logicalMB": 5.6
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Monstrosity",
+      "count": 136,
+      "logicalMB": 5.1
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Aberration",
+      "count": 97,
+      "logicalMB": 4.95
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Dragon",
+      "count": 51,
+      "logicalMB": 3.4
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Construct",
+      "count": 104,
+      "logicalMB": 3.11
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Humanoid",
+      "count": 75,
+      "logicalMB": 3.02
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Fiend",
+      "count": 64,
+      "logicalMB": 2.91
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Fiend",
+      "count": 54,
+      "logicalMB": 2.74
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Fey",
+      "count": 54,
+      "logicalMB": 2.56
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Humanoid",
+      "count": 46,
+      "logicalMB": 2.52
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Giant",
+      "count": 61,
+      "logicalMB": 2.36
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Dragon",
+      "count": 47,
+      "logicalMB": 2.16
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Monstrosity",
+      "count": 57,
+      "logicalMB": 2.06
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Celestial",
+      "count": 38,
+      "logicalMB": 2
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Aberration",
+      "count": 35,
+      "logicalMB": 1.9
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Celestial",
+      "count": 20,
+      "logicalMB": 1.84
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Undead",
+      "count": 38,
+      "logicalMB": 1.79
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Monstrosity",
+      "count": 61,
+      "logicalMB": 1.76
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Undead",
+      "count": 34,
+      "logicalMB": 1.71
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Beast",
+      "count": 102,
+      "logicalMB": 1.7
+    },
+    {
+      "folder": "Monsters (SRD) / Dragon",
+      "count": 43,
+      "logicalMB": 1.61
+    },
+    {
+      "folder": "(root)",
+      "count": 39,
+      "logicalMB": 1.61
+    },
+    {
+      "folder": "Monsters (SRD) / Beast",
+      "count": 98,
+      "logicalMB": 1.48
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Fey",
+      "count": 25,
+      "logicalMB": 1.42
+    },
+    {
+      "folder": "Monsters (SRD) / Humanoid",
+      "count": 58,
+      "logicalMB": 1.41
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Beast",
+      "count": 92,
+      "logicalMB": 1.4
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Elemental",
+      "count": 44,
+      "logicalMB": 1.37
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Elemental",
+      "count": 32,
+      "logicalMB": 1.34
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Aberration",
+      "count": 24,
+      "logicalMB": 1.25
+    },
+    {
+      "folder": "Monsters (SRD) / Monstrosity",
+      "count": 39,
+      "logicalMB": 1.22
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Elemental",
+      "count": 31,
+      "logicalMB": 1.09
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Beast",
+      "count": 35,
+      "logicalMB": 0.74
+    },
+    {
+      "folder": "Monsters (SRD) / Fiend",
+      "count": 23,
+      "logicalMB": 0.73
+    },
+    {
+      "folder": "Office Ninja",
+      "count": 10,
+      "logicalMB": 0.67
+    },
+    {
+      "folder": "Monsters (SRD) / Undead",
+      "count": 19,
+      "logicalMB": 0.62
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Celestial",
+      "count": 8,
+      "logicalMB": 0.57
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Plant",
+      "count": 20,
+      "logicalMB": 0.55
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Fey",
+      "count": 10,
+      "logicalMB": 0.53
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Giant",
+      "count": 14,
+      "logicalMB": 0.46
+    },
+    {
+      "folder": "Monsters (SRD) / Elemental",
+      "count": 16,
+      "logicalMB": 0.44
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Construct",
+      "count": 20,
+      "logicalMB": 0.43
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Giant",
+      "count": 14,
+      "logicalMB": 0.43
+    },
+    {
+      "folder": "DDB Monsters / Expanded Rules / Ooze",
+      "count": 12,
+      "logicalMB": 0.41
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Construct",
+      "count": 16,
+      "logicalMB": 0.35
+    },
+    {
+      "folder": "Monsters (SRD) / Celestial",
+      "count": 6,
+      "logicalMB": 0.35
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Plant",
+      "count": 17,
+      "logicalMB": 0.34
+    },
+    {
+      "folder": "Monsters (SRD) / Giant",
+      "count": 10,
+      "logicalMB": 0.3
+    },
+    {
+      "folder": "DDB Vehicles / Spelljammer: Adventures in Space",
+      "count": 15,
+      "logicalMB": 0.29
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Plant",
+      "count": 14,
+      "logicalMB": 0.27
+    },
+    {
+      "folder": "Giff Town NPC / Merchants",
+      "count": 6,
+      "logicalMB": 0.22
+    },
+    {
+      "folder": "Monsters (SRD) / Construct",
+      "count": 9,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "Monsters (SRD) / Fey",
+      "count": 6,
+      "logicalMB": 0.17
+    },
+    {
+      "folder": "Monsters (SRD) / Aberration",
+      "count": 5,
+      "logicalMB": 0.16
+    },
+    {
+      "folder": "JB2A DnD5e Actors",
+      "count": 23,
+      "logicalMB": 0.16
+    },
+    {
+      "folder": "Navy Soldiers",
+      "count": 9,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Monsters / Core Rules / Ooze",
+      "count": 6,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "Interceptor Race",
+      "count": 8,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "Illithid Nexus",
+      "count": 3,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "DDB Vehicles / Ghosts of Saltmarsh",
+      "count": 6,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "Autognomes",
+      "count": 4,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Vehicles / Acquisitions Incorporated",
+      "count": 2,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Summons / Bigby's Hand (2024)",
+      "count": 4,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Summons / Create Undead (2014)",
+      "count": 4,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Summons / Create Undead (2024)",
+      "count": 4,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "Index Constructs",
+      "count": 2,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Monsters / 2014 Core Rules / Ooze",
+      "count": 5,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Summons / Arcane Hand (2014)",
+      "count": 4,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "Monsters (SRD) / Plant",
+      "count": 6,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Vehicles / Baldur’s Gate: Descent into Avernus",
+      "count": 4,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Summons / Drake Companion (2014)",
+      "count": 5,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Summons / Fey Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "The Extras",
+      "count": 7,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Index Maze Workers",
+      "count": 4,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Vehicles / Eberron: Forge of the Artificer",
+      "count": 3,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Monsters (SRD) / Summons",
+      "count": 7,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "Monsters (SRD) / Ooze",
+      "count": 4,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Summons / Conjure Elementals",
+      "count": 4,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Summons / Elemental Spirit (2014)",
+      "count": 4,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "Ascendancy Archive",
+      "count": 1,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Animated Object (2024)",
+      "count": 5,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "Ascendancy Encounter",
+      "count": 4,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "CPR Summons",
+      "count": 9,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Construct Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Construct Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Dancing Lights",
+      "count": 7,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Draconic Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Elemental Spirit (2024)",
+      "count": 4,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Fey Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Fiendish Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Giant Insect (2024)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Vehicles / Spelljammer Academy",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Shadow Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Steel Defender (2024)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Undead Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Summons / Aberrant Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Aberrant Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Primal Companion (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Bestial Spirit (2014)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Bestial Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Fiendish Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Otherworldly Steed (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Undead Spirit (2024)",
+      "count": 3,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Summons / Celestial Spirit (2024)",
+      "count": 2,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Summons / Celestial Spirit (2014)",
+      "count": 2,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Summons / Eldritch Cannon (2024)",
+      "count": 3,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Summons / Mage Hand",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Summons / Animate Dead (2014)",
+      "count": 2,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Ascendancy Subsystems",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Conjure Animals",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Draconic Spirit (2024)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Flaming Sphere",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Homunculus Servant (2014)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Homunculus Servant (2024)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Shadow Sorcerer (2024)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Illusions",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Vehicles / Index Spelljammers",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Animate Dead (2024)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Steel Defender (2014)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Wildfire Spirit (2014)",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Summons / Arcane Eye",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Arcane Sword (2014)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Ascendancy — Puzzle Actors",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Blade of Disaster",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Tasha's Bubbling Cauldron",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Conjure Fey",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Faithful Hound (2024)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Faithful Hound (2014)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Grasping Vine",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Guardian of Faith (2014)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Guardian of Faith (2024)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Invoke Duplicity",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Clairvoyance",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Phantom Steed (2024)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Phantom Steed (2014)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Spiritual Weapon",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Vehicles",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Summons / Finger of Death (2024)",
+      "count": 1,
+      "logicalMB": 0.01
+    }
+  ],
+  "itemFolders": [
+    {
+      "folder": "DDB Items / Core Rules / Weapons / Martial Melee",
+      "count": 332,
+      "logicalMB": 2.04
+    },
+    {
+      "folder": "Items (SRD) / Weapon",
+      "count": 275,
+      "logicalMB": 1.54
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Wondrous items",
+      "count": 229,
+      "logicalMB": 1.49
+    },
+    {
+      "folder": "DDB Items / Core Rules / Weapons / Simple Melee",
+      "count": 182,
+      "logicalMB": 1.25
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Wondrous items",
+      "count": 210,
+      "logicalMB": 1.21
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Weapons / Martial Melee",
+      "count": 173,
+      "logicalMB": 1.15
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Weapons / Martial Melee",
+      "count": 125,
+      "logicalMB": 1.07
+    },
+    {
+      "folder": "DDB Items / Core Rules / Weapons / Martial Ranged",
+      "count": 172,
+      "logicalMB": 1.01
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Wondrous items",
+      "count": 125,
+      "logicalMB": 0.84
+    },
+    {
+      "folder": "Monster Features (SRD)",
+      "count": 252,
+      "logicalMB": 0.73
+    },
+    {
+      "folder": "CPR Spells",
+      "count": 119,
+      "logicalMB": 0.72
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Weapons / Simple Melee",
+      "count": 71,
+      "logicalMB": 0.56
+    },
+    {
+      "folder": "Items (SRD) / Trinket",
+      "count": 113,
+      "logicalMB": 0.54
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Weapons / Martial Ranged",
+      "count": 59,
+      "logicalMB": 0.52
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Medium Armor",
+      "count": 89,
+      "logicalMB": 0.46
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Medium Armor",
+      "count": 134,
+      "logicalMB": 0.46
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 2nd Level",
+      "count": 63,
+      "logicalMB": 0.41
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 2nd Level",
+      "count": 61,
+      "logicalMB": 0.4
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 1st Level",
+      "count": 64,
+      "logicalMB": 0.39
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 1st Level",
+      "count": 64,
+      "logicalMB": 0.38
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Heavy Armor",
+      "count": 72,
+      "logicalMB": 0.37
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Weapons / Simple Melee",
+      "count": 56,
+      "logicalMB": 0.36
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 3rd Level",
+      "count": 52,
+      "logicalMB": 0.33
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Heavy Armor",
+      "count": 100,
+      "logicalMB": 0.32
+    },
+    {
+      "folder": "Items (SRD) / Equipment",
+      "count": 81,
+      "logicalMB": 0.31
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 3rd Level",
+      "count": 51,
+      "logicalMB": 0.31
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Medium Armor",
+      "count": 65,
+      "logicalMB": 0.31
+    },
+    {
+      "folder": "DDB Items / Core Rules / Weapons / Simple Ranged",
+      "count": 54,
+      "logicalMB": 0.31
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 5th Level",
+      "count": 48,
+      "logicalMB": 0.29
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Weapons / Martial Ranged",
+      "count": 54,
+      "logicalMB": 0.29
+    },
+    {
+      "folder": "DDB Classes / Druid (2014)",
+      "count": 16,
+      "logicalMB": 0.29
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 5th Level",
+      "count": 44,
+      "logicalMB": 0.27
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Potions",
+      "count": 45,
+      "logicalMB": 0.27
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 4th Level",
+      "count": 41,
+      "logicalMB": 0.26
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Invocations",
+      "count": 40,
+      "logicalMB": 0.24
+    },
+    {
+      "folder": "Spells (SRD) / 2nd Level",
+      "count": 54,
+      "logicalMB": 0.23
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Heavy Armor",
+      "count": 52,
+      "logicalMB": 0.23
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 4th Level",
+      "count": 40,
+      "logicalMB": 0.23
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 6th Level",
+      "count": 34,
+      "logicalMB": 0.23
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Adventuring Gear",
+      "count": 49,
+      "logicalMB": 0.22
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Light Armor",
+      "count": 42,
+      "logicalMB": 0.22
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Light Armor",
+      "count": 67,
+      "logicalMB": 0.22
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Adventuring Gear",
+      "count": 47,
+      "logicalMB": 0.21
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 6th Level",
+      "count": 34,
+      "logicalMB": 0.21
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 0th Level (Cantrip)",
+      "count": 34,
+      "logicalMB": 0.2
+    },
+    {
+      "folder": "Spells (SRD) / 1st Level",
+      "count": 49,
+      "logicalMB": 0.2
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Rings",
+      "count": 34,
+      "logicalMB": 0.2
+    },
+    {
+      "folder": "Spells (SRD) / 3rd Level",
+      "count": 42,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "Spells (SRD) / 5th Level",
+      "count": 37,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 7th Level",
+      "count": 21,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 7th Level",
+      "count": 21,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "Items (SRD) / Ring",
+      "count": 34,
+      "logicalMB": 0.18
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Tattoos",
+      "count": 28,
+      "logicalMB": 0.17
+    },
+    {
+      "folder": "DDB Backgrounds / Guildmasters’ Guide to Ravnica",
+      "count": 10,
+      "logicalMB": 0.17
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Potions",
+      "count": 30,
+      "logicalMB": 0.17
+    },
+    {
+      "folder": "Items (SRD) / Potion",
+      "count": 41,
+      "logicalMB": 0.16
+    },
+    {
+      "folder": "DDB Classes / Warlock / Invocations",
+      "count": 23,
+      "logicalMB": 0.16
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Rings",
+      "count": 26,
+      "logicalMB": 0.16
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 0th Level (Cantrip)",
+      "count": 27,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Backgrounds / Baldur’s Gate: Descent into Avernus",
+      "count": 14,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Ammunition",
+      "count": 34,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "Items (SRD) / Armor",
+      "count": 92,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 3rd Level",
+      "count": 22,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "Spells (SRD) / 6th Level",
+      "count": 31,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 5th Level",
+      "count": 19,
+      "logicalMB": 0.15
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 2nd Level",
+      "count": 22,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "Spells (SRD) / 4th Level",
+      "count": 31,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 4th Level",
+      "count": 16,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Backgrounds / Sword Coast Adventurer's Guide",
+      "count": 12,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Weapons / Simple Ranged",
+      "count": 24,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Classes / Fighter / Maneuver Options",
+      "count": 21,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Maneuver Options",
+      "count": 23,
+      "logicalMB": 0.14
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 1st Level",
+      "count": 13,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "Items (SRD) / Tool",
+      "count": 36,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014)",
+      "count": 15,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 9th Level",
+      "count": 16,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Infusions",
+      "count": 17,
+      "logicalMB": 0.13
+    },
+    {
+      "folder": "DDB Classes / Artificer / Subclass Features / Alchemist",
+      "count": 6,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 8th Level",
+      "count": 18,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Light Armor",
+      "count": 22,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Rings",
+      "count": 22,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Weapons / Simple Ranged",
+      "count": 23,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014)",
+      "count": 10,
+      "logicalMB": 0.12
+    },
+    {
+      "folder": "DDB Feats / Eberron: Forge of the Artificer / Dragonmark",
+      "count": 13,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014)",
+      "count": 10,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Spells / Core Rules / 8th Level",
+      "count": 18,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014)",
+      "count": 10,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "Spells (SRD) / 7th Level",
+      "count": 20,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Spells / 2014 Core Rules / 9th Level",
+      "count": 16,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Class Features",
+      "count": 19,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Wondrous items",
+      "count": 21,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 6th Level",
+      "count": 15,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Dragonborn / Traits",
+      "count": 30,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Runes",
+      "count": 7,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Class Features",
+      "count": 40,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Scrolls",
+      "count": 26,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Wands",
+      "count": 17,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Wands",
+      "count": 15,
+      "logicalMB": 0.11
+    },
+    {
+      "folder": "Spells (SRD) / Cantrip",
+      "count": 24,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Classes / Monk / Class Features",
+      "count": 19,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014)",
+      "count": 10,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Wondrous items",
+      "count": 19,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Consumable / Ammunition",
+      "count": 23,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 0th Level (Cantrip)",
+      "count": 18,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Four Elements",
+      "count": 19,
+      "logicalMB": 0.1
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Warlock / Eldritch Invocations",
+      "count": 32,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014)",
+      "count": 5,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Artificer",
+      "count": 6,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "Items (SRD) / Equipment Packs",
+      "count": 44,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Totem Warrior",
+      "count": 20,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014)",
+      "count": 12,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Species / Core Rules / Dragonborn / Traits",
+      "count": 21,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Metamagic",
+      "count": 11,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Monk (2014)",
+      "count": 11,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014)",
+      "count": 9,
+      "logicalMB": 0.09
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Loot / Gemstone",
+      "count": 52,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Spells (SRD) / 8th Level",
+      "count": 16,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Container / Wondrous items",
+      "count": 15,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Arcane Archer",
+      "count": 14,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / Core Rules / Consumable / Poisons",
+      "count": 15,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Poisons",
+      "count": 15,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Spells (SRD) / 9th Level",
+      "count": 15,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014)",
+      "count": 9,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Shields",
+      "count": 10,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dragonborn / Chromatic Dragonborn Traits",
+      "count": 20,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Token Effects premade",
+      "count": 22,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Rods",
+      "count": 11,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "Items (SRD) / Wand",
+      "count": 15,
+      "logicalMB": 0.08
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Tools / Artisan's Tools",
+      "count": 17,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Items / Core Rules / Tools / Artisan's Tools",
+      "count": 17,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Warlock",
+      "count": 5,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Ammunition",
+      "count": 16,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Class Features",
+      "count": 13,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014)",
+      "count": 10,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Bard (2014)",
+      "count": 8,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dragonborn / Gem Dragonborn Traits",
+      "count": 17,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Barbarian / Class Features",
+      "count": 16,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Backgrounds / Player’s Handbook (2014)",
+      "count": 10,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Rogue / Class Features",
+      "count": 13,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Hunter",
+      "count": 7,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Class Features",
+      "count": 19,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Genie",
+      "count": 16,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Rods",
+      "count": 10,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Lunar Sorcery",
+      "count": 14,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Storm Herald",
+      "count": 10,
+      "logicalMB": 0.07
+    },
+    {
+      "folder": "DDB Classes / Sorcerer",
+      "count": 5,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Paladin / Class Features",
+      "count": 13,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Class Features",
+      "count": 16,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Artificer / Subclass Features / Armorer",
+      "count": 7,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Druid / Class Features",
+      "count": 15,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Fighter",
+      "count": 5,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Cleric / Class Features",
+      "count": 13,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dragonborn / Metallic Dragonborn Traits",
+      "count": 14,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Monk / Monk Features",
+      "count": 20,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Artificer / Experimental Elixirs",
+      "count": 5,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Paladin",
+      "count": 5,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Subclass Features / Aberrant Sorcery",
+      "count": 10,
+      "logicalMB": 0.06
+    },
+    {
+      "folder": "DDB Backgrounds / Eberron: Forge of the Artificer",
+      "count": 17,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Backgrounds / System Reference Document 5.1",
+      "count": 6,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Champion",
+      "count": 15,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Artificer / Class Features",
+      "count": 10,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi",
+      "count": 8,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Simic Hybrid / Traits",
+      "count": 7,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Barbarian / Subclass Features / Path of the Wild Heart",
+      "count": 8,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Subclass Features / Armorer",
+      "count": 8,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Rogue",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Ranger",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Druid",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Cleric",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Monk / Subclass Features / Warrior of the Elements",
+      "count": 6,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Monk",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "DDB Classes / Rogue / Subclass Features / Soulknife",
+      "count": 5,
+      "logicalMB": 0.05
+    },
+    {
+      "folder": "Items (SRD) / Loot",
+      "count": 44,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Wizard",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Backgrounds / Player’s Handbook",
+      "count": 16,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Artificer / Subclass Features / Cartographer",
+      "count": 7,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Shields",
+      "count": 10,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Eldritch Knight",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Artificer / Subclass Features / Artillerist",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Ascendant Dragon",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Paladin / Subclass Features / Oath of Glory",
+      "count": 7,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Paladin / Paladin Features",
+      "count": 12,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Paladin / Subclass Features / Oath of the Ancients",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Paladin / Subclass Features / Oath of Vengeance",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / Order of Scribes",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Tools / Musical Instrument",
+      "count": 10,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / Core Rules / Tools / Musical Instrument",
+      "count": 10,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "(root)",
+      "count": 11,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Barbarian",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Bard",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Subclass Features / Clockwork Sorcery",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Wild Magic",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Beast",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Tools / Musical Instrument",
+      "count": 11,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "Alcohol",
+      "count": 8,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "CPR Class Features / Cleric",
+      "count": 8,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of Wild Magic",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "Races (SRD) / Dragonborn / Dragonborn Features",
+      "count": 10,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Class Features",
+      "count": 13,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "CPR Class Features / Barbarian",
+      "count": 11,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Fighter / Subclass Features / Psi Warrior",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Elf / Traits",
+      "count": 12,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Adventuring Gear",
+      "count": 18,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Twilight Domain",
+      "count": 7,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dragonborn",
+      "count": 3,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Species / Core Rules / Goliath / Traits",
+      "count": 8,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 7th Level",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Ranger / Subclass Features / Hunter",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Barbarian / Subclass Features / Path of the Zealot",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Divine Soul",
+      "count": 9,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Wands",
+      "count": 8,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "Items (SRD) / Rod",
+      "count": 6,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Arcane Trickster",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Metamagic",
+      "count": 11,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Soulknife",
+      "count": 5,
+      "logicalMB": 0.04
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Rogue / Rogue Features",
+      "count": 13,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Hexblade",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Fighter / Class Features",
+      "count": 10,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Core Rules / Container / Adventuring Gear",
+      "count": 17,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Container / Adventuring Gear",
+      "count": 19,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Feats / Player’s Handbook / Origin",
+      "count": 12,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Items (SRD) / Container",
+      "count": 24,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Core Rules / Container / Wondrous items",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Class Features",
+      "count": 8,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Fighter / Subclass Features / Eldritch Knight",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Subclass Features / Artillerist",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Subclass Features / Battle Smith",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Class Features",
+      "count": 8,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock / Subclass Features / Archfey Patron",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Items (SRD) / Ammunition",
+      "count": 16,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Paladin / Subclass Features / Oath of Devotion",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oathbreaker",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of the Ancients",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of Vengeance",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock / Subclass Features / Great Old One Patron",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of Dreams",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Class Features",
+      "count": 9,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Bard / Bard Features",
+      "count": 10,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Bard / Class Features",
+      "count": 8,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Clockwork Soul",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Archfey",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "CPR Class Features / Bard / College of Glamour",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Bard / Subclass Features / College of Glamour",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger / Subclass Features / Fey Wanderer",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Fey Wanderer",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Subclass Features / Wild Magic Sorcery",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger / Subclass Features / Beast Master",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter / Shifter (MotM) Traits",
+      "count": 2,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Shifter / Traits",
+      "count": 2,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "CPR Summon Features / Fiendish Spirit",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Swords",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of Wildfire",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Cleric / Subclass Features / Trickery Domain",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Class Features",
+      "count": 10,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Container / Vehicles",
+      "count": 16,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Drakewarden",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Desert)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Mountain)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Coast)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Grassland)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Forest)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Arctic)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Underdark)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Land (Swamp)",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Celestial",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Cavalier",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Barbarian / Barbarian Features",
+      "count": 12,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Psi Warrior",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Trade Goods (SRD)",
+      "count": 23,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Sorcerer / Metamagic",
+      "count": 8,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Container / Wondrous items",
+      "count": 8,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock / Subclass Features / Celestial Patron",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / Core Rules / Aasimar / Traits",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Peace Domain",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Grave Domain",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of Spores",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid / Subclass Features / Circle of the Land",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "CPR Summon Features / Aberrant Spirit",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Ranger / Hunter Features",
+      "count": 15,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid / Subclass Features / Circle of the Stars",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of Stars",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Elf",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Fiend",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock / Subclass Features / Fiend Patron",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Phantom",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "CPR Summon Features / Undead Spirit",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Consumable / Wondrous items",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger / Class Features",
+      "count": 12,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Giant",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Horizon Walker",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lineages",
+      "count": 3,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Core Rules / Tools",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Tools",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Draconic Bloodline",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer / Subclass Features / Draconic Sorcery",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Elf / Eladrin Traits",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / Core Rules / Elf",
+      "count": 3,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Glamour",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Fathomless",
+      "count": 7,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Shadow Magic",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Shepherd",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Rogue / Subclass Features / Thief",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Ranger / Ranger Features",
+      "count": 11,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "CPR Summon Features / Fey Spirit",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of Mercy",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Monk / Subclass Features / Warrior of Mercy",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Storm Sorcery",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Kensei",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter / Wildhunt (ERftLW) Traits",
+      "count": 3,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Pacts",
+      "count": 4,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Consumable / Potions",
+      "count": 5,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Aberrant Mind",
+      "count": 6,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Consumable / Scrolls",
+      "count": 11,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Species / Core Rules / Tiefling",
+      "count": 3,
+      "logicalMB": 0.03
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Loot / Adventuring Gear",
+      "count": 12,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 8th Level",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Fighter / Fighter Features",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard / Subclass Features / Abjurer",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Nature Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Subclass Features / Alchemist",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Enchantment",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Scout",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Undying",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Items (SRD) / Spellcasting Focus",
+      "count": 12,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Creation",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Druid / Subclass Features / Circle of the Sea",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Half-Elf",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / War Magic",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Arcana Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Artificer / Subclass Features / Battle Smith",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard / Class Features",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Class Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Druid / Druid Features",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / Homebrew / Dohwar / Traits",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gnome / Autognome Traits",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Class Features / Barbarian / Path of the Wild Heart",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue / Subclass Features / Assassin",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Elf",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Elf / Astral Elf Traits",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of Glory",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of Conquest",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of Devotion",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of Redemption",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of the Watchers",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gnome",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / War Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric / Subclass Features / War Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Astral Self",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Subclass Features / The Great Old One",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Barbarian",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Bard",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Class Features / Bard",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Barbarian / Subclass Features / Path of the World Tree",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Class Features / Barbarian / Path of the World Tree",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Battlerager",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Summon Features / Construct Spirit",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Beast Master",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Spells / Expanded Rules / 9th Level",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / Bladesinging",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Equipment / Rods",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Life Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric / Subclass Features / Life Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Forge Domain",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Trickery Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Knowledge Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Druid / Circle of the Land Features",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Light Domain",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Clothing",
+      "count": 12,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Purple Dragon Knight",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / Core Rules / Container / Mounts",
+      "count": 8,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Container / Mounts",
+      "count": 8,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / Core Rules / Container / Vehicles",
+      "count": 11,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Container / Vehicles",
+      "count": 11,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Backgrounds / Acquisitions Incorporated",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Aasimar / Aasimar (MotM) Traits",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Fighter",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Paladin (2014) / Subclass Features / Oath of the Crown",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Class Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Cleric / Cleric Features",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Tempest Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Order Domain",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Druid / Subclass Features / Circle of the Moon",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Druid",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Cleric",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of Shadow",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk / Subclass Features / Warrior of Shadow",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Battle Master",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter / Subclass Features / Battle Master",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Necromancy",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Warlock / Class Features",
+      "count": 8,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Cleric / Subclass Features / Light Domain",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Warlock / The Fiend Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Bard / Subclass Features / College of Dance",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Class Features / Bard / College of Dance",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Tools / Gaming Set",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Divination",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard / Subclass Features / Diviner",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Class Features / Barbarian / Path of the Zealot",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Zealot",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kobold / Traits",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Gloom Stalker",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Ranger / Subclass Features / Gloom Stalker",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Drunken Master",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Inquisitive",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Warlock / Warlock Features",
+      "count": 9,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Warlock (2014) / Class Features",
+      "count": 7,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Samurai",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Swashbuckler",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / Core Rules / Elf / Traits",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Evocation",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard / Subclass Features / Evoker",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Wizard / School of Evocation Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Consumable / Adventuring Gear",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tiefling",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Hobgoblin / Traits",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Goblin / Traits",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Subclass Features / Phoenix Sorcerer Rebalanced",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk / Subclass Features / Warrior of the Open Hand",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Sorcerer (2014) / Class Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Sorcerer / Sorcerer Features",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Berserker",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Barbarian / Subclass Features / Path of the Berserker",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Swarmkeeper",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter (2014) / Subclass Features / Rune Knight",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / Core Rules / Gnome / Traits",
+      "count": 3,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Minotaur / Traits",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Summon Features / Celestial Spirit",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Fighter / Subclass Features / Champion",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Long Death",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Ranger",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Ranger (2014) / Subclass Features / Monster Slayer",
+      "count": 6,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard / Subclass Features / Illusionist",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Illusion",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Eloquence",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Mastermind",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Rogue / Subclass Features / Arcane Trickster",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Whispers",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Transmutation",
+      "count": 5,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Monk",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Paladin",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Monk / Way of the Open Hand Features",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Open Hand",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Classes / Monk (2014) / Subclass Features / Way of the Sun Soul",
+      "count": 4,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Rogue",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Wizard",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Items (SRD) / Scroll",
+      "count": 10,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Warlock",
+      "count": 2,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "CPR Items",
+      "count": 1,
+      "logicalMB": 0.02
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Aarakocra",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Aasimar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Aasimar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Abjuration",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Water Genasi (EE) Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Water Genasi Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Backgrounds (SRD)",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Fighter / Champion Features",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Lore",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Bard / College of Lore Features",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Orc / Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Orc / Orc (MotM) Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Orc / Orc of Eberron (ERftLW) Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Homebrew / Beastkin / Wolfkin Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Plasmoid / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Summon Features / Elemental Spirit",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Triton / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Holy Symbols",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Holy Symbols",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lineages / Hexblood Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lineages / Reborn Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lineages / Dhampir Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Barbarian (2014) / Subclass Features / Path of the Ancestral Guardian",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Arcane Foci",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Arcane Foci",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Wizard / Wizard Features",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Shared Features / Fighting Styles",
+      "count": 6,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Gnome / Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Gnome / Gnome Features",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Assassin",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Codex - Compound Escape Tunnel Loot",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Spelljammer: Adventures in Space",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gith / Githyanki Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Giff / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Mythic Odysseys of Theros",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Paladin / Oath of Devotion Features",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Items (SRD) / Poison",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Bard / Subclass Features / College of Valor",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Bard (2014) / Subclass Features / College of Valor",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Homebrew / Beastkin",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Loot / Adventuring Gear",
+      "count": 7,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Wizard (2014) / Subclass Features / School of Conjuration",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Verdan / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Cleric / Life Domain Features",
+      "count": 6,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Class Features / Cleric / Life Domain",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Homebrew / Joey's Ratatosk (Fixed) / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shadar-kai / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Halfling / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Halfling / Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Summon Features / Draconic Spirit",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Bugbear",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Container / Equipment Packs",
+      "count": 7,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Container / Equipment Packs",
+      "count": 7,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tabaxi / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Centaur",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Thri-kreen / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Changeling",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Changeling",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Changeling / Changeling (ERftLW) Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Changeling / Changeling (MotM) Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Changeling / Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Cleric (2014) / Subclass Features / Death Domain",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Centaur / Centaur (GGtR) Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Centaur / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Elf / Sea Elf Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Druid (2014) / Subclass Features / Circle of the Moon",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Warforged / Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Warforged / Warforged (ERftLW) Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Clothing",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Adventuring Gear",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Class Features / Bard / College of Lore",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Bard / Subclass Features / College of Lore",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Leonin / Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Hadozee / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Homebrew / Dohwar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Miscellaneous",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Sorcerer",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Sorcerer / Draconic Bloodline Features",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Dragonborn",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Dragonborn",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Dragonborn",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Tools / Gaming Set",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / Core Rules / Equipment / Druidic Foci",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Druidic Foci",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kalashtar / Kalashtar (ERftLW) Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Kalashtar / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Duergar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dwarf / Gray Dwarf (Duergar) (SCAG) Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Duergar / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Dwarf",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Dwarf / Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Dwarf / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kenku / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Fairy",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Fairy / Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Classes / Rogue (2014) / Subclass Features / Thief",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Rogue / Thief Features",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kender / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Items (SRD) / Food",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Satyr / Satyr (MOoT) Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Bugbear / Traits",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Khoravar / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / The Wild Beyond the Witchlight",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Tiefling / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Firbolg",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Firbolg / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Dungeon Master's Forge V2",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Aarakocra / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Aarakocra / Aarakocra (EE) Traits",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Summon Features / Bestial Spirit",
+      "count": 5,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Gnome",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Gnome",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "CPR Class Features / Barbarian / Path of the Berserker",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Barbarian / Path of the Berserker Features",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Planescape: Adventures in the Multiverse",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Halfling",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Bigby Presents: Glory of the Giants",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Giff",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gnome / Deep Gnome Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gith",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gith / Githzerai Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Goblin",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Goliath",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Goliath",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Gondian Devices",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Minotaur / Minotaur (GGtR) Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Dwarf",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Hadozee",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Elf",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Half-Orc",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Halfling",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Harengon / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Harengon",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Curse of Strahd: Character Options",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tiefling / Variant Feral Tiefling Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Dwarf",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Dwarf",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Hobgoblin",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lizardfolk / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tortle / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Human",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Human",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Kalashtar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kalashtar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Loxodon / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kender",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kenku",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Khoravar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / Dragonlance: Shadow of the Dragon Queen",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Kobold",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Leonin",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Halfling",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Air Genasi Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Goliath / Goliath (MotM) Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Lizardfolk",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Loxodon",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Yuan-ti / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Satyr / Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Half-Orc / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Minotaur",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Goliath / Goliath (EE) Traits",
+      "count": 4,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Core Rules / Orc",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Orc",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Vedalken / Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Plasmoid",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Orc / Orc Features",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Backgrounds / The Book of Many Things",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "Races (SRD) / Gnome",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Satyr",
+      "count": 2,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shadar-kai",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Shifter",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Simic Hybrid",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Feats / Dragonlance: Shadow of the Dragon Queen / General",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tabaxi",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Thri-kreen",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Tiefling",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tortle",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Triton",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Aasimar",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tiefling / Variant Tiefling Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Verdan",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Expanded Rules / Warforged",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Warforged",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Half-Elf / Wood Half-Elf Traits",
+      "count": 3,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Yuan-ti",
+      "count": 1,
+      "logicalMB": 0.01
+    },
+    {
+      "folder": "DDB Species / Homebrew / Beastkin / Bearkin Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Class & Subclass Features (SRD) / Shared Features",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Half-Elf / Aquatic Half-Elf Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Loot / Adventuring Gear",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Halfling / Halfling Features",
+      "count": 4,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Aasimar / Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Backgrounds (SRD) / Acolyte Equipment",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "CPR Class Features / Bard / College of Valor",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Custom Lineage",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Half-Elf / Drow Half-Elf Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Dwarf / Dwarf Features",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Earth Genasi (EE) Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Earth Genasi Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Classes / Artificer (2014) / Experimental Elixirs",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Half-Elf / Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Elf / Elf Features",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Fire Genasi Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Fire Genasi (EE) Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / Homebrew / Beastkin / Eaglekin Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Class & Subclass Features (SRD)",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Half-Elf",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Orc",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / Legacy/Noncore / Aasimar / Variant Aasimar Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Tiefling / Tiefling Features",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Core Rules / Tiefling / Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Half-Elf / High Half-Elf Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Human",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Ascendancy — Puzzle Components",
+      "count": 3,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Tiefling / Feral Tiefling Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / Homebrew / Joey's Ratatosk (Fixed)",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Halfling",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Feats / Player’s Handbook (2014) / General",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Genasi / Air Genasi (EE) Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Container / Equipment Packs",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter / Beasthide (ERftLW) Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Items / Expanded Rules / Consumable / Scrolls",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / Core Rules / Human / Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Feats / Bigby Presents: Glory of the Giants / General",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Backgrounds (SRD) / Acolyte Feature",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Items / 2014 Core Rules / Equipment / Shields",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter / Swiftstride (ERftLW) Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Shifter / Longtooth (ERftLW) Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Halfling / Ghostwise Halfling Traits",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Gnome / Deep Gnome (EE) Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Feats / Strixhaven: A Curriculum of Chaos / General",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "Races (SRD) / Tiefling",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Custom Lineage / Traits",
+      "count": 2,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Species / 2014 Expanded Rules / Vedalken",
+      "count": 1,
+      "logicalMB": 0
+    },
+    {
+      "folder": "DDB Backgrounds / Strixhaven: A Curriculum of Chaos",
+      "count": 1,
+      "logicalMB": 0
+    }
+  ],
+  "actorFlagScopes": [
+    {
+      "scope": "midi-qol",
+      "count": 2974
+    },
+    {
+      "scope": "dae",
+      "count": 2974
+    },
+    {
+      "scope": "ddbimporter",
+      "count": 2529
+    },
+    {
+      "scope": "dnd5e",
+      "count": 2512
+    },
+    {
+      "scope": "monsterMunch",
+      "count": 2478
+    },
+    {
+      "scope": "chris-premades",
+      "count": 15
+    },
+    {
+      "scope": "tidy5e-sheet",
+      "count": 13
+    },
+    {
+      "scope": "tidy5e-sheet-kgar",
+      "count": 13
+    },
+    {
+      "scope": "ddb-importer",
+      "count": 13
+    },
+    {
+      "scope": "core",
+      "count": 11
+    },
+    {
+      "scope": "world",
+      "count": 7
+    },
+    {
+      "scope": "sequencer",
+      "count": 6
+    },
+    {
+      "scope": "item-piles",
+      "count": 6
+    },
+    {
+      "scope": "regionwright",
+      "count": 2
+    },
+    {
+      "scope": "warp-corridor-chase",
+      "count": 1
+    }
+  ],
+  "itemFlagScopes": [
+    {
+      "scope": "midi-qol",
+      "count": 8758
+    },
+    {
+      "scope": "ddbimporter",
+      "count": 6750
+    },
+    {
+      "scope": "dnd5e",
+      "count": 3811
+    },
+    {
+      "scope": "midiProperties",
+      "count": 3660
+    },
+    {
+      "scope": "infusions",
+      "count": 3461
+    },
+    {
+      "scope": "dae",
+      "count": 1019
+    },
+    {
+      "scope": "chris-premades",
+      "count": 970
+    },
+    {
+      "scope": "spell-class-filter-for-5e",
+      "count": 906
+    },
+    {
+      "scope": "tidy5e-sheet",
+      "count": 906
+    },
+    {
+      "scope": "species",
+      "count": 444
+    },
+    {
+      "scope": "core",
+      "count": 133
+    },
+    {
+      "scope": "ATL",
+      "count": 18
+    },
+    {
+      "scope": "betterRolls5e",
+      "count": 17
+    },
+    {
+      "scope": "magicitems",
+      "count": 16
+    },
+    {
+      "scope": "region-attacher",
+      "count": 4
+    },
+    {
+      "scope": "dungeon-masters-forge",
+      "count": 3
+    },
+    {
+      "scope": "world",
+      "count": 3
+    },
+    {
+      "scope": "autoanimations",
+      "count": 2
+    },
+    {
+      "scope": "itemacro",
+      "count": 2
+    },
+    {
+      "scope": "limits",
+      "count": 2
+    },
+    {
+      "scope": "walledtemplates",
+      "count": 2
+    },
+    {
+      "scope": "obsidian",
+      "count": 2
+    },
+    {
+      "scope": "scene-packer",
+      "count": 1
+    }
+  ],
+  "actorSamples": [
+    {
+      "id": "X1ifNCSJbJhvXIsq",
+      "name": "Aarakocra",
+      "type": "npc",
+      "folder": "DDB Monsters / 2014 Core Rules / Humanoid",
+      "flags": {
+        "dnd5e": {},
+        "monsterMunch": {
+          "url": "https://www.dndbeyond.com/monsters/17100-aarakocra",
+          "img": "https://www.dndbeyond.com/avatars/30761/764/638061092981759421.png",
+          "tokenImg": "https://www.dndbeyond.com/avatars/8/441/636306375308314493.jpeg",
+          "isStockImg": false,
+          "spellList": {
+            "class": [],
+            "pact": [],
+            "atwill": [],
+            "innate": [],
+            "edgeCases": [],
+            "material": true,
+            "innateMatch": false,
+            "concentration": true
+          }
+        },
+        "ddbimporter": {
+          "id": 17100,
+          "entityTypeId": 779871897,
+          "creatureGroupId": null,
+          "creatureFlags": [],
+          "version": "6.6.51",
+          "isLegacy": true,
+          "sources": [
+            {
+              "sourceId": 5,
+              "pageNumber": 12,
+              "sourceType": 1
+            }
+          ],
+          "compendiumId": "ddbAarakocr17100",
+          "sourceId": 5,
+          "sourceCategory": 26,
+          "flatAC": false
+        }
+      }
+    },
+    {
+      "id": "Ml3Ogn6qdQd8kVKd",
+      "name": "Aarakocra Aeromancer",
+      "type": "npc",
+      "folder": "DDB Monsters / Core Rules / Elemental",
+      "flags": {
+        "dnd5e": {},
+        "monsterMunch": {
+          "url": "https://www.dndbeyond.com/monsters/5194864-aarakocra-aeromancer",
+          "img": "https://www.dndbeyond.com/avatars/47138/541/638741963669881076.png",
+          "tokenImg": "https://www.dndbeyond.com/avatars/47138/540/638741963666292548.jpeg",
+          "isStockImg": false
+        },
+        "ddbimporter": {
+          "id": 5194864,
+          "entityTypeId": 779871897,
+          "creatureGroupId": null,
+          "creatureFlags": [],
+          "version": "6.6.51",
+          "isLegacy": false,
+          "sources": [
+            {
+              "sourceId": 147,
+              "pageNumber": 10,
+              "sourceType": 1
+            }
+          ],
+          "compendiumId": "ddbAarAer5194864",
+          "sourceId": 147,
+          "sourceCategory": 24,
+          "flatAC": false
+        }
+      }
+    },
+    {
+      "id": "GnZoSvhBgO8UBQpJ",
+      "name": "Aarakocra Skirmisher",
+      "type": "npc",
+      "folder": "DDB Monsters / Core Rules / Elemental",
+      "flags": {
+        "dnd5e": {},
+        "monsterMunch": {
+          "url": "https://www.dndbeyond.com/monsters/5194865-aarakocra-skirmisher",
+          "img": "https://www.dndbeyond.com/avatars/47138/544/638741963674267358.png",
+          "tokenImg": "https://www.dndbeyond.com/avatars/47138/543/638741963673024642.jpeg",
+          "isStockImg": false
+        },
+        "ddbimporter": {
+          "id": 5194865,
+          "entityTypeId": 779871897,
+          "creatureGroupId": null,
+          "creatureFlags": [],
+          "version": "6.6.51",
+          "isLegacy": false,
+          "sources": [
+            {
+              "sourceId": 147,
+              "pageNumber": 10,
+              "sourceType": 1
+            }
+          ],
+          "compendiumId": "ddbAarSki5194865",
+          "sourceId": 147,
+          "sourceCategory": 24,
+          "flatAC": false
+        }
+      }
+    },
+    {
+      "id": "CEV9a1df8AzUG0kH",
+      "name": "Aarakocra Spelljammer",
+      "type": "npc",
+      "folder": "DDB Monsters / Expanded Rules / Humanoid",
+      "flags": {
+        "dnd5e": {},
+        "monsterMunch": {
+          "url": "https://www.dndbeyond.com/monsters/2821140-aarakocra-spelljammer",
+          "img": "https://www.dndbeyond.com/avatars/4675/675/636747837794884984.jpeg",
+          "tokenImg": "https://www.dndbeyond.com/avatars/4675/675/636747837794884984.jpeg",
+          "isStockImg": true,
+          "spellList": {
+            "class": [
+              "detect magic",
+              "mage armor",
+              "magic missile",
+              "shield",
+              "misty step",
+              "suggestion",
+              "counterspell",
+              "fireball",
+              "fly",
+              "greater invisibility",
+              "ice storm",
+              "cone of cold"
+            ],
+            "pact": [],
+            "atwill": [
+              "fire bolt",
+              "light",
+              "mage hand",
+              "prestidigitation"
+            ],
+            "innate": [],
+            "edgeCases": [],
+            "material": true,
+            "innateMatch": false,
+            "concentration": true
+          }
+        },
+        "ddbimporter": {
+          "id": 2821140,
+          "entityTypeId": 779871897,
+          "creatureGroupId": null,
+          "creatureFlags": [],
+          "version": "6.6.51",
+          "isLegacy": false,
+          "sources": [
+            {
+              "sourceId": 90,
+              "pageNumber": 43,
+              "sourceType": 1
+            }
+          ],
+          "compendiumId": "ddbAarSpe2821140",
+          "sourceId": 90,
+          "sourceCategory": 1,
+          "flatAC": false
+        }
+      }
+    },
+    {
+      "id": "rhpZJInzd8ZzoD5A",
+      "name": "Aartuk Elder",
+      "type": "npc",
+      "folder": "DDB Monsters / Expanded Rules / Plant",
+      "flags": {
+        "dnd5e": {},
+        "monsterMunch": {
+          "url": "https://www.dndbeyond.com/monsters/2821141-aartuk-elder",
+          "img": "https://www.dndbeyond.com/avatars/28079/770/637961800640879007.png",
+          "tokenImg": "https://www.dndbeyond.com/avatars/28079/769/637961800636978861.jpeg",
+          "isStockImg": false,
+          "spellList": {
+            "class": [],
+            "pact": [],
+            "atwill": [],
+            "innate": [
+              {
+                "name": "calm emotions",
+                "type": "day",
+                "value": "1",
+                "innate": false
+              },
+              {
+                "name": "detect magic",
+                "type": "day",
+                "value": "1",
+                "innate": false
+              },
+              {
+                "name": "sending",
+                "type": "day",
+                "value": "1",
+                "innate": false
+              }
+            ],
+            "edgeCases": [],
+            "material": false,
+            "innateMatch": false,
+            "concentration": true
+          }
+        },
+        "ddbimporter": {
+          "id": 2821141,
+          "entityTypeId": 779871897,
+          "creatureGroupId": null,
+          "creatureFlags": [],
+          "version": "6.6.51",
+          "isLegacy": false,
+          "sources": [
+            {
+              "sourceId": 90,
+              "pageNumber": 8,
+              "sourceType": 1
+            }
+          ],
+          "compendiumId": "ddbAarEld2821141",
+          "sourceId": 90,
+          "sourceCategory": 1,
+          "flatAC": false
+        }
+      }
+    }
+  ],
+  "itemSamples": [
+    {
+      "id": "PDYbkd7k71XXuvSG",
+      "name": "\"smarts of a bear\"",
+      "type": "feat",
+      "folder": "DDB Species / Homebrew / Beastkin / Bearkin Traits",
+      "flags": {
+        "ddbimporter": {
+          "isChoiceFeature": false,
+          "id": 125516,
+          "type": "race",
+          "entityTypeId": 1960452172,
+          "is2014": true,
+          "is2024": false,
+          "legacy": false,
+          "originalName": "\"smarts of a bear\"",
+          "dndbeyond": {
+            "requiredLevel": null,
+            "displayOrder": null,
+            "featureType": 1,
+            "entityRaceId": 9189,
+            "entityType": "racial-trait"
+          },
+          "defaultAdditionalActivities": {
+            "enabled": true,
+            "data": {}
+          },
+          "baseName": "\"smarts of a bear\"",
+          "fullRaceName": "Bearkin",
+          "groupName": "Beastkin",
+          "isLineage": false
+        },
+        "species": {
+          "fullRaceName": "Bearkin",
+          "baseRaceName": "Beastkin",
+          "groupName": "Beastkin",
+          "isLineage": false
+        }
+      }
+    },
+    {
+      "id": "OJDZY4f78f4GBzSb",
+      "name": "Aarakocra",
+      "type": "race",
+      "folder": "DDB Species / 2014 Expanded Rules / Aarakocra",
+      "flags": {
+        "ddbimporter": {
+          "type": "race",
+          "entityRaceId": 1026377,
+          "version": "6.6.51",
+          "baseName": "Aarakocra",
+          "baseRaceId": 1026377,
+          "baseRaceName": "Aarakocra",
+          "fullName": "Aarakocra",
+          "fullRaceName": "Aarakocra",
+          "subRaceShortName": null,
+          "isHomebrew": false,
+          "isLegacy": false,
+          "legacy": false,
+          "is2014": true,
+          "is2024": false,
+          "isSubRace": false,
+          "moreDetailsUrl": "/species/1026377-aarakocra",
+          "featIds": [],
+          "groupIds": [],
+          "groupName": "Aarakocra",
+          "isLineage": false,
+          "lineageName": null,
+          "portraitAvatarUrl": "https://www.dndbeyond.com/avatars/25746/806/637880558239724364.jpeg?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "largeAvatarUrl": "https://www.dndbeyond.com/avatars/25746/804/637880558236223926.png?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "keepIcon": true
+        },
+        "dnd5e": {
+          "riders": {
+            "activity": []
+          }
+        }
+      }
+    },
+    {
+      "id": "RiHztV3hn56PcDPX",
+      "name": "Aarakocra (EE)",
+      "type": "race",
+      "folder": "DDB Species / 2014 Expanded Rules / Aarakocra",
+      "flags": {
+        "ddbimporter": {
+          "type": "race",
+          "entityRaceId": 4,
+          "version": "6.6.51",
+          "baseName": "Aarakocra",
+          "baseRaceId": 4,
+          "baseRaceName": "Aarakocra",
+          "fullName": "Aarakocra (EE)",
+          "fullRaceName": "Aarakocra (EE)",
+          "subRaceShortName": null,
+          "isHomebrew": false,
+          "isLegacy": true,
+          "legacy": true,
+          "is2014": true,
+          "is2024": false,
+          "isSubRace": true,
+          "moreDetailsUrl": "/species/4-aarakocra",
+          "featIds": [],
+          "groupIds": [
+            4
+          ],
+          "groupName": "Aarakocra",
+          "isLineage": false,
+          "lineageName": null,
+          "portraitAvatarUrl": "https://www.dndbeyond.com/avatars/9/360/636327455597709803.jpeg?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "avatarUrl": "https://www.dndbeyond.com/avatars/7/621/636286750208925478.png?width=350&height=350&fit=bounds&quality=95&auto=webp",
+          "largeAvatarUrl": "https://www.dndbeyond.com/avatars/7/622/636286750209394240.png?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "keepIcon": true
+        }
+      }
+    },
+    {
+      "id": "KhlqGRqceIKf1Y5G",
+      "name": "Aasimar",
+      "type": "race",
+      "folder": "DDB Species / Core Rules / Aasimar",
+      "flags": {
+        "ddbimporter": {
+          "type": "race",
+          "entityRaceId": 1751434,
+          "version": "6.6.51",
+          "baseName": "Aasimar",
+          "baseRaceId": 1751434,
+          "baseRaceName": "Aasimar",
+          "fullName": "Aasimar",
+          "fullRaceName": "Aasimar",
+          "subRaceShortName": null,
+          "isHomebrew": false,
+          "isLegacy": false,
+          "legacy": false,
+          "is2014": false,
+          "is2024": true,
+          "isSubRace": false,
+          "moreDetailsUrl": "/species/1751434-aasimar",
+          "featIds": [],
+          "groupIds": [],
+          "groupName": "Aasimar",
+          "isLineage": false,
+          "lineageName": null,
+          "portraitAvatarUrl": "https://www.dndbeyond.com/avatars/43940/407/638607447894976032.jpeg?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "avatarUrl": "https://www.dndbeyond.com/avatars/43940/405/638607447891236030.png?width=350&height=350&fit=bounds&quality=95&auto=webp",
+          "largeAvatarUrl": "https://www.dndbeyond.com/avatars/43940/406/638607447893126176.png?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "keepIcon": true
+        },
+        "dnd5e": {
+          "riders": {
+            "activity": []
+          }
+        }
+      }
+    },
+    {
+      "id": "aZKKQmj3Gntz8JZ5",
+      "name": "Aasimar (MotM)",
+      "type": "race",
+      "folder": "DDB Species / 2014 Expanded Rules / Aasimar",
+      "flags": {
+        "ddbimporter": {
+          "type": "race",
+          "entityRaceId": 1026378,
+          "version": "6.6.51",
+          "baseName": "Aasimar",
+          "baseRaceId": 1026378,
+          "baseRaceName": "Aasimar",
+          "fullName": "Aasimar (MotM)",
+          "fullRaceName": "Aasimar (MotM)",
+          "subRaceShortName": null,
+          "isHomebrew": false,
+          "isLegacy": true,
+          "legacy": true,
+          "is2014": true,
+          "is2024": false,
+          "isSubRace": true,
+          "moreDetailsUrl": "/species/1026378-aasimar",
+          "featIds": [],
+          "groupIds": [],
+          "groupName": "Aasimar",
+          "isLineage": false,
+          "lineageName": null,
+          "portraitAvatarUrl": "https://www.dndbeyond.com/avatars/25746/809/637880558244774721.jpeg?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "largeAvatarUrl": "https://www.dndbeyond.com/avatars/25746/807/637880558241494569.png?width=1000&height=1000&fit=bounds&quality=95&auto=webp",
+          "keepIcon": true
+        },
+        "dnd5e": {
+          "riders": {
+            "activity": []
+          }
+        }
+      }
+    }
+  ]
+}

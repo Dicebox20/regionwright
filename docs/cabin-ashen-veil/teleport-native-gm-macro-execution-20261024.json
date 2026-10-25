@@ -1,0 +1,33 @@
+{
+  "operation": "cav.teleports.native-macro.reconcile",
+  "world": "cabin-in-the-ashen-veil",
+  "at": "2026-10-24T23:26:25.627Z",
+  "expected": 40,
+  "confirmed": 40,
+  "restored": [],
+  "conflicts": [],
+  "missing": [],
+  "disabled": [],
+  "unresolved": [
+    {
+      "region": "H-G06 - Dining Room Doorway",
+      "targetCode": "H-G01",
+      "reason": "No exact live destination scene"
+    },
+    {
+      "region": "H-G06 - Allen Study Doorway",
+      "targetCode": "H-G05",
+      "reason": "No exact live destination scene"
+    },
+    {
+      "region": "H-G06 - Rear Family Room Doorway",
+      "targetCode": "H-G09",
+      "reason": "No exact live destination scene"
+    },
+    {
+      "region": "H-G06 - Upstairs Staircase",
+      "targetCode": "H-U02",
+      "reason": "No exact live destination scene"
+    }
+  ]
+}

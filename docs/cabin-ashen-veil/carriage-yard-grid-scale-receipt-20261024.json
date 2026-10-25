@@ -1,0 +1,458 @@
+{
+  "scene": "EXT-01 - Carriage Yard and Cabin Front",
+  "sceneId": "CAVEXT01Yard0001",
+  "before": {
+    "grid": 120,
+    "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+    "regions": [
+      {
+        "id": "CAV01R0000000001",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3445,
+              1631,
+              3994,
+              1631,
+              3994,
+              2016,
+              3445,
+              2016
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000002",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              1481,
+              197,
+              2203,
+              197,
+              2203,
+              703,
+              1481,
+              703
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000003",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              19,
+              1284,
+              464,
+              1284,
+              464,
+              1809,
+              19,
+              1809
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000004",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3314,
+              4247,
+              4013,
+              4247,
+              4013,
+              4772,
+              3314,
+              4772
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000005",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5620,
+              2264,
+              6314,
+              2264,
+              6314,
+              3014,
+              5620,
+              3014
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000006",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              680,
+              909,
+              1448,
+              909,
+              1448,
+              1392,
+              680,
+              1392
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000007",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5784,
+              830,
+              6614,
+              830,
+              6614,
+              1448,
+              5784,
+              1448
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000008",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              2269,
+              2606,
+              2939,
+              2606,
+              2939,
+              3300,
+              2269,
+              3300
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "hc9kcjO4lIsV08MJ",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 5450,
+            "y": 1270,
+            "width": 210,
+            "height": 180,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      },
+      {
+        "id": "7NLNMtl8pzMP21aU",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 5240,
+            "y": 2650,
+            "width": 240,
+            "height": 200,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      },
+      {
+        "id": "woKGA4YxDNMsCXLa",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 780,
+            "y": 1520,
+            "width": 200,
+            "height": 200,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "id": "0JLHTOSjGOHEoagB",
+        "x": 4298,
+        "y": 3023,
+        "width": 1,
+        "height": 1
+      }
+    ]
+  },
+  "after": {
+    "grid": 240,
+    "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+    "regions": [
+      {
+        "id": "CAV01R0000000001",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3445,
+              1631,
+              3994,
+              1631,
+              3994,
+              2016,
+              3445,
+              2016
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000002",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              1481,
+              197,
+              2203,
+              197,
+              2203,
+              703,
+              1481,
+              703
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000003",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              19,
+              1284,
+              464,
+              1284,
+              464,
+              1809,
+              19,
+              1809
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000004",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3314,
+              4247,
+              4013,
+              4247,
+              4013,
+              4772,
+              3314,
+              4772
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000005",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5620,
+              2264,
+              6314,
+              2264,
+              6314,
+              3014,
+              5620,
+              3014
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000006",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              680,
+              909,
+              1448,
+              909,
+              1448,
+              1392,
+              680,
+              1392
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000007",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5784,
+              830,
+              6614,
+              830,
+              6614,
+              1448,
+              5784,
+              1448
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "CAV01R0000000008",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              2269,
+              2606,
+              2939,
+              2606,
+              2939,
+              3300,
+              2269,
+              3300
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ]
+      },
+      {
+        "id": "hc9kcjO4lIsV08MJ",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 5450,
+            "y": 1270,
+            "width": 210,
+            "height": 180,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      },
+      {
+        "id": "7NLNMtl8pzMP21aU",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 5240,
+            "y": 2650,
+            "width": 240,
+            "height": 200,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      },
+      {
+        "id": "woKGA4YxDNMsCXLa",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 780,
+            "y": 1520,
+            "width": 200,
+            "height": 200,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "id": "0JLHTOSjGOHEoagB",
+        "x": 4298,
+        "y": 3023,
+        "width": 1,
+        "height": 1
+      }
+    ]
+  },
+  "geometryUnchanged": true,
+  "tokensUnchanged": true
+}

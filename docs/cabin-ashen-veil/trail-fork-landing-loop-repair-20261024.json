@@ -1,0 +1,243 @@
+{
+  "status": "REPAIRED",
+  "backup": {
+    "bad": {
+      "name": "EXT-TRAIL - Arrival from Carriage Yard",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 790,
+          "y": 830,
+          "width": 220,
+          "height": 210,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "routeKey": "cav:travel:yard-fork:v1",
+          "kind": "landing"
+        }
+      },
+      "_id": "pTIy0ErhYjSVIP5u",
+      "color": "#28cc31",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "levels": [],
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "behaviors": [
+        {
+          "name": "Confirm: Do you wish to proceed?",
+          "type": "teleportToken",
+          "system": {
+            "destinations": [
+              "Scene.CAVEXT01Yard0001.Region.woKGA4YxDNMsCXLa"
+            ],
+            "placement": "center",
+            "snap": false,
+            "choice": true,
+            "revealed": true,
+            "dialog": {
+              "revealed": "Do you wish to proceed?",
+              "unrevealed": "Do you wish to proceed?"
+            },
+            "transition": {
+              "type": null,
+              "duration": 1500
+            }
+          },
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-fork:v1"
+            }
+          },
+          "_id": "2qWIpurbxgPtq7pn",
+          "disabled": false,
+          "_stats": {
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "5.3.3",
+            "createdTime": 1792884072471,
+            "modifiedTime": 1792884072471,
+            "lastModifiedBy": "4c2ow5laZtzUNigr",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        }
+      ],
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "_shapeConstraints": null
+    },
+    "exit": {
+      "name": "EXT-TRAIL - Return to Carriage Yard",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 110,
+          "y": 760,
+          "width": 260,
+          "height": 340,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "routeKey": "cav:travel:yard-fork:v1",
+          "kind": "exit"
+        }
+      },
+      "_id": "UgRMdpoxyshXAFwq",
+      "color": "#6ecc28",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "levels": [],
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "behaviors": [],
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "_shapeConstraints": null
+    },
+    "yard": {
+      "_id": "CAV01R0000000003",
+      "name": "EXT-01 - West Grove Trail",
+      "levels": [
+        "defaultLevel0000"
+      ],
+      "shapes": [
+        {
+          "type": "polygon",
+          "points": [
+            19,
+            1284,
+            464,
+            1284,
+            464,
+            1809,
+            19,
+            1809
+          ],
+          "hole": false,
+          "origin": null
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Confirm travel",
+          "type": "teleportToken",
+          "system": {
+            "destinations": [
+              "Scene.CAVTRAILScene001.Region.UgRMdpoxyshXAFwq"
+            ],
+            "placement": "center",
+            "snap": false,
+            "choice": true,
+            "revealed": true,
+            "dialog": {
+              "revealed": "Do you wish to proceed?",
+              "unrevealed": "Do you wish to proceed?"
+            },
+            "transition": {
+              "type": null,
+              "duration": 1500
+            }
+          },
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-fork:v1"
+            }
+          },
+          "_id": "RsNxNxx7FYeTH6zC",
+          "disabled": false,
+          "_stats": {
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "5.3.3",
+            "createdTime": 1792881189773,
+            "modifiedTime": 1792884072490,
+            "lastModifiedBy": "4c2ow5laZtzUNigr",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "objectKey": "cav:ext01:region:3",
+          "intendedDestination": "EXT-TRAIL",
+          "inertUntilApprovedGameplayPhase": true
+        }
+      },
+      "color": "#95cc28",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0
+      },
+      "_shapeConstraints": null
+    }
+  },
+  "source": "Scene.CAVTRAILScene001.Region.UgRMdpoxyshXAFwq",
+  "landing": "Scene.CAVTRAILScene001.Region.pTIy0ErhYjSVIP5u",
+  "behavior": "Scene.CAVTRAILScene001.Region.UgRMdpoxyshXAFwq.RegionBehavior.I7exFrmw0zVboyHm"
+}

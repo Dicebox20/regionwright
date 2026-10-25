@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+dist/
+*.zip
+.DS_Store
+debug.log
+playwright-report/
+test-results/

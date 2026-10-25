@@ -1,0 +1,25 @@
+.rw-spine-mosaic-dialog .window-content, .rw-spine-setup-dialog .window-content { background: rgba(0, 0, 0, .52); color: var(--color-text-light-highlight, #f5f0e9); }
+.rw-spine-mosaic { display: grid; gap: 14px; text-align: center; outline: 0; }
+.rw-spine-mosaic > strong { font-size: 1.35rem; }
+.rw-spine-shelf { display: flex; min-height: 230px; padding: 18px 12px 13px; align-items: stretch; border: 5px solid #4b301d; border-radius: 16px; background: linear-gradient(#24160e, #120b08); box-shadow: inset 0 0 0 3px #8f693c, inset 0 -13px #5d3d25; }
+.rw-spine-book { position: relative; flex: 1 1 0; min-width: 45px; overflow: hidden; border: 1px solid #d8bd7b; border-radius: 4px 4px 2px 2px; background-color: #6c2132; background-image: linear-gradient(130deg, #4b1121 3%, #8e3143 18%, #d5a647 39%, #5c1d36 58%, #cca258 75%, #2a1126 100%); background-size: calc(var(--rw-spine-count) * 100%) 100%; background-position: var(--rw-spine-position) 50%; color: #fff8dd; cursor: grab; text-shadow: 1px 1px #000; transition: transform .16s ease, filter .16s ease, box-shadow .16s ease; }
+.rw-spine-book:nth-child(even) { transform: translateY(5px); }
+.rw-spine-book:hover, .rw-spine-book.is-selected { z-index: 1; transform: translateY(-8px) scale(1.04); filter: brightness(1.2); box-shadow: 0 0 0 3px #f0cf71, 0 0 15px #e6b54b; }
+.rw-spine-book > i { position: absolute; inset: 8px 5px; border-top: 2px solid rgba(255, 236, 171, .8); border-bottom: 2px solid rgba(255, 236, 171, .8); box-shadow: inset 0 35px rgba(20, 4, 14, .22), inset 0 -35px rgba(20, 4, 14, .22); pointer-events: none; }
+.rw-spine-book > span { position: absolute; inset: 22px 4px 10px; display: flex; justify-content: center; align-items: center; writing-mode: vertical-rl; transform: rotate(180deg); font-family: Georgia, serif; font-size: clamp(.8rem, 1.7vw, 1.05rem); font-weight: 800; letter-spacing: .05em; pointer-events: none; }
+.rw-spine-actions { display: flex; justify-content: center; gap: 14px; }
+.rw-spine-actions button, .rw-spine-setup > button, .rw-spine-target-types button, .rw-spine-target-list button { min-height: 40px; border: 2px solid #a99171; border-radius: 999px; background: #241b18; color: #fff6e7; font-size: 1rem; font-weight: 800; }
+.rw-spine-actions button { min-width: 125px; }
+.rw-spine-actions [data-spine-submit] { border-color: #e1bd56; background: #4a321b; }
+.rw-spine-mosaic > p { min-height: 1.4em; margin: 0; color: #f0e3c4; }
+.rw-spine-setup { display: grid; gap: 10px; }
+.rw-spine-setup > p { margin: 0; font-weight: 700; }
+.rw-spine-target-types, .rw-spine-target-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.rw-spine-target-types button.is-selected, .rw-spine-target-list button.is-selected { border-color: #e1bd56; background: #554122; }
+.rw-spine-setup-books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.rw-spine-setup-book { display: grid; grid-template-columns: 1fr 34px; gap: 5px; }
+.rw-spine-setup-book input { min-width: 0; min-height: 38px; border: 1px solid #a99171; border-radius: 10px; background: #171210; color: #fff6e7; padding: 0 9px; }
+.rw-spine-setup-book button { border: 0; border-radius: 50%; background: #5a2d2d; color: #fff; font-size: 1.2rem; }
+
+.rw-spine-book.rw-spine-has-image { background-image: var(--rw-spine-art); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; }
+.rw-spine-book.rw-spine-has-image > i, .rw-spine-book.rw-spine-has-image > span { display: none; }

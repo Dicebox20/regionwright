@@ -1,0 +1,291 @@
+/* The lock is drawn entirely in CSS: a compact, readable tumbler puzzle with
+   the materials and restrained palette of Foundry's native applications. */
+.rw-lockpick-dialog .window-content {
+  overflow: hidden;
+}
+
+.rw-lockpick-content {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.rw-lockpick-prompt,
+.rw-lockpick-feedback,
+.rw-lockpick-progress {
+  margin: 0;
+  color: var(--color-text-light-highlight, #e8dcc2);
+}
+
+.rw-lockpick-prompt {
+  font-weight: 600;
+}
+
+.rw-lockpick-mechanism {
+  position: relative;
+  min-height: 20rem;
+  overflow: hidden;
+  border: 1px solid #87693e;
+  border-radius: 0.4rem;
+  background:
+    radial-gradient(ellipse at 50% 15%, rgb(218 177 98 / 24%), transparent 43%),
+    linear-gradient(145deg, #4b4030 0%, #201c1d 41%, #100e11 100%);
+  box-shadow: inset 0 0 0 0.28rem rgb(7 6 7 / 48%), inset 0 0 1.5rem rgb(0 0 0 / 64%);
+}
+
+.rw-lockpick-top-plate {
+  position: absolute;
+  inset: 0.55rem 0.65rem auto;
+  height: 1.25rem;
+  border: 1px solid #a88a53;
+  border-radius: 0.2rem;
+  background: linear-gradient(#7a6543, #30291f 48%, #665337);
+  box-shadow: inset 0 0.16rem rgb(255 224 158 / 20%), 0 0.2rem 0.4rem rgb(0 0 0 / 42%);
+}
+
+.rw-lockpick-tumblers {
+  position: absolute;
+  z-index: 2;
+  top: 2.8rem;
+  bottom: 2.6rem;
+  left: 15%;
+  right: 15%;
+  display: grid;
+  grid-template-columns: repeat(var(--rw-tumbler-count, 5), 1fr);
+  align-items: stretch;
+  gap: clamp(0.35rem, 2vw, 0.8rem);
+}
+
+.rw-lockpick-tumbler-button {
+  position: relative;
+  align-self: stretch;
+  height: 100%;
+  min-width: 1.15rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rw-lockpick-tumbler-button:focus-visible {
+  outline: 2px solid var(--color-warm-1, #d5a54b);
+  outline-offset: 0.15rem;
+}
+
+.rw-lockpick-tumbler-button.is-selected .rw-lockpick-track {
+  box-shadow: inset 0 0 0 1px rgb(242 189 73 / 86%), 0 0 0.5rem rgb(215 157 49 / 38%);
+}
+
+.rw-lockpick-ruler {
+  position: absolute;
+  z-index: 3;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 0;
+  width: 0.42rem;
+  border-left: 1px solid rgb(205 166 95 / 62%);
+  background: repeating-linear-gradient(to bottom, rgb(235 197 119 / 90%) 0 1px, transparent 1px 0.7rem);
+  filter: drop-shadow(0.06rem 0.06rem rgb(0 0 0 / 72%));
+  opacity: 0.9;
+}
+
+.rw-lockpick-track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0.58rem;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #a78a52;
+  border-radius: 0.22rem;
+  background:
+    linear-gradient(90deg, rgb(255 220 146 / 14%), transparent 14% 84%, rgb(0 0 0 / 52%)),
+    linear-gradient(90deg, #15100f, #3e3120 45%, #161113 100%);
+  box-shadow: inset 0 0 0 0.16rem #0c0a0b, inset 0 0 0 0.24rem rgb(212 169 93 / 20%), 0 0.14rem 0.26rem rgb(0 0 0 / 54%);
+}
+
+.rw-lockpick-track::before,
+.rw-lockpick-track::after {
+  position: absolute;
+  right: 0.18rem;
+  left: 0.18rem;
+  content: "";
+  pointer-events: none;
+}
+
+.rw-lockpick-track::before {
+  top: 0.25rem;
+  height: 0.42rem;
+  border: 1px solid rgb(226 186 108 / 58%);
+  border-radius: 0.1rem;
+  background: linear-gradient(#72562f, #21180f);
+  box-shadow: 0 0.1rem 0.14rem rgb(0 0 0 / 62%);
+}
+
+.rw-lockpick-track::after {
+  bottom: 0.38rem;
+  height: 0.52rem;
+  border-top: 1px solid rgb(226 186 108 / 64%);
+  border-bottom: 1px solid rgb(22 14 8 / 80%);
+  background: linear-gradient(#72562f, #2a1f15);
+}
+
+.rw-lockpick-spring {
+  position: absolute;
+  top: 0.45rem;
+  left: 39%;
+  width: 22%;
+  height: 4.6rem;
+  opacity: 0.85;
+  background: repeating-linear-gradient(160deg, transparent 0 0.26rem, #d1b47b 0.28rem 0.38rem, #4a3821 0.4rem 0.56rem);
+  filter: drop-shadow(0.08rem 0.08rem rgb(0 0 0 / 75%));
+}
+
+.rw-lockpick-tumbler {
+  position: absolute;
+  z-index: 2;
+  bottom: 8%;
+  left: 39%;
+  width: 22%;
+  height: 6.2rem;
+  border: 1px solid #c59a42;
+  border-radius: 0.18rem 0.18rem 0.32rem 0.32rem;
+  background: linear-gradient(90deg, #6d3c0d, #efb540 44%, #8a4d0d 84%);
+  box-shadow: inset 0 0.14rem rgb(255 237 171 / 55%), 0 0.16rem 0.22rem rgb(0 0 0 / 70%);
+  transition: filter 90ms linear;
+}
+
+.rw-lockpick-tumbler::before {
+  position: absolute;
+  top: -0.55rem;
+  left: 30%;
+  width: 40%;
+  height: 0.62rem;
+  content: "";
+  border: 1px solid #8e6725;
+  border-bottom: 0;
+  border-radius: 0.12rem 0.12rem 0 0;
+  background: linear-gradient(90deg, #62400e, #e0b04b 48%, #7b5113);
+  box-shadow: 0 -0.08rem 0.12rem rgb(0 0 0 / 55%);
+}
+
+.rw-lockpick-tumbler span {
+  position: absolute;
+  top: 1.75rem;
+  right: 8%;
+  left: 8%;
+  height: 0.16rem;
+  border-top: 1px solid rgb(255 229 160 / 70%);
+  border-bottom: 1px solid rgb(65 36 6 / 72%);
+  border-radius: 0.08rem;
+  background: rgb(120 70 14 / 82%);
+}
+
+.rw-lockpick-tumbler-button.is-ready .rw-lockpick-track {
+  box-shadow: inset 0 0 0 1px rgb(242 189 73 / 78%), 0 0 0.5rem rgb(215 157 49 / 36%);
+}
+
+.rw-lockpick-tumbler-button.is-ready .rw-lockpick-tumbler {
+  filter: brightness(1.22);
+  animation: rw-lockpick-tremble 90ms linear infinite alternate;
+}
+
+@keyframes rw-lockpick-tremble {
+  from { transform: translateX(-0.08rem); }
+  to { transform: translateX(0.08rem); }
+}
+
+.rw-lockpick-tumbler-button.is-set .rw-lockpick-tumbler {
+  filter: saturate(0.55) brightness(1.4);
+}
+
+.rw-lockpick-barrel {
+  position: absolute;
+  z-index: 3;
+  right: 7%;
+  bottom: 0.85rem;
+  left: 7%;
+  height: 1.55rem;
+  border: 1px solid #a88a53;
+  border-radius: 0.18rem 0.18rem 0.35rem 0.35rem;
+  background: linear-gradient(#8b7550, #4c402f 31%, #27201b 35% 68%, #6e5a3a 72%);
+  box-shadow: inset 0 0.16rem rgb(255 220 144 / 24%), inset 0 -0.16rem rgb(0 0 0 / 42%), 0 0.25rem 0.4rem rgb(0 0 0 / 62%);
+}
+
+.rw-lockpick-barrel span {
+  position: absolute;
+  top: 0.36rem;
+  right: 10%;
+  left: 10%;
+  height: 0.68rem;
+  border: 1px solid #17120d;
+  border-radius: 0.12rem;
+  background: linear-gradient(#0a090a, #211a18 48%, #080708);
+  box-shadow: inset 0 0.1rem rgb(255 218 139 / 9%), 0 0.08rem rgb(255 223 151 / 20%);
+}
+
+.rw-lockpick-pick {
+  position: absolute;
+  z-index: 4;
+  bottom: 2rem;
+  left: 9%;
+  width: calc(var(--rw-pick-width, 33%) - 9%);
+  min-width: 1rem;
+  height: 0.22rem;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #c6a761, #f0d48e, #70572b);
+  box-shadow: 0 0.08rem 0.15rem rgb(0 0 0 / 72%);
+  transition: width 120ms ease, bottom 35ms linear;
+}
+
+.rw-lockpick-pick span {
+  position: absolute;
+  right: -0.28rem;
+  bottom: -0.2rem;
+  width: 0.48rem;
+  height: 0.64rem;
+  border: 1px solid #af8b45;
+  border-radius: 0.1rem;
+  background: #6b5126;
+}
+
+.rw-lockpick-feedback {
+  min-height: 1.25rem;
+}
+
+.rw-lockpick-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.15rem;
+}
+
+.rw-lockpick-controls span {
+  margin-left: 0;
+  color: var(--color-text-light-heading, #c7b08a);
+  font-size: var(--font-size-12, 0.75rem);
+}
+
+.rw-lockpick-progress {
+  color: var(--color-text-light-heading, #c7b08a);
+  font-size: var(--font-size-12, 0.75rem);
+  text-align: center;
+}
+
+.rw-lockpick-feedback.is-success {
+  color: var(--color-level-success, #52b36b);
+}
+
+@media (max-width: 420px) {
+  .rw-lockpick-tumblers {
+    left: 10%;
+    right: 10%;
+    gap: 0.24rem;
+  }
+}
+
+
+.rw-lockpick-dialog .window-content { border-radius: 1.35rem; }
+.rw-lockpick-mechanism { border-radius: 1.15rem; }

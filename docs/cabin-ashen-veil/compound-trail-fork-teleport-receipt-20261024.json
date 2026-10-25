@@ -1,0 +1,349 @@
+{
+  "status": "INSTALLED",
+  "sceneIds": [
+    "CAVEXT01Yard0001",
+    "CAVTRAILScene001",
+    "CAVSG04Scene0001",
+    "CAVBATHScene0001"
+  ],
+  "backup": {
+    "yardTrigger": {
+      "_id": "CAV01R0000000003",
+      "name": "EXT-01 - West Grove Trail",
+      "levels": [
+        "defaultLevel0000"
+      ],
+      "shapes": [
+        {
+          "type": "polygon",
+          "points": [
+            19,
+            1284,
+            464,
+            1284,
+            464,
+            1809,
+            19,
+            1809
+          ],
+          "hole": false,
+          "origin": null
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Confirm travel",
+          "type": "teleportToken",
+          "system": {
+            "destinations": [
+              "Scene.CAVSG04Scene0001.Region.4Te03NBNdsrGDeRh"
+            ],
+            "placement": "center",
+            "snap": false,
+            "choice": true,
+            "revealed": true,
+            "dialog": {
+              "revealed": "Do you wish to proceed?",
+              "unrevealed": "Do you wish to proceed?"
+            },
+            "transition": {
+              "type": null,
+              "duration": 1500
+            }
+          },
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-sg04:v1"
+            }
+          },
+          "_id": "RsNxNxx7FYeTH6zC",
+          "disabled": false,
+          "_stats": {
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "5.3.3",
+            "createdTime": 1792881189773,
+            "modifiedTime": 1792881189773,
+            "lastModifiedBy": "4c2ow5laZtzUNigr",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "objectKey": "cav:ext01:region:3",
+          "intendedDestination": "EXT-TRAIL",
+          "inertUntilApprovedGameplayPhase": true
+        }
+      },
+      "color": "#95cc28",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0
+      },
+      "_shapeConstraints": null
+    },
+    "yardArrival": {
+      "name": "EXT-01 - Arrival from Sune Grove",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 780,
+          "y": 1520,
+          "width": 200,
+          "height": 200,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "routeKey": "cav:travel:yard-sg04:v1",
+          "kind": "landing"
+        }
+      },
+      "_id": "woKGA4YxDNMsCXLa",
+      "color": "#cc5128",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "levels": [],
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "behaviors": [],
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "_shapeConstraints": null
+    },
+    "groveReturn": {
+      "name": "SG-04 - Return to Carriage Yard",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 140,
+          "y": 1130,
+          "width": 270,
+          "height": 430,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "routeKey": "cav:travel:yard-sg04:v1",
+          "kind": "exit"
+        }
+      },
+      "_id": "fqk4z5JaYtWzplGU",
+      "color": "#28ccae",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "levels": [],
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "behaviors": [
+        {
+          "name": "Confirm travel",
+          "type": "teleportToken",
+          "system": {
+            "destinations": [
+              "Scene.CAVEXT01Yard0001.Region.woKGA4YxDNMsCXLa"
+            ],
+            "placement": "center",
+            "snap": false,
+            "choice": true,
+            "revealed": true,
+            "dialog": {
+              "revealed": "Do you wish to proceed?",
+              "unrevealed": "Do you wish to proceed?"
+            },
+            "transition": {
+              "type": null,
+              "duration": 1500
+            }
+          },
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-sg04:v1"
+            }
+          },
+          "_id": "kdEOECjGEuGAnTYb",
+          "disabled": false,
+          "_stats": {
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "5.3.3",
+            "createdTime": 1792881189779,
+            "modifiedTime": 1792881189779,
+            "lastModifiedBy": "4c2ow5laZtzUNigr",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        }
+      ],
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "_shapeConstraints": null
+    },
+    "groveArrival": {
+      "name": "SG-04 - Arrival from Carriage Yard",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 900,
+          "y": 1180,
+          "width": 220,
+          "height": 200,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "routeKey": "cav:travel:yard-sg04:v1",
+          "kind": "landing"
+        }
+      },
+      "_id": "4Te03NBNdsrGDeRh",
+      "color": "#cc7628",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "levels": [],
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "behaviors": [],
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "_shapeConstraints": null
+    },
+    "fork": [],
+    "bath": []
+  },
+  "routes": 3,
+  "created": [
+    {
+      "scene": "CAVTRAILScene001",
+      "regions": [
+        "pTIy0ErhYjSVIP5u",
+        "UgRMdpoxyshXAFwq",
+        "vOwnKQFQnVUnBymL",
+        "oVGU1TRcDhaxFtAq",
+        "13g6uK1QrR9PFOzA",
+        "N5LomZ7TrVBMoExk"
+      ]
+    },
+    {
+      "scene": "CAVBATHScene0001",
+      "regions": [
+        "SLovYxFAWVAMFzXg",
+        "R2Pg9eHODtb1C1Yk"
+      ]
+    }
+  ],
+  "behaviors": [
+    "Scene.CAVEXT01Yard0001.Region.CAV01R0000000003.RegionBehavior.RsNxNxx7FYeTH6zC",
+    "Scene.CAVSG04Scene0001.Region.fqk4z5JaYtWzplGU.RegionBehavior.kdEOECjGEuGAnTYb",
+    "Scene.CAVTRAILScene001.Region.pTIy0ErhYjSVIP5u",
+    "Scene.CAVTRAILScene001.Region.vOwnKQFQnVUnBymL",
+    "Scene.CAVTRAILScene001.Region.13g6uK1QrR9PFOzA",
+    "Scene.CAVBATHScene0001.Region.SLovYxFAWVAMFzXg"
+  ],
+  "triplets": {
+    "yard": [
+      "Scene.CAVEXT01Yard0001.Region.CAV01R0000000003",
+      "Scene.CAVEXT01Yard0001.Region.woKGA4YxDNMsCXLa"
+    ],
+    "fork": [
+      "Scene.CAVTRAILScene001.Region.pTIy0ErhYjSVIP5u",
+      "Scene.CAVTRAILScene001.Region.UgRMdpoxyshXAFwq",
+      "Scene.CAVTRAILScene001.Region.vOwnKQFQnVUnBymL",
+      "Scene.CAVTRAILScene001.Region.oVGU1TRcDhaxFtAq",
+      "Scene.CAVTRAILScene001.Region.13g6uK1QrR9PFOzA",
+      "Scene.CAVTRAILScene001.Region.N5LomZ7TrVBMoExk"
+    ],
+    "grove": [
+      "Scene.CAVSG04Scene0001.Region.fqk4z5JaYtWzplGU",
+      "Scene.CAVSG04Scene0001.Region.4Te03NBNdsrGDeRh"
+    ],
+    "bath": [
+      "Scene.CAVBATHScene0001.Region.SLovYxFAWVAMFzXg",
+      "Scene.CAVBATHScene0001.Region.R2Pg9eHODtb1C1Yk"
+    ]
+  }
+}

@@ -1,0 +1,1603 @@
+{
+  "macro": {
+    "name": "Cabin H-U02 — Correct Upper Gallery Entrances V2",
+    "id": "cvl64ujqIYtbuPno"
+  },
+  "receipt": {
+    "operation": "cav.h-u02.correct-upper-gallery-v002",
+    "old": {
+      "scene": {
+        "name": "H-U02 - Upper Gallery and Landing",
+        "navigation": true,
+        "width": 960,
+        "height": 1440,
+        "grid": {
+          "size": 120,
+          "type": 0,
+          "distance": 5,
+          "units": "ft",
+          "style": "solidLines",
+          "thickness": 1,
+          "color": "#000000",
+          "alpha": 0.2
+        },
+        "levels": [
+          {
+            "_id": "defaultLevel0000",
+            "name": "Second Floor",
+            "elevation": {
+              "bottom": 20,
+              "top": 40
+            },
+            "background": {
+              "src": "Maps/cabin-in-the-ashen-veil/h-u02-upper-gallery-provisional-v001.png",
+              "color": "#999999",
+              "tint": "#ffffff",
+              "alphaThreshold": 0.75
+            },
+            "foreground": {
+              "src": null,
+              "tint": "#ffffff",
+              "alphaThreshold": 0.75
+            },
+            "fog": {
+              "src": null
+            },
+            "textures": {
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "offsetX": 0,
+              "offsetY": 0,
+              "fit": "fill",
+              "scaleX": 1,
+              "scaleY": 1,
+              "rotation": 0
+            },
+            "visibility": {
+              "levels": []
+            },
+            "sort": 0,
+            "flags": {}
+          }
+        ],
+        "ownership": {
+          "default": 2,
+          "4c2ow5laZtzUNigr": 3
+        },
+        "folder": "sn68xkU8hzj0tSNw",
+        "flags": {
+          "dicebox-campaign-helper": {
+            "sceneCode": "H-U02",
+            "status": "PROVISIONAL_VISUAL_PENDING_APPROVAL",
+            "blueprint": "ashen_house_blueprint_geometry_v1.json",
+            "notCanonArt": true
+          }
+        },
+        "_id": "gGgUHlHdI7RFrbUh",
+        "active": false,
+        "navOrder": 0,
+        "thumb": "worlds/cabin-in-the-ashen-veil/assets/scenes/thumb--qhXdQHyRsGK8psZd0_NDw.webp",
+        "padding": 0.25,
+        "shiftX": 0,
+        "shiftY": 0,
+        "initial": {
+          "x": null,
+          "y": null,
+          "scale": null
+        },
+        "initialLevel": null,
+        "tokenVision": false,
+        "fog": {
+          "mode": 1,
+          "colors": {
+            "explored": null,
+            "unexplored": null
+          }
+        },
+        "environment": {
+          "darknessLevel": 0,
+          "darknessLock": false,
+          "globalLight": {
+            "enabled": false,
+            "alpha": 0.5,
+            "bright": false,
+            "color": null,
+            "coloration": 1,
+            "luminosity": 0,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "cycle": true,
+          "base": {
+            "hue": 0,
+            "intensity": 0,
+            "luminosity": 0,
+            "saturation": 0,
+            "shadows": 0
+          },
+          "dark": {
+            "hue": 0.7138888888888889,
+            "intensity": 0,
+            "luminosity": -0.25,
+            "saturation": 0,
+            "shadows": 0
+          }
+        },
+        "transition": {
+          "type": null,
+          "duration": 1500,
+          "activeOnly": false
+        },
+        "drawings": [
+          {
+            "strokeWidth": 8,
+            "strokeColor": "#ffffff",
+            "strokeAlpha": 1,
+            "bezierFactor": 0.5,
+            "fillType": 0,
+            "fillColor": "#ffffff",
+            "fillAlpha": 0.5,
+            "texture": null,
+            "fontFamily": "",
+            "fontSize": 48,
+            "textColor": "#ffffff",
+            "textAlpha": 1,
+            "elevation": 20,
+            "levels": [
+              "defaultLevel0000"
+            ],
+            "interface": false,
+            "x": 327.4,
+            "y": 957.3,
+            "sort": 0,
+            "author": "Lp7Ccssglc7hYMyD",
+            "shape": {
+              "type": "p",
+              "points": [
+                6.27902919620044,
+                1.567935428562464,
+                3.1380857301072638,
+                53.393502619099536,
+                1.5676139970609029,
+                62.81633301737895,
+                1.5676139970609029,
+                67.5277482165186,
+                1.5676139970609029,
+                70.66869168261178,
+                1.5676139970609029,
+                75.38010688175154,
+                1.5676139970609029,
+                78.52105034784472,
+                1.5676139970609029,
+                83.23246554698449,
+                1.5676139970609029,
+                86.37340901307743,
+                1.5676139970609029,
+                91.0848242122172,
+                1.5676139970609029,
+                92.65529594526379,
+                1.5676139970609029,
+                97.36671114440355,
+                3.1380857301072638,
+                98.93718287745014,
+                3.1380857301072638,
+                105.2190698096365,
+                4.708557463153852,
+                111.50095674182285,
+                4.708557463153852,
+                117.78284367400897,
+                6.27902919620044,
+                127.2056740722885,
+                7.849500929247029,
+                135.05803273752144,
+                9.419972662293617,
+                139.7694479366612,
+                9.419972662293617,
+                141.3399196697078,
+                9.419972662293617,
+                139.7694479366612,
+                7.849500929247029,
+                135.05803273752144,
+                6.27902919620044,
+                125.63520233924191,
+                4.708557463153852,
+                114.64190020791602,
+                4.708557463153852,
+                100.50765461049673,
+                4.708557463153852,
+                91.0848242122172,
+                6.27902919620044,
+                75.38010688175154,
+                7.849500929247029,
+                64.38680475042554,
+                7.849500929247029,
+                58.10491781823919,
+                9.419972662293617,
+                48.68208741995977,
+                9.419972662293617,
+                45.541143953866595,
+                9.419972662293617,
+                42.40020048777342,
+                9.419972662293617,
+                39.259257021680355,
+                9.419972662293617,
+                36.11831355558718,
+                9.419972662293617,
+                31.406898356447414,
+                9.419972662293617,
+                25.125011424261174,
+                7.849500929247029,
+                21.984067958167998,
+                7.849500929247029,
+                17.272652759028233,
+                6.27902919620044,
+                14.131709292935057,
+                6.27902919620044,
+                9.420294093795405,
+                6.27902919620044,
+                6.279350627702229,
+                6.27902919620044,
+                4.708878894655641,
+                4.708557463153852,
+                1.567935428562464,
+                4.708557463153852,
+                -0.00253630448412423,
+                4.708557463153852,
+                4.708878894655641,
+                4.708557463153852,
+                6.279350627702229,
+                4.708557463153852,
+                12.561237559888468,
+                4.708557463153852,
+                20.41359622512141,
+                4.708557463153852,
+                26.69548315730765,
+                4.708557463153852,
+                31.406898356447414,
+                3.1380857301072638,
+                40.82972875472694,
+                3.1380857301072638,
+                53.393502619099536,
+                3.1380857301072638,
+                56.5344460851926,
+                1.5676139970609029,
+                62.81633301737895,
+                1.5676139970609029,
+                69.09821994956519,
+                1.5676139970609029,
+                72.23916341565837,
+                1.5676139970609029,
+                76.95057861479813,
+                1.5676139970609029,
+                80.09152208089131,
+                1.5676139970609029,
+                83.23246554698449,
+                1.5676139970609029,
+                86.37340901307743,
+                -0.0028577359856853946,
+                89.51435247917061
+              ],
+              "width": 9,
+              "height": 141,
+              "radius": null
+            },
+            "_id": "zcm4jUTXMyRXHHOx",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "flags": {}
+          },
+          {
+            "strokeWidth": 8,
+            "strokeColor": "#ffffff",
+            "strokeAlpha": 1,
+            "bezierFactor": 0.5,
+            "fillType": 0,
+            "fillColor": "#ffffff",
+            "fillAlpha": 0.5,
+            "texture": null,
+            "fontFamily": "",
+            "fontSize": 48,
+            "textColor": "#ffffff",
+            "textAlpha": 1,
+            "elevation": 20,
+            "levels": [
+              "defaultLevel0000"
+            ],
+            "interface": false,
+            "x": 1103.21,
+            "y": 966.72,
+            "sort": 1,
+            "author": "Lp7Ccssglc7hYMyD",
+            "shape": {
+              "type": "p",
+              "points": [
+                4.711593588162486,
+                12.564067958167925,
+                0.00017838902294897707,
+                62.819163415658295,
+                0.00017838902294897707,
+                64.38963514870488,
+                0.00017838902294897707,
+                69.10105034784465,
+                0.00017838902294897707,
+                76.95340901307736,
+                0.00017838902294897707,
+                78.52388074612395,
+                0.00017838902294897707,
+                87.94671114440348,
+                0.00017838902294897707,
+                91.08765461049666,
+                0.00017838902294897707,
+                100.51048500877619,
+                0.00017838902294897707,
+                103.65142847486936,
+                0.00017838902294897707,
+                113.07425887314866,
+                1.5706501220693099,
+                117.78567407228843,
+                1.5706501220693099,
+                122.4970892714282,
+                3.141121855115898,
+                125.63803273752137,
+                3.141121855115898,
+                127.20850447056796,
+                4.711593588162486,
+                131.91991966970772,
+                4.711593588162486,
+                128.77897620361455,
+                4.711593588162486,
+                127.20850447056796,
+                4.711593588162486,
+                113.07425887314866,
+                4.711593588162486,
+                102.08095674182277,
+                4.711593588162486,
+                94.22859807658983,
+                4.711593588162486,
+                78.52388074612395,
+                4.711593588162486,
+                69.10105034784465,
+                4.711593588162486,
+                59.67821994956512,
+                4.711593588162486,
+                53.39633301737888,
+                4.711593588162486,
+                45.54397435214605,
+                3.141121855115898,
+                42.403030886052875,
+                3.141121855115898,
+                34.55067222081993,
+                3.141121855115898,
+                29.839257021680282,
+                3.141121855115898,
+                25.127841822540518,
+                3.141121855115898,
+                17.275483157307576,
+                3.141121855115898,
+                14.134539691214513,
+                1.5706501220693099,
+                7.85265275902816,
+                1.5706501220693099,
+                6.282181025981572,
+                1.5706501220693099,
+                1.570765826841921,
+                1.5706501220693099,
+                0.00029409379533262836,
+                1.5706501220693099,
+                3.1412375598883955,
+                1.5706501220693099,
+                9.423124492074749,
+                1.5706501220693099,
+                15.705011424261102,
+                1.5706501220693099,
+                26.698313555587106,
+                1.5706501220693099,
+                32.980200487773345,
+                3.141121855115898,
+                43.97350261909946,
+                3.141121855115898,
+                53.39633301737888,
+                3.141121855115898,
+                58.10774821651853,
+                3.141121855115898,
+                62.819163415658295,
+                3.141121855115898,
+                70.67152208089124,
+                3.141121855115898,
+                76.95340901307736,
+                3.141121855115898,
+                81.66482421221713,
+                3.141121855115898,
+                86.37623941135689,
+                3.141121855115898,
+                94.22859807658983,
+                3.141121855115898,
+                95.79906980963642,
+                3.141121855115898,
+                102.08095674182277,
+                3.141121855115898,
+                105.22190020791595,
+                3.141121855115898,
+                109.93331540705549,
+                3.141121855115898,
+                116.21520233924184,
+                3.141121855115898,
+                117.78567407228843,
+                3.141121855115898,
+                116.21520233924184,
+                3.141121855115898,
+                111.50378714010208,
+                3.141121855115898,
+                108.3628436740089
+              ],
+              "width": 5,
+              "height": 132,
+              "radius": null
+            },
+            "_id": "lRLz3lAapZZlnMEB",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "flags": {}
+          },
+          {
+            "strokeWidth": 8,
+            "strokeColor": "#ffffff",
+            "strokeAlpha": 1,
+            "bezierFactor": 0.5,
+            "fillType": 0,
+            "fillColor": "#ffffff",
+            "fillAlpha": 0.5,
+            "texture": null,
+            "fontFamily": "",
+            "fontSize": 48,
+            "textColor": "#ffffff",
+            "textAlpha": 1,
+            "elevation": 20,
+            "levels": [
+              "defaultLevel0000"
+            ],
+            "interface": false,
+            "x": 661.91,
+            "y": 435.9,
+            "sort": 2,
+            "author": "Lp7Ccssglc7hYMyD",
+            "shape": {
+              "type": "p",
+              "points": [
+                -0.0023785970651033495,
+                4.712263523192291,
+                47.11177339433232,
+                6.28273525623888,
+                48.682245127378906,
+                6.28273525623888,
+                50.252716860425494,
+                6.28273525623888,
+                54.96413205956503,
+                6.28273525623888,
+                56.53460379261162,
+                6.28273525623888,
+                61.246018991751384,
+                6.28273525623888,
+                62.81649072479797,
+                6.28273525623888,
+                67.52790592393774,
+                6.28273525623888,
+                70.66884939003091,
+                6.28273525623888,
+                72.2393211230775,
+                6.28273525623888,
+                78.52120805526386,
+                6.28273525623888,
+                81.66215152135703,
+                6.28273525623888,
+                89.51451018658975,
+                6.28273525623888,
+                91.08498191963633,
+                6.28273525623888,
+                94.22592538572951,
+                4.712263523192291,
+                95.7963971187761,
+                4.712263523192291,
+                97.36686885182269,
+                4.712263523192291,
+                100.50781231791586,
+                4.712263523192291,
+                103.64875578400904,
+                4.712263523192291,
+                105.21922751705563,
+                4.712263523192291,
+                109.9306427161954,
+                4.712263523192291,
+                113.07158618228857,
+                4.712263523192291,
+                114.64205791533493,
+                4.712263523192291,
+                117.78300138142811,
+                4.712263523192291,
+                120.92394484752128,
+                4.712263523192291,
+                124.06488831361446,
+                4.712263523192291,
+                128.77630351275423,
+                4.712263523192291,
+                138.19913391103375,
+                4.712263523192291,
+                141.34007737712693,
+                4.712263523192291,
+                142.91054911017352,
+                4.712263523192291,
+                144.48102084321988,
+                4.712263523192291,
+                146.05149257626647,
+                4.712263523192291,
+                144.48102084321988,
+                4.712263523192291,
+                138.19913391103375,
+                4.712263523192291,
+                133.487718711894,
+                4.712263523192291,
+                131.9172469788474,
+                4.712263523192291,
+                125.63536004666105,
+                6.28273525623888,
+                120.92394484752128,
+                7.853206989285468,
+                116.21252964838152,
+                9.423678722331942,
+                111.50111444924198,
+                9.423678722331942,
+                106.78969925010222,
+                10.99415045537853,
+                105.21922751705563,
+                10.99415045537853,
+                98.93734058486928,
+                10.99415045537853,
+                95.7963971187761,
+                10.99415045537853,
+                89.51451018658975,
+                9.423678722331942,
+                87.94403845354316,
+                9.423678722331942,
+                86.37356672049657,
+                9.423678722331942,
+                86.37356672049657,
+                7.853206989285468,
+                84.80309498744998,
+                7.853206989285468,
+                81.66215152135703,
+                7.853206989285468,
+                78.52120805526386,
+                7.853206989285468,
+                75.38026458917068,
+                7.853206989285468,
+                73.80979285612409,
+                7.853206989285468,
+                72.2393211230775,
+                7.853206989285468,
+                69.09837765698433,
+                7.853206989285468,
+                61.246018991751384,
+                7.853206989285468,
+                56.53460379261162,
+                7.853206989285468,
+                47.11177339433232,
+                7.853206989285468,
+                42.40035819519255,
+                6.28273525623888,
+                37.68894299605279,
+                6.28273525623888,
+                29.836584330819846,
+                4.712263523192291,
+                28.266112597773258,
+                4.712263523192291,
+                26.69564086472667,
+                4.712263523192291,
+                23.55469739863372,
+                4.712263523192291,
+                14.131867000354191,
+                4.712263523192291,
+                10.990923534261015,
+                4.712263523192291,
+                6.27950833512125,
+                4.712263523192291,
+                3.138564869028073,
+                4.712263523192291,
+                6.27950833512125,
+                4.712263523192291,
+                20.413753932540544,
+                4.712263523192291,
+                42.40035819519255,
+                4.712263523192291,
+                62.81649072479797,
+                4.712263523192291,
+                70.66884939003091,
+                4.712263523192291,
+                86.37356672049657,
+                4.712263523192291,
+                89.51451018658975,
+                4.712263523192291,
+                91.08498191963633,
+                3.141791790145703,
+                94.22592538572951,
+                1.5713200570991148,
+                97.36686885182269,
+                0.0008483240525265501,
+                100.50781231791586,
+                0.0008483240525265501,
+                103.64875578400904,
+                0.0008483240525265501,
+                105.21922751705563,
+                0.0008483240525265501
+              ],
+              "width": 146,
+              "height": 11,
+              "radius": null
+            },
+            "_id": "CNco13AnEWwlSI0g",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "flags": {}
+          },
+          {
+            "strokeWidth": 8,
+            "strokeColor": "#ffffff",
+            "strokeAlpha": 1,
+            "bezierFactor": 0.5,
+            "fillType": 0,
+            "fillColor": "#ffffff",
+            "fillAlpha": 0.5,
+            "texture": null,
+            "fontFamily": "",
+            "fontSize": 48,
+            "textColor": "#ffffff",
+            "textAlpha": 1,
+            "elevation": 20,
+            "levels": [
+              "defaultLevel0000"
+            ],
+            "interface": false,
+            "x": 1007.41,
+            "y": 435.9,
+            "sort": 3,
+            "author": "Lp7Ccssglc7hYMyD",
+            "shape": {
+              "type": "p",
+              "points": [
+                21.988006935833823,
+                6.28273525623888,
+                98.94112185511597,
+                6.28273525623888,
+                106.79348052034891,
+                6.28273525623888,
+                111.50489571948867,
+                6.28273525623888,
+                120.9277261177682,
+                6.28273525623888,
+                125.63914131690797,
+                6.28273525623888,
+                128.78008478300092,
+                6.28273525623888,
+                128.78008478300092,
+                4.712263523192291,
+                120.9277261177682,
+                3.141791790145703,
+                109.93442398644208,
+                3.141791790145703,
+                103.65253705425573,
+                3.141791790145703,
+                91.08876318988325,
+                3.141791790145703,
+                80.09546105855713,
+                3.141791790145703,
+                54.96791332981195,
+                3.141791790145703,
+                48.6860263976256,
+                3.141791790145703,
+                26.699422134973588,
+                3.141791790145703,
+                21.988006935833823,
+                3.141791790145703,
+                10.994704804507705,
+                3.141791790145703,
+                3.1423461392749914,
+                3.141791790145703,
+                0.0014026731818148619,
+                3.141791790145703,
+                1.5718744062284031,
+                3.141791790145703,
+                6.283289605368168,
+                3.141791790145703,
+                26.699422134973588,
+                3.141791790145703,
+                43.97461119848583,
+                1.5713200570991148,
+                62.82027199504489,
+                1.5713200570991148,
+                83.23640452465031,
+                0.0008483240525265501,
+                102.08206532120914,
+                0.0008483240525265501
+              ],
+              "width": 129,
+              "height": 6,
+              "radius": null
+            },
+            "_id": "nvnExJv2Ou3RFI65",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "flags": {}
+          },
+          {
+            "strokeWidth": 8,
+            "strokeColor": "#ffffff",
+            "strokeAlpha": 1,
+            "bezierFactor": 0.5,
+            "fillType": 0,
+            "fillColor": "#ffffff",
+            "fillAlpha": 0.5,
+            "texture": null,
+            "fontFamily": "",
+            "fontSize": 48,
+            "textColor": "#ffffff",
+            "textAlpha": 1,
+            "elevation": 20,
+            "levels": [
+              "defaultLevel0000"
+            ],
+            "interface": false,
+            "x": 305.41,
+            "y": 432.76,
+            "sort": 4,
+            "author": "Lp7Ccssglc7hYMyD",
+            "shape": {
+              "type": "p",
+              "points": [
+                43.973746526666275,
+                3.140848324052513,
+                193.16856116609102,
+                7.852263523192278,
+                186.88667423390467,
+                9.422735256238866,
+                182.1752590347649,
+                9.422735256238866,
+                168.04101343734584,
+                10.993206989285454,
+                149.19535264078678,
+                10.993206989285454,
+                122.497333178995,
+                9.422735256238866,
+                73.81270945455123,
+                4.711320057099101,
+                40.8328030605731,
+                1.5703765910059246,
+                9.42336839964156,
+                -0.00009514204066363163,
+                4.711953200501796,
+                -0.00009514204066363163,
+                1.5710097344086194,
+                -0.00009514204066363163,
+                0.000538001362031082,
+                -0.00009514204066363163,
+                0.000538001362031082,
+                1.5703765910059246,
+                1.5710097344086194,
+                1.5703765910059246,
+                6.282424933548384,
+                1.5703765910059246,
+                9.42336839964156,
+                1.5703765910059246,
+                17.275727064874502,
+                1.5703765910059246,
+                47.11468999275945,
+                1.5703765910059246,
+                64.3898790562717,
+                1.5703765910059246,
+                94.22884198415665,
+                3.140848324052513,
+                108.36308758157594,
+                3.140848324052513,
+                114.64497451376207,
+                3.140848324052513
+              ],
+              "width": 193,
+              "height": 11,
+              "radius": null
+            },
+            "_id": "l2yOcWNXJ7vnNLcb",
+            "rotation": 0,
+            "hidden": false,
+            "locked": false,
+            "flags": {}
+          }
+        ],
+        "tokens": [
+          {
+            "name": "Glow",
+            "displayName": 30,
+            "actorLink": true,
+            "width": 1,
+            "height": 1,
+            "depth": 1,
+            "texture": {
+              "src": "tokenizer/pc-images/glow.Token.webp?1792882738836",
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "fit": "contain",
+              "scaleX": 1,
+              "scaleY": 1,
+              "tint": "#ffffff",
+              "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 20.95938046542291,
+            "alpha": 1,
+            "disposition": 1,
+            "displayBars": 0,
+            "bar1": {
+              "attribute": "attributes.hp"
+            },
+            "bar2": {
+              "attribute": null
+            },
+            "light": {
+              "negative": false,
+              "priority": 0,
+              "alpha": 0.5,
+              "angle": 360,
+              "bright": 0,
+              "color": null,
+              "coloration": 1,
+              "dim": 0,
+              "attenuation": 0.5,
+              "luminosity": 0.5,
+              "saturation": 0,
+              "contrast": 0,
+              "shadows": 0,
+              "animation": {
+                "type": null,
+                "speed": 5,
+                "intensity": 5,
+                "reverse": false
+              },
+              "darkness": {
+                "min": 0,
+                "max": 1
+              }
+            },
+            "sight": {
+              "enabled": true,
+              "range": 30,
+              "angle": 360,
+              "visionMode": "basic",
+              "color": null,
+              "attenuation": 0.1,
+              "brightness": 0,
+              "saturation": 0,
+              "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+              "radius": 0
+            },
+            "ring": {
+              "enabled": false,
+              "colors": {
+                "ring": null,
+                "background": null
+              },
+              "effects": 0,
+              "subject": {
+                "scale": 1,
+                "texture": null
+              }
+            },
+            "turnMarker": {
+              "mode": 1,
+              "animation": null,
+              "src": null,
+              "disposition": false
+            },
+            "movementAction": null,
+            "flags": {
+              "monks-bloodsplats": {
+                "bloodsplat-type": "",
+                "bloodsplat-colour": "",
+                "bloodsplat-index": 220
+              }
+            },
+            "actorId": "uN72D4yHNrQHmPuh",
+            "hidden": false,
+            "sort": 4,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "delta": null,
+            "x": 311,
+            "y": 887,
+            "elevation": 20,
+            "locked": false,
+            "_movementHistory": [
+              {
+                "x": 420,
+                "y": 595,
+                "elevation": 0,
+                "width": 1,
+                "height": 1,
+                "depth": 1,
+                "shape": 4,
+                "level": "defaultLevel0000",
+                "action": "walk",
+                "terrain": null,
+                "snapped": false,
+                "explicit": false,
+                "checkpoint": true,
+                "intermediate": false,
+                "userId": "Lp7Ccssglc7hYMyD",
+                "movementId": "cDYHvrUXZboSfIXy",
+                "subpathId": "cDYHvrUXZboSfIXy",
+                "cost": 0
+              },
+              {
+                "x": 424,
+                "y": 592,
+                "elevation": 0,
+                "width": 1,
+                "height": 1,
+                "depth": 1,
+                "shape": 4,
+                "level": "defaultLevel0000",
+                "action": "walk",
+                "terrain": null,
+                "snapped": false,
+                "explicit": true,
+                "checkpoint": true,
+                "intermediate": false,
+                "userId": "Lp7Ccssglc7hYMyD",
+                "movementId": "cDYHvrUXZboSfIXy",
+                "subpathId": "cDYHvrUXZboSfIXy",
+                "cost": 0.20833333333333331
+              },
+              {
+                "x": 424,
+                "y": 592,
+                "elevation": 20,
+                "width": 1,
+                "height": 1,
+                "depth": 1,
+                "shape": 4,
+                "level": "defaultLevel0000",
+                "action": "walk",
+                "terrain": null,
+                "snapped": false,
+                "explicit": false,
+                "checkpoint": true,
+                "intermediate": false,
+                "userId": "Lp7Ccssglc7hYMyD",
+                "movementId": "Rn2yKYpbWE8msGBR",
+                "subpathId": "Rn2yKYpbWE8msGBR",
+                "cost": 20
+              },
+              {
+                "x": 311,
+                "y": 887,
+                "elevation": 20,
+                "width": 1,
+                "height": 1,
+                "depth": 1,
+                "shape": 4,
+                "level": "defaultLevel0000",
+                "action": "walk",
+                "terrain": null,
+                "snapped": false,
+                "explicit": true,
+                "checkpoint": true,
+                "intermediate": false,
+                "userId": "Lp7Ccssglc7hYMyD",
+                "movementId": "UTIUjLKMexbWIXbd",
+                "subpathId": "UTIUjLKMexbWIXbd",
+                "cost": 13.162578479242669
+              }
+            ],
+            "_regions": [],
+            "_id": "ddto3NGyLxKK2lPh"
+          },
+          {
+            "name": "X'ul the Skeleton",
+            "displayName": 0,
+            "actorLink": true,
+            "width": 1,
+            "height": 1,
+            "depth": 1,
+            "texture": {
+              "src": "ddb-images/characters/xul3.png",
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "fit": "contain",
+              "scaleX": 1,
+              "scaleY": 1,
+              "tint": "#ffffff",
+              "alphaThreshold": 0.75
+            },
+            "lockRotation": false,
+            "rotation": 124.4389893088036,
+            "alpha": 1,
+            "disposition": 1,
+            "displayBars": 0,
+            "bar1": {
+              "attribute": "attributes.hp"
+            },
+            "bar2": {
+              "attribute": null
+            },
+            "light": {
+              "negative": false,
+              "priority": 0,
+              "alpha": 0.5,
+              "angle": 360,
+              "bright": 0,
+              "color": null,
+              "coloration": 1,
+              "dim": 0,
+              "attenuation": 0.5,
+              "luminosity": 0.5,
+              "saturation": 0,
+              "contrast": 0,
+              "shadows": 0,
+              "animation": {
+                "type": null,
+                "speed": 5,
+                "intensity": 5,
+                "reverse": false
+              },
+              "darkness": {
+                "min": 0,
+                "max": 1
+              }
+            },
+            "sight": {
+              "enabled": true,
+              "range": 60,
+              "angle": 360,
+              "visionMode": "darkvision",
+              "color": null,
+              "attenuation": 0,
+              "brightness": 0,
+              "saturation": -1,
+              "contrast": 0
+            },
+            "detectionModes": {},
+            "occludable": {
+              "radius": 0
+            },
+            "ring": {
+              "enabled": false,
+              "colors": {
+                "ring": null,
+                "background": null
+              },
+              "effects": 0,
+              "subject": {
+                "scale": 1,
+                "texture": null
+              }
+            },
+            "turnMarker": {
+              "mode": 1,
+              "animation": null,
+              "src": null,
+              "disposition": false
+            },
+            "movementAction": null,
+            "flags": {},
+            "actorId": "wKkF4JK1bDDHXrcC",
+            "hidden": false,
+            "sort": 3,
+            "shape": 4,
+            "level": "defaultLevel0000",
+            "delta": null,
+            "x": 350,
+            "y": 1072,
+            "elevation": 20,
+            "locked": false,
+            "_movementHistory": [],
+            "_regions": [],
+            "_id": "2QoPTTgo1mu4qcbb"
+          }
+        ],
+        "lights": [],
+        "notes": [],
+        "sounds": [],
+        "regions": [
+          {
+            "name": "H-U02 - Staircase Down to Great Room",
+            "shapes": [
+              {
+                "type": "rectangle",
+                "x": 576,
+                "y": 1457,
+                "width": 280,
+                "height": 175,
+                "hole": false,
+                "anchorX": 0,
+                "anchorY": 0,
+                "rotation": 0,
+                "gridBased": false
+              }
+            ],
+            "flags": {
+              "dicebox-campaign-helper": {
+                "routeKey": "cav:travel:greatroom-upperlanding:v1",
+                "kind": "exit",
+                "build": "h-u02-provisional-v1"
+              }
+            },
+            "ownership": {
+              "default": 2,
+              "4c2ow5laZtzUNigr": 3
+            },
+            "_id": "QunJFtigwByZndFV",
+            "color": "#285ecc",
+            "elevation": {
+              "bottom": null,
+              "top": null,
+              "topInclusive": false
+            },
+            "levels": [],
+            "restriction": {
+              "enabled": false,
+              "type": "move",
+              "priority": 0
+            },
+            "attachment": {
+              "token": null
+            },
+            "behaviors": [
+              {
+                "name": "Do you wish to proceed?",
+                "type": "teleportToken",
+                "system": {
+                  "destinations": [
+                    "Scene.CAVHG06GreatRoom.Region.m3E7MaZTx6fvqXok"
+                  ],
+                  "placement": "center",
+                  "snap": false,
+                  "choice": true,
+                  "revealed": true,
+                  "dialog": {
+                    "revealed": "Do you wish to proceed?",
+                    "unrevealed": "Do you wish to proceed?"
+                  },
+                  "transition": {
+                    "type": null,
+                    "duration": 1500
+                  }
+                },
+                "flags": {
+                  "dicebox-campaign-helper": {
+                    "routeKey": "cav:travel:greatroom-upperlanding:v1",
+                    "build": "h-u02-provisional-v1"
+                  }
+                },
+                "_id": "e3adEyt0XRjbyY0y",
+                "disabled": false,
+                "_stats": {
+                  "coreVersion": "14.367",
+                  "systemId": "dnd5e",
+                  "systemVersion": "5.3.3",
+                  "createdTime": 1792886163512,
+                  "modifiedTime": 1792886163512,
+                  "lastModifiedBy": "4c2ow5laZtzUNigr",
+                  "compendiumSource": null,
+                  "duplicateSource": null,
+                  "exportSource": null
+                }
+              }
+            ],
+            "visibility": 4,
+            "highlightMode": "shapes",
+            "displayMeasurements": false,
+            "hidden": false,
+            "locked": false,
+            "_shapeConstraints": null
+          },
+          {
+            "name": "H-U02 - Arrival from Great Room",
+            "shapes": [
+              {
+                "type": "rectangle",
+                "x": 685,
+                "y": 1321,
+                "width": 220,
+                "height": 150,
+                "hole": false,
+                "anchorX": 0,
+                "anchorY": 0,
+                "rotation": 0,
+                "gridBased": false
+              }
+            ],
+            "flags": {
+              "dicebox-campaign-helper": {
+                "routeKey": "cav:travel:greatroom-upperlanding:v1",
+                "kind": "landing",
+                "build": "h-u02-provisional-v1"
+              }
+            },
+            "ownership": {
+              "default": 2,
+              "4c2ow5laZtzUNigr": 3
+            },
+            "_id": "xPTEg7ce2Bliz9M0",
+            "color": "#8628cc",
+            "elevation": {
+              "bottom": null,
+              "top": null,
+              "topInclusive": false
+            },
+            "levels": [],
+            "restriction": {
+              "enabled": false,
+              "type": "move",
+              "priority": 0
+            },
+            "attachment": {
+              "token": null
+            },
+            "behaviors": [],
+            "visibility": 4,
+            "highlightMode": "shapes",
+            "displayMeasurements": false,
+            "hidden": false,
+            "locked": false,
+            "_shapeConstraints": null
+          }
+        ],
+        "tiles": [],
+        "walls": [],
+        "playlist": null,
+        "playlistSound": null,
+        "journal": null,
+        "journalEntryPage": null,
+        "weather": "fog",
+        "sort": 0,
+        "_stats": {
+          "coreVersion": "14.367",
+          "systemId": "dnd5e",
+          "systemVersion": "5.3.3",
+          "createdTime": 1792886163392,
+          "modifiedTime": 1792887896581,
+          "lastModifiedBy": "4c2ow5laZtzUNigr",
+          "compendiumSource": null,
+          "duplicateSource": null,
+          "exportSource": null
+        },
+        "navName": ""
+      },
+      "stairReturn": {
+        "name": "H-U02 - Staircase Down to Great Room",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 576,
+            "y": 1457,
+            "width": 280,
+            "height": 175,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "routeKey": "cav:travel:greatroom-upperlanding:v1",
+            "kind": "exit",
+            "build": "h-u02-provisional-v1"
+          }
+        },
+        "ownership": {
+          "default": 2,
+          "4c2ow5laZtzUNigr": 3
+        },
+        "_id": "QunJFtigwByZndFV",
+        "color": "#285ecc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "levels": [],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "behaviors": [
+          {
+            "name": "Do you wish to proceed?",
+            "type": "teleportToken",
+            "system": {
+              "destinations": [
+                "Scene.CAVHG06GreatRoom.Region.m3E7MaZTx6fvqXok"
+              ],
+              "placement": "center",
+              "snap": false,
+              "choice": true,
+              "revealed": true,
+              "dialog": {
+                "revealed": "Do you wish to proceed?",
+                "unrevealed": "Do you wish to proceed?"
+              },
+              "transition": {
+                "type": null,
+                "duration": 1500
+              }
+            },
+            "flags": {
+              "dicebox-campaign-helper": {
+                "routeKey": "cav:travel:greatroom-upperlanding:v1",
+                "build": "h-u02-provisional-v1"
+              }
+            },
+            "_id": "e3adEyt0XRjbyY0y",
+            "disabled": false,
+            "_stats": {
+              "coreVersion": "14.367",
+              "systemId": "dnd5e",
+              "systemVersion": "5.3.3",
+              "createdTime": 1792886163512,
+              "modifiedTime": 1792886163512,
+              "lastModifiedBy": "4c2ow5laZtzUNigr",
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "exportSource": null
+            }
+          }
+        ],
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "_shapeConstraints": null
+      },
+      "arrival": {
+        "name": "H-U02 - Arrival from Great Room",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 685,
+            "y": 1321,
+            "width": 220,
+            "height": 150,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "routeKey": "cav:travel:greatroom-upperlanding:v1",
+            "kind": "landing",
+            "build": "h-u02-provisional-v1"
+          }
+        },
+        "ownership": {
+          "default": 2,
+          "4c2ow5laZtzUNigr": 3
+        },
+        "_id": "xPTEg7ce2Bliz9M0",
+        "color": "#8628cc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "levels": [],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "behaviors": [],
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "_shapeConstraints": null
+      }
+    },
+    "created": {
+      "regions": [
+        "Scene.gGgUHlHdI7RFrbUh.Region.JP0OmkgPCTtQXxpn",
+        "Scene.gGgUHlHdI7RFrbUh.Region.UV4YAstBe0WCuLcM",
+        "Scene.gGgUHlHdI7RFrbUh.Region.M2fZhuvFmw1yZQS9",
+        "Scene.gGgUHlHdI7RFrbUh.Region.aZ8eagmbvZUcPJ0g",
+        "Scene.gGgUHlHdI7RFrbUh.Region.UOudBnxOGVlAlPoa"
+      ],
+      "walls": [
+        "Scene.gGgUHlHdI7RFrbUh.Wall.I4jliMLbvWdBhDtT",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.UZuuexJhVjQdwJDT",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.MOnq8SiMl0iIjU9B",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.bv37l068cvHhKDKl",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.X1d0qhIrU4qz5ZqU",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.QiK4RuU2gA9gs5aM",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.lwrRWTPOq530ENSX",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.IJLrBRqvkacAI8WN",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.1kWSFI8tg03J8TN5",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.jNvwksQhdIiXImc0",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.EF5du4zbTAVlC7FN",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.DZw5OEzLcyFc4BMS",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.gMcyRVNRgwMvDzMX",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.7pFR7MBZ8Mmnf4U5",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.bqsDUWvUPQcRopTt",
+        "Scene.gGgUHlHdI7RFrbUh.Wall.umzt6SFi0GIRmJmj"
+      ]
+    },
+    "world": "cabin-in-the-ashen-veil",
+    "status": "CONFIGURATION_VERIFIED",
+    "note": "Provisional structural map based on documented upper-floor blueprint. Rooms not installed; locked Sophia and attic gate preserved.",
+    "after": {
+      "name": "H-U02 - Upper Gallery and Landing",
+      "width": 1440,
+      "height": 1800,
+      "background": "Maps/cabin-in-the-ashen-veil/h-u02-upper-gallery-with-entrances-v002.png",
+      "regions": [
+        {
+          "id": "QunJFtigwByZndFV",
+          "name": "H-U02 - Staircase Down to Great Room",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 620,
+              "y": 1505,
+              "width": 200,
+              "height": 125,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 1
+        },
+        {
+          "id": "xPTEg7ce2Bliz9M0",
+          "name": "H-U02 - Arrival from Great Room",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 620,
+              "y": 1345,
+              "width": 200,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        },
+        {
+          "id": "JP0OmkgPCTtQXxpn",
+          "name": "H-U02 — Parents Bedroom Entrance",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 295,
+              "y": 560,
+              "width": 150,
+              "height": 135,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        },
+        {
+          "id": "UV4YAstBe0WCuLcM",
+          "name": "H-U02 — Sophia Bedroom Entrance (Locked)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 995,
+              "y": 560,
+              "width": 150,
+              "height": 135,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        },
+        {
+          "id": "M2fZhuvFmw1yZQS9",
+          "name": "H-U02 — Guest Bedroom Entrance",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 995,
+              "y": 1385,
+              "width": 150,
+              "height": 145,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        },
+        {
+          "id": "aZ8eagmbvZUcPJ0g",
+          "name": "H-U02 — Nursery Entrance",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 295,
+              "y": 1385,
+              "width": 150,
+              "height": 145,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        },
+        {
+          "id": "UOudBnxOGVlAlPoa",
+          "name": "H-U02 — Attic Hatch",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 640,
+              "y": 195,
+              "width": 165,
+              "height": 145,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": 0
+        }
+      ],
+      "walls": 16,
+      "stairs": "Scene.gGgUHlHdI7RFrbUh.Region.xPTEg7ce2Bliz9M0",
+      "return": "Scene.CAVHG06GreatRoom.Region.m3E7MaZTx6fvqXok"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+﻿{
+    "schema":  "dicebox.scene.prepare.preview.v1",
+    "stage":  "PREPARE",
+    "sceneCode":  "H-U02",
+    "sceneName":  "Upper Gallery and Landing",
+    "mapRevision":  "h-u02-from-prepare-v003",
+    "status":  "REVIEW_CANDIDATE_NOT_OWNER_APPROVED",
+    "sourceAuthority":  [
+                            "2026-10-24 latest live scene and staircase IDs",
+                            "2026-10-24 owner request: new map using PREPARE",
+                            "ashen_house_blueprint_geometry_v1.json proposed upper gallery topology",
+                            "2026-10-19 PREPARE spatial text diagram workflow"
+                        ],
+    "north":  "up",
+    "canvas":  {
+                   "width":  1440,
+                   "height":  1800,
+                   "gridPixels":  120,
+                   "gridFeet":  5,
+                   "render":  "orthographic top down gridless",
+                   "interiorBounds":  [
+                                          280,
+                                          140,
+                                          1160,
+                                          1680
+                                      ]
+               },
+    "topology":  {
+                     "outerWalls":  "rectangular upper-floor gallery perimeter",
+                     "centralOverlook":  {
+                                             "bounds":  [
+                                                            575,
+                                                            400,
+                                                            865,
+                                                            1295
+                                                        ],
+                                             "kind":  "OPEN_TO_GREAT_ROOM_BELOW",
+                                             "walkable":  false,
+                                             "railing":  true
+                                         },
+                     "walkableGallery":  "northern, western, eastern and southern balcony gallery wrapping open center",
+                     "stair":  {
+                                   "center":  [
+                                                  720,
+                                                  1560
+                                              ],
+                                   "direction":  "down to great room",
+                                   "triggerRegion":  "QunJFtigwByZndFV",
+                                   "arrivalRegion":  "xPTEg7ce2Bliz9M0",
+                                   "clearances":  "arrival separate from trigger"
+                               },
+                     "atticHatch":  {
+                                        "center":  [
+                                                       720,
+                                                       260
+                                                   ],
+                                        "requires":  "Ladder Hook",
+                                        "action":  "not a free passage"
+                                    }
+                 },
+    "doorAnchors":  [
+                        {
+                            "id":  "H-U04",
+                            "name":  "Parents Bedroom",
+                            "teleportStatus":  "PENDING_SCENE",
+                            "kind":  "ordinary",
+                            "wall":  "W",
+                            "center":  [
+                                           280,
+                                           625
+                                       ]
+                        },
+                        {
+                            "id":  "H-U01",
+                            "name":  "Nursery",
+                            "teleportStatus":  "PENDING_SCENE",
+                            "kind":  "ordinary",
+                            "wall":  "W",
+                            "center":  [
+                                           280,
+                                           1450
+                                       ]
+                        },
+                        {
+                            "id":  "H-U05",
+                            "name":  "Sophias Bedroom",
+                            "requires":  "Old Iron Key",
+                            "teleportStatus":  "PENDING_SCENE",
+                            "kind":  "locked",
+                            "wall":  "E",
+                            "center":  [
+                                           1160,
+                                           625
+                                       ]
+                        },
+                        {
+                            "id":  "H-U03",
+                            "name":  "Guest Bedroom",
+                            "teleportStatus":  "PENDING_SCENE",
+                            "kind":  "ordinary",
+                            "wall":  "E",
+                            "center":  [
+                                           1160,
+                                           1450
+                                       ]
+                        }
+                    ],
+    "visualRequirements":  [
+                               "true top-down overhead 90 degree orthographic floor plan",
+                               "rich 50-year-abandoned warm aged timber, fine carpenter craftsmanship, dust and quiet neglect",
+                               "all four side doors visually obvious as cut-through wall openings with leaf/threshold, NEVER door to nowhere",
+                               "northern attic hatch and southern staircase clearly readable",
+                               "center large black/open void overlooking room below, with wooden railing on all sides",
+                               "floorboards scale for 5ft token, leave playable 2-3 token-wide circulation lanes",
+                               "unlabeled player-safe render without grid, icons, text, labels or puzzle spoilers",
+                               "no roof, no furnishings obstructing passage, no side rooms rendered on landing-only scene"
+                           ],
+    "forbidden":  [
+                      "No perspective or isometric",
+                      "Do not merge doors into solid exterior walls",
+                      "Do not depict Sophia hidden spine room, puzzle lore, solutions or unapproved rooms",
+                      "Do not recolor/overwrite approved older scenes",
+                      "Do not change existing teleport destinations or Regions during PREPARE"
+                  ],
+    "validation":  {
+                       "minCorridorPx":  220,
+                       "stairsArrivalSeparated":  true,
+                       "passages":  4,
+                       "hatches":  1,
+                       "canvasMatchesLive":  true,
+                       "firstStage":  "PREPARE_ONLY",
+                       "next":  "STRUCTURAL_RENDER then STRUCTURAL_INSPECT"
+                   }
+}

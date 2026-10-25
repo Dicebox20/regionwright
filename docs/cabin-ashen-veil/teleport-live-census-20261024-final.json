@@ -1,0 +1,3909 @@
+{
+  "date": "2026-10-24T23:16:28.296Z",
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": [
+    {
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "id": "CAVAQ01Scene0001",
+      "width": 5760,
+      "height": 4320,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "regions": []
+    },
+    {
+      "name": "BATH - Unified Bathhouse Surface",
+      "id": "CAVBATHScene0001",
+      "width": 2160,
+      "height": 1440,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "regions": []
+    },
+    {
+      "name": "EXT-01 - Carriage Yard and Cabin Front",
+      "id": "CAVEXT01Yard0001",
+      "width": 7200,
+      "height": 4800,
+      "grid": 240,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+      "regions": [
+        {
+          "name": "EXT-01 - Cabin Front Porch",
+          "id": "CAV01R0000000001",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                3445,
+                1631,
+                3994,
+                1631,
+                3994,
+                2016,
+                3445,
+                2016
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:1",
+              "intendedDestination": "H-G02",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVPORCHENTER001",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVHG02Scene0001.Region.CAVFOYERPORCH001"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-foyer:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - Iron Maze Gate",
+          "id": "CAV01R0000000002",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1481,
+                197,
+                2203,
+                197,
+                2203,
+                703,
+                1481,
+                703
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:2",
+              "intendedDestination": "FM-01",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "GRC83AT3emhbNVUL",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVFM01Scene0001.Region.EYJnPlYUWqtifKIi"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-maze:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - West Grove Trail",
+          "id": "CAV01R0000000003",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                19,
+                1284,
+                464,
+                1284,
+                464,
+                1809,
+                19,
+                1809
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:3",
+              "intendedDestination": "EXT-TRAIL",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "RsNxNxx7FYeTH6zC",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG04Scene0001.Region.4Te03NBNdsrGDeRh"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-sg04:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - South Arrival Road",
+          "id": "CAV01R0000000004",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                3314,
+                4247,
+                4013,
+                4247,
+                4013,
+                4772,
+                3314,
+                4772
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:4",
+              "intendedDestination": "OUTSIDE",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Pond and Dock Approach",
+          "id": "CAV01R0000000005",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                5620,
+                2264,
+                6314,
+                2264,
+                6314,
+                3014,
+                5620,
+                3014
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:5",
+              "intendedDestination": "EXT-02",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CyzPQ7VcMItQI5of",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT02Scene001.Region.wwls4eQRInzw8RxS"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-pond:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - Donovan Shack Approach",
+          "id": "CAV01R0000000006",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                680,
+                909,
+                1448,
+                909,
+                1448,
+                1392,
+                680,
+                1392
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:6",
+              "intendedDestination": "EXT-03",
+              "inertUntilApprovedGameplayPhase": true,
+              "cavOarsPickup": {
+                "status": "done",
+                "actorId": "xO3hc9r0vR6CqU1W",
+                "tokenId": "0JLHTOSjGOHEoagB",
+                "sourceUuid": "Item.CAVOARSPOND00001",
+                "itemId": "Ggb9lJYYtaXsZS8e"
+              }
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVOARSBEHAV0001",
+              "name": "EXT-01 - Donovan Shack Wooden Oars (Player Move In)",
+              "type": "executeScript",
+              "disabled": false,
+              "system": {
+                "events": [
+                  "tokenMoveIn"
+                ],
+                "source": "// CAV opening pickup, v001. Native Foundry 14 Region ExecuteScript.\n// A player-controlled character physically moves into the Shack region.\n// GM-authoritative world/Actor document writes; no GM clicks, macros or external sockets.\nif (event?.name !== 'tokenMoveIn') return;\nif (game.world?.id !== 'cabin-in-the-ashen-veil' || game.version !== '14.367') return;\nif (!game.user?.isGM || game.users.activeGM?.id !== game.user.id) return;\nconst SCENE='CAVEXT01Yard0001';\nconst REGION='CAV01R0000000006';\nconst ITEM_ID='CAVOARSPOND00001';\nconst SCOPE='dicebox-campaign-helper';\nconst STATE_KEY='cavOarsPickup';\nif (scene?.id !== SCENE || region?.id !== REGION) return;\nconst candidate=event.data?.token?.document ?? event.data?.token;\nconst token=scene.tokens.get(candidate?.id ?? event.data?.tokenId);\nif (!token || token.hidden || token.actorId == null) return;\nconst actor=token.actor;\nif (!actor || actor.type!=='character') return;\nconst moverId=event.userId ?? event.data?.userId ?? null;\nconst owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));\nconst player=moverId ? owners.find(u=>u.id===moverId) : owners.length===1 ? owners[0] : null;\nif (!player) return;\nconst source=game.items.get(ITEM_ID);\nif (!source || source.uuid!==`Item.${ITEM_ID}` || source.name!=='Wooden Oars') return;\nconst claim=region.getFlag(SCOPE,STATE_KEY);\nif (claim?.status==='done' || claim?.status==='reserved') return;\nconst hasReward=game.actors.contents.some(a=>a.items.contents.some(i=>\n  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===source.uuid &&\n  i.getFlag?.(SCOPE,'cavPickupRegionUuid')===region.uuid));\nif (hasReward) return; // missing ledger: stop, never blindly duplicate\nconst busy=globalThis.__CAV_EARLY_OARS_PENDING__ ?? (globalThis.__CAV_EARLY_OARS_PENDING__ = new Set());\nif (busy.has(REGION)) return;\nbusy.add(REGION);\ntry {\n  await region.setFlag(SCOPE, STATE_KEY, {status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid});\n  const reward=source.toObject();delete reward._id;\n  reward.flags={...reward.flags,[SCOPE]:{\n    ...reward.flags?.[SCOPE],cavPickupSourceUuid:source.uuid,cavPickupRegionUuid:region.uuid,\n    cavFirstActPickup:'donovans_shack_freely_available'}};\n  const created=await actor.createEmbeddedDocuments('Item',[reward]);\n  if (created.length!==1) throw Error('Expected exactly one Oars Item');\n  await region.setFlag(SCOPE,STATE_KEY,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid,itemId:created[0].id});\n  await ChatMessage.create({speaker:{alias:'Donovan’s Shack'},\n    content:'<p>A pair of well-worn wooden oars leans near the shack. You take them; they are still sturdy enough for the old rowboat.</p>',\n    whisper:[player.id]});\n} catch(err) {\n  console.error('[CAV Early Oars] Reward outcome requires inspection; reserved claim retained.',err);\n} finally {busy.delete(REGION)}"
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "cavFirstActPickup": "donovans_shack_freely_available",
+                  "itemUuid": "Item.CAVOARSPOND00001",
+                  "authoritativeGM": true
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - Privy Approach",
+          "id": "CAV01R0000000007",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                5784,
+                830,
+                6614,
+                830,
+                6614,
+                1448,
+                5784,
+                1448
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:7",
+              "intendedDestination": "EXT-04",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "mVLjaUH5tb5SyQOO",
+              "name": "Confirm: Do you wish to proceed?",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.xx1rWBiWMLxJPlrw.Region.663WrP9V8tPPOLvt"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-privy:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-01 - Family Carriage",
+          "id": "CAV01R0000000008",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2269,
+                2606,
+                2939,
+                2606,
+                2939,
+                3300,
+                2269,
+                3300
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:ext01:region:8",
+              "intendedDestination": "CARRIAGE",
+              "inertUntilApprovedGameplayPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Arrival from Privy",
+          "id": "hc9kcjO4lIsV08MJ",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 5450,
+              "y": 1270,
+              "width": 210,
+              "height": 180,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-privy:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Arrival from Pond",
+          "id": "7NLNMtl8pzMP21aU",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 5240,
+              "y": 2650,
+              "width": 240,
+              "height": 200,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-pond:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Arrival from Sune Grove",
+          "id": "woKGA4YxDNMsCXLa",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 780,
+              "y": 1520,
+              "width": 200,
+              "height": 200,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-sg04:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Arrival from Cabin Foyer",
+          "id": "CAVYARDPORCHL001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3570,
+              "y": 2300,
+              "width": 240,
+              "height": 170,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-foyer:v1",
+              "kind": "landing",
+              "measuredMap": "approved image and existing foyer wall gap; no art edits"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-01 - Arrival from Forest Maze",
+          "id": "Rh0YRP4oljbs9s1D",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1900,
+              "y": 970,
+              "width": 260,
+              "height": 230,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-maze:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "id": "CAVEXT02Scene001",
+      "width": 5760,
+      "height": 4320,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "regions": [
+        {
+          "name": "EXT-02 - Return to Carriage Yard",
+          "id": "5RJkabcJJbVAI4WY",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 260,
+              "y": 1880,
+              "width": 370,
+              "height": 430,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-pond:v1",
+              "kind": "exit"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "yaNCRIbv3Y8Dho0X",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT01Yard0001.Region.7NLNMtl8pzMP21aU"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-pond:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-02 - Arrival from Carriage Yard",
+          "id": "wwls4eQRInzw8RxS",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 910,
+              "y": 1970,
+              "width": 250,
+              "height": 230,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-pond:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "EXT-02 - Old Rowboat Investigation (Oars Required)",
+          "id": "CAVROWBOATREG001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1250,
+              "y": 1470,
+              "width": 510,
+              "height": 510,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "cavFirstActRegion": {
+                "chainNode": "pond_sunken_rowboat_mirror",
+                "activation": "player token moves to moored rowboat with Oars; narrates investigating older sunken boat",
+                "requiresItemUuid": "Item.CAVOARSPOND00001",
+                "rewardUuid": "Item.CAVMIRRORSUNK001",
+                "map": "ext-02_pond_full_owner-approved.png",
+                "regionPlacement": "measured visible western dock and moored rowboat x1250 y1470 w510 h510"
+              }
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVMIRRORBEH0001",
+              "name": "EXT-02 - Retrieve Ornate Mirror (Oars Required)",
+              "type": "executeScript",
+              "disabled": false,
+              "system": {
+                "events": [
+                  "tokenMoveIn",
+                  "tokenMoveWithin"
+                ],
+                "source": "// CAV pond mirror pickup, v001. Native Foundry 14 Region ExecuteScript.\r\n// A player-controlled character moves to the approved pond rowboat at the dock.\r\n// GM-authoritative world/Actor document writes; no GM clicks, macros or external sockets.\r\nif (!['tokenMoveIn','tokenMoveWithin'].includes(event?.name)) return;\r\nif (game.world?.id !== 'cabin-in-the-ashen-veil' || game.version !== '14.367') return;\r\nif (!game.user?.isGM || game.users.activeGM?.id !== game.user.id) return;\r\nconst SCENE='CAVEXT02Scene001';\r\nconst REGION='CAVROWBOATREG001';\r\nconst ITEM_ID='CAVMIRRORSUNK001';\r\nconst SCOPE='dicebox-campaign-helper';\r\nconst STATE_KEY='cavPondMirrorPickup';\r\nif (scene?.id !== SCENE || region?.id !== REGION) return;\r\nconst candidate=event.data?.token?.document ?? event.data?.token;\r\nconst token=scene.tokens.get(candidate?.id ?? event.data?.tokenId);\r\nif (!token || token.hidden || token.actorId == null) return;\r\nconst actor=token.actor;\r\nif (!actor || actor.type!=='character') return;\r\nconst moverId=event.userId ?? event.data?.userId ?? null;\r\nconst owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));\r\nconst player=moverId ? owners.find(u=>u.id===moverId) : owners.length===1 ? owners[0] : null;\r\nif (!player) return;\r\nconst ownsOars=actor.items.contents.some(i=>i.getFlag?.(SCOPE,'cavPickupSourceUuid')==='Item.CAVOARSPOND00001' ||\r\n  (i.name==='Wooden Oars' && i.getFlag?.(SCOPE,'cavFirstActPickup')==='donovans_shack_freely_available'));\r\nif (!ownsOars) return;\r\nconst source=game.items.get(ITEM_ID);\r\nif (!source || source.uuid!==`Item.${ITEM_ID}` || source.name!=='Ornate Mirror') return;\r\nconst claim=region.getFlag(SCOPE,STATE_KEY);\r\nif (claim?.status==='done' || claim?.status==='reserved') return;\r\nconst hasReward=game.actors.contents.some(a=>a.items.contents.some(i=>\r\n  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===source.uuid &&\r\n  i.getFlag?.(SCOPE,'cavPickupRegionUuid')===region.uuid));\r\nif (hasReward) return; // missing ledger: stop, never blindly duplicate\r\nconst busy=globalThis.__CAV_EARLY_MIRROR_PENDING__ ?? (globalThis.__CAV_EARLY_MIRROR_PENDING__ = new Set());\r\nif (busy.has(REGION)) return;\r\nbusy.add(REGION);\r\ntry {\r\n  await region.setFlag(SCOPE, STATE_KEY, {status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid});\r\n  const reward=source.toObject();delete reward._id;\r\n  reward.flags={...reward.flags,[SCOPE]:{\r\n    ...reward.flags?.[SCOPE],cavPickupSourceUuid:source.uuid,cavPickupRegionUuid:region.uuid,\r\n    cavFirstActPickup:'pond_full_sunken_rowboat_retrieval'}};\r\n  const created=await actor.createEmbeddedDocuments('Item',[reward]);\r\n  if (created.length!==1) throw Error('Expected exactly one Oars Item');\r\n  await region.setFlag(SCOPE,STATE_KEY,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid,itemId:created[0].id});\r\n  await ChatMessage.create({speaker:{alias:'The Old Rowboat'},\r\n    content:'<p>With the wooden oars, you reach an older rowboat beneath the water and retrieve an ornate mirror from the wreck.</p>',\r\n    whisper:[player.id]});\r\n} catch(err) {\r\n  console.error('[CAV Pond Mirror] Reward outcome requires inspection; reserved claim retained.',err);\r\n} finally {busy.delete(REGION)}"
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "cavFirstActPickup": "pond_full_sunken_rowboat_retrieval",
+                  "gmAuthoritative": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EXT-04 - Privy",
+      "id": "xx1rWBiWMLxJPlrw",
+      "width": 1254,
+      "height": 1254,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+      "regions": [
+        {
+          "name": "EXT-04 - Return to Carriage Yard",
+          "id": "zVgVWvnpPetxlF5e",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 460,
+              "y": 785,
+              "width": 300,
+              "height": 180,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-privy:v1",
+              "kind": "return"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "6DZj3FUaLavsdqgA",
+              "name": "Confirm: Do you wish to proceed?",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT01Yard0001.Region.hc9kcjO4lIsV08MJ"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-privy:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "EXT-04 - Arrival from Carriage Yard",
+          "id": "663WrP9V8tPPOLvt",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 535,
+              "y": 450,
+              "width": 180,
+              "height": 170,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-privy:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "EXT-05 - Forgotten Gazebo",
+      "id": "CAVEXT05Scene001",
+      "width": 1920,
+      "height": 1440,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png",
+      "regions": []
+    },
+    {
+      "name": "EXT-06 - Greenhouse Interior",
+      "id": "CAVEXT06Scene001",
+      "width": 1920,
+      "height": 1440,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png",
+      "regions": []
+    },
+    {
+      "name": "EXT-07 - Boathouse Clearing",
+      "id": "CAVEXT07Scene001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+      "regions": []
+    },
+    {
+      "name": "EXT-TRAIL - Grove Bathhouse Fork",
+      "id": "CAVTRAILScene001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png",
+      "regions": []
+    },
+    {
+      "name": "FM - Northwestern Forest Maze",
+      "id": "CAVFM01Scene0001",
+      "width": 5760,
+      "height": 4320,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/fm-unified_northwestern-forest-maze_owner-approved.png",
+      "regions": [
+        {
+          "name": "FM - Return to Iron Maze Gate",
+          "id": "t9MFbLLnSR173tGH",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2550,
+              "y": 3630,
+              "width": 620,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-maze:v1",
+              "kind": "exit"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "AHnBJjJJsCTgXeRd",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT01Yard0001.Region.Rh0YRP4oljbs9s1D"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-maze:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "FM - Arrival from Iron Maze Gate",
+          "id": "EYJnPlYUWqtifKIi",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2650,
+              "y": 3200,
+              "width": 240,
+              "height": 210,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-maze:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "H-A01 - Central Attic",
+      "id": "UNEdA6iy6nk1Xuga",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a01-central-attic-approved-v002.png",
+      "regions": []
+    },
+    {
+      "name": "H-A02 - West Attic Storage",
+      "id": "KwpmPrYgEC7KQVCZ",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a02-west-attic-storage-approved-v001.png",
+      "regions": []
+    },
+    {
+      "name": "H-A03 - North Attic Storage",
+      "id": "gDqaEOR4qaB5IOut",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png",
+      "regions": []
+    },
+    {
+      "name": "H-A04 - East Attic Storage",
+      "id": "nyF5EX0JiEu23C3p",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a04-east-attic-storage-approved-v002.png",
+      "regions": []
+    },
+    {
+      "name": "H-B01 - Allens Basement Workshop",
+      "id": "G6NMonfCwMvNzipL",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+      "regions": []
+    },
+    {
+      "name": "H-B02 - Secured Keystone Vault",
+      "id": "tjTpG2RVZNoCqRLh",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+      "regions": []
+    },
+    {
+      "name": "H-B03 - Basement Supply Closet",
+      "id": "ThVGl68hUmiOhWEA",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b03-basement-supply-closet-approved-v001.png",
+      "regions": []
+    },
+    {
+      "name": "H-G02 - Foyer and Basement Stairwell",
+      "id": "CAVHG02Scene0001",
+      "width": 960,
+      "height": 720,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-g02_foyer_with_basement-stairwell_owner-approved.png",
+      "regions": [
+        {
+          "name": "H-G02 - Great Room Doorway",
+          "id": "R5cXlNtcmh9FbENe",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 340,
+              "y": 390,
+              "width": 160,
+              "height": 75,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:foyer-greatroom:v1",
+              "kind": "return"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "OTPlgV81qeu3vwfI",
+              "name": "Confirm: Do you wish to proceed?",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVHG06GreatRoom.Region.S7QJ3qEWYLWSdu3f"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:foyer-greatroom:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "H-G02 - Arrival from Great Room",
+          "id": "2pa02tkPswd4Cn5b",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 360,
+              "y": 230,
+              "width": 120,
+              "height": 90,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:foyer-greatroom:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G02 - Arrival from Front Porch",
+          "id": "CAVFOYERPORCH001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 330,
+              "y": 535,
+              "width": 120,
+              "height": 60,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-foyer:v1",
+              "kind": "landing",
+              "measuredMap": "approved image and existing foyer wall gap; no art edits"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G02 - Return to Cabin Porch",
+          "id": "CAVFOYEREXIT0001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 320,
+              "y": 660,
+              "width": 155,
+              "height": 58,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-foyer:v1",
+              "kind": "exit",
+              "measuredMap": "approved image and existing foyer wall gap; no art edits"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVFOYERRETURN01",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT01Yard0001.Region.CAVYARDPORCHL001"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-foyer:v1"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "H-G06 - Great Room",
+      "id": "CAVHG06GreatRoom",
+      "width": 840,
+      "height": 960,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png",
+      "regions": [
+        {
+          "name": "H-G06 - Foyer Doorway",
+          "id": "CAV06R0000000001",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                342.5,
+                849.5,
+                523.5,
+                849.5,
+                523.5,
+                920.5,
+                342.5,
+                920.5
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:h-g06:region:1",
+              "intendedDestination": "H-G02",
+              "inertUntilPuzzleAndTransitionPhase": true
+            }
+          },
+          "behaviors": [
+            {
+              "id": "EZeDVLPQQ9t02Q6t",
+              "name": "Confirm: Do you wish to proceed?",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVHG02Scene0001.Region.2pa02tkPswd4Cn5b"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:foyer-greatroom:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "H-G06 - Dining Room Doorway",
+          "id": "CAV06R0000000002",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                47,
+                335,
+                140,
+                335,
+                140,
+                532,
+                47,
+                532
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:h-g06:region:2",
+              "intendedDestination": "H-G01",
+              "inertUntilPuzzleAndTransitionPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G06 - Allen Study Doorway",
+          "id": "CAV06R0000000003",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                723,
+                362,
+                807,
+                362,
+                807,
+                558,
+                723,
+                558
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:h-g06:region:3",
+              "intendedDestination": "H-G05",
+              "inertUntilPuzzleAndTransitionPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G06 - Rear Family Room Doorway",
+          "id": "CAV06R0000000004",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                347,
+                34,
+                515,
+                34,
+                515,
+                120,
+                347,
+                120
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:h-g06:region:4",
+              "intendedDestination": "H-G09",
+              "inertUntilPuzzleAndTransitionPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G06 - Upstairs Staircase",
+          "id": "CAV06R0000000005",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                669,
+                18.5,
+                763,
+                18.5,
+                763,
+                381.5,
+                669,
+                381.5
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:h-g06:region:5",
+              "intendedDestination": "H-U02",
+              "inertUntilPuzzleAndTransitionPhase": true
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "H-G06 - Grandfather Clock",
+          "id": "MrWgTyGg0d0DI53Q",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 86,
+              "y": 52,
+              "width": 60,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {},
+          "behaviors": []
+        },
+        {
+          "name": "H-G06 - Fireplace",
+          "id": "G0HM92QQtEfyZcFi",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 151,
+              "y": 21,
+              "width": 180,
+              "height": 180,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {},
+          "behaviors": [
+            {
+              "id": "CAV06FIRECLICK01",
+              "name": "H-G06 - Fireplace ? Click and Tinderbox",
+              "type": "executeScript",
+              "disabled": false,
+              "system": {
+                "events": [
+                  "behaviorActivated",
+                  "behaviorViewed",
+                  "behaviorUnviewed",
+                  "behaviorDeactivated"
+                ],
+                "source": "// CAV H-G06 FIREPLACE — PLAYER CLICK BEHAVIOR (Foundry 14.367), v001\n// Embedded Region Execute Script. No Macro document, no player Macro permission.\n// Execute Script behavior fires this source on: behaviorActivated, behaviorViewed,\n// behaviorUnviewed, behaviorDeactivated. Click events are registered on the canvas.\n// All Foundry document mutations are performed only on the elected active GM.\nconst KEY = \"__CAV_HG06_FIREPLACE_SCRIPT_V001__\";\nconst CHANNEL = \"module.dicebox-campaign-helper\";\nconst PROTOCOL = \"cav.hg06.fireplace.v001\";\nconst SCENE_ID = \"CAVHG06GreatRoom\";\nconst REGION_ID = \"G0HM92QQtEfyZcFi\";\nconst LIGHT_ID = \"fuWonmPqjJX2SIVG\";\nconst current = globalThis[KEY] ?? (globalThis[KEY] = {\n  socketHandler: null, clickHandler: null, clickStage: null,\n  modalOpen: false, busy: false, seen: new Map()\n});\nconst evt = event?.name ?? \"\";\nconst removeClick = () => {\n  if (current.clickHandler && current.clickStage) {\n    current.clickStage.off(\"pointertap\", current.clickHandler);\n  }\n  current.clickHandler = null;\n  current.clickStage = null;\n};\nif (evt === \"behaviorUnviewed\" || evt === \"behaviorDeactivated\") {\n  removeClick();\n  if (evt === \"behaviorDeactivated\" && current.socketHandler) {\n    game.socket.off(CHANNEL, current.socketHandler);\n    current.socketHandler = null;\n    delete globalThis[KEY];\n  }\n  return;\n}\nif (![\"behaviorActivated\", \"behaviorViewed\"].includes(evt)) return;\nif (!game.ready || game.world?.id !== \"cabin-in-the-ashen-veil\") return;\nif (scene?.id !== SCENE_ID || region?.id !== REGION_ID) return;\nif (!game.modules.get(\"dicebox-campaign-helper\")?.active) return;\n\nconst getScene = () => game.scenes.get(SCENE_ID);\nconst isActiveGM = () => Boolean(game.user?.isGM && game.users.activeGM?.id === game.user.id);\nconst hasTinderbox = actor => Boolean(actor?.items?.contents?.some(item =>\n  /^tinder[\\s-]*box(?:\\b|$)/i.test(item.name?.trim() ?? \"\") &&\n  Number(item.system?.quantity ?? 1) > 0\n));\nconst actorForToken = (tokenId, user) => {\n  const t = getScene()?.tokens.get(tokenId);\n  const a = t?.actor;\n  if (!a || a.type !== \"character\" || !a.testUserPermission(user, \"OWNER\")) return null;\n  return a;\n};\n// The GM socket listener persists while visiting another Scene and is installed\n// whenever this behavior is activated/viewed in the currently open world.\nif (!current.socketHandler) {\n  current.socketHandler = async (data) => {\n    if (!data || data.protocol !== PROTOCOL || data.kind !== \"request\" || !isActiveGM()) return;\n    if (current.busy) return;\n    if (typeof data.nonce !== \"string\" || !/^[A-Za-z0-9]{8,40}$/.test(data.nonce)) return;\n    if (data.sceneId !== SCENE_ID || data.regionId !== REGION_ID ||\n        data.lightId !== LIGHT_ID || ![\"light\", \"extinguish\"].includes(data.action)) return;\n    const user = game.users.get(data.userId);\n    if (!user?.active || !data.tokenId || typeof data.tokenId !== \"string\") return;\n    const actor = actorForToken(data.tokenId, user);\n    if (!actor) return;\n    const key = data.userId + \":\" + data.nonce;\n    if (current.seen.has(key)) return;\n    current.seen.set(key, Date.now());\n    if (current.seen.size > 80) {\n      const oldest = current.seen.keys().next().value;\n      current.seen.delete(oldest);\n    }\n    const reply = (success, message, nowLit) =>\n      game.socket.emit(CHANNEL, {\n        protocol: PROTOCOL, kind: \"result\", nonce: data.nonce,\n        userId: user.id, success, message, nowLit\n      });\n    const light = getScene()?.lights.get(LIGHT_ID);\n    if (!light) return void reply(false, \"The fireplace light is unavailable.\", null);\n    const lit = !light.hidden;\n    if (data.action === \"light\" && lit) return void reply(false, \"The fireplace is already lit.\", true);\n    if (data.action === \"extinguish\" && !lit) return void reply(false, \"The fireplace is already out.\", false);\n    // Lighting requires a carried, nonzero-quantity Tinderbox. Not consumed.\n    if (data.action === \"light\" && !hasTinderbox(actor)) {\n      return void reply(false, \"Requires Tinderbox in your character's inventory.\", false);\n    }\n    current.busy = true;\n    try {\n      await light.update({hidden: data.action === \"extinguish\"});\n      const live = getScene()?.lights.get(LIGHT_ID);\n      const nowLit = live ? !live.hidden : null;\n      if (nowLit !== (data.action === \"light\")) {\n        await reply(false, \"The fireplace state could not be verified.\", nowLit);\n      } else {\n        await reply(true, nowLit ? \"You light the old wood. The hearth catches fire.\" :\n          \"You put out the fireplace.\", nowLit);\n      }\n    } catch (err) {\n      console.error(\"[CAV Fireplace] Light toggle failed\", err);\n      await reply(false, \"The fire could not be changed. Ask the GM to check the light.\", !light.hidden);\n    } finally {\n      current.busy = false;\n    }\n  };\n  game.socket.on(CHANNEL, current.socketHandler);\n}\n// No click registration when this Scene isn't currently viewed.\nif (canvas.scene?.id !== SCENE_ID || !canvas.stage) return;\nif (current.clickHandler && current.clickStage !== canvas.stage) removeClick();\nif (current.clickHandler) return;\ncurrent.clickHandler = async (pointer) => {\n  if (current.modalOpen || canvas.scene?.id !== SCENE_ID) return;\n  const r = getScene()?.regions.get(REGION_ID);\n  const light = getScene()?.lights.get(LIGHT_ID);\n  if (!r || !light || !pointer?.global) return;\n  const pos = canvas.stage.toLocal(pointer.global);\n  if (!Number.isFinite(pos.x) || !Number.isFinite(pos.y)) return;\n  // Geometric hit-test is independent of Region-outline visibility, token\n  // vision, fog and which canvas tool/layer is active.\n  if (!r.testPoint({x:pos.x, y:pos.y, elevation:0})) return;\n  current.modalOpen = true;\n  try {\n    const lit = !light.hidden;\n    const description = lit ?\n      \"The old wood is burning in the fireplace.\" :\n      \"The wood in the fireplace is old and dry, but it should still burn.\";\n    const question = lit ?\n      \"Do you wish to put out the fire?\" :\n      \"Do you wish to light the fire?\";\n    const requirement = lit ? \"\" :\n      '<p style=\"font-size:0.85em\"><strong>Required: Tinderbox</strong></p>';\n    const approved = await foundry.applications.api.DialogV2.confirm({\n      window: {title: \"Great Room Fireplace\"},\n      content: \"<p>\" + description + \"</p><p>\" + question + \"</p>\" + requirement,\n      yes: {label: lit ? \"Put Out Fire\" : \"Light Fire\"},\n      no: {label: \"Cancel\"}\n    });\n    if (!approved) return;\n    // The acting character must have a Token in this same Scene. Controlled\n    // owned token takes priority; fall back to the user's assigned character.\n    const user = game.user;\n    const tokens = getScene().tokens.contents.filter(t =>\n      t.actor?.type === \"character\" && t.actor.testUserPermission(user, \"OWNER\"));\n    let token = canvas.tokens.controlled.map(t => t.document).find(t =>\n      tokens.some(candidate => candidate.id === t.id));\n    token ??= tokens.find(t => t.actor?.id === user.character?.id);\n    token ??= tokens.length === 1 ? tokens[0] : null;\n    if (!token) {\n      ui.notifications.warn(\"Select your character token in this Scene to use the fireplace.\");\n      return;\n    }\n    if (!lit && !hasTinderbox(token.actor)) {\n      ui.notifications.warn(\"Required: Tinderbox in your character's inventory.\");\n      return;\n    }\n    const nonce = foundry.utils.randomID(16);\n    const resultHandler = (msg) => {\n      if (msg?.protocol !== PROTOCOL || msg?.kind !== \"result\" ||\n          msg.userId !== user.id || msg.nonce !== nonce) return;\n      game.socket.off(CHANNEL, resultHandler);\n      ui.notifications[msg.success ? \"info\" : \"warn\"](msg.message);\n    };\n    game.socket.on(CHANNEL, resultHandler);\n    await game.socket.emit(CHANNEL, {\n      protocol: PROTOCOL, kind:\"request\", nonce, userId:user.id,\n      sceneId:SCENE_ID, regionId:REGION_ID, lightId:LIGHT_ID,\n      tokenId:token.id, action:lit ? \"extinguish\" : \"light\"\n    });\n  } catch(err) {\n    console.error(\"[CAV Fireplace] Click interaction failed\", err);\n    ui.notifications.warn(\"The fireplace interaction could not open.\");\n  } finally {\n    current.modalOpen = false;\n  }\n};\ncurrent.clickStage = canvas.stage;\ncurrent.clickStage.on(\"pointertap\", current.clickHandler);\nconsole.info(\"[CAV Fireplace] Region click behavior registered for user\", game.user.id);"
+              },
+              "flags": {}
+            }
+          ]
+        },
+        {
+          "name": "H-G06 - Arrival from Foyer",
+          "id": "S7QJ3qEWYLWSdu3f",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 375,
+              "y": 680,
+              "width": 110,
+              "height": 85,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:foyer-greatroom:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "H-R01 - Roof Chimney Clock",
+      "id": "LhtyO17QenuCExsb",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png",
+      "regions": [
+        {
+          "name": "H-R01 - Roof Chimney Clock - Clickable Face",
+          "id": "CAVROOFCLOCKR001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1248,
+              "y": 153,
+              "width": 173,
+              "height": 193,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "cavRoofClock": {
+                "geometryVersion": "v001",
+                "approvedMap": "h-r01-roof-chimney-clock-approved-v002.png",
+                "installationStage": "geometryVerifiedBehaviorPending",
+                "clickBinding": "pending"
+              }
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "H-U07 - Dahlia Art Studio",
+      "id": "CAVHU07Scene0001",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "regions": [
+        {
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "id": "CAVVANITYREG0001",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "cavFirstActRegion": {
+                "chainNode": "vanity",
+                "sourceMap": "H-U07 v017",
+                "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+                "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+                "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+                "rewardUuids": [
+                  "Item.CAVBRASSKEYVAN01",
+                  "Item.CAVCARRIAGEKEY01"
+                ],
+                "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+              }
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "name": "H-U07 - Dahlia Vanity: Mirror reveals two keys",
+              "type": "executeScript",
+              "disabled": false,
+              "system": {
+                "events": [
+                  "tokenMoveIn",
+                  "tokenMoveWithin"
+                ],
+                "source": "// H-U07 Dahlia's Studio - mirror socket and paired vanity key discovery (v001)\n// Native Foundry v14 ExecuteScript, dispatched only by a character's token movement.\n// Authority: elected active GM only. The player does not need GM rights or a Macro.\nif (!['tokenMoveIn', 'tokenMoveWithin'].includes(event?.name)) return;\nif (!game.ready || game.world?.id!=='cabin-in-the-ashen-veil' || game.version!=='14.367') return;\nif (!game.user?.isGM || game.users.activeGM?.id!==game.user.id) return;\nconst SCENE_ID='CAVHU07Scene0001', REGION_ID='CAVVANITYREG0001';\nconst SCOPE='dicebox-campaign-helper', LEDGER='cavVanityKeysClaim';\nconst MIRROR='Item.CAVMIRRORSUNK001';\nconst REWARDS=['Item.CAVBRASSKEYVAN01','Item.CAVCARRIAGEKEY01'];\nif (scene?.id!==SCENE_ID || region?.id!==REGION_ID) return;\nconst candidate=event.data?.token?.document??event.data?.token;\nconst token=scene.tokens.get(candidate?.id??event.data?.tokenId);\nif (!token || token.hidden || !token.actorId) return;\nconst actor=token.actor;\nif (!actor || actor.type!=='character') return;\nconst owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));\nconst eventUserId=event.userId??event.data?.userId??null;\nconst player=eventUserId ? owners.find(u=>u.id===eventUserId) : owners.length===1 ? owners[0] : null;\nif (!player) return;\nconst hasMirror=actor.items.contents.some(i=>i.getFlag?.(SCOPE,'cavPickupSourceUuid')===MIRROR &&\n  i.getFlag?.(SCOPE,'cavPickupRegionUuid')==='Scene.CAVEXT02Scene001.Region.CAVROWBOATREG001');\nif (!hasMirror) return;\nconst existing=region.getFlag(SCOPE,LEDGER);\nif (existing?.status==='done' || existing?.status==='reserved') return;\nconst alreadyGranted=game.actors.contents.some(a=>a.items.contents.some(i=>\n  REWARDS.includes(i.getFlag?.(SCOPE,'cavVanityRewardSourceUuid')) &&\n  i.getFlag?.(SCOPE,'cavVanityRewardRegionUuid')===region.uuid));\nif (alreadyGranted) return; // lost ledger: reconcile existing Item, don't duplicate\nconst sources=REWARDS.map(uuid=>game.items.get(uuid.slice(5)));\nif (sources.some((x,i)=>!x || x.uuid!==REWARDS[i])) return;\nif (sources[0].name!=='Brass Tiny Key #1' || sources[1].name!=='Carriage Key') return;\nconst BUSY='__CAV_HU07_VANITY_REWARD_BUSY__';\nconst pending=globalThis[BUSY]??(globalThis[BUSY]=new Set());\nif (pending.has(REGION_ID)) return;\npending.add(REGION_ID);\ntry {\n  await region.setFlag(SCOPE,LEDGER,{status:'reserved',actorId:actor.id,tokenId:token.id,mirrorUuid:MIRROR,rewardUuids:REWARDS});\n  const docs=sources.map(item=>{\n    const value=item.toObject();delete value._id;\n    value.flags={...value.flags,[SCOPE]:{...value.flags?.[SCOPE],cavVanityRewardSourceUuid:item.uuid,\n      cavVanityRewardRegionUuid:region.uuid,cavFirstActReward:'art_studio_vanity_after_mirror'}};\n    return value;\n  });\n  const created=await actor.createEmbeddedDocuments('Item',docs);\n  if(created.length!==2)throw Error('Vanity reward partial response; claim reservation requires review');\n  await region.setFlag(SCOPE,LEDGER,{status:'done',actorId:actor.id,tokenId:token.id,mirrorUuid:MIRROR,\n    rewardUuids:REWARDS,embeddedItemIds:created.map(i=>i.id)});\n  try {await ChatMessage.create({speaker:{alias:'Dahlia Vanity'},\n    content:'<p>The ornate mirror settles into the old vanity frame. Two hidden drawers ease open, revealing a tiny brass key and an iron carriage key.</p>',whisper:[player.id]});}\n  catch(chatErr){console.warn('[CAV Vanity] Keys granted, but private narrative delivery failed',chatErr)}\n} catch(err){console.error('[CAV Vanity] Outcome uncertain, reserved claim preserved for recovery',err)}\nfinally {pending.delete(REGION_ID)}"
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "cavFirstActNode": "vanity",
+                  "requiresUuid": "Item.CAVMIRRORSUNK001",
+                  "rewards": [
+                    "Item.CAVBRASSKEYVAN01",
+                    "Item.CAVCARRIAGEKEY01"
+                  ],
+                  "executedByActiveGM": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SG-01 - Northwest Grove Corner",
+      "id": "CAVSG01Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+      "regions": [
+        {
+          "name": "Grove Bust - NW Moon - Winder",
+          "id": "gksvZIqj8jWdqzn7",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1290,
+                680,
+                1860,
+                680,
+                1860,
+                1410,
+                1290,
+                1410
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:nw:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-02",
+          "id": "ShkRIARUalZ2eK3s",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4134,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG2",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "suPl4dBD6qd7TH6c",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG02Scene0001.Region.nXX34ibi98vTaDzD"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-02",
+          "id": "G8tpIOde3QfrfVcm",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG2",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-04",
+          "id": "Ke9KCBPqRGFWdZwb",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG4",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "8mNdehcRoIEOIiLQ",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG04Scene0001.Region.UPW3ZBUgHZlbt9n6"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-04",
+          "id": "7Y8AmKQIQUj3HVg9",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG4",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-02 - Northern Processional Walk",
+      "id": "CAVSG02Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-02_northern-processional-walk_owner-pass.png",
+      "regions": [
+        {
+          "name": "Travel to SG-01",
+          "id": "fsqvet8IZem07vAO",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG2",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "LpYsvln9ShpTanDh",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG01Scene0001.Region.G8tpIOde3QfrfVcm"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-01",
+          "id": "nXX34ibi98vTaDzD",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG2",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-03",
+          "id": "XilVcoVaPxhtwHll",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4134,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG3",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "YePgSXBEUAifmxWt",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG03Scene0001.Region.5VbuPKIYZhHncUiw"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-03",
+          "id": "7vvHXAtw0yJFlHGr",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG3",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-05",
+          "id": "RJXACohEz7Pbg0iW",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG5",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "Rln0ShcI8e9up10w",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG05Scene0001.Region.YKgNexU3dxwPpODd"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-05",
+          "id": "dvVODTxkLfJeXBVC",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG5",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-03 - Northeast Grove Corner",
+      "id": "CAVSG03Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-03_northeast-grove-corner_owner-pass.png",
+      "regions": [
+        {
+          "name": "Grove Bust - NE Star - Winder",
+          "id": "BfKhb34dSEfVTf2e",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2920,
+                350,
+                3320,
+                350,
+                3320,
+                820,
+                2920,
+                820
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:ne:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-02",
+          "id": "UqdnKLCB5yGDtBq9",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG3",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "QJTxdDozNR1OgJww",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG02Scene0001.Region.7vvHXAtw0yJFlHGr"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-02",
+          "id": "5VbuPKIYZhHncUiw",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG3",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-06",
+          "id": "tEY8h7AHMclvyDxv",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG3-SG6",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "q3Wu9pULCrkHlAXB",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG06Scene0001.Region.vdZKsxDoXOhoOKVF"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-06",
+          "id": "S7LWDZrC8FMgjrm2",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG3-SG6",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-04 - Western Grove Entrance",
+      "id": "CAVSG04Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-04_western-entrance_visual-pass.png",
+      "regions": [
+        {
+          "name": "Travel to SG-05",
+          "id": "cg4bnhdQ6sXbnpTm",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4134,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG5",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "vv2BOZuxaCNXsGK0",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG05Scene0001.Region.4jvK2Ghmvkn1LhaM"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-05",
+          "id": "tmwsGhYxombSJ8xX",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG5",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-01",
+          "id": "9GBTAbedfqyObYeb",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG4",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "sPciRQYL3Cf1zl8L",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG01Scene0001.Region.7Y8AmKQIQUj3HVg9"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-01",
+          "id": "UPW3ZBUgHZlbt9n6",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG1-SG4",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-07",
+          "id": "o4siMpn3MLGt9ECx",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG7",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "zhNeDYuoUiGoeV1P",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG07Scene0001.Region.km6fQ9rejwtMz3MK"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-07",
+          "id": "0gIz8Ua43RB0oNws",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG7",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "SG-04 - Return to Carriage Yard",
+          "id": "fqk4z5JaYtWzplGU",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 140,
+              "y": 1130,
+              "width": 270,
+              "height": 430,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-sg04:v1",
+              "kind": "exit"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "kdEOECjGEuGAnTYb",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVEXT01Yard0001.Region.woKGA4YxDNMsCXLa"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "routeKey": "cav:travel:yard-sg04:v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "SG-04 - Arrival from Carriage Yard",
+          "id": "4Te03NBNdsrGDeRh",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 900,
+              "y": 1180,
+              "width": 220,
+              "height": 200,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "routeKey": "cav:travel:yard-sg04:v1",
+              "kind": "landing"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-05 - Memorial Clearing",
+      "id": "CAVSG05Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png",
+      "regions": [
+        {
+          "name": "SG-05 - Mosaic Discovery - North Statue",
+          "id": "L15BdSqcbCOLPnIN",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2000,
+                720,
+                2320,
+                720,
+                2320,
+                825,
+                2000,
+                825
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:sg05:region:mosaic-discovery:v1",
+              "phase": "PREPARED_GEOMETRY_ONLY",
+              "requires": "grove.bustsSolved",
+              "source": "owner-approved SG-05 map measured 4320x2880",
+              "inspection": "northern behind-statue path; behavior pending"
+            },
+            "regionwright": {
+              "slidingMosaic": {
+                "version": 1,
+                "config": {
+                  "version": 1,
+                  "image": "modules/regionwright-puzzles-locks/assets/sune-sliding-portrait-master.png",
+                  "size": 4,
+                  "seed": "cav.sune.sliding-relief.v001"
+                },
+                "persistent": {
+                  "status": "locked",
+                  "solvedAt": null,
+                  "lastUpdatedAt": 1792880011382
+                }
+              }
+            }
+          },
+          "behaviors": [
+            {
+              "id": "Q8Hr2Dnw6hBpWNjr",
+              "name": "CAV SG-05 - Sune Sliding Relief (requires four busts)",
+              "type": "executeScript",
+              "disabled": true,
+              "system": {
+                "events": [
+                  "tokenEnter"
+                ],
+                "source": "await game.modules.get(\"regionwright-puzzles-locks\")?.api?.slidingMosaic?.handleRegionEvent(region, event);"
+              },
+              "flags": {
+                "regionwright": {
+                  "slidingMosaic": {
+                    "region": true
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Travel to SG-04",
+          "id": "wCHOIBHKEZYIER6E",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG5",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "uL25KBfp8NYy9wgq",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG04Scene0001.Region.tmwsGhYxombSJ8xX"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-04",
+          "id": "4jvK2Ghmvkn1LhaM",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG5",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Arrival from SG-06",
+          "id": "vpZI5S0vVcYxDHXI",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG6",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "MX3cVKxhurFCshMw",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG06Scene0001.Region.Guu1As8b0SGPR6xS"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Travel to SG-06",
+          "id": "ktyQvjNWXPSJmlPH",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4134,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG6",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-02",
+          "id": "p53pE6bS9tpuCkxD",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG5",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "d0S3WXT52XErVb6P",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG02Scene0001.Region.dvVODTxkLfJeXBVC"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-02",
+          "id": "YKgNexU3dxwPpODd",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG2-SG5",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-08",
+          "id": "ouFnsUZgbZjNwDe7",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG8",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "uqy2arR9iTZBOqgI",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG08Scene0001.Region.1DzaYqd0vCMy0PIF"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-08",
+          "id": "x9R7eutZzvwcK6Bd",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG8",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-06 - Eastern Grove Walk",
+      "id": "CAVSG06Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-06_eastern-grove-walk_four-way_owner-pass.png",
+      "regions": [
+        {
+          "name": "Travel to SG-05",
+          "id": "ntZGRlWeQzG7wWap",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG6",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "9LWzojf3rFeaeLDF",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG05Scene0001.Region.ktyQvjNWXPSJmlPH"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-05",
+          "id": "Guu1As8b0SGPR6xS",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG6",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-03",
+          "id": "CLqlGRyCXCJNqNPK",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG3-SG6",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "FRc56nsunT5KDwT9",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG03Scene0001.Region.S7LWDZrC8FMgjrm2"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-03",
+          "id": "vdZKsxDoXOhoOKVF",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG3-SG6",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-09",
+          "id": "xH7Oh4Z7y4yc8UVL",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2694,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG6-SG9",
+              "kind": "exit",
+              "side": "S"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "xLh1hHE8fX6Z3W8q",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG09Scene0001.Region.QNErGaLWdFm04xMk"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-09",
+          "id": "RHnj8vFHt8rfLyqj",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG6-SG9",
+              "kind": "landing",
+              "side": "S"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-07 - Southwest Grove Corner",
+      "id": "CAVSG07Scene0001",
+      "width": 2880,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-07_southwest-grove-corner_bust_visual-pass.png",
+      "regions": [
+        {
+          "name": "Grove Bust - SW Rose - Winder",
+          "id": "0JAM9urrHnAxVUgM",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1440,
+                700,
+                1780,
+                700,
+                1780,
+                1030,
+                1440,
+                1030
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:sw:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-08",
+          "id": "c1Oji5loZtNMryzh",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2694,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG7-SG8",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "bHpvHGx3MiIr9mkR",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG08Scene0001.Region.9xSxTqmilq2GTyad"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-08",
+          "id": "iCMedcoPV8IrOwRA",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2520,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG7-SG8",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-04",
+          "id": "P9WJ5YUXVwKpNw3P",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1290,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG7",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "QOIr8yEIetxsiSxT",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG04Scene0001.Region.0gIz8Ua43RB0oNws"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-04",
+          "id": "km6fQ9rejwtMz3MK",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1368,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG4-SG7",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-08 - Southern Grove Walk",
+      "id": "CAVSG08Scene0001",
+      "width": 4320,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-08_southern-grove-walk_visual-pass.png",
+      "regions": [
+        {
+          "name": "Travel to SG-07",
+          "id": "zmBhbmw7ZPOz9XtM",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG7-SG8",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "dSLOdvrjGLXyeF8s",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG07Scene0001.Region.iCMedcoPV8IrOwRA"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-07",
+          "id": "9xSxTqmilq2GTyad",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG7-SG8",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-09",
+          "id": "Bf2jMmXgMn8J9mcI",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4134,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG8-SG9",
+              "kind": "exit",
+              "side": "E"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "YZ8WibUoPqsHiXX6",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG09Scene0001.Region.0NSpW4f0aegXJd29"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-09",
+          "id": "3XDshajZsljQsJZU",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG8-SG9",
+              "kind": "landing",
+              "side": "E"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-05",
+          "id": "MVrQioDhGF87fhh9",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG8",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "0hs2Sg7HkSqj43c4",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG05Scene0001.Region.x9R7eutZzvwcK6Bd"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-05",
+          "id": "1DzaYqd0vCMy0PIF",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG5-SG8",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "SG-09 - Southeast Grove Corner",
+      "id": "CAVSG09Scene0001",
+      "width": 2880,
+      "height": 2880,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-09_southeast-grove-corner_sun-bust_owner-accepted.png",
+      "regions": [
+        {
+          "name": "Grove Bust - SE Sun - Winder",
+          "id": "BrugKqcQyDImUvwt",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1800,
+                1360,
+                2210,
+                1360,
+                2210,
+                1840,
+                1800,
+                1840
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:se:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-08",
+          "id": "GtND4BmqBXnlGuy8",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 1290,
+              "width": 96,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG8-SG9",
+              "kind": "exit",
+              "side": "W"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "MOT2z8SVFNv20DTT",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG08Scene0001.Region.3XDshajZsljQsJZU"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-08",
+          "id": "0NSpW4f0aegXJd29",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG8-SG9",
+              "kind": "landing",
+              "side": "W"
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "name": "Travel to SG-06",
+          "id": "P7esiR3yz9RjGpx6",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1290,
+              "y": 90,
+              "width": 300,
+              "height": 96,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG6-SG9",
+              "kind": "exit",
+              "side": "N"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "WwogGZ5FZvbEa7ET",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "system": {
+                "destinations": [
+                  "Scene.CAVSG06Scene0001.Region.RHnj8vFHt8rfLyqj"
+                ],
+                "placement": "center",
+                "snap": false,
+                "choice": true,
+                "revealed": true,
+                "dialog": {
+                  "revealed": "Do you wish to proceed?",
+                  "unrevealed": "Do you wish to proceed?"
+                },
+                "transition": {
+                  "type": null,
+                  "duration": 1500
+                }
+              },
+              "flags": {
+                "dicebox-campaign-helper": {
+                  "group": "grove-grid-v1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Arrival from SG-06",
+          "id": "QNErGaLWdFm04xMk",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1368,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "group": "grove-grid-v1",
+              "key": "SG6-SG9",
+              "kind": "landing",
+              "side": "N"
+            }
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "UND-01 - Undercroft Approach Keystone Door",
+      "id": "CN5fkK2QLUELBGGR",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png",
+      "regions": []
+    },
+    {
+      "name": "UND-02 - Donovan Sophia Sealed Refuge",
+      "id": "ywpIpQDrkMLIgUP0",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png",
+      "regions": []
+    },
+    {
+      "name": "UND-03 - Voss Ritual Chamber",
+      "id": "hLU4DzVctEGdsuaz",
+      "width": 1536,
+      "height": 1024,
+      "grid": 120,
+      "background": "Maps/cabin-in-the-ashen-veil/und-03-voss-ritual-chamber-approved-v003.png",
+      "regions": []
+    }
+  ]
+}

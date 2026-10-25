@@ -1,0 +1,4568 @@
+.regionwright .window-content {
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+  background: #252320;
+  color: #e9e6dc;
+}
+
+/* DialogV2 requires at least one button, but Regionwright uses the standard
+   window X rather than an additional full-width Close footer. */
+.regionwright .dialog-buttons,
+.regionwright .form-footer:not(.rbb-footer),
+.regionwright footer:not(.rbb-footer):not(.rbb-guide-footer) {
+  display: none;
+}
+
+.regionwright .window-content > form.dialog-form.standard-form {
+  display: flex !important;
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.regionwright form.dialog-form.standard-form > div.dialog-content.standard-form {
+  display: flex !important;
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.regionwright div.dialog-content.standard-form > .rbb-shell,
+.regionwright .window-content > .rbb-shell {
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+}
+
+.rbb-shell {
+  --rbb-ink: var(--color-text-primary, #e9e6dc);
+  --rbb-muted: var(--color-text-secondary, #b8b1a4);
+  --rbb-border: var(--color-border, #5b554c);
+  --rbb-surface: var(--background, #252320);
+  --rbb-surface-alt: color-mix(in srgb, var(--background, #252320) 88%, #000);
+  --rbb-surface-raised: var(--color-data-background, #312e29);
+  --rbb-accent: var(--color-warm-1, #c39b5a);
+  --rbb-on-accent: var(--button-text-color, #1c1915);
+  --rbb-success: var(--color-level-success, #7da66a);
+  --rbb-warning: #d5a946;
+  --rbb-danger: #c56a5d;
+  display: grid;
+  grid-template-columns: minmax(220px, 25%) minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--rbb-surface);
+}
+
+.rbb-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.1rem 0.8rem 0.8rem;
+  border-right: 1px solid var(--rbb-border);
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-brand,
+.rbb-main-header,
+.rbb-panel-heading,
+.rbb-card-heading,
+.rbb-button-row,
+.rbb-scene-line,
+.rbb-review-check,
+.rbb-sidebar-action,
+.rbb-topic,
+.rbb-effect-option {
+  display: flex;
+  align-items: center;
+}
+
+.rbb-brand {
+  gap: 0.65rem;
+  padding: 0 0.35rem;
+}
+
+.rbb-brand-mark,
+.rbb-effect-icon,
+.rbb-planned-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.6rem;
+  background: var(--rbb-accent);
+  color: var(--rbb-on-accent);
+}
+
+.rbb-brand strong,
+.rbb-brand small {
+  display: block;
+}
+
+.rbb-brand strong {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.rbb-brand small,
+.rbb-sidebar-intro,
+.rbb-topic-copy small,
+.rbb-effect-option small,
+.rbb-panel-hint,
+.rbb-help-text,
+.rbb-runtime-note,
+.rbb-field small,
+.rbb-scene-line small,
+.rbb-region-main small {
+  color: var(--rbb-muted);
+}
+
+.rbb-brand small {
+  margin-top: 0.15rem;
+  font-size: 0.76rem;
+}
+
+.rbb-sidebar-intro {
+  margin: 0 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.rbb-topic-nav {
+  display: grid;
+  gap: 0.35rem;
+  overflow: auto;
+  min-height: 0;
+}
+
+.rbb-topic {
+  width: 100%;
+  gap: 0.55rem;
+  padding: 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  color: var(--rbb-ink);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-topic:hover,
+.rbb-topic:focus-visible,
+.rbb-topic.is-active {
+  border-color: var(--rbb-accent);
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-topic-icon {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  color: var(--rbb-accent);
+}
+
+.rbb-topic-copy {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.rbb-topic-copy strong,
+.rbb-topic-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-topic-copy strong {
+  font-size: 0.84rem;
+}
+
+.rbb-topic-copy small {
+  font-size: 0.7rem;
+}
+
+.rbb-sidebar-footer {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--rbb-border);
+}
+
+.rbb-sidebar-action,
+.rbb-icon-button,
+.rbb-button,
+.rbb-row-actions button {
+  gap: 0.4rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.45rem;
+  color: var(--rbb-ink);
+  background: var(--rbb-surface);
+  cursor: pointer;
+}
+
+.rbb-sidebar-action {
+  justify-content: flex-start;
+  padding: 0.45rem 0.55rem;
+  border-color: transparent;
+  background: transparent;
+  font-size: 0.76rem;
+}
+
+.rbb-sidebar-action:hover,
+.rbb-sidebar-action:focus-visible,
+.rbb-icon-button:hover,
+.rbb-icon-button:focus-visible,
+.rbb-button:hover:not(:disabled),
+.rbb-button:focus-visible:not(:disabled),
+.rbb-row-actions button:hover:not(:disabled),
+.rbb-row-actions button:focus-visible:not(:disabled) {
+  border-color: var(--rbb-accent);
+  box-shadow: 0 0 0 2px var(--rbb-accent);
+}
+
+.rbb-main {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rbb-main-header {
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.05rem 1.15rem 0.85rem;
+  border-bottom: 1px solid var(--rbb-border);
+}
+
+.rbb-main-header h1,
+.rbb-panel h2,
+.rbb-config-card h3,
+.rbb-planned-state h3,
+.rbb-empty-state h3 {
+  margin: 0.2rem 0 0;
+  color: var(--rbb-ink);
+}
+
+.rbb-main-header h1 {
+  max-width: 42rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.rbb-kicker,
+.rbb-step,
+.rbb-panel-heading > .rbb-count,
+.rbb-plan-facts span,
+.rbb-status-pill,
+.rbb-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rbb-kicker {
+  color: var(--rbb-accent);
+}
+
+.rbb-icon-button,
+.rbb-button {
+  padding: 0.48rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+.rbb-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 0.9rem;
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  padding: 0.9rem 1.15rem 1.15rem;
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-options-column,
+.rbb-context-column {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.rbb-context-column {
+  grid-template-rows: auto auto auto auto;
+}
+
+.rbb-section-heading,
+.rbb-panel-heading {
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rbb-step {
+  color: var(--rbb-muted);
+}
+
+.rbb-panel,
+.rbb-config-card,
+.rbb-option-intro,
+.rbb-planned-state,
+.rbb-empty-state,
+.rbb-status-message {
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.65rem;
+  background: var(--rbb-surface);
+}
+
+.rbb-panel,
+.rbb-config-card,
+.rbb-planned-state,
+.rbb-empty-state {
+  padding: 0.85rem;
+}
+
+.rbb-option-intro {
+  padding: 0.65rem 0.75rem;
+  border-left: 3px solid var(--rbb-accent);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rbb-option-intro p,
+.rbb-planned-state p,
+.rbb-empty-state p {
+  margin: 0.3rem 0 0;
+  color: var(--rbb-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.rbb-effect-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rbb-effect-option {
+  width: 100%;
+  gap: 0.6rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.55rem;
+  color: var(--rbb-ink);
+  background: var(--rbb-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-effect-option:hover:not(:disabled),
+.rbb-effect-option:focus-visible:not(:disabled),
+.rbb-effect-option.is-selected {
+  border-color: var(--rbb-accent);
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-effect-option > span:nth-child(2) {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.rbb-effect-option small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+
+.rbb-effect-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.45rem;
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-accent);
+}
+
+.rbb-effect-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.rbb-status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--rbb-muted);
+}
+
+.rbb-status-dot.is-live {
+  background: var(--rbb-success);
+}
+
+.rbb-status-dot.is-muted {
+  background: var(--rbb-muted);
+}
+
+.rbb-card-heading {
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.rbb-card-heading h3 {
+  font-size: 0.95rem;
+}
+
+.rbb-badge,
+.rbb-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.38rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.rbb-badge-live,
+.rbb-status-pill.is-success {
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-success);
+}
+
+.rbb-badge-muted,
+.rbb-status-pill.is-muted {
+  background: color-mix(in srgb, var(--rbb-muted) 13%, transparent);
+  color: var(--rbb-muted);
+}
+
+.rbb-status-pill.is-warning {
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-warning);
+}
+
+.rbb-help-text,
+.rbb-runtime-note,
+.rbb-panel-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.rbb-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.rbb-field,
+.rbb-check {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.65rem;
+  font-size: 0.78rem;
+}
+
+.rbb-field input,
+.rbb-field select,
+.rbb-field textarea {
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.4rem;
+  color: var(--rbb-ink);
+  background: var(--rbb-surface);
+}
+
+.rbb-dropdown {
+  position: relative;
+}
+
+.rbb-dropdown > input[type="hidden"] {
+  display: none;
+}
+
+.rbb-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.4rem;
+  background: var(--rbb-surface);
+  color: var(--rbb-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-dropdown-toggle:hover,
+.rbb-dropdown-toggle:focus-visible {
+  border-color: var(--color-warm-1, #c39b5a);
+  outline: 0;
+}
+
+.rbb-dropdown-toggle i {
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.72rem;
+}
+
+.rbb-dropdown-menu {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 0.25rem);
+  right: 0;
+  left: 0;
+  display: grid;
+  /* Menus overlay their control. They never enlarge or scroll the window. */
+  max-height: 9rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.2rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.4rem;
+  background: var(--rbb-surface, #17121a);
+  box-shadow: 0 0.7rem 1.6rem rgb(0 0 0 / 55%);
+}
+
+.rbb-dropdown-option {
+  width: 100%;
+  min-height: 2rem;
+  padding: 0.38rem 0.5rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--rbb-ink);
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-dropdown-option:hover,
+.rbb-dropdown-option:focus-visible,
+.rbb-dropdown-option.is-selected {
+  background: rgb(181 107 82 / 20%);
+  color: var(--color-text-primary, #f0e8dc);
+  outline: 0;
+}
+
+.rbb-field textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+  font-family: var(--font-mono, monospace);
+  line-height: 1.35;
+}
+
+.rbb-range-field > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.rbb-range-field output {
+  min-width: 2.8rem;
+  color: #e6cba9;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  text-align: right;
+}
+
+.rbb-field input[type="range"] {
+  min-height: 1.2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  accent-color: #b56b52;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rbb-reference-field {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+  padding: 0.75rem 0.1rem;
+  border-top: 1px solid var(--rbb-border);
+}
+
+.rbb-field-label {
+  color: var(--rbb-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.rbb-reference-field > small {
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.rbb-reference-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.rbb-reference-chip {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 0.3rem;
+  padding: 0.25rem 0.35rem 0.25rem 0.5rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.25rem;
+  color: var(--rbb-ink);
+  background: color-mix(in srgb, var(--rbb-surface-raised) 72%, transparent);
+  font-size: 0.71rem;
+}
+
+.rbb-reference-chip > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-reference-chip button {
+  width: 1.2rem;
+  min-height: 1.2rem;
+  padding: 0;
+  border: 0;
+  color: var(--rbb-muted);
+  background: transparent;
+  box-shadow: none;
+}
+
+.rbb-reference-empty {
+  color: var(--rbb-muted);
+  font-size: 0.72rem;
+}
+
+.rbb-reference-field > .rbb-button {
+  justify-self: start;
+  min-height: 2rem;
+}
+
+.rbb-review-summary,
+.rbb-created-note {
+  margin: 0.65rem 0;
+  padding: 0.65rem 0.7rem;
+  border-left: 3px solid var(--rbb-accent);
+  color: var(--rbb-ink);
+  background: color-mix(in srgb, var(--rbb-surface-raised) 58%, transparent);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.rbb-created-note {
+  border-left-color: var(--rbb-success);
+}
+
+.rbb-created-note button {
+  margin-left: 0.35rem;
+  padding: 0;
+  border: 0;
+  color: var(--rbb-accent);
+  background: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+.rbb-progress {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--rbb-muted);
+  font-size: 0.72rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-progress strong {
+  color: var(--rbb-ink);
+  font-weight: 600;
+}
+
+/* Let Theme V2 supply the same colors that native ApplicationV2 sheets use. */
+.regionwright .window-content,
+.rbb-shell,
+.rbb-workspace {
+  background: color-mix(in srgb, var(--background, #252320) 88%, transparent);
+  color: var(--color-text-primary, #e9e6dc);
+}
+
+.rbb-body > .rbb-sidebar,
+.rbb-selector-rail {
+  background: color-mix(in srgb, var(--background, #252320) 94%, transparent);
+  border-color: var(--color-border, #5b554c);
+}
+
+.rbb-topic,
+.rbb-category-option,
+.rbb-effect-option,
+.rbb-back-link,
+.rbb-picker-row,
+.rbb-reference-chip,
+.rbb-reference-field,
+.rbb-utilities,
+.rbb-footer {
+  border-color: var(--color-border, #5b554c);
+}
+
+.rbb-topic,
+.rbb-category-option,
+.rbb-effect-option,
+.rbb-back-link,
+.rbb-picker-row,
+.rbb-reference-chip {
+  color: var(--color-text-primary, #e9e6dc);
+}
+
+.rbb-flow-header h2,
+.rbb-config-card h3,
+.rbb-section-heading,
+.rbb-sidebar-label {
+  color: var(--color-text-primary, #e9e6dc);
+}
+
+.rbb-flow-header p,
+.rbb-category-option small,
+.rbb-effect-option small,
+.rbb-selection-start,
+.rbb-help-text,
+.rbb-field small {
+  color: var(--color-text-secondary, #b8b1a4);
+}
+
+.rbb-reference-picker {
+  margin-top: 0.15rem;
+  border: 1px solid var(--rbb-border);
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-field small {
+  font-size: 0.68rem;
+}
+
+.rbb-check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+}
+
+.rbb-empty-note,
+.rbb-runtime-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.rbb-empty-note {
+  margin-top: 0.75rem;
+  padding: 0.55rem;
+  border-radius: 0.4rem;
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-muted);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.rbb-scene-line {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 0.4rem;
+  background: var(--rbb-surface-alt);
+  font-size: 0.76rem;
+}
+
+.rbb-scene-line span {
+  font-weight: 700;
+}
+
+.rbb-scene-line small {
+  width: 100%;
+  padding-left: 1.25rem;
+  overflow-wrap: anywhere;
+  font-size: 0.66rem;
+}
+
+.rbb-selection-shortcut {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin: 0.65rem 0 0;
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.rbb-button-row {
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.rbb-button-primary,
+.rbb-button-apply {
+  border-color: var(--rbb-accent);
+  background: var(--rbb-accent);
+  color: var(--rbb-on-accent);
+}
+
+.rbb-button-secondary {
+  border-color: var(--rbb-accent);
+}
+
+.rbb-button-quiet {
+  margin-left: auto;
+}
+
+.rbb-button:disabled,
+.rbb-icon-button:disabled,
+.rbb-row-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.rbb-region-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rbb-region-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.45rem;
+}
+
+.rbb-region-order,
+.rbb-count {
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.rbb-region-main {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.rbb-region-main strong,
+.rbb-region-main small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-region-main small {
+  font-size: 0.62rem;
+}
+
+.rbb-row-actions {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.rbb-row-actions button {
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  padding: 0;
+  font-size: 0.68rem;
+}
+
+.rbb-no-regions {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  padding: 1.25rem 0.7rem;
+  border: 1px dashed var(--rbb-border);
+  border-radius: 0.5rem;
+  color: var(--rbb-muted);
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.rbb-no-regions i {
+  color: var(--rbb-accent);
+  font-size: 1.2rem;
+}
+
+.rbb-plan-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.rbb-plan-facts > div {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+  padding: 0.45rem;
+  border-radius: 0.4rem;
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-plan-facts span {
+  color: var(--rbb-muted);
+  font-size: 0.6rem;
+}
+
+.rbb-plan-facts strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.73rem;
+}
+
+.rbb-plan-details {
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+}
+
+.rbb-plan-details pre {
+  max-height: 13rem;
+  overflow: auto;
+  margin: 0.5rem 0 0;
+  padding: 0.55rem;
+  border-radius: 0.4rem;
+  background: var(--rbb-surface-alt);
+  color: var(--rbb-ink);
+  font-size: 0.64rem;
+  white-space: pre-wrap;
+}
+
+.rbb-review-check {
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.rbb-plan-actions {
+  justify-content: flex-end;
+}
+
+.rbb-status-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.rbb-status-success {
+  border-color: var(--rbb-success);
+}
+
+.rbb-status-warning {
+  border-color: var(--rbb-warning);
+}
+
+.rbb-status-error {
+  border-color: var(--rbb-danger);
+  color: var(--rbb-danger);
+}
+
+.rbb-planned-state {
+  display: grid;
+  justify-items: start;
+}
+
+.rbb-planned-icon {
+  margin-bottom: 0.7rem;
+}
+
+.rbb-planned-state ol {
+  margin: 0.8rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--rbb-ink);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .rbb-shell {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .rbb-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .rbb-shell {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+
+  .rbb-sidebar {
+    max-height: 16rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--rbb-border);
+  }
+
+  .rbb-topic-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rbb-main-header,
+  .rbb-workspace {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Keep guided setup controls in one quiet, easy-to-scan bottom row. */
+.regionwright-guide .rbb-guide-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem 0.75rem;
+}
+
+.regionwright-guide .rbb-guide-action-start,
+.regionwright-guide .rbb-guide-action-end {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.regionwright-guide .rbb-guide-action-end { justify-content: flex-end; }
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-footer {
+  display: block;
+  padding: 0;
+  background: transparent;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  min-width: 0;
+  padding: 0.2rem 0.42rem;
+  border-color: rgb(236 220 191 / 14%);
+  background: rgb(0 0 0 / 18%);
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track { gap: 0.22rem; }
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track li > span:first-child {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-width: 1px;
+  font-size: 0.65rem;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .regionwright-guide .rbb-guide-actions {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.2rem;
+    padding-inline: 0.6rem;
+  }
+
+  .regionwright-guide .rbb-guide-actions .rbb-button { padding-inline: 0.55rem; }
+  .regionwright-guide .rbb-guide-actions .rbb-guide-progress-label { display: none; }
+}
+
+/* Accessible prompt scale: choices should be as easy to read as launchpad cards. */
+.regionwright-guide .rbb-guide-content {
+  font-size: clamp(16px, 2.5cqi, 20px);
+}
+
+.regionwright-guide .rbb-guide-header {
+  min-height: 4.8rem;
+  padding-block: 1rem;
+}
+
+.regionwright-guide .rbb-guide-header h2 { font-size: clamp(24px, 3.2cqi, 28px); }
+
+.regionwright-guide .rbb-recipe-prompt {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.regionwright-guide .rbb-field,
+.regionwright-guide .rbb-check,
+.regionwright-guide .rbb-dropdown-option,
+.regionwright-guide .rbb-button { font-size: 1em; }
+
+.regionwright-guide .rbb-picker-row,
+.regionwright-guide .rbb-guide-choice {
+  min-height: 3.55rem;
+  padding: 0.78rem 1rem;
+}
+
+.regionwright-guide .rbb-picker-row strong,
+.regionwright-guide .rbb-guide-choice strong { font-size: 17px; }
+
+.regionwright-guide .rbb-field > span,
+.regionwright-guide .rbb-dropdown-toggle,
+.regionwright-guide .rbb-check > span { font-size: 16px; }
+
+.regionwright-guide .rbb-guide-actions .rbb-button {
+  min-height: 2.9rem;
+  font-size: 15px;
+}
+
+/* Sketch-inspired builder frame: header, task rail, focused options, context, links, footer. */
+.rbb-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+.rbb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.35rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--rbb-border);
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-header-context,
+.rbb-header-step {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.rbb-header-context {
+  margin-left: auto;
+  padding: 0.35rem 0.7rem;
+  border-left: 1px solid var(--rbb-border);
+}
+
+.rbb-header-context strong {
+  max-width: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
+
+.rbb-header-step {
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.rbb-body {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.rbb-body > .rbb-sidebar {
+  min-height: 0;
+  padding: 0.85rem 0.65rem;
+  border-right: 1px solid var(--rbb-border);
+  border-bottom: 0;
+}
+
+.rbb-sidebar-label {
+  padding: 0 0.35rem 0.45rem;
+  color: var(--rbb-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rbb-topic-copy {
+  align-items: flex-start;
+}
+
+.rbb-topic-copy strong {
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.rbb-main {
+  min-height: 0;
+}
+
+.rbb-main-header {
+  min-height: 4rem;
+  padding: 0.75rem 0.95rem;
+}
+
+.rbb-main-header h1 {
+  font-size: 0.92rem;
+}
+
+.rbb-main-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.rbb-workspace {
+  grid-template-columns: minmax(250px, 0.9fr) minmax(330px, 1.1fr) minmax(165px, 0.45fr);
+  align-items: start;
+  padding: 0.75rem 0.95rem 0.95rem;
+}
+
+.rbb-options-column,
+.rbb-context-column,
+.rbb-link-column {
+  min-width: 0;
+}
+
+.rbb-context-column {
+  grid-template-rows: auto auto auto;
+}
+
+.rbb-link-column {
+  display: block;
+}
+
+.rbb-link-rail {
+  position: sticky;
+  top: 0;
+  padding: 0.8rem 0.65rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 0.65rem;
+  background: var(--rbb-surface);
+}
+
+.rbb-rail-heading {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.rbb-rail-heading h2 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.rbb-rail-intro {
+  margin: 0.45rem 0 0.75rem;
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.rbb-link-options {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rbb-link-option {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.4rem;
+  padding: 0.45rem 0.35rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.rbb-link-option:hover,
+.rbb-link-option:focus-within {
+  background: var(--rbb-surface-alt);
+}
+
+.rbb-link-option span {
+  display: grid;
+  gap: 0.12rem;
+}
+
+.rbb-link-option strong {
+  font-size: 0.72rem;
+}
+
+.rbb-link-option small {
+  color: var(--rbb-muted);
+  font-size: 0.64rem;
+  line-height: 1.25;
+}
+
+.rbb-link-rail-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rbb-border);
+  color: var(--rbb-muted);
+  font-size: 0.66rem;
+  line-height: 1.35;
+}
+
+.rbb-footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding: 0.55rem 0.85rem;
+  border-top: 1px solid var(--rbb-border);
+  background: var(--rbb-surface);
+}
+
+.rbb-footer .rbb-sidebar-action {
+  width: max-content;
+  margin: 0;
+  padding: 0.45rem 0.6rem;
+}
+
+.rbb-footer-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--rbb-muted);
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-footer-status.is-warning {
+  color: var(--rbb-warning);
+}
+
+.rbb-footer-status.is-error {
+  color: var(--rbb-danger);
+}
+
+.rbb-footer-status.is-success {
+  color: var(--rbb-success, #a9d9a7);
+}
+
+.rbb-footer-primary {
+  min-width: 11rem;
+  justify-content: center;
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  .rbb-workspace {
+    grid-template-columns: minmax(225px, 0.85fr) minmax(290px, 1fr) 150px;
+  }
+
+  .rbb-header-step {
+    display: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .rbb-body {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .rbb-workspace {
+    grid-template-columns: minmax(240px, 1fr) minmax(250px, 1fr);
+  }
+
+  .rbb-link-column {
+    grid-column: 1 / -1;
+  }
+
+  .rbb-link-rail {
+    position: static;
+  }
+
+  .rbb-link-options {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .rbb-header {
+    align-items: flex-start;
+  }
+
+  .rbb-header-context {
+    display: none;
+  }
+
+  .rbb-body {
+    display: block;
+    overflow: auto;
+  }
+
+  .rbb-body > .rbb-sidebar {
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--rbb-border);
+  }
+
+  .rbb-topic-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rbb-workspace {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .rbb-link-column {
+    grid-column: auto;
+  }
+
+  .rbb-link-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rbb-footer {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .rbb-footer-primary {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+.rbb-native-category {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.rbb-category-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.15rem 0.1rem;
+}
+
+.rbb-category-count {
+  display: grid;
+  place-items: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  border: 1px solid var(--rbb-border);
+  border-radius: 999px;
+  color: var(--rbb-muted);
+  font-size: 0.64rem;
+}
+
+.rbb-advanced-routes {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px dashed var(--rbb-border);
+  border-radius: 0.65rem;
+  background: var(--rbb-surface);
+}
+
+.rbb-advanced-routes .rbb-effect-option {
+  cursor: not-allowed;
+}
+
+.rbb-region-picker {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--rbb-accent) 55%, var(--rbb-border));
+  border-radius: 0.45rem;
+  background: var(--rbb-surface-alt);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+.rbb-picker-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--rbb-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rbb-picker-heading button {
+  display: grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--rbb-muted);
+}
+
+.rbb-picker-heading button:hover {
+  background: var(--rbb-surface-raised);
+  color: var(--rbb-ink);
+}
+
+.rbb-picker-list {
+  display: grid;
+  gap: 0.25rem;
+  max-height: 9rem;
+  overflow: auto;
+}
+
+.rbb-picker-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.4rem 0.45rem;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  background: var(--rbb-surface-raised);
+  color: var(--rbb-ink);
+  text-align: left;
+}
+
+.rbb-picker-row:hover:not(:disabled) {
+  border-color: var(--rbb-accent);
+  background: color-mix(in srgb, var(--rbb-surface-raised) 80%, var(--rbb-accent));
+}
+
+.rbb-picker-row:disabled {
+  color: var(--rbb-muted);
+  opacity: 0.72;
+}
+
+.rbb-picker-row span {
+  display: grid;
+  min-width: 0;
+  gap: 0.08rem;
+}
+
+.rbb-picker-row strong,
+.rbb-picker-row small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-picker-row strong {
+  font-size: 0.73rem;
+}
+
+.rbb-picker-row small,
+.rbb-picker-empty {
+  color: var(--rbb-muted);
+  font-size: 0.62rem;
+}
+
+.rbb-picker-empty {
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Journal-inspired quiet mode: hierarchy and rules carry the layout, not cards. */
+.regionwright .window-content {
+  /* Match Foundry's dark glass panels: let the active scene show through
+     without sacrificing contrast for dense builder controls. */
+  background: rgb(20 15 20 / 82%);
+  backdrop-filter: blur(5px);
+}
+
+.rbb-shell {
+  background: rgb(20 15 20 / 72%);
+}
+
+.rbb-header {
+  display: none;
+}
+
+.rbb-body {
+  grid-template-columns: 290px minmax(0, 1fr);
+}
+
+.rbb-body > .rbb-sidebar {
+  padding: 0.5rem 0.65rem;
+  background: rgb(24 18 24 / 74%);
+}
+
+.rbb-sidebar-label {
+  padding: 0.35rem 0.45rem 0.55rem;
+  color: #d7d2c7;
+  font-size: 0.74rem;
+}
+
+.rbb-topic-nav {
+  gap: 0;
+}
+
+.rbb-topic {
+  min-height: 2.7rem;
+  padding: 0.55rem 0.35rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+}
+
+.rbb-topic:hover,
+.rbb-topic:focus-visible,
+.rbb-topic.is-active {
+  border-color: #b56b52;
+  background: rgb(255 255 255 / 3%);
+  box-shadow: none;
+}
+
+.rbb-topic.is-active .rbb-topic-copy strong,
+.rbb-topic.is-active .rbb-topic-icon {
+  color: #e9e6dc;
+}
+
+.rbb-topic .rbb-badge,
+.rbb-topic-icon {
+  display: none;
+}
+
+.rbb-topic-copy strong {
+  font-size: 0.82rem;
+}
+
+.rbb-main-header,
+.rbb-link-column {
+  display: none;
+}
+
+.rbb-workspace {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.95fr);
+  gap: 0;
+  padding: 0;
+  background: rgb(20 15 20 / 62%);
+}
+
+.rbb-options-column,
+.rbb-context-column {
+  display: block;
+  min-height: 0;
+  overflow: auto;
+  padding: 0.8rem 0.95rem 1rem;
+}
+
+.rbb-options-column {
+  border-right: 1px solid #514b43;
+}
+
+.rbb-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.1rem;
+  padding: 0 0.1rem 0.55rem;
+  border-bottom: 1px solid #665f55;
+  color: #e8e4da;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.rbb-options-column > :not(.rbb-section-heading),
+.rbb-context-column > :not(.rbb-section-heading) {
+  margin-top: 0.65rem;
+}
+
+.rbb-option-intro,
+.rbb-config-card,
+.rbb-panel,
+.rbb-planned-state,
+.rbb-empty-state,
+.rbb-advanced-routes {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rbb-option-intro {
+  padding: 0 0 0.7rem;
+  border-bottom: 1px solid #514b43;
+  border-left: 0;
+}
+
+.rbb-native-category {
+  margin-top: 0.65rem;
+}
+
+.rbb-category-heading {
+  padding: 0.35rem 0.1rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-effect-list {
+  gap: 0;
+}
+
+.rbb-effect-option {
+  min-height: 3rem;
+  padding: 0.5rem 0.2rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rbb-effect-option:hover:not(:disabled),
+.rbb-effect-option:focus-visible:not(:disabled),
+.rbb-effect-option.is-selected {
+  border-color: #b56b52;
+  background: rgb(255 255 255 / 3%);
+  box-shadow: none;
+}
+
+.rbb-effect-icon,
+.rbb-status-dot {
+  display: none;
+}
+
+.rbb-config-card {
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.1rem 0;
+  border-top: 1px solid #665f55;
+}
+
+.rbb-advanced-routes {
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.1rem 0;
+  border-top: 1px solid #514b43;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-selection-panel {
+  min-height: 0;
+}
+
+.rbb-selection-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.rbb-selection-toolbar .rbb-button {
+  padding: 0.38rem 0.55rem;
+}
+
+.rbb-selection-shortcut {
+  margin: 0.65rem 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-region-list {
+  gap: 0;
+  margin-top: 0;
+}
+
+.rbb-region-row {
+  padding: 0.55rem 0.15rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+}
+
+.rbb-region-order {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: transparent;
+  color: var(--rbb-muted);
+}
+
+.rbb-row-actions button,
+.rbb-target-row button {
+  border: 0;
+  background: transparent;
+  color: var(--rbb-muted);
+}
+
+.rbb-region-picker {
+  margin-top: 0.65rem;
+  border-radius: 0;
+  border-color: #665f55;
+  background: rgb(29 23 28 / 82%);
+}
+
+.rbb-picker-types {
+  display: flex;
+  gap: 0.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-picker-types button {
+  padding: 0.3rem 0.4rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--rbb-muted);
+  font-size: 0.68rem;
+}
+
+.rbb-picker-types button.is-active,
+.rbb-picker-types button:hover {
+  background: #37332d;
+  color: var(--rbb-ink);
+}
+
+.rbb-picker-types i {
+  margin-right: 0.22rem;
+}
+
+.rbb-target-references {
+  display: grid;
+  gap: 0;
+  margin-top: 0.85rem;
+  border-top: 1px solid #665f55;
+}
+
+.rbb-list-label {
+  padding: 0.55rem 0.1rem 0.35rem;
+  color: var(--rbb-muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rbb-target-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.15rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-target-row > i {
+  color: var(--rbb-muted);
+}
+
+.rbb-target-row span {
+  display: grid;
+  min-width: 0;
+  gap: 0.1rem;
+}
+
+.rbb-target-row strong,
+.rbb-target-row small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-target-row small {
+  color: var(--rbb-muted);
+  font-size: 0.62rem;
+}
+
+.rbb-utilities {
+  margin: 0;
+  border-top: 1px solid #514b43;
+  background: rgb(24 18 24 / 74%);
+}
+
+.rbb-utilities > summary {
+  padding: 0.45rem 0.85rem;
+  color: var(--rbb-muted);
+  cursor: pointer;
+  font-size: 0.72rem;
+}
+
+.rbb-utilities > summary i {
+  margin-right: 0.35rem;
+}
+
+.rbb-utilities[open] {
+  padding: 0 0.85rem 0.7rem;
+}
+
+.rbb-utilities .rbb-plan-panel {
+  max-width: 48rem;
+  padding: 0.7rem 0;
+}
+
+.rbb-footer {
+  min-height: 2.8rem;
+  padding: 0.4rem 0.7rem;
+  background: rgb(29 23 28 / 80%);
+}
+
+/* Core-settings layout: effect families on the left, work in the center,
+   and the affected Region list in a narrow rail on the right. */
+.rbb-body {
+  grid-template-columns: minmax(245px, 0.7fr) minmax(0, 1.7fr) minmax(245px, 0.7fr);
+}
+
+.rbb-body > .rbb-sidebar {
+  padding: 0.75rem 0.8rem;
+  border-right: 1px solid #514b43;
+  background: rgb(24 18 24 / 74%);
+}
+
+.rbb-selector-rail {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: auto;
+  padding: 0.75rem 0.8rem;
+  border-left: 1px solid #514b43;
+  background: rgb(24 18 24 / 74%);
+}
+
+.rbb-selector-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: -0.1rem 0.15rem 0.7rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid #514b43;
+  color: var(--rbb-muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.rbb-selector-rail .rbb-selection-panel {
+  min-height: 0;
+}
+
+.rbb-selector-rail .rbb-selection-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rbb-selector-rail .rbb-selection-toolbar .rbb-button-primary {
+  grid-column: 1 / -1;
+}
+
+.rbb-selector-rail .rbb-selection-toolbar .rbb-button {
+  justify-content: center;
+  margin-left: 0;
+}
+
+.rbb-sidebar-label {
+  padding: 0.25rem 0.35rem 0.65rem;
+  color: #d7d2c7;
+  font-size: 0.74rem;
+}
+
+.rbb-topic-nav {
+  gap: 0.55rem;
+}
+
+.rbb-topic {
+  min-height: 3.5rem;
+  gap: 0.55rem;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid #897867;
+  border-radius: 0.3rem;
+  background: rgb(14 11 16 / 42%);
+}
+
+.rbb-topic:hover,
+.rbb-topic:focus-visible,
+.rbb-topic.is-active {
+  border-color: #c1a990;
+  background: rgb(255 255 255 / 5%);
+}
+
+.rbb-topic .rbb-topic-icon {
+  display: grid;
+  width: 1.45rem;
+  color: #e5d2b3;
+}
+
+.rbb-topic-copy strong {
+  font-size: 0.91rem;
+}
+
+.rbb-topic-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.65rem;
+}
+
+.rbb-topic .rbb-badge {
+  padding: 0;
+  background: transparent;
+  font-size: 0.58rem;
+}
+
+.rbb-workspace {
+  grid-template-columns: minmax(0, 1fr);
+  overflow: auto;
+  padding: 0.8rem 1rem 1rem;
+  background: rgb(20 15 20 / 62%);
+}
+
+.rbb-options-column {
+  overflow: visible;
+  padding: 0;
+  border: 0;
+}
+
+.rbb-options-column > .rbb-section-heading {
+  padding: 0.2rem 0.1rem 0.65rem;
+  border-bottom: 1px solid #665f55;
+  color: #e9e6dc;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .rbb-body {
+    grid-template-columns: 210px minmax(0, 1fr) 210px;
+  }
+
+  .rbb-topic-copy small,
+  .rbb-topic .rbb-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .rbb-body {
+    grid-template-columns: 175px minmax(0, 1fr);
+  }
+
+  .rbb-selector-rail {
+    grid-column: 1 / -1;
+    max-height: 18rem;
+    border-top: 1px solid #514b43;
+    border-left: 0;
+  }
+}
+
+/* Last-word visual overrides for the prompt-first launcher and dialogs. */
+.regionwright:not(.regionwright-guide) .window-content,
+.regionwright:not(.regionwright-guide) .rbb-shell,
+.regionwright:not(.regionwright-guide) .rbb-workspace,
+.regionwright:not(.regionwright-guide) .rbb-body > .rbb-sidebar {
+  background: rgb(0 0 0 / 35%);
+}
+
+.regionwright:not(.regionwright-guide) .window-content { backdrop-filter: none; }
+
+.regionwright-guide .window-content,
+.regionwright-guide .rbb-guide-header,
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-progress-footer { background: #111; }
+
+.regionwright-guide .window-content { border-color: rgb(255 255 255 / 18%); }
+
+.regionwright-guide .rbb-guide-header {
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  border-bottom-color: transparent;
+  text-align: center;
+}
+
+.regionwright-guide .rbb-guide-header h2 { text-align: center; }
+
+/* Final accessibility overrides: follow the legacy skins so the readable
+   prompt scale always wins. */
+.regionwright-guide .rbb-guide-content { font-size: clamp(16px, 2.5cqi, 20px); }
+
+.regionwright-guide .rbb-guide-header {
+  min-height: 4.8rem;
+  padding-block: 1rem;
+}
+
+.regionwright-guide .rbb-guide-header h2 { font-size: clamp(24px, 3.2cqi, 28px); }
+
+.regionwright-guide .rbb-recipe-prompt {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.regionwright-guide .rbb-field,
+.regionwright-guide .rbb-check,
+.regionwright-guide .rbb-dropdown-option,
+.regionwright-guide .rbb-button { font-size: 1em; }
+
+.regionwright-guide .rbb-picker-row,
+.regionwright-guide .rbb-guide-choice {
+  min-height: 3.55rem;
+  padding: 0.78rem 1rem;
+}
+
+.regionwright-guide .rbb-picker-row strong,
+.regionwright-guide .rbb-guide-choice strong { font-size: 17px; }
+
+.regionwright-guide .rbb-field > span,
+.regionwright-guide .rbb-dropdown-toggle,
+.regionwright-guide .rbb-check > span { font-size: 16px; }
+
+.regionwright-guide .rbb-guide-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem 0.75rem;
+}
+
+.regionwright-guide .rbb-guide-action-start,
+.regionwright-guide .rbb-guide-action-end {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.regionwright-guide .rbb-guide-action-end { justify-content: flex-end; }
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-footer {
+  display: block;
+  padding: 0;
+  background: transparent;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  min-width: 0;
+  padding: 0.2rem 0.42rem;
+  border-color: rgb(236 220 191 / 14%);
+  background: rgb(0 0 0 / 18%);
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track { gap: 0.22rem; }
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track li > span:first-child {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-width: 1px;
+  font-size: 0.65rem;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-button {
+  min-height: 2.9rem;
+  font-size: 15px;
+}
+
+.regionwright-guide .rbb-guide-actions {
+  padding-top: 0;
+  border-top-color: transparent;
+}
+
+.regionwright-guide .rbb-guide-progress-footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 1rem 0.9rem;
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress {
+  min-width: 0;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.8rem 0.3rem;
+  border: 1px solid rgb(236 220 191 / 18%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 28%);
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+.regionwright-guide .rbb-guided-region-step.is-existing,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(16rem, 1.22fr);
+  align-items: start;
+  gap: 0.85rem 1rem;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-recipe-prompt,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-recipe-prompt { grid-column: 1; }
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  min-width: 0;
+  max-height: 17rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+  .regionwright-guide .rbb-guided-region-step.is-existing,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) { grid-template-columns: 1fr; }
+
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+  .regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* Final surface overrides: these sit after legacy launchpad styles. */
+.regionwright:not(.regionwright-guide) .window-content,
+.regionwright:not(.regionwright-guide) .rbb-shell,
+.regionwright:not(.regionwright-guide) .rbb-workspace,
+.regionwright:not(.regionwright-guide) .rbb-body > .rbb-sidebar {
+  background: rgb(0 0 0 / 35%);
+}
+
+.regionwright:not(.regionwright-guide) .window-content {
+  backdrop-filter: none;
+}
+
+.regionwright-guide .window-content,
+.regionwright-guide .rbb-guide-header,
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-progress-footer {
+  background: #111;
+}
+
+.regionwright-guide .window-content { border-color: rgb(255 255 255 / 18%); }
+
+.regionwright-guide .rbb-guide-header {
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  border-bottom-color: transparent;
+  text-align: center;
+}
+
+.regionwright-guide .rbb-guide-header h2 { text-align: center; }
+
+.regionwright-guide .rbb-guide-actions {
+  padding-top: 0;
+  border-top-color: transparent;
+}
+
+.regionwright-guide .rbb-guide-progress-footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 1rem 0.9rem;
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress {
+  min-width: 0;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.8rem 0.3rem;
+  border: 1px solid rgb(236 220 191 / 18%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 28%);
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+.regionwright-guide .rbb-guided-region-step.is-existing,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(16rem, 1.22fr);
+  align-items: start;
+  gap: 0.85rem 1rem;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-recipe-prompt,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-recipe-prompt { grid-column: 1; }
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  min-width: 0;
+  max-height: 17rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+  .regionwright-guide .rbb-guided-region-step.is-existing,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) { grid-template-columns: 1fr; }
+
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+  .regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* The launcher can stay open as a quiet, translucent map companion. */
+.regionwright:not(.regionwright-guide) .window-content,
+.regionwright:not(.regionwright-guide) .rbb-shell,
+.regionwright:not(.regionwright-guide) .rbb-workspace,
+.regionwright:not(.regionwright-guide) .rbb-body > .rbb-sidebar {
+  background: rgb(0 0 0 / 35%);
+}
+
+.regionwright:not(.regionwright-guide) .window-content {
+  backdrop-filter: none;
+}
+
+/* Prompt windows use Foundry's neutral black as one uninterrupted surface. */
+.regionwright-guide .window-content,
+.regionwright-guide .rbb-guide-header,
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-progress-footer {
+  background: #111;
+}
+
+.regionwright-guide .window-content {
+  border-color: rgb(255 255 255 / 18%);
+}
+
+.regionwright-guide .rbb-guide-header {
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  border-bottom-color: transparent;
+  text-align: center;
+}
+
+.regionwright-guide .rbb-guide-header h2 {
+  text-align: center;
+}
+
+/* Actions remain available in the task, without looking like a separate footer. */
+.regionwright-guide .rbb-guide-actions {
+  padding-top: 0;
+  border-top-color: transparent;
+}
+
+/* Keep the route visible but out of the instruction area. */
+.regionwright-guide .rbb-guide-progress-footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 1rem 0.9rem;
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress {
+  min-width: 0;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.8rem 0.3rem;
+  border: 1px solid rgb(236 220 191 / 18%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 28%);
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Selection lists sit beside the short direction instead of extending it downward. */
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+.regionwright-guide .rbb-guided-region-step.is-existing,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(16rem, 1.22fr);
+  align-items: start;
+  gap: 0.85rem 1rem;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-recipe-prompt,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-recipe-prompt {
+  grid-column: 1;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  min-width: 0;
+  max-height: 17rem;
+  margin: 0;
+}
+
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-recipe-prompt + .rbb-picker-list {
+  grid-row: 1 / span 6;
+}
+
+@media (max-width: 640px) {
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+  .regionwright-guide .rbb-guided-region-step.is-existing,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+    grid-template-columns: 1fr;
+  }
+
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+  .regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* Visual-first launchpad: users choose a recognizable goal before they see
+   any configuration. Labels stay visible so the icon never carries meaning
+   by itself. */
+.rbb-visual-launchpad {
+  display: grid;
+  gap: 1.35rem;
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: clamp(1.2rem, 3vw, 2.6rem);
+}
+
+.rbb-visual-launchpad-header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rbb-visual-launchpad-header h2 {
+  margin: 0;
+  color: #f4eee3;
+  font-family: Candara, "Segoe UI", system-ui, sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  line-height: 1.08;
+}
+
+.rbb-visual-launchpad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.rbb-visual-launchpad-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 8.4rem;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 2px solid rgb(203 185 159 / 55%);
+  border-radius: 1rem;
+  color: #f7f0e4;
+  background: linear-gradient(135deg, rgb(255 255 255 / 8%), rgb(13 10 16 / 45%));
+  box-shadow: 0 0.55rem 1.35rem rgb(0 0 0 / 18%);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.rbb-visual-launchpad-card:hover,
+.rbb-visual-launchpad-card:focus-visible {
+  border-color: #f1ca78;
+  background: linear-gradient(135deg, rgb(241 202 120 / 21%), rgb(18 13 20 / 58%));
+  box-shadow: 0 0.7rem 1.7rem rgb(0 0 0 / 32%), 0 0 0 0.18rem rgb(241 202 120 / 18%);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.rbb-visual-launchpad-icon {
+  display: grid;
+  place-items: center;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
+  color: #21180c;
+  background: #f1ca78;
+  font-size: 1.45rem;
+}
+
+.rbb-visual-launchpad-card--puzzles .rbb-visual-launchpad-icon { background: #f0ab68; }
+.rbb-visual-launchpad-card--studio .rbb-visual-launchpad-icon { background: #b7a0e8; }
+.rbb-visual-launchpad-card--native .rbb-visual-launchpad-icon { background: #e7c96e; }
+.rbb-visual-launchpad-card--traversal .rbb-visual-launchpad-icon { background: #7bc8dc; }
+
+.rbb-visual-launchpad-card strong {
+  font-family: Candara, "Segoe UI", system-ui, sans-serif;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.08;
+}
+
+.rbb-visual-launchpad-card > i {
+  color: #f1ca78;
+  font-size: 1.2rem;
+}
+
+/* A visible route makes a long setup feel like a short sequence of choices. */
+.rbb-guide-progress {
+  display: grid;
+  justify-items: end;
+  gap: 0.45rem;
+  min-width: 8.5rem;
+}
+
+.rbb-guide-step-track {
+  display: flex;
+  gap: 0.42rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rbb-guide-step-track li > span:first-child {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 2px solid rgb(229 210 179 / 50%);
+  border-radius: 50%;
+  color: #e8d9c2;
+  background: rgb(17 12 18 / 68%);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.rbb-guide-step-track li.is-complete > span:first-child {
+  border-color: #8bc57a;
+  color: #182216;
+  background: #8bc57a;
+}
+
+.rbb-guide-step-track li.is-current > span:first-child {
+  border-color: #f1ca78;
+  color: #24190b;
+  background: #f1ca78;
+  box-shadow: 0 0 0 0.2rem rgb(241 202 120 / 20%);
+}
+
+.rbb-guide-progress-label {
+  color: #f3eadc;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.rbb-guide-choice {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.rbb-guide-choice-icon {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.6rem;
+  color: #24190b;
+  background: #e8c978;
+}
+
+.rbb-guide-choice.is-selected .rbb-guide-choice-icon {
+  background: #f8df9d;
+}
+
+@media (max-width: 600px) {
+  .rbb-visual-launchpad-grid { grid-template-columns: 1fr; }
+  .rbb-visual-launchpad-card { min-height: 5.4rem; }
+  .rbb-guide-progress { justify-items: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbb-visual-launchpad-card { transition: none; }
+  .rbb-visual-launchpad-card:hover,
+  .rbb-visual-launchpad-card:focus-visible { transform: none; }
+}
+
+/* Prompt-first Builder: keep the launchpad readable while allowing the map to
+   remain visible behind it. The guided prompt keeps its own solid surface. */
+.regionwright:not(.regionwright-guide) .window-content {
+  background: rgb(20 15 20 / 65%);
+  backdrop-filter: blur(4px);
+}
+
+.regionwright:not(.regionwright-guide) .rbb-shell,
+.regionwright:not(.regionwright-guide) .rbb-workspace {
+  background: rgb(20 15 20 / 65%);
+}
+
+.regionwright:not(.regionwright-guide) .rbb-body {
+  grid-template-columns: minmax(190px, 18rem) minmax(0, 1fr);
+}
+
+.regionwright:not(.regionwright-guide) .rbb-body > .rbb-sidebar {
+  background: rgb(24 18 24 / 62%);
+}
+
+.regionwright-guide .rbb-guide-header {
+  align-items: flex-start;
+  padding: 1rem 1.1rem 0.85rem;
+  background: rgb(27 21 27 / 98%);
+}
+
+.regionwright-guide .rbb-guide-header h2 {
+  margin: 0.25rem 0 0.18rem;
+}
+
+.regionwright-guide .rbb-guide-header p {
+  margin: 0;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.82rem;
+}
+
+.rbb-guide-progress {
+  flex: 0 0 auto;
+  padding: 0.32rem 0.5rem;
+  border: 1px solid var(--color-border, #5b554c);
+  border-radius: 999px;
+  color: var(--color-warm-1, #c39b5a);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rbb-scene-guidance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid rgb(213 169 70 / 55%);
+  border-radius: 0.35rem;
+  background: rgb(213 169 70 / 10%);
+  color: var(--color-text-primary, #e9e6dc);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.rbb-scene-guidance > span {
+  flex: 1 1 auto;
+}
+
+.rbb-scene-guidance.is-ready {
+  border-color: rgb(125 166 106 / 58%);
+  background: rgb(125 166 106 / 10%);
+}
+
+.rbb-scene-guidance > i {
+  flex: 0 0 auto;
+  color: var(--color-warm-1, #c39b5a);
+}
+
+.rbb-scene-guidance.is-ready > i {
+  color: var(--color-level-success, #7da66a);
+}
+
+.rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step .rbb-picker-list {
+  max-height: 15rem;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.regionwright-guide .rbb-picker-row {
+  min-height: 2.65rem;
+}
+
+.regionwright-guide .rbb-picker-row span {
+  display: grid;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.regionwright-guide .rbb-picker-row small {
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.72rem;
+}
+
+.regionwright-guide .rbb-picker-row.is-selected {
+  border-color: var(--color-warm-1, #c39b5a);
+  background: rgb(195 155 90 / 18%);
+  box-shadow: 0 0 1rem rgb(195 155 90 / 20%);
+  animation: rbb-prompt-selection-pulse 1.25s ease-in-out infinite;
+}
+
+@keyframes rbb-prompt-selection-pulse {
+  50% {
+    background: rgb(195 155 90 / 31%);
+    box-shadow: 0 0 1.45rem rgb(195 155 90 / 38%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .regionwright-guide .rbb-picker-row.is-selected {
+    animation: none;
+  }
+}
+
+/* Readability pass: Candara keeps the friendly, rounded Windows feel without
+   becoming novelty lettering. The fallbacks keep the module dependable on
+   systems where Candara is unavailable. */
+.regionwright .window-content,
+.regionwright .window-content button,
+.regionwright .window-content input,
+.regionwright .window-content select,
+.regionwright .window-content textarea {
+  font-family: "Candara", "Segoe UI", system-ui, sans-serif;
+  font-optical-sizing: auto;
+}
+
+.regionwright .window-content {
+  font-size: 1.08rem;
+}
+
+.regionwright .rbb-shell,
+.regionwright-guide .rbb-guide-content {
+  font-family: "Candara", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+}
+
+.regionwright .rbb-shell button,
+.regionwright .rbb-shell input,
+.regionwright .rbb-shell select,
+.regionwright .rbb-shell textarea {
+  font-size: 1rem;
+}
+
+.regionwright .rbb-shell h1,
+.regionwright .rbb-shell h2,
+.regionwright .rbb-shell h3,
+.regionwright-guide .rbb-guide-content h1,
+.regionwright-guide .rbb-guide-content h2,
+.regionwright-guide .rbb-guide-content h3 {
+  font-family: "Candara", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.regionwright-guide .rbb-guide-header h2 {
+  font-size: 1.5rem;
+}
+
+.regionwright-guide .rbb-guide-header p,
+.regionwright-guide .rbb-recipe-prompt,
+.regionwright-guide .rbb-scene-guidance {
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.regionwright-guide .rbb-picker-row {
+  font-size: 1rem;
+}
+
+.regionwright-guide .rbb-picker-row small,
+.regionwright-guide .rbb-guide-selection-status {
+  font-size: 0.88rem;
+}
+
+/* The lock is drawn entirely in CSS: a compact, readable tumbler puzzle with
+   the materials and restrained palette of Foundry's native applications. */
+.rw-lockpick-dialog .window-content {
+  overflow: hidden;
+}
+
+.rw-lockpick-content {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.rw-lockpick-prompt,
+.rw-lockpick-feedback,
+.rw-lockpick-progress {
+  margin: 0;
+  color: var(--color-text-light-highlight, #e8dcc2);
+}
+
+.rw-lockpick-prompt {
+  font-weight: 600;
+}
+
+.rw-lockpick-mechanism {
+  position: relative;
+  min-height: 20rem;
+  overflow: hidden;
+  border: 1px solid #87693e;
+  border-radius: 0.4rem;
+  background:
+    radial-gradient(ellipse at 50% 15%, rgb(218 177 98 / 24%), transparent 43%),
+    linear-gradient(145deg, #4b4030 0%, #201c1d 41%, #100e11 100%);
+  box-shadow: inset 0 0 0 0.28rem rgb(7 6 7 / 48%), inset 0 0 1.5rem rgb(0 0 0 / 64%);
+}
+
+.rw-lockpick-top-plate {
+  position: absolute;
+  inset: 0.55rem 0.65rem auto;
+  height: 1.25rem;
+  border: 1px solid #a88a53;
+  border-radius: 0.2rem;
+  background: linear-gradient(#7a6543, #30291f 48%, #665337);
+  box-shadow: inset 0 0.16rem rgb(255 224 158 / 20%), 0 0.2rem 0.4rem rgb(0 0 0 / 42%);
+}
+
+.rw-lockpick-tumblers {
+  position: absolute;
+  z-index: 2;
+  top: 2.8rem;
+  bottom: 2.6rem;
+  left: 15%;
+  right: 15%;
+  display: grid;
+  grid-template-columns: repeat(var(--rw-tumbler-count, 5), 1fr);
+  align-items: stretch;
+  gap: clamp(0.35rem, 2vw, 0.8rem);
+}
+
+.rw-lockpick-tumbler-button {
+  position: relative;
+  align-self: stretch;
+  height: 100%;
+  min-width: 1.15rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rw-lockpick-tumbler-button:focus-visible {
+  outline: 2px solid var(--color-warm-1, #d5a54b);
+  outline-offset: 0.15rem;
+}
+
+.rw-lockpick-tumbler-button.is-selected .rw-lockpick-track {
+  box-shadow: inset 0 0 0 1px rgb(242 189 73 / 86%), 0 0 0.5rem rgb(215 157 49 / 38%);
+}
+
+.rw-lockpick-ruler {
+  position: absolute;
+  z-index: 3;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 0;
+  width: 0.42rem;
+  border-left: 1px solid rgb(205 166 95 / 62%);
+  background: repeating-linear-gradient(to bottom, rgb(235 197 119 / 90%) 0 1px, transparent 1px 0.7rem);
+  filter: drop-shadow(0.06rem 0.06rem rgb(0 0 0 / 72%));
+  opacity: 0.9;
+}
+
+.rw-lockpick-track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0.58rem;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #a78a52;
+  border-radius: 0.22rem;
+  background:
+    linear-gradient(90deg, rgb(255 220 146 / 14%), transparent 14% 84%, rgb(0 0 0 / 52%)),
+    linear-gradient(90deg, #15100f, #3e3120 45%, #161113 100%);
+  box-shadow: inset 0 0 0 0.16rem #0c0a0b, inset 0 0 0 0.24rem rgb(212 169 93 / 20%), 0 0.14rem 0.26rem rgb(0 0 0 / 54%);
+}
+
+.rw-lockpick-track::before,
+.rw-lockpick-track::after {
+  position: absolute;
+  right: 0.18rem;
+  left: 0.18rem;
+  content: "";
+  pointer-events: none;
+}
+
+.rw-lockpick-track::before {
+  top: 0.25rem;
+  height: 0.42rem;
+  border: 1px solid rgb(226 186 108 / 58%);
+  border-radius: 0.1rem;
+  background: linear-gradient(#72562f, #21180f);
+  box-shadow: 0 0.1rem 0.14rem rgb(0 0 0 / 62%);
+}
+
+.rw-lockpick-track::after {
+  bottom: 0.38rem;
+  height: 0.52rem;
+  border-top: 1px solid rgb(226 186 108 / 64%);
+  border-bottom: 1px solid rgb(22 14 8 / 80%);
+  background: linear-gradient(#72562f, #2a1f15);
+}
+
+.rw-lockpick-spring {
+  position: absolute;
+  top: 0.45rem;
+  left: 39%;
+  width: 22%;
+  height: 4.6rem;
+  opacity: 0.85;
+  background: repeating-linear-gradient(160deg, transparent 0 0.26rem, #d1b47b 0.28rem 0.38rem, #4a3821 0.4rem 0.56rem);
+  filter: drop-shadow(0.08rem 0.08rem rgb(0 0 0 / 75%));
+}
+
+.rw-lockpick-tumbler {
+  position: absolute;
+  z-index: 2;
+  bottom: 8%;
+  left: 39%;
+  width: 22%;
+  height: 6.2rem;
+  border: 1px solid #c59a42;
+  border-radius: 0.18rem 0.18rem 0.32rem 0.32rem;
+  background: linear-gradient(90deg, #6d3c0d, #efb540 44%, #8a4d0d 84%);
+  box-shadow: inset 0 0.14rem rgb(255 237 171 / 55%), 0 0.16rem 0.22rem rgb(0 0 0 / 70%);
+  transition: filter 90ms linear;
+}
+
+.rw-lockpick-tumbler::before {
+  position: absolute;
+  top: -0.55rem;
+  left: 30%;
+  width: 40%;
+  height: 0.62rem;
+  content: "";
+  border: 1px solid #8e6725;
+  border-bottom: 0;
+  border-radius: 0.12rem 0.12rem 0 0;
+  background: linear-gradient(90deg, #62400e, #e0b04b 48%, #7b5113);
+  box-shadow: 0 -0.08rem 0.12rem rgb(0 0 0 / 55%);
+}
+
+.rw-lockpick-tumbler span {
+  position: absolute;
+  top: 1.75rem;
+  right: 8%;
+  left: 8%;
+  height: 0.16rem;
+  border-top: 1px solid rgb(255 229 160 / 70%);
+  border-bottom: 1px solid rgb(65 36 6 / 72%);
+  border-radius: 0.08rem;
+  background: rgb(120 70 14 / 82%);
+}
+
+.rw-lockpick-tumbler-button.is-ready .rw-lockpick-track {
+  box-shadow: inset 0 0 0 1px rgb(242 189 73 / 78%), 0 0 0.5rem rgb(215 157 49 / 36%);
+}
+
+.rw-lockpick-tumbler-button.is-ready .rw-lockpick-tumbler {
+  filter: brightness(1.22);
+  animation: rw-lockpick-tremble 90ms linear infinite alternate;
+}
+
+@keyframes rw-lockpick-tremble {
+  from { transform: translateX(-0.08rem); }
+  to { transform: translateX(0.08rem); }
+}
+
+.rw-lockpick-tumbler-button.is-set .rw-lockpick-tumbler {
+  filter: saturate(0.55) brightness(1.4);
+}
+
+.rw-lockpick-barrel {
+  position: absolute;
+  z-index: 3;
+  right: 7%;
+  bottom: 0.85rem;
+  left: 7%;
+  height: 1.55rem;
+  border: 1px solid #a88a53;
+  border-radius: 0.18rem 0.18rem 0.35rem 0.35rem;
+  background: linear-gradient(#8b7550, #4c402f 31%, #27201b 35% 68%, #6e5a3a 72%);
+  box-shadow: inset 0 0.16rem rgb(255 220 144 / 24%), inset 0 -0.16rem rgb(0 0 0 / 42%), 0 0.25rem 0.4rem rgb(0 0 0 / 62%);
+}
+
+.rw-lockpick-barrel span {
+  position: absolute;
+  top: 0.36rem;
+  right: 10%;
+  left: 10%;
+  height: 0.68rem;
+  border: 1px solid #17120d;
+  border-radius: 0.12rem;
+  background: linear-gradient(#0a090a, #211a18 48%, #080708);
+  box-shadow: inset 0 0.1rem rgb(255 218 139 / 9%), 0 0.08rem rgb(255 223 151 / 20%);
+}
+
+.rw-lockpick-pick {
+  position: absolute;
+  z-index: 4;
+  bottom: 2rem;
+  left: 9%;
+  width: calc(var(--rw-pick-width, 33%) - 9%);
+  min-width: 1rem;
+  height: 0.22rem;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #c6a761, #f0d48e, #70572b);
+  box-shadow: 0 0.08rem 0.15rem rgb(0 0 0 / 72%);
+  transition: width 120ms ease, bottom 35ms linear;
+}
+
+.rw-lockpick-pick span {
+  position: absolute;
+  right: -0.28rem;
+  bottom: -0.2rem;
+  width: 0.48rem;
+  height: 0.64rem;
+  border: 1px solid #af8b45;
+  border-radius: 0.1rem;
+  background: #6b5126;
+}
+
+.rw-lockpick-feedback {
+  min-height: 1.25rem;
+}
+
+.rw-lockpick-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.15rem;
+}
+
+.rw-lockpick-controls .rbb-button {
+  min-width: 5.25rem;
+}
+
+.rw-lockpick-controls span {
+  margin-left: 0;
+  color: var(--color-text-light-heading, #c7b08a);
+  font-size: var(--font-size-12, 0.75rem);
+}
+
+.rw-lockpick-progress {
+  color: var(--color-text-light-heading, #c7b08a);
+  font-size: var(--font-size-12, 0.75rem);
+  text-align: center;
+}
+
+.rw-lockpick-feedback.is-success {
+  color: var(--color-level-success, #52b36b);
+}
+
+@media (max-width: 420px) {
+  .rw-lockpick-tumblers {
+    left: 10%;
+    right: 10%;
+    gap: 0.24rem;
+  }
+}
+
+/* Guided setup deliberately hides the Builder chrome. Each question becomes a
+   focused, native-looking prompt with only its answer controls in view. */
+.rbb-shell.rbb-guided-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  padding: clamp(0.8rem, 3vw, 2.25rem);
+  overflow: auto;
+  background: rgb(10 8 11 / 84%);
+}
+
+.rbb-guide-dialog {
+  width: min(100%, 38rem);
+  max-height: 100%;
+  overflow: auto;
+  border: 1px solid var(--color-border, #5b554c);
+  border-radius: 0.35rem;
+  background: rgb(27 21 27 / 96%);
+  box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 45%);
+}
+
+.rbb-guide-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.1rem 0.85rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-guide-header h2 {
+  margin: 0;
+  color: var(--color-text-primary, #e9e6dc);
+  font-size: 1.2rem;
+}
+
+.rbb-guide-header .rbb-back-link {
+  flex: 0 0 auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.rbb-guide-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+  min-height: 25rem;
+}
+
+.rbb-guide-task {
+  min-width: 0;
+  min-height: 16rem;
+  padding: 1.25rem;
+}
+
+.rbb-guide-task .rbb-config-card {
+  margin: 0;
+  padding: 0;
+  border-top: 0;
+}
+
+.rbb-guide-step {
+  margin: 0;
+}
+
+.rbb-guide-choice-list {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.rbb-guide-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #514b43;
+  border-radius: 0.3rem;
+  background: rgb(20 15 20 / 45%);
+  color: var(--color-text-primary, #e9e6dc);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-guide-choice:hover,
+.rbb-guide-choice:focus-visible,
+.rbb-guide-choice.is-selected {
+  border-color: var(--color-warm-1, #c39b5a);
+  background: rgb(181 107 82 / 12%);
+}
+
+.rbb-guide-choice i {
+  color: var(--color-warm-1, #c39b5a);
+}
+
+.rbb-guide-picker {
+  min-width: 0;
+  padding: 0.8rem;
+  border-left: 1px solid #514b43;
+  background: rgb(20 15 20 / 55%);
+}
+
+.rbb-guide-picker .rbb-selection-panel {
+  min-height: 100%;
+}
+
+.rbb-guide-picker .rbb-document-browser {
+  margin-top: 0;
+}
+
+.rbb-guide-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 3.75rem;
+  padding: 0.65rem 1.1rem;
+  border-top: 1px solid #514b43;
+  background: rgb(20 15 20 / 58%);
+}
+
+.rbb-guide-spacer {
+  flex: 1;
+}
+
+.rbb-guide-review {
+  padding: 1.1rem;
+}
+
+.rbb-guide-review .rbb-plan-panel {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .rbb-shell.rbb-guided-shell {
+    place-items: start stretch;
+    padding: 0.45rem;
+  }
+
+  .rbb-guide-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .rbb-guide-header .rbb-back-link {
+    align-self: flex-start;
+  }
+
+  .rbb-guide-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rbb-guide-picker {
+    border-top: 1px solid #514b43;
+    border-left: 0;
+  }
+}
+
+/* The Builder remains the control center. Guided steps open as a separate,
+   modeless window so its Region selector stays available behind the prompt. */
+.regionwright-guide,
+.regionwright-guide .window-content {
+  overflow: hidden !important;
+}
+
+.regionwright-guide .window-header {
+  display: none;
+}
+
+.regionwright-guide .window-content {
+  flex: 1 1 auto;
+  height: auto;
+  container-type: inline-size;
+  background: rgb(27 21 27 / 98%);
+}
+
+.regionwright-guide .rbb-guide-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  color: var(--color-text-primary, #e9e6dc);
+  font-size: clamp(0.78rem, 2.1cqi, 1.1rem);
+  cursor: default;
+}
+
+.regionwright-guide .rbb-field,
+.regionwright-guide .rbb-check,
+.regionwright-guide .rbb-dropdown-option,
+.regionwright-guide .rbb-button {
+  font-size: 0.9em;
+}
+
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-review {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.regionwright-guide .rbb-guide-task {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.regionwright-guide .rbb-guide-step-content {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.regionwright-guide .rbb-guide-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.regionwright-guide .rbb-guide-review {
+  padding: 1rem;
+}
+
+/* A prompt is a fixed-size task window. Keep a dropdown inside the task area
+   so the menu's own scrollbar, rather than the window scrollbar, handles a
+   long option list. */
+.regionwright-guide .rbb-guide-task .rbb-dropdown-menu {
+  max-height: 6rem;
+}
+
+/* Minimal prompt pass: the dialog shows one instruction and its choices. The
+   map itself is the explanation for location, so repeated helper copy stays
+   out of the way. Large rounded controls match the friendly launchpad cards. */
+.regionwright-guide .window-content {
+  border: 1px solid rgb(236 220 191 / 42%);
+  border-radius: 1.35rem;
+  background: linear-gradient(145deg, rgb(35 27 36 / 99%), rgb(19 14 21 / 99%));
+  box-shadow: 0 1.35rem 3.5rem rgb(0 0 0 / 52%);
+}
+
+.regionwright-guide .rbb-guide-header {
+  align-items: center;
+  min-height: 4.35rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom-color: rgb(236 220 191 / 20%);
+}
+
+.regionwright-guide .rbb-guide-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.regionwright-guide .rbb-guide-header .rbb-kicker,
+.regionwright-guide .rbb-guide-header p,
+.regionwright-guide .rbb-scene-guidance.is-ready,
+.regionwright-guide .rbb-guide-selection-status,
+.regionwright-guide .rbb-picker-row small {
+  display: none;
+}
+
+.regionwright-guide .rbb-guide-task {
+  gap: 0.7rem;
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.regionwright-guide .rbb-recipe-prompt {
+  margin: 0 0 0.8rem;
+  color: #f5ecdf;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.regionwright-guide .rbb-picker-list,
+.regionwright-guide .rbb-guide-choice-list {
+  gap: 0.55rem;
+  margin-top: 0;
+}
+
+.regionwright-guide .rbb-picker-row,
+.regionwright-guide .rbb-guide-choice,
+.regionwright-guide .rbb-field input,
+.regionwright-guide .rbb-dropdown-toggle,
+.regionwright-guide .rbb-button {
+  border-radius: 1rem;
+}
+
+.regionwright-guide .rbb-picker-row,
+.regionwright-guide .rbb-guide-choice {
+  min-height: 3.2rem;
+  padding: 0.7rem 0.9rem;
+  border-color: rgb(236 220 191 / 32%);
+  background: rgb(255 248 237 / 5%);
+}
+
+.regionwright-guide .rbb-picker-row:hover,
+.regionwright-guide .rbb-picker-row:focus-visible,
+.regionwright-guide .rbb-guide-choice:hover,
+.regionwright-guide .rbb-guide-choice:focus-visible,
+.regionwright-guide .rbb-guide-choice.is-selected {
+  border-color: #f1ca78;
+  background: rgb(241 202 120 / 14%);
+  box-shadow: 0 0 0 2px rgb(241 202 120 / 12%);
+}
+
+.regionwright-guide .rbb-picker-row.is-selected {
+  border-color: #f1ca78;
+  background: rgb(241 202 120 / 18%);
+  box-shadow: 0 0 0 2px rgb(241 202 120 / 15%), 0 0 1.25rem rgb(241 202 120 / 18%);
+}
+
+.regionwright-guide .rbb-guide-actions {
+  padding-top: 0.7rem;
+  border-top: 1px solid rgb(236 220 191 / 16%);
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-button {
+  min-height: 2.65rem;
+  padding-inline: 1rem;
+}
+
+.regionwright-guide .rbb-scene-guidance:not(.is-ready) {
+  margin: 0 0 0.75rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 1rem;
+}
+
+.rw-lockpick-dialog .window-content,
+.rw-rotation-dialog .window-content {
+  border-radius: 1.35rem;
+}
+
+.rw-lockpick-mechanism {
+  border-radius: 1.15rem;
+}
+
+/* Guided builder pass: present one small decision at a time. The visual
+   language stays close to Foundry's Settings sheet: text hierarchy and rules,
+   with controls appearing only after a user chooses a path. */
+.rbb-flow-header {
+  padding: 0.3rem 0.15rem 1rem;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-flow-header h2 {
+  margin: 0.25rem 0 0.25rem;
+  color: #e9e2d5;
+  font-size: 1.2rem;
+}
+
+.rbb-flow-header p {
+  max-width: 40rem;
+  margin: 0;
+  color: #bdb4a6;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.rbb-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  border: 0;
+  color: #dcc7a9;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.78rem;
+}
+
+.rbb-back-link:hover,
+.rbb-back-link:focus-visible {
+  color: #fff0d4;
+  text-decoration: underline;
+}
+
+.rbb-category-list {
+  display: grid;
+  margin: 0;
+}
+
+.rbb-category-option {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto 0.65rem;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 5.2rem;
+  padding: 0.75rem 0.3rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+  color: #e5ddcf;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+}
+
+.rbb-category-option:hover,
+.rbb-category-option:focus-visible {
+  border-bottom-color: #bd765c;
+  background: rgb(255 255 255 / 3%);
+}
+
+.rbb-category-option > span:nth-child(2) {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.rbb-category-option strong {
+  font-size: 0.96rem;
+}
+
+.rbb-category-option small {
+  color: #bdb4a6;
+  font-size: 0.73rem;
+  line-height: 1.35;
+}
+
+.rbb-category-option > i {
+  color: #bdb4a6;
+  font-size: 0.7rem;
+}
+
+.rbb-category-icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #786d60;
+  border-radius: 50%;
+  color: #e6cba9;
+}
+
+.rbb-category-option .rbb-category-count {
+  min-width: 1.25rem;
+  color: #a99f91;
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+.rbb-effect-list-focused {
+  margin-top: 0;
+}
+
+.rbb-effect-list-focused .rbb-effect-option {
+  min-height: 4.7rem;
+  padding: 0.7rem 0.2rem;
+}
+
+.rbb-advanced-choice,
+.rbb-technical-details,
+.rbb-more-selection {
+  margin: 0;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-advanced-choice > summary,
+.rbb-technical-details > summary,
+.rbb-more-selection > summary,
+.rbb-future-details > summary {
+  padding: 0.85rem 0.2rem;
+  color: #cbb99f;
+  cursor: pointer;
+  font-size: 0.77rem;
+}
+
+.rbb-advanced-choice > p,
+.rbb-technical-details > p {
+  margin: 0 0.25rem 0.75rem;
+  color: #bdb4a6;
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.rbb-coming-soon {
+  min-height: 10rem;
+  padding-top: 1.4rem;
+}
+
+.rbb-studio-preview {
+  max-width: 48rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(216 165 95 / 38%);
+  border-radius: 0.8rem;
+  background: rgb(38 28 30 / 55%);
+  box-shadow: 0 0 1.8rem rgb(0 0 0 / 18%);
+}
+
+.rbb-studio-preview-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.rbb-studio-preview-heading h3,
+.rbb-studio-preview-heading p {
+  margin: 0;
+}
+
+.rbb-studio-preview-heading p {
+  margin-top: 0.2rem;
+  color: #c6bdb0;
+  font-size: 0.82rem;
+}
+
+.rbb-studio-preview-heading .rbb-badge {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.rbb-studio-preview-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rbb-studio-preview-node-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.65rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-studio-preview-node-button.is-selected {
+  color: #f2c786;
+}
+
+.rbb-studio-preview-node {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 0.55rem;
+  background: rgb(255 255 255 / 4%);
+}
+
+.rbb-studio-preview-node small {
+  display: block;
+  margin-top: 0.12rem;
+  color: #bdb4a6;
+  font-size: 0.75rem;
+}
+
+.rbb-studio-preview-index {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(216 165 95 / 20%);
+  color: #f2c786;
+  font-weight: 700;
+}
+
+.rbb-studio-preview-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  color: #c6bdb0;
+  font-size: 0.78rem;
+}
+
+.rbb-studio-preview-details {
+  margin-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  padding-top: 0.65rem;
+}
+
+.rbb-studio-preview-details ul {
+  margin: 0.6rem 0 0 1.2rem;
+  padding: 0;
+  color: #c6bdb0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.rbb-studio-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.rbb-studio-editor,
+.rbb-studio-review {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.9rem 0;
+  padding: 0.85rem;
+  border: 1px solid rgb(216 165 95 / 25%);
+  border-radius: 0.65rem;
+  background: rgb(0 0 0 / 12%);
+}
+
+.rbb-studio-editor label {
+  display: grid;
+  gap: 0.3rem;
+  color: #d8d0c4;
+  font-size: 0.78rem;
+}
+
+.rbb-studio-editor input,
+.rbb-studio-editor textarea {
+  width: 100%;
+  border: 1px solid #625849;
+  border-radius: 0.35rem;
+  background: rgb(0 0 0 / 20%);
+  color: #f2ece4;
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+}
+
+.rbb-studio-editor-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.rbb-studio-reference-picker {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rbb-studio-reference-picker p {
+  margin: 0;
+  color: #bdb4a6;
+  font-size: 0.76rem;
+}
+
+.rbb-studio-reference {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 0.5rem;
+  align-items: center;
+  border: 1px solid #514b43;
+  border-radius: 0.35rem;
+  background: rgb(255 255 255 / 4%);
+  color: #e6dfd5;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rbb-studio-reference:hover,
+.rbb-studio-reference.is-selected {
+  border-color: #d8a55f;
+  background: rgb(216 165 95 / 14%);
+}
+
+.rbb-studio-reference small {
+  grid-column: 2;
+  color: #bdb4a6;
+  font-size: 0.7rem;
+}
+
+.rbb-studio-review-errors {
+  color: #f1a7a7;
+}
+
+.rbb-studio-review-success {
+  color: #a9d9a7;
+}
+
+.rbb-future-details {
+  margin: 0;
+  border-bottom: 1px solid #514b43;
+}
+
+.rbb-future-details[open] {
+  padding-bottom: 0.7rem;
+}
+
+.rbb-future-details ol {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0.3rem 0.2rem 1.5rem;
+  padding: 0;
+  color: #bdb4a6;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.rbb-config-card {
+  margin: 0;
+  padding: 1rem 0.15rem 0.75rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rbb-config-card .rbb-card-heading {
+  padding-bottom: 0.25rem;
+  border-bottom: 0;
+}
+
+.rbb-config-card .rbb-help-text {
+  margin: 0 0 1rem;
+  color: #bdb4a6;
+}
+
+.rbb-technical-details {
+  margin-top: 0.85rem;
+  border-top: 1px solid #514b43;
+}
+
+.rbb-technical-details code {
+  color: #e5c7a4;
+  font-size: 0.72rem;
+}
+
+.rbb-selection-start {
+  margin: 0 0 0.7rem;
+  color: #bdb4a6;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.rbb-selector-rail .rbb-selection-toolbar {
+  grid-template-columns: 1fr;
+}
+
+.rbb-more-selection {
+  margin-top: 0.65rem;
+  border-top: 1px solid #514b43;
+}
+
+.rbb-more-selection[open] {
+  padding-bottom: 0.65rem;
+}
+
+.rbb-more-selection .rbb-selection-toolbar {
+  gap: 0.4rem;
+}
+
+.rbb-more-selection .rbb-selection-shortcut {
+  margin: 0.7rem 0.1rem 0;
+  color: #a99f91;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.rbb-selector-rail .rbb-region-list {
+  margin-top: 0.7rem;
+}
+
+/* Core Settings visual pass: simple controls, hierarchy through text and rules. */
+.regionwright .window-content,
+.rbb-shell,
+.rbb-workspace {
+  background: rgb(14 11 16 / 78%);
+}
+
+.rbb-body > .rbb-sidebar,
+.rbb-selector-rail {
+  background: rgb(16 12 17 / 72%);
+}
+
+.rbb-topic-nav {
+  gap: 0.7rem;
+}
+
+.rbb-future-menu {
+  margin: 0.15rem 0 0;
+  border-top: 1px solid #514b43;
+}
+
+.rbb-future-menu > summary {
+  padding: 0.85rem 0.2rem 0.6rem;
+  color: #cbb99f;
+  cursor: pointer;
+  font-size: 0.76rem;
+}
+
+.rbb-future-menu > div {
+  display: grid;
+  gap: 0.55rem;
+  padding-bottom: 0.25rem;
+}
+
+.rbb-topic {
+  justify-content: center;
+  min-height: 3.15rem;
+  padding: 0.6rem 0.75rem;
+  border-color: #a18b78;
+  border-radius: 0.25rem;
+  background: rgb(12 9 13 / 32%);
+}
+
+.rbb-topic:hover,
+.rbb-topic:focus-visible,
+.rbb-topic.is-active {
+  border-color: #d1b79a;
+  background: rgb(255 255 255 / 3%);
+}
+
+.rbb-topic-copy {
+  flex: 0 1 auto;
+}
+
+.rbb-topic-copy strong {
+  font-size: 0.98rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.rbb-topic .rbb-topic-icon {
+  width: auto;
+  color: #e4ceb0;
+}
+
+.rbb-topic .rbb-badge,
+.rbb-topic-copy small {
+  display: none;
+}
+
+.rbb-options-column > .rbb-section-heading {
+  padding: 0.3rem 0.1rem 0.75rem;
+  font-size: 0.92rem;
+}
+
+.rbb-option-intro {
+  padding: 0 0.1rem 0.75rem;
+}
+
+.rbb-effect-option,
+.rbb-effect-option:hover:not(:disabled),
+.rbb-effect-option:focus-visible:not(:disabled),
+.rbb-effect-option.is-selected {
+  min-height: 0;
+  padding: 0.56rem 0.15rem;
+  border: 0;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rbb-effect-option:hover:not(:disabled),
+.rbb-effect-option:focus-visible:not(:disabled),
+.rbb-effect-option.is-selected {
+  border-bottom-color: #b56b52;
+}
+
+.rbb-effect-option > span:nth-child(2) {
+  gap: 0.18rem;
+}
+
+.rbb-effect-option strong {
+  font-size: 0.86rem;
+}
+
+.rbb-effect-option small {
+  font-size: 0.68rem;
+}
+
+/* Compact help: secondary explanations stay available without competing with choices. */
+.rbb-help-tooltip {
+  display: inline-grid;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.2rem;
+  place-items: center;
+  color: var(--color-text-secondary, #b8b1a4);
+  cursor: help;
+  font-size: 0.78em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.rbb-help-tooltip:hover,
+.rbb-help-tooltip:focus-visible {
+  color: var(--color-warm-1, #e4ceb0);
+  outline: 1px solid var(--color-warm-1, #e4ceb0);
+  outline-offset: 2px;
+}
+
+.rbb-help-tooltip i {
+  pointer-events: none;
+}
+
+/* Regionwright's standard Behavior chooser: icon, clear name, status, and next step. */
+.rbb-category-option.rbb-behavior-option.is-selected,
+.rbb-category-option.rbb-behavior-option:hover:not(:disabled),
+.rbb-category-option.rbb-behavior-option:focus-visible:not(:disabled) {
+  border-bottom-color: var(--color-warm-1, #bd765c);
+  background: color-mix(in srgb, var(--color-warm-1, #bd765c) 8%, transparent);
+}
+
+.rbb-category-option.rbb-behavior-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.rbb-category-option.rbb-behavior-option .rbb-status-dot {
+  display: block;
+  justify-self: center;
+}
+
+/* Guided recipe flow: one short instruction and one decision at a time. */
+.rbb-recipe-progress {
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.78rem;
+}
+
+.rbb-recipe-prompt {
+  margin: 0.3rem 0 0.9rem;
+  color: var(--color-text-secondary, #b8b1a4);
+}
+
+.rbb-recipe-selection {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--color-border, #514b43);
+  border-bottom: 1px solid var(--color-border, #514b43);
+  color: var(--color-text-primary, #e9e2d5);
+}
+
+.rbb-recipe-selection > i {
+  margin-top: 0.15rem;
+  color: var(--color-warm-1, #e4ceb0);
+}
+
+.rbb-step-error {
+  margin: 0.75rem 0 0;
+  color: var(--color-level-error, #d05c4b);
+  font-size: 0.82rem;
+}
+
+.rbb-fine-tune {
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border, #514b43);
+}
+
+.rbb-fine-tune > summary {
+  cursor: pointer;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.82rem;
+}
+
+.rbb-fine-tune[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+.rbb-footer-back {
+  margin-left: auto;
+}
+
+.rbb-selector-heading {
+  color: #b8b1a4;
+}
+
+/* The right rail is a persistent document browser: choose directly, then
+   keep the resulting draft selection below it. */
+.rbb-document-browser {
+  display: flex;
+  flex-direction: column;
+  max-height: 22rem;
+  margin: 0.35rem 0 0.8rem;
+  border-top: 1px solid var(--color-border, #514b43);
+  border-bottom: 1px solid var(--color-border, #514b43);
+}
+
+.rbb-browser-scene {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.55rem 0;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.72rem;
+}
+
+.rbb-browser-scene select {
+  width: 100%;
+}
+
+.rbb-document-browser .rbb-picker-types {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 0.35rem;
+}
+
+.rbb-document-browser .rbb-picker-types button {
+  flex: 0 0 auto;
+}
+
+.rbb-actor-scope {
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--color-border, #514b43);
+}
+
+.rbb-document-browser .rbb-picker-list {
+  min-height: 2.5rem;
+  overflow: auto;
+}
+
+.rbb-selected-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rbb-region-main small {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+.rbb-region-rename {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  gap: 0.2rem;
+}
+
+.rbb-region-rename input {
+  min-width: 0;
+  flex: 1;
+}
+
+.rbb-region-rename button {
+  width: 1.55rem;
+  padding: 0;
+}
+
+.rbb-review-renames {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.75rem 0;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--color-border, #514b43);
+  border-bottom: 1px solid var(--color-border, #514b43);
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 0.78rem;
+}
+
+.rbb-review-renames strong {
+  color: var(--color-text-primary, #e9e2d5);
+  font-weight: 600;
+}
+
+/* Selection rail hierarchy: type first, Scene second, then give nearly all
+   remaining room to the named UUID-backed document list. */
+.rbb-selector-rail {
+  overflow: hidden;
+}
+
+.rbb-selector-rail .rbb-selection-panel {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.rbb-selector-rail .rbb-document-browser {
+  display: flex;
+  min-height: 0;
+  max-height: none;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.rbb-selector-rail .rbb-document-browser.is-guided-target {
+  position: relative;
+  outline: 2px solid var(--color-warm-1, #c39b5a);
+  outline-offset: 0.25rem;
+  box-shadow: 0 0 1.25rem rgb(195 155 90 / 30%);
+  animation: rbb-guided-target-pulse 1.6s ease-in-out infinite;
+}
+
+.rbb-selector-rail .rbb-picker-types button.is-guided-target {
+  border-color: var(--color-warm-1, #c39b5a);
+  box-shadow: inset 0 0 0 1px rgb(195 155 90 / 38%);
+}
+
+.rbb-topic.is-guided-target {
+  border-color: var(--color-warm-1, #c39b5a);
+  box-shadow: inset 0 0 0 1px rgb(195 155 90 / 32%);
+}
+
+@keyframes rbb-guided-target-pulse {
+  50% {
+    outline-color: rgb(195 155 90 / 48%);
+    box-shadow: 0 0 1.65rem rgb(195 155 90 / 48%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rbb-selector-rail .rbb-document-browser.is-guided-target {
+    animation: none;
+  }
+}
+
+.rbb-selector-rail .rbb-document-browser > .rbb-picker-types {
+  order: 0;
+}
+
+.rbb-selector-rail .rbb-document-browser > .rbb-picker-heading {
+  order: 1;
+  display: block;
+  min-width: 0;
+}
+
+.rbb-selector-rail .rbb-browser-scene,
+.rbb-selector-rail .rbb-browser-scene .rbb-field,
+.rbb-selector-rail .rbb-browser-scene .rbb-dropdown {
+  min-width: 0;
+  width: 100%;
+}
+
+.rbb-selector-rail .rbb-browser-scene .rbb-dropdown-toggle span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbb-selector-rail .rbb-browser-scene .rbb-dropdown-toggle {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Region selection stays in the Scene list. The selected row becomes the
+   editable Region name, keeping one clear name per Region. */
+.rbb-region-choice {
+  min-width: 0;
+}
+
+.rbb-region-choice.is-selected .rbb-picker-row {
+  border-color: var(--color-warm-1, #c39b5a);
+  background: color-mix(in srgb, var(--rbb-surface-raised) 72%, var(--color-warm-1, #c39b5a));
+}
+
+.rbb-region-edit-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.1rem;
+  padding: 0.15rem 0.25rem 0.15rem 0.55rem;
+}
+
+.rbb-region-edit-row input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 1.7rem;
+  padding: 0.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--rbb-ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.rbb-region-edit-row input:focus {
+  outline: 1px solid var(--color-warm-1, #c39b5a);
+  outline-offset: 0.15rem;
+}
+
+.rbb-region-select-toggle {
+  display: grid;
+  place-items: center;
+  width: 1.8rem;
+  min-height: 1.8rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--rbb-ink);
+  cursor: pointer;
+}
+
+.rbb-region-select-toggle:hover,
+.rbb-region-select-toggle:focus-visible {
+  background: color-mix(in srgb, var(--rbb-surface) 50%, var(--color-warm-1, #c39b5a));
+  outline: 0;
+}
+
+.rbb-selector-rail .rbb-document-browser > .rbb-actor-scope,
+.rbb-selector-rail .rbb-document-browser > .rbb-selection-start {
+  order: 2;
+}
+
+.rbb-selector-rail .rbb-document-browser > .rbb-picker-list {
+  display: flex;
+  min-height: 7rem;
+  flex: 1;
+  flex-direction: column;
+  order: 3;
+}
+
+.rbb-selector-rail .rbb-document-browser .rbb-picker-empty {
+  margin: 0;
+  padding: 0.6rem 0.1rem;
+}
+
+.rbb-selector-rail .rbb-selected-heading {
+  flex: 0 0 auto;
+  margin-top: 0.65rem;
+}
+
+.rbb-selector-rail .rbb-region-list {
+  max-height: 8rem;
+  flex: 0 1 auto;
+  overflow: auto;
+}
+
+.rbb-selector-rail .rbb-more-selection {
+  flex: 0 0 auto;
+  margin-top: 0.5rem;
+}
+
+.rbb-no-regions {
+  padding: 1rem 0.2rem;
+  border: 0;
+  border-top: 1px solid #514b43;
+  border-bottom: 1px solid #514b43;
+  border-radius: 0;
+  background: transparent;
+}
+
+.rbb-no-regions i {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .rbb-body {
+    grid-template-columns: 185px minmax(0, 1fr) 185px;
+  }
+
+  .rbb-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .rbb-options-column {
+    border: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .rbb-body {
+    grid-template-columns: 175px minmax(0, 1fr);
+  }
+
+  .rbb-selector-rail {
+    grid-column: 1 / -1;
+    max-height: 18rem;
+    border-top: 1px solid #514b43;
+    border-left: 0;
+  }
+}
+
+/* Last stylesheet rules: retain precedence over the earlier builder skins. */
+.regionwright .window-content { background: rgb(0 0 0 / 35%); }
+
+.regionwright:not(.regionwright-guide) .window-content,
+.regionwright:not(.regionwright-guide) .rbb-shell,
+.regionwright:not(.regionwright-guide) .rbb-workspace,
+.regionwright:not(.regionwright-guide) .rbb-body > .rbb-sidebar { background: rgb(0 0 0 / 35%); }
+
+.regionwright:not(.regionwright-guide) .window-content { backdrop-filter: none; }
+
+.regionwright-guide .window-content,
+.regionwright-guide .rbb-guide-header,
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-progress-footer { background: rgb(0 0 0 / 35%); }
+
+.regionwright-guide .window-content { border-color: rgb(255 255 255 / 18%); }
+
+.regionwright-guide .rbb-guide-header {
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  border-bottom-color: transparent;
+  text-align: center;
+}
+
+.regionwright-guide .rbb-guide-header h2 { text-align: center; }
+
+.regionwright-guide .rbb-guide-actions { padding-top: 0; border-top-color: transparent; }
+
+.regionwright-guide .rbb-guide-progress-footer {
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 1rem 0.9rem;
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress {
+  min-width: 0;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: 0.35rem 0.8rem 0.3rem;
+  border: 1px solid rgb(236 220 191 / 18%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 28%);
+}
+
+.regionwright-guide .rbb-guide-progress-footer .rbb-guide-progress-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+.regionwright-guide .rbb-guided-region-step.is-existing,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(16rem, 1.22fr);
+  align-items: start;
+  gap: 0.85rem 1rem;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-recipe-prompt,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-recipe-prompt { grid-column: 1; }
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  min-width: 0;
+  max-height: 17rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+  .regionwright-guide .rbb-guided-region-step.is-existing,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) { grid-template-columns: 1fr; }
+
+  .regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+  .regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+  .regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+.boss-engine-dialog .window-content {
+  padding: 0.75rem;
+  background: rgb(7 10 14 / 96%);
+  color: #fff;
+}
+
+.boss-engine-dialog .window-header {
+  background: rgb(4 6 9 / 98%);
+  color: #fff;
+}
+
+.boss-engine-panel {
+  display: grid;
+  gap: 0.65rem;
+  color: #fff;
+  text-shadow: none;
+}
+
+.boss-engine-panel h4 {
+  color: #fff;
+  margin: 0.35rem 0 0;
+}
+
+.boss-engine-status,
+.boss-engine-meters,
+.boss-engine-actions,
+.boss-engine-node-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.boss-engine-status {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-light-primary, #555);
+  padding-bottom: 0.4rem;
+}
+
+.boss-engine-meters span,
+.boss-engine-event,
+.boss-engine-panel small {
+  background: rgb(0 0 0 / 62%);
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.35rem 0.5rem;
+}
+
+.boss-engine-panel small {
+  display: block;
+  line-height: 1.35;
+}
+
+.boss-engine-event {
+  min-height: 2.2rem;
+  margin: 0;
+}
+
+.boss-engine-panel button {
+  background: rgb(24 29 36 / 98%);
+  border: 1px solid rgb(255 255 255 / 62%);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.35rem 0.55rem;
+}
+
+.boss-engine-panel button:hover:not(:disabled),
+.boss-engine-panel button:focus-visible {
+  background: rgb(54 63 75 / 98%);
+  border-color: #fff;
+  color: #fff;
+}
+
+.boss-engine-panel button:disabled {
+  background: rgb(18 21 26 / 98%);
+  border-color: rgb(255 255 255 / 28%);
+  color: rgb(255 255 255 / 58%);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.boss-engine-node {
+  flex: 1 1 30%;
+}
+
+.boss-engine-node.disabled {
+  border-color: #4caf50;
+  color: #b9f6ca;
+}
+
+.boss-engine-node.armed {
+  border-color: #e6a23c;
+  color: #ffe0a3;
+}

@@ -1,0 +1,547 @@
+{
+  "status": "INSTALLED",
+  "route": "cav:travel:yard-pond:v1",
+  "before": {
+    "yard": [
+      {
+        "_id": "CAV01R0000000001",
+        "name": "EXT-01 - Cabin Front Porch",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3445,
+              1631,
+              3994,
+              1631,
+              3994,
+              2016,
+              3445,
+              2016
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:1",
+            "intendedDestination": "H-G02",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#78cc28",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000002",
+        "name": "EXT-01 - Iron Maze Gate",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              1481,
+              197,
+              2203,
+              197,
+              2203,
+              703,
+              1481,
+              703
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:2",
+            "intendedDestination": "FM-01",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#ccb828",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000003",
+        "name": "EXT-01 - West Grove Trail",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              19,
+              1284,
+              464,
+              1284,
+              464,
+              1809,
+              19,
+              1809
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:3",
+            "intendedDestination": "EXT-TRAIL",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#95cc28",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000004",
+        "name": "EXT-01 - South Arrival Road",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3314,
+              4247,
+              4013,
+              4247,
+              4013,
+              4772,
+              3314,
+              4772
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:4",
+            "intendedDestination": "OUTSIDE",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#c4cc28",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000005",
+        "name": "EXT-01 - Pond and Dock Approach",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5620,
+              2264,
+              6314,
+              2264,
+              6314,
+              3014,
+              5620,
+              3014
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:5",
+            "intendedDestination": "EXT-02",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#28cbcc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000006",
+        "name": "EXT-01 - Donovan Shack Approach",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              680,
+              909,
+              1448,
+              909,
+              1448,
+              1392,
+              680,
+              1392
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:6",
+            "intendedDestination": "EXT-03",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#cc28a9",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000007",
+        "name": "EXT-01 - Privy Approach",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5784,
+              830,
+              6614,
+              830,
+              6614,
+              1448,
+              5784,
+              1448
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [
+          {
+            "name": "Confirm: Do you wish to proceed?",
+            "type": "teleportToken",
+            "system": {
+              "destinations": [
+                "Scene.xx1rWBiWMLxJPlrw.Region.663WrP9V8tPPOLvt"
+              ],
+              "placement": "center",
+              "snap": false,
+              "choice": true,
+              "revealed": true,
+              "dialog": {
+                "revealed": "Do you wish to proceed?",
+                "unrevealed": "Do you wish to proceed?"
+              },
+              "transition": {
+                "type": null,
+                "duration": 1500
+              }
+            },
+            "flags": {
+              "dicebox-campaign-helper": {
+                "routeKey": "cav:travel:yard-privy:v1"
+              }
+            },
+            "_id": "mVLjaUH5tb5SyQOO",
+            "disabled": false,
+            "_stats": {
+              "coreVersion": "14.367",
+              "systemId": "dnd5e",
+              "systemVersion": "5.3.3",
+              "createdTime": 1792880524025,
+              "modifiedTime": 1792880524025,
+              "lastModifiedBy": "4c2ow5laZtzUNigr",
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "exportSource": null
+            }
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:7",
+            "intendedDestination": "EXT-04",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#28cc58",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "_id": "CAV01R0000000008",
+        "name": "EXT-01 - Family Carriage",
+        "levels": [
+          "defaultLevel0000"
+        ],
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              2269,
+              2606,
+              2939,
+              2606,
+              2939,
+              3300,
+              2269,
+              3300
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "behaviors": [],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "objectKey": "cav:ext01:region:8",
+            "intendedDestination": "CARRIAGE",
+            "inertUntilApprovedGameplayPhase": true
+          }
+        },
+        "color": "#28b7cc",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0
+        },
+        "_shapeConstraints": null
+      },
+      {
+        "name": "EXT-01 - Arrival from Privy",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 5450,
+            "y": 1270,
+            "width": 210,
+            "height": 180,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "dicebox-campaign-helper": {
+            "routeKey": "cav:travel:yard-privy:v1",
+            "kind": "landing"
+          }
+        },
+        "_id": "hc9kcjO4lIsV08MJ",
+        "color": "#28cc81",
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        },
+        "levels": [],
+        "restriction": {
+          "enabled": false,
+          "type": "move",
+          "priority": 0
+        },
+        "attachment": {
+          "token": null
+        },
+        "behaviors": [],
+        "visibility": 4,
+        "highlightMode": "shapes",
+        "displayMeasurements": false,
+        "hidden": false,
+        "locked": false,
+        "ownership": {
+          "default": 0,
+          "4c2ow5laZtzUNigr": 3
+        },
+        "_shapeConstraints": null
+      }
+    ],
+    "pond": []
+  },
+  "landing": {
+    "yard": "Scene.CAVEXT01Yard0001.Region.7NLNMtl8pzMP21aU",
+    "pond": "Scene.CAVEXT02Scene001.Region.wwls4eQRInzw8RxS"
+  },
+  "exit": {
+    "yard": "Scene.CAVEXT01Yard0001.Region.CAV01R0000000005",
+    "pond": "Scene.CAVEXT02Scene001.Region.5RJkabcJJbVAI4WY"
+  }
+}

@@ -1,0 +1,5 @@
+﻿# Rosewater Reliquary standalone final test — 2026-10-24
+
+Installed and source three-ring-reliquary.js now accept configurable symbols and solution while preserving existing demo defaults. Backup at docs/cabin-ashen-veil/rosewater-before-configurable-20261024.js. No other shared module changes. Confirmed with live Foundry non-GM Player 1 in cabin-in-the-ashen-veil: incorrect central press returns failure; rotating outer 1, middle 3, inner 5 then pressing central seal returns success; reset returns all rings to zero. Visual ring rotation checked earlier (0deg to 60deg). This validates standalone mechanics only.
+
+Owner-approved concentric artwork not found in Windows folders; existing ornamental CSS remains provisional. Actual lore symbols, final combination, hint, reward and target are undecided; solution [1,3,5] is TEST ONLY, not canon. No GM world Region wiring/persistence or reward completion tested. Do not mark fully complete; preserve approved lore and don't infer answer from generic art.

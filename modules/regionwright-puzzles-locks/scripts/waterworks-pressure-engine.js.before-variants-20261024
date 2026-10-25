@@ -1,0 +1,27 @@
+﻿// Pure Waterworks puzzle state machine. Foundry writes and inventory checks
+// belong to the authenticated GM/Region adapter, never this engine.
+export const WATERWORKS_PRESSURE_VERSION = 1;
+export const WATERWORKS_VALVES = Object.freeze(['red','blue','green','yellow','purple']);
+const integer = n => Number.isInteger(n) && n >= 0 && n <= 5;
+export function createWaterworksPressureConfig({ targets = [2,4,3,1,5] } = {}) {
+  if (!Array.isArray(targets) || targets.length !== 5 || !targets.every(integer)) throw new Error('Five valve targets from 0 to 5 are required.');
+  return Object.freeze({ version: WATERWORKS_PRESSURE_VERSION, valves: Object.freeze(WATERWORKS_VALVES.map((id,i)=>Object.freeze({id,target:targets[i]}))) });
+}
+export function evaluateWaterworksPressure(config, state = {}) {
+  if (config?.version !== WATERWORKS_PRESSURE_VERSION || !Array.isArray(config.valves) || config.valves.length !== 5 || config.valves.some((v,i)=>v.id !== WATERWORKS_VALVES[i] || !integer(v.target))) throw new Error('Invalid Waterworks configuration.');
+  const positions = state.positions ?? {};
+  const valves = Object.freeze(config.valves.map(v=>Object.freeze({id:v.id,target:v.target,position:positions[v.id],matched:integer(positions[v.id]) && positions[v.id]===v.target})));
+  const blockageCleared = state.blockageCleared === true;
+  const balanced = valves.every(v=>v.matched);
+  return Object.freeze({blockageCleared,balanced,success:blockageCleared && balanced,valves});
+}
+export function adjustWaterworksValve(config,state,id,delta) {
+  if (!WATERWORKS_VALVES.includes(id) || ![-1,1].includes(delta)) throw new Error('Invalid valve adjustment.');
+  evaluateWaterworksPressure(config,state);
+  const previous = state?.positions?.[id] ?? 0;
+  if (!integer(previous)) throw new Error('Invalid previous valve position.');
+  return Object.freeze({positions:Object.freeze({...state?.positions,[id]:Math.max(0,Math.min(5,previous+delta))}),blockageCleared:state?.blockageCleared===true});
+}
+export function resetWaterworksPressure() {
+  return Object.freeze({positions:Object.freeze(Object.fromEntries(WATERWORKS_VALVES.map(id=>[id,0]))),blockageCleared:false});
+}

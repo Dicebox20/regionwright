@@ -1,0 +1,49 @@
+{
+  "operation": "cav.approved-item-artwork.attach",
+  "world": "cabin-in-the-ashen-veil",
+  "date": "2026-10-24T21:58:13.856Z",
+  "before": [
+    {
+      "id": "nRVZJL9JOwEwfnLq",
+      "name": "Aqueduct Gate Handle",
+      "old": "icons/containers/bags/pouch-leather-brown.webp",
+      "next": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Aqueduct_Gate_Handle.png"
+    },
+    {
+      "id": "yVW4Cq6Z919JnK9T",
+      "name": "Rufus’s Collar",
+      "old": "icons/containers/bags/pouch-leather-brown.webp",
+      "next": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Rufus_Collar.png"
+    },
+    {
+      "id": "GXLYq6Tf4OgPNbkU",
+      "name": "Prayer of Devotion",
+      "old": "icons/containers/bags/pouch-leather-brown.webp",
+      "next": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Prayer_of_Devotion.png"
+    },
+    {
+      "id": "mN1dk0qlr7hyfupk",
+      "name": "Rufus’s First Glass Eye",
+      "old": "icons/containers/bags/pouch-leather-brown.webp",
+      "next": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Rufus_First_Button_Eye.png"
+    },
+    {
+      "id": "QIH1ugEWGOO1U6LN",
+      "name": "Rufus’s Second Glass Eye",
+      "old": "icons/containers/bags/pouch-leather-brown.webp",
+      "next": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Rufus_Second_Button_Eye.png"
+    }
+  ],
+  "missing": [
+    "Ornate_Music_Box.png",
+    "Lantern_Oil.png",
+    "Prayer_of_Protection.png",
+    "Wooden_Oar.png"
+  ],
+  "deferredTentative": [
+    "Carriage_Key.png",
+    "Brass_Tiny_Key.png",
+    "Old_Iron_Key.png",
+    "Weathered_Key.png"
+  ]
+}

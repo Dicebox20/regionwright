@@ -1,0 +1,47 @@
+{
+  "status": "FIXED",
+  "before": {
+    "name": "Confirm travel",
+    "type": "teleportToken",
+    "system": {
+      "destinations": [
+        "Scene.CAVSG05Scene0001.Region.ktyQvjNWXPSJmlPH"
+      ],
+      "placement": "center",
+      "snap": false,
+      "choice": true,
+      "revealed": true,
+      "dialog": {
+        "revealed": "Do you wish to proceed?",
+        "unrevealed": "Do you wish to proceed?"
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500
+      }
+    },
+    "flags": {
+      "dicebox-campaign-helper": {
+        "group": "grove-grid-v1"
+      }
+    },
+    "_id": "9LWzojf3rFeaeLDF",
+    "disabled": false,
+    "_stats": {
+      "coreVersion": "14.367",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3",
+      "createdTime": 1792880802449,
+      "modifiedTime": 1792880802449,
+      "lastModifiedBy": "4c2ow5laZtzUNigr",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "source": "Scene.CAVSG06Scene0001.Region.ntZGRlWeQzG7wWap",
+  "target": "Scene.CAVSG05Scene0001.Region.vpZI5S0vVcYxDHXI",
+  "now": [
+    "Scene.CAVSG05Scene0001.Region.vpZI5S0vVcYxDHXI"
+  ]
+}

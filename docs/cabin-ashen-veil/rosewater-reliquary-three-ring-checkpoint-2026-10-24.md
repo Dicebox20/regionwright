@@ -1,0 +1,5 @@
+﻿# Rosewater Reliquary — Three-Ring Puzzle checkpoint (2026-10-24)
+
+Owner introduced a sixth distinct Cabin puzzle inspired by Skyrim Nordic rotating-symbol rings. Regionwright rotating-lock engine is a pick-and-torque system and is NOT suitable. Added a new independent pure engine in modules/regionwright-puzzles-locks/scripts/three-ring-reliquary-engine.js with 3 rings, unique configurable symbol alphabet, distinct clockwise/counterclockwise rotation, exact solution check, validation and reset. Eight Node assertions passed. Added standalone text-based test dialog scripts/three-ring-reliquary.js and entry to existing centralized standalone-puzzles.js catalog/HUD. Syntax passed.
+
+Not yet approved/verified: specific symbols, canonical alignment order, hint logic, final reward/door, asset segmentation and visual layout. Engine uses provisional symbols and test solution; no canon answer inferred from art. No installed module or Foundry world changes, and no live player test. Artwork from user message must be transferred and integrated with visual concentric rings before acceptance. Preserve Waterworks as separate puzzle and existing approved artwork.

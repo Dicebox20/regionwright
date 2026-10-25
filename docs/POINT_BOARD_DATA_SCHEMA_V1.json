@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Regionwright Coded Point-Board Data v1",
+  "description": "Human-authored active cells, palette, layers, and frames for deterministic Canvas 2D rendering. Runtime validation additionally limits total frames to 128, total cached raster area to 4,194,304 cells, and active cells to 250,000.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "formatVersion",
+    "width",
+    "height",
+    "palette",
+    "layers"
+  ],
+  "properties": {
+    "format": {
+      "const": "regionwright.point-board"
+    },
+    "formatVersion": {
+      "const": 1
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 512
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 512
+    },
+    "palette": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "string",
+        "pattern": "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+      }
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/layer"
+      }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "integer", "minimum": 0 },
+        { "type": "integer", "minimum": 0 },
+        { "type": "integer", "minimum": 0, "maximum": 15 }
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "walk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["startFrame", "frameCount", "fps"],
+      "properties": {
+        "startFrame": { "type": "integer", "minimum": 0 },
+        "frameCount": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "fps": { "type": "number", "exclusiveMinimum": 0, "maximum": 30 }
+      }
+    },
+    "animation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "idleFrame": { "type": "integer", "minimum": 0 },
+        "walk": { "$ref": "#/$defs/walk" }
+      }
+    },
+    "layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "frames"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{0,47}$"
+        },
+        "frames": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/point" }
+          }
+        },
+        "animation": { "$ref": "#/$defs/animation" }
+      }
+    }
+  }
+}

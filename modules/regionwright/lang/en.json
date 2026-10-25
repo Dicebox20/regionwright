@@ -1,0 +1,8 @@
+{
+  "Regionwright.Enable Region writes": "Enable Region Behavior writes",
+  "Regionwright.Enable Region writesHint": "Allow approved plans to change only Region Behaviors owned by this module.",
+  "Regionwright.Enable diagnostic logging": "Enable diagnostic logging",
+  "Regionwright.Enable diagnostic loggingHint": "Show non-mutating capability and selection diagnostics in the browser console when requested from the Builder.",
+  "Regionwright.Preview detail": "Preview detail",
+  "Regionwright.Preview detailHint": "Choose how much serialized plan detail the Builder shows during review."
+}

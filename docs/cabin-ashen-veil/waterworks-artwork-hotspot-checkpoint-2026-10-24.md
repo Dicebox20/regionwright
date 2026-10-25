@@ -1,0 +1,5 @@
+﻿# Waterworks artwork hotspot integration checkpoint 2026-10-24
+
+Owner supplied 1536x1024 image of the five-color pressure apparatus, accepted as current visual reference. Image has red, blue, green, yellow, purple upper valves; supply valve to left (~19%,58%) and a large main red valve at bottom (~50%,82%). UI source now renders a 3:2 scalable image board with hotspots for five upper valves (~26.8%,38%;38.6%,38%;50.8%,38%;62.4%,38%;73.5%,38%), supply and main controls, with accessible labels and original numeric controls. Source syntax verified.
+
+Asset file `assets/waterworks-pressure-approved.png` is REFERENCED but not installed on the owner's PC in this pass. Owner provided source image in ChatGPT turn; transfer to local module is required before visual test. UI remains a standalone prototype: supply/main toggles are preview-level, not authoritative world state. No installed module deployment, live write, or player playtest. Test target pressures are placeholder values. Next: physically install approved art, align hotspot locations visually, integrate supply and main gate into pure engine, then test in non-GM session.

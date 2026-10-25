@@ -1,0 +1,3 @@
+﻿# Pressure variants, artwork packaging checkpoint — 2026-10-24
+
+Two independent instances of one pressure engine: Waterworks 5 valves, Boiler 2 valves. Pure success check now allows boiler balancing without Waterworks-only blockage gate, and UI hides boiler intake/main and blockage-test controls. Local JS syntax passed. Both approved art sources were verified in ChatGPT sandbox and packaged at regionwright_pressure_approved_assets_2026-10-24.zip with expected relative assets/ filenames. Assets are not yet transferred to owner's Windows install. Standalone UI remains source-only and not player-playtested. Pressure solutions remain placeholders.

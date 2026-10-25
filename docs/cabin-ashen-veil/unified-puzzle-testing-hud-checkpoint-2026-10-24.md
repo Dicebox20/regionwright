@@ -1,0 +1,6 @@
+﻿# Unified Regionwright Puzzles & Locks Test HUD checkpoint
+2026-10-24. Source only; not deployed or visually tested.
+
+Single existing GM-only Puzzles & Locks HUD modified in modules/regionwright-puzzles-locks/scripts/puzzle-hud.js. All 7 currently supported standalone families listed simultaneously in one panel: Tumbler Lock, Rotation Lock, Mirror Redirect, Timing Dial, Ingredient Mixing, Spine Mosaic, Sliding Mosaic. Each row has Test and Reset test. Reset test opens a new seeded isolated standalone test session; intentionally does NOT reset live Foundry puzzle state, documents, rewards or other users' sessions. Original player deployment controls retained. Verified syntax with node --check and presence of UI event wiring; no browser/Foundry UI interaction test yet.
+
+NEXT: run local isolated HUD smoke test and verify reset behavior with a launched standalone dialog. If a true reset of an already-open test dialog is required, implement session tracking with explicit close/reopen and no live writes. Do not conflate test reset with clear/configure APIs. Existing Cabin-only Waterworks pressure and Roof Chimney Clock are not yet standalone Regionwright puzzle families; add them to the same HUD only when their engines exist. No Foundry writes or product stage changes.

@@ -1,0 +1,322 @@
+﻿{
+    "date":  "2026-10-24",
+    "world":  "cabin-in-the-ashen-veil",
+    "scenes":  32,
+    "source":  "all accepted battlemaps pack plus house working blueprint and live GM Region inventory",
+    "ready":  [
+                  "H-G02 Foyer \u003c-\u003e H-G06 Great Room: installed, configuration verified, token traversal pending"
+              ],
+    "groups":  {
+                   "exterior":  [
+                                    {
+                                        "scene":  "EXT-01 - Carriage Yard and Cabin Front",
+                                        "id":  "CAVEXT01Yard0001",
+                                        "regionCount":  8,
+                                        "navigationRegions":  [
+                                                                  "EXT-01 - Cabin Front Porch",
+                                                                  "EXT-01 - Iron Maze Gate",
+                                                                  "EXT-01 - West Grove Trail",
+                                                                  "EXT-01 - South Arrival Road",
+                                                                  "EXT-01 - Pond and Dock Approach",
+                                                                  "EXT-01 - Donovan Shack Approach",
+                                                                  "EXT-01 - Privy Approach"
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-02 - Pond and Sluice Gate",
+                                        "id":  "CAVEXT02Scene001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-04 - Privy",
+                                        "id":  "xx1rWBiWMLxJPlrw",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-05 - Forgotten Gazebo",
+                                        "id":  "CAVEXT05Scene001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-06 - Greenhouse Interior",
+                                        "id":  "CAVEXT06Scene001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-07 - Boathouse Clearing",
+                                        "id":  "CAVEXT07Scene001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "EXT-TRAIL - Grove Bathhouse Fork",
+                                        "id":  "CAVTRAILScene001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    },
+                                    {
+                                        "scene":  "FM - Northwestern Forest Maze",
+                                        "id":  "CAVFM01Scene0001",
+                                        "regionCount":  0,
+                                        "navigationRegions":  [
+
+                                                              ],
+                                        "status":  "endpoint survey required"
+                                    }
+                                ],
+                   "grove":  [
+                                 {
+                                     "scene":  "SG-01 - Northwest Grove Corner",
+                                     "id":  "CAVSG01Scene0001",
+                                     "regionCount":  1,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-02 - Northern Processional Walk",
+                                     "id":  "CAVSG02Scene0001",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-03 - Northeast Grove Corner",
+                                     "id":  "CAVSG03Scene0001",
+                                     "regionCount":  1,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-04 - Western Grove Entrance",
+                                     "id":  "CAVSG04Scene0001",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-05 - Memorial Clearing",
+                                     "id":  "CAVSG05Scene0001",
+                                     "regionCount":  1,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-06 - Eastern Grove Walk",
+                                     "id":  "CAVSG06Scene0001",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-07 - Southwest Grove Corner",
+                                     "id":  "CAVSG07Scene0001",
+                                     "regionCount":  1,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-08 - Southern Grove Walk",
+                                     "id":  "CAVSG08Scene0001",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "SG-09 - Southeast Grove Corner",
+                                     "id":  "CAVSG09Scene0001",
+                                     "regionCount":  1,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 }
+                             ],
+                   "house":  [
+                                 {
+                                     "scene":  "H-A01 - Central Attic",
+                                     "id":  "UNEdA6iy6nk1Xuga",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-A02 - West Attic Storage",
+                                     "id":  "KwpmPrYgEC7KQVCZ",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-A03 - North Attic Storage",
+                                     "id":  "gDqaEOR4qaB5IOut",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-A04 - East Attic Storage",
+                                     "id":  "nyF5EX0JiEu23C3p",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-B01 - Allens Basement Workshop",
+                                     "id":  "G6NMonfCwMvNzipL",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-B02 - Secured Keystone Vault",
+                                     "id":  "tjTpG2RVZNoCqRLh",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-B03 - Basement Supply Closet",
+                                     "id":  "ThVGl68hUmiOhWEA",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-G02 - Foyer and Basement Stairwell",
+                                     "id":  "CAVHG02Scene0001",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-G06 - Great Room",
+                                     "id":  "CAVHG06GreatRoom",
+                                     "regionCount":  7,
+                                     "navigationRegions":  [
+                                                               "H-G06 - Foyer Doorway",
+                                                               "H-G06 - Dining Room Doorway",
+                                                               "H-G06 - Allen Study Doorway",
+                                                               "H-G06 - Rear Family Room Doorway",
+                                                               "H-G06 - Upstairs Staircase"
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 },
+                                 {
+                                     "scene":  "H-R01 - Roof Chimney Clock",
+                                     "id":  "LhtyO17QenuCExsb",
+                                     "regionCount":  0,
+                                     "navigationRegions":  [
+
+                                                           ],
+                                     "status":  "endpoint survey required"
+                                 }
+                             ],
+                   "aqueductBath":  [
+                                        {
+                                            "scene":  "AQ-01 - Unified Aqueduct Network",
+                                            "id":  "CAVAQ01Scene0001",
+                                            "regionCount":  0,
+                                            "navigationRegions":  [
+
+                                                                  ],
+                                            "status":  "endpoint survey required"
+                                        },
+                                        {
+                                            "scene":  "BATH - Unified Bathhouse Surface",
+                                            "id":  "CAVBATHScene0001",
+                                            "regionCount":  0,
+                                            "navigationRegions":  [
+
+                                                                  ],
+                                            "status":  "endpoint survey required"
+                                        }
+                                    ],
+                   "undercroft":  [
+                                      {
+                                          "scene":  "UND-01 - Undercroft Approach Keystone Door",
+                                          "id":  "CN5fkK2QLUELBGGR",
+                                          "regionCount":  0,
+                                          "navigationRegions":  [
+
+                                                                ],
+                                          "status":  "endpoint survey required"
+                                      },
+                                      {
+                                          "scene":  "UND-02 - Donovan Sophia Sealed Refuge",
+                                          "id":  "ywpIpQDrkMLIgUP0",
+                                          "regionCount":  0,
+                                          "navigationRegions":  [
+
+                                                                ],
+                                          "status":  "endpoint survey required"
+                                      },
+                                      {
+                                          "scene":  "UND-03 - Voss Ritual Chamber",
+                                          "id":  "hLU4DzVctEGdsuaz",
+                                          "regionCount":  0,
+                                          "navigationRegions":  [
+
+                                                                ],
+                                          "status":  "endpoint survey required"
+                                      }
+                                  ]
+               },
+    "notReady":  [
+
+                 ]
+}

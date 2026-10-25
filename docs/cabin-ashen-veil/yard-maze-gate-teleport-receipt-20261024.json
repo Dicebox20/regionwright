@@ -1,0 +1,68 @@
+{
+  "status": "INSTALLED",
+  "before": {
+    "yardGate": {
+      "_id": "CAV01R0000000002",
+      "name": "EXT-01 - Iron Maze Gate",
+      "levels": [
+        "defaultLevel0000"
+      ],
+      "shapes": [
+        {
+          "type": "polygon",
+          "points": [
+            1481,
+            197,
+            2203,
+            197,
+            2203,
+            703,
+            1481,
+            703
+          ],
+          "hole": false,
+          "origin": null
+        }
+      ],
+      "behaviors": [],
+      "flags": {
+        "dicebox-campaign-helper": {
+          "objectKey": "cav:ext01:region:2",
+          "intendedDestination": "FM-01",
+          "inertUntilApprovedGameplayPhase": true
+        }
+      },
+      "color": "#ccb828",
+      "elevation": {
+        "bottom": null,
+        "top": null,
+        "topInclusive": false
+      },
+      "restriction": {
+        "enabled": false,
+        "type": "move",
+        "priority": 0
+      },
+      "attachment": {
+        "token": null
+      },
+      "visibility": 4,
+      "highlightMode": "shapes",
+      "displayMeasurements": false,
+      "hidden": false,
+      "locked": false,
+      "ownership": {
+        "default": 0
+      },
+      "_shapeConstraints": null
+    },
+    "mazeRegions": []
+  },
+  "route": "cav:travel:yard-maze:v1",
+  "source": "Scene.CAVEXT01Yard0001.Region.CAV01R0000000002",
+  "return": "Scene.CAVFM01Scene0001.Region.t9MFbLLnSR173tGH",
+  "landings": [
+    "Scene.CAVEXT01Yard0001.Region.Rh0YRP4oljbs9s1D",
+    "Scene.CAVFM01Scene0001.Region.EYJnPlYUWqtifKIi"
+  ]
+}

@@ -1,0 +1,194 @@
+/* Loaded after the main skin so every guided prompt keeps a readable scale. */
+.regionwright-guide .window-content {
+  height: auto;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.regionwright-guide .rbb-guide-content { font-size: clamp(16px, 2.5cqi, 20px); }
+
+/* Let every setup prompt wrap tightly around its current question. Long lists
+   still scroll inside Foundry's natural viewport limit. */
+.regionwright-guide .rbb-guide-content {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+
+.regionwright-guide .rbb-guide-task,
+.regionwright-guide .rbb-guide-review {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.regionwright-guide .rbb-guide-task {
+  position: static;
+  padding-bottom: 4.25rem;
+}
+
+.regionwright-guide .rbb-guide-step-content { overflow: visible; }
+
+.regionwright-guide .rbb-guide-header {
+  min-height: 4.8rem;
+  padding-block: 1rem;
+}
+
+.regionwright-guide .rbb-guide-header h2 { font-size: clamp(24px, 3.2cqi, 28px); }
+
+.regionwright-guide .rbb-recipe-prompt {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.regionwright-guide .rbb-field,
+.regionwright-guide .rbb-check,
+.regionwright-guide .rbb-dropdown-option,
+.regionwright-guide .rbb-button { font-size: 1em; }
+
+.regionwright-guide .rbb-picker-row,
+.regionwright-guide .rbb-guide-choice {
+  min-height: 3.55rem;
+  padding: 0.78rem 1rem;
+}
+
+.regionwright-guide .rbb-picker-row strong,
+.regionwright-guide .rbb-guide-choice strong { font-size: 17px; }
+
+.regionwright-guide .rbb-field > span,
+.regionwright-guide .rbb-dropdown-toggle,
+.regionwright-guide .rbb-check > span { font-size: 16px; }
+
+/* Every guided prompt uses the same footer: controls at its corners and
+   progress fixed at its visual center. */
+.regionwright-guide .rbb-guide-actions {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  padding: 0.45rem 0.65rem 0.65rem;
+}
+
+.regionwright-guide .rbb-guide-action-start,
+.regionwright-guide .rbb-guide-action-end {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.regionwright-guide .rbb-guide-action-start { justify-content: flex-start; }
+.regionwright-guide .rbb-guide-action-end { justify-content: flex-end; }
+.regionwright-guide .rbb-guide-actions .rbb-button-quiet { margin-left: 0; }
+
+/* Keep document and choice menus centered in every prompt. Earlier skins
+   put some pickers into a right-hand column; guided setup is clearer when
+   the current choice is the visual focus. */
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list),
+.regionwright-guide .rbb-guided-region-step.is-existing,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.regionwright-guide .rbb-guide-step-content:has(> .rbb-prompt-document-list) > .rbb-prompt-document-list,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-picker-list,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-reference-picker,
+.regionwright-guide .rbb-guide-choice-list {
+  width: min(100%, 22rem);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-dropdown,
+.regionwright-guide .rbb-guided-region-step.is-existing > .rbb-scene-guidance,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-dropdown,
+.regionwright-guide .rbb-reference-field:has(.rbb-reference-picker) > .rbb-scene-guidance {
+  width: 100%;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-footer {
+  display: block;
+  padding: 0;
+  background: transparent;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  min-width: 0;
+  padding: 0.2rem 0.42rem;
+  border-color: rgb(236 220 191 / 14%);
+  background: rgb(0 0 0 / 18%);
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track { gap: 0.22rem; }
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-step-track li > span:first-child {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-width: 1px;
+  font-size: 0.65rem;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-guide-progress-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.regionwright-guide .rbb-guide-actions .rbb-button {
+  min-height: 2.9rem;
+  font-size: 15px;
+}
+
+@media (max-width: 480px) {
+  .regionwright-guide .rbb-guide-actions {
+    grid-template-columns: auto 1fr auto;
+    gap: 0.2rem;
+    padding-inline: 0.6rem;
+  }
+
+  .regionwright-guide .rbb-guide-actions .rbb-button { padding-inline: 0.55rem; }
+  .regionwright-guide .rbb-guide-actions .rbb-guide-progress-label { display: none; }
+}
+
+/* Preserve Foundry's default colors while giving every Regionwright scroll bar
+   a larger, easier-to-grab visual target. */
+.regionwright .window-content,
+.regionwright .rbb-picker-list,
+.regionwright .rbb-prompt-document-list,
+.regionwright .rbb-reference-picker,
+.regionwright .rbb-document-browser,
+.regionwright .rbb-guide-step-content {
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
+}
+
+.regionwright-guide .rbb-region-draw-reminder {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.7rem;
+  color: var(--color-text-secondary, #b8b1a4);
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.regionwright-guide .rbb-region-draw-reminder i { color: var(--color-warm-1, #c39b5a); }
+
+.regionwright *::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}

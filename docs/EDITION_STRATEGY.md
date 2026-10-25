@@ -1,0 +1,82 @@
+# Regionwright module strategy and handoff
+
+Status: three standalone packages are installed in the main Foundry data profile. The world module pass was completed and GM-verified on 2026-10-18 in Foundry v14.367. On 2026-10-19, Puzzles & Locks 0.1.2 was also GM-tested in a new clean `Regionwright Puzzle Test` world; this does not change any campaign worlds. Testmap and The Forgotten Realms have Studio, Puzzles & Locks, and Hunting & Gathering active; Tuesday Campaign has Studio and Puzzles & Locks active with Hunting & Gathering disabled. Warhammer and Acquisitions Incorporated were left unchanged. The old monolith, Fishing, and Mining module folders are retired from active module paths. No Regions tied to the retired modules were repaired, per the user's direction. The Sliding Mosaic GM Door flow was solved end-to-end and its Region setup/handler was exercised; connected-player gameplay and an actual token crossing remain unverified.
+
+## Foundry installation and world audit (2026-10-18)
+
+- Active `Data/modules` contains only `regionwright` 0.2.0 (Studio), `regionwright-puzzles-locks` 0.1.1 (Puzzles & Locks), and `regionwright-hunting-gathering` 0.4.2 (Hunting & Gathering). The old monolith, Fishing, Mining, and prior H&G folders are reversibly retained under `C:/Users/rujie/AppData/Local/FoundryVTT/Backups/regionwright-split-preinstall-20261018/retired-installed-modules/` and in the pre-install snapshot.
+- A scan of 57 candidate Foundry `Data/modules` locations found only those three active Regionwright folders and no old Fishing/Mining installations or older Regionwright package versions.
+- Installed folders match their built folders file-for-file by SHA-256. The three release ZIPs were streamed and verified against their sidecar SHA-256 values. Focused compatibility checks passed (3/3) for H&G path and flag migration, retry reporting, and the Puzzles & Locks self-owned HUD macro path.
+- The complete pre-install snapshot ZIP is `C:/Users/rujie/AppData/Local/FoundryVTT/Backups/regionwright-split-preinstall-20261018/regionwright-foundry-preinstall-complete-20261018.zip`, containing all five main worlds, all four pre-install module folders, and the two loose files at `Data/worlds` root. SHA-256: `540a6d2c9fd1d29c0bbd139e0ce7d709c699b02cb4b7bbe5b00b83f52a788ffb`. Its receipt is beside it.
+- The five main worlds have `lastPlayed` dates from 2026-09-20 through 2026-10-17, so none met the over-30-day retirement cutoff on 2026-10-18. Thirty-six older disposable test-world copies were moved into the recoverable `Backups/worlds/retired-disposable-worlds-20261018/` tree after ZIP verification; seven newer alternate test copies were kept. The ZIP digest is `6677a9397870bdb3641251ce8b26db17b4aef49a1329dbc7c4e2ca64f720b774`.
+- The pre-install read-only settings showed Puzzles & Locks needed enabling in Testmap, The Forgotten Realms, and Tuesday Campaign; Warhammer D&D Development World and Acquisitions Incorporated had no related modules enabled and were left unchanged. The 2026-10-18 runtime pass below records the saved post-install states.
+
+## World module runtime pass (2026-10-18)
+
+- **Testmap**: Studio, Puzzles & Locks, and Hunting & Gathering active in Foundry as Gamemaster. Puzzles & Locks reports `legacySettingsMigrated=true` and `enablePuzzleWrites=true`. H&G's legacy flag migration ran. The first standalone H&G startup exposed a Foundry v14 error when `getFlag()` addressed the inactive `regionwright-fishing` scope; H&G 0.4.2 now reads raw legacy flags first and guards the fallback. Repeating the same Testmap GM startup produced no Fishing installer error. The rebuilt package's installed files match its build; release ZIP SHA-256: `b7c1ead7d84adf51e754d973316ef2c3dbc1f43085dfbfa953f84fefacb07dad`. The superseded H&G 0.4.1 ZIP and sidecar are archived at `archives/regionwright-hunting-gathering-v0.4.1.zip`.
+- **The Forgotten Realms**: Studio, Puzzles & Locks, and Hunting & Gathering active after Foundry's reload prompt. The Puzzles & Locks settings migration completed. GM runtime readback found no stale `regionwright-fishing` or `regionwright-mining` document flag keys and no Regionwright startup error. An unrelated invalid `startuptup.backup-20261003T185058Z` module warning was observed and left untouched.
+- **Tuesday Campaign**: Studio and Puzzles & Locks active after the saved module configuration and Foundry reload. Hunting & Gathering remains disabled. GM runtime readback reports `legacySettingsMigrated=true`, `enablePuzzleWrites=true`, and no active legacy Fishing or Mining module IDs.
+- **Warhammer D&D Development World** and **Acquisitions Incorporated**: left unchanged, consistent with the pre-install read-only inspection.
+- The setup list contains the five main worlds. The 36 older disposable copies remain in the verified recoverable archive; no further world was deleted. The user explicitly directed that Regions dependent on the retired modules need no repairs, and no Region behaviors were changed. These are GM startup and settings checks, not player-facing gameplay acceptance.
+
+## Product ownership
+
+| Product | Foundry ID | Owns |
+| --- | --- | --- |
+| **Regionwright: Studio** | `regionwright` | Region authoring and native behavior planning, Studio workspace and activities, traps, Boss Engine, and current campaign-specific Region automation. |
+| **Regionwright: Puzzles & Locks** | `regionwright-puzzles-locks` | Tumbler Lock, Rotation Lock, Mirror Redirect, Timing Dial, Ingredient Mixing, Spine Mosaic, Sliding Mosaic, setup hub, game runtime, movement guard, and Puzzle HUD. |
+| **Regionwright: Hunting & Gathering** | `regionwright-hunting-gathering` | Hunting, Fishing, Mining, catalogs, item packs, migrations, macros, and H&G HUD. |
+
+The module source of truth is `modules/<Foundry ID>/`. Each module has its own manifest, runtime entrypoint, styles, README, and release artifact. The modules do not require one another, and no runtime code is imported through a sibling module folder.
+
+## Optional compatibility contract
+
+- Studio retains ID `regionwright`, existing Region flags, and its Region-write setting. It exposes `api.puzzlesLocks` as a safe optional bridge to the Puzzles & Locks catalog, setup hub, and setup API. Missing Puzzles & Locks leaves Studio available.
+- Puzzles & Locks uses its own setting and socket namespace but deliberately keeps existing document flags under `regionwright` and existing `regionwright:standalone:*` IDs. Its first active-GM migration reads the former `regionwright.enablePuzzleWrites` value. The old setting remains hidden in Studio for this read path.
+- Studio's Boss Engine looks up Rotation/Mirror game openers through the Puzzles & Locks API and keeps its fallback when that module is absent.
+- Studio exposes campaign support under `api.campaign` and retains `api.premium` as a compatibility alias for existing campaign macros. Reusable puzzle games are no longer exposed or owned by Studio.
+- Hunting & Gathering preserves its existing module ID, API namespaces, pack and document identifiers, native Foundry HUD styling, and Fishing/Mining legacy migration behavior.
+
+The Puzzles & Locks API makes the seven games and HUD available to other modules. The broader activation/composition contract—how successful puzzles or traps trigger Door unlocks or Region activation—remains a product-design task; this extraction preserves the existing behaviors and data without claiming that contract is finished.
+
+## HUD and styling direction
+
+The modules use Foundry v14 DialogV2/native application patterns. Standard Foundry form controls, `standard-form`, and native surfaces own the common HUD appearance; module CSS handles layout, map feedback, and game-specific play areas. Puzzles & Locks has its own Scene Control hub and HUD. H&G keeps its native `nav.tabs` and `standard-form` pattern. Studio keeps its Builder and campaign windows.
+
+## Future visual direction
+
+The user has confirmed that coded pixel-board / point-grid rendering is intended to replace all artwork across Studio, Puzzles & Locks, and Hunting & Gathering, including every Puzzles & Locks game, and to guide future modules. Deer and bear are the first implementation pilot. The visual source is explicit X/Y cell data; JavaScript draws and sequences those cells inside Foundry. This deterministic code rendering does not use generative AI. H&G has a Canvas 2D coded-board renderer, data schema, build validator, blank development editor, and a responsive per-layer canvas renderer. The 240 × 160 deer board and forest are now integrated into Hunting and copied into the local H&G 0.4.2 installation; bear remains staged. The installed source build was verified against all 84 packaged files, and the 16 pre-existing compendium LevelDB files were preserved by hash. A pre-install module copy is at `C:/Users/rujie/AppData/Local/FoundryVTT/Backups/regionwright-point-board-pilot-preinstall-20261018/`. Focused tests, H&G build, and module-source checks pass, but no Foundry startup, shot interaction, or player-facing visual review has been performed since the update. The full artwork inventory and migration remain outstanding. The design is informed by Game Boy Color tile/palette and Game Boy Advance layer/sprite techniques. See the [Visual Art Direction Roadmap](ART_DIRECTION_ROADMAP.md) for current status, research, performance starting values, rollout, and acceptance evidence.
+
+## Source and package commands
+
+- Canonical sources: `modules/regionwright`, `modules/regionwright-puzzles-locks`, `modules/regionwright-hunting-gathering`.
+- Build all modules: `npm run build:modules`; build one with `build:studio`, `build:puzzles-locks`, or `build:hunting-gathering`.
+- Package all modules: `npm run package:modules`; individual commands are `package:studio`, `package:puzzles-locks`, and `package:hunting-gathering`.
+- Build folders: `dist/modules/<Foundry ID>/`.
+- Standalone module ZIPs and SHA-256 files: `dist/packages/`.
+
+## Legacy archive
+
+archives/regionwright-legacy-modules-20261018.zip preserves the previous root module layout, manifests, product sources, generated packages, historical Fishing/Mining/H&G snapshots, and copies of installed legacy module packages. Its embedded manifest records the contents. The adjacent SHA-256 sidecar is regionwright-legacy-modules-20261018.zip.sha256; the verified digest is b8fbfed92b3fb4fc705575ee755b428c2a76ab485b5e74cfbf32213c2c011d1b (1,118 ZIP entries).
+
+The old project-wide knowledge base, roadmaps, permission and runtime plans, release sweep, old root scripts, and retired-layout tests are preserved in archives/regionwright-retired-project-files-20261018.zip; its 50 entries were compared file-for-file with SHA-256, and the archive digest is 2d39a456c107aae2b09a406b239be8afe0d421334e74806e5d2834d27969348a. Earlier workspace guidance and release files are preserved in archives/regionwright-workspace-retirement-20261018.zip, SHA-256 71dcd51a3b620764d815c7cd40097e199eb49f3d499840cc1dda545d0a913ef9. Superseded module roots and generated outputs were moved from active source/build locations into archives/retired-active-layout-20261018/. No root module manifest or retired development junction remains.
+
+World database snapshots, campaign working maps, diagnostics, and unrelated project files were excluded from these workspace archives. Foundry world backups and recovered copies are recorded in the installation audit above.
+
+## Verification and limits
+
+- All three standalone source folders built successfully. Their folder IDs match their manifest IDs, manifest-owned files exist, and relative imports resolve within the same module.
+- All three module ZIPs were generated under `dist/packages/` with per-package SHA-256 sidecars.
+- The legacy ZIP and its checksum were verified before the source split was completed.
+- Node syntax checks passed for all 64 module runtime scripts; 17 Foundry macro wrappers parsed in async-function context to allow macro-level `return` and `await`.
+- Each release ZIP passed entry streaming and its SHA-256 sidecar check. The legacy ZIP SHA-256 also matches its sidecar. Focused migration checks passed 3/3; no broader automated suite or player gameplay check was run.
+- Foundry GM runtime confirmed the saved module states and Puzzles & Locks setting migration in Testmap, The Forgotten Realms, and Tuesday Campaign. H&G 0.4.2 was installed from its rebuilt package and its Testmap startup error was cleared on the repeated startup. No player-facing interactions or Region repairs were performed.
+
+Last pre-split live Studio check: the 2026-08-14 completion audit and 2026-08-12 release sweep are archived in `archives/regionwright-retired-project-files-20261018.zip`. They cover earlier GM/player workflows but do not verify this module split. Current H&G 0.4.2 is installed; its startup was verified in Testmap. The current split has not received player-facing gameplay acceptance.
+
+## Next step
+
+The pixel-board art system is in pilot implementation in [the visual art direction roadmap](ART_DIRECTION_ROADMAP.md), with public research and the implementation checklist in [the pixel-board research brief](PIXEL_BOARD_RESEARCH.md). The accepted end state is replacement of all artwork in Studio, Puzzles & Locks (every game), and Hunting & Gathering; deer and bear are the first implementation pilot. H&G contains a tested coded-board renderer, a v1 data schema, a blank authoring editor, and a responsive per-layer Canvas renderer; its optional PNG metadata schema remains documented in [POINT_BOARD_ASSET_FORMAT.md](POINT_BOARD_ASSET_FORMAT.md). The user selected 240 × 160 Game Boy Advance logical resolution and supplied a v2 deer board plus a v4 bear board, each with one idle frame, six walk frames at 8 fps, and the same static forest layer. The deer-only 115 × 96 comparison is retained. Runtime assets are `modules/regionwright-hunting-gathering/assets/hunting/deer-walk-point-board.json` (10,784 active cells; 120,683 bytes) and `bear-walk-point-board.json` (91,604 cells; 997,913 bytes); unchanged exports and code-rendered previews are under `art-source/regionwright-hunting-gathering/point-board/`. Both assets pass `normalizePointBoardData`, the H&G build validator, and the module source checker. Bear is about 8.7× denser per pose; a gzip -9 probe compresses it to 223,075 bytes, but Foundry serving and player performance have not been measured. The deer board and reduced-motion guard are integrated into Hunting and installed locally; all 84 built files match the installed H&G package. The prior `hunting.js` is backed up at `C:/Users/rujie/AppData/Local/FoundryVTT/Backups/regionwright-point-board-reduced-motion-preinstall-20261018/hunting.js`. Bear remains staged, and no player-facing art interaction has been tested. The user confirms Chrome for Testing Dev is logged into Foundry as Gamemaster 2, but the browser automation path does not expose that Dev browser; no Foundry client reload or hunt test has occurred. The full artwork inventory and module migration have not been done. The full `npm run check` was previously found to exit 1 on existing non-point-board failures. Explicit coded X/Y cells rendered by deterministic JavaScript are the chosen format and do not use generative AI. Next action: expose Chrome Dev to browser automation, then reload Foundry and verify the deer hunt as GM and player and review deer/bear readability and performance. The later Puzzles & Locks rollout is full-scope: Tumbler and Rotation are pilots before migrating artwork in every puzzle game. Player-facing testing remains unverified; the last Foundry startup/settings pass on 2026-10-18 predates this pilot install.
+
+The requested world audit and module activation pass is complete at GM startup/settings verification level. On 2026-10-18, 33 verified duplicate staging and historical snapshot directories were moved from `tmp/` to `archives/retired-staging-duplicates-20261018/`; active source and Foundry module paths contain only the three canonical products. `docs/PROJECT_STANDARDS.md` is the current project-wide rule set; pre-split project plans are archived or marked with pointers to current guidance. No Regions tied to old modules should be repaired; the user confirmed those Regions are tested and no longer needed. The optional Studio ↔ Puzzles & Locks bridge and a player-facing interaction remain unverified and should be attempted only if requested.
+

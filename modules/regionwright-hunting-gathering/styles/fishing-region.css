@@ -1,0 +1,40 @@
+.rw-hg-fishing-region-dialog .window-content {
+  background: radial-gradient(circle at top, #213d4b, #101b23 74%);
+  color: #edf7f5;
+}
+
+.rw-hg-fishing-region-form {
+  display: grid;
+  gap: 14px;
+  padding: 8px 4px;
+}
+
+.rw-hg-fishing-region-form label {
+  display: grid;
+  gap: 6px;
+  color: #b9d6d5;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rw-hg-fishing-region-form select {
+  border: 1px solid #4b8a91;
+  border-radius: 6px;
+  background: #10232b;
+  color: #f4ffff;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.rw-hg-fishing-region-note,
+.rw-hg-fishing-region-summary {
+  color: #c4dddd;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.rw-hg-fishing-region-summary {
+  border-left: 3px solid #f0ba63;
+  padding-left: 10px;
+}

@@ -1,0 +1,14 @@
+{
+  "id": "regionwright",
+  "title": "Regionwright: Studio",
+  "description": "A visual Region authoring and Studio workspace for connected Foundry VTT experiences.",
+  "authors": [{ "name": "Regionwright" }],
+  "version": "0.2.0",
+  "compatibility": { "minimum": "14", "verified": "14" },
+  "socket": true,
+  "esmodules": ["scripts/module.js"],
+  "styles": ["styles/regionwright.css", "styles/prompt-accessibility.css", "styles/ascendancy.css"],
+  "languages": [{ "lang": "en", "name": "English", "path": "lang/en.json" }],
+  "license": "LICENSE",
+  "readme": "README.md"
+}

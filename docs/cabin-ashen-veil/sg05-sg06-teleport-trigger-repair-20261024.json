@@ -1,0 +1,47 @@
+{
+  "status": "REPAIRED",
+  "scene": "SG-05 - Memorial Clearing",
+  "from": "Scene.CAVSG05Scene0001.Region.vpZI5S0vVcYxDHXI",
+  "to": "Scene.CAVSG05Scene0001.Region.ktyQvjNWXPSJmlPH",
+  "backup": {
+    "name": "Confirm travel",
+    "type": "teleportToken",
+    "system": {
+      "destinations": [
+        "Scene.CAVSG06Scene0001.Region.Guu1As8b0SGPR6xS"
+      ],
+      "placement": "center",
+      "snap": false,
+      "choice": true,
+      "revealed": true,
+      "dialog": {
+        "revealed": "Do you wish to proceed?",
+        "unrevealed": "Do you wish to proceed?"
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500
+      }
+    },
+    "flags": {
+      "dicebox-campaign-helper": {
+        "group": "grove-grid-v1"
+      }
+    },
+    "_id": "MX3cVKxhurFCshMw",
+    "disabled": false,
+    "_stats": {
+      "coreVersion": "14.367",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3",
+      "createdTime": 1792880802442,
+      "modifiedTime": 1792880802442,
+      "lastModifiedBy": "4c2ow5laZtzUNigr",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "newBehavior": "Scene.CAVSG05Scene0001.Region.ktyQvjNWXPSJmlPH.RegionBehavior.Q8LyBAA2ObV8yApf",
+  "oldId": "MX3cVKxhurFCshMw"
+}

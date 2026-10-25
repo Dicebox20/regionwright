@@ -1,0 +1,490 @@
+{
+  "date": "2026-10-24T22:26:42.139Z",
+  "world": "cabin-in-the-ashen-veil",
+  "version": "grove-grid-v1",
+  "backups": [
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "SG-01 - Northwest Grove Corner",
+      "regions": [
+        {
+          "name": "Grove Bust - NW Moon - Winder",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1290,
+                680,
+                1860,
+                680,
+                1860,
+                1410,
+                1290,
+                1410
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:nw:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "_id": "gksvZIqj8jWdqzn7",
+          "color": "#28a1cc",
+          "elevation": {
+            "bottom": null,
+            "top": null,
+            "topInclusive": false
+          },
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "visibility": 4,
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "hidden": false,
+          "locked": false,
+          "ownership": {
+            "default": 0,
+            "4c2ow5laZtzUNigr": 3
+          },
+          "_shapeConstraints": null
+        }
+      ]
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "name": "SG-02 - Northern Processional Walk",
+      "regions": []
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "name": "SG-03 - Northeast Grove Corner",
+      "regions": [
+        {
+          "name": "Grove Bust - NE Star - Winder",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2920,
+                350,
+                3320,
+                350,
+                3320,
+                820,
+                2920,
+                820
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:ne:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "_id": "BfKhb34dSEfVTf2e",
+          "color": "#2864cc",
+          "elevation": {
+            "bottom": null,
+            "top": null,
+            "topInclusive": false
+          },
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "visibility": 4,
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "hidden": false,
+          "locked": false,
+          "ownership": {
+            "default": 0,
+            "4c2ow5laZtzUNigr": 3
+          },
+          "_shapeConstraints": null
+        }
+      ]
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "name": "SG-04 - Western Grove Entrance",
+      "regions": []
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "name": "SG-05 - Memorial Clearing",
+      "regions": [
+        {
+          "name": "SG-05 - Mosaic Discovery - North Statue",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2000,
+                720,
+                2320,
+                720,
+                2320,
+                825,
+                2000,
+                825
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "type": "executeScript",
+              "system": {
+                "events": [
+                  "tokenEnter"
+                ],
+                "source": "await game.modules.get(\"regionwright-puzzles-locks\")?.api?.slidingMosaic?.handleRegionEvent(region, event);"
+              },
+              "flags": {
+                "regionwright": {
+                  "slidingMosaic": {
+                    "region": true
+                  }
+                }
+              },
+              "_id": "Q8Hr2Dnw6hBpWNjr",
+              "name": "CAV SG-05 - Sune Sliding Relief (requires four busts)",
+              "disabled": true,
+              "_stats": {
+                "coreVersion": "14.367",
+                "systemId": "dnd5e",
+                "systemVersion": "5.3.3",
+                "createdTime": 1792880011404,
+                "modifiedTime": 1792880011417,
+                "lastModifiedBy": "4c2ow5laZtzUNigr",
+                "compendiumSource": null,
+                "duplicateSource": null,
+                "exportSource": null
+              }
+            }
+          ],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:sg05:region:mosaic-discovery:v1",
+              "phase": "PREPARED_GEOMETRY_ONLY",
+              "requires": "grove.bustsSolved",
+              "source": "owner-approved SG-05 map measured 4320x2880",
+              "inspection": "northern behind-statue path; behavior pending"
+            },
+            "regionwright": {
+              "slidingMosaic": {
+                "version": 1,
+                "config": {
+                  "version": 1,
+                  "image": "modules/regionwright-puzzles-locks/assets/sune-sliding-portrait-master.png",
+                  "size": 4,
+                  "seed": "cav.sune.sliding-relief.v001"
+                },
+                "persistent": {
+                  "status": "locked",
+                  "solvedAt": null,
+                  "lastUpdatedAt": 1792880011382
+                }
+              }
+            }
+          },
+          "_id": "L15BdSqcbCOLPnIN",
+          "color": "#28cc62",
+          "elevation": {
+            "bottom": null,
+            "top": null,
+            "topInclusive": false
+          },
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "visibility": 4,
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "hidden": false,
+          "locked": false,
+          "ownership": {
+            "default": 0,
+            "4c2ow5laZtzUNigr": 3
+          },
+          "_shapeConstraints": null
+        }
+      ]
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "name": "SG-06 - Eastern Grove Walk",
+      "regions": []
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "name": "SG-07 - Southwest Grove Corner",
+      "regions": [
+        {
+          "name": "Grove Bust - SW Rose - Winder",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1440,
+                700,
+                1780,
+                700,
+                1780,
+                1030,
+                1440,
+                1030
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:sw:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "_id": "0JAM9urrHnAxVUgM",
+          "color": "#28cc3f",
+          "elevation": {
+            "bottom": null,
+            "top": null,
+            "topInclusive": false
+          },
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "visibility": 4,
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "hidden": false,
+          "locked": false,
+          "ownership": {
+            "default": 0,
+            "4c2ow5laZtzUNigr": 3
+          },
+          "_shapeConstraints": null
+        }
+      ]
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "name": "SG-08 - Southern Grove Walk",
+      "regions": []
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "name": "SG-09 - Southeast Grove Corner",
+      "regions": [
+        {
+          "name": "Grove Bust - SE Sun - Winder",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                1800,
+                1360,
+                2210,
+                1360,
+                2210,
+                1840,
+                1800,
+                1840
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "dicebox-campaign-helper": {
+              "objectKey": "cav:grove:bust:se:v1",
+              "stage": "GEOMETRY_ONLY",
+              "puzzle": "LOCK-01",
+              "order": "SW NE NW SE",
+              "interaction": "Clockwork Winder explicit click",
+              "source": "owner-approved corner-map art"
+            }
+          },
+          "_id": "BrugKqcQyDImUvwt",
+          "color": "#50cc28",
+          "elevation": {
+            "bottom": null,
+            "top": null,
+            "topInclusive": false
+          },
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "visibility": 4,
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "hidden": false,
+          "locked": false,
+          "ownership": {
+            "default": 0,
+            "4c2ow5laZtzUNigr": 3
+          },
+          "_shapeConstraints": null
+        }
+      ]
+    }
+  ],
+  "created": [],
+  "edges": [
+    {
+      "a": "SG-01 - Northwest Grove Corner",
+      "b": "SG-02 - Northern Processional Walk",
+      "forward": "Scene.CAVSG01Scene0001.Region.ShkRIARUalZ2eK3s",
+      "reverse": "Scene.CAVSG02Scene0001.Region.fsqvet8IZem07vAO",
+      "aLanding": "Scene.CAVSG01Scene0001.Region.G8tpIOde3QfrfVcm",
+      "bLanding": "Scene.CAVSG02Scene0001.Region.nXX34ibi98vTaDzD"
+    },
+    {
+      "a": "SG-02 - Northern Processional Walk",
+      "b": "SG-03 - Northeast Grove Corner",
+      "forward": "Scene.CAVSG02Scene0001.Region.XilVcoVaPxhtwHll",
+      "reverse": "Scene.CAVSG03Scene0001.Region.UqdnKLCB5yGDtBq9",
+      "aLanding": "Scene.CAVSG02Scene0001.Region.7vvHXAtw0yJFlHGr",
+      "bLanding": "Scene.CAVSG03Scene0001.Region.5VbuPKIYZhHncUiw"
+    },
+    {
+      "a": "SG-04 - Western Grove Entrance",
+      "b": "SG-05 - Memorial Clearing",
+      "forward": "Scene.CAVSG04Scene0001.Region.cg4bnhdQ6sXbnpTm",
+      "reverse": "Scene.CAVSG05Scene0001.Region.wCHOIBHKEZYIER6E",
+      "aLanding": "Scene.CAVSG04Scene0001.Region.tmwsGhYxombSJ8xX",
+      "bLanding": "Scene.CAVSG05Scene0001.Region.4jvK2Ghmvkn1LhaM"
+    },
+    {
+      "a": "SG-05 - Memorial Clearing",
+      "b": "SG-06 - Eastern Grove Walk",
+      "forward": "Scene.CAVSG05Scene0001.Region.vpZI5S0vVcYxDHXI",
+      "reverse": "Scene.CAVSG06Scene0001.Region.ntZGRlWeQzG7wWap",
+      "aLanding": "Scene.CAVSG05Scene0001.Region.ktyQvjNWXPSJmlPH",
+      "bLanding": "Scene.CAVSG06Scene0001.Region.Guu1As8b0SGPR6xS"
+    },
+    {
+      "a": "SG-07 - Southwest Grove Corner",
+      "b": "SG-08 - Southern Grove Walk",
+      "forward": "Scene.CAVSG07Scene0001.Region.c1Oji5loZtNMryzh",
+      "reverse": "Scene.CAVSG08Scene0001.Region.zmBhbmw7ZPOz9XtM",
+      "aLanding": "Scene.CAVSG07Scene0001.Region.iCMedcoPV8IrOwRA",
+      "bLanding": "Scene.CAVSG08Scene0001.Region.9xSxTqmilq2GTyad"
+    },
+    {
+      "a": "SG-08 - Southern Grove Walk",
+      "b": "SG-09 - Southeast Grove Corner",
+      "forward": "Scene.CAVSG08Scene0001.Region.Bf2jMmXgMn8J9mcI",
+      "reverse": "Scene.CAVSG09Scene0001.Region.GtND4BmqBXnlGuy8",
+      "aLanding": "Scene.CAVSG08Scene0001.Region.3XDshajZsljQsJZU",
+      "bLanding": "Scene.CAVSG09Scene0001.Region.0NSpW4f0aegXJd29"
+    },
+    {
+      "a": "SG-01 - Northwest Grove Corner",
+      "b": "SG-04 - Western Grove Entrance",
+      "forward": "Scene.CAVSG01Scene0001.Region.Ke9KCBPqRGFWdZwb",
+      "reverse": "Scene.CAVSG04Scene0001.Region.9GBTAbedfqyObYeb",
+      "aLanding": "Scene.CAVSG01Scene0001.Region.7Y8AmKQIQUj3HVg9",
+      "bLanding": "Scene.CAVSG04Scene0001.Region.UPW3ZBUgHZlbt9n6"
+    },
+    {
+      "a": "SG-04 - Western Grove Entrance",
+      "b": "SG-07 - Southwest Grove Corner",
+      "forward": "Scene.CAVSG04Scene0001.Region.o4siMpn3MLGt9ECx",
+      "reverse": "Scene.CAVSG07Scene0001.Region.P9WJ5YUXVwKpNw3P",
+      "aLanding": "Scene.CAVSG04Scene0001.Region.0gIz8Ua43RB0oNws",
+      "bLanding": "Scene.CAVSG07Scene0001.Region.km6fQ9rejwtMz3MK"
+    },
+    {
+      "a": "SG-02 - Northern Processional Walk",
+      "b": "SG-05 - Memorial Clearing",
+      "forward": "Scene.CAVSG02Scene0001.Region.RJXACohEz7Pbg0iW",
+      "reverse": "Scene.CAVSG05Scene0001.Region.p53pE6bS9tpuCkxD",
+      "aLanding": "Scene.CAVSG02Scene0001.Region.dvVODTxkLfJeXBVC",
+      "bLanding": "Scene.CAVSG05Scene0001.Region.YKgNexU3dxwPpODd"
+    },
+    {
+      "a": "SG-05 - Memorial Clearing",
+      "b": "SG-08 - Southern Grove Walk",
+      "forward": "Scene.CAVSG05Scene0001.Region.ouFnsUZgbZjNwDe7",
+      "reverse": "Scene.CAVSG08Scene0001.Region.MVrQioDhGF87fhh9",
+      "aLanding": "Scene.CAVSG05Scene0001.Region.x9R7eutZzvwcK6Bd",
+      "bLanding": "Scene.CAVSG08Scene0001.Region.1DzaYqd0vCMy0PIF"
+    },
+    {
+      "a": "SG-03 - Northeast Grove Corner",
+      "b": "SG-06 - Eastern Grove Walk",
+      "forward": "Scene.CAVSG03Scene0001.Region.tEY8h7AHMclvyDxv",
+      "reverse": "Scene.CAVSG06Scene0001.Region.CLqlGRyCXCJNqNPK",
+      "aLanding": "Scene.CAVSG03Scene0001.Region.S7LWDZrC8FMgjrm2",
+      "bLanding": "Scene.CAVSG06Scene0001.Region.vdZKsxDoXOhoOKVF"
+    },
+    {
+      "a": "SG-06 - Eastern Grove Walk",
+      "b": "SG-09 - Southeast Grove Corner",
+      "forward": "Scene.CAVSG06Scene0001.Region.xH7Oh4Z7y4yc8UVL",
+      "reverse": "Scene.CAVSG09Scene0001.Region.P7esiR3yz9RjGpx6",
+      "aLanding": "Scene.CAVSG06Scene0001.Region.RHnj8vFHt8rfLyqj",
+      "bLanding": "Scene.CAVSG09Scene0001.Region.QNErGaLWdFm04xMk"
+    }
+  ],
+  "status": "INSTALLED",
+  "regionCount": 48,
+  "behaviorCount": 24
+}

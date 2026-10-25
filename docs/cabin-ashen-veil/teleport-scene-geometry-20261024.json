@@ -1,0 +1,604 @@
+[
+  {
+    "id": "CAVAQ01Scene0001",
+    "name": "AQ-01 - Unified Aqueduct Network",
+    "width": 5760,
+    "height": 4320,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVBATHScene0001",
+    "name": "BATH - Unified Bathhouse Surface",
+    "width": 2160,
+    "height": 1440,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVEXT01Yard0001",
+    "name": "EXT-01 - Carriage Yard and Cabin Front",
+    "width": 7200,
+    "height": 4800,
+    "grid": 120,
+    "regions": [
+      {
+        "id": "CAV01R0000000001",
+        "name": "EXT-01 - Cabin Front Porch",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3445,
+              1631,
+              3994,
+              1631,
+              3994,
+              2016,
+              3445,
+              2016
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000002",
+        "name": "EXT-01 - Iron Maze Gate",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              1481,
+              197,
+              2203,
+              197,
+              2203,
+              703,
+              1481,
+              703
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000003",
+        "name": "EXT-01 - West Grove Trail",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              19,
+              1284,
+              464,
+              1284,
+              464,
+              1809,
+              19,
+              1809
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000004",
+        "name": "EXT-01 - South Arrival Road",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              3314,
+              4247,
+              4013,
+              4247,
+              4013,
+              4772,
+              3314,
+              4772
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000005",
+        "name": "EXT-01 - Pond and Dock Approach",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5620,
+              2264,
+              6314,
+              2264,
+              6314,
+              3014,
+              5620,
+              3014
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000006",
+        "name": "EXT-01 - Donovan Shack Approach",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              680,
+              909,
+              1448,
+              909,
+              1448,
+              1392,
+              680,
+              1392
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV01R0000000007",
+        "name": "EXT-01 - Privy Approach",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              5784,
+              830,
+              6614,
+              830,
+              6614,
+              1448,
+              5784,
+              1448
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      }
+    ],
+    "notes": []
+  },
+  {
+    "id": "CAVEXT02Scene001",
+    "name": "EXT-02 - Pond and Sluice Gate",
+    "width": 5760,
+    "height": 4320,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "xx1rWBiWMLxJPlrw",
+    "name": "EXT-04 - Privy",
+    "width": 1254,
+    "height": 1254,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVEXT05Scene001",
+    "name": "EXT-05 - Forgotten Gazebo",
+    "width": 1920,
+    "height": 1440,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVEXT06Scene001",
+    "name": "EXT-06 - Greenhouse Interior",
+    "width": 1920,
+    "height": 1440,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVEXT07Scene001",
+    "name": "EXT-07 - Boathouse Clearing",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVTRAILScene001",
+    "name": "EXT-TRAIL - Grove Bathhouse Fork",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVFM01Scene0001",
+    "name": "FM - Northwestern Forest Maze",
+    "width": 5760,
+    "height": 4320,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "UNEdA6iy6nk1Xuga",
+    "name": "H-A01 - Central Attic",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "KwpmPrYgEC7KQVCZ",
+    "name": "H-A02 - West Attic Storage",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "gDqaEOR4qaB5IOut",
+    "name": "H-A03 - North Attic Storage",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "nyF5EX0JiEu23C3p",
+    "name": "H-A04 - East Attic Storage",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "G6NMonfCwMvNzipL",
+    "name": "H-B01 - Allens Basement Workshop",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "tjTpG2RVZNoCqRLh",
+    "name": "H-B02 - Secured Keystone Vault",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "ThVGl68hUmiOhWEA",
+    "name": "H-B03 - Basement Supply Closet",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVHG02Scene0001",
+    "name": "H-G02 - Foyer and Basement Stairwell",
+    "width": 960,
+    "height": 720,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVHG06GreatRoom",
+    "name": "H-G06 - Great Room",
+    "width": 840,
+    "height": 960,
+    "grid": 120,
+    "regions": [
+      {
+        "id": "CAV06R0000000001",
+        "name": "H-G06 - Foyer Doorway",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              342.5,
+              849.5,
+              523.5,
+              849.5,
+              523.5,
+              920.5,
+              342.5,
+              920.5
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV06R0000000002",
+        "name": "H-G06 - Dining Room Doorway",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              47,
+              335,
+              140,
+              335,
+              140,
+              532,
+              47,
+              532
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV06R0000000003",
+        "name": "H-G06 - Allen Study Doorway",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              723,
+              362,
+              807,
+              362,
+              807,
+              558,
+              723,
+              558
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV06R0000000004",
+        "name": "H-G06 - Rear Family Room Doorway",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              347,
+              34,
+              515,
+              34,
+              515,
+              120,
+              347,
+              120
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      },
+      {
+        "id": "CAV06R0000000005",
+        "name": "H-G06 - Upstairs Staircase",
+        "shapes": [
+          {
+            "type": "polygon",
+            "points": [
+              669,
+              18.5,
+              763,
+              18.5,
+              763,
+              381.5,
+              669,
+              381.5
+            ],
+            "hole": false,
+            "origin": null
+          }
+        ],
+        "elevation": {
+          "bottom": null,
+          "top": null,
+          "topInclusive": false
+        }
+      }
+    ],
+    "notes": []
+  },
+  {
+    "id": "LhtyO17QenuCExsb",
+    "name": "H-R01 - Roof Chimney Clock",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG01Scene0001",
+    "name": "SG-01 - Northwest Grove Corner",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG02Scene0001",
+    "name": "SG-02 - Northern Processional Walk",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG03Scene0001",
+    "name": "SG-03 - Northeast Grove Corner",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG04Scene0001",
+    "name": "SG-04 - Western Grove Entrance",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG05Scene0001",
+    "name": "SG-05 - Memorial Clearing",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG06Scene0001",
+    "name": "SG-06 - Eastern Grove Walk",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG07Scene0001",
+    "name": "SG-07 - Southwest Grove Corner",
+    "width": 2880,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG08Scene0001",
+    "name": "SG-08 - Southern Grove Walk",
+    "width": 4320,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CAVSG09Scene0001",
+    "name": "SG-09 - Southeast Grove Corner",
+    "width": 2880,
+    "height": 2880,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "CN5fkK2QLUELBGGR",
+    "name": "UND-01 - Undercroft Approach Keystone Door",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "ywpIpQDrkMLIgUP0",
+    "name": "UND-02 - Donovan Sophia Sealed Refuge",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  },
+  {
+    "id": "hLU4DzVctEGdsuaz",
+    "name": "UND-03 - Voss Ritual Chamber",
+    "width": 1536,
+    "height": 1024,
+    "grid": 120,
+    "regions": [],
+    "notes": []
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": 33,
+  "regions": 97,
+  "teleports": 40,
+  "invalid": [],
+  "landingWithTeleport": [],
+  "missingGreat": [
+    {
+      "name": "H-G06 - Dining Room Doorway",
+      "target": "H-G01"
+    },
+    {
+      "name": "H-G06 - Allen Study Doorway",
+      "target": "H-G05"
+    },
+    {
+      "name": "H-G06 - Rear Family Room Doorway",
+      "target": "H-G09"
+    },
+    {
+      "name": "H-G06 - Upstairs Staircase",
+      "target": "H-U02"
+    }
+  ],
+  "fork": [
+    {
+      "scene": "BATH - Unified Bathhouse Surface",
+      "sceneId": "CAVBATHScene0001",
+      "region": "BATH - Return to Trail Fork",
+      "regionId": "SLovYxFAWVAMFzXg",
+      "disabled": false,
+      "prompt": "Do you wish to proceed?",
+      "targets": [
+        "Scene.CAVTRAILScene001.Region.N5LomZ7TrVBMoExk"
+      ],
+      "id": "EK3UbdrVWwe28PmW"
+    },
+    {
+      "scene": "EXT-TRAIL - Grove Bathhouse Fork",
+      "sceneId": "CAVTRAILScene001",
+      "region": "EXT-TRAIL - To Bathhouse",
+      "regionId": "13g6uK1QrR9PFOzA",
+      "disabled": false,
+      "prompt": "Do you wish to proceed?",
+      "targets": [
+        "Scene.CAVBATHScene0001.Region.R2Pg9eHODtb1C1Yk"
+      ],
+      "id": "ZbrhX0nnaLvLA5Zh"
+    },
+    {
+      "scene": "SG-04 - Western Grove Entrance",
+      "sceneId": "CAVSG04Scene0001",
+      "region": "SG-04 - Return to Trail Fork",
+      "regionId": "fqk4z5JaYtWzplGU",
+      "disabled": false,
+      "prompt": "Do you wish to proceed?",
+      "targets": [
+        "Scene.CAVTRAILScene001.Region.oVGU1TRcDhaxFtAq"
+      ],
+      "id": "kdEOECjGEuGAnTYb"
+    }
+  ]
+}

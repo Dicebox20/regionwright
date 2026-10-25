@@ -1,0 +1,12 @@
+﻿.rw-waterworks-dialog .window-content{background:linear-gradient(150deg,#15222b,#243b41);color:#eaf0e8}.rw-waterworks{display:grid;gap:12px;padding:10px;text-align:center}.rw-waterworks h2{margin:0;color:#d5bf89}.rw-waterworks-gauges{display:flex;gap:10px;justify-content:space-evenly}.rw-waterworks-valve{display:grid;justify-items:center;gap:7px;min-width:85px}.rw-waterworks-gauge{position:relative;width:40px;height:140px;background:#121c25;border:4px solid #a88244;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end}.rw-waterworks-gauge span{width:100%;background:linear-gradient(#89d8ef,#266db1);transition:height .15s}.rw-waterworks-controls{display:flex;align-items:center;gap:6px}.rw-waterworks-controls button{min-width:30px}.rw-waterworks-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}.rw-waterworks button{color:#f4e7cf;background:#3d4d54;border:1px solid #b59b67;border-radius:6px;min-height:34px}
+.rw-waterworks-art-board{position:relative;aspect-ratio:3/2;width:100%;background-image:url('../assets/waterworks-pressure-approved.png');background-size:100% 100%;background-position:center;background-color:#15252b;border:3px ridge #b68a4b;overflow:hidden}
+.rw-waterworks-hotspot{position:absolute;width:7%;height:10%;transform:translate(-50%,-50%);border:2px dashed rgba(240,212,133,.72)!important;border-radius:50%!important;background:rgba(16,29,40,.23)!important;cursor:pointer;min-height:0!important}
+.rw-waterworks-hotspot:hover,.rw-waterworks-hotspot:focus-visible{outline:3px solid #f1e0a7;background:rgba(238,185,64,.3)!important}
+.rw-waterworks-intake{left:19.1%;top:58%;width:9%;height:13%}.rw-waterworks-main{left:50%;top:82%;width:12%;height:17%}
+.rw-waterworks-art-guide{position:absolute;left:0;right:0;bottom:0;background:rgba(10,20,26,.8);color:#f4e6b9;font-size:.8rem;pointer-events:none}
+
+.rw-waterworks-art-board--boiler{background-image:url('../assets/boiler-pressure-approved.png')}.rw-waterworks-hotspot[hidden]{display:none!important}
+
+
+.rw-pressure-image-control{width:100%;max-width:160px;padding:0;border:none;background:transparent;cursor:pointer}.rw-pressure-image-control img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}.rw-pressure-image-control:hover{filter:brightness(1.17)}.rw-waterworks-gauges{flex-wrap:wrap}.rw-waterworks-valve{flex:1 1 100px}
+
