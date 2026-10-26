@@ -1,4 +1,4 @@
-import test from"node:test";import assert from"node:assert/strict";
+import test from"node:test";import{readFileSync}from"node:fs";import assert from"node:assert/strict";
 import{renderCavRosewaterClawPanel}from"../modules/regionwright-puzzles-locks/scripts/rosewater-dragon-claw-panel.js";
 test("Three clickable independent Skyrim-style ring surfaces include 4 medallions each",()=>{
  const html=renderCavRosewaterClawPanel(["symbol-one","symbol-two","symbol-three","symbol-four"],[1,3,2]);
@@ -12,4 +12,9 @@ test("Symbol sets are intentionally NOT chosen by code; 4 unique identifiers man
  assert.throws(()=>renderCavRosewaterClawPanel(["a","b","c"],[0,0,0]),/four approved unique/);
  assert.throws(()=>renderCavRosewaterClawPanel(["a","b","c","c"],[0,0,0]),/Invalid unique/);
  assert.throws(()=>renderCavRosewaterClawPanel(["a","b","c","d"],[0,0,7]),/Invalid GM/);
+});
+
+test("Counter-rotation keeps all four medallion labels upright as their stone rings rotate",()=>{
+ const code=readFileSync(new URL("../modules/regionwright-puzzles-locks/scripts/rosewater-dragon-claw-panel.js",import.meta.url),"utf8");
+ assert.match(code,/\.rw-claw-glyph\{[^"]*rotate\(calc\(-1 \* var\(--angle\)\)\)/);
 });

@@ -1,0 +1,90 @@
+{
+  "schema": "dicebox.cav.rosewater-claw-live-visual-inspection/v1",
+  "recordedLocal": "2026-10-26T14:00:04-07:00",
+  "ownerMessage": "Lets continue",
+  "workflow": [
+    "PREPARE",
+    "RENDER via native Puzzles & Locks panel",
+    "INSPECT",
+    "SOURCE_REFINEMENT",
+    "LIVE_VERIFY",
+    "CATALOGUE"
+  ],
+  "approval": "DRAFT_SYMBOLS_ONLY_NOT_OWNER_APPROVED",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "startingCommit": "829114b1dcb0ecc5205251b3d068975aabebca01",
+    "changedFiles": [
+      "modules/regionwright-puzzles-locks/scripts/rosewater-dragon-claw-panel.js",
+      "tests/cav-rosewater-dragon-claw-panel.test.mjs"
+    ],
+    "change": "Counter-rotate each ring's medallion label to keep writing upright while ring art rotates"
+  },
+  "host": {
+    "foundryPort30000": true,
+    "chromeCDP9224": true,
+    "foundry": "14.367",
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "sceneCount": 47
+  },
+  "native": {
+    "rosewaterRegion": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+    "behaviorId": "CAVROSEWATERSCR1",
+    "behaviorDisabled": true,
+    "bindingStatus": "STAGED_DISABLED",
+    "ownerSymbolsFlag": null,
+    "ringSessionFlag": null,
+    "waterStatus": null,
+    "sluiceTransaction": null,
+    "boilerService": "ready",
+    "originalBowlItemUnchanged": true
+  },
+  "preview": {
+    "symbolsDraft": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "sourceSymbolsOwnerApproved": false,
+    "firstPreviewFailedBecauseUppercaseIds": true,
+    "updatedPreviewValid": true,
+    "ringCount": 3,
+    "medallions": 12,
+    "fixedMarker": true,
+    "centralSeal": true,
+    "ringPositionsForVisualOnly": [
+      1,
+      3,
+      2
+    ],
+    "previewOnlyNoNativeState": true,
+    "warning": "D&D5e Animations info warning dismissed via I Understand; persistent Don't show again was NOT chosen",
+    "localOriginal": "utility-harness/artifacts/cav-rosewater-claw-clean-preview-owner-draft-20261026.jpg",
+    "localFinal": "utility-harness/artifacts/cav-rosewater-claw-final-clean-draft-20261026.jpg",
+    "finalJpegSha256": "B44419BEDCCFA7AA9CC6E31CE99B197484E692820AB0D6DD435631486695C14C",
+    "finalJpegBytes": 49390,
+    "sourceSha256": "9647AF30BF58928C6EE48923FC5E3759BE0BBF47DF80E8B5238CC2D41B33BC93"
+  },
+  "tests": {
+    "pass": 80,
+    "fail": 0,
+    "installedModuleShaMatch": true,
+    "browserGMReloadVerified": true,
+    "uiRenderedAndClosed": true,
+    "chatCountBeforeAndAfter": 54,
+    "itemCountBeforeAndAfter": 73
+  },
+  "pending": [
+    "Owner approve exact four symbols/art (Rose Sun Moth Thorn only proposed)",
+    "Confirm clue language for answer without leaking premature spoilers",
+    "Use actual drained water state for commissioning preflight",
+    "Enable Rosewater native behavior only after owner approval and elected GM",
+    "Resolve unique original Bowl pickup fixture in unified Bathhouse",
+    "Defer PC gameplay test/Crooked Man actor until final testing phase"
+  ],
+  "notes": "No item grant, token move, scene/region creation, current native stage change, quest advancement or active puzzle solution."
+}
