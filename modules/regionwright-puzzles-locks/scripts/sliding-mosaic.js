@@ -5,6 +5,24 @@ import { createSlidingMosaicConfig, evaluateSlidingOrder, shuffledSlidingOrder, 
 export const SLIDING_MOSAIC_FLAG = "slidingMosaic";
 export const SLIDING_MOSAIC_SOCKET = `module.${MODULE_ID}`;
 
+const CABIN_SUNE_RELIEF_UUID="Scene.CAVSG05Scene0001.Region.L15BdSqcbCOLPnIN";
+function cabinSuneAuthorized(target,userId) {
+ if(target?.uuid!==CABIN_SUNE_RELIEF_UUID)return true;
+ const g=globalThis.game;
+ if(!g?.ready||g.world?.id!=="cabin-in-the-ashen-veil")return false;
+ if(target.getFlag?.("dicebox-campaign-helper","cavSuneBustSequence")?.status!=="completed")return false;
+ const user=g.users?.get?.(userId);
+ if(!user?.active)return false;
+ if(user.isGM)return user.id===g.users?.activeGM?.id;
+ const scene=g.scenes?.get?.("CAVSG05Scene0001");
+ if(!scene)return false;
+ return [...scene.tokens].some(token=>{
+   const actor=token.actor;
+   if(!actor||actor.type!=="character"||token.hidden||!actor.testUserPermission(user,"OWNER"))return false;
+   const center={x:token.x+token.width*scene.grid.size/2,y:token.y+token.height*scene.grid.size/2,elevation:0};
+   return target.testPoint(center);
+ });
+}
 const openDialogs = new Map();
 const remoteMosaics = new Map();
 const waitingRequests = new Map();
@@ -86,10 +104,11 @@ export async function clearSlidingMosaic(targetOrUuid) {
   return target;
 }
 
-async function finishSlidingMosaic({ targetUuid, order } = {}) {
+async function finishSlidingMosaic({ targetUuid, order, authenticatedSenderId = null } = {}) {
   const target = await resolveTarget(targetUuid);
   const data = normalizeMosaic(targetData(target));
   if (!data || !isConfiguredTarget(target)) return { success: false, message: "That puzzle is no longer available." };
+  if (!cabinSuneAuthorized(target,authenticatedSenderId)) return { success: false, message: "The memorial is not ready or your character is too far away." };
   if (!evaluateSlidingOrder(data.config, order).success) return { success: false, message: "The picture is not complete yet." };
   data.persistent.status = "solved";
   data.persistent.solvedAt = Date.now();
@@ -139,7 +158,7 @@ async function handleSocket(payload, senderId) {
   }
   if (payload.action === "sliding-finish" && activeGM()) {
     try {
-      const result = await finishSlidingMosaic(payload);
+      const result = await finishSlidingMosaic({ ...payload, authenticatedSenderId: senderId });
       globalThis.game?.socket?.emit?.(SLIDING_MOSAIC_SOCKET, { action: "sliding-result", recipientId: payload.userId ?? senderId, requestId: payload.requestId, targetUuid: payload.targetUuid, result });
     } catch (error) {
       globalThis.game?.socket?.emit?.(SLIDING_MOSAIC_SOCKET, { action: "sliding-result", recipientId: payload.userId ?? senderId, requestId: payload.requestId, targetUuid: payload.targetUuid, result: { success: false, message: error.message ?? "The GM could not resolve the puzzle." } });
@@ -155,7 +174,7 @@ export function installSlidingMosaicSocket() {
 }
 
 function requestFinish(targetUuid, order) {
-  if (activeGM()) return finishSlidingMosaic({ targetUuid, order });
+  if (activeGM()) return finishSlidingMosaic({ targetUuid, order, authenticatedSenderId: globalThis.game?.user?.id });
   if (!globalThis.game?.users?.activeGM) return Promise.resolve({ success: false, message: "A GM must be connected to complete the puzzle." });
   const requestId = randomId();
   return new Promise(resolve => {
@@ -328,6 +347,7 @@ export async function openSlidingMosaicPuzzle(targetOrUuid) {
   const target = await resolveTarget(targetOrUuid);
   const data = normalizeMosaic(targetData(target));
   if (!data || !isConfiguredTarget(target)) return null;
+  if (!cabinSuneAuthorized(target,globalThis.game?.user?.id)) return null;
   const existing = openDialogs.get(target.uuid);
   if (existing) { existing.bringToFront?.(); return existing; }
   const DialogV2 = globalThis.foundry?.applications?.api?.DialogV2;
@@ -350,6 +370,7 @@ export async function openStandaloneSlidingMosaicPuzzle({ seed = `${Date.now()}`
 
 export async function handleSlidingMosaicRegionEvent(region, event = {}) {
   const target = await resolveTarget(region);
+  if (target.uuid === CABIN_SUNE_RELIEF_UUID) return null; // Cabin uses explicit click, never Region entry.
   if (!isConfiguredTarget(target)) return null;
   const userId = event?.userId ?? event?.user?.id ?? event?.data?.userId ?? globalThis.game?.user?.id ?? null;
   if (!activeGM()) {
