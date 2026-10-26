@@ -7,6 +7,7 @@ const POND="CAVEXT02Scene001",CONTROL="CAVEXT02SLUICE01";
 const BATH="CAVBATHScene0001",BATH_DRY="8yLMRDvxyw58dydh",TRAIL="CAVTRAILScene001";
 const TRAIL_REGION="13g6uK1QrR9PFOzA",TRAIL_BEHAVIOR="ZbrhX0nnaLvLA5Zh";
 const BATH_ARRIVAL="R2Pg9eHODtb1C1Yk",BATH_RETURN="SLovYxFAWVAMFzXg";
+const BATH_RETURN_TARGET="Scene.CAVTRAILScene001.Region.N5LomZ7TrVBMoExk";
 const POND_FULL="Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png";
 const POND_DRY="Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png";
 const BATH_FULL="Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png";
@@ -23,15 +24,20 @@ function docs(){
  const full=game.scenes.get(BATH),dry=game.scenes.get(BATH_DRY);
  return {pond,region,trail,portal,full,dry};
 }
-function geometryEqual(left,right){
- const l=left?.regions.get(BATH_ARRIVAL),r=right?.regions.get(BATH_ARRIVAL);
- const le=left?.regions.get(BATH_RETURN),re=right?.regions.get(BATH_RETURN);
- const lb=le?.behaviors.contents.find(b=>b.type==="teleportToken");
- const rb=re?.behaviors.contents.find(b=>b.type==="teleportToken");
- return !!l&&!!r&&!!le&&!!re&&
- JSON.stringify(l.shapes.map(s=>s.toObject()))===JSON.stringify(r.shapes.map(s=>s.toObject()))&&
+export function geometryEqual(left,right){
+ const l=left?.regions?.get(BATH_ARRIVAL),r=right?.regions?.get(BATH_ARRIVAL);
+ const le=left?.regions?.get(BATH_RETURN),re=right?.regions?.get(BATH_RETURN);
+ const lb=le?.behaviors?.contents?.find(b=>b.type==="teleportToken");
+ const rb=re?.behaviors?.contents?.find(b=>b.type==="teleportToken");
+ // Native Bath return is a mandatory independent escape route in BOTH water variants.
+ // Fail closed if deleted, disabled, malformed or retargeted; never throw in preflight.
+ const safeReturn=b=>b?.type==="teleportToken"&&b.disabled===false&&
+  b.system?.destinations?.size===1&&
+  typeof b.system.destinations.has==="function"&&
+  b.system.destinations.has(BATH_RETURN_TARGET);
+ if(!l||!r||!le||!re||!safeReturn(lb)||!safeReturn(rb)||lb.id!==rb.id)return false;
+ return JSON.stringify(l.shapes.map(s=>s.toObject()))===JSON.stringify(r.shapes.map(s=>s.toObject()))&&
  JSON.stringify(le.shapes.map(s=>s.toObject()))===JSON.stringify(re.shapes.map(s=>s.toObject()))&&
- JSON.stringify([...lb.system.destinations])===JSON.stringify([...rb.system.destinations])&&
  left.width===right.width&&left.height===right.height&&left.grid.size===right.grid.size;
 }
 export function inspectUnifiedBathFixtureWaterSafety(){

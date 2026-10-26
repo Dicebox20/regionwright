@@ -1,0 +1,70 @@
+{
+  "schema": "dicebox.cav.chat-a-live-paired-map-route-geometry/v1",
+  "dateLocal": "2026-10-26",
+  "chat": "A",
+  "ownerRequest": "Get started on your tasks, I sent Chat B the handoff",
+  "scope": "early/midgame safety and route preflight, one bounded turn",
+  "repo": "Dicebox20/regionwright",
+  "sourceBranch": "codex/cav-sune-integration-20261026",
+  "sourceBefore": "508406a87f4d58df480da5461bd053a64924d820",
+  "native": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "foundryPort30000": true,
+    "chromeCDP9224RestoredOnce": true,
+    "sceneCount": 47,
+    "waterState": null,
+    "sluiceCrank": null,
+    "sluiceTransaction": null,
+    "rosewaterBehaviorDisabled": true,
+    "rosewaterSymbolsApproved": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "ringSession": null,
+    "originalReturnTarget": "Scene.CAVTRAILScene001.Region.N5LomZ7TrVBMoExk",
+    "originalReturnBehaviorId": "EK3UbdrVWwe28PmW",
+    "fullAndDryBathOriginalGeometryEqual": true,
+    "portalDestinationsCorrect": true,
+    "aqRoute": {
+      "status": "ready",
+      "commissioned": false
+    },
+    "aqTopology": "verified-topology",
+    "allPortalsAndChaseDisabled": true,
+    "noNativeWrites": true
+  },
+  "source": {
+    "changed": [
+      "modules/regionwright/scripts/studio-cav-water-controller.js"
+    ],
+    "newTests": [
+      "tests/cav-bathhouse-return-route-failclosed.test.mjs"
+    ],
+    "change": "Fail closed for missing/disabled/wrong return Bathhouse teleport on either water variant; preserve exact paired geometry",
+    "installedSourceSha256": "331E4685418718E88E19D25C72020D6049BD7FF57185BE0D8A1A53CEB56F6551",
+    "installedShaMatch": true,
+    "testsPass": 87,
+    "testsFail": 0
+  },
+  "receipts": {
+    "nativeGeometry": "utility-harness/artifacts/cav-chat-a-unified-bath-pond-trail-aqueduct-geometry-audit-20261026.json",
+    "aqReadback": "utility-harness/artifacts/cav-chat-a-aqueduct-live-pregame-routing-ready-20261026.json",
+    "postReload": "utility-harness/artifacts/cav-chat-a-safe-bath-return-postreload-gm-receipt-20261026.json",
+    "postSourceReloadRuntimeVerified": true
+  },
+  "knownBlockers": [
+    "real Study 587 Crank fit pending",
+    "Pond/Bath water stage/transaction pending",
+    "Aqueduct/chase intentionally disabled and Crooked Man actor deferred",
+    "Rosewater native disabled until legitimate drain",
+    "unique Sune Bowl pickup owner location undecided",
+    "full nonGM player acceptance deferred"
+  ],
+  "chatBInterface": "late game source-only independent branch; Chat A retains shared integration files, live Foundry commissioning, first chase and upstream water services",
+  "transcriptFidelity": "available-message reconstruction, not lossless ChatGPT system transcript"
+}
