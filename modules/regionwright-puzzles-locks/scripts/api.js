@@ -9,6 +9,7 @@ import { clearSlidingMosaic, configureSlidingMosaic, createSlidingMosaicPuzzleCo
 import { openStandalonePuzzle, standalonePuzzleCatalog } from "./standalone-puzzles.js";
 import {createRosewaterCampaignConfig,evaluateRosewaterCampaignSolution,rotateRosewaterRing,resetRosewaterRings,ROSEWATER_RING_ANGLES_DEGREES} from "./rosewater-campaign-preset.js";
 import {createCavBoilerConfig,evaluateCavBoiler,adjustCavBoiler,resetCavBoiler} from "./cav-boiler-campaign-preset.js";
+import {openCavBoilerCampaignPuzzle} from "./waterworks-pressure.js";
 import { puzzleSetupCatalog, openPuzzleSetup } from "./puzzle-hub.js";
 import { puzzleHUD } from "./puzzle-hud.js";
 
@@ -25,7 +26,8 @@ export function createPuzzleAPI({ openPuzzleHub }) {
       createConfig:createCavBoilerConfig,
       evaluate:evaluateCavBoiler,
       adjust:adjustCavBoiler,
-      reset:resetCavBoiler
+      reset:resetCavBoiler,
+      open:openCavBoilerCampaignPuzzle
     }),
     rosewater: Object.freeze({
       createCampaignConfig:createRosewaterCampaignConfig,

@@ -1,4 +1,5 @@
 import { createWaterworksPressureConfig, evaluateWaterworksPressure, adjustWaterworksValve, resetWaterworksPressure } from './waterworks-pressure-engine.js';
+import {createCavBoilerConfig,resetCavBoiler} from "./cav-boiler-campaign-preset.js";
 const escapeHTML = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const rootFor = app => app?.element?.[0] ?? app?.element;
 function renderPanel(config,state,message='') {
@@ -18,4 +19,51 @@ export async function openStandaloneWaterworksPressurePuzzle({variant = "waterwo
     refresh(message=''){const section=rootFor(this)?.querySelector('.rw-waterworks');if(section)section.outerHTML=renderPanel(config,this.state,message);}
   }
   const dialog=new WaterworksDialog();await dialog.render({force:true});return dialog;
+}
+
+﻿
+/**
+ * Campaign Boiler panel. Uses the existing waterworks art + CSS and exact 2/1 preset.
+ * All dial movements and solve results come exclusively from the elected-GM Region session.
+ * Never locally mutates the authoritative state or advertises the standalone 2/4 demo as canon.
+ */
+export async function openCavBoilerCampaignPuzzle({region,readState,onAction}={}){
+ if(!region||typeof readState!=="function"||typeof onAction!=="function")throw Error("Campaign boiler Region and GM request callback required");
+ const DialogV2=globalThis.foundry?.applications?.api?.DialogV2;
+ if(!DialogV2)throw Error("Foundry DialogV2 missing");
+ const config=createCavBoilerConfig();
+ const current=()=>{const s=readState();if(s?.status==="reserved")return{...resetCavBoiler(config),positions:s.positions??{left:0,right:0}};
+  if(s?.positions&&["left","right"].every(k=>Number.isInteger(s.positions[k])&&s.positions[k]>=0&&s.positions[k]<=5))
+   return{positions:{left:s.positions.left,right:s.positions.right},blockageCleared:false};
+  return resetCavBoiler(config);};
+ class CampaignBoilerDialog extends DialogV2{
+  constructor(){super({classes:["regionwright","rw-waterworks-dialog"],window:{title:"Bathhouse Boiler Pressure",resizable:true},
+   position:{width:750,height:530},content:renderPanel(config,current(),"Two pressure valves await your adjustment."),
+   buttons:[{action:"close",label:"Close"}]});this.hookId=null;this.sending=false;}
+  _onRender(context,options){super._onRender(context,options);const node=rootFor(this);
+   if(!this.hookId)this.hookId=Hooks.on("updateRegion",document=>{
+    if(document.id===region.id&&document.parent?.id==="CAVBATHScene0001")this.refresh("Boiler controls updated.");
+   });
+   if(node&&!node.dataset.cavBoilerBound){node.dataset.cavBoilerBound="true";node.addEventListener("click",async event=>{
+    const valve=event.target.closest?.("[data-valve]");
+    const reset=event.target.closest?.("[data-waterworks-reset]");
+    const submit=event.target.closest?.("[data-waterworks-check]");
+    if(!valve&&!reset&&!submit||this.sending)return;
+    const original=readState()??{revision:0,status:"unsolved"};
+    if(original.status==="done"){this.refresh("The boiler is already balanced.");return}
+    if(original.status==="reserved"){this.refresh("The Gamemaster is reconciling a prior adjustment.");return}
+    if(!Number.isInteger(original.revision)){this.refresh("The dial history needs Gamemaster inspection.");return}
+    const req=valve?{op:"adjust",valve:valve.dataset.valve,direction:Number(valve.dataset.step)}:
+     reset?{op:"reset"}:{op:"submit"};
+    this.sending=true;
+    try{await onAction({...req,expectedRevision:original.revision});
+     this.refresh("Request sent to the Gamemaster. The displayed dials change only after validation.");
+    }catch(e){console.error("[CAV Boiler UI] Failed to send request",e);this.refresh("Request could not be sent. Ask the Gamemaster.");}
+    finally{this.sending=false}
+   })}}
+  _onClose(options){if(this.hookId){Hooks.off("updateRegion",this.hookId);this.hookId=null}return super._onClose(options)}
+  refresh(message=""){const target=rootFor(this)?.querySelector(".rw-waterworks");
+   if(target)target.outerHTML=renderPanel(config,current(),message);}
+ }
+ const app=new CampaignBoilerDialog();await app.render({force:true});return app;
 }

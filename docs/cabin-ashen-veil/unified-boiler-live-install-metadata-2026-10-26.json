@@ -1,0 +1,116 @@
+{
+  "schema": "dicebox.cav.unified-boiler-regionwright-live/v1",
+  "dateLocal": "2026-10-26",
+  "ownerInstruction": "continue",
+  "stage": "BUILD_AND_STRUCTURAL_VERIFY",
+  "liveMode": "ENABLED_GM_AUTHORITATIVE_NOT_PLAYER_PLAYTESTED",
+  "world": {
+    "id": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "system": "dnd5e 5.3.3",
+    "electedGM": "Gamemaster 1",
+    "sceneCount": 47,
+    "fullSceneId": "CAVBATHScene0001",
+    "drainedSceneId": "8yLMRDvxyw58dydh"
+  },
+  "originalContract": {
+    "unifiedMapOnly": true,
+    "standaloneBoilerRoomToBeCreated": false,
+    "originalBowl": "Item.1n5LONw3nYIy61O9",
+    "bowlUnchanged": true,
+    "originalScrewdriverBehaviorEnabled": true,
+    "oldTrailRoutesUnchanged": true,
+    "waterState": null,
+    "sluiceTransition": null
+  },
+  "boiler": {
+    "canonicalTargets": {
+      "left": 2,
+      "right": 1
+    },
+    "genericStandaloneTargets": {
+      "left": 2,
+      "right": 4
+    },
+    "regionId": "CAVBBOILERCTRL01",
+    "behaviorId": "CAVBOILERSCRPT01",
+    "enabledOn": [
+      "Scene.CAVBATHScene0001.Region.CAVBBOILERCTRL01",
+      "Scene.8yLMRDvxyw58dydh.Region.CAVBBOILERCTRL01"
+    ],
+    "regionBehaviorType": "executeScript",
+    "behaviorEvents": [
+      "behaviorViewed",
+      "behaviorUnviewed",
+      "behaviorDeactivated"
+    ],
+    "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.boiler?.handleRegionEvent(region, event);",
+    "clientUI": "existing Regionwright Puzzles & Locks waterworks-pressure art board in boiler variant",
+    "gmService": "installCabinBoilerGMService",
+    "requestChannel": "Foundry ChatMessage with explicit scoped flags",
+    "allowedOperations": [
+      "adjust(left/right,±1)",
+      "reset",
+      "submit"
+    ],
+    "authoritativeSessionFlag": "cavUnifiedBoilerPressureSession",
+    "authoritativeSessionStore": "full Bathhouse control Region mirrored to drained Bathhouse control Region",
+    "transaction": "reserve canonical; reserve mirrored; mirror commit; canonical commit; reconcile on interruption",
+    "reentrancy": "elected GM request busy guard + expectedRevision + stored lastMessageId",
+    "ownership": "sender active nongm, actor character, sender owner, same viewed Scene, token visible at exact Region",
+    "solveRule": "only GM computes [2,1]; client success flag never accepted",
+    "successSideEffects": "session flag only; no sluice changes, doors or item rewards",
+    "sourceReadyChecks": "exact two bound Regions, exact 16-character native behavior ID, exact events/script, correct provider targets",
+    "uiSmoke": {
+      "dialogRendered": true,
+      "boilerArtPresent": true,
+      "valveButtons": 8,
+      "submitButton": true,
+      "gauges": [
+        0,
+        0
+      ],
+      "dialogCloseClean": true,
+      "chatMessagesUnchanged": true,
+      "itemsUnchanged": true,
+      "sessionUnchanged": true
+    },
+    "playerGameplayTested": false
+  },
+  "operations": {
+    "newRegions": 0,
+    "createdRegionBehaviors": 2,
+    "enabledRegionBehaviors": 2,
+    "addedScene": 0,
+    "changedWalls": 0,
+    "movedTokens": 0,
+    "awardedItems": 0,
+    "waterStagesChanged": 0,
+    "rosewaterBehaviorsCreated": 0
+  },
+  "errorsAndRecovery": [
+    "First Behavior creation used a 17-character ID, live readback confirmed both Regions still had ZERO Behaviors; never blindly replayed the request.",
+    "Retried each Region using fixed 16-character id CAVBOILERSCRPT01; each verified disabled before enabling.",
+    "An initial source-hardening Python patch assertion failed before write; inspected source, corrected targeted exact string and installed matching hashes.",
+    "Never performed any test valve presses or forged token interaction."
+  ],
+  "evidence": [
+    "utility-harness/artifacts/cav-boiler-new-gm-service-loaded-preinstall-20261026.json",
+    "utility-harness/artifacts/cav-boiler-both-native-disabled-behaviors-verified-20261026.json",
+    "utility-harness/artifacts/cav-boiler-unified-pair-native-commissioned-structural-20261026.json",
+    "utility-harness/artifacts/cav-boiler-gm-nonplaying-panel-smoke-20261026.cjs",
+    "utility-harness/artifacts/cav-boiler-gm-service-enabled-after-final-reload-20261026.json"
+  ],
+  "tests": {
+    "sourceSuitePassed": 73,
+    "failed": 0,
+    "detail": "node --test tests/cav-*.test.mjs, with browser/live/destructive/integration patterns excluded",
+    "newTests": "tests/cav-unified-boiler-gm-reducer.test.mjs"
+  },
+  "next": [
+    "Verify authorized player-click/GM mirrored request once during final gameplay testing, not now",
+    "Confirm owner approved Rosewater four symbols and exact Bowl pickup fixture",
+    "Wire Rosewater native RegionBehavior and GM authoritative ring engine without overloading screwdriver click",
+    "Preserve water/quest/actor stage and continue player-order DCH puzzle installation"
+  ]
+}
