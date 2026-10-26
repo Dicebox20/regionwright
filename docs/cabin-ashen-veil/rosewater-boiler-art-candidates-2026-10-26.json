@@ -1,0 +1,104 @@
+﻿{
+  "schema": "dicebox.cav.bath-underground-render-candidates/v1",
+  "recordedLocal": "2026-10-26T10:47:00-07:00",
+  "ownerInstruction": "continue",
+  "workflowStage": "RENDER_CANDIDATES_INSPECT_FAIL",
+  "approval": "NONE",
+  "nativeBuild": "NOT_AUTHORIZED",
+  "world": {
+    "id": "cabin-in-the-ashen-veil",
+    "foundryHTTPPort30000": false,
+    "devChromeCDPPort9224": false,
+    "worldWrites": 0,
+    "previousFullSceneRoster": 47,
+    "actualBATH03Present": false,
+    "actualBATH04Present": false
+  },
+  "artifacts": [
+    {
+      "sceneKey": "BATH-04",
+      "name": "Rosewater Reliquary",
+      "driveId": "1d7-Po_Yy8ZAtsD1wiyJMksbfpHgbzZKx",
+      "driveUrl": "https://drive.google.com/file/d/1d7-Po_Yy8ZAtsD1wiyJMksbfpHgbzZKx/view?usp=drivesdk",
+      "fileName": "BATH-04_Rosewater_Reliquary_UNAPPROVED_CANDIDATE_2026-10-26.png",
+      "sha256": "8cb20727ba3d95e599c1bbee947f7b500f79cb4fa21f78132d8e1d0f4934bfcf",
+      "widthPx": 662,
+      "heightPx": 546,
+      "byteCount": 758245,
+      "cropOrigin": "AI-composed two-room planning illustration; mechanically extracted left room",
+      "good": [
+        "recognizable top-down stone shrine",
+        "central bowl plinth",
+        "south staircase",
+        "east service doorway",
+        "separate image without text panel"
+      ],
+      "rework": [
+        "remove yellow arrow from east door and stair",
+        "use dedicated full-resolution single-room tactical master",
+        "validate stairs align with true Bathhouse pool hatch",
+        "approve walls, distances, walkable area and art style"
+      ],
+      "sourceArtworkApproved": false
+    },
+    {
+      "sceneKey": "BATH-03",
+      "name": "Boiler Room",
+      "driveId": "1EcPofwwE08Ec1S_mKacqxJckY4H6Gnp9",
+      "driveUrl": "https://drive.google.com/file/d/1EcPofwwE08Ec1S_mKacqxJckY4H6Gnp9/view?usp=drivesdk",
+      "fileName": "BATH-03_Boiler_Room_UNAPPROVED_CANDIDATE_2026-10-26.png",
+      "sha256": "2000bc2e8b5870d5096a9608eac1b2db567b4ed62cf125fd9a35b4547c42a46d",
+      "widthPx": 661,
+      "heightPx": 593,
+      "byteCount": 757722,
+      "cropOrigin": "AI-composed two-room planning illustration; mechanically extracted right room",
+      "good": [
+        "top-down copper pressure vessel and furnace",
+        "maintenance clearances",
+        "west entry and a right-hand opening proposed"
+      ],
+      "rework": [
+        "remove left/right edge text and arrows",
+        "clean full-resolution single-room tactical master",
+        "verify pressure panel fixtures belong to Regionwright and do not bake interaction UI",
+        "onward estate exit is NOT CANON and must be approved before depiction/implementation"
+      ],
+      "sourceArtworkApproved": false
+    }
+  ],
+  "storage": {
+    "folderId": "1ganNpKYPh53_OgEV9jOU-iMfjgovXpo8",
+    "folder": "Cabin in the Ashen Veil — Unapproved Render Evidence",
+    "metadataCheckedByListFolder": true
+  },
+  "canon": {
+    "puzzleProvider": "regionwright-puzzles-locks",
+    "approvedRingAnglesDegrees": [
+      90,
+      270,
+      180
+    ],
+    "onlyDrainedBathHatch": true,
+    "boilerDoorAlwaysDryAndPressureIndependent": true,
+    "bowlOriginalItem": "Item.1n5LONw3nYIy61O9",
+    "bowlInventoryUnchanged": true,
+    "boilerEstatesideExit": "UNDECIDED; illustrations are NOT routing authority"
+  },
+  "inspection": {
+    "approvedMapsReady": false,
+    "geometryApproved": false,
+    "landingLocationsVerified": false,
+    "entryExitFootprintsVerified": false,
+    "bowlArtApproved": false,
+    "gameplayTested": false,
+    "liveSceneCreated": false,
+    "routeInstalled": false
+  },
+  "next": [
+    "render clean BATH-04 standalone no annotations at tactical resolution",
+    "render clean BATH-03 standalone no annotations at tactical resolution",
+    "owner INSPECT and approve both art and exact Boiler onward dry exit",
+    "recover exact Foundry elected active GM and compare full 47 scene/73 item baseline",
+    "native BUILD only after all prerequisites"
+  ]
+}

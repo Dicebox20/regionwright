@@ -1,0 +1,20 @@
+# Cabin in the Ashen Veil — BATH-03/BATH-04 Separate Map Candidates (INSPECT: FAIL / NOT APPROVED)
+**Date:** 2026-10-26 Pacific. **Owner:** "continue". **Status:** two separate candidate artwork files generated and archived in UNAPPROVED Drive folder. Not owner-approved, not full-resolution tactical deliverables, and not installed into Foundry.
+
+## Before
+- Exact Regionwright commit `6cb7d42460bc13b134f68eb0fe35fa823c1ee281` verified. Native Foundry localhost 30000 and CFT Dev CDP 9224 both offline at 10:39 and 10:47 Pacific, with no restart or World writes this turn.
+- Existing October 26 full clone of Foundry world reports 47 Scenes/73 Items; BATH-03 and BATH-04 genuinely absent; approved full/drained Bathhouse background unchanged. Original world Sune Bowl Item `Item.1n5LONw3nYIy61O9` unchanged, the Crooked Man actor and full chase gameplay remain deferred.
+- Verified the `Cabin in the Ashen Veil — Approved Map Art` Drive folder contains 16 items, no lower-room backgrounds. This turn did **not** add images to that folder; all generated samples were placed under `Cabin in the Ashen Veil — Unapproved Render Evidence`.
+
+## RENDER candidate outputs (NOT a passing INSPECT)
+1. **BATH-04 — Rosewater Reliquary**: [Unapproved Drive draft](https://drive.google.com/file/d/1d7-Po_Yy8ZAtsD1wiyJMksbfpHgbzZKx/view?usp=drivesdk). Separate top-down extract 662×546 PNG, 758245 bytes, SHA256 `8cb20727ba3d95e599c1bbee947f7b500f79cb4fa21f78132d8e1d0f4934bfcf`. Visual: dark stone shrine, rose petals, central raised Bowl plinth, southern stair, eastern service door. Still includes small leftover yellow direction marks near stair/door. Lacks verified geometry and standalone full-resolution rendering.
+2. **BATH-03 — Boiler Room**: [Unapproved Drive draft](https://drive.google.com/file/d/1EcPofwwE08Ec1S_mKacqxJckY4H6Gnp9/view?usp=drivesdk). Separate top-down extract 661×593 PNG, 757722 bytes, SHA256 `2000bc2e8b5870d5096a9608eac1b2db567b4ed62cf125fd9a35b4547c42a46d`. Visual: aged copper boiler/steam pipes, firebox, maintenance area, western service entrance. Still contains cropped annotations at west/east margins. The purported opposite onward exit is **illustrative only**; owner has NOT selected its real Foundry Scene destination.
+- Source render attempts generated **combined labeled concept diagrams despite the request for clean standalone maps**. Rather than misrepresent as final, mechanically split the strongest draft into one PNG per room and explicitly marked quality gate **INSPECT FAIL**. Do not feed to Foundry Scene BUILD without a fresh clean master and owner approval.
+- Filenames, byte counts and SHA256 were verified on exported actual PNGs and the same exact bytes uploaded using connected Google Drive file-reference upload; list_folder confirmed both new files, IDs and matching sizes.
+- The maps are not the same resolution as approved Cabin tactical battlemap standard. Do not upscale without meaningful rerender or mistake asset pixel size for approved canvas grid.
+
+## Required next approval / installation
+- Rerender two **gridless, label-free, arrow-free single-room tactical images**, each at suitable Foundry map resolution, with real door holes on the required sides and safe walkable floor. Do not bake playable interaction rings/wheel UI into static backgrounds; Regionwright owns them.
+- Owner INSPECT/APPROVE BATH-04 stairs from drained Bathhouse, central plinth, eastern dry service door; BATH-03 western paired door and distinct onward pressure-independent estate exit. **The onward Boiler exit destination is undecided**; do not invent an H-G09/Waterworks route based on AI concept arrows.
+- Verify GM, world, approved maps + hashes, room dimensions/walls/landings before native Scene creation. Test reciprocal native dry route, room occupancy guard, hatch disable on refill, and original Bowl once-only claim, without activating Crooked Man chase or moving a PC during installation.
+- Maintain source/preview/owner-approval/runtime statuses separately. Only move assets into Approved Map Art after explicit owner approval.
