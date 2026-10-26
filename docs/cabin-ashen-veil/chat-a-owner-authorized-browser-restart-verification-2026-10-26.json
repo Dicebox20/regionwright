@@ -1,0 +1,80 @@
+{
+  "schema": "dicebox.cav.chat-a-reload-recovery-v1",
+  "dateLocal": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerMessage": "go ahead and restart now, the other chat is idle",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "startingCommit": "bd9969f6f5d99922db7fc86348c7ba1297af9c32",
+    "sourceChanges": false,
+    "previousSourceTestsPass": 95
+  },
+  "environment": {
+    "foundryVersion": "14.367",
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "foundryServerRestarted": false,
+    "browserGameTabReloadAttemptCount": 1,
+    "firstReloadHelperSyntaxErrorCaughtBeforeExecution": true,
+    "actualReloadNavigationCommitted": true,
+    "waitOutcome": "timeout, original receipt outcome-unknown",
+    "replayAttempted": false,
+    "cdpClosedAfterReload": true,
+    "foundryPort30000Remained": true,
+    "devChromeRelaunches": 1,
+    "harnessLauncher": "Chrome for Testing Dev/utility-harness/Start-Harness.cmd",
+    "devChrome9224Restored": true,
+    "foundryReadyVerifiedAfterRelaunch": true,
+    "duplicateGMLogin": false
+  },
+  "runtime": {
+    "nearOutside": {
+      "fit": true,
+      "operate": false
+    },
+    "inside": {
+      "fit": true,
+      "operate": true
+    },
+    "far": {
+      "fit": false,
+      "operate": false
+    },
+    "bathhouseGeometrySafety": true,
+    "unifiedBathFixtureSafety": true,
+    "gmWaterListenerRegistered": true,
+    "sluiceNativeEnabled": true,
+    "rosewaterNativeDisabled": true,
+    "ownerApprovedSymbols": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "ringSession": null,
+    "crankFitted": null,
+    "waterState": null,
+    "waterTransaction": null,
+    "chatMessages": 54,
+    "rosewaterProofReady": false,
+    "blockers": [
+      "original-crank-not-installed",
+      "pond-bath-not-committed-drained",
+      "original-sluice-transaction-not-complete"
+    ],
+    "worldDocumentWrites": 0
+  },
+  "evidence": {
+    "positive": "utility-harness/artifacts/cav-chat-a-owner-approved-postrelaunch-gm-source-verified-20261026.json",
+    "prestate": "utility-harness/artifacts/cav-chat-a-owner-authorized-sluice-parity-reload-prestate-20261026.json",
+    "timedOutReceiptRequestId": "cav-chat-a-20261026-owner-authorized-actual-single-foundry-game-reload-v1"
+  },
+  "next": [
+    "Review genuine Study587→Crank→Sluice recovery readiness",
+    "No actual PC acceptance until owner final testing authorization",
+    "Keep separate Chat B late-game branch and avoid shared edits"
+  ],
+  "fidelity": "available-message reconstruction, not lossless transcript"
+}
