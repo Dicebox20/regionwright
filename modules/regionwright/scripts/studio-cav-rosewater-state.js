@@ -26,3 +26,19 @@ export function planRosewaterGMAction(session,action){
  if(!evaluateRosewaterCampaignSolution(config,current).success)return{status:"incorrect"};
  return{status:"ready",next:{version:1,status:"done",revision:state.revision+1,positions:[...state.positions]}};
 }
+// Read-only commissioning proof: never trust a hand-set water flag without the
+// original Crank receipt AND completed GM two-scene Sluice transition.
+export function evaluateRosewaterSluiceProof({water=null,transition=null,crank=null,controller=null}={}){
+ const blockers=[];
+ if(crank?.status!=="done"||crank?.sourceUuid!=="Item.g3VYdgc1qkgkHGvn")
+  blockers.push("original-crank-not-installed");
+ if(controller?.drainEnabled!==true)blockers.push("sluice-controller-not-commissioned");
+ if(water?.version!==1||water?.status!=="open"||water?.pond!=="drained"||
+    water?.bath!=="drained"||water?.stage!=="committed"||water?.source!=="sluice")
+  blockers.push("pond-bath-not-committed-drained");
+ if(transition?.version!==1||transition?.status!=="done"||
+    transition?.operation!=="open"||transition?.committedState!=="open")
+  blockers.push("original-sluice-transaction-not-complete");
+ if(transition?.status==="reserved")blockers.push("sluice-transaction-reserved");
+ return {ready:blockers.length===0,blockers};
+}

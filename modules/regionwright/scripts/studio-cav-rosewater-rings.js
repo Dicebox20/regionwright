@@ -1,4 +1,4 @@
-import{planRosewaterGMAction,CAV_ROSEWATER_SCENE,CAV_ROSEWATER_REGION,CAV_ROSEWATER_SESSION,CAV_ROSEWATER_BEHAVIOR_ID,CAV_ROSEWATER_SYMBOL_FLAG}from"./studio-cav-rosewater-state.js";
+import{planRosewaterGMAction,evaluateRosewaterSluiceProof,CAV_ROSEWATER_SCENE,CAV_ROSEWATER_REGION,CAV_ROSEWATER_SESSION,CAV_ROSEWATER_BEHAVIOR_ID,CAV_ROSEWATER_SYMBOL_FLAG}from"./studio-cav-rosewater-state.js";
 import{createRosewaterCampaignConfig,matchRosewaterOwnerApprovedSymbols}from"../../regionwright-puzzles-locks/scripts/rosewater-campaign-preset.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil",HOOK="__CAV_ROSEWATER_CLAW_GM_SERVICE_001",BUSY="__CAV_ROSEWATER_CLAW_GM_BUSY_001";
 const SCRIPT='await game.modules.get("regionwright")?.api?.campaign?.cabin?.rosewaterRings?.handleRegionEvent(region, event);';
@@ -23,12 +23,20 @@ function sourceReady(){
  const target=cfg.createCampaignConfig({symbols:getCavRosewaterApprovedSymbols(r)});
  return JSON.stringify([...target.solution])==="[1,3,2]";
 }
-const drained=()=>{const water=slGate()?.getFlag(NS,"cavPondBathWaterState");return water?.status==="open"&&water?.pond==="drained"&&water?.bath==="drained"&&
- slGate()?.getFlag(NS,"cavSluiceStageTransaction")?.status!=="reserved"};
+const sluiceProof=()=>{
+ const x=slGate();
+ return evaluateRosewaterSluiceProof({
+  water:x?.getFlag(NS,"cavPondBathWaterState"),
+  transition:x?.getFlag(NS,"cavSluiceStageTransaction"),
+  crank:x?.getFlag(NS,"cavSluiceCrankInstall"),
+  controller:x?.getFlag(NS,"cavSluiceInstallController")
+ });
+};
+const drained=()=>sluiceProof().ready;
 export function describeCavRosewaterRingGM(){
  if(!elected())return{status:"not-elected-gm"};
  const r=region();return{status:sourceReady()?"ready":"not-commissioned",drained:drained(),session:r?.getFlag(NS,CAV_ROSEWATER_SESSION)??null,
-  symbolsApproved:!!getCavRosewaterApprovedSymbols(r),behaviorCount:r?.behaviors.size??null,
+  symbolsApproved:!!getCavRosewaterApprovedSymbols(r),sluiceProof:sluiceProof(),behaviorCount:r?.behaviors.size??null,
   sceneUuid:r?.parent?.uuid??null,ringRegionUuid:r?.uuid??null,canonDegrees:[90,270,180]};
 }
 async function actionFromPlayer(req,author,messageId){

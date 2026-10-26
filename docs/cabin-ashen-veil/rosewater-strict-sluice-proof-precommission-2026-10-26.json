@@ -1,0 +1,101 @@
+{
+  "schema": "dicebox.cav.rosewater-sluice-proof-precommission/v1",
+  "dateLocal": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerInstruction": "Lets continue",
+  "phase": "SAFE_DEPENDENCY_INTEGRATION_NOT_PLAYTESTED",
+  "ownerApproval": {
+    "symbols": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "flagStillVerified": true,
+    "solutionQuarterTurns": [
+      1,
+      3,
+      2
+    ],
+    "degrees": [
+      90,
+      270,
+      180
+    ]
+  },
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "beforeCommit": "1a766f8b56eb80de576a00debf92b062774893d6",
+    "modified": [
+      "modules/regionwright/scripts/studio-cav-rosewater-state.js",
+      "modules/regionwright/scripts/studio-cav-rosewater-rings.js"
+    ],
+    "newTest": "tests/cav-rosewater-sluice-commissioning-proof.test.mjs",
+    "testsPass": 83,
+    "testsFail": 0,
+    "installedSourceHashesMatch": true,
+    "postReloadRuntimeUptake": "UNVERIFIED_AFTER_TIMEOUT"
+  },
+  "electedGM": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "sceneCount": 47,
+    "restoredThroughExistingCFTJoin": true,
+    "password": "not recorded",
+    "nativeReadOnlyStatus": "verified before source update"
+  },
+  "nativeBefore": {
+    "region": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+    "behaviorId": "CAVROSEWATERSCR1",
+    "behaviorDisabled": true,
+    "bindingStatus": "STAGED_DISABLED",
+    "ownerSymbolsStatus": "OWNER_APPROVED",
+    "ringSession": null,
+    "waterState": null,
+    "sluiceTransaction": null,
+    "crankFittedFlag": null,
+    "originalScrewdriverEnabled": true,
+    "originalBowlItemPresent": true,
+    "boilerGMStatus": "ready",
+    "tokenMoves": 0,
+    "newWorldWrites": 0
+  },
+  "safetyChanges": {
+    "sluiceProofRequired": [
+      "crank.status=done with sourceUuid Item.g3VYdgc1qkgkHGvn",
+      "cavSluiceInstallController.drainEnabled=true",
+      "cavPondBathWaterState version=1 status=open pond=drained bath=drained stage=committed source=sluice",
+      "cavSluiceStageTransaction version=1 status=done operation=open committedState=open"
+    ],
+    "proofMode": "read-only pure function, no bypassable manual flag",
+    "gmruntime": "describe.sluiceProof includes reasons",
+    "actionRequiresGenuinePlayerOwnedToken": true,
+    "uiEnabled": false
+  },
+  "outage": {
+    "originalGMReloadStatus": "outcome-unknown",
+    "receiptInspected": true,
+    "postTimeoutFoundry30000": true,
+    "postTimeoutChrome9224": false,
+    "postReloadGMReadback": false,
+    "noBlindReplay": true
+  },
+  "receipts": [
+    "utility-harness/artifacts/cav-owner-symbols-recovered-elected-gm-exact-readback-20261026.json",
+    "utility-harness/artifacts/cav-rosewater-join-readonly-20261026.cjs",
+    "utility-harness/artifacts/cav-rosewater-safe-gm1-join-20261026.cjs",
+    "utility-harness/artifacts/cav-rosewater-proof-post-source-reload-20261026.cjs"
+  ],
+  "remaining": [
+    "Original Crank obtained/fitted by real player via Study→587",
+    "One legitimate Sluice open transaction to drain Pond and Bath",
+    "Exact GM source reload when Dev Chrome stable, verify new blocked reasons",
+    "Confirm Rosewater Region player click hit zone and approved map geometry",
+    "Only then commission existing native RegionBehavior",
+    "Original one-time Scrying Bowl pickup location on unified Bathhouse",
+    "Owner-deferred full player interaction and Crooked Man NPC"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless native export"
+}
