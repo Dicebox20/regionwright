@@ -1,0 +1,144 @@
+{
+  "schema": "dicebox.cav.rosewater-bath03-bath04-prepare/v1",
+  "checkpointLocal": "2026-10-26",
+  "stage": "PREPARE",
+  "state": "BLOCKED_ON_APPROVED_ROOM_ART_AND_LIVE_GM",
+  "provenance": {
+    "acquisition": "read-only copy of the stopped Foundry world LevelDB; originals were never opened for decoding",
+    "rawRootSceneCount": 47,
+    "rawWorldItemCount": 73,
+    "localEvidence": "utility-harness/artifacts/cav-offline-db-audit-20261026-0615/verified-root-scenes-and-bowl.json",
+    "targetWorld": "cabin-in-the-ashen-veil",
+    "lastRuntime": "Foundry and Dev Chrome listeners absent 2026-10-26 06:14 Pacific; no in-world GM readback"
+  },
+  "existing": {
+    "bathFull": {
+      "sceneId": "CAVBATHScene0001",
+      "name": "BATH - Unified Bathhouse Surface",
+      "width": 2160,
+      "height": 1440,
+      "grid": 120,
+      "ownerArtworkSha256": "A878D19046B4BA79ADBAC36C620A53C8648FE5CFED1504469978FAE0A353B132",
+      "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE"
+    },
+    "bathDrained": {
+      "sceneId": "8yLMRDvxyw58dydh",
+      "name": "BATH-DRAINED - Unified Bathhouse Surface",
+      "width": 2160,
+      "height": 1440,
+      "grid": 120,
+      "ownerArtworkSha256": "337d84929ca93eaf29527124f33ffa26dad24082ffcf4659cca6c7932892c11e",
+      "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+      "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE"
+    },
+    "bowl": {
+      "uuid": "Item.1n5LONw3nYIy61O9",
+      "name": "Sune's Scrying Bowl",
+      "type": "loot",
+      "originalQuantity": 1,
+      "itemFlagSource": "2026-10-24-approved-puzzle-chain",
+      "itemStatus": "GM_LIBRARY_ONLY",
+      "worldTemplatePresent": true,
+      "awardDisposition": "NEVER_GRANTED_BY_THIS_PREPARE",
+      "itemArtApproval": "UNVERIFIED"
+    },
+    "distinctPellet": {
+      "uuid": "Item.VjdQNwil7pPKzkHU",
+      "name": "Dust of Dryness",
+      "role": "SG-05 Undercroft outer entrance not Rosewater reward"
+    }
+  },
+  "toCreate": [
+    {
+      "sceneKey": "BATH-04",
+      "name": "Rosewater Reliquary",
+      "nativeSceneId": null,
+      "approvedArtSource": null,
+      "approvedArtSha256": null,
+      "ownerApprovedGeometry": false,
+      "knownEntrances": [
+        "stair from drained Bathhouse pool-floor hatch",
+        "east service door to BATH-03"
+      ],
+      "knownFixtures": [
+        "Sune's Scrying Bowl plinth"
+      ],
+      "unresolved": [
+        "owner-approved map",
+        "safe landing footprint",
+        "wall and door geometry",
+        "BATH-03 linked exit coordinates"
+      ]
+    },
+    {
+      "sceneKey": "BATH-03",
+      "name": "Boiler Room",
+      "nativeSceneId": null,
+      "approvedArtSource": null,
+      "approvedArtSha256": null,
+      "ownerApprovedGeometry": false,
+      "knownEntrances": [
+        "dry service connection from BATH-04"
+      ],
+      "knownFixtures": [
+        "separate Boiler pressure wheels (2,1), using established Regionwright controls"
+      ],
+      "unresolved": [
+        "owner-approved map",
+        "return egress from Boiler to rest of estate",
+        "safe landing footprint",
+        "door and wall geometry"
+      ]
+    }
+  ],
+  "authoritativePuzzle": {
+    "provider": "regionwright-puzzles-locks",
+    "engine": "three-ring-reliquary-engine.js",
+    "preset": "rosewater-campaign-preset.js",
+    "anglesDegrees": {
+      "outer": 90,
+      "middle": 270,
+      "inner": 180
+    },
+    "quarterTurnIndices": [
+      1,
+      3,
+      2
+    ],
+    "approvedSymbols": null,
+    "approvedMovableArtwork": null,
+    "playerUiIntegrated": false,
+    "gmSolveReceipt": false
+  },
+  "safety": {
+    "trueHatchOnlyOnScene": "8yLMRDvxyw58dydh",
+    "fullBathHatchMustRemainClosed": true,
+    "requiresSharedWaterState": "open/drained",
+    "requiresGMVerifiedRingResult": true,
+    "requiresPressureIndependentDryEastExit": true,
+    "requiresAuthorizedActorAtSource": true,
+    "requiresOneTimeBowlClaim": true,
+    "replenishWaterMustCheckUndergroundOccupancy": true,
+    "noReentryViaUnderwaterHatchAfterRefill": true,
+    "boilerPressurePuzzleNotRequiredForEscape": true,
+    "actorTokenTeleportsPerformed": 0,
+    "foundryWorldMutationsPerformed": 0
+  },
+  "exactNextWorkflow": [
+    "PREPARE: locate or owner-approve static lower-room art and geometry",
+    "RENDER/INSPECT: only if separately authorized by owner; Regionwright owns movable puzzle art",
+    "BUILD: add native BATH-04/BATH-03 Scenes, landing and dry doors after GM preflight",
+    "INTEGRATE: GM-authoritative ring solution, drained hatch, dry Boiler egress",
+    "VERIFY: scene UUID destinations and actor safety; defer full player acceptance to final tests",
+    "CATALOGUE: record IDs, art SHA and state receipts in GitHub"
+  ],
+  "mistakesToAvoid": [
+    "Do not confuse H-B03 Basement Supply Closet with BATH-03 Boiler",
+    "Do not confuse filtered nine-Scene audit with full world registry",
+    "Do not reuse six-sector standalone demo result [1,3,5]",
+    "Do not award Item.1n5LONw3nYIy61O9 during install",
+    "Do not conflate Vault Keystone with Sune Bowl",
+    "Do not invent approved art or native UUID"
+  ]
+}

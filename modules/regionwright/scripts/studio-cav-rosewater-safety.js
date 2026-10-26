@@ -2,6 +2,17 @@
 // Planning-only, no native Foundry Scene IDs or GM state writes, until BATH-04/BATH-03 artwork and routes are verified.
 // Interactive rings and canonical solution belong to Regionwright: Puzzles & Locks.
 export const ROSEWATER_SCENE_CONTRACT_VERSION=1;
+export const ORIGINAL_SCRYING_BOWL_ITEM_UUID="Item.1n5LONw3nYIy61O9";
+export function validateRosewaterOriginalBowlTemplate(item){
+ const id=item?.id??item?._id;
+ const flag=item?.flags?.["dicebox-campaign-helper"]?.cabinPuzzleItem;
+ if(id!=="1n5LONw3nYIy61O9")return"wrong-original-uuid";
+ if(item?.type!=="loot"||item?.system?.quantity!==1||
+    !/Sune.{0,8}Scrying Bowl/i.test(item?.name??"")||
+    flag?.source!=="2026-10-24-approved-puzzle-chain"||flag?.status!=="GM_LIBRARY_ONLY")
+    return"original-provenance-mismatch";
+ return"verified";
+}
 export const ROSEWATER_EXPECTED_ROOM_KEYS=Object.freeze(["bath04-reliquary","bath03-boiler"]);
 export function rosewaterHatchDecision({water,ringSolved=false,drainedBathSceneVerified=false,
  dryBoilerExitVerified=false,hatchTransaction=null}={}){
@@ -22,12 +33,12 @@ export function rosewaterRefillDecision({reliquaryTokenIds=[],boilerTokenIds=[],
  if(!dryServiceDoorBidirectional||!dryRoomDestinationsVerified||!boilerIndependentOfPressure)return"unsafe-occupied-underground";
  return"safe-via-dry-boiler-exit";
 }
-export function rosewaterBowlPickupDecision({hatchOpen=false,authenticBowlSource=false,
+export function rosewaterBowlPickupDecision({hatchOpen=false,bowlTemplate=null,
  actorInReliquary=false,claim=null}={}){
  if(claim?.status==="done")return"already-claimed";
  if(claim)return"reconcile";
  if(!hatchOpen||!actorInReliquary)return"not-near-reliquary-plinth";
- if(!authenticBowlSource)return"missing-canonical-source";
+ if(validateRosewaterOriginalBowlTemplate(bowlTemplate)!=="verified")return"missing-canonical-source";
  return"ready";
 }
 export function rosewaterWaterVariantRoute({water,wellDryExitVerified=false}={}){
