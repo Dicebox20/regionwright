@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "workstream": "cav-chat-b-late-game",
+  "turn": 2,
+  "datePacific": "2026-10-26",
+  "sourceRepo": "Dicebox20/regionwright",
+  "branch": "codex/cav-late-game-chat-b-20261026",
+  "baseCommit": "c39903349645801450aadafed0847c5f9a481d5a",
+  "scope": "isolated-source-and-pure-tests-only",
+  "workPackage": "L1-B Silver Tiny Key marker and Parents Hope Chest authentic-key unlock",
+  "sourceFiles": ["modules/regionwright/scripts/studio-cav-late-silver-hope-contract.js", "tests/cav-late-silver-hope-contract.test.mjs"],
+  "contracts": ["planSilverTinyKeyMarker(receipt)", "assessHopeChestUnlock(receipt)"],
+  "tests": {"new": 26, "combinedContractsPassed": 38, "allCabinPassed": 121, "allCabinFiles": 27, "nodeSyntax": "pass", "playerAccepted": false},
+  "foundryWrites": false,
+  "sharedRegistryWrites": false,
+  "sourceItemUUIDsVerified": false,
+  "ownerApprovalForIntegration": false,
+  "missingEvidence": ["sg01-late-region-uuid", "silver-key-source-item-uuid", "hope-chest-region-uuid", "authentic-first-chase-completed-flag", "waterworks-restored-flag", "allen-warning-read-flag"],
+  "integrator": "Chat A",
+  "transcript": "available-message-reconstruction-not-lossless"
+}
