@@ -1,0 +1,22 @@
+{
+ "schemaVersion":1,
+ "turn":4,
+ "datePacific":"2026-10-26",
+ "assignment":"Chat B source-only late game",
+ "repository":"Dicebox20/regionwright",
+ "branch":"codex/cav-late-game-chat-b-20261026",
+ "parentCommit":"0c0ca71b2e6c13951fbb83564156a5126322323d",
+ "chatAObservedHead":"0a0a2896c096d8e4159fbb1af479bda581cfe2f1",
+ "package":"L1-D Gazebo Lantern Oil plus Wick, ignition, and Second Glass Eye pickup",
+ "exports":["planGazeboPartInstallation(receipt, component)","planGazeboLanternIgnition(receipt)","planGazeboSecondEyePickup(receipt)"],
+ "sourceFile":"modules/regionwright/scripts/studio-cav-late-gazebo-eye-contract.js",
+ "testFile":"tests/cav-late-gazebo-eye-contract.test.mjs",
+ "tests":{"newPassed":57,"suitePassed":246,"suiteFiles":30,"nodeSyntax":"pass","scope":"pure local fixture","playerAccepted":false},
+ "historicalOriginalItems":{"secondEye":"Item.QIH1ugEWGOO1U6LN","firstEye":"Item.mN1dk0qlr7hyfupk","currentWorldReverified":false,"evidence":"utility-harness/artifacts/cabin-puzzle-items-receipt-20261024.json"},
+ "foundryWrites":false,
+ "installedModuleWrites":false,
+ "sharedRegistryWrites":false,
+ "unknowns":["current original Item UUID readback","oil/Wick original source UUID and provenance","Gazebo scene and region UUIDs","safe reveal/return geometry","GM authenticated adapter and once-only ledger"],
+ "integrator":"Chat A",
+ "transcriptQuality":"available-message-reconstruction-not-lossless"
+}

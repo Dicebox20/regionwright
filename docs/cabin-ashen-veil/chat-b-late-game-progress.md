@@ -29,3 +29,10 @@
 - ACCEPTANCE: 68 new pure adversarial tests pass; complete Cabin 189/189 across 29 files, both sources Node syntax PASS. Source/local only, zero player test certifications.
 - STOP: exact original Item/Region/Behavior identities, authentic Journal read handler and safe Studio↔Workshop return must be verified before any live Stage. Reserves/partial ledger require GM reconciliation.
 - DURABILITY: appended this turn after tests, expanded T3 evidence matrix, unique workstream Turn 3 handoff and machine metadata (nonlossless chat reconstruction). Integrator remains Chat A. Next scoped work: Gazebo oil+Wick/eye2 separate from optional Rose/Cog/Star.
+## Turn 4 / source-only L1-D — 2026-10-26
+- START: read latest owner's approved LOCK-10, Chat B T3 handoff, local evidence and branch; Chat A separate checkout HEAD was `0a0a2896c096d8e4159fbb1af479bda581cfe2f1`, untouched. Chat B parent `0c0ca71b2e6c13951fbb83564156a5126322323d`.
+- SOURCE: isolated pure Gazebo part installation (oil/Wick in either order) + separate ignite/temporary cobweb reveal/once-only eye marker and explicit eye pickup, with no native Foundry writes. No requirement to solve optional Rose/Cog/Star table. Failure/reload/reserved ledger cases fail closed, no automatic grants.
+- HISTORICAL ID: Original 2026-10-24 creation receipt shows second Glass Eye `Item.QIH1ugEWGOO1U6LN` and distinct first `Item.mN1dk0qlr7hyfupk`. This is historical creation evidence ONLY; current exact Item readback missing, preserve original source and do not invent duplicate templates.
+- TESTS: 57 new Gazebo adversarial pure fixtures pass; 246/246 full Cabin tests across 30 files and node syntax pass. NOT GM live runtime or player-playtested.
+- STOP: live Gazebo and lantern/eye Region/Behavior UUIDs, current Oil/Wick originals and item pickup provenance, safe temporary effect and persistent marker must be verified by Chat A. Source `origin` field is not an authentication scheme by itself.
+- DURABILITY: append evidence matrix, dated own Turn 4 handoff and structured metadata and available-message (not lossless) transcript reconstruction. Source reviewed/pushed independently; next L1-E Rufus eye sockets.
