@@ -1,0 +1,37 @@
+{
+  "schema": "dicebox.cav.chain-usability-baseline/v1",
+  "dateLocal": "2026-10-26",
+  "ownerQuestion": "Can you give me an upate on how much of the chain is usable?",
+  "sourceRefs": [
+    "docs/cabin-ashen-veil/region-puzzle-chain-audit-2026-10-25.md",
+    "docs/cabin-ashen-veil/regionwright-puzzle-update-log-2026-10-26.md",
+    "docs/cabin-ashen-veil/rosewater-sluice-original-prerequisites-live-audit-2026-10-26.md"
+  ],
+  "sourceStartHead": "462bc1cf9cfad4b2bdcbf4f7a78f828591418e41",
+  "estimates": {
+    "substantialImplementationApproxPercent": 40,
+    "method": "qualitative, by major gameplay waves and Oct26 superseding Oct25 status; not counted node percentages",
+    "certifiedPlayablePercent": null,
+    "completeNonGmEndToEndTestCount": 0,
+    "sourceTestPass": 83,
+    "sourceTestFail": 0
+  },
+  "overall": {
+    "early": "mostly installed, not real-player validated",
+    "mid": "partly installed, sluice transition pending; AQ/chase and Rosewater native disabled",
+    "late": "multiple major integrations missing"
+  },
+  "criticalKnownGates": [
+    "Crank original 587 not player-fitted",
+    "Original Sluice water drain transaction not completed",
+    "Aqueduct portal/chase disabled; Crooked Man Actor intentionally deferred",
+    "Rosewater native Behavior disabled; Bowl pickup fixture undecided",
+    "Greenhouse/second chase/Rufus/books/Vault/Undercroft player integration incomplete"
+  ],
+  "runtimeLast": {
+    "foundry30000": true,
+    "chrome9224": false,
+    "gmStrictRosewaterProofPreviouslyReadbackVerified": true
+  },
+  "transcriptFidelity": "available-message reconstruction, not lossless native transcript"
+}
