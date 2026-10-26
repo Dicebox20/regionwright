@@ -1,0 +1,113 @@
+{
+  "schema": "dicebox.cav.unified-bath-puzzle-binding/v1",
+  "dateLocal": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerDirective": "Lets continue",
+  "status": "LIVE_SOURCE_APPLIED_NATIVE_BINDING_METADATA_STAGED_DISABLED",
+  "world": {
+    "id": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "electedGM": "Gamemaster 1",
+    "sceneCount": 47,
+    "foundryPort": 30000,
+    "chromeCDPPort": 9224
+  },
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "changedFiles": [
+      "modules/regionwright/scripts/studio-cav-unified-bath-interlock.js",
+      "modules/regionwright/scripts/studio-cav-water-controller.js",
+      "modules/regionwright/scripts/studio-cav-drained-pickups.js",
+      "modules/regionwright/scripts/studio-cav-rosewater-safety.js",
+      "modules/regionwright/scripts/studio-campaign.js",
+      "modules/regionwright-puzzles-locks/scripts/cav-boiler-campaign-preset.js",
+      "modules/regionwright-puzzles-locks/scripts/api.js"
+    ],
+    "addedTests": [
+      "tests/cav-unified-bath-water-interlock.test.mjs",
+      "tests/cav-boiler-campaign-preset.test.mjs",
+      "tests/cav-unified-bath-pickup-ring-click-separation.test.mjs",
+      "tests/cav-unified-bath-rosewater-commissioning.test.mjs"
+    ],
+    "testSuitePass": 70,
+    "testSuiteFail": 0,
+    "moduleOnDiskHashesMatchSource": true,
+    "activeGMReloadVerified": true
+  },
+  "native": {
+    "bindingFlag": "dicebox-campaign-helper.cavUnifiedBathPuzzleBinding",
+    "allStatus": "STAGED_DISABLED",
+    "sourceRegions": [
+      {
+        "uuid": "Scene.CAVBATHScene0001.Region.CAVBBOILERCTRL01",
+        "kind": "boiler-pressure",
+        "variant": "filled",
+        "api": "regionwright-puzzles-locks.boilerCampaign",
+        "newBehaviorCount": 0
+      },
+      {
+        "uuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBBOILERCTRL01",
+        "kind": "boiler-pressure",
+        "variant": "drained",
+        "api": "regionwright-puzzles-locks.boilerCampaign",
+        "newBehaviorCount": 0
+      },
+      {
+        "uuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+        "kind": "rosewater-rings",
+        "variant": "drained-only",
+        "api": "regionwright-puzzles-locks.rosewater",
+        "newBehaviorCount": 0,
+        "overlapWith": "CAVBATHSCRDRY001"
+      }
+    ],
+    "sceneCountBefore": 47,
+    "sceneCountAfter": 47,
+    "noScenesCreated": true,
+    "noTeleportsCreated": true,
+    "oldTrailReturnsUnchanged": true,
+    "oldScrewdriverRegionUnchanged": true,
+    "originalBowl": "Item.1n5LONw3nYIy61O9",
+    "bowlGranted": false,
+    "tokensMoved": 0,
+    "waterStateChanged": false
+  },
+  "behavior": {
+    "unifiedWaterSafety": "Guard checks exact paired native Boiler/basin fixture Regions and drained-only ring in scene variants; preserves legacy isolated lower-room emergency blocking and existing no-Bath-occupants rule",
+    "clickSeparation": "Existing broad drained screwdriver pickup handler ignores clicks actually inside small Rosewater ring footprint; outside remains available",
+    "boilerGoals": [
+      2,
+      1
+    ],
+    "genericStandaloneBoilerGoals": [
+      2,
+      4
+    ],
+    "genericDemoPreserved": true,
+    "rosewaterAnglesDegrees": [
+      90,
+      270,
+      180
+    ],
+    "fourOwnerApprovedSymbolsAvailable": false,
+    "singleMapPickupFixtureForBowlChosen": false,
+    "gmAuthoritativeSolveServiceInstalled": false,
+    "playerFacingBehaviorInstalled": false,
+    "gameplayTestsPerformed": 0
+  },
+  "evidence": {
+    "before": "utility-harness/artifacts/cav-bath-live-puzzle-contract-before-20261026.json",
+    "preBindings": "utility-harness/artifacts/cav-unified-bath-puzzle-bindings-before-20261026.json",
+    "nativeBindings": "utility-harness/artifacts/cav-unified-bath-puzzle-binding-staged-receipt-20261026.json",
+    "postReload": "utility-harness/artifacts/cav-unified-bath-sluice-ring-boiler-live-verified-20261026.json",
+    "preReload": "utility-harness/artifacts/cav-unified-bath-source-after-browser-reload-20261026.json"
+  },
+  "outstanding": [
+    "GM-authoritative Regionwright visual interaction wiring and one-time solve receipt, without forged player completion",
+    "Four owner-approved Regionwright Rosewater ring symbols",
+    "Owner-approved Bowl pickup point and map geometry in existing single-map Bathhouse",
+    "UI commissioning tests for Boiler 2/1 and Rosewater 90/270/180, owner-deferred full PC gameplay acceptance",
+    "Reconcile any obsolete descriptions of BATH-03/BATH-04 separate Scenes before reuse; legacy source helper retained only if stray old Scenes are detected"
+  ]
+}

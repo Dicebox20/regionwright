@@ -8,6 +8,7 @@ import { clearSpineMosaic, configureSpineMosaic, createSpineMosaicPuzzleConfig, 
 import { clearSlidingMosaic, configureSlidingMosaic, createSlidingMosaicPuzzleConfig, handleSlidingMosaicRegionEvent, openSlidingMosaicPuzzle, previewSlidingMosaic } from "./sliding-mosaic.js";
 import { openStandalonePuzzle, standalonePuzzleCatalog } from "./standalone-puzzles.js";
 import {createRosewaterCampaignConfig,evaluateRosewaterCampaignSolution,rotateRosewaterRing,resetRosewaterRings,ROSEWATER_RING_ANGLES_DEGREES} from "./rosewater-campaign-preset.js";
+import {createCavBoilerConfig,evaluateCavBoiler,adjustCavBoiler,resetCavBoiler} from "./cav-boiler-campaign-preset.js";
 import { puzzleSetupCatalog, openPuzzleSetup } from "./puzzle-hub.js";
 import { puzzleHUD } from "./puzzle-hud.js";
 
@@ -20,6 +21,12 @@ export function createPuzzleAPI({ openPuzzleHub }) {
     openSetup: openPuzzleSetup,
     openStandalone: openStandalonePuzzle,
     puzzleHUD,
+    boilerCampaign: Object.freeze({
+      createConfig:createCavBoilerConfig,
+      evaluate:evaluateCavBoiler,
+      adjust:adjustCavBoiler,
+      reset:resetCavBoiler
+    }),
     rosewater: Object.freeze({
       createCampaignConfig:createRosewaterCampaignConfig,
       evaluateCampaignSolution:evaluateRosewaterCampaignSolution,

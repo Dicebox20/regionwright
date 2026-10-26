@@ -1,3 +1,4 @@
+// 2026-10-26 OWNER CORRECTION: current Bathhouse is one unified map; legacy lower-room functions below are superseded.
 // Cabin in the Ashen Veil — Rosewater staging safety contract.
 // Planning-only, no native Foundry Scene IDs or GM state writes, until BATH-04/BATH-03 artwork and routes are verified.
 // Interactive rings and canonical solution belong to Regionwright: Puzzles & Locks.
@@ -58,4 +59,31 @@ export function rosewaterWaterVariantRoute({water,wellDryExitVerified=false}={})
  // but cannot be declared safe until both linked rooms and return destinations are verified.
  const drained=water?.status==="open"&&water?.pond==="drained"&&water?.bath==="drained";
  return{poolHatchEnabled:drained&&wellDryExitVerified,dryBoilerExitPersistent:wellDryExitVerified};
+}
+
+// Current single-map commissioning guard; unlike legacy "BATH-04" functions, no invented portal/dry stair required.
+export function assessUnifiedRosewaterActivation({
+ water=null,filledSceneVerified=false,drainedSceneVerified=false,
+ ringRegionVerified=false,approvedFourSymbols=false,
+ screwdriverClickSeparationVerified=false,existingRingSession=null
+}={}){
+ if(existingRingSession?.status==="reserved")return"reconcile";
+ if(existingRingSession&&existingRingSession.status!=="done"&&existingRingSession.status!=="unsolved")return"reconcile";
+ if(!filledSceneVerified||!drainedSceneVerified||!ringRegionVerified)return"missing-unified-bath-fixture";
+ if(!approvedFourSymbols)return"awaiting-approved-regionwright-symbols";
+ if(!screwdriverClickSeparationVerified)return"screwdriver-hit-zone-unverified";
+ if(water?.status!=="open"||water?.pond!=="drained"||water?.bath!=="drained")return"requires-drained-bath";
+ return"ready";
+}
+// This can only become ready after the owner identifies the actual Bowl fixture on the unified map.
+// It does not grant the item; future elected-GM claim service must independently verify owned token/location.
+export function assessUnifiedBathBowlClaim({
+ approvedPickupRegionId=null,clickedRegionId=null,actorAtRegion=false,
+ sourceItem=null,claim=null
+}={}){
+ if(!approvedPickupRegionId)return"owner-pickup-fixture-undecided";
+ if(clickedRegionId!==approvedPickupRegionId||!actorAtRegion)return"not-at-approved-bowl-fixture";
+ if(claim?.status==="done")return"already-claimed";
+ if(claim)return"reconcile";
+ return validateRosewaterOriginalBowlTemplate(sourceItem)==="verified"?"ready":"missing-canonical-source";
 }

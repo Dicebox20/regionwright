@@ -1,6 +1,7 @@
 import {planCavWaterChange,normalizeCavWaterState} from "./studio-cav-water-state.js";
 import {checkAqueductRouteForWater,prepareAqueductPortalsForClosing,completeAqueductPortalsAfterOpening,confirmAqueductPortalsWaterStage} from "./studio-cav-aqueduct-routing.js";
 import {evaluateRosewaterLowerRoomSluicePreflight} from "./studio-cav-rosewater-safety.js";
+import {assessUnifiedBathFixtures} from "./studio-cav-unified-bath-interlock.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",CONTROL="CAVEXT02SLUICE01";
 const BATH="CAVBATHScene0001",BATH_DRY="8yLMRDvxyw58dydh",TRAIL="CAVTRAILScene001";
@@ -33,6 +34,17 @@ function geometryEqual(left,right){
  JSON.stringify([...lb.system.destinations])===JSON.stringify([...rb.system.destinations])&&
  left.width===right.width&&left.height===right.height&&left.grid.size===right.grid.size;
 }
+export function inspectUnifiedBathFixtureWaterSafety(){
+ const ref=id=>game.scenes.get(id);
+ const serialize=s=>s&&({id:s.id,width:s.width,height:s.height,regions:s.regions.contents.map(x=>({
+  id:x.id,shapes:x.shapes.map(g=>g.toObject()),
+  fixtureKey:x.getFlag(NS,"cavUnifiedBathFixtureKey"),phase:x.getFlag(NS,"phase"),
+  sessionStatus:x.getFlag(NS,"cavRosewaterRingSession")?.status??null
+ }))});
+ return assessUnifiedBathFixtures({filled:serialize(ref(BATH)),drained:serialize(ref(BATH_DRY))});
+}
+// Legacy separate-underground-rooms guard retained only for detecting stray old-design Scenes.
+// The current owner-approved layout uses the single unified Bathhouse and inspectUnifiedBathFixtureWaterSafety().
 export function readRosewaterUndergroundBeforeRefill(){
  const rooms=(key,name)=>game.scenes.contents.filter(s=>
   s.getFlag(NS,"cavStructuralSceneKey")===key ||
@@ -96,6 +108,7 @@ async function transition(req,authorId){
  const priorTransaction=region.getFlag(NS,TRANSITION);
  if(priorTransaction?.status==="reserved")return "reconcile";
  if(priorTransaction&&priorTransaction.status!=="done")return "reconcile";
+ if(!inspectUnifiedBathFixtureWaterSafety().ok)return "unified-bath-reconcile";
  if(!geometryEqual(full,dry)||!dry||dry.getFlag(NS,"cavWaterVariant")!=="drained"||
  dry.getFlag(NS,"approvedArtSha256")!==DRAINED_HASH||dry.background.src!==BATH_DRY_ART||
  full.background.src!==BATH_FULL||dry.active||full.active)return "reconcile";
@@ -172,7 +185,8 @@ export function installCabinSluiceWaterService(){
   const output={done:req.action==="open"?"The gate shudders open. Water drains from the pond and the bathhouse pools.":"The sluice closes, and water refills the pond and bathhouse pools.",
    unsafe:"The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
    "aqueduct-route-active":"The Aqueduct route lacks a completed commissioning receipt. The Gamemaster must reconcile it before changing the sluice.",
-   "underground-unsafe":"The Bathhouse's lower rooms lack a confirmed dry exit. The Gamemaster must secure the passage before refilling.",
+   "underground-unsafe":"The Bathhouse contains old separate-room documents with incomplete dry egress. Ask the Gamemaster to reconcile them.",
+   "unified-bath-reconcile":"The Boiler, basin, or Rosewater Regions on the unified Bathhouse map need a Gamemaster safety check before changing water.",
    denied:"Only an authorized nearby character can operate this sluice.",
    "crank-needed":"The original Crank must be fitted before the wheel will turn.",
    blocked:"The flood controls remain locked.",

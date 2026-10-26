@@ -8,6 +8,11 @@ const READY=()=>game?.ready&&game.world?.id===W;
 const GM=()=>READY()&&game.user.isGM&&game.users.activeGM?.id===game.user.id;
 const CENTER=(t,s)=>({x:t.x+t.width*s.grid.size/2,y:t.y+t.height*s.grid.size/2,elevation:0});
 export const drainedPickupDecision=(stage,flag)=>stage!=="open"?"hidden":flag?.status==="done"?"already":flag?"reconcile":"ready";
+// The broad legacy screwdriver region contains the smaller owner-approved Rosewater ring zone.
+// Protect the future ring interaction without changing or disabling the original screwdriver RegionBehavior.
+export const shouldHandleDrainedPickupClick=({fixtureId,insideFixture=false,insideRosewaterRing=false}={})=>
+ insideFixture&&!(fixtureId==="CAVBATHSCRDRY001"&&insideRosewaterRing);
+
 function DRY(){
  const p=game.scenes.get(P),g=p?.regions.get(G),t=game.scenes.get("CAVTRAILScene001")?.regions.get("13g6uK1QrR9PFOzA")?.behaviors.get("ZbrhX0nnaLvLA5Zh");
  return g?.getFlag(NS,"cavSluiceStageTransaction")?.status==="done"&&g.getFlag(NS,"cavPondBathWaterState")?.status==="open"&&g.getFlag(NS,"cavPondBathWaterState")?.bath==="drained"&&
@@ -55,7 +60,11 @@ export async function handleCabinDrainedPickupRegionEvent(region,event){
  if(old?.handler)canvas.stage.off("pointertap",old.handler);
  const handler=async e=>{
   if(!canvas?.ready||canvas.scene?.id!==f.scene||(e.button!==undefined&&e.button!==0))return;
-  const pos=canvas.stage.toLocal(e.global);if(!region.testPoint({x:pos.x,y:pos.y,elevation:0})||globalThis[key+"_busy"])return;
+  const pos=canvas.stage.toLocal(e.global);
+  const insideFixture=region.testPoint({x:pos.x,y:pos.y,elevation:0});
+  const ring=canvas.scene?.regions.get("CAVBROSEWATER001");
+  const insideRosewaterRing=!!ring?.testPoint({x:pos.x,y:pos.y,elevation:0});
+  if(!shouldHandleDrainedPickupClick({fixtureId:region.id,insideFixture,insideRosewaterRing})||globalThis[key+"_busy"])return;
   globalThis[key+"_busy"]=true;
   try{
    const controlled=canvas.tokens.controlled.filter(t=>t.actor?.type==="character"&&t.actor.testUserPermission(game.user,"OWNER"));
