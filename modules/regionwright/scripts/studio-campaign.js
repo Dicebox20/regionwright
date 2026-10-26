@@ -9,6 +9,7 @@ import { installCabinBasementNightstandGMService, handleCabinBasementNightstandR
 import { installCabinRoofClockGMService } from "./studio-cav-roof-clock.js";
 import { installCabinAqueductGateGMService, handleCabinAqueductGateRegionEvent } from "./studio-cav-aqueduct-gate.js";
 import { handleCabinFirstChaseRegionEvent,recordCabinFirstChaseGMResult,confirmCabinFirstChaseCaptureAfterGMTransfer,describeCabinFirstChase } from "./studio-cav-first-chase.js";
+import { installSophiaRescueGMService,handleSophiaRescueRegionEvent,prepareSophiaGMConfinement,emergencyReleaseSophiaGM,abortPreparedSophiaGM,describeSophiaConfinementGM } from "./studio-cav-sophia-confinement.js";
 import { ascendancyLiveInstaller } from "./ascendancy-live-installer.js";
 import { ascendancyBalladRuntime } from "./ascendancy-ballad-runtime.js";
 
@@ -20,7 +21,7 @@ const campaignAPI = Object.freeze({
 
 /** Attach campaign-specific tools to Studio's API without owning reusable puzzles. */
 export function installStudioCampaign(api) {
-  if (api?.campaign) Object.assign(api.campaign, { ascendancy: campaignAPI, cabin: { suneRelief: { handleRegionEvent: handleCabinSuneReliefRegionEvent }, sluice: { handleRegionEvent: handleCabinSluiceRegionEvent }, drainedPickups: { handleRegionEvent: handleCabinDrainedPickupRegionEvent }, successors: { handleRegionEvent: handleCabinBasementNightstandRegionEvent }, aqueductGate: { handleRegionEvent: handleCabinAqueductGateRegionEvent }, firstChase: { handleRegionEvent: handleCabinFirstChaseRegionEvent,recordGMResult: recordCabinFirstChaseGMResult,confirmCaptureAfterGMTransfer:confirmCabinFirstChaseCaptureAfterGMTransfer,describe:describeCabinFirstChase } } });
+  if (api?.campaign) Object.assign(api.campaign, { ascendancy: campaignAPI, cabin: { suneRelief: { handleRegionEvent: handleCabinSuneReliefRegionEvent }, sluice: { handleRegionEvent: handleCabinSluiceRegionEvent }, drainedPickups: { handleRegionEvent: handleCabinDrainedPickupRegionEvent }, successors: { handleRegionEvent: handleCabinBasementNightstandRegionEvent }, aqueductGate: { handleRegionEvent: handleCabinAqueductGateRegionEvent }, firstChase: { handleRegionEvent: handleCabinFirstChaseRegionEvent,recordGMResult: recordCabinFirstChaseGMResult,confirmCaptureAfterGMTransfer:confirmCabinFirstChaseCaptureAfterGMTransfer,describe:describeCabinFirstChase }, sophia: {handleRegionEvent:handleSophiaRescueRegionEvent,prepare:prepareSophiaGMConfinement,emergencyRelease:emergencyReleaseSophiaGM,abortPrepared:abortPreparedSophiaGM,describe:describeSophiaConfinementGM} } });
   // Keep existing Regionwright campaign macros functional through the old key.
   if (api?.premium && api.premium !== api.campaign) Object.assign(api.premium, { ascendancy: campaignAPI });
   installAscendancySocket();
@@ -33,6 +34,7 @@ export function installStudioCampaign(api) {
   installCabinBasementNightstandGMService();
   installCabinRoofClockGMService();
   installCabinAqueductGateGMService();
+  installSophiaRescueGMService();
   return campaignAPI;
 }
 

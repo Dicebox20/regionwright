@@ -1,4 +1,5 @@
 import {newFirstChaseState,advanceFirstChase,firstChaseCaptureDecision,finalizeFirstChaseCapture} from "./studio-cav-first-chase-state.js";
+import {markSophiaCapturedAfterTransfer} from "./studio-cav-sophia-confinement.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const AQ="CAVAQ01Scene0001",START="woZ98KXx0RsWIPpl",POND="CAVEXT02Scene001",GATE="CAVPONDAQGATE001",PORT="CAVPONDAQPORT001";
 const WATER_REGION="CAVEXT02SLUICE01",WATER="cavPondBathWaterState",MECHANIC="cavAqueductGateMechanicalReady";
@@ -49,11 +50,20 @@ export async function confirmCabinFirstChaseCaptureAfterGMTransfer({actorId}={})
  const match=sophia.tokens.contents.filter(t=>t.actor?.id===actorId&&!t.hidden);
  const sourcePresent=aq.tokens.contents.some(t=>t.actor?.id===actorId);
  const state=region.getFlag(NS,LEDGER);
+ const session=sophia?.regions.get("CAVHU05RETURN001")?.getFlag(NS,"cavSophiaCaptureSession");
+ const gallery=game.scenes.get("gGgUHlHdI7RFrbUh")?.regions.get("UV4YAstBe0WCuLcM");
+ if(session?.status!=="prepared"||session.actorId!==actorId||
+    gallery?.behaviors.get("CAVHU02SOPHTEL01")?.disabled!==true||
+    gallery?.behaviors.get("CAVHU02SOPHGATE1")?.disabled!==true||
+    sophia.tokens.contents.filter(t=>!t.hidden&&t.actor?.type==="character").length!==1)
+    return{status:"confinement-not-prepared"};
  const decision=finalizeFirstChaseCapture(state,{actorId,physicallyInSophia:match.length===1,
    returnLocked:returnBehavior.disabled===true,sourceAbsent:!sourcePresent});
  if(decision.status!=="captured")return decision;
  // This confirms an actual GM relocation and locked escape; never moves the player itself.
  await region.setFlag(NS,LEDGER,decision.next);
+ const saved=await markSophiaCapturedAfterTransfer({actorId});
+ if(saved.status!=="captured")return{status:"capture-reconciliation-required",actorId,details:saved.status};
  return{status:"captured",actorId,captureCount:1};
 }
 export function describeCabinFirstChase(){
@@ -63,6 +73,6 @@ export function describeCabinFirstChase(){
  return{status:state?.status||"not-triggered",state,
   gateReady:gate?.getFlag(NS,MECHANIC)||null,gatePortalDisabled:portal?.disabled,
   water:sluice?.getFlag(NS,WATER)||null,
-  captureSafety:state?.status==="capture_pending"?"Maximum one capture; GM Sophia-bedroom transfer/release not installed yet":null};
+  captureSafety:state?.status==="capture_pending"?"GM must prepare Sophia confinement and manually transfer one captive before confirming":null};
 }
 export {firstChaseCaptureDecision};
