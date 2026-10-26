@@ -22,3 +22,10 @@
 - MATRIX: `chat-b-late-chain-evidence-matrix-2026-10-26.md` catalogues dependencies, scene IDs where source-verified, unknown Region/Item IDs, missing GM adapters and scope boundaries.
 - BLOCKERS: authentic item/Region IDs and parent-chest physical Region require Chat A reread; marker rewards use reservation-before-effect and fail-closed recovery, no silent Item source invention.
 - DURABILITY: T2 handoff and metadata under Chat B noncolliding campaign archive paths. Source commit SHA is recorded externally with the Git receipt; this log is part of that reviewed branch commit. Transcript reconstruction not lossless.
+## Turn 3 / source-only L1-C — 2026-10-26
+- START: re-read active branch and T2 continuity; source `d5c9be286daca7fd3d4ad438fa0dc09cee3adc66`. Observed Chat A on `54faf5c29b75cd8ef4b3ea26eda6d3ed0f2db9a8` with uncommitted Sluice work, not touched.
+- RESEARCH: H-G07 Studio/H-G08 separate Candle Workshop and hidden P-STUDIO-CANDLE passage verified as blueprint/design authority, NOT live Foundry UUID. Approved artwork attachment names for Box/Prayer are not source Item presence proof.
+- L1-C two isolated components: one Music Box + Prayer original-item claims, one Studio Sune altar explicit Prayer Journal read + safety-certified concealed passage + independent authentic Wick single pickup. Four pure exported decisions; no client claims, GM adapter, registry changes, native behaviors or live puzzle activations.
+- ACCEPTANCE: 68 new pure adversarial tests pass; complete Cabin 189/189 across 29 files, both sources Node syntax PASS. Source/local only, zero player test certifications.
+- STOP: exact original Item/Region/Behavior identities, authentic Journal read handler and safe Studio↔Workshop return must be verified before any live Stage. Reserves/partial ledger require GM reconciliation.
+- DURABILITY: appended this turn after tests, expanded T3 evidence matrix, unique workstream Turn 3 handoff and machine metadata (nonlossless chat reconstruction). Integrator remains Chat A. Next scoped work: Gazebo oil+Wick/eye2 separate from optional Rose/Cog/Star.
