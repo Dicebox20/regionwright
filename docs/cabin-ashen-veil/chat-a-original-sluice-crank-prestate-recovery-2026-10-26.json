@@ -1,0 +1,71 @@
+{
+  "schema": "dicebox.cav.chat-a-original-sluice-prestate-hardening/v1",
+  "dateLocal": "2026-10-26",
+  "ownerMessage": "resume",
+  "chat": "A",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "beforeCommit": "ca177160fd5721eb721da40652f8b389d3340a1b",
+    "changed": [
+      "modules/regionwright/scripts/studio-cav-water-state.js",
+      "modules/regionwright/scripts/studio-cav-water-controller.js"
+    ],
+    "addedTests": "tests/cav-sluice-prestate-recovery.test.mjs",
+    "regressionsPass": 101,
+    "regressionsFail": 0,
+    "newTests": 6,
+    "sha": {
+      "waterState": "379E53BEC1B3E67CA5283F01197BA88E891B4C97FD30C948AD6601ADE7E8DF8E",
+      "waterController": "454C974214658F0D1BFB430777F41D8CFC3743AE6FBE991952E2E76F1BDC53B4"
+    },
+    "installedMatchesSource": true
+  },
+  "risk": "Fitted Crank DONE but water receipt NULL previously normalized as valid closed/full; previous committed water state not checked against matching completed transaction",
+  "guard": {
+    "function": "evaluateSluiceRecordedPrestate",
+    "originalCrankSource": "Item.g3VYdgc1qkgkHGvn",
+    "firstWater": "closed/full/full;initial;cav-sluice-crank-install;prior transaction null",
+    "laterWater": "stage committed;source sluice;previous txn version1 status done operation matches committedState and next",
+    "unsafe": "GM reconcile, no fake initial state or automatic retry"
+  },
+  "gm": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "name": "Gamemaster 1",
+    "elected": true,
+    "sourceReloadCount": 1,
+    "sourceReloadNavigationCommitted": true,
+    "activeRuntimeLoaded": true,
+    "GMWaterListenerRegistered": true,
+    "bathFixturesSafe": true,
+    "missingInitialReject": true,
+    "validInitialAccept": true,
+    "validOpenedPriorTxnAccept": true,
+    "reservedTxnReject": true,
+    "crankFlag": null,
+    "waterFlag": null,
+    "sluiceTransaction": null,
+    "originalSluiceEnabled": true,
+    "rosewaterDisabled": true,
+    "ownerSymbols": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "rosewaterSession": null,
+    "chatMessages": 54,
+    "worldWrites": 0
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-original-crank-water-prestate-after-reload-electedgm-20261026.json"
+  ],
+  "playerTests": 0,
+  "next": [
+    "Inspect reserved Study 587 Crank award and Sluice fit ledger recovery",
+    "No fabricated player state or original Item",
+    "Keep Rosewater and first chase disabled until actual drain and owner testing"
+  ],
+  "fidelity": "available-message reconstruction, not lossless native transcript"
+}

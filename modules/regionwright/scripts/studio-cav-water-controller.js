@@ -1,4 +1,4 @@
-import {planCavWaterChange,normalizeCavWaterState} from "./studio-cav-water-state.js";
+import {planCavWaterChange,normalizeCavWaterState,evaluateSluiceRecordedPrestate} from "./studio-cav-water-state.js";
 import {checkAqueductRouteForWater,prepareAqueductPortalsForClosing,completeAqueductPortalsAfterOpening,confirmAqueductPortalsWaterStage} from "./studio-cav-aqueduct-routing.js";
 import {evaluateRosewaterLowerRoomSluicePreflight} from "./studio-cav-rosewater-safety.js";
 import {assessUnifiedBathFixtures} from "./studio-cav-unified-bath-interlock.js";
@@ -115,11 +115,17 @@ async function transition(req,authorId){
  const priorTransaction=region.getFlag(NS,TRANSITION);
  if(priorTransaction?.status==="reserved")return "reconcile";
  if(priorTransaction&&priorTransaction.status!=="done")return "reconcile";
+ // A Crank fitting may commit DONE before its initial water flag; never
+ // normalize that missing receipt to a legitimate full/closed stage.
+ const originalWater=region.getFlag(NS,WATER);
+ if(!evaluateSluiceRecordedPrestate({
+  crank:region.getFlag(NS,"cavSluiceCrankInstall"),
+  water:originalWater,transaction:priorTransaction
+ }).ready)return "reconcile";
  if(!inspectUnifiedBathFixtureWaterSafety().ok)return "unified-bath-reconcile";
  if(!geometryEqual(full,dry)||!dry||dry.getFlag(NS,"cavWaterVariant")!=="drained"||
  dry.getFlag(NS,"approvedArtSha256")!==DRAINED_HASH||dry.background.src!==BATH_DRY_ART||
  full.background.src!==BATH_FULL||dry.active||full.active)return "reconcile";
- const originalWater=region.getFlag(NS,WATER);
  let current;try{current=normalizeCavWaterState(originalWater);}catch{return "reconcile";}
  const drained=current.status==="open";
  const aqRoute=checkAqueductRouteForWater(current.status);

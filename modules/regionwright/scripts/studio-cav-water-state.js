@@ -21,4 +21,29 @@ export function planCavWaterChange({current=null,action,crankInstalled=false,
  const target=action==="open"?"drained":"full";
  return {result:"ready",current:state,next:{...state,status:action==="close"?"closed":"open",pond:target,bath:target,stage:"water-transition"}};
 }
-
+// Preflight for the original 587 Crank → installed closed/full stage → GM water
+// transaction chain. A missing or half-written receipt must never be interpreted
+// as a clean initial stage merely because normalizeCavWaterState(null) is full.
+export function evaluateSluiceRecordedPrestate({crank=null,water=null,transaction=null}={}){
+ const denied=reason=>({ready:false,reason});
+ if(crank?.version!==1||crank.status!=="done"||
+    crank.sourceUuid!=="Item.g3VYdgc1qkgkHGvn"||
+    typeof crank.consumedActorItemId!=="string"||!crank.consumedActorItemId||
+    typeof crank.boxRegionUuid!=="string"||!crank.boxRegionUuid)
+  return denied("original-crank-consumption-incomplete");
+ if(!water||water.version!==1)return denied("initial-water-receipt-missing");
+ try{normalizeCavWaterState(water)}catch{return denied("water-state-conflicting")}
+ if(water.status==="closed"&&water.stage==="initial"&&
+    water.source==="cav-sluice-crank-install")
+  return transaction==null?{ready:true,reason:"initial-full-stage"}:denied("unexpected-transaction-for-initial");
+ if(water.stage!=="committed"||water.source!=="sluice")
+  return denied("water-stage-not-committed");
+ const op=water.status==="open"?"open":water.status==="closed"?"close":null;
+ if(transaction?.version!==1||transaction.status!=="done"||
+    transaction.operation!==op||transaction.committedState!==water.status||
+    transaction.next?.status!==water.status||
+    transaction.next?.pond!==water.pond||
+    transaction.next?.bath!==water.bath)
+  return denied("completed-transaction-receipt-mismatch");
+ return{ready:true,reason:"previous-stage-committed"};
+}
