@@ -67,7 +67,9 @@
     "localFinal": "utility-harness/artifacts/cav-rosewater-claw-final-clean-draft-20261026.jpg",
     "finalJpegSha256": "B44419BEDCCFA7AA9CC6E31CE99B197484E692820AB0D6DD435631486695C14C",
     "finalJpegBytes": 49390,
-    "sourceSha256": "9647AF30BF58928C6EE48923FC5E3759BE0BBF47DF80E8B5238CC2D41B33BC93"
+    "sourceSha256": "9647AF30BF58928C6EE48923FC5E3759BE0BBF47DF80E8B5238CC2D41B33BC93",
+    "gitArchivedUnapprovedPath": "docs/cabin-ashen-veil/unapproved-previews/rosewater-dragon-claw-ui-draft-2026-10-26.jpg",
+    "gitArchivedByteIdenticalToLiveScreenshot": true
   },
   "tests": {
     "pass": 80,

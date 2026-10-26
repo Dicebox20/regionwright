@@ -1,4 +1,4 @@
-﻿# Regionwright — Cabin in the Ashen Veil Change Log (2026-10-26)
+# Regionwright — Cabin in the Ashen Veil Change Log (2026-10-26)
 Status: source installed and structurally verified; complete gameplay acceptance DEFERRED by owner.
 Owner permits Regionwright source changes and requests a logged GitHub continuation every 25-minute turn.
 
@@ -188,4 +188,8 @@ Backups: docs/cabin-ashen-veil/backups/sune-service-20261026 (source, installed 
 - INSPECT found regular text glyphs upside down on rotated stone rings. Applied source CSS inverse glyph rotation `rotate(calc(-1 * var(--angle)))`, leaving independent ring rotation/marker/GM solver unchanged; added one static source regression. Installed module SHA matched source, GM browser reloaded once and confirmed original disabled Region, new UI API.
 - Used nonpersistent **I Understand** button to dismiss unrelated D&D5e Animations warning and captured clean real Foundry panel preview JPEG in harness artifacts `cav-rosewater-claw-final-clean-draft-20261026.jpg`, SHA256 `B44419BEDCCFA7AA9CC6E31CE99B197484E692820AB0D6DD435631486695C14C`, 49,390 bytes. Visually verified 3 rings, 12 now-upright labels, top marker, central seal, rotation/reset. No owner symbols marked approved; no RegionBehavior enabled; no new Bowl, player movement or water change.
 - Full non-destructive Cabin regression suite **80/80 PASS**; detailed `docs/cabin-ashen-veil/rosewater-dragon-claw-clean-preview-inspection-2026-10-26.md`, machine record `rosewater-dragon-claw-clean-preview-2026-10-26.json`. Next exact owner approval of four glyphs/art before commissioning, then Bowl pickup location and deferred PC testing.
+
+
+## 2026-10-26 — Durable unapproved Rosewater panel screenshot archive
+- Byte-for-byte copied the 49,390-byte clean live UI JPG (SHA256 B44419BEDCCFA7AA9CC6E31CE99B197484E692820AB0D6DD435631486695C14C) into `docs/cabin-ashen-veil/unapproved-previews/rosewater-dragon-claw-ui-draft-2026-10-26.jpg`. This is evidence of DRAFT labels (rose/sun/moth/thorn), not owner-approved symbols, and does not modify Foundry.
 
