@@ -28,15 +28,22 @@ function originalCrank(actor,box){
   i.getFlag(NS,"cavDonovanCrankSourceUuid")===SOURCE&&
   i.getFlag(NS,"cavDonovanCrankRegionUuid")===box?.uuid);
 }
+// Shared distance contract: private player prompt and authoritative GM must
+// use the same proximity check, with no token motion or world mutation.
+export function isSluiceCharacterNearControl({token,scene,region}={}){
+ const shape=region?.shapes?.[0]?.toObject?.();
+ const gridSize=scene?.grid?.size;
+ if(shape?.type!=="rectangle"||![shape.x,shape.y,shape.width,shape.height].every(Number.isFinite)||
+   shape.width<=0||shape.height<=0||!Number.isFinite(gridSize)||gridSize<=0||!token||
+   ![token.x,token.y,token.width,token.height].every(Number.isFinite))return false;
+ const x=token.x+token.width*gridSize/2,y=token.y+token.height*gridSize/2;
+ return Math.hypot(x-(shape.x+shape.width/2),y-(shape.y+shape.height/2))<=400;
+}
 function playerAtControl(userId,tokenId,scene,region){
  const user=game.users.get(userId),token=scene?.tokens.get(tokenId),actor=token?.actor;
  if(!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
-   !actor.testUserPermission(user,"OWNER"))return null;
- const shape=region?.shapes[0]?.toObject();
- if(shape?.type!=="rectangle")return null;
- const x=token.x+token.width*scene.grid.size/2,y=token.y+token.height*scene.grid.size/2;
- if(!Number.isFinite(x)||!Number.isFinite(y)||
-  Math.hypot(x-(shape.x+shape.width/2),y-(shape.y+shape.height/2))>400)return null;
+   !actor.testUserPermission(user,"OWNER")||
+   !isSluiceCharacterNearControl({token,scene,region}))return null;
  return {user,actor,token};
 }
 async function installCrank(req,sender){
@@ -109,18 +116,21 @@ export async function handleCabinSluiceRegionEvent(region,event){
   try{
    const tokens=canvas.tokens?.controlled?.filter(t=>t.actor?.type==="character"&&t.actor.testUserPermission(game.user,"OWNER"))||[];
    const token=tokens.length===1?tokens[0].document:null;
+    // Remote inspection is allowed, but do not offer a control operation unless
+    // the selected character passes the SAME proximity rule as the elected GM.
+    const withinReach=!!token&&isSluiceCharacterNearControl({token,scene:canvas.scene,region});
    const state=region.getFlag(NS,LEDGER);
    const installed=state?.status==="done";
    const box=game.scenes.get(BOX_SCENE)?.regions.get(BOX_REGION);
-   const eligible=!!token&&!!originalCrank(token.actor,box)&&!installed;
+   const eligible=withinReach&&!!originalCrank(token.actor,box)&&!installed;
    const flood=region.getFlag(NS,STATE);
    const safelyConfigured=region.getFlag(NS,"noDrainActivation")===false&&
     region.getFlag(NS,"cavSluiceInstallController")?.drainEnabled===true;
    const busy=region.getFlag(NS,"cavSluiceStageTransaction")?.status==="reserved";
-   const stageAction=installed&&safelyConfigured&&!busy&&token?
+   const stageAction=installed&&safelyConfigured&&!busy&&withinReach?
      flood?.status==="closed"?"open":flood?.status==="open"?"close":null:null;
    const DialogV2=foundry.applications.api.DialogV2;
-   const description=installed?
+   const description=!withinReach?"Select one of your characters near the sluice control to operate it.":installed?
      flood?.status==="open"?"The original Crank is fitted. The gate is open; the Pond and Bathhouse pools have drained.":
      "The original Crank is fitted. The gate is closed; the Pond and Bathhouse pools remain full.":
      "The stone sluice has an empty square mounting socket. An iron crank would fit here.";

@@ -1,0 +1,83 @@
+{
+  "schema": "dicebox.cav.chat-a-sluice-click-proximity/v1",
+  "dateLocal": "2026-10-26",
+  "ownerMessage": "next please",
+  "branch": "codex/cav-sune-integration-20261026",
+  "startingCommit": "54faf5c29b75cd8ef4b3ea26eda6d3ed0f2db9a8",
+  "scope": "Chat A sluice click and GM reach parity",
+  "native": {
+    "foundry": "14.367",
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "scene": "CAVEXT02Scene001",
+    "region": "CAVEXT02SLUICE01",
+    "behavior": "CAVEXT02SLCBEH01",
+    "behaviorEnabled": true,
+    "shape": {
+      "x": 1843,
+      "y": 2655,
+      "width": 435,
+      "height": 325
+    },
+    "center": {
+      "x": 2060.5,
+      "y": 2817.5
+    },
+    "reachDistancePixels": 400,
+    "positiveAreaOverlapCount": 0,
+    "totalPondRegions": 8,
+    "closeupAsset": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+    "closeupAssetBytes": 1820836,
+    "closeupSha256": "6DEBD9622B021F1DFAE3091BFDB0C7343C94BD45BDB91CDE22DC99E03BBDF124",
+    "originalCrank": "Item.g3VYdgc1qkgkHGvn",
+    "actualCrankInstall": null,
+    "waterState": null,
+    "sluiceTransition": null,
+    "rosewaterNativeDisabled": true,
+    "ringApprovedSymbols": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "chatMessageCountAfter": 54,
+    "nativeWrites": 0
+  },
+  "source": {
+    "modified": [
+      "modules/regionwright/scripts/studio-cav-sluice.js"
+    ],
+    "newTests": [
+      "tests/cav-sluice-client-proximity.test.mjs"
+    ],
+    "change": "Shared client and GM proximity predicate, remote click inspect-only",
+    "testsPass": 91,
+    "testsFail": 0,
+    "installedSourceSha256": "3ADEA8FD254EEF7DF0BCFED0A787E359681549F72E2C5B0B67CCA8B454D6AEC5",
+    "installedSourceShaMatches": true
+  },
+  "postSourceReload": {
+    "singleReloadAttempt": true,
+    "pageNavigationObserved": true,
+    "domcontentloadedTimedOut": true,
+    "replay": false,
+    "foundry30000": true,
+    "devChrome9224": true,
+    "independentNoReloadGMReadbackVerified": true,
+    "gmNearCenterAccepted": true,
+    "gmCenterPlus401Rejected": true,
+    "newSourceHelperLoaded": true
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-sluice-click-overlap-live-readonly-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-sluice-runtime-after-timeout-readonly-20261026.json"
+  ],
+  "playerGameplayTestsPerformed": 0,
+  "next": [
+    "Future Player 1 checks on a real PC only when owner lifts testing deferral",
+    "Actual 587 Crank fit and GM synchronized drain only in authentic progression",
+    "Verify and commission Rosewater after actual drain",
+    "Keep Crooked Man and first chase deferred"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless transcript"
+}
