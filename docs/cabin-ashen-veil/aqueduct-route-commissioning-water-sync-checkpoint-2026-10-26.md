@@ -1,0 +1,38 @@
+# Cabin in the Ashen Veil — Aqueduct Route and Sluice Synchronization Source Checkpoint
+**Date:** 2026-10-26 Pacific. **Scope:** Existing native Regionwright/Foundry Pond↔Aqueduct, Aqueduct↔Forest Well entrances and escape, integrated with single Pond/Bath water authority. **Owner exception:** Crooked Man NPC Actor, token art and actual chase gameplay test intentionally deferred to final testing. No world content re-created.
+
+## Established workflow and preflight
+- Following chronological project evidence and prior Regionwright checkpoints on source branch `codex/cav-sune-integration-20261026` from commit `b47937a`.
+- Initial elected GM/read-only native document receipt `utility-harness/artifacts/cav-route-stage-commissioning-exact-native-audit-20261026.json` confirmed Scene IDs, all four native portal destination UUIDs and disabled initial states. AQ-01 and Forest Maze have staged passive arrival Regions and a disabled first Crooked Man RegionBehavior. No tokens in Pond, AQ or FM at initial read; no active water flag; original Garage/Bath route unaffected.
+- Original item provenance and mechanical gate source `studio-cav-aqueduct-gate.js` remain unchanged. First chase DC13, 3 successes before 2 failures and capture-rescue Sophia implementation remain intact.
+
+## Regionwright source installed
+New `modules/regionwright/scripts/studio-cav-aqueduct-routing.js` plus `tests/cav-aqueduct-routing.test.mjs`; integrated from `studio-campaign.js`, `studio-cav-water-controller.js`, `studio-cav-first-chase.js`. Source/installed module file copies SHA256 matched on 2026-10-26 at approximately 05:13 Pacific. No native game document writes (world Scene IDs and portal flags unmodified) this turn.
+
+### GM API for later commissioning (not invoked)
+`game.modules.get("regionwright").api.campaign.cabin.aqueductRoutes.describe()`: elected GM and exact world only, read-only topology and ledger inspection.
+
+`await game.modules.get("regionwright").api.campaign.cabin.aqueductRoutes.commissionForGameplay({crookedManActorId: ACTOR_ID, gmConfirmed:true})`: explicit GM-only. Requires genuine NPC Actor named Crooked Man with configured non-placeholder token art (created during gameplay testing), original Roof Gear and Parents' Nightstand Handle each `done`, gate mechanical `ready`, confirmed Pond/Bath water open and drained, completed Sluice transaction, all native routes initially disabled, AQ unoccupied and no prior route transaction. Saves `cavAqueductRouteTransaction=reserved`, enables AQ→Pond fallback return, enables first-chase trigger, changes mechanical `traversalEnabled=true`, enables Pond→AQ entry last, verifies native updates and saves `done`. Uncertain midflight is **reserved** and GM reconciles it; NEVER replay blindly.
+
+`await game.modules.get("regionwright").api.campaign.cabin.aqueductRoutes.unlockWellAfterChase()`: separate GM fallback to claim authorized first chase outcome only (3 successful checks or actual Sophia capture/resolution) with a committed commissioned route. First-chase GM result now invokes this when success is recorded, or after verified Sophia capture. Saves `cavForestWellUnlockTransaction=reserved` then enables AQ→FM exit and FM→AQ reentry, confirms and marks `done`. Forest Well reentry deliberately remains usable after Pond refills.
+
+### Sluice integration for later real use
+Sluice `studio-cav-water-controller.js` now invokes a read-only `checkAqueductRouteForWater(current.status)` under the original Stage preflight before storing a reserved water transaction. If Aqueduct was never commissioned, requires both Pond/AQ portals disabled and leaves them disabled. If commissioned, requires valid completion receipt, both original component ledgers, enabled original chase trigger and correctly paired native portals for current water stage. If mismatch, stop for GM without editing.
+- **Close:** reject if any AQ token, either Bathhouse occupied or any Pond token outside exterior Sluice control (existing safety); persist reserved stage receipt, disable native Pond entry **first** and AQ southern return **second**, only then switch Pond background and Trail→Bathhouse routing to full-water art. Commit single authoritative water state; update commissioned route waterStage receipt and finish transaction. Forest Well remains independent.
+- **Open:** persist reserved stage receipt, change Pond background and Trail→Bathhouse routing to drained, enable Aqueduct→Pond return **first**, then Pond→Aqueduct entry, commit shared water state and route receipt. Always fail closed on uncertain partial writes. Never relocate tokens.
+- This supersedes the previous provisional rule prohibiting *any* water transition if gate traversal is live; instead it requires a proven, synchronized route. Test requires exact matching original portal destinations.
+- The GM-service checks still require original Crank, correct owner avatar physically in Sluice Region, correct active GM, verified original Bathhouse clone and approved maps; none weakened.
+
+### Known limits — gameplay testing deferred
+- No Crooked Man NPC actor/template or token was created. Since commission requires a genuine illustrated NPC actor, it cannot be invoked accidentally or before owner-approved gameplay-test preparations.
+- No actual Aqueduct route, chase trigger, Forest Well portal, token, actor or water stage has been activated or changed this turn. Baseline remains staged/disabled according to last successful full GM audit.
+- Pure Node tests **31/31 PASS** for all new route conditions and existing Aqueduct, Sluice, first chase, Sophia, Study/587, Basement and Drained pickups; source installed JS SHA256 matched.
+- A GM client `page.reload` during post-deploy readback timed out; shortly afterwards both CFT Dev Chrome CDP endpoint `127.0.0.1:9224` and Foundry HTTP `127.0.0.1:30000/game` were unavailable. Windows health audit confirmed original Bridge PowerShell host had restarted, then a harmless smoke test passed; Windows available physical memory ~1.63GB/15.94GB and C: free ~100GB; no definitive crash cause established. **Do not treat live runtime adoption as verified.** Do NOT restart Foundry automatically or modify the world until host/process recovery is understood and exact GM verification resumes.
+- The last reliable actual Foundry native readback **preceded** this source deployment and showed five staged native behaviors disabled with all progress flags absent. No world writes were attempted following the outage.
+
+## Next safe bounded task
+1. Recover/check Foundry and Chrome via the established harness/runbook, without replaying timed-out browser operations or touching live world state. Confirm exact world, GM and Studio source versions after browser/Foundry restart.
+2. Run **read-only** `aqueductRoutes.describe()`; verify 4 portals + chase trigger all disabled, Pond water null/full, both Gear/Handle source components uninstalled, no reserved transactions or surprise token motions. Cross-check module source SHA and before/after receipts.
+3. Only during later owner-approved chase gameplay preparation, create Crooked Man NPC Actor/token in the established Actor workflow, explicitly GM-commission route after original parts and sluice drained. Run end-to-end first-chase and forest-well/return safety tests; do not prematurely enable paths.
+4. Continue separate Rosewater Reliquary three-ring 90/270/180 and unique Scrying Bowl pickup, Boiler dry escape (water/pressure independent), and related reversible flood interlocks. Keep separate canon.
+5. Complete handoff, metadata and available-message transcript in GitHub each <=25-minute turn.

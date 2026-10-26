@@ -19,6 +19,8 @@ test("Aqueduct occupancy blocks unsafe sluice close even if Pond and baths empty
 
 test("Live Aqueduct passage conservatively locks sluice stage pending route synchronization",()=>{
  assert.equal(sluiceGateRouteInterlock({traversalEnabled:true}),false);
+ assert.equal(sluiceGateRouteInterlock({traversalEnabled:true},{status:"reserved"}),false);
+ assert.equal(sluiceGateRouteInterlock({traversalEnabled:true},{status:"done"}),true);
  assert.equal(sluiceGateRouteInterlock({traversalEnabled:false}),true);
  assert.equal(sluiceGateRouteInterlock(null),true);
 });

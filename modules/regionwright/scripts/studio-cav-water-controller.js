@@ -1,4 +1,5 @@
 import {planCavWaterChange,normalizeCavWaterState} from "./studio-cav-water-state.js";
+import {checkAqueductRouteForWater,prepareAqueductPortalsForClosing,completeAqueductPortalsAfterOpening,confirmAqueductPortalsWaterStage} from "./studio-cav-aqueduct-routing.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",CONTROL="CAVEXT02SLUICE01";
 const BATH="CAVBATHScene0001",BATH_DRY="8yLMRDvxyw58dydh",TRAIL="CAVTRAILScene001";
@@ -31,7 +32,8 @@ function geometryEqual(left,right){
  JSON.stringify([...lb.system.destinations])===JSON.stringify([...rb.system.destinations])&&
  left.width===right.width&&left.height===right.height&&left.grid.size===right.grid.size;
 }
-export const sluiceGateRouteInterlock=(mechanicalReady)=>mechanicalReady?.traversalEnabled!==true;
+export const sluiceGateRouteInterlock=(mechanicalReady,routeTransaction)=>
+ mechanicalReady?.traversalEnabled!==true||routeTransaction?.status==="done";
 export function evaluateSluicePositionSafety({pondTokens=[],fullBathTokens=[],dryBathTokens=[],aqueductTokens=[],safePondTokenIds=[]}={}){
  if(fullBathTokens.length||dryBathTokens.length)return {ok:false,reason:"bathhouse-occupied"};
  // The original Forest Well may eventually provide a safe return, but do not assume
@@ -48,9 +50,10 @@ async function transition(req,authorId){
  if(!region||!portal||!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
  !actor.testUserPermission(user,"OWNER")||!region.testPoint(center(token,pond)))return "denied";
  if(region.getFlag(NS,"cavSluiceCrankInstall")?.status!=="done")return "crank-needed";
- // Until route synchronization/first-chase escape are certified, never change water
- // while the Aqueduct traversal network is marked live. Avoid underwater stranding.
- if(!sluiceGateRouteInterlock(pond.regions.get("CAVPONDAQGATE001")?.getFlag(NS,"cavAqueductGateMechanicalReady")))return "aqueduct-route-active";
+ // A commissioned Aqueduct gate is safe only with its completed transaction receipt.
+ const aqGate=pond.regions.get("CAVPONDAQGATE001");
+ if(!sluiceGateRouteInterlock(aqGate?.getFlag(NS,"cavAqueductGateMechanicalReady"),
+   aqGate?.getFlag(NS,"cavAqueductRouteTransaction")))return "aqueduct-route-active";
  if(region.getFlag(NS,"noDrainActivation")!==false||
  region.getFlag(NS,"cavSluiceInstallController")?.drainEnabled!==true)return "blocked";
  const priorTransaction=region.getFlag(NS,TRANSITION);
@@ -62,6 +65,8 @@ async function transition(req,authorId){
  const originalWater=region.getFlag(NS,WATER);
  let current;try{current=normalizeCavWaterState(originalWater);}catch{return "reconcile";}
  const drained=current.status==="open";
+ const aqRoute=checkAqueductRouteForWater(current.status);
+ if(aqRoute.status!=="ready")return "reconcile";
  const expectedPond=drained?POND_DRY:POND_FULL;
  const expectedDestination=DEST(drained);
  if(pond.background.src!==expectedPond||
@@ -87,15 +92,31 @@ async function transition(req,authorId){
  const reserve={version:1,status:"reserved",operation:req.action,actorId:actor.id,
   authorId,tokenId:token.id,prior:current,next:plan.next,priorPond:expectedPond,
   nextPond:newPond,priorPortal:expectedDestination,nextPortal:newDest};
- await region.setFlag(NS,TRANSITION,reserve);
+ await region.setFlag(NS,TRANSITION,{...reserve,aqueductRouteCommissioned:aqRoute.commissioned});
+ // A closing sluice FIRST disables both Pond/Aqueduct native traversals.
+ // Failure retains the reserved Sluice receipt for the GM; no token is moved.
+ if(req.action==="close"){
+  const closure=await prepareAqueductPortalsForClosing();
+  if(closure.status!=="ready")throw Error("Aqueduct portal closure uncertain");
+ }
  // From here, failure leaves an auditable reserved marker, NOT an untracked retry or invented success.
  await level.update({"background.src":newPond});
  if(pond.background.src!==newPond||level.background.src!==newPond)throw Error("Pond visual update uncertain");
  const portalRegion=game.scenes.get(TRAIL).regions.get(TRAIL_REGION);
  await portalRegion.updateEmbeddedDocuments("RegionBehavior",[{_id:TRAIL_BEHAVIOR,system:{destinations:[newDest]}}]);
  if(![...portalRegion.behaviors.get(TRAIL_BEHAVIOR).system.destinations].includes(newDest))throw Error("Bath entry route update uncertain");
+ // Opening restores reciprocal AQ return BEFORE enabling Pond entry; Forest Well is unchanged.
+ if(req.action==="open"){
+  const reopening=await completeAqueductPortalsAfterOpening(aqRoute.commissioned);
+  if(reopening.status!=="ready")throw Error("Aqueduct portal reopening uncertain");
+ }
  await region.setFlag(NS,WATER,{...plan.next,stage:"committed",source:"sluice",version:1});
- await region.setFlag(NS,TRANSITION,{...reserve,status:"done",committedState:plan.next.status});
+ if(aqRoute.commissioned){
+  const marked=await confirmAqueductPortalsWaterStage(plan.next.status);
+  if(marked.status!=="ready")throw Error("Aqueduct route stage receipt uncertain");
+ }
+ await region.setFlag(NS,TRANSITION,{...reserve,aqueductRouteCommissioned:aqRoute.commissioned,
+  status:"done",committedState:plan.next.status});
  return "done";
 }
 export function installCabinSluiceWaterService(){
@@ -112,7 +133,7 @@ export function installCabinSluiceWaterService(){
   finally{globalThis[LOCK]=false;}
   const output={done:req.action==="open"?"The gate shudders open. Water drains from the pond and the bathhouse pools.":"The sluice closes, and water refills the pond and bathhouse pools.",
    unsafe:"The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
-   "aqueduct-route-active":"The Aqueduct passage is active. The Gamemaster must secure its two-way route before changing the sluice.",
+   "aqueduct-route-active":"The Aqueduct route lacks a completed commissioning receipt. The Gamemaster must reconcile it before changing the sluice.",
    denied:"Only an authorized nearby character can operate this sluice.",
    "crank-needed":"The original Crank must be fitted before the wheel will turn.",
    blocked:"The flood controls remain locked.",
