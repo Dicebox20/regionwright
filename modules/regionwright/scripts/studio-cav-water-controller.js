@@ -1,5 +1,6 @@
 import {planCavWaterChange,normalizeCavWaterState} from "./studio-cav-water-state.js";
 import {checkAqueductRouteForWater,prepareAqueductPortalsForClosing,completeAqueductPortalsAfterOpening,confirmAqueductPortalsWaterStage} from "./studio-cav-aqueduct-routing.js";
+import {evaluateRosewaterLowerRoomSluicePreflight} from "./studio-cav-rosewater-safety.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",CONTROL="CAVEXT02SLUICE01";
 const BATH="CAVBATHScene0001",BATH_DRY="8yLMRDvxyw58dydh",TRAIL="CAVTRAILScene001";
@@ -31,6 +32,42 @@ function geometryEqual(left,right){
  JSON.stringify(le.shapes.map(s=>s.toObject()))===JSON.stringify(re.shapes.map(s=>s.toObject()))&&
  JSON.stringify([...lb.system.destinations])===JSON.stringify([...rb.system.destinations])&&
  left.width===right.width&&left.height===right.height&&left.grid.size===right.grid.size;
+}
+export function readRosewaterUndergroundBeforeRefill(){
+ const rooms=(key,name)=>game.scenes.contents.filter(s=>
+  s.getFlag(NS,"cavStructuralSceneKey")===key ||
+  (s.name??"").toLowerCase().startsWith(key.toLowerCase()) ||
+  (s.name??"").toLowerCase().startsWith(name));
+ const reliquaries=rooms("BATH-04","rosewater reliquary"),boilers=rooms("BATH-03","boiler room");
+ const relic=reliquaries.length===1?reliquaries[0]:null,boiler=boilers.length===1?boilers[0]:null;
+ const nativePortal=(from,to,kind,destinationRegionId=null)=>{
+  if(!from||!to)return false;
+  return from.regions.contents.some(r=>r.behaviors.contents.some(b=>
+   b.type==="teleportToken"&&b.disabled===false&&
+   b.getFlag(NS,"cavRosewaterRouteKind")===kind&&
+   b.system.destinations.size===1&&[...b.system.destinations].some(d=>{
+    const prefix="Scene."+to.id+".Region.";
+    if(!d.startsWith(prefix))return false;
+    const targetId=d.slice(prefix.length);
+    return (!destinationRegionId||destinationRegionId===targetId)&&!!to.regions.get(targetId);
+   })));
+ };
+ const bidirectional=nativePortal(relic,boiler,"reliquary-to-boiler")&&
+  nativePortal(boiler,relic,"boiler-to-reliquary");
+ const cert=boiler?.getFlag(NS,"cavBoilerEstateExitCertificate");
+ const destination=cert?.status==="done"?game.scenes.get(cert.destinationSceneId):null;
+ const estate=cert?.pressureIndependent===true&&destination&&
+  destination.id!==boiler?.id&&destination.id!==relic?.id&&
+  !!destination.regions.get(cert.destinationRegionId)&&
+  nativePortal(boiler,destination,"boiler-to-estate",cert.destinationRegionId);
+ return evaluateRosewaterLowerRoomSluicePreflight({
+  reliquarySceneCount:reliquaries.length,boilerSceneCount:boilers.length,
+  reliquaryTokenIds:relic?.tokens.contents.map(t=>t.id)??[],
+  boilerTokenIds:boiler?.tokens.contents.map(t=>t.id)??[],
+  nativeDryDoorBidirectional:!!bidirectional,
+  boilerExitIntoEstateVerified:!!estate,
+  dryRouteIndependentOfPressure:cert?.pressureIndependent===true
+ });
 }
 export const sluiceGateRouteInterlock=(mechanicalReady,routeTransaction)=>
  mechanicalReady?.traversalEnabled!==true||routeTransaction?.status==="done";
@@ -74,6 +111,7 @@ async function transition(req,authorId){
  portal.system.destinations.size!==1||![...portal.system.destinations].includes(expectedDestination))return "reconcile";
  const aq=game.scenes.get("CAVAQ01Scene0001");
  if(!aq)return "reconcile";
+ if(req.action==="close"&&!readRosewaterUndergroundBeforeRefill().ok)return "underground-unsafe";
  const allPond=pond.tokens.contents;
  const safePond=allPond.filter(t=>!t.hidden&&region.testPoint(center(t,pond))).map(t=>t.id);
  const position=evaluateSluicePositionSafety({pondTokens:allPond.map(t=>t.id),
@@ -134,6 +172,7 @@ export function installCabinSluiceWaterService(){
   const output={done:req.action==="open"?"The gate shudders open. Water drains from the pond and the bathhouse pools.":"The sluice closes, and water refills the pond and bathhouse pools.",
    unsafe:"The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
    "aqueduct-route-active":"The Aqueduct route lacks a completed commissioning receipt. The Gamemaster must reconcile it before changing the sluice.",
+   "underground-unsafe":"The Bathhouse's lower rooms lack a confirmed dry exit. The Gamemaster must secure the passage before refilling.",
    denied:"Only an authorized nearby character can operate this sluice.",
    "crank-needed":"The original Crank must be fitted before the wheel will turn.",
    blocked:"The flood controls remain locked.",
@@ -144,4 +183,3 @@ export function installCabinSluiceWaterService(){
  globalThis[HOOK]={hookId:Hooks.on("createChatMessage",handler),version:1,world:WORLD};
  return true;
 }
-

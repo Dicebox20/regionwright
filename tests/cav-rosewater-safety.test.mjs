@@ -1,5 +1,5 @@
 import test from"node:test";import assert from"node:assert/strict";
-import{rosewaterHatchDecision,rosewaterRefillDecision,rosewaterBowlPickupDecision,rosewaterWaterVariantRoute,validateRosewaterOriginalBowlTemplate,ORIGINAL_SCRYING_BOWL_ITEM_UUID}from"../modules/regionwright/scripts/studio-cav-rosewater-safety.js";
+import{rosewaterHatchDecision,rosewaterRefillDecision,rosewaterBowlPickupDecision,rosewaterWaterVariantRoute,validateRosewaterOriginalBowlTemplate,ORIGINAL_SCRYING_BOWL_ITEM_UUID,evaluateRosewaterLowerRoomSluicePreflight}from"../modules/regionwright/scripts/studio-cav-rosewater-safety.js";
 const drained={status:"open",pond:"drained",bath:"drained"},full={status:"closed",pond:"full",bath:"full"};
 test("Hatch never opens underwater or without exact solved rings and approved dry route",()=>{
  assert.equal(rosewaterHatchDecision({water:full,ringSolved:true,drainedBathSceneVerified:true,dryBoilerExitVerified:true}),"requires-drained-bath");
@@ -30,4 +30,19 @@ test("Full water closes pool hatch while existing certified dry Boiler door pers
  assert.deepEqual(rosewaterWaterVariantRoute({water:drained,wellDryExitVerified:true}),{poolHatchEnabled:true,dryBoilerExitPersistent:true});
  assert.deepEqual(rosewaterWaterVariantRoute({water:full,wellDryExitVerified:true}),{poolHatchEnabled:false,dryBoilerExitPersistent:true});
  assert.deepEqual(rosewaterWaterVariantRoute({water:drained,wellDryExitVerified:false}),{poolHatchEnabled:false,dryBoilerExitPersistent:false});
+});
+
+test("Without lower scenes, normal Pond/Bath draining and refilling remains available",()=>{
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight().ok,true);
+});
+test("One partially installed or duplicate lower room fails closed",()=>{
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight({reliquarySceneCount:1}).ok,false);
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight({reliquarySceneCount:2,boilerSceneCount:1}).reason,"partial-or-duplicate-underground-room");
+});
+test("Occupied underground prevents refill until pressure-independent dry route and estate egress",()=>{
+ const q={reliquarySceneCount:1,boilerSceneCount:1,reliquaryTokenIds:["pc1"]};
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight(q).reason,"occupied-underground-egress-unverified");
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight({...q,nativeDryDoorBidirectional:true,boilerExitIntoEstateVerified:true,dryRouteIndependentOfPressure:true}).ok,true);
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight({...q,nativeDryDoorBidirectional:true,dryRouteIndependentOfPressure:true}).ok,false);
+ assert.equal(evaluateRosewaterLowerRoomSluicePreflight({reliquarySceneCount:1,boilerSceneCount:1}).reason,"rooms-unoccupied");
 });

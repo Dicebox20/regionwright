@@ -24,6 +24,17 @@ export function rosewaterHatchDecision({water,ringSolved=false,drainedBathSceneV
  if(!dryBoilerExitVerified)return"missing-safe-boiler-exit";
  return"ready";
 }
+export function evaluateRosewaterLowerRoomSluicePreflight({
+ reliquarySceneCount=0,boilerSceneCount=0,reliquaryTokenIds=[],boilerTokenIds=[],
+ nativeDryDoorBidirectional=false,boilerExitIntoEstateVerified=false,dryRouteIndependentOfPressure=false
+}={}){
+ if(reliquarySceneCount===0&&boilerSceneCount===0)return{ok:true,reason:"no-underground-rooms-installed"};
+ if(reliquarySceneCount!==1||boilerSceneCount!==1)return{ok:false,reason:"partial-or-duplicate-underground-room"};
+ if(!reliquaryTokenIds.length&&!boilerTokenIds.length)return{ok:true,reason:"rooms-unoccupied"};
+ if(!nativeDryDoorBidirectional||!boilerExitIntoEstateVerified||!dryRouteIndependentOfPressure)
+  return{ok:false,reason:"occupied-underground-egress-unverified"};
+ return{ok:true,reason:"occupied-with-certified-dry-egress"};
+}
 export function rosewaterRefillDecision({reliquaryTokenIds=[],boilerTokenIds=[],
  dryServiceDoorBidirectional=false,dryRoomDestinationsVerified=false,
  boilerIndependentOfPressure=false,pendingTransition=false}={}){
