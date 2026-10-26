@@ -1,5 +1,5 @@
 import{planRosewaterGMAction,CAV_ROSEWATER_SCENE,CAV_ROSEWATER_REGION,CAV_ROSEWATER_SESSION,CAV_ROSEWATER_BEHAVIOR_ID,CAV_ROSEWATER_SYMBOL_FLAG}from"./studio-cav-rosewater-state.js";
-import{createRosewaterCampaignConfig}from"../../regionwright-puzzles-locks/scripts/rosewater-campaign-preset.js";
+import{createRosewaterCampaignConfig,matchRosewaterOwnerApprovedSymbols}from"../../regionwright-puzzles-locks/scripts/rosewater-campaign-preset.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil",HOOK="__CAV_ROSEWATER_CLAW_GM_SERVICE_001",BUSY="__CAV_ROSEWATER_CLAW_GM_BUSY_001";
 const SCRIPT='await game.modules.get("regionwright")?.api?.campaign?.cabin?.rosewaterRings?.handleRegionEvent(region, event);';
 const EVENTS=["behaviorViewed","behaviorUnviewed","behaviorDeactivated"];
@@ -8,7 +8,7 @@ const region=()=>game.scenes.get(CAV_ROSEWATER_SCENE)?.regions.get(CAV_ROSEWATER
 const slGate=()=>game.scenes.get("CAVEXT02Scene001")?.regions.get("CAVEXT02SLUICE01");
 export function getCavRosewaterApprovedSymbols(r=region()){
  const a=r?.getFlag(NS,CAV_ROSEWATER_SYMBOL_FLAG);
- if(a?.status!=="OWNER_APPROVED"||a?.approvalSource!=="owner"||!Array.isArray(a?.symbols))return null;
+ if(a?.status!=="OWNER_APPROVED"||a?.approvalSource!=="owner"||!matchRosewaterOwnerApprovedSymbols(a?.symbols))return null;
  try{createRosewaterCampaignConfig({symbols:a.symbols});return [...a.symbols]}catch{return null}
 }
 const position=(t,s)=>({x:t.x+t.width*s.grid.size/2,y:t.y+t.height*s.grid.size/2,elevation:0});

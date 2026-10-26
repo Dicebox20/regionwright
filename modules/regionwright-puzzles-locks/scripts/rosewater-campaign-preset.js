@@ -1,7 +1,10 @@
 import {createThreeRingConfig,evaluateThreeRing,rotateThreeRing,resetThreeRing} from "./three-ring-reliquary-engine.js";
 // Canon for Cabin in the Ashen Veil, owner-approved 2026-10-25.
 // Exact ring orientations OUTER 90°, MIDDLE 270°, INNER 180°.
-// Artwork, symbols, discoverability and Source Region are *not* owner-approved yet.
+// Four symbols explicitly owner-approved 2026-10-26: rose, sun, moth, thorn.
+// This approves symbol IDs, not future icon artwork, Bowl pickup, or gameplay success.
+export const ROSEWATER_OWNER_APPROVED_SYMBOLS=Object.freeze(["rose","sun","moth","thorn"]);
+export const matchRosewaterOwnerApprovedSymbols=symbols=>Array.isArray(symbols)&&symbols.length===ROSEWATER_OWNER_APPROVED_SYMBOLS.length&&symbols.every((v,i)=>v===ROSEWATER_OWNER_APPROVED_SYMBOLS[i]);
 export const ROSEWATER_RING_ANGLES_DEGREES=Object.freeze([90,270,180]);
 export const ROSEWATER_RING_QUARTER_TURNS=Object.freeze([1,3,2]);
 export const ROSEWATER_RING_START_ANGLE_DEGREES=0;
