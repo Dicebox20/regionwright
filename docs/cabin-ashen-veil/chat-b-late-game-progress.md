@@ -36,3 +36,12 @@
 - TESTS: 57 new Gazebo adversarial pure fixtures pass; 246/246 full Cabin tests across 30 files and node syntax pass. NOT GM live runtime or player-playtested.
 - STOP: live Gazebo and lantern/eye Region/Behavior UUIDs, current Oil/Wick originals and item pickup provenance, safe temporary effect and persistent marker must be verified by Chat A. Source `origin` field is not an authentication scheme by itself.
 - DURABILITY: append evidence matrix, dated own Turn 4 handoff and structured metadata and available-message (not lossless) transcript reconstruction. Source reviewed/pushed independently; next L1-E Rufus eye sockets.
+## Turn 5 / source-only L1-E — 2026-10-26
+- RESTART: owner confirmed Chat A restart completed and instructed resume. Dicebox Bridge doctor local/persistent PowerShell ready; canonical ChatGPT chat endpoint still identity-unverified, so no native Bridge relay.
+- CHECKOUTS: Chat B isolated HEAD `53775837be4cef045ae3a34ec71ff91bdadf9fbc` clean at start; Chat A observed HEAD `bd9969f6f5d99922db7fc86348c7ba1297af9c32`, untouched. Sole live Foundry writer remains Chat A.
+- SOURCE: new pure `studio-cav-late-rufus-source-contract.js` supporting original Eye1 from Sophia bear, Eye2 from Gazebo in either order, separate jaw-button opening, persistently visible uncharged Gondian source and explicit one-time pickup. No source charging/Veil action or item/scene writes.
+- ITEM EVIDENCE: original Oct24 creation receipt first eye `Item.mN1dk0qlr7hyfupk`, second eye `Item.QIH1ugEWGOO1U6LN`, uncharged source `Item.pbmUZPfC3WnsBRgi`; **current world IDs NOT reread**. Allen Study scene `CAVHG05Scene0001` verified in local `studio-cav-587.js`.
+- TESTS: 68 new pure fixture PASS; full Cabin regression 314/314 across 31 files; Node syntax PASS. No GM runtime or non-GM gameplay certificate.
+- SAFETY: unknown/reserved socket/marker and prior install status stop for GM reconciliation. Installed counterpart source must match its own exact Item UUID; original reward template/type and original pickup provenance checked. Never grant/charge source on jaw press, never start Veil from this component.
+- BLOCKERS: actual Rufus Regions, source Items currently in world, actor pickup flags, one-writer GM controller and scene rehydration. Chat A must verify before using these proposals live.
+- DURABILITY: Turn 5 source, test, updated evidence matrix, unique dated handoff and metadata, this chronological append. Available-chat reconstruction is not lossless. Next L1-F deliberate Aqueduct source charge and atomic Veil.
