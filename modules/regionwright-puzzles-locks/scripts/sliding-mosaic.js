@@ -57,10 +57,10 @@ const ownedBehavior = behavior => Boolean(behavior?.flags?.[PUZZLE_FLAG_SCOPE]?.
 export const createSlidingMosaicPuzzleConfig = options => createSlidingMosaicConfig(options);
 export const isSlidingMosaicTarget = target => Boolean(normalizeMosaic(targetData(target)));
 
-export async function configureSlidingMosaic({ target: targetOrUuid, image, size = 4, seed = "" } = {}) {
+export async function configureSlidingMosaic({ target: targetOrUuid, image, size = 4, seed = "", initialOrder = null } = {}) {
   const target = await resolveTarget(targetOrUuid);
   requireWrite(target);
-  const config = createSlidingMosaicPuzzleConfig({ image, size, seed });
+  const config = createSlidingMosaicPuzzleConfig({ image, size, seed, initialOrder });
   const data = { version: SLIDING_MOSAIC_VERSION, config, persistent: { status: "locked", solvedAt: null, lastUpdatedAt: Date.now() } };
   const updates = { [`flags.${PUZZLE_FLAG_SCOPE}.${SLIDING_MOSAIC_FLAG}`]: data };
   if (targetType(target) === "door") updates.ds = doorStates().LOCKED;

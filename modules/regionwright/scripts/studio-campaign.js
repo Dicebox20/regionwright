@@ -1,4 +1,5 @@
 import { ascendancyAPI, installAscendancySocket } from "./ascendancy.js";
+import { installCabinSuneWinderService } from "./studio-cav-sune.js";
 import { ascendancyLiveInstaller } from "./ascendancy-live-installer.js";
 import { ascendancyBalladRuntime } from "./ascendancy-ballad-runtime.js";
 
@@ -14,6 +15,7 @@ export function installStudioCampaign(api) {
   // Keep existing Regionwright campaign macros functional through the old key.
   if (api?.premium && api.premium !== api.campaign) Object.assign(api.premium, { ascendancy: campaignAPI });
   installAscendancySocket();
+  installCabinSuneWinderService();
   return campaignAPI;
 }
 

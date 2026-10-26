@@ -35,14 +35,32 @@ function adjacentCells(index, size) {
   ].filter(cell => cell >= 0);
 }
 
-export function createSlidingMosaicConfig({ image = "", size = 4, seed = "" } = {}) {
+function validateFixedOrder(size, order) {
+  if (order == null) return null;
+  if (!Array.isArray(order) || order.length !== size * size ||
+      new Set(order).size !== order.length ||
+      order.some(n => !Number.isInteger(n) || n < 0 || n >= size * size)) throw new Error("Invalid fixed sliding-puzzle starting order.");
+  const nonzero = order.filter(n => n !== 0);
+  let inversions = 0;
+  for (let i = 0; i < nonzero.length; i++)
+    for (let j = i + 1; j < nonzero.length; j++)
+      if (nonzero[i] > nonzero[j]) inversions++;
+  const blankFromBottom = size - Math.floor(order.indexOf(0) / size);
+  const solvable = size % 2 === 1 ? inversions % 2 === 0 : (inversions + blankFromBottom) % 2 === 1;
+  if (!solvable) throw new Error("Fixed sliding-puzzle starting order is not solvable.");
+  return Object.freeze([...order]);
+}
+export function createSlidingMosaicConfig({ image = "", size = 4, seed = "", initialOrder = null } = {}) {
   const path = cleanImage(image);
   if (!path) throw new Error("Choose an image for the sliding puzzle.");
+  const gridSize = clampSize(size);
+  const fixed = validateFixedOrder(gridSize, initialOrder);
   return Object.freeze({
     version: SLIDING_MOSAIC_VERSION,
     image: path,
-    size: clampSize(size),
-    seed: String(seed ?? "").trim().slice(0, 80)
+    size: gridSize,
+    seed: String(seed ?? "").trim().slice(0, 80),
+    ...(fixed ? { initialOrder: fixed } : {})
   });
 }
 
@@ -53,6 +71,7 @@ export function validateSlidingMosaicConfig(config) {
 
 export function shuffledSlidingOrder(config, seed = "", moveCount = null) {
   const checked = validateSlidingMosaicConfig(config);
+  if (checked.initialOrder) return Object.freeze([...checked.initialOrder]);
   const order = goalOrder(checked.size);
   const next = random(`${checked.seed}:${seed}`);
   const moves = Math.max(1, Math.min(2000, Math.trunc(Number(moveCount) || checked.size * checked.size * 12)));

@@ -1,0 +1,12 @@
+﻿# Regionwright — Cabin in the Ashen Veil Change Log (2026-10-26)
+Status: source installed and structurally verified; complete gameplay acceptance DEFERRED by owner.
+Owner permits Regionwright source changes and requests a logged GitHub continuation every 25-minute turn.
+
+1. Studio Sune GM service: created modules/regionwright/scripts/studio-cav-sune.js, connected from studio-campaign.js. Auto-registers in exact Cabin world, elected active-GM only. Authenticated sender, token ownership/position, original Clockwork Winder and attic-ladder gate. Order SW/NE/NW/SE; wrong bust now clears done progress and resets to SW, no Winder consumption. Preserves existing Region IDs. After GM reload/restart v3 listener observed armed. No player gameplay attempted.
+2. Fixed installed Puzzles & Locks 0.1.2 manifest invalid UTF-8 BOM. Original installed module.json backed up. Manifest rewritten identically without BOM, then registered/active module public API confirmed in exact world after graceful Foundry restart. One temporary Foundry startup-world option used for recovery, restored byte-for-byte after world loaded. Admin password not changed.
+3. Added optional fixed starting order support and solvability checks to Regionwright Sliding Mosaic engine and interface; unrelated unconfigured puzzles still shuffle. Sune preset set to 3x3 with starting order [4,5,1,2,0,8,7,6,3]. Source and installed scripts match by SHA-256; 900x900 puzzle master image inspected.
+4. Scoped live migration of Scene.CAVSG05Scene0001.Region.L15BdSqcbCOLPnIN from 4x4 to canonical 3x3 with fixed starting order. Existing persistent locked status and disabled RegionBehavior Q8Hr2Dnw6hBpWNjr preserved. Local before/after receipt: utility-harness/artifacts/cav-sg05-regionwright-config-receipt-20261026.json.
+
+Verification: Node syntax PASS; Sune Winder unit tests 4/4 PASS; fixed-start slider tests 3/3 PASS; source/installed SHA matches; exact active-GM and live config readback PASS. No non-GM gameplay tests.
+Next: SG-05 must use explicit player click for Regionwright interactive UI after the four busts; never enable existing tokenEnter handler unmodified. Reconcile static reveal Tile/asset with approved map; secure separate 1000gp and Brass Study Key once-only claims on real GM-signed completion; then move to Study 587.
+Backups: docs/cabin-ashen-veil/backups/sune-service-20261026 (source, installed manifest and scripts, prior startup config). Preserve original handoffs and scenario data.
