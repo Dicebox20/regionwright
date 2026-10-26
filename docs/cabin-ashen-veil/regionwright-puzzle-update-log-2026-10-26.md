@@ -19,3 +19,10 @@ Backups: docs/cabin-ashen-veil/backups/sune-service-20261026 (source, installed 
 - Live structural receipt: `utility-harness/artifacts/cav-sg05-click-rewards-install-receipt-20261026.json`, including previous behavior+flags, after behavior and new source Item. Source/installed module copies SHA-matched. Gameplay tests intentionally deferred per owner directive. Do not label PLAYTESTED.
 - Risks/remaining: Player-side image/click usability and socket-authorized real puzzle solve remain untested; Regionwright completion request still trusts the client-supplied final board order, subject to verified eligibility; no adversarial move-by-move replay in this turn. Any failure after `reserved` award must be reconciled before retry. Next source-chain stage: Allen Study 587, but don't assume its GM session listener is armed.
 
+
+## 2026-10-26 — 587 successor service lifecycle (same bounded turn)
+
+- Next player-order prerequisite after the Sune Brass Study Key is the Study note and Donovan's Shack 587 lockbox. Exact world `CAVHG05Scene0001` desk Region and `CAVEXT03Scene001` box Region were read-only inspected; both already have player inspection/request Regions.
+- Existing GM Macro `CAV Study 587 and Donovan Lockbox - GM Service v001` held audited elected-GM, actor/proximity, keyed Study door, real `587` code and once-only Sluice Crank logic but was stored without an active Hook. Extracted its exact source as evidence to the utility harness and wrapped it without changing puzzle operations in `modules/regionwright/scripts/studio-cav-587.js`; registered through Studio lifecycle `installStudioCampaign` on `ready` only.
+- Source and installed copy passed Node syntax and SHA checks. Reloaded authenticated Gamemaster 1; listener `__CAV_587_ELECTED_GM_SERVICE_v001` now armed (Hook ID 612). No Study/587 puzzle was activated by a player, no Crank granted, no GM reward state mutated in this phase.
+- The older manual Macro remains in Foundry, but its `__CAV_587_ELECTED_GM_SERVICE_v001` marker prevents creating a duplicate service if executed. Re-evaluate early/late reward interactions during final player gameplay testing.
