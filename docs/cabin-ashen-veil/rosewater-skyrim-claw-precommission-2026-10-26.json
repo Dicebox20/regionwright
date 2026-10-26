@@ -1,0 +1,132 @@
+{
+  "schema": "dicebox.cav.rosewater-dragon-claw-native-precommission/v1",
+  "dateLocal": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerDirection": "The 3 ring puzzle is based on the Skyrim rotating dragon claw locks.",
+  "ownerVisualIntent": {
+    "mechanics": "three concentric stone rings, independent click rotation, fixed top glyph marker, central seal",
+    "adaptation": "four quarter-turn positions per ring to preserve approved [1,3,2] rather than Skyrim's original three-position combinations",
+    "skyrimArtworkCopied": false,
+    "finalSymbolsChosen": false
+  },
+  "canon": {
+    "degrees": [
+      90,
+      270,
+      180
+    ],
+    "quarterTurns": [
+      1,
+      3,
+      2
+    ],
+    "symbolsCount": 4,
+    "sourceRoom": "one unified drained Bathhouse",
+    "sceneUuid": "Scene.8yLMRDvxyw58dydh",
+    "regionUuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+    "regionBehaviorId": "CAVROSEWATERSCR1",
+    "behaviorUuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001.RegionBehavior.CAVROSEWATERSCR1",
+    "originalScrewdriverRegion": "CAVBATHSCRDRY001",
+    "originalScrewdriverScript": "CAVBATHSCRBEH001"
+  },
+  "implementation": {
+    "stage": "SOURCE_AND_NATIVE_BEHAVIOR_STAGED_DISABLED",
+    "newSource": [
+      "modules/regionwright/scripts/studio-cav-rosewater-state.js",
+      "modules/regionwright/scripts/studio-cav-rosewater-rings.js",
+      "modules/regionwright-puzzles-locks/scripts/rosewater-dragon-claw-panel.js"
+    ],
+    "moduleInterfaces": [
+      "regionwright-puzzles-locks.api.rosewater.open",
+      "regionwright.api.campaign.cabin.rosewaterRings.handleRegionEvent",
+      "regionwright.api.campaign.cabin.rosewaterRings.describe"
+    ],
+    "events": [
+      "behaviorViewed",
+      "behaviorUnviewed",
+      "behaviorDeactivated"
+    ],
+    "behaviorDisabled": true,
+    "regionBindingFlag": "cavUnifiedBathPuzzleBinding",
+    "regionBindingStatus": "STAGED_DISABLED",
+    "sessionFlag": "cavRosewaterRingSession",
+    "sessionState": null,
+    "ownerApprovedSymbolsFlag": "cavRosewaterApprovedSymbols",
+    "ownerApprovedSymbolsState": null,
+    "realPuzzleActivated": false,
+    "genuinePlayerSolved": false,
+    "sideEffects": "only future GM ring session receipt after commissioned; no hatch/Bowl/grants/teleports/water changes"
+  },
+  "security": {
+    "requiresElectedGM": true,
+    "requiresApprovedSymbolsWithOwnerSource": true,
+    "requiresDrainStateOpenPondAndBathDrained": true,
+    "requiresValidPlayerOwnedCharacterInsideRegion": true,
+    "requestExpectedRevision": true,
+    "strictNativeScriptAndEvents": true,
+    "gmRecomputesSolution": true,
+    "replayBlocks": true,
+    "reservedOnUncertainWrite": true,
+    "clientSuccessAccepted": false
+  },
+  "verification": {
+    "sourceTestsPassed": 79,
+    "sourceTestsFailed": 0,
+    "predeployHashesMatched": true,
+    "liveFoundryBeforeShutdown": {
+      "version": "14.367",
+      "world": "cabin-in-the-ashen-veil",
+      "electedGM": "Gamemaster 1",
+      "sceneCount": 47,
+      "modulesActive": [
+        "regionwright",
+        "regionwright-puzzles-locks"
+      ],
+      "apiLoaded": true,
+      "serviceStatus": "not-commissioned",
+      "symbolApproval": false
+    },
+    "uiSmoke": {
+      "rendered": true,
+      "concentricRings": 3,
+      "visibleGlyphMedallions": 12,
+      "centerSeal": true,
+      "reset": true,
+      "fixedTopMarker": true,
+      "temporarySymbolLabelsNotSaved": true,
+      "chatUnchanged": true,
+      "itemsUnchanged": true
+    },
+    "nativeReceipt": "utility-harness/artifacts/cav-rosewater-skyrim-concentric-native-disabled-region-20261026.json",
+    "uiReceipt": "utility-harness/artifacts/cav-rosewater-dragon-claw-readonly-ui-smoke-20261026.cjs",
+    "draftScreenshot": "utility-harness/artifacts/cav-skyrim-style-rosewater-draft-ui-preview-20261026.jpg",
+    "draftScreenshotObscuredByInformationalDialog": true,
+    "cleanScreenshotUnavailable": true
+  },
+  "hostAfter": {
+    "foundryPort30000Listening": false,
+    "chromeCDP9224Listening": false,
+    "diagnosticAt": "2026-10-26T13:18:11-07:00",
+    "postShutdownNativeReadback": false,
+    "noFurtherRestartLoop": true
+  },
+  "errors": [
+    {
+      "phase": "API reload",
+      "effect": "Playwright 15s page.reload timeout; read-only later reconciled game.ready true and API present"
+    },
+    {
+      "phase": "UI clean screenshot",
+      "effect": "D&D5e Animations warning overlay obscured preliminary screenshot; Dev Chrome connection then terminated; clean screenshot not acquired"
+    }
+  ],
+  "next": [
+    "Find/approve four unique Rosewater symbols (or explicitly authorize placeholders) and related puzzle clue",
+    "Recover stable elected GM session; verify disabled native behavior survived world reload",
+    "Inspect exact visual UI without unrelated modal overlay",
+    "Owner-approved symbol flag and measured click region, confirm drained water state",
+    "Enable exact native RegionBehavior only after commissioning checks; preserve original Screwdriver click exclusion",
+    "Later deferred player tests and original Bowl pickup point"
+  ],
+  "playtestsDeferredByOwner": true
+}

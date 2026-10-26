@@ -10,6 +10,7 @@ import { openStandalonePuzzle, standalonePuzzleCatalog } from "./standalone-puzz
 import {createRosewaterCampaignConfig,evaluateRosewaterCampaignSolution,rotateRosewaterRing,resetRosewaterRings,ROSEWATER_RING_ANGLES_DEGREES} from "./rosewater-campaign-preset.js";
 import {createCavBoilerConfig,evaluateCavBoiler,adjustCavBoiler,resetCavBoiler} from "./cav-boiler-campaign-preset.js";
 import {openCavBoilerCampaignPuzzle} from "./waterworks-pressure.js";
+import {openCavRosewaterCampaignPuzzle} from "./rosewater-dragon-claw-panel.js";
 import { puzzleSetupCatalog, openPuzzleSetup } from "./puzzle-hub.js";
 import { puzzleHUD } from "./puzzle-hud.js";
 
@@ -34,7 +35,8 @@ export function createPuzzleAPI({ openPuzzleHub }) {
       evaluateCampaignSolution:evaluateRosewaterCampaignSolution,
       rotateCampaignRing:rotateRosewaterRing,
       resetCampaignRings:resetRosewaterRings,
-      canonicalAnglesDegrees:ROSEWATER_RING_ANGLES_DEGREES
+      canonicalAnglesDegrees:ROSEWATER_RING_ANGLES_DEGREES,
+      open:openCavRosewaterCampaignPuzzle
     }),
     lockpicking: Object.freeze({ difficulties: LOCKPICK_DIFFICULTIES, createConfig: createLockpickConfig, validateConfig: validateLockpickConfig, evaluate: evaluateLockpickAttempt, configureDoor: configureLockpickDoor, clearDoor: clearLockpickDoor, open: openLockpickPuzzle, request: requestLockpickAttempt }),
     rotatingLock: Object.freeze({ createConfig: createRotatingLockConfig, configureDoor: configureRotatingLockDoor, clearDoor: clearRotatingLockDoor, open: openRotatingLockPuzzle, preview: previewRotatingLock }),
