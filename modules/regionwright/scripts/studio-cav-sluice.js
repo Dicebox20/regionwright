@@ -39,6 +39,16 @@ export function isSluiceCharacterNearControl({token,scene,region}={}){
  const x=token.x+token.width*gridSize/2,y=token.y+token.height*gridSize/2;
  return Math.hypot(x-(shape.x+shape.width/2),y-(shape.y+shape.height/2))<=400;
 }
+// Water-stage operation is stricter than Crank fitting: character center
+// must actually be in the ORIGINAL native Sluice rectangle. This preserves
+// the Pond safety check and is identical on player UI and elected GM.
+export function isSluiceStageTokenAtControl({token,scene,region}={}){
+ if(!isSluiceCharacterNearControl({token,scene,region})||
+    typeof region?.testPoint!=="function")return false;
+ const x=token.x+token.width*scene.grid.size/2;
+ const y=token.y+token.height*scene.grid.size/2;
+ return region.testPoint({x,y,elevation:0})===true;
+}
 function playerAtControl(userId,tokenId,scene,region){
  const user=game.users.get(userId),token=scene?.tokens.get(tokenId),actor=token?.actor;
  if(!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
@@ -119,7 +129,8 @@ export async function handleCabinSluiceRegionEvent(region,event){
     // Remote inspection is allowed, but do not offer a control operation unless
     // the selected character passes the SAME proximity rule as the elected GM.
     const withinReach=!!token&&isSluiceCharacterNearControl({token,scene:canvas.scene,region});
-   const state=region.getFlag(NS,LEDGER);
+       const atStageControls=withinReach&&isSluiceStageTokenAtControl({token,scene:canvas.scene,region});
+    const state=region.getFlag(NS,LEDGER);
    const installed=state?.status==="done";
    const box=game.scenes.get(BOX_SCENE)?.regions.get(BOX_REGION);
    const eligible=withinReach&&!!originalCrank(token.actor,box)&&!installed;
@@ -127,10 +138,11 @@ export async function handleCabinSluiceRegionEvent(region,event){
    const safelyConfigured=region.getFlag(NS,"noDrainActivation")===false&&
     region.getFlag(NS,"cavSluiceInstallController")?.drainEnabled===true;
    const busy=region.getFlag(NS,"cavSluiceStageTransaction")?.status==="reserved";
-   const stageAction=installed&&safelyConfigured&&!busy&&withinReach?
+   const stageAction=installed&&safelyConfigured&&!busy&&atStageControls?
      flood?.status==="closed"?"open":flood?.status==="open"?"close":null:null;
    const DialogV2=foundry.applications.api.DialogV2;
-   const description=!withinReach?"Select one of your characters near the sluice control to operate it.":installed?
+   const description=!withinReach?"Select one of your characters near the sluice control to fit the crank or inspect the mechanism.":
+      installed&&!atStageControls?"The crank is fitted. Move your character into the sluice control area before opening or closing the gate.":installed?
      flood?.status==="open"?"The original Crank is fitted. The gate is open; the Pond and Bathhouse pools have drained.":
      "The original Crank is fitted. The gate is closed; the Pond and Bathhouse pools remain full.":
      "The stone sluice has an empty square mounting socket. An iron crank would fit here.";

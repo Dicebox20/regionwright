@@ -2,6 +2,7 @@ import {planCavWaterChange,normalizeCavWaterState} from "./studio-cav-water-stat
 import {checkAqueductRouteForWater,prepareAqueductPortalsForClosing,completeAqueductPortalsAfterOpening,confirmAqueductPortalsWaterStage} from "./studio-cav-aqueduct-routing.js";
 import {evaluateRosewaterLowerRoomSluicePreflight} from "./studio-cav-rosewater-safety.js";
 import {assessUnifiedBathFixtures} from "./studio-cav-unified-bath-interlock.js";
+import {isSluiceStageTokenAtControl} from "./studio-cav-sluice.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",CONTROL="CAVEXT02SLUICE01";
 const BATH="CAVBATHScene0001",BATH_DRY="8yLMRDvxyw58dydh",TRAIL="CAVTRAILScene001";
@@ -103,7 +104,7 @@ async function transition(req,authorId){
  const {pond,region,portal,full,dry}=docs();
  const user=game.users.get(authorId),token=pond?.tokens.get(req.tokenId),actor=token?.actor;
  if(!region||!portal||!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
- !actor.testUserPermission(user,"OWNER")||!region.testPoint(center(token,pond)))return "denied";
+ !actor.testUserPermission(user,"OWNER")||!isSluiceStageTokenAtControl({token,scene:pond,region}))return "denied";
  if(region.getFlag(NS,"cavSluiceCrankInstall")?.status!=="done")return "crank-needed";
  // A commissioned Aqueduct gate is safe only with its completed transaction receipt.
  const aqGate=pond.regions.get("CAVPONDAQGATE001");
@@ -132,7 +133,7 @@ async function transition(req,authorId){
  if(!aq)return "reconcile";
  if(req.action==="close"&&!readRosewaterUndergroundBeforeRefill().ok)return "underground-unsafe";
  const allPond=pond.tokens.contents;
- const safePond=allPond.filter(t=>!t.hidden&&region.testPoint(center(t,pond))).map(t=>t.id);
+ const safePond=allPond.filter(t=>!t.hidden&&isSluiceStageTokenAtControl({token:t,scene:pond,region})).map(t=>t.id);
  const position=evaluateSluicePositionSafety({pondTokens:allPond.map(t=>t.id),
   fullBathTokens:full.tokens.contents.map(t=>t.id),dryBathTokens:dry.tokens.contents.map(t=>t.id),
   aqueductTokens:aq.tokens.contents.map(t=>t.id),safePondTokenIds:safePond});

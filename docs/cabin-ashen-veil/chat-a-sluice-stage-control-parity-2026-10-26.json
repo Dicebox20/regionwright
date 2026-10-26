@@ -1,0 +1,65 @@
+{
+  "schema": "dicebox.cav.chat-a-water-stage-click-contract/v1",
+  "dateLocal": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerMessage": "Lets continue",
+  "workstream": "Chat A early/midgame",
+  "startingSourceCommit": "0a0a2896c096d8e4159fbb1af479bda581cfe2f1",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "updated": [
+      "modules/regionwright/scripts/studio-cav-sluice.js",
+      "modules/regionwright/scripts/studio-cav-water-controller.js"
+    ],
+    "addedTest": "tests/cav-sluice-stage-control-parity.test.mjs",
+    "testsPassed": 95,
+    "testsFailed": 0,
+    "sourceCopyInstalledShaMatches": true,
+    "sha": {
+      "sluice": "F196016EDDA9679669974271BE525D2131EBEA511509EA7319B34C50C059748E",
+      "waterController": "533AA2C6483C8E8898250EFF5F47DFA418D67111F39B9B9CA7DF1B64F05AF6CA"
+    },
+    "newPredicate": "isSluiceStageTokenAtControl: native Region testPoint+original 400px reach"
+  },
+  "nativeBeforeAfter": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "crankFlag": null,
+    "waterState": null,
+    "transaction": null,
+    "originalSluiceBehaviorEnabled": true,
+    "rosewaterBehaviorDisabled": true,
+    "rosewaterSession": null,
+    "ownerApprovedSymbols": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "messages": 54,
+    "worldWrites": 0
+  },
+  "browser": {
+    "foundryPort30000": true,
+    "devChromePort9224": true,
+    "hostAvailablePhysicalMemoryGibApprox": 1,
+    "gmReadOnlyStateVerified": true,
+    "postDeploymentFullReloadAttempted": false,
+    "activeRuntimeUpdatedHandlerVerified": false,
+    "reason": "avoid Chrome instability at low host free memory"
+  },
+  "receipts": [
+    "utility-harness/artifacts/cav-chat-a-water-stage-client-gm-contract-native-state-20261026.json"
+  ],
+  "riskFixed": "remote/near-but-outside original stage region offered Open/Close although GM denied; broadened safety hazard radius avoided",
+  "noPlayerGameplayTests": true,
+  "next": [
+    "At stable memory, one elected-GM browser reload and new stage helper source readback",
+    "Genuine ordinary-player Study587->Crank->Water open/close acceptance only when owner lifts testing deferral",
+    "Preserve Aqueduct and first chase disabled until required authentic receipts",
+    "Keep Chat B isolated"
+  ]
+}
