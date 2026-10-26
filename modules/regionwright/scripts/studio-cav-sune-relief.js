@@ -1,4 +1,4 @@
-﻿const WORLD="cabin-in-the-ashen-veil",NS="dicebox-campaign-helper",S="CAVSG05Scene0001",R="L15BdSqcbCOLPnIN";
+const WORLD="cabin-in-the-ashen-veil",NS="dicebox-campaign-helper",S="CAVSG05Scene0001",R="L15BdSqcbCOLPnIN";
 const BAG="CAVSUNEGPBAG0001",KEY="CAVSTUDYBRASS001",GOLD_FLAG="cavSuneGoldClaim",KEY_FLAG="cavSuneBrassKeyClaim";
 const HOOK="__CAV_SUNE_RELIEF_GM_SERVICE_v001",LOCK="__CAV_SUNE_RELIEF_GM_BUSY_v001",SLOT="__CAV_SUNE_RELIEF_POINTER_v001";
 const validWorld=()=>game?.ready===true&&game.world?.id===WORLD;
@@ -31,7 +31,7 @@ async function processClaim(req,uid){
    i.getFlag(NS,"cavSuneReliefRegionUuid")===region.uuid))return "reconcile";
  await region.setFlag(NS,ledger,{status:"reserved",actorId:actor.id,tokenId:token.id,sourceUuid:src.uuid});
  const item=src.toObject();delete item._id;
- item.flags={...item.flags,[NS]:{...item.flags?.[NS],cavSuneReliefSourceUuid:src.uuid,cavSuneReliefRegionUuid:region.uuid,cavSuneReliefReward:req.action}};
+ item.flags={...item.flags,[NS]:{...item.flags?.[NS],cavSuneReliefSourceUuid:src.uuid,cavSuneReliefRegionUuid:region.uuid,cavSuneReliefReward:req.action,...(!gold?{cavStudyKeySourceUuid:src.uuid,cavStudyKeySourceRegionUuid:region.uuid}:{})}};
  const created=await actor.createEmbeddedDocuments("Item",[item]);
  if(created.length!==1)throw Error("Ambiguous grant; reserved ledger preserved");
  await region.setFlag(NS,ledger,{status:"done",actorId:actor.id,tokenId:token.id,sourceUuid:src.uuid,embeddedItemId:created[0].id});

@@ -26,3 +26,9 @@ Backups: docs/cabin-ashen-veil/backups/sune-service-20261026 (source, installed 
 - Existing GM Macro `CAV Study 587 and Donovan Lockbox - GM Service v001` held audited elected-GM, actor/proximity, keyed Study door, real `587` code and once-only Sluice Crank logic but was stored without an active Hook. Extracted its exact source as evidence to the utility harness and wrapped it without changing puzzle operations in `modules/regionwright/scripts/studio-cav-587.js`; registered through Studio lifecycle `installStudioCampaign` on `ready` only.
 - Source and installed copy passed Node syntax and SHA checks. Reloaded authenticated Gamemaster 1; listener `__CAV_587_ELECTED_GM_SERVICE_v001` now armed (Hook ID 612). No Study/587 puzzle was activated by a player, no Crank granted, no GM reward state mutated in this phase.
 - The older manual Macro remains in Foundry, but its `__CAV_587_ELECTED_GM_SERVICE_v001` marker prevents creating a duplicate service if executed. Re-evaluate early/late reward interactions during final player gameplay testing.
+
+## 2026-10-26 — SG-05 Brass Study Key downstream provenance correction
+
+- Before gameplay, exact H-G06 Allen Study locked door source was inspected read-only and found to require Item.CAVSTUDYBRASS001 plus `cavStudyKeySourceUuid` and `cavStudyKeySourceRegionUuid` on the player-owned key.
+- The new Sune SG-05 explicit reward grant has been corrected to stamp BOTH established Study door provenance keys on Brass Study Key alongside its unique Sune reward metadata. Does not alter source Item template or door Region/teleport, and does not issue any extra reward.
+- Installed Regionwright Studio source re-copied with SHA match; GM client refreshed. Authenticated readback confirms Sune Winder v3, relief reward v1, Study 587 listener active, Region click behavior enabled, Sune puzzle still locked, 1,000gp in bag container. Full player tests deferred.
