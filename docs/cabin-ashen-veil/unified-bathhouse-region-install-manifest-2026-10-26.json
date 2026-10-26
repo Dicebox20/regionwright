@@ -1,0 +1,163 @@
+{
+  "schema": "dicebox.cav.unified-bath-native-regions/v1",
+  "date": "2026-10-26",
+  "ownerCorrection": "The Boiler and related Bathhouse puzzle spaces are integrated into the already-installed unified map. Previous proposed separate BATH-03/BATH-04 scene creation is superseded unless the owner explicitly reinstates it.",
+  "installStatus": "LIVE_NATIVE_REGION_CREATION_VERIFIED",
+  "environment": {
+    "foundry": "14.367",
+    "world": "cabin-in-the-ashen-veil",
+    "electedGM": "Gamemaster 1",
+    "sceneCount": 47
+  },
+  "batch": "cav-unified-bath-fixtures-20261026-v1",
+  "coordinateBasis": {
+    "artworkWidth": 1536,
+    "artworkHeight": 1024,
+    "foundrySceneWidth": 2160,
+    "foundrySceneHeight": 1440,
+    "scale": 1.40625,
+    "artGeometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE"
+  },
+  "originalPreservation": {
+    "sceneBackgroundUnchanged": true,
+    "oldRegionsExactlyUnchanged": true,
+    "originalReturnTeleportEnabled": true,
+    "drainedScrewdriverScriptEnabled": true,
+    "oldTokensMoved": 0,
+    "scenesCreated": 0,
+    "wallDocsCreated": 0,
+    "newBehaviors": 0,
+    "sourceScriptsModified": 0
+  },
+  "sharedFixtures": [
+    {
+      "id": "CAVBBOILERVESL01",
+      "kind": "boiler-vessel",
+      "name": "BATH - Boiler Vessel Machinery",
+      "rect": {
+        "x": 370,
+        "y": 635,
+        "width": 300,
+        "height": 238
+      },
+      "mechanic": "pending",
+      "palette": "#b98547"
+    },
+    {
+      "id": "CAVBBOILERCTRL01",
+      "kind": "boiler-controls",
+      "name": "BATH - Boiler Pressure Controls",
+      "rect": {
+        "x": 365,
+        "y": 938,
+        "width": 280,
+        "height": 250
+      },
+      "mechanic": "Regionwright Boiler wheels (2,1), pending GM binding",
+      "palette": "#c6a34b"
+    },
+    {
+      "id": "CAVBSIDENORTH001",
+      "kind": "north-side-basin",
+      "name": "BATH - North Side Basin",
+      "rect": {
+        "x": 1420,
+        "y": 630,
+        "width": 200,
+        "height": 170
+      },
+      "mechanic": "neutral physical basin; puzzle role not yet approved",
+      "palette": "#528cae"
+    },
+    {
+      "id": "CAVBSIDESOUTH001",
+      "kind": "south-side-basin",
+      "name": "BATH - South Side Basin",
+      "rect": {
+        "x": 1420,
+        "y": 890,
+        "width": 215,
+        "height": 205
+      },
+      "mechanic": "neutral physical basin; puzzle role not yet approved",
+      "palette": "#3fa99e"
+    }
+  ],
+  "drainedOnlyFixture": {
+    "id": "CAVBROSEWATER001",
+    "kind": "rosewater-ring-main-drain",
+    "name": "BATH-DRAINED - Rosewater Ring Area at Main Pool Drain",
+    "rect": {
+      "x": 976,
+      "y": 826,
+      "width": 108,
+      "height": 115
+    },
+    "mechanic": "Regionwright Puzzles & Locks canonical [90,270,180] rotations; unbound",
+    "palette": "#a361cc",
+    "overlap": [
+      "existing screwdriver pickup Region CAVBATHSCRDRY001"
+    ],
+    "overlapConsequence": "no new Behavior yet; coordinate interaction collision before binding"
+  },
+  "scenes": [
+    {
+      "id": "CAVBATHScene0001",
+      "name": "BATH - Unified Bathhouse Surface",
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "priorRegions": 2,
+      "installedRegionIds": [
+        "CAVBBOILERVESL01",
+        "CAVBBOILERCTRL01",
+        "CAVBSIDENORTH001",
+        "CAVBSIDESOUTH001"
+      ],
+      "afterRegions": 6,
+      "originalRegionIds": [
+        "SLovYxFAWVAMFzXg",
+        "R2Pg9eHODtb1C1Yk"
+      ],
+      "tokens": 0,
+      "walls": 0
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "name": "BATH-DRAINED - Unified Bathhouse Surface",
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+      "priorRegions": 3,
+      "installedRegionIds": [
+        "CAVBBOILERVESL01",
+        "CAVBBOILERCTRL01",
+        "CAVBSIDENORTH001",
+        "CAVBSIDESOUTH001",
+        "CAVBROSEWATER001"
+      ],
+      "afterRegions": 8,
+      "originalRegionIds": [
+        "SLovYxFAWVAMFzXg",
+        "R2Pg9eHODtb1C1Yk",
+        "CAVBATHSCRDRY001"
+      ],
+      "tokens": 0,
+      "walls": 0
+    }
+  ],
+  "evidence": {
+    "before": "utility-harness/artifacts/cav-unified-bath-missing-region-live-before-20261026.json",
+    "filled": "utility-harness/artifacts/cav-bath-filled-unified-fixtures-installed-20261026.json",
+    "drained": "utility-harness/artifacts/cav-bath-drained-unified-fixtures-installed-20261026.json",
+    "after": "utility-harness/artifacts/cav-bath-unified-nine-regions-post-verification-20261026.json",
+    "overlayDrive": "https://drive.google.com/file/d/1D0SnfkahA3bndF-vp3gTXWRxPJwCx322/view?usp=drivesdk",
+    "overlayIsReconstructedFromStaticMap": true
+  },
+  "oldSeparateMapDrafts": "SUPERSEDED_IN_THIS_CAMPAIGN by owner correction; preserve archived design candidates as history, do not install.",
+  "next": [
+    "Owner review/adjust spatial polygons and walls on unified map",
+    "Confirm what physical basin or floor location now replaces the former BATH-04 Reliquary plinth; do not infer bowl destination",
+    "Bind Regionwright Boiler pressure UI to control Region after approved map geometry",
+    "Bind canonical four-sector Rosewater ring UI to drained main-pool Region while addressing screwdriver overlap",
+    "Revise pre-existing source guard that assumes separate BATH-03/BATH-04 Scenes; retain safe fail-closed water state",
+    "Verify original Sune Bowl once-only pickup at owner-confirmed unified-map fixture",
+    "Defer Crooked Man NPC and full gameplay testing as directed"
+  ]
+}
