@@ -1,4 +1,4 @@
-﻿const WORLD="cabin-in-the-ashen-veil",NS="dicebox-campaign-helper";
+const WORLD="cabin-in-the-ashen-veil",NS="dicebox-campaign-helper";
 const SCENE="CAVEXT02Scene001",REGION="CAVEXT02SLUICE01",SOURCE="Item.g3VYdgc1qkgkHGvn";
 const BOX_SCENE="CAVEXT03Scene001",BOX_REGION="CAVEXT03BOXREG01";
 const STUDY_SCENE="CAVHG05Scene0001",NOTE_REGION="CAVB3E32BD6B01BD";
@@ -113,18 +113,25 @@ export async function handleCabinSluiceRegionEvent(region,event){
    const installed=state?.status==="done";
    const box=game.scenes.get(BOX_SCENE)?.regions.get(BOX_REGION);
    const eligible=!!token&&!!originalCrank(token.actor,box)&&!installed;
+   const flood=region.getFlag(NS,STATE);
+   const safelyConfigured=region.getFlag(NS,"noDrainActivation")===false&&
+    region.getFlag(NS,"cavSluiceInstallController")?.drainEnabled===true;
+   const busy=region.getFlag(NS,"cavSluiceStageTransaction")?.status==="reserved";
+   const stageAction=installed&&safelyConfigured&&!busy&&token?
+     flood?.status==="closed"?"open":flood?.status==="open"?"close":null:null;
    const DialogV2=foundry.applications.api.DialogV2;
    const description=installed?
-    "An iron crank now sits firmly in the socket. The pond and bathhouse water remain at their original levels.":
-    "The stone sluice has an empty square mounting socket. An iron crank would fit here.";
+     flood?.status==="open"?"The original Crank is fitted. The gate is open; the Pond and Bathhouse pools have drained.":
+     "The original Crank is fitted. The gate is closed; the Pond and Bathhouse pools remain full.":
+     "The stone sluice has an empty square mounting socket. An iron crank would fit here.";
    const body='<figure style="max-width:650px;margin:auto;text-align:center"><img alt="Close-up of the pond sluice gate from the approved map" src="'+IMAGE+'" style="display:block;max-width:100%;max-height:68vh;margin:auto;border:1px solid #86755b"/><figcaption style="font-style:italic;margin:0.7rem 0">'+description+'</figcaption></figure>';
    await DialogV2.prompt({window:{title:"The Sluice Gate"},content:body,
-    ok:{label:eligible?"Install Original Crank":"Close",callback:async()=>{
-     if(!eligible)return true;
+    ok:{label:eligible?"Install Original Crank":stageAction==="open"?"Open Sluice":stageAction==="close"?"Close Sluice":"Close",callback:async()=>{
+     if(!eligible&&!stageAction)return true;
      const gm=game.users.activeGM;if(!gm?.active){ui.notifications?.warn("The Gamemaster is unavailable.");return false;}
-     await ChatMessage.create({content:"<p>You attempt to fit the crank into the sluice control.</p>",
-      whisper:[gm.id,game.user.id],
-      flags:{[NS]:{cavSluiceInstallRequest:{version:1,action:"install-crank",sceneId:SCENE,regionId:REGION,tokenId:token.id}}}});
+     const flag=eligible?{cavSluiceInstallRequest:{version:1,action:"install-crank",sceneId:SCENE,regionId:REGION,tokenId:token.id}}:
+      {cavSluiceStageRequest:{version:1,action:stageAction,sceneId:SCENE,regionId:REGION,tokenId:token.id}};
+     await ChatMessage.create({content:"<p>You work the iron sluice control.</p>",whisper:[gm.id,game.user.id],flags:{[NS]:flag}});
      return true;
     }},rejectClose:false});
   }catch(e){console.warn("[CAV Sluice] static closeup unavailable",e);}

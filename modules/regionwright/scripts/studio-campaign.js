@@ -3,6 +3,8 @@ import { installCabinSuneWinderService } from "./studio-cav-sune.js";
 import { installCabinSuneReliefService, handleCabinSuneReliefRegionEvent } from "./studio-cav-sune-relief.js";
 import { installCabin587GMService } from "./studio-cav-587.js";
 import { installCabinSluiceCrankGMService, handleCabinSluiceRegionEvent } from "./studio-cav-sluice.js";
+import { installCabinSluiceWaterService } from "./studio-cav-water-controller.js";
+import { installCabinDrainedPickupsGMService, handleCabinDrainedPickupRegionEvent } from "./studio-cav-drained-pickups.js";
 import { ascendancyLiveInstaller } from "./ascendancy-live-installer.js";
 import { ascendancyBalladRuntime } from "./ascendancy-ballad-runtime.js";
 
@@ -14,7 +16,7 @@ const campaignAPI = Object.freeze({
 
 /** Attach campaign-specific tools to Studio's API without owning reusable puzzles. */
 export function installStudioCampaign(api) {
-  if (api?.campaign) Object.assign(api.campaign, { ascendancy: campaignAPI, cabin: { suneRelief: { handleRegionEvent: handleCabinSuneReliefRegionEvent }, sluice: { handleRegionEvent: handleCabinSluiceRegionEvent } } });
+  if (api?.campaign) Object.assign(api.campaign, { ascendancy: campaignAPI, cabin: { suneRelief: { handleRegionEvent: handleCabinSuneReliefRegionEvent }, sluice: { handleRegionEvent: handleCabinSluiceRegionEvent }, drainedPickups: { handleRegionEvent: handleCabinDrainedPickupRegionEvent } } });
   // Keep existing Regionwright campaign macros functional through the old key.
   if (api?.premium && api.premium !== api.campaign) Object.assign(api.premium, { ascendancy: campaignAPI });
   installAscendancySocket();
@@ -22,6 +24,8 @@ export function installStudioCampaign(api) {
   installCabinSuneReliefService();
   installCabin587GMService();
   installCabinSluiceCrankGMService();
+  installCabinSluiceWaterService();
+  installCabinDrainedPickupsGMService();
   return campaignAPI;
 }
 
