@@ -31,8 +31,12 @@ function geometryEqual(left,right){
  JSON.stringify([...lb.system.destinations])===JSON.stringify([...rb.system.destinations])&&
  left.width===right.width&&left.height===right.height&&left.grid.size===right.grid.size;
 }
-export function evaluateSluicePositionSafety({pondTokens=[],fullBathTokens=[],dryBathTokens=[],safePondTokenIds=[]}={}){
+export const sluiceGateRouteInterlock=(mechanicalReady)=>mechanicalReady?.traversalEnabled!==true;
+export function evaluateSluicePositionSafety({pondTokens=[],fullBathTokens=[],dryBathTokens=[],aqueductTokens=[],safePondTokenIds=[]}={}){
  if(fullBathTokens.length||dryBathTokens.length)return {ok:false,reason:"bathhouse-occupied"};
+ // The original Forest Well may eventually provide a safe return, but do not assume
+ // Aqueduct occupants can navigate it until two-way well routes are independently verified.
+ if(aqueductTokens.length)return {ok:false,reason:"aqueduct-occupied"};
  const safe=new Set(safePondTokenIds);
  if(pondTokens.some(t=>!safe.has(t)))return {ok:false,reason:"pond-hazard"};
  return {ok:true,reason:"clear"};
@@ -44,6 +48,9 @@ async function transition(req,authorId){
  if(!region||!portal||!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
  !actor.testUserPermission(user,"OWNER")||!region.testPoint(center(token,pond)))return "denied";
  if(region.getFlag(NS,"cavSluiceCrankInstall")?.status!=="done")return "crank-needed";
+ // Until route synchronization/first-chase escape are certified, never change water
+ // while the Aqueduct traversal network is marked live. Avoid underwater stranding.
+ if(!sluiceGateRouteInterlock(pond.regions.get("CAVPONDAQGATE001")?.getFlag(NS,"cavAqueductGateMechanicalReady")))return "aqueduct-route-active";
  if(region.getFlag(NS,"noDrainActivation")!==false||
  region.getFlag(NS,"cavSluiceInstallController")?.drainEnabled!==true)return "blocked";
  const priorTransaction=region.getFlag(NS,TRANSITION);
@@ -60,10 +67,13 @@ async function transition(req,authorId){
  if(pond.background.src!==expectedPond||
  pond.levels.contents[0]?.background.src!==expectedPond||
  portal.system.destinations.size!==1||![...portal.system.destinations].includes(expectedDestination))return "reconcile";
+ const aq=game.scenes.get("CAVAQ01Scene0001");
+ if(!aq)return "reconcile";
  const allPond=pond.tokens.contents;
  const safePond=allPond.filter(t=>!t.hidden&&region.testPoint(center(t,pond))).map(t=>t.id);
  const position=evaluateSluicePositionSafety({pondTokens:allPond.map(t=>t.id),
-  fullBathTokens:full.tokens.contents.map(t=>t.id),dryBathTokens:dry.tokens.contents.map(t=>t.id),safePondTokenIds:safePond});
+  fullBathTokens:full.tokens.contents.map(t=>t.id),dryBathTokens:dry.tokens.contents.map(t=>t.id),
+  aqueductTokens:aq.tokens.contents.map(t=>t.id),safePondTokenIds:safePond});
  const isSafe=position.ok;
  const plan=planCavWaterChange({current,action:req.action,crankInstalled:true,originalRegionReady:true,
   pondVisualApproved:true,bathVisualApproved:true,tokenPositionsSafe:isSafe,
@@ -101,7 +111,8 @@ export function installCabinSluiceWaterService(){
   catch(e){console.error("[CAV Sluice] partial visual/portal transaction; GM must reconcile reserved marker",e);}
   finally{globalThis[LOCK]=false;}
   const output={done:req.action==="open"?"The gate shudders open. Water drains from the pond and the bathhouse pools.":"The sluice closes, and water refills the pond and bathhouse pools.",
-   unsafe:"The mechanism resists while someone is still near the water or inside the bathhouse. Clear the area first.",
+   unsafe:"The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
+   "aqueduct-route-active":"The Aqueduct passage is active. The Gamemaster must secure its two-way route before changing the sluice.",
    denied:"Only an authorized nearby character can operate this sluice.",
    "crank-needed":"The original Crank must be fitted before the wheel will turn.",
    blocked:"The flood controls remain locked.",

@@ -1,4 +1,4 @@
-﻿const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
+const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",REG="CAVPONDAQGATE001",PORT="CAVPONDAQPORT001",AQ="CAVAQ01Scene0001";
 const GEAR="Item.wDKqETOykWEdKF1Z",GEAR_ORIGIN="Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001";
 const HANDLE="Item.nRVZJL9JOwEwfnLq",HANDLE_ORIGIN="Scene.CAVHU04Scene0001.Region.CAVPARENTNIGHT01";
@@ -6,6 +6,12 @@ const GEAR_FLAG="cavAqueductGearInstalled",HANDLE_FLAG="cavAqueductHandleInstall
 const HOOK="__CAV_AQUEDUCT_GATE_GM_SERVICE_v001",LOCK="__CAV_AQUEDUCT_GATE_GM_BUSY_v001";
 const ART="worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-aqueduct-gate-owner-map-crop-20261026.png";
 export const aqueductGearStage=(g,h)=>g?.status==="reserved"||h?.status==="reserved"?"reconcile":g?.status==="done"&&h?.status==="done"?"both":g?.status==="done"?"handle":h?.status==="done"?"gear":"either";
+export function nextAqueductPart(stage,hasGear,hasHandle){
+ if(stage==="gear")return hasHandle?"handle":null;
+ if(stage==="handle")return hasGear?"gear":null;
+ if(stage==="either")return hasGear?"gear":hasHandle?"handle":null;
+ return null;
+}
 function elected(){return game?.ready&&game.world?.id===WORLD&&game.user?.isGM&&game.users.activeGM?.id===game.user.id;}
 function tokenCenter(t,scene){return{x:t.x+t.width*scene.grid.size/2,y:t.y+t.height*scene.grid.size/2,elevation:0};}
 function sourceCopy(actor,part){
@@ -32,10 +38,11 @@ async function installPart(req,uid){
  if(r.getFlag(NS,READY)?.status==="ready")return "already";
  await r.setFlag(NS,ledger,{status:"reserved",actorId:actor.id,tokenId:token.id,sourceUuid:srcId,actorItemId:original.id});
  await actor.deleteEmbeddedDocuments("Item",[original.id]);
+ if(actor.items.has(original.id))throw Error("Installed Aqueduct part still in actor inventory; reserved ledger retained");
  await r.setFlag(NS,ledger,{status:"done",actorId:actor.id,sourceUuid:srcId,consumedActorItemId:original.id});
  if(r.getFlag(NS,GEAR_FLAG)?.status==="done"&&r.getFlag(NS,HANDLE_FLAG)?.status==="done"){
   // Mechanical progression only. Traversal requires a separately audited Aqueduct return route.
-  await r.setFlag(NS,READY,{status:"ready",version:1,portal:FPORT,traversalEnabled:false});
+  await r.setFlag(NS,READY,{status:"ready",version:1,portal:PORT,traversalEnabled:false});
  }
  return "installed";
 }
@@ -75,8 +82,7 @@ export async function handleCabinAqueductGateRegionEvent(region,event){
    const src=canvas.scene.regions.get("CAVEXT02SLUICE01")?.getFlag(NS,"cavPondBathWaterState");
    const water=src?.status==="open"&&src?.pond==="drained";
    const stage=aqueductGearStage(region.getFlag(NS,GEAR_FLAG),region.getFlag(NS,HANDLE_FLAG));
-   const next=near&&water&&stage!=="reconcile"&&stage!=="both"?
-     (stage==="gear"?"gear":stage==="handle"?"handle":sourceCopy(actor,"gear")?"gear":sourceCopy(actor,"handle")?"handle":null):null;
+   const next=near&&water?nextAqueductPart(stage,!!sourceCopy(actor,"gear"),!!sourceCopy(actor,"handle")):null;
    const label=next==="gear"?"Install Replacement Gear":next==="handle"?"Install Gate Handle":"Close";
    const description=!water?"The gate remains mostly submerged; its metal sockets are out of reach.":stage==="both"?
      "Both original parts are seated. The immense gate begins to unlock; the inner passage awaits its safety interlocks.":
