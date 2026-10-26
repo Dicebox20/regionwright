@@ -7,6 +7,7 @@ import { clearIngredientMixing, configureIngredientMixing, createIngredientMixin
 import { clearSpineMosaic, configureSpineMosaic, createSpineMosaicPuzzleConfig, handleSpineMosaicRegionEvent, openSpineMosaicPuzzle, previewSpineMosaic } from "./spine-mosaic.js";
 import { clearSlidingMosaic, configureSlidingMosaic, createSlidingMosaicPuzzleConfig, handleSlidingMosaicRegionEvent, openSlidingMosaicPuzzle, previewSlidingMosaic } from "./sliding-mosaic.js";
 import { openStandalonePuzzle, standalonePuzzleCatalog } from "./standalone-puzzles.js";
+import {createRosewaterCampaignConfig,evaluateRosewaterCampaignSolution,rotateRosewaterRing,resetRosewaterRings,ROSEWATER_RING_ANGLES_DEGREES} from "./rosewater-campaign-preset.js";
 import { puzzleSetupCatalog, openPuzzleSetup } from "./puzzle-hub.js";
 import { puzzleHUD } from "./puzzle-hud.js";
 
@@ -19,6 +20,13 @@ export function createPuzzleAPI({ openPuzzleHub }) {
     openSetup: openPuzzleSetup,
     openStandalone: openStandalonePuzzle,
     puzzleHUD,
+    rosewater: Object.freeze({
+      createCampaignConfig:createRosewaterCampaignConfig,
+      evaluateCampaignSolution:evaluateRosewaterCampaignSolution,
+      rotateCampaignRing:rotateRosewaterRing,
+      resetCampaignRings:resetRosewaterRings,
+      canonicalAnglesDegrees:ROSEWATER_RING_ANGLES_DEGREES
+    }),
     lockpicking: Object.freeze({ difficulties: LOCKPICK_DIFFICULTIES, createConfig: createLockpickConfig, validateConfig: validateLockpickConfig, evaluate: evaluateLockpickAttempt, configureDoor: configureLockpickDoor, clearDoor: clearLockpickDoor, open: openLockpickPuzzle, request: requestLockpickAttempt }),
     rotatingLock: Object.freeze({ createConfig: createRotatingLockConfig, configureDoor: configureRotatingLockDoor, clearDoor: clearRotatingLockDoor, open: openRotatingLockPuzzle, preview: previewRotatingLock }),
     laserGrid: Object.freeze({ createConfig: createLaserGridPuzzleConfig, configureDoor: configureLaserGridDoor, clearDoor: clearLaserGridDoor, open: openLaserGridPuzzle, preview: previewLaserGrid }),
