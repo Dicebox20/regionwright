@@ -1,0 +1,83 @@
+{
+  "schema": "dicebox.cav.rosewater-original-sluice-readiness-audit/v1",
+  "localDate": "2026-10-26",
+  "timezone": "America/Los_Angeles",
+  "ownerMessage": "Alright, lets contonue",
+  "phase": "PREPARE_INSPECT_VERIFY_CATALOGUE_READONLY",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "startingCommit": "b0d7e7b9655f658be29ef3eb9785f316beb702cd",
+    "sourceChanged": false,
+    "tests": {
+      "passed": 83,
+      "failed": 0
+    }
+  },
+  "liveGM": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "electedActive": true,
+    "strictRosewaterProofLoaded": true,
+    "rosewaterStatus": "not-commissioned",
+    "symbolsApproved": [
+      "rose",
+      "sun",
+      "moth",
+      "thorn"
+    ],
+    "regionBehaviorDisabled": true,
+    "regionBinding": "STAGED_DISABLED",
+    "ringSession": null,
+    "sluiceProof": {
+      "ready": false,
+      "blockers": [
+        "original-crank-not-installed",
+        "pond-bath-not-committed-drained",
+        "original-sluice-transaction-not-complete"
+      ]
+    },
+    "sluiceControllerDrainEnabled": true,
+    "sluiceNativeBehaviorId": "CAVEXT02SLCBEH01",
+    "sluiceNativeBehaviorEnabled": true,
+    "sluiceNativeEvents": [
+      "behaviorViewed",
+      "behaviorUnviewed",
+      "behaviorDeactivated"
+    ],
+    "sluiceCrankInstalled": false,
+    "waterState": null,
+    "waterTransaction": null,
+    "targetSceneTokenCounts": {
+      "CAVEXT02Scene001": 0,
+      "CAVBATHScene0001": 0,
+      "8yLMRDvxyw58dydh": 0,
+      "CAVAQ01Scene0001": 0
+    }
+  },
+  "nativeWrites": 0,
+  "sourceWrites": 0,
+  "extraReadOnlyAudit": {
+    "firstScriptSyntaxFailedBeforeFoundryAccess": true,
+    "retryValidButChromeOffline": true,
+    "fullArtGeometryPortalsNotVerified": true
+  },
+  "hostAtEnd": {
+    "foundryPort30000": true,
+    "devChromeCDP9224": false,
+    "repeatLaunchPrevented": true
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-rosewater-loaded-strict-proof-and-sluice-native-audit-20261026.json"
+  ],
+  "next": [
+    "Retest read-only Scene geometry and portal destinations only when CDP stable",
+    "Real player original Crank progression",
+    "GM committed original shared Pond/Bath water transition",
+    "Native Rosewater commissioning with GM guard only when drained",
+    "Original Bowl pickup location",
+    "Deferred player acceptance and Crooked Man"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless transcript"
+}
