@@ -1,0 +1,312 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "scene": {
+    "id": "CAVHU04Scene0001",
+    "name": "H-U04 - Parents Bedroom",
+    "art": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png",
+    "width": 1536,
+    "height": 1024,
+    "regionCount": 5,
+    "regions": [
+      {
+        "id": "CAVHU04ARRIVE001",
+        "name": "H-U04 - Arrival from Upper Gallery",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 675,
+            "y": 610,
+            "width": 185,
+            "height": 135,
+            "gridBased": false,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0
+          }
+        ],
+        "flags": {
+          "cavRoomKey": "H-U04",
+          "kind": "arrival",
+          "authoritativeSource": "H-U04 owner v003 and existing H-U02 parent doorway"
+        },
+        "behaviors": []
+      },
+      {
+        "id": "CAVHU04RETURN001",
+        "name": "H-U04 - Return to Upper Gallery",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 685,
+            "y": 835,
+            "width": 175,
+            "height": 145,
+            "gridBased": false,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0
+          }
+        ],
+        "flags": {
+          "cavRoomKey": "H-U04",
+          "kind": "exit",
+          "authoritativeSource": "H-U04 owner v003 and existing H-U02 parent doorway"
+        },
+        "behaviors": [
+          {
+            "id": "CAVHU04RETURNB01",
+            "name": "Parents Bedroom - Return to Gallery",
+            "type": "teleportToken",
+            "disabled": false,
+            "events": [
+              "tokenExit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "CAVHU04COATREG01",
+        "name": "H-U04 - Hanging Coat / Old Iron Key",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 960,
+            "y": 120,
+            "width": 184.0909090909091,
+            "height": 180,
+            "gridBased": false,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0
+          }
+        ],
+        "flags": {
+          "branch": "cav-old-iron-key-sophia-v001",
+          "role": "key-source",
+          "stage": "SOURCE_GEOMETRY",
+          "provenance": "owner-approved-puzzle-chain-and-map"
+        },
+        "behaviors": [
+          {
+            "id": "CAVHU04COATBEH01",
+            "name": "Parents Coat — Inspect and Original Iron Key",
+            "type": "executeScript",
+            "disabled": false,
+            "events": [
+              "behaviorViewed",
+              "behaviorUnviewed",
+              "behaviorDeactivated",
+              "tokenMoveIn",
+              "tokenMoveWithin"
+            ],
+            "sourceLength": 4060
+          }
+        ]
+      },
+      {
+        "id": "CAVPARENTNIGHT01",
+        "name": "H-U04 - Broken Nightstand / Gate Handle",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 415,
+            "y": 190,
+            "width": 190,
+            "height": 215,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "chainNode": "parents_nightstand_repair",
+          "tool": "Item.CAVBATHSCREW0001",
+          "origin": "Scene.8yLMRDvxyw58dydh.Region.CAVBATHSCRDRY001",
+          "reward": "Item.nRVZJL9JOwEwfnLq",
+          "interaction": "explicit click; repair then separate claim",
+          "playerGameplayTested": false
+        },
+        "behaviors": [
+          {
+            "id": "CAVPARENTNITBE01",
+            "name": "CAV - Broken Nightstand Click",
+            "type": "executeScript",
+            "disabled": false,
+            "events": [
+              "behaviorViewed",
+              "behaviorUnviewed",
+              "behaviorDeactivated"
+            ],
+            "sourceLength": 107
+          }
+        ]
+      },
+      {
+        "id": "CAVHU04HOPECHST1",
+        "name": "H-U04 - Hope Chest (late Silver Key)",
+        "shapes": [
+          {
+            "type": "rectangle",
+            "x": 1100,
+            "y": 688,
+            "width": 185,
+            "height": 132,
+            "rotation": 0,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "gridBased": false
+          }
+        ],
+        "flags": {
+          "cavLateBatch1": {
+            "status": "physical-fixture-staged",
+            "source": "2026-10-26-owner-live-batch1",
+            "purpose": "chest-and-music-box",
+            "basis": "approved v003 map, visibly banded trunk in southeast room; no puzzle behaviors"
+          }
+        },
+        "behaviors": [
+          {
+            "id": "CAVHOPECHSTBEH01",
+            "name": "Chat B late hope — GM guarded actions",
+            "type": "executeScript",
+            "disabled": false,
+            "events": [
+              "behaviorViewed",
+              "behaviorUnviewed",
+              "behaviorDeactivated",
+              "tokenMoveIn",
+              "tokenMoveWithin"
+            ],
+            "sourceLength": 9609
+          }
+        ]
+      }
+    ]
+  },
+  "silver": {
+    "sceneId": "CAVSG01Scene0001",
+    "regions": [
+      {
+        "id": "CAVSG01CHASETRG1",
+        "name": "SG-01 - Late Crooked Man chase review approach",
+        "flags": {
+          "cavLateSG01": {
+            "version": 1,
+            "status": "dormant-uncommissioned",
+            "kind": "late-chase",
+            "source": "2026-10-26-approved-owner-SG01-art",
+            "required": [
+              "first-chase",
+              "waterworks",
+              "allen-warning",
+              "crooked-man"
+            ]
+          }
+        },
+        "behaviors": [
+          {
+            "id": "CAVSG01CHASEBEH1",
+            "disabled": true
+          }
+        ]
+      },
+      {
+        "id": "CAVSG01SILVERKEY",
+        "name": "SG-01 - Silver Tiny Key ground recovery marker",
+        "flags": {
+          "cavLateSG01": {
+            "version": 1,
+            "status": "dormant-uncommissioned",
+            "kind": "silver-marker",
+            "source": "2026-10-26-approved-owner-SG01-art",
+            "required": [
+              "first-chase",
+              "waterworks",
+              "allen-warning",
+              "crooked-man"
+            ]
+          }
+        },
+        "behaviors": [
+          {
+            "id": "CAVSG01SILVRBEH1",
+            "disabled": true
+          }
+        ]
+      }
+    ]
+  },
+  "original": [
+    {
+      "id": "IY8fuUG5P0yWIZIh",
+      "uuid": "Item.IY8fuUG5P0yWIZIh",
+      "name": "Silver Tiny Key",
+      "type": "loot",
+      "img": "icons/sundries/misc/key-steel.webp",
+      "sourceStatus": "GM_LIBRARY_ONLY",
+      "descriptionLength": 224,
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-26-owner-approved-batch1",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Silver Tiny Key"
+        }
+      }
+    },
+    {
+      "id": "YaKs6z2AWlEAlyzx",
+      "uuid": "Item.YaKs6z2AWlEAlyzx",
+      "name": "Ornate Music Box",
+      "type": "loot",
+      "img": "icons/svg/item-bag.svg",
+      "sourceStatus": "GM_LIBRARY_ONLY",
+      "descriptionLength": 180,
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-26-owner-approved-batch1",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Ornate Music Box"
+        }
+      }
+    },
+    {
+      "id": "5jwy75XyFezukf3b",
+      "uuid": "Item.5jwy75XyFezukf3b",
+      "name": "Prayer of Protection",
+      "type": "loot",
+      "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+      "sourceStatus": "GM_LIBRARY_ONLY",
+      "prayerJournal": "JournalEntry.CAVPRAYERPROTECT",
+      "descriptionLength": 848,
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-26-owner-approved-batch1",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Prayer of Protection"
+        },
+        "cavFullPrayerJournalUuid": "JournalEntry.CAVPRAYERPROTECT",
+        "cavFullPrayerProvenance": "OWNER_AUTHORIZED_NEW_TEXT_2026-10-26",
+        "cavFullPrayerStatus": "GM_LIBRARY_ONLY_CONTENT_BOUND"
+      }
+    }
+  ],
+  "actors": [],
+  "journal": {
+    "uuid": "JournalEntry.CAVPRAYERPROTECT",
+    "ownership": {
+      "default": 0,
+      "4c2ow5laZtzUNigr": 3
+    },
+    "pages": 1
+  },
+  "studioSune": true,
+  "studioEast": true
+}

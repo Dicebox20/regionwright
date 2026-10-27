@@ -1,0 +1,61 @@
+{
+  "sourceSHA256": "70f9133223c4acf48df34a63975095b18f9ce6dc7a04822b4967847b342a54e1",
+  "status": "original-ornate-music-prayer-native-behavior-installed-guarded",
+  "overview": {
+    "world": "cabin-in-the-ashen-veil",
+    "electedGM": "Gamemaster 1",
+    "sourceScene": "CAVHU04Scene0001",
+    "hopeRegion": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1",
+    "originalOldBehavior": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1.RegionBehavior.CAVHOPECHSTBEH01",
+    "existingRegionBehaviors": 1,
+    "originalShape": {
+      "type": "rectangle",
+      "x": 1100,
+      "y": 688,
+      "width": 185,
+      "height": 132,
+      "rotation": 0,
+      "hole": false,
+      "anchorX": 0,
+      "anchorY": 0,
+      "gridBased": false
+    },
+    "originalItems": [
+      {
+        "uuid": "Item.IY8fuUG5P0yWIZIh",
+        "name": "Silver Tiny Key",
+        "originStatus": "GM_LIBRARY_ONLY"
+      },
+      {
+        "uuid": "Item.YaKs6z2AWlEAlyzx",
+        "name": "Ornate Music Box",
+        "originStatus": "GM_LIBRARY_ONLY"
+      },
+      {
+        "uuid": "Item.5jwy75XyFezukf3b",
+        "name": "Prayer of Protection",
+        "originStatus": "GM_LIBRARY_ONLY"
+      }
+    ],
+    "fullPrayerJournal": "JournalEntry.CAVPRAYERPROTECT",
+    "lateChaseDisabled": true,
+    "silverMarkerDisabled": true,
+    "originalActorItemCopies": 0,
+    "newBehaviorId": "CAVPRAYERBOXBEH1",
+    "scriptLength": 7797
+  },
+  "installed": {
+    "uuid": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1.RegionBehavior.CAVPRAYERBOXBEH1",
+    "disabled": false,
+    "type": "executeScript",
+    "events": [
+      "behaviorViewed",
+      "behaviorUnviewed",
+      "behaviorDeactivated",
+      "tokenMoveIn",
+      "tokenMoveWithin"
+    ],
+    "sourceLength": 7797
+  },
+  "existingHopeNativeBehaviorPreserved": true
+}
