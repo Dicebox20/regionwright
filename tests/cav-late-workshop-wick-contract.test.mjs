@@ -3,22 +3,22 @@ import assert from "node:assert/strict";
 import {planStudioPrayerPassage,planWorkshopWickPickup} from "../modules/regionwright/scripts/studio-cav-late-workshop-wick-contract.js";
 const passage=()=>({
  version:1,origin:"elected-gm-readback",activeNonGmOwnerAtFixture:true,explicitPlayerAction:true,
- actorId:"ACTOR",tokenId:"TOKEN",studioCode:"H-G07",workshopCode:"H-G08",
- ownedTokenAtSuneAltar:true,studioAltarRegionVerified:true,studioSceneId:"STUDIOID",
- studioAltarRegionUuid:"Scene.STUDIOID.Region.ALTAR",explicitReadPrayerJournalAction:true,
+ actorId:"ACTOR",tokenId:"TOKEN",studioCode:"H-U07",workshopCode:"H-U08",
+ ownedTokenAtSuneAltar:true,studioAltarRegionVerified:true,studioSceneId:"CAVHU07Scene0001",
+ studioAltarRegionUuid:"Scene.CAVHU07Scene0001.Region.ALTAR",explicitReadPrayerJournalAction:true,
  originalPrayerHeldByActingActor:true,originalPrayerSourceVerified:true,
  expectedPrayerSourceUuid:"Item.PRAYER",heldPrayerSourceUuid:"Item.PRAYER",
  heldPrayerFromMusicBoxProvenanceVerified:true,passageStatus:"sealed",prayerReadStatus:"unread",
- workshopSceneId:"WORKSHOPID",verifiedStudioWorkshopPortalPair:true,workshopSceneExists:true,
+ workshopSceneId:"CAVHU08Scene0001",verifiedStudioWorkshopPortalPair:true,workshopSceneExists:true,
  safeArrivalVerified:true,safeReturnVerified:true,initialPassageSealed:true,
- studioPassageRegionUuid:"Scene.STUDIOID.Region.PASSAGE",
- workshopReturnRegionUuid:"Scene.WORKSHOPID.Region.RETURN"
+ studioPassageRegionUuid:"Scene.CAVHU07Scene0001.Region.PASSAGE",
+ workshopReturnRegionUuid:"Scene.CAVHU08Scene0001.Region.RETURN"
 });
 const wick=()=>({
  version:1,origin:"elected-gm-readback",activeNonGmOwnerAtFixture:true,explicitPlayerAction:true,
- actorId:"ACTOR",tokenId:"TOKEN",workshopCode:"H-G08",
+ actorId:"ACTOR",tokenId:"TOKEN",workshopCode:"H-U08",
  workshopSceneVerified:true,ownedTokenAtWickFixture:true,
- workshopSceneId:"WORKSHOPID",wickRegionUuid:"Scene.WORKSHOPID.Region.WICK",
+ workshopSceneId:"CAVHU08Scene0001",wickRegionUuid:"Scene.CAVHU08Scene0001.Region.WICK",
  authenticPassageOpenLedger:true,wickClaimStatus:"none",originalWickSourceVerified:true,
  wickSourceUuid:"Item.WICK",wickSourceName:"Wick",worldwideWickRewardCopyCount:0
 });
@@ -81,4 +81,22 @@ test("unknown Wick ledger requires reconciliation",()=>{
 });
 test("client Wick request cannot invent GM evidence",()=>{
  assert.equal(planWorkshopWickPickup({...wick(),origin:"client"}).action,"deny");
+});
+test("actual Foundry Art Studio and Workshop code and Scene IDs are mandatory",()=>{
+ const accepted=passage();
+ assert.equal(accepted.studioSceneId,"CAVHU07Scene0001");
+ assert.equal(accepted.workshopSceneId,"CAVHU08Scene0001");
+ assert.equal(planStudioPrayerPassage(accepted).action,"gm-review-open-passage");
+ for(const patch of [
+   {studioCode:"H-G07"},{workshopCode:"H-G08"},
+   {studioSceneId:"CAVHG07Scene0001"},{workshopSceneId:"CAVHG08Scene0001"},
+   {studioSceneId:"STUDIOID"},{workshopSceneId:"WORKSHOPID"}
+ ])assert.equal(planStudioPrayerPassage({...accepted,...patch}).action,"deny",JSON.stringify(patch));
+});
+test("actual H-U08 Wick pickup cannot be reviewed in obsolete old-code Workshop",()=>{
+ assert.equal(planWorkshopWickPickup(wick()).action,"gm-review-single-wick");
+ for(const patch of [
+   {workshopCode:"H-G08"},{workshopSceneId:"CAVHG08Scene0001"},
+   {workshopSceneId:"WORKSHOPID"}
+ ])assert.equal(planWorkshopWickPickup({...wick(),...patch}).action,"deny",JSON.stringify(patch));
 });

@@ -31,7 +31,7 @@ const devotion=(extra={})=>({...base("BOATHOUSE_SCENE"),boathouseSceneId:"BOATHO
  prayerName:"Prayer of Devotion",prayerType:"loot",
  fullReadableJournalVerified:true,journalBoundToOriginalPrayer:true,
  distinctFromProtectionVerified:true,worldwidePrayerRewardCount:0,...extra});
-const sune=(extra={})=>({...base("STUDIO_SCENE"),studioCode:"H-G07",
+const sune=(extra={})=>({...base("CAVHU07Scene0001"),studioCode:"H-U07",
  originalSuneAltarVerified:true,explicitReadDevotionAtAltar:true,
  readLedger:"unread",emblemLedger:"none",originalPrayerReverified:true,
  originalPrayerSource:PRAYER,actorPrayerSource:PRAYER,actorHoldsDevotion:true,
@@ -119,4 +119,15 @@ test("Devotion read and half award are once only and partial state blocked",()=>
  assert.equal(planSuneDevotionHalf(sune({readLedger:"read",emblemLedger:"done"})).action,"no-op");
  assert.equal(planSuneDevotionHalf(sune({readLedger:"reserved"})).action,"gm-review");
  assert.equal(planSuneDevotionHalf(sune({readLedger:"read",emblemLedger:"none"})).action,"gm-review");
+});
+test("only real H-U07/CAVHU07Scene0001 Studio may review Sune Devotion half",()=>{
+ assert.equal(planSuneDevotionHalf(sune()).action,"gm-review-grant-single-sune-half");
+ for(const patch of [
+   {studioCode:"H-G07"},{sceneId:"CAVHG07Scene0001"},
+   {sceneId:"STUDIO_SCENE"},{studioCode:"SG-05"}
+ ])assert.equal(planSuneDevotionHalf(sune(patch)).action,"deny",JSON.stringify(patch));
+});
+test("original Boathouse Prayer is blocked until full actual readable Journal verified",()=>{
+ assert.equal(planBoathouseDevotionPickup(devotion({fullReadableJournalVerified:false})).action,"deny");
+ assert.equal(planBoathouseDevotionPickup(devotion({journalBoundToOriginalPrayer:false})).action,"deny");
 });

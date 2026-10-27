@@ -1,0 +1,416 @@
+{
+  "scenes": [
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "map": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "w": 5760,
+      "h": 4320,
+      "tiles": [],
+      "regions": [
+        {
+          "id": "5RJkabcJJbVAI4WY",
+          "name": "EXT-02 - Return to Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 260,
+              "y": 1880,
+              "width": 370,
+              "height": 430,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "yaNCRIbv3Y8Dho0X",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "wwls4eQRInzw8RxS",
+          "name": "EXT-02 - Arrival from Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 910,
+              "y": 1970,
+              "width": 250,
+              "height": 230,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "CAVROWBOATREG001",
+          "name": "EXT-02 - Old Rowboat Investigation (Oars Required)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1250,
+              "y": 1470,
+              "width": 510,
+              "height": 510,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVMIRRORBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "pond_sunken_rowboat_mirror",
+              "activation": "player token moves to moored rowboat with Oars; narrates investigating older sunken boat",
+              "requiresItemUuid": "Item.CAVOARSPOND00001",
+              "rewardUuid": "Item.CAVMIRRORSUNK001",
+              "map": "ext-02_pond_full_owner-approved.png",
+              "regionPlacement": "measured visible western dock and moored rowboat x1250 y1470 w510 h510"
+            }
+          }
+        },
+        {
+          "id": "CAVEXT02SLUICE01",
+          "name": "EXT-02 - Sluice Control Inspection",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1843,
+              "y": 2655,
+              "width": 435,
+              "height": 325,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVEXT02SLCBEH01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "pond_drained",
+            "kind": "sluice-control-inspect-only",
+            "sourceVersion": "v001",
+            "visualGate": "BATHHOUSE_DRAINED_VISUAL_NOT_APPROVED",
+            "noDrainActivation": false,
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+            "requiresCrankOriginal": "Item.g3VYdgc1qkgkHGvn",
+            "cavSluiceInstallController": {
+              "version": 1,
+              "status": "crank-install-available",
+              "drainEnabled": true,
+              "requiresBathDrainedArtwork": false,
+              "interaction": "explicit inspect and install from original 587 lockbox",
+              "approvedBathDrainedSceneUuid": "Scene.8yLMRDvxyw58dydh",
+              "stageControllerVersion": 1,
+              "stageMode": "elected-GM guarded, no tokens in water/baths"
+            }
+          }
+        },
+        {
+          "id": "CAVEXT02HLOGR001",
+          "name": "EXT-02 - Fallen Hollow Log Observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3760,
+              "y": 2980,
+              "width": 820,
+              "height": 420,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVEXT02HLOGB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "book_pond",
+            "sourceVersion": "v002",
+            "kind": "player-visual-inspection-and-elected-gm-once-only-original-book-claim",
+            "originalMap": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/pond-fallen-log-original-owner-map-crop-v001.png",
+            "placementStatus": "PROVISIONAL_APPROVED_MAP_VISIBLE_FALLEN_LOG",
+            "rewardItemUuid": "Item.TO69wBYN8sRJuxtH",
+            "rewardAssignment": "OWNER_CANON_2026_10_18_FELIX_FOX",
+            "disableItemGrant": false
+          }
+        },
+        {
+          "id": "CAVPONDWEATHER01",
+          "name": "EXT-02 - Weathered Key at Drained Pond Stair",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2575,
+              "y": 1030,
+              "width": 590,
+              "height": 600,
+              "hole": false,
+              "gridBased": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVPONDWEATHB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavDrainedPickupFixture": {
+              "version": 1,
+              "itemSourceUuid": "Item.CAVWEATHERKEY001",
+              "stage": "sluice-open-only",
+              "interaction": "explicit click, never token-enter",
+              "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-pond-drained-weathered-stairs-crop-20261026.png",
+              "playerGameplayTested": false
+            }
+          }
+        },
+        {
+          "id": "CAVPONDAQGATE001",
+          "name": "EXT-02 - Aqueduct Gate Gear and Handle Sockets",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2500,
+              "y": 620,
+              "width": 720,
+              "height": 395,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVPONDAQBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            },
+            {
+              "id": "CAVPONDAQPORT001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ],
+          "flags": {
+            "chainNode": "pond_aqueduct_gate",
+            "prerequisite": "sluice drained",
+            "originalGear": "Item.wDKqETOykWEdKF1Z",
+            "originalHandle": "Item.nRVZJL9JOwEwfnLq",
+            "ownerApprovedCrop": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-aqueduct-gate-owner-map-crop-20261026.png",
+            "requiresReturnRoute": true,
+            "traversalStatus": "STAGED_DISABLED"
+          }
+        },
+        {
+          "id": "CAVPONDAQARRV001",
+          "name": "EXT-02 - Arrival from Aqueduct Gate",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2530,
+              "y": 1690,
+              "width": 300,
+              "height": 220,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "passive": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "name": "EXT-07 - Boathouse Clearing",
+      "map": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+      "w": 4320,
+      "h": 2880,
+      "tiles": [],
+      "regions": [
+        {
+          "id": "CAVB295859043E3B",
+          "name": "Boathouse Forest Trail ? clearing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2750,
+              "y": 970,
+              "width": 310,
+              "height": 310,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBDC8953715C50",
+          "name": "Boathouse Porch ? landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1140,
+              "y": 1090,
+              "width": 290,
+              "height": 280,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBBFF38CB54B53",
+          "name": "Boathouse Dock ? landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1190,
+              "y": 1450,
+              "width": 300,
+              "height": 250,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    }
+  ],
+  "devotion": {
+    "name": "Prayer of Devotion",
+    "type": "loot",
+    "folder": "N6X80ycvxaPIszHg",
+    "img": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Prayer_of_Devotion.png",
+    "system": {
+      "quantity": 1,
+      "description": {
+        "value": "<p>A careful transcription of an old prayer discovered inscribed into masonry. The words honor devotion, constancy, and love, with the unmistakable warmth of a hymn to Sune.</p><p>Age has weathered the stone from which it was copied, but not the intention behind the invocation. It is meant to be spoken, not merely collected.</p>",
+        "chat": ""
+      },
+      "identifier": "prayer-of-devotion",
+      "source": {
+        "revision": 1,
+        "rules": "2024"
+      },
+      "identified": true,
+      "unidentified": {
+        "description": ""
+      },
+      "container": null,
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      },
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "rarity": "",
+      "properties": [],
+      "type": {
+        "value": "",
+        "subtype": ""
+      }
+    },
+    "flags": {
+      "dicebox-campaign-helper": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Prayer of Devotion"
+        }
+      },
+      "dnd5e": {
+        "riders": {
+          "activity": []
+        }
+      }
+    },
+    "_id": "GXLYq6Tf4OgPNbkU",
+    "effects": [],
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "4c2ow5laZtzUNigr": 3
+    },
+    "_stats": {
+      "coreVersion": "14.367",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3",
+      "createdTime": 1792872928460,
+      "modifiedTime": 1792879093880,
+      "lastModifiedBy": "4c2ow5laZtzUNigr",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "devotionActorCopies": [],
+  "journals": []
+}

@@ -1,0 +1,136 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "scenes": [
+    {
+      "id": "CAVHU07Scene0001",
+      "exists": true,
+      "name": "H-U07 - Dahlia Art Studio",
+      "art": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "shapes": [
+            {
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255,
+              "type": "rectangle"
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "x": 65,
+              "y": 395,
+              "width": 125,
+              "height": 165,
+              "type": "rectangle"
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "x": 220,
+              "y": 435,
+              "width": 120,
+              "height": 120,
+              "type": "rectangle"
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "exists": true,
+      "name": "H-U08 - Candle Workshop",
+      "art": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVB78B258E0A0BB",
+          "name": "Candle Workshop ? central crafting table",
+          "shapes": [
+            {
+              "x": 575,
+              "y": 400,
+              "width": 260,
+              "height": 220,
+              "type": "rectangle"
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBE5639AEC2179",
+          "name": "Candle Workshop ? shelving observation",
+          "shapes": [
+            {
+              "x": 435,
+              "y": 115,
+              "width": 240,
+              "height": 175,
+              "type": "rectangle"
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVWICKSHELFBEH1",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHG07Scene0001",
+      "exists": false,
+      "regions": []
+    },
+    {
+      "id": "CAVHG08Scene0001",
+      "exists": false,
+      "regions": []
+    }
+  ],
+  "prayers": [
+    {
+      "name": "Prayer of Devotion",
+      "uuid": "Item.GXLYq6Tf4OgPNbkU",
+      "description": "<p>A careful transcription of an old prayer discovered inscribed into masonry. The words honor devotion, constancy, and love, with the unmistakable warmth of a hymn to Sune.</p><p>Age has weathered the stone from which it was copied, but not the intention behind the invocation. It is meant to be spoken, not merely collected.</p>",
+      "library": "GM_LIBRARY_ONLY"
+    },
+    {
+      "name": "Prayer of Protection",
+      "uuid": "Item.5jwy75XyFezukf3b",
+      "description": "<p>A family prayer found inside the Ornate Music Box. Its complete owner-approved text and separate readable Journal must be verified before player handout. Reading it at Dahlia’s Art Studio Sune altar reveals the concealed Candle Workshop passage.</p>",
+      "library": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "journals": [],
+  "actorDevotionCopies": []
+}

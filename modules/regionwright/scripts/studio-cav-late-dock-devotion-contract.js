@@ -74,7 +74,7 @@ export function planBoathouseDevotionPickup(r){
 }
 export function planSuneDevotionHalf(r){
  if(!trusted(r))return {action:"deny",reason:"untrusted-readback"};
- if(!at(r)||r.studioCode!=="H-G07"||r.originalSuneAltarVerified!==true||
+ if(!at(r)||r.studioCode!=="H-U07"||r.sceneId!=="CAVHU07Scene0001"||r.originalSuneAltarVerified!==true||
     r.explicitReadDevotionAtAltar!==true)
    return {action:"deny",reason:"not-studio-devotion-reading"};
  if(r.readLedger==="reserved"||r.emblemLedger==="reserved")
