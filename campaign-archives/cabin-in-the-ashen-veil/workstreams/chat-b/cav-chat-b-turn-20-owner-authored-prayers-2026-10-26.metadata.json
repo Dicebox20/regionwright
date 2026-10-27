@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "turn": 20,
+  "datePacific": "2026-10-26",
+  "workstream": "cav-chat-b-late-game",
+  "repo": "Dicebox20/regionwright",
+  "branch": "codex/cav-late-game-chat-b-20261026",
+  "startingRemoteHead": "82af2c57e3610417580e78b3754509d102325cfa",
+  "chatAObservedHead": "b1f926418facb5d1e483fadf7bb7fd7c166743d1",
+  "ownerInstruction": "you can make up your own prayer text",
+  "exceptionScope": "prayer wording only",
+  "prayerStatus": "OWNER_AUTHORIZED_NEW_TEXT_SOURCE_ONLY",
+  "foundryWrites": false,
+  "journalsCreated": 0,
+  "itemsUpdated": 0,
+  "worldProgressAdvanced": false,
+  "sourceItems": [
+    "Item.5jwy75XyFezukf3b",
+    "Item.GXLYq6Tf4OgPNbkU"
+  ],
+  "proposedJournalIds": [
+    "CAVPRAYERPROTECT",
+    "CAVPRAYERDEVOTN1"
+  ],
+  "regressionStatus": "Last 1219/1219 from T19; no T20 rerun",
+  "blocker": "Dicebox Bridge session terminated after Foundry /join interruption",
+  "localWorktreeNeedsFastForward": true,
+  "livingTranscript": "campaign-archives/cabin-in-the-ashen-veil/workstreams/chat-b/transcripts/chat-b-conversation-2026-10-26-part01.md",
+  "next": "GM preflight native hidden prayer Journals and original source Item binding; then resolve H-U07 altar overlap and Boathouse route"
+}
