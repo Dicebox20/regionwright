@@ -1,3 +1,16 @@
+// Shared read-only player/GM proximity rule for the original Study 587 note and
+// Donovan lockbox. Invalid native geometry cannot silently pass via NaN > 400.
+export function isCav587CharacterNearRegion({token,scene,region}={}){
+ const shape=region?.shapes?.[0]?.toObject?.(),grid=scene?.grid?.size;
+ if(shape?.type!=="rectangle"||
+    ![shape.x,shape.y,shape.width,shape.height].every(Number.isFinite)||
+    shape.width<=0||shape.height<=0||!Number.isFinite(grid)||grid<=0||!token||
+    ![token.x,token.y,token.width,token.height].every(Number.isFinite)||
+    token.width<=0||token.height<=0)return false;
+ const x=token.x+token.width*grid/2,y=token.y+token.height*grid/2;
+ return Math.hypot(x-(shape.x+shape.width/2),y-(shape.y+shape.height/2))<=400;
+}
+
 // Owner-approved CAV Study/587 GM Macro preserved as audited source and registered at Studio ready.
 // Do not open the original Macro and this service simultaneously; both use the exact same listener marker.
 export function installCabin587GMService(){
@@ -24,9 +37,7 @@ const handler=async(message,opts,senderId)=>{
   if(!r||r.ownership.default<2)return;
   const token=scene.tokens.get(request.tokenId),actor=token?.actor;
   if(!token||token.hidden||!actor||actor.type!=='character'||!actor.testUserPermission(player,'OWNER'))return;
-  const shape=r.shapes[0]?.toObject();if(shape?.type!=='rectangle')return;
-  const tokenX=token.x+token.width*scene.grid.size/2,tokenY=token.y+token.height*scene.grid.size/2;
-  if(!Number.isFinite(tokenX)||!Number.isFinite(tokenY)||Math.hypot(tokenX-(shape.x+shape.width/2),tokenY-(shape.y+shape.height/2))>400)return;
+   if(!isCav587CharacterNearRegion({token,scene,region:r}))return;
   const studyDoor=game.scenes.get('CAVHG06GreatRoom')?.regions.get(DOOR);
   if(studyDoor?.getFlag(NS,'cavStudyDoorUnlocked')?.status!=='done'||studyDoor.behaviors.get(PORTAL)?.disabled!==false)return;
   const note=game.scenes.get(STUDY)?.regions.get(DESK);

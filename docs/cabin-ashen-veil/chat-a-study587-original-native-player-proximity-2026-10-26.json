@@ -1,0 +1,82 @@
+{
+  "schema": "dicebox.cav.chat-a-study587-client-native-proximity/v1",
+  "dateLocal": "2026-10-26",
+  "chat": "A",
+  "ownerMessage": "resume",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "initialCommit": "b64771e203cbcf9b41607ebe63b12cb8fc0bb673",
+    "module": "modules/regionwright/scripts/studio-cav-587.js",
+    "moduleSha256": "BF738FEAEDD13A462181C8E147B4E4727927E3B196E07FD98260029F7BF38E39",
+    "sourceInstalledHashSame": true,
+    "testsAdded": [
+      "tests/cav-study587-player-gm-proximity.test.mjs",
+      "tests/cav-study587-native-player-source-parity.test.mjs"
+    ],
+    "addedTests": 8,
+    "totalRegressionPassed": 118,
+    "failed": 0,
+    "nativeSourceManifest": "docs/cabin-ashen-veil/study587-original-native-click-sources-2026-10-26.json",
+    "nativeSourceManifestHash": "4ACEED7A6F48D0E5DF6B3D5109C43BC35D2470073B17F43F94FE7FD72ED5E159"
+  },
+  "nativeBehaviors": [
+    {
+      "scene": "CAVHG05Scene0001",
+      "region": "CAVB3E32BD6B01BD",
+      "behavior": "CAVHG05NOTE00001",
+      "preHash": "664B0420E3BAFA99183D5314C82AA2A11613B807AEADD20EB1B53CAB74287033",
+      "postHash": "7F8D5D97C7209D6F7E2153818B5E9F10DCF9AFCDBE708641EC8F58AAEF66DD8F",
+      "enabled": true
+    },
+    {
+      "scene": "CAVEXT03Scene001",
+      "region": "CAVEXT03BOXREG01",
+      "behavior": "CAVEXT03BOXBEH01",
+      "preHash": "1621FB78430317C3E66BD3EFBF96158FE4B075627F54A16EEE5A54EAE090B30C",
+      "postHash": "8150402B76BC18457900701B69B0E19A0327D8E4381883CAC4B16CB0D915FBB4",
+      "enabled": true
+    }
+  ],
+  "gm": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "active": "Gamemaster 1",
+    "elected": true,
+    "gmServiceStudy587Present": true,
+    "crankReconciliationStatus": "not-claimed",
+    "nativePostReloadVerified": true,
+    "helperNear": true,
+    "helperFar": false,
+    "malformedShapeDenied": true,
+    "studyDoorFlag": null,
+    "studyNoteFlag": null,
+    "donovanClaimFlag": null,
+    "crankFitted": null,
+    "waterStage": null,
+    "waterTransaction": null,
+    "rosewaterDisabled": true,
+    "chatMessages": 54
+  },
+  "effects": {
+    "nativeExecuteScriptSourceWrites": 2,
+    "addedNativeBehaviors": 0,
+    "addedWorldItems": 0,
+    "playerTokenMoves": 0,
+    "rewardFlagsAdvanced": 0,
+    "gmChatMessages": 0,
+    "ordinaryPlayerGameplayTests": 0
+  },
+  "receipts": [
+    "utility-harness/artifacts/cav-chat-a-study587-original-native-scripts-readonly-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-587-native-click-original-and-safe-source-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-587-native-client-proximity-install-receipt-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-study587-client-gm-reload-verified-20261026.json"
+  ],
+  "next": [
+    "Real ordinary-player Study587→Donovan→Crank test only with owner authorization",
+    "Keep first chase and Rosewater native disabled until original story receipts",
+    "Chat B late-game branch separate"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless native chat"
+}
