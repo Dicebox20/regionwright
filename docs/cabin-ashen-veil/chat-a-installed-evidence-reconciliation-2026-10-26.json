@@ -1,0 +1,23 @@
+{
+    "ownerDirective":  "finish installation before compatibility tests",
+    "lastFullSourceSuitePass":  217,
+    "workstream":  "Chat A",
+    "independentReceipt":  "utility-harness/artifacts/cav-chat-a-installed-state-metadata-independent-gm-postread-20261026.json",
+    "baseSource":  "17ea82bda1a0da04a233f9173630cb8763b7cd2a",
+    "genuineOriginalOars":  "DONE",
+    "rosewaterOwnerGeometryReviewNeeded":  true,
+    "realPlayerAcceptance":  false,
+    "kind":  "CATALOGUE_ONLY_NATIVE_REGION_FLAGS",
+    "date":  "2026-10-26",
+    "rosewaterCommissioned":  false,
+    "nativeInstallationReceipt":  "utility-harness/artifacts/cav-chat-a-install-first-three-native-metadata-receipts-20261026.json",
+    "foundryBehaviorSourceEdits":  0,
+    "independentReadback":  "PASS",
+    "schema":  "dicebox.cav.chat-a-installed-evidence-v1",
+    "sourceTestsNotRerun":  true,
+    "regions":  [
+                    "Scene.CAVEXT01Yard0001.Region.CAV01R0000000006",
+                    "Scene.CAVHU07Scene0001.Region.CAVVANITYREG0001",
+                    "Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001"
+                ]
+}

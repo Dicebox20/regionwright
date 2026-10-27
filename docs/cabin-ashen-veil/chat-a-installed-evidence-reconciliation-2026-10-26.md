@@ -1,0 +1,30 @@
+﻿# Cabin in the Ashen Veil — Chat A native install-evidence catalogue (no gameplay write)
+
+**Date:** October 26, 2026 Pacific, ~21:57–22:05. **Owner directive:** Complete installations before the integrated compatibility diagnostic; continue detailed between-turn transcript. Chat A early/midgame only.
+
+## PREPARE / INSPECT
+- Existing Regionwright branch codex/cav-sune-integration-20261026, HEAD 17ea82bda1a0da04a233f9173630cb8763b7cd2a, no tracked modifications at start. Exact elected Gamemaster 1 active in Foundry 14.367 world cabin-in-the-ashen-veil. Foundry 30000 and CFT Dev CDP 9224 responding.
+- Read existing Chain Usability Baseline and Oct26 source/Foundry handoffs. Original early/midgame puzzle and native story reward proof scripts are already installed; outstanding native disabled gates include original Study, Basement, Attic, Sophia, Rosewater, Aqueduct and some independent Chat B late-game content. These are intentionally stage-gated, not missing installations that may be arbitrarily enabled. Owner defers real player test until after full installation.
+- Inspected original drained unified Bathhouse Rosewater Region (Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001). Native RegionBehavior CAVROSEWATERSCR1 already attached, disabled TRUE. Ring symbols rose/sun/moth/thorn owner-approved but metadata cavUnifiedBathPuzzleBinding.status STAGED_DISABLED, fixture ownerReviewRequired TRUE, geometryStatus PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE and overlap with original drained Screwdriver Region. This is an authentic owner geometry review blocker, not authorization to commission prematurely. Original Crank, water stage and committed Sluice transaction are missing and are supposed to arise from in-game play; no synthetic progress.
+- A bounded native metadata consistency inventory found 37 Regions with historical provisional/inert/pending notes. Some have since had native scripts installed; historical tags are preserved as valuable chronology, not overwritten. Specifically selected Oars, Dahlia Vanity and Roof Clock for a NEW current verified source receipt.
+
+## CATALOGUE BUILD — three separate new native Region flags, no scene or Behavior modification
+- On exact original Oars Scene.CAVEXT01Yard0001.Region.CAV01R0000000006: original Behavior CAVOARSBEHAV0001 remains enabled with exact source SHA256 fdfe8b39afa1fb4bf77416b05fefc11aae8936eef9436a1a593e96fbc17888e2. Existing original Oars claim status DONE and exact one original Actor Oars Item unchanged.
+- On exact original Dahlia Vanity Scene.CAVHU07Scene0001.Region.CAVVANITYREG0001: original Behavior CAVVANITYBEH0001 enabled, source SHA256 744a523cc0e90b01a6ea91dc7145e7e8cfce4a9ed094b292edd4f4e845d2dfbd.
+- On exact original Roof Chimney Clock Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001: original Behavior i6UNtWSFFaZgkdZD enabled, source SHA256 212584fe6c6eb0780a711b5e9ee23a34cf854c4518cd91d53175af15158a840d.
+- Each got exactly one new flag under dicebox-campaign-helper / cavVerifiedNativeInstallReceiptV1, status NATIVE_BEHAVIOR_INSTALLED_GM_VERIFIED, source identity SHA, date, source commit, original stale historical field/value and explicit INSTALLATION_ONLY_NOT_PLAYER_ACCEPTED. No existing native Behavior, Scene, Item, original historical design flag, picture, token, puzzle-state flag or Chat B fixture changed. These are catalogue evidence writes, NOT new puzzle mechanics.
+- Original historical fields including Oars inertUntilApprovedGameplayPhase=true, Vanity cavFirstActRegion.status REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED, and Roof Clock cavRoofClock.installationStage geometryVerifiedBehaviorPending deliberately left as archival origin records; new verified flag is current status. This is preferable to erasing historical chronology.
+
+## VERIFY
+- Strict preflight checked correct world, original GM, exact source SHA for all three, native enabled events and single Behavior, 47 original Scenes / 54 ChatMessages, original historic flags and zero prior new receipt. Native writes each once; same-call GM readback PASS.
+- Local machine install receipt: utility-harness/artifacts/cav-chat-a-install-first-three-native-metadata-receipts-20261026.json.
+- Independent second GM read-only process: PASS, 47 Scenes and 54 messages, all 3 new flags and sources exact, original Oars DONE with exactly one matching embedded Item, Rosewater still disabled with owner-review pending and owner-approved symbols. Local receipt utility-harness/artifacts/cav-chat-a-installed-state-metadata-independent-gm-postread-20261026.json.
+- Source regression tests deliberately NOT rerun because this batch changes only catalogue Region flags, no runtime source code or item logic; user wants full compatibility testing AFTER installation. Previous full source suite remains 217 PASS from commit 17ea82b. No real non-GM acceptance or player story progression claimed.
+
+## Installation blockers / next work
+- **Rosewater** geometry and overlap with original drained Screwdriver are specifically owner-review-required. Canon owner-approved four ring symbols are not approval of the exact fixture geometry; do not activate native RegionBehavior or change binding before the separate geometry approval and real Crank/drain proof. The original Bowl pickup fixture on the unified map is also not owner-approved.
+- **First Crooked Man chase and Aqueduct** currently owner-deferred until approved NPC/actor and legitimate door/reward/drain prerequisites; do not commission by synthesizing state.
+- **Late-game** (Greenhouse onward, later chase/books/vault/ending) belongs Chat B; do not duplicate installations or merge without explicit owner directive.
+- Next Chat A turn should target confirmed uninstalled, owner-approved early/midgame artwork/Regions/items, or collect exact geometry evidence for a later owner-approved Bowl/Rosewater placement. Revisit broad compatibility and non-GM testing only when both workstreams' installations are actually complete.
+
+STATUS: three catalogue-only native receipt flags installed and independently read back; no gameplay feature or stage advanced.
