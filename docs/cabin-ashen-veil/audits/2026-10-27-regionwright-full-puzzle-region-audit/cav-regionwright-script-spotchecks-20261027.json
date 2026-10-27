@@ -1,0 +1,324 @@
+{
+  "info": [
+    {
+      "name": "SG-05 mosaic",
+      "uuid": "Scene.CAVSG05Scene0001.Region.L15BdSqcbCOLPnIN",
+      "behavior": "Q8Hr2Dnw6hBpWNjr",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.suneRelief?.handleRegionEvent(region, event);",
+      "gameFlags": {
+        "objectKey": "cav:sg05:region:mosaic-discovery:v1",
+        "phase": "PREPARED_GEOMETRY_ONLY",
+        "requires": "grove.bustsSolved",
+        "source": "owner-approved SG-05 map measured 4320x2880",
+        "inspection": "northern behind-statue path; behavior pending",
+        "cavSuneReliefInstall": {
+          "version": 1,
+          "status": "click-behavior-configured",
+          "interaction": "explicit player pointer click; never on tokenEnter",
+          "sourceItemUuids": [
+            "Item.CAVSUNEGPBAG0001",
+            "Item.CAVSTUDYBRASS001"
+          ]
+        }
+      },
+      "regionwrightFlags": {
+        "slidingMosaic": {
+          "version": 1,
+          "config": {
+            "version": 1,
+            "image": "modules/regionwright-puzzles-locks/assets/sune-sliding-portrait-master.png",
+            "size": 3,
+            "seed": "cav.sune.sliding-relief.v001",
+            "initialOrder": [
+              4,
+              5,
+              1,
+              2,
+              0,
+              8,
+              7,
+              6,
+              3
+            ]
+          },
+          "persistent": {
+            "status": "locked",
+            "solvedAt": null,
+            "lastUpdatedAt": 1792880011382
+          }
+        }
+      }
+    },
+    {
+      "name": "Boiler full",
+      "uuid": "Scene.CAVBATHScene0001.Region.CAVBBOILERCTRL01",
+      "behavior": "CAVBOILERSCRPT01",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.boiler?.handleRegionEvent(region, event);",
+      "gameFlags": {
+        "cavUnifiedBathFixtureKey": "boiler-controls",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "PASSIVE_GM_REVIEW",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "pressure-wheel UI hook; not activated",
+        "pairedVariant": true,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "boiler-pressure",
+          "provider": "regionwright-puzzles-locks",
+          "api": "boilerCampaign",
+          "waterVariant": "filled",
+          "gmReceiptRequired": true,
+          "approvalStatus": "GM-script-reviewed-source-tests-pass",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": true,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "originalUiDemoUnchanged": true,
+          "playerAcceptanceTesting": "DEFERRED"
+        }
+      },
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Boiler drained",
+      "uuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBBOILERCTRL01",
+      "behavior": "CAVBOILERSCRPT01",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.boiler?.handleRegionEvent(region, event);",
+      "gameFlags": {
+        "cavUnifiedBathFixtureKey": "boiler-controls",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "PASSIVE_GM_REVIEW",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "pressure-wheel UI hook; not activated",
+        "pairedVariant": true,
+        "overlapsDrainedScrewdriver": false,
+        "ownerReviewRequired": true,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "boiler-pressure",
+          "provider": "regionwright-puzzles-locks",
+          "api": "boilerCampaign",
+          "waterVariant": "drained",
+          "gmReceiptRequired": true,
+          "approvalStatus": "GM-script-reviewed-source-tests-pass",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": true,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "originalUiDemoUnchanged": true,
+          "playerAcceptanceTesting": "DEFERRED"
+        }
+      },
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Rosewater",
+      "uuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+      "behavior": "CAVROSEWATERSCR1",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.rosewaterRings?.handleRegionEvent(region, event);",
+      "gameFlags": {
+        "cavUnifiedBathFixtureKey": "rosewater-ring-main-drain",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "COMMISSIONED",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "drained-only Rosewater three-ring puzzle; script intentionally not yet attached",
+        "pairedVariant": false,
+        "overlapsDrainedScrewdriver": true,
+        "ownerReviewRequired": false,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "rosewater-rings",
+          "provider": "regionwright-puzzles-locks",
+          "api": "rosewater",
+          "waterVariant": "drained-only",
+          "gmReceiptRequired": true,
+          "approvalStatus": "OWNER_APPROVED",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": false,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "overlapsExistingPickupRegionId": "CAVBATHSCRDRY001",
+          "clickExclusionImplementedInSource": true,
+          "delegatedOwnerApproval": true,
+          "commissioningMode": "gated-until-original-sluice-proof"
+        },
+        "cavRosewaterApprovedSymbols": {
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "symbols": [
+            "rose",
+            "sun",
+            "moth",
+            "thorn"
+          ],
+          "approvedDate": "2026-10-26",
+          "ownerDecision": "Yes I approve",
+          "visualReference": "Skyrim-style rotating concentric rings",
+          "scope": "Four Rosewater ring identifiers, not separate Bowl pickup or original map artwork",
+          "source": "direct campaign conversation",
+          "version": 1
+        },
+        "cavRosewaterRingGeometryApproval": {
+          "version": 1,
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+          "regionId": "CAVBROSEWATER001",
+          "sceneId": "8yLMRDvxyw58dydh",
+          "rectangle": {
+            "x": 976,
+            "y": 826,
+            "width": 108,
+            "height": 115
+          },
+          "clickPriorityMaskExisting": true,
+          "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png"
+        },
+        "cavRosewaterBowlPickupApproval": {
+          "version": 1,
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+          "sceneId": "8yLMRDvxyw58dydh",
+          "regionId": "CAVROSEBOWLREG01",
+          "regionUuid": "Scene.8yLMRDvxyw58dydh.Region.CAVROSEBOWLREG01",
+          "placementName": "North Reliquary Ceremonial Rug",
+          "geometry": {
+            "x": 977,
+            "y": 375,
+            "width": 108,
+            "height": 88
+          },
+          "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+          "approvedByDelegate": true,
+          "originalSourceItemUuid": "Item.1n5LONw3nYIy61O9"
+        }
+      },
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Greenhouse mixing",
+      "uuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867",
+      "behavior": "CAVEXT06LYEMIX01",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "source": "const NS=\"dicebox-campaign-helper\";\nif(!game?.ready||game.world?.id!==\"cabin-in-the-ashen-veil\"||\n game.version!==\"14.367\"||scene?.id!==\"CAVEXT06Scene001\"||\n region?.id!==\"CAVB6E433D528867\")return;\nconst flag=k=>region.getFlag(NS,k);\nconst state=flag(\"cavLateGreenhouseMix\")?.status??\"none\";\nif(event?.name===\"behaviorViewed\"&&!game.user?.isGM){\n  const key=\"__CAV_B17_GREENHOUSE_\"+region.id;\n  if(globalThis[key]?.handler&&canvas?.stage)canvas.stage.off(\"pointertap\",globalThis[key].handler);\n  const handler=async e=>{\n    if(!canvas?.ready||canvas.scene?.id!==\"CAVEXT06Scene001\"||game.user?.isGM)return;\n    const pt=canvas.stage.toLocal(e.global);\n    if(!region.testPoint({x:pt.x,y:pt.y,elevation:0})||globalThis[key+\"_OPEN\"])return;\n    globalThis[key+\"_OPEN\"]=true;\n    try{\n      const description=state===\"done\"?\n       \"The Greenhouse workstation has already produced its original Plant Killer flask.\":\n       \"The old Greenhouse controls connect to the restored Waterworks. The original quest Lye is the only required ingredient. The machine will not operate without genuine Waterworks and Soap Case provenance.\";\n      await foundry.applications.api.DialogV2.prompt({\n        window:{title:\"Greenhouse — mixing controls\"},content:\"<p>\"+description+\"</p>\",\n        ok:{label:\"Close\",callback:()=>true},rejectClose:false});\n    }finally{globalThis[key+\"_OPEN\"]=false;}\n  };\n  if(canvas?.stage){canvas.stage.on(\"pointertap\",handler);globalThis[key]={handler};}\n  return;\n}\nif([\"behaviorUnviewed\",\"behaviorDeactivated\"].includes(event?.name)){\n  const key=\"__CAV_B17_GREENHOUSE_\"+region.id;\n  if(globalThis[key]?.handler&&canvas?.stage)canvas.stage.off(\"pointertap\",globalThis[key].handler);\n  delete globalThis[key];return;\n}\nif(![\"tokenMoveIn\",\"tokenMoveWithin\"].includes(event?.name)||!\n (game.user?.isGM&&game.users?.activeGM?.id===game.user.id))return;\nconst datum=event.data?.token?.document??event.data?.token;\nconst token=scene.tokens.get(datum?.id??event.data?.tokenId);\nif(!token||token.hidden||!token.actor||token.actor.type!==\"character\")return;\nconst actor=token.actor;\nconst owners=game.users.contents.filter(u=>u.active&&!u.isGM&&actor.testUserPermission(u,\"OWNER\"));\nconst sender=event.userId??event.data?.userId??null;\nconst player=sender?owners.find(u=>u.id===sender):(owners.length===1?owners[0]:null);\nif(!player)return;\nconst center={x:token.x+token.width*scene.grid.size/2,y:token.y+token.height*scene.grid.size/2,elevation:0};\nif(!region.testPoint(center))return;\nif(state!==\"none\"||flag(\"cavLatePlantKillerClaim\"))return;\nconst lye=game.items.get(\"vDR4cJU35iODR6gh\"),\n      result=game.items.get(\"YNWpGEGB17mqDFWe\");\nif(!lye||lye.uuid!==\"Item.vDR4cJU35iODR6gh\"||lye.name!==\"Lye\"||\n lye.type!==\"loot\"||lye.getFlag(NS,\"cabinPuzzleItem\")?.status!==\"GM_LIBRARY_ONLY\"||\n !result||result.uuid!==\"Item.YNWpGEGB17mqDFWe\"||\n result.name!==\"Plant Killer\"||result.type!==\"loot\"||\n result.getFlag(NS,\"cabinPuzzleItem\")?.status!==\"GM_LIBRARY_ONLY\")return;\nif(game.actors.contents.some(a=>a.items.some(i=>i.name===result.name||\n i.getFlag(NS,\"cavLatePlantKillerSourceUuid\")===result.uuid)))return;\n// WATERWORKS, not Pond/Bath Sluice, is required. The actual native authority\n// remains in the original Aqueduct Waterworks Annex's OWN ledger.\nconst annex=game.scenes.get(\"CAVAQ01Scene0001\")?.regions.get(\"kmPmr5ijLCEOJNk3\");\nconst restored=annex?.getFlag(NS,\"cavWaterworksRestore\");\nif(restored?.status!==\"done\"||restored?.reverifiedFromOriginalWaterworks!==true||\n restored?.greenhouseSprinklerFlowRestored!==true||\n restored?.originalAqueductSceneId!==\"CAVAQ01Scene0001\")return;\n// Lye needs a legitimate claim from the original Bathhouse BATH-02 Soap Case,\n// rather than a generic item of the same type.\nconst lyeInstance=actor.items.find(i=>i.name===\"Lye\"&&i.type===\"loot\"&&\n i.getFlag(NS,\"cavLateLyeSourceUuid\")===\"Item.vDR4cJU35iODR6gh\"&&\n Number(i.system?.quantity??0)>0);\nif(!lyeInstance)return;\nconst originUuid=lyeInstance.getFlag(NS,\"cavLateLyeOriginRegionUuid\");\nif(typeof originUuid!==\"string\")return;\nconst root=/^Scene\\.([^.]+)\\.Region\\.([^.]+)$/.exec(originUuid);\nif(!root||![\"CAVBATHScene0001\",\"8yLMRDvxyw58dydh\"].includes(root[1]))return;\nconst soapScene=game.scenes.get(root[1]),soapRegion=soapScene?.regions.get(root[2]);\nconst soap=soapRegion?.getFlag(NS,\"cavLateSoapCase\");\nconst award=soapRegion?.getFlag(NS,\"cavLateSoapLyeClaim\");\nif(!soapScene||!soapRegion||soap?.status!==\"unlocked\"||\n soap?.canonCode!==\"BATH-02\"||award?.status!==\"done\"||\n award?.actorId!==actor.id||award?.originalLyeSourceUuid!==lye.uuid||\n award?.embeddedItemId!==lyeInstance.id)return;\nconst gate=\"__CAV_B17_MIXBUSY_\"+region.id;if(globalThis[gate])return;\nglobalThis[gate]=true;\ntry{\n const ok=await foundry.applications.api.DialogV2.confirm({\n  window:{title:\"Greenhouse — original Plant Killer\"},\n  content:\"<p>The original Waterworks has been restored, and the character carries authenticated Lye from the Bathhouse Soap Case. Produce the one original Plant Killer flask?</p><p>No other reagent is required. Lye will NOT be consumed until the owner settles that rule. Confirm only after the player's deliberate action.</p>\",\n  yes:{label:\"Approve production\"},no:{label:\"Cancel\",callback:()=>false},rejectClose:false});\n if(!ok)return;\n // Recheck state after the asynchronous dialog. Do not race with other GM events.\n if(flag(\"cavLateGreenhouseMix\")||flag(\"cavLatePlantKillerClaim\"))return;\n await region.setFlag(NS,\"cavLateGreenhouseMix\",{status:\"reserved\",actorId:actor.id,\n   originalLyeUuid:lye.uuid,originalWaterworksRegionUuid:annex.uuid,\n   originalSoapCaseRegionUuid:soapRegion.uuid});\n if(region.getFlag(NS,\"cavLateGreenhouseMix\")?.status!==\"reserved\")throw Error(\"Reservation uncertain\");\n const fresh=result.toObject();delete fresh._id;\n fresh.flags={...fresh.flags,[NS]:{...fresh.flags?.[NS],\n   cavLatePlantKillerSourceUuid:result.uuid,\n   cavLatePlantKillerOriginRegionUuid:region.uuid}};\n const made=await actor.createEmbeddedDocuments(\"Item\",[fresh]);\n const embedded=made?.[0]&&actor.items.get(made[0].id);\n if(made?.length!==1||!embedded||\n   embedded.getFlag(NS,\"cavLatePlantKillerSourceUuid\")!==result.uuid)\n     throw Error(\"Original Plant Killer grant uncertain; reserved state retained\");\n await region.setFlag(NS,\"cavLatePlantKillerClaim\",{status:\"done\",sourceUuid:result.uuid,\n   actorId:actor.id,embeddedItemId:embedded.id});\n await region.setFlag(NS,\"cavLateGreenhouseMix\",{status:\"done\",actorId:actor.id,\n   sourceUuid:result.uuid,lyeConsumed:false});\n try{await ChatMessage.create({speaker:{alias:\"Greenhouse Workstation\"},\n  whisper:[player.id],content:\"<p>You have produced the original Plant Killer flask.</p>\"})}\n catch(e){console.warn(\"[CAV B17] Greenhouse grant committed; whisper failed\",e);}\n}catch(err){console.error(\"[CAV B17] Partial Greenhouse source transaction; RECONCILE; no replay\",err)}\nfinally{globalThis[gate]=false}",
+      "gameFlags": null,
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Chimney clock",
+      "uuid": "Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001",
+      "behavior": "i6UNtWSFFaZgkdZD",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "// Roof Chimney Clock / CAV owner-approved handless artwork v001.\n// Player click-to-inspect: NO inventory mutation, reward, or world flags are written here.\nconst SCENE='LhtyO17QenuCExsb',RID='CAVROOFCLOCKR001',NS='dicebox-campaign-helper';\nconst ART='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/roof-clock-handless-owner-approved-preview-320-v001.avif';\nconst SLOT='__CAV_ROOFCLOCK_POINTER_v001',MODAL='__CAV_ROOFCLOCK_MODAL_v001';\nif(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==RID)return;\nconst ev=event?.name;\nif(ev==='behaviorUnviewed'||ev==='behaviorDeactivated'){\n const old=globalThis[SLOT];if(old?.handler&&canvas?.stage)canvas.stage.off('pointertap',old.handler);\n delete globalThis[SLOT];return;\n}\nif(ev!=='behaviorViewed'||game.user?.isGM)return;\nconst previous=globalThis[SLOT];if(previous?.handler&&canvas?.stage)canvas.stage.off('pointertap',previous.handler);\nconst handler=async e=>{\n if(!canvas?.ready||canvas.scene?.id!==SCENE||game.user?.isGM||(e.button!==undefined&&e.button!==0))return;\n const point=canvas.stage.toLocal(e.global);\n if(!region.testPoint({x:point.x,y:point.y,elevation:0}))return;\n if(globalThis[MODAL])return;\n globalThis[MODAL]=true;\n try{\n  const tokens=canvas.tokens?.controlled?.filter(t=>t.actor?.testUserPermission(game.user,'OWNER'))||[];\n  const doc=tokens.length===1?tokens[0].document:null,actor=doc?.actor||null;\n  // UI-only proof: original DONE claim and exact embedded Actor Item must agree.\n  // The elected GM still performs the authoritative global uniqueness checks.\n  const hourClaim=game.scenes.get('CAVHG06GreatRoom')?.regions.get('MrWgTyGg0d0DI53Q')?.getFlag(NS,'cavGrandfatherClockHourHandClaim');\n  const minuteClaim=game.scenes.get('nyF5EX0JiEu23C3p')?.regions.get('UtXhS68vd1czWfTG')?.getFlag(NS,'cavAtticMinuteHandClaim');\n  const hasHour=!!actor&&hourClaim?.status==='done'&&hourClaim.actorId===actor.id&&hourClaim.sourceUuid==='Item.HVZnNaV2SxNWck6H'&&\n   actor.items.some(i=>i.id===hourClaim.embeddedItemId&&i.name==='Grandfather Clock Hour Hand'&&\n    i.getFlag(NS,'cavGrandfatherClockRewardSourceUuid')==='Item.HVZnNaV2SxNWck6H'&&\n    i.getFlag(NS,'cavGrandfatherClockRewardRegionUuid')==='Scene.CAVHG06GreatRoom.Region.MrWgTyGg0d0DI53Q');\n  const hasMinute=!!actor&&minuteClaim?.status==='done'&&minuteClaim.actorId===actor.id&&minuteClaim.itemUuid==='Item.smvovibxtjJ9NW56'&&\n   actor.items.some(i=>i.id===minuteClaim.embeddedItemId&&i.name==='Attic Clock Minute Hand'&&\n    i.getFlag(NS,'cavAtticLootSourceUuid')==='Item.smvovibxtjJ9NW56'&&\n    i.getFlag(NS,'cavAtticLootRegionUuid')==='Scene.nyF5EX0JiEu23C3p.Region.UtXhS68vd1czWfTG');\n  // Match elected GM's original 400px clock-center reach restriction.\n  const rect=region.shapes?.[0],grid=scene.grid?.size;\n  const near=!!doc&&!!rect&&Number.isFinite(grid)&&\n   Math.hypot(doc.x+doc.width*grid/2-(rect.x+rect.width/2),doc.y+doc.height*grid/2-(rect.y+rect.height/2))<=400;\n  const canEngage=hasHour&&hasMinute&&near;\n  const solved=region.getFlag(NS,'cavRoofClockClaim')?.status==='done';\n  const id='cav-roof-clock-panel-v001';\n  let opts='<option value=\"\">— Hour —</option>';for(let n=1;n<=12;n++)opts+='<option value=\"'+n+'\">'+n+'</option>';\n  let mins='<option value=\"\">— Minute —</option>';for(let n=0;n<60;n+=5)mins+='<option value=\"'+n+'\">'+String(n).padStart(2,'0')+'</option>';\n  const status=solved?'The clock has already yielded its gear.':!doc?'The distant clock face seems impossible to examine from here.':!near?'From here, the worn clock face is difficult to examine.':(!hasHour||!hasMinute)?'The old clock face remains bare; the workings within are silent.':'Two worn fittings mark the center of the clock face.';\n  const content='<div id=\"'+id+'\" style=\"max-width:600px;margin:auto;text-align:center\">'+\n   '<img src=\"'+ART+'\" alt=\"Approved close-up of the rooftop clock with both hands absent\" style=\"display:block;max-width:100%;max-height:59vh;margin:auto;border:1px solid #80664b;border-radius:4px\"/>'+\n   '<p style=\"margin:0.8rem 0\">'+status+'</p>'+\n   (canEngage&&!solved?'<div style=\"display:flex;justify-content:center;gap:0.65rem\"><label>Hour hand<br/><select id=\"cav-roof-hour\">'+opts+'</select></label><label>Minute hand<br/><select id=\"cav-roof-minute\">'+mins+'</select></label></div><small>A circle of faded numerals surrounds the empty clock face.</small>':'')+\n   '</div>';\n  await foundry.applications.api.DialogV2.prompt({\n   window:{title:'The Roof Chimney Clock'},content,\n   ok:{label:canEngage&&!solved?'Engage Mechanism':'Close',callback:async()=>{\n    if(!canEngage||solved||!doc)return true;\n    const hour=document.getElementById('cav-roof-hour')?.value,minute=document.getElementById('cav-roof-minute')?.value;\n    if(!hour||minute==null||minute===''){ui.notifications?.warn('The mechanism stirs but fails to catch.');return false;}\n    const gm=game.users.activeGM;\n    if(!gm?.active){ui.notifications?.warn('The clock mechanism is unavailable without the GM.');return false;}\n    await ChatMessage.create({\n     content:'<p>You adjust the hands of the roof clock and listen for the mechanism.</p>',\n     whisper:[gm.id,game.user.id],\n     flags:{[NS]:{cavRoofClockAttempt:{version:1,action:'roof-clock-attempt',sceneId:SCENE,regionId:RID,tokenId:doc.id,hour:Number(hour),minute:Number(minute)}}}\n    });\n    return true;\n   }},rejectClose:false\n  });\n }catch(err){console.warn('[CAV roof clock] player visual failed',err);}\n finally{globalThis[MODAL]=false;}\n};\nif(canvas?.stage){canvas.stage.on('pointertap',handler);globalThis[SLOT]={handler};}",
+      "gameFlags": {
+        "cavRoofClock": {
+          "geometryVersion": "v001",
+          "approvedMap": "h-r01-roof-chimney-clock-approved-v002.png",
+          "installationStage": "geometryVerifiedBehaviorPending",
+          "clickBinding": "pending"
+        },
+        "cavVerifiedNativeInstallReceiptV1": {
+          "version": 1,
+          "status": "NATIVE_BEHAVIOR_INSTALLED_GM_VERIFIED",
+          "world": "cabin-in-the-ashen-veil",
+          "verifiedBy": "Chat A exact elected-GM readback",
+          "sourceBranch": "codex/cav-sune-integration-20261026",
+          "sourceCommit": "17ea82bda1a0da04a233f9173630cb8763b7cd2a",
+          "verifiedDate": "2026-10-26",
+          "behaviorId": "i6UNtWSFFaZgkdZD",
+          "sourceSha256": "212584fe6c6eb0780a711b5e9ee23a34cf854c4518cd91d53175af15158a840d",
+          "originalHistoricalField": "cavRoofClock.installationStage",
+          "originalHistoricalValue": "geometryVerifiedBehaviorPending",
+          "testStatus": "INSTALLATION_ONLY_NOT_PLAYER_ACCEPTED"
+        }
+      },
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Great Room chest",
+      "uuid": "Scene.CAVHG06GreatRoom.Region.ibN7AGsY4AlG582M",
+      "behavior": "CAV024CHESTBEH01",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn"
+      ],
+      "source": "// First Chest 024: player click or player-controlled token entry opens player macro.\n// Existing Scene/Region are not moved, recolored, or resized.\nconst sid = 'CAVHG06GreatRoom';\nconst rid = 'ibN7AGsY4AlG582M';\nconst macroId = 'CAVCHEST024MAC01';\nconst callbackKey = '__CAV_FIRST_CHEST_024_POINTER_V1__';\nconst isHere = scene?.id === sid && region?.id === rid && canvas.scene?.id === sid;\nif (!isHere || game.world?.id !== 'cabin-in-the-ashen-veil') return;\nconst existing = globalThis[callbackKey];\nif (['behaviorUnviewed','behaviorDeactivated'].includes(event?.name)) {\n  if (existing?.handler && canvas.stage) canvas.stage.off('pointertap', existing.handler);\n  delete globalThis[callbackKey];\n  return;\n}\nconst opened = () => game.messages.contents.some(m => m.getFlag('dicebox-campaign-helper','cavFirstChest024')?.status==='unlocked');\nconst start = async () => {\n  if (opened() || globalThis.__CAV_CHEST_024_DIALOG_BUSY__) return;\n  const macro = game.macros.get(macroId);\n  if (!macro?.canUserExecute(game.user)) {\n    ui.notifications.warn('This chest lock is unavailable to your account.');\n    return;\n  }\n  globalThis.__CAV_CHEST_024_DIALOG_BUSY__ = true;\n  try {await macro.execute()}\n  finally {globalThis.__CAV_CHEST_024_DIALOG_BUSY__ = false}\n};\nif (event?.name === 'behaviorViewed') {\n  // The viewer client owns the actual dialog. The GM is not a required operator.\n  if (existing?.handler && canvas.stage) canvas.stage.off('pointertap',existing.handler);\n  const handler = async pointer => {\n    if (!canvas.ready || canvas.scene?.id!==sid) return;\n    if (pointer.button !== undefined && pointer.button !== 0) return;\n    const point=canvas.stage.toLocal(pointer.global);\n    if (!region.testPoint({x:point.x,y:point.y,elevation:0})) return;\n    await start();\n  };\n  canvas.stage.on('pointertap',handler);\n  globalThis[callbackKey]={handler,sceneId:sid,regionId:rid};\n}\nif (event?.name === 'tokenMoveIn' && !game.user.isGM) {\n  const candidate=event.data?.token?.document ?? event.data?.token;\n  const token=scene.tokens.get(candidate?.id??event.data?.tokenId);\n  if (!token?.actor || !token.actor.testUserPermission(game.user,'OWNER')) return;\n  const initiatingId=event.user?.id??event.userId??null;\n  if (initiatingId && initiatingId!==game.user.id) return;\n  await start();\n}",
+      "gameFlags": null,
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Sophia spine",
+      "uuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+      "behavior": "LRYrBIQNN92SCJai",
+      "disabled": false,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "source": "// Sophia bookcase: owner-approved zoom; storybook titles and slot assignments NOT assumed.\nconst SCENE='CAVHU05Scene0001',RID='CAVB994894A7432F',SLOT='__CAV_SOPHIA_BOOKS_INSPECT_v001';\nconst IMG='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/sophia-bookcase-approved-crop-v001.png';\nif(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==RID)return;\nconst ev=event?.name,prior=globalThis[SLOT];\nif(ev==='behaviorUnviewed'||ev==='behaviorDeactivated'){\n if(prior?.handler&&canvas?.stage)canvas.stage.off('pointertap',prior.handler);\n delete globalThis[SLOT];return;\n}\nif(ev!=='behaviorViewed'||game.user?.isGM)return;\nif(prior?.handler&&canvas?.stage)canvas.stage.off('pointertap',prior.handler);\nconst handler=async e=>{\n if(!canvas?.ready||canvas.scene?.id!==SCENE||game.user.isGM||(e.button!==undefined&&e.button!==0))return;\n const pt=canvas.stage.toLocal(e.global);\n if(!region.testPoint({x:pt.x,y:pt.y,elevation:0}))return;\n if(globalThis[SLOT+'_MODAL'])return;globalThis[SLOT+'_MODAL']=true;\n try{await foundry.applications.api.DialogV2.prompt({\n  window:{title:'Sophia\\u2019s Bookcase'},\n  content:'<figure style=\"max-width:570px;margin:auto;text-align:center\"><img src=\"'+IMG+'\" alt=\"Close-up of the books and keepsakes on Sophia\\u2019s bookcase\" style=\"display:block;max-width:100%;max-height:67vh;margin:auto\"/><figcaption style=\"font-style:italic;margin:0.6rem\">The shelves hold stories and keepsakes arranged with care. Several familiar bindings catch your eye.</figcaption></figure>',\n  ok:{label:'Close',callback:()=>true},rejectClose:false\n });}finally{globalThis[SLOT+'_MODAL']=false;}\n};\nif(canvas?.stage){canvas.stage.on('pointertap',handler);globalThis[SLOT]={handler};}",
+      "gameFlags": null,
+      "regionwrightFlags": null
+    },
+    {
+      "name": "Aqueduct first access",
+      "uuid": "Scene.CAVAQ01Scene0001.Region.CAVAQWELLNORTH01",
+      "behavior": "CAVAQWELLACCESS1",
+      "disabled": false,
+      "events": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "source": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.aqueductRoutes?.handleForestWellNorthRegionEvent(region, event);",
+      "gameFlags": {
+        "chainNode": "aqueduct_to_forest_well",
+        "stage": "DISABLED_UNTIL_CHASE",
+        "inferredWaypointFromApprovedMap": true
+      },
+      "regionwrightFlags": null
+    }
+  ]
+}
