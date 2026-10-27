@@ -1,0 +1,3524 @@
+{
+  "m": {
+    "id": "fxmaster",
+    "active": true,
+    "version": "8.3.6",
+    "apiKeys": [
+      "presets",
+      "effects",
+      "stopSceneEffects",
+      "stopRegionEffects",
+      "startRegionEffects"
+    ],
+    "apiValueKinds": {
+      "presets": "object",
+      "effects": "object",
+      "stopSceneEffects": "function",
+      "stopRegionEffects": "function",
+      "startRegionEffects": "function"
+    },
+    "settingsKeys": [
+      "fxmaster.enable",
+      "fxmaster.enableTooltips",
+      "fxmaster.disableGridMovementHighlighting",
+      "fxmaster.tooltipDirection",
+      "fxmaster.compositeGridInFxStack",
+      "fxmaster.displayEffectsOverVision",
+      "fxmaster.applyRegionBehaviorsToOverheadLevels",
+      "fxmaster.passiveFilterConfig",
+      "fxmaster.passiveParticleConfig",
+      "fxmaster.enableLogger",
+      "fxmaster.disableAll",
+      "fxmaster.releaseMessage",
+      "fxmaster.legacyCleanupVersion",
+      "fxmaster.directionConventionMigrationVersion",
+      "fxmaster.parameterRangeMigrationVersion",
+      "fxmaster.directionConventionPassiveMigrationVersion",
+      "fxmaster.parameterRangePassiveMigrationVersion"
+    ],
+    "legacyFlagKeys": [
+      "parameterRangeMigrationVersion"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "Aqueduct — Water Channels",
+      "background": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": true,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 11,
+      "wallCount": 148,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVBATHScene0001",
+      "name": "Bathhouse — Interior A",
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "name": "Bathhouse — Interior B",
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision",
+        "cavWaterVariant",
+        "cavVariantOfSceneUuid",
+        "cavWaterVariantStaged"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 9,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT01Yard0001",
+      "name": "Grounds — Front Yard",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+      "environment": {
+        "darknessLevel": 0.15,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0.15,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0.4
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1,
+        "effects": {
+          "core_rain": {
+            "type": "rain",
+            "options": {
+              "belowTokens": false,
+              "belowTiles": false,
+              "belowForeground": false,
+              "tint": {
+                "apply": false,
+                "value": "#FFFFFF"
+              },
+              "soundFxEnabled": false,
+              "topDown": false,
+              "splash": true,
+              "splashDensity": 0.2,
+              "splashScale": 0.2,
+              "direction": 285,
+              "synchronizedDirection": false,
+              "scale": 0.5,
+              "speed": 0.2,
+              "lifetime": 0.25,
+              "density": 0.4,
+              "alpha": 1,
+              "backgroundEnabled": false,
+              "backgroundMode": "accumulate",
+              "backgroundDuration": 180,
+              "backgroundGroundMovementSpeed": 0.04,
+              "backgroundCoverage": 0.65,
+              "backgroundPatchSize": 0.85,
+              "backgroundFillVariation": 0.7,
+              "backgroundOpacity": 0.28,
+              "backgroundReflectionStrength": 0.58,
+              "backgroundShimmerStrength": 0.42,
+              "backgroundShimmerSpeed": 0.14,
+              "backgroundInteractionEnabled": false,
+              "backgroundInteractionRadius": 0.5,
+              "backgroundInteractionStrength": 0.75,
+              "backgroundInteractionLiftChance": 0.35,
+              "backgroundInteractionElevationThreshold": 5,
+              "backgroundInteractionSettleTime": 1.4,
+              "darknessActivationEnabled": false,
+              "darknessActivationRange": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          }
+        }
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "specVersion",
+        "approvedArtSha256",
+        "imageEdition",
+        "laterAcceptedArtNotYetDeployed",
+        "geometryStatus",
+        "discoveries",
+        "regionBehaviorCount",
+        "ownerPuzzleDeferral"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 15,
+      "wallCount": 7,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "Grounds — Pond",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 8,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT03Scene001",
+      "name": "Grounds — Small Shack",
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-03_Donovans_Shack_V002_OWNER_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "xx1rWBiWMLxJPlrw",
+      "name": "Grounds — Outbuilding",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT05Scene001",
+      "name": "Grounds — Gazebo",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT06Scene001",
+      "name": "Grounds — Greenhouse",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "name": "Grounds — Waterside Clearing",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVEXT08Scene001",
+      "name": "Grounds — Rear Terrace",
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-08_Rear_Deck_Family_Grounds_FINAL_OWNER_APPROVED_FENCE_FLUSH_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVTRAILScene001",
+      "name": "Grounds — Woodland Path",
+      "background": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVFM01Scene0001",
+      "name": "Woods — Winding Trails",
+      "background": "Maps/cabin-in-the-ashen-veil/fm-unified_northwestern-forest-maze_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "name": "Attic — Central Room",
+      "background": "Maps/cabin-in-the-ashen-veil/h-a01-central-attic-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 9,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "name": "Attic — West Storage",
+      "background": "Maps/cabin-in-the-ashen-veil/h-a02-west-attic-storage-approved-v001.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "name": "Attic — North Storage",
+      "background": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "name": "Attic — East Storage",
+      "background": "Maps/cabin-in-the-ashen-veil/h-a04-east-attic-storage-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "name": "Basement — Workroom",
+      "background": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 8,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "name": "Basement — Inner Room",
+      "background": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "name": "Basement — Supply Closet",
+      "background": "Maps/cabin-in-the-ashen-veil/h-b03-basement-supply-closet-approved-v001.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 1,
+      "regions": 2,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "name": "F1 — Dining Room",
+      "background": "Maps/cabin-in-the-ashen-veil/H-G01_Dining_V003_OWNER_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 2,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "name": "F1 — Entrance Hall",
+      "background": "Maps/cabin-in-the-ashen-veil/h-g02_foyer_with_basement-stairwell_owner-approved.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount"
+      ],
+      "lightCount": 2,
+      "soundCount": 1,
+      "regions": 6,
+      "wallCount": 10,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "name": "F1 — Kitchen",
+      "background": "Maps/cabin-in-the-ashen-veil/H-G03_Kitchen_V001_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "name": "F1 — Pantry",
+      "background": "Maps/cabin-in-the-ashen-veil/H-G04_Pantry_V002_OWNER_APPROVED_NORTH_DOOR_2026-10-25.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "artSha256",
+        "artSource",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 2,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "F1 — Study",
+      "background": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 6,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "name": "F1 — Great Room",
+      "background": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png",
+      "environment": {
+        "darknessLevel": 0.5,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "specVersion",
+        "approvedArtSha256",
+        "geometryStatus",
+        "discoveryCount",
+        "regionBehaviorCount",
+        "ownerPuzzleDeferral",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 1,
+      "soundCount": 1,
+      "regions": 12,
+      "wallCount": 25,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "name": "F1 — Family Room",
+      "background": "Maps/cabin-in-the-ashen-veil/H-G09_Rear_Family_Room_V002_OWNER_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "LhtyO17QenuCExsb",
+      "name": "Roof — Chimney",
+      "background": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 2,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "name": "F2 — Nursery",
+      "background": "Maps/cabin-in-the-ashen-veil/H-U01_Nursery_V001_FINAL_ART_PASS_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "name": "F2 — Upper Landing",
+      "background": "Maps/cabin-in-the-ashen-veil/h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "sceneCode",
+        "status",
+        "blueprint",
+        "notCanonArt",
+        "blueprintDoors",
+        "newMapAsset"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 14,
+      "wallCount": 6,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "name": "F2 — Guest Room",
+      "background": "Maps/cabin-in-the-ashen-veil/H-U03_Guest_Bedroom_V001_FINAL_ART_PASS_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "name": "F2 — Main Bedroom",
+      "background": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 5,
+      "wallCount": 7,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "F2 — Small Bedroom",
+      "background": "Maps/cabin-in-the-ashen-veil/H-U05_Sophias_Bedroom_V004_OWNER_APPROVED_SOUTH_DOOR_REMOVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelGate"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "F2 — Art Studio",
+      "background": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavEarlyAct"
+      ],
+      "lightCount": 2,
+      "soundCount": 1,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "F2 — Workroom",
+      "background": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": null,
+      "customFlags": [
+        "cavRoomKey",
+        "artApproval",
+        "driveId",
+        "artSha256",
+        "travelStatus"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 4,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "Grove — Northwest Path",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 7,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "name": "Grove — North Walk",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-02_northern-processional-walk_owner-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "name": "Grove — Northeast Path",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-03_northeast-grove-corner_owner-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 5,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "name": "Grove — West Entrance",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-04_western-entrance_visual-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 8,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "name": "Grove — Central Clearing",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 9,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "name": "Grove — East Walk",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-06_eastern-grove-walk_four-way_owner-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "name": "Grove — Southwest Path",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-07_southwest-grove-corner_bust_visual-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 5,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "name": "Grove — South Walk",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-08_southern-grove-walk_visual-pass.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 6,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "name": "Grove — Southeast Path",
+      "background": "Maps/cabin-in-the-ashen-veil/sg-09_southeast-grove-corner_sun-bust_owner-accepted.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "cavStructuralSceneKey",
+        "phase",
+        "ownerPlacesWalls",
+        "geometryStatus",
+        "manifestId",
+        "approvedArtSha256",
+        "alternateBackground",
+        "regionBehaviorCount",
+        "cavRevealOriginalTokenVision"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 5,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "name": "Underground — Entry Passage",
+      "background": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 5,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "name": "Underground — Old Rooms",
+      "background": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 3,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    },
+    {
+      "id": "hLU4DzVctEGdsuaz",
+      "name": "Underground — Deep Chamber",
+      "background": "Maps/cabin-in-the-ashen-veil/und-03-voss-ritual-chamber-approved-v003.png",
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "tokenVision": false,
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "weather": "fog",
+      "playlist": null,
+      "playlistSound": null,
+      "ambience": null,
+      "backgroundColor": "#999999",
+      "existingFX": {
+        "parameterRangeMigrationVersion": 1
+      },
+      "customFlags": [
+        "stableId",
+        "localOperations"
+      ],
+      "lightCount": 0,
+      "soundCount": 0,
+      "regions": 2,
+      "wallCount": 0,
+      "journal": null,
+      "journalPage": null,
+      "description": "",
+      "journalText": [],
+      "notes": []
+    }
+  ],
+  "world": "cabin-in-the-ashen-veil",
+  "activeScene": "CAVEXT01Yard0001",
+  "gm": "Gamemaster 1",
+  "activeUsers": [
+    {
+      "isGM": true,
+      "name": "Gamemaster 1",
+      "viewedScene": "CAVEXT01Yard0001"
+    },
+    {
+      "isGM": false,
+      "name": "Dyscid",
+      "viewedScene": "CAVEXT01Yard0001"
+    }
+  ],
+  "playlists": [
+    {
+      "name": "CAV - Halloween Atmosphere (Players)",
+      "id": "CAVHALLOWEENPL01",
+      "sounds": [
+        {
+          "name": "Haunted Cabin - Dark Tidings",
+          "id": "n6J7JGLXVNaYtif7",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3"
+        },
+        {
+          "name": "Haunted Cabin - Distant Rain",
+          "id": "08mX6GasuVzHQiLf",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3"
+        }
+      ]
+    },
+    {
+      "name": "Playlist",
+      "id": "wCAdbnhg4uZ41GPU",
+      "sounds": [
+        {
+          "name": "CITCV - Carriage Yard",
+          "id": "MlKqz1zYYaDeLy7Y",
+          "path": "Music/Elwynn%20Forest-Music.mp3"
+        }
+      ]
+    }
+  ],
+  "configWeatherNames": [
+    "leaves",
+    "rain",
+    "rainStorm",
+    "fog",
+    "snow",
+    "blizzard",
+    "fxmaster.bats",
+    "fxmaster.birds",
+    "fxmaster.crows",
+    "fxmaster.eagles",
+    "fxmaster.rats",
+    "fxmaster.spiders",
+    "fxmaster.bubbles",
+    "fxmaster.embers",
+    "fxmaster.stars",
+    "fxmaster.autumnleaves",
+    "fxmaster.clouds",
+    "fxmaster.fog",
+    "fxmaster.rain",
+    "fxmaster.hail",
+    "fxmaster.snow",
+    "fxmaster.snowstorm"
+  ],
+  "system": "dnd5e"
+}

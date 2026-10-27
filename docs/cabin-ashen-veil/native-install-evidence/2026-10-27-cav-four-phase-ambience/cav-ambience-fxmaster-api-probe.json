@@ -1,0 +1,17 @@
+{
+  "scene": "CAVSG06Scene0001",
+  "success": true,
+  "created": {
+    "particles": [
+      "apiMacro_cavAmbienceProbe_p"
+    ],
+    "filters": []
+  },
+  "fxFlagsDuring": [
+    "parameterRangeMigrationVersion",
+    "effects",
+    "_apiEffectsUpdateOptions"
+  ],
+  "nonGMViewers": 0,
+  "beforePreserved": true
+}

@@ -1,0 +1,24 @@
+{
+  "macroId": "CAVAMBIENCEMACR1",
+  "macroFlag": {
+    "version": 1,
+    "phase": "original",
+    "pending": null,
+    "sourceCount": 47,
+    "profiles": [
+      "early",
+      "mid",
+      "late",
+      "crimson"
+    ],
+    "lastVerifiedCount": 0,
+    "fxSceneCount": 0,
+    "sourceSHA256": "fbb298bad1053484545048e98a9c73162b7e707862cfc34507c0bc09dc3f65be",
+    "initialSnapshotsSavedExternally": true,
+    "ownerAuthorised": true
+  },
+  "currentScene": "CAVEXT01Yard0001",
+  "userScenes": [
+    "CAVEXT03Scene001"
+  ]
+}

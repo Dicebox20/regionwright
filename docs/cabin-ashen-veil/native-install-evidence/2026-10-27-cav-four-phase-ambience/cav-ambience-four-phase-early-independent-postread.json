@@ -1,0 +1,639 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "sceneCount": 47,
+  "sceneVerified": 47,
+  "mismatches": [],
+  "earlyPhaseOnly": true,
+  "selectedFXScenes": 15,
+  "originalEffectsPreserved": true,
+  "nativeSoundsPreserved": true,
+  "nativeLightsPreserved": true,
+  "regionsPreserved": true,
+  "original47SceneNamesPreserved": true,
+  "macro": {
+    "id": "CAVAMBIENCEMACR1",
+    "name": "CAV — Ambience Phases (GM)",
+    "type": "script",
+    "scope": "global",
+    "gmOnly": true,
+    "flag": {
+      "version": 1,
+      "phase": "early",
+      "pending": null,
+      "sourceCount": 47,
+      "profiles": [
+        "early",
+        "mid",
+        "late",
+        "crimson"
+      ],
+      "lastVerifiedCount": 47,
+      "fxSceneCount": 15,
+      "sourceSHA256": "fbb298bad1053484545048e98a9c73162b7e707862cfc34507c0bc09dc3f65be",
+      "initialSnapshotsSavedExternally": true,
+      "ownerAuthorised": true
+    },
+    "codeChars": 75506
+  },
+  "players": [
+    "CAVTRAILScene001"
+  ],
+  "allScenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "Aqueduct — Water Channels",
+      "pass": true,
+      "darkness": 0.33,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "name": "Attic — Central Room",
+      "pass": true,
+      "darkness": 0.3,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "name": "Attic — East Storage",
+      "pass": true,
+      "darkness": 0.3,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "name": "Attic — North Storage",
+      "pass": true,
+      "darkness": 0.3,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "name": "Attic — West Storage",
+      "pass": true,
+      "darkness": 0.3,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "name": "Basement — Inner Room",
+      "pass": true,
+      "darkness": 0.43,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "name": "Basement — Supply Closet",
+      "pass": true,
+      "darkness": 0.35,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "name": "Basement — Workroom",
+      "pass": true,
+      "darkness": 0.37,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVBATHScene0001",
+      "name": "Bathhouse — Interior A",
+      "pass": true,
+      "darkness": 0.23,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "name": "Bathhouse — Interior B",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "name": "F1 — Dining Room",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "name": "F1 — Entrance Hall",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "name": "F1 — Family Room",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "name": "F1 — Great Room",
+      "pass": true,
+      "darkness": 0.5,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "name": "F1 — Kitchen",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "name": "F1 — Pantry",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "F1 — Study",
+      "pass": true,
+      "darkness": 0.23,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "F2 — Art Studio",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "name": "F2 — Guest Room",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "name": "F2 — Main Bedroom",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "name": "F2 — Nursery",
+      "pass": true,
+      "darkness": 0.21,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "F2 — Small Bedroom",
+      "pass": true,
+      "darkness": 0.22,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "name": "F2 — Upper Landing",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "F2 — Workroom",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT01Yard0001",
+      "name": "Grounds — Front Yard",
+      "pass": true,
+      "darkness": 0.15,
+      "weather": "fog",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT05Scene001",
+      "name": "Grounds — Gazebo",
+      "pass": true,
+      "darkness": 0.25,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT06Scene001",
+      "name": "Grounds — Greenhouse",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "xx1rWBiWMLxJPlrw",
+      "name": "Grounds — Outbuilding",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "Grounds — Pond",
+      "pass": true,
+      "darkness": 0.19,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT08Scene001",
+      "name": "Grounds — Rear Terrace",
+      "pass": true,
+      "darkness": 0.23,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT03Scene001",
+      "name": "Grounds — Small Shack",
+      "pass": true,
+      "darkness": 0.24,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "name": "Grounds — Waterside Clearing",
+      "pass": true,
+      "darkness": 0.23,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVTRAILScene001",
+      "name": "Grounds — Woodland Path",
+      "pass": true,
+      "darkness": 0.23,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "name": "Grove — Central Clearing",
+      "pass": true,
+      "darkness": 0.28,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "name": "Grove — East Walk",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "name": "Grove — North Walk",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "name": "Grove — Northeast Path",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "Grove — Northwest Path",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "name": "Grove — South Walk",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "name": "Grove — Southeast Path",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "name": "Grove — Southwest Path",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "name": "Grove — West Entrance",
+      "pass": true,
+      "darkness": 0.29,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "LhtyO17QenuCExsb",
+      "name": "Roof — Chimney",
+      "pass": true,
+      "darkness": 0.28,
+      "weather": "fog",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "hLU4DzVctEGdsuaz",
+      "name": "Underground — Deep Chamber",
+      "pass": true,
+      "darkness": 0.45,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "name": "Underground — Entry Passage",
+      "pass": true,
+      "darkness": 0.41,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "name": "Underground — Old Rooms",
+      "pass": true,
+      "darkness": 0.41,
+      "weather": "",
+      "fx": [],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    },
+    {
+      "id": "CAVFM01Scene0001",
+      "name": "Woods — Winding Trails",
+      "pass": true,
+      "darkness": 0.25,
+      "weather": "",
+      "fx": [
+        "apiMacro_cavAmbience1_p"
+      ],
+      "originalFXPreserved": true,
+      "geometryPreserved": true,
+      "soundPreserved": true,
+      "lightsPreserved": true
+    }
+  ]
+}
