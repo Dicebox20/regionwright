@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "checked": [
+    {
+      "title": "Prayer of Protection",
+      "pass": true,
+      "itemUuid": "Item.5jwy75XyFezukf3b",
+      "itemJournalFlag": "JournalEntry.CAVPRAYERPROTECT",
+      "journalUuid": "JournalEntry.CAVPRAYERPROTECT",
+      "pageUuid": "JournalEntry.CAVPRAYERPROTECT.JournalEntryPage.rcFIk4a2MGb4wUeD",
+      "pageSHA256": "3846ba592db63090b03281b557327e7907dd91fb9a5d0be1c3b7473691508caa",
+      "expectedPageSHA256": "3846ba592db63090b03281b557327e7907dd91fb9a5d0be1c3b7473691508caa",
+      "itemDescriptionSHA256": "0126f4ecfc7c9a48e0092ea7a514f3fb1e6bb403d8023c043559a7cd352178bb",
+      "visibleToNonGMs": false,
+      "sourceLibraryStatus": "GM_LIBRARY_ONLY",
+      "journalPages": 1
+    },
+    {
+      "title": "Prayer of Devotion",
+      "pass": true,
+      "itemUuid": "Item.GXLYq6Tf4OgPNbkU",
+      "itemJournalFlag": "JournalEntry.CAVPRAYERDEVOTN1",
+      "journalUuid": "JournalEntry.CAVPRAYERDEVOTN1",
+      "pageUuid": "JournalEntry.CAVPRAYERDEVOTN1.JournalEntryPage.qI6j50T4NxuwjCHk",
+      "pageSHA256": "c2791c061a43bc9498704dde4b66435f88d7e3c24ef4e1ae48ac118a2e5ae4bc",
+      "expectedPageSHA256": "c2791c061a43bc9498704dde4b66435f88d7e3c24ef4e1ae48ac118a2e5ae4bc",
+      "itemDescriptionSHA256": "82e59f7d8f4ddeee9542876aab4fca6aac03d6e0beffa9db2129537d9f807e04",
+      "visibleToNonGMs": false,
+      "sourceLibraryStatus": "GM_LIBRARY_ONLY",
+      "journalPages": 1
+    }
+  ],
+  "collisionCounts": [
+    {
+      "name": "Prayer of Protection",
+      "itemMatches": 1,
+      "journalMatches": 1
+    },
+    {
+      "name": "Prayer of Devotion",
+      "itemMatches": 1,
+      "journalMatches": 1
+    }
+  ],
+  "actorPrayerCopies": 0,
+  "originalStudioVanityPreserved": true,
+  "originalWorkshopWickPreserved": true,
+  "originalPrivyDormantPreserved": true
+}

@@ -1,0 +1,38 @@
+{
+  "status": "prayer-two-native-items-and-journals-preflight-pass-no-writes",
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "worldJournalCount": 3,
+  "originalItemSources": [
+    {
+      "title": "Prayer of Protection",
+      "itemUuid": "Item.5jwy75XyFezukf3b",
+      "itemId": "5jwy75XyFezukf3b",
+      "originalDescription": "<p>A family prayer found inside the Ornate Music Box. Its complete owner-approved text and separate readable Journal must be verified before player handout. Reading it at Dahlia’s Art Studio Sune altar reveals the concealed Candle Workshop passage.</p>",
+      "ownerSourceStatus": "GM_LIBRARY_ONLY",
+      "journalId": "CAVPRAYERPROTECT",
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "itemImg": "icons/sundries/documents/document-sealed-brown-red.webp",
+      "fullPrayerCharacters": 563,
+      "sceneOwnershipPresent": true
+    },
+    {
+      "title": "Prayer of Devotion",
+      "itemUuid": "Item.GXLYq6Tf4OgPNbkU",
+      "itemId": "GXLYq6Tf4OgPNbkU",
+      "originalDescription": "<p>A careful transcription of an old prayer discovered inscribed into masonry. The words honor devotion, constancy, and love, with the unmistakable warmth of a hymn to Sune.</p><p>Age has weathered the stone from which it was copied, but not the intention behind the invocation. It is meant to be spoken, not merely collected.</p>",
+      "ownerSourceStatus": "GM_LIBRARY_ONLY",
+      "journalId": "CAVPRAYERDEVOTN1",
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "itemImg": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Prayer_of_Devotion.png",
+      "fullPrayerCharacters": 561,
+      "sceneOwnershipPresent": true
+    }
+  ]
+}

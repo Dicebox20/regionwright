@@ -1,0 +1,27 @@
+{
+  "status": "two-full-owner-authorized-prayer-journals-installed-gm-only",
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "created": [
+    {
+      "title": "Prayer of Protection",
+      "originalItemUuid": "Item.5jwy75XyFezukf3b",
+      "journalUuid": "JournalEntry.CAVPRAYERPROTECT",
+      "readablePageUuid": "JournalEntry.CAVPRAYERPROTECT.JournalEntryPage.rcFIk4a2MGb4wUeD",
+      "journalDefaultOwnership": 0,
+      "descriptionCharacters": 848,
+      "originalLibraryStatus": "GM_LIBRARY_ONLY",
+      "sourceProvenance": "OWNER_AUTHORIZED_NEW_TEXT_2026-10-26"
+    },
+    {
+      "title": "Prayer of Devotion",
+      "originalItemUuid": "Item.GXLYq6Tf4OgPNbkU",
+      "journalUuid": "JournalEntry.CAVPRAYERDEVOTN1",
+      "readablePageUuid": "JournalEntry.CAVPRAYERDEVOTN1.JournalEntryPage.qI6j50T4NxuwjCHk",
+      "journalDefaultOwnership": 0,
+      "descriptionCharacters": 922,
+      "originalLibraryStatus": "GM_LIBRARY_ONLY",
+      "sourceProvenance": "OWNER_AUTHORIZED_NEW_TEXT_2026-10-26"
+    }
+  ]
+}
