@@ -1,6 +1,5 @@
 import {newFirstChaseState,advanceFirstChase,firstChaseCaptureDecision,finalizeFirstChaseCapture} from "./studio-cav-first-chase-state.js";
 import {markSophiaCapturedAfterTransfer} from "./studio-cav-sophia-confinement.js";
-import {unlockForestWellAfterChaseGM} from "./studio-cav-aqueduct-routing.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const AQ="CAVAQ01Scene0001",START="woZ98KXx0RsWIPpl",POND="CAVEXT02Scene001",GATE="CAVPONDAQGATE001",PORT="CAVPONDAQPORT001";
 const WATER_REGION="CAVEXT02SLUICE01",WATER="cavPondBathWaterState",MECHANIC="cavAqueductGateMechanicalReady";
@@ -41,12 +40,9 @@ export async function recordCabinFirstChaseGMResult({actorId,tactic,total,expect
  await region.setFlag(NS,ROUND,{status:"reserved",round:expectedRound,actorId,tactic,total});
  await region.setFlag(NS,LEDGER,decision.next);
  await region.setFlag(NS,ROUND,{status:"done",round:expectedRound,actorId,tactic,total,passed:decision.passed});
- // Escape success releases the north Forest Well route; the FM return works even after Pond refill.
- // The chase result remains committed even if a portal update needs separate reconciliation.
- let well=null;
- if(decision.next.status==="escaped_pending_well_exit")well=await unlockForestWellAfterChaseGM();
+ // Optional GM-run haunt cannot unlock a puzzle-chain well route.
  return{status:"recorded",passed:decision.passed,state:decision.next,
-  well:well?.status??null,captureRequiresGM:decision.next.status==="capture_pending"};
+  well:"independent-physical-north-arrival",captureRequiresGM:decision.next.status==="capture_pending"};
 }
 export async function confirmCabinFirstChaseCaptureAfterGMTransfer({actorId}={}){
  if(!isGM())return{status:"not-elected-gm"};
@@ -70,8 +66,7 @@ export async function confirmCabinFirstChaseCaptureAfterGMTransfer({actorId}={})
  await region.setFlag(NS,LEDGER,decision.next);
  const saved=await markSophiaCapturedAfterTransfer({actorId});
  if(saved.status!=="captured")return{status:"capture-reconciliation-required",actorId,details:saved.status};
- const well=await unlockForestWellAfterChaseGM();
- return{status:"captured",actorId,captureCount:1,well:well.status};
+ return{status:"captured",actorId,captureCount:1,well:"independent-physical-north-arrival"};
 }
 export function describeCabinFirstChase(){
  if(!isGM())return{status:"not-elected-gm"};

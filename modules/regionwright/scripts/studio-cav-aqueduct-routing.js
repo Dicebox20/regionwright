@@ -17,20 +17,17 @@ export const aqueductPortalsForWater=(commissioned,waterStatus)=>({
  entryEnabled:commissioned&&waterStatus==="open",returnEnabled:commissioned&&waterStatus==="open",
  wellReentryUnaffected:true
 });
-export function canCommissionAqueduct({water,gear,handle,mechanical,existingTransaction,actorReady=false,allTransitDisabled=false,aqEmpty=false}={}){
+export function canCommissionAqueduct({water,gear,handle,mechanical,existingTransaction,allTransitDisabled=false,aqEmpty=false}={}){
  if(existingTransaction)return "reconcile";
  if(water?.status!=="open"||water?.pond!=="drained"||water?.bath!=="drained")return "water-not-drained";
  if(gear?.status!=="done"||handle?.status!=="done"||mechanical?.status!=="ready"||mechanical.traversalEnabled===true)return "parts-incomplete";
- if(!actorReady)return "crooked-man-actor-needed";
  if(!allTransitDisabled||!aqEmpty)return "route-unsafe";
  return "ready";
 }
-export function canUnlockForestWell({chase,route,alreadyUnlocked=false}={}){
+export function canUnlockForestWell({route,alreadyUnlocked=false,northReached=false}={}){
  if(alreadyUnlocked)return "already";
- if(route?.status!=="done")return "route-not-commissioned";
- if(!["escaped_pending_well_exit","captured","capture_resolved"].includes(chase?.status))return "chase-not-resolved";
- if(chase.status==="escaped_pending_well_exit"&&chase.successes!==3)return "chase-not-resolved";
- if(chase.status==="captured"&&chase.captureCount!==1)return "chase-not-resolved";
+ if(route?.status!=="done"||route?.version!==1||route?.source!=="original-aqueduct-gear-handle-sluice")return "route-not-commissioned";
+ if(!northReached)return "north-aqueduct-not-reached";
  return "ready";
 }
 function objects(){
@@ -51,12 +48,6 @@ const isDone=(flag)=>flag?.status==="done";
 const transitDisabled=(x)=>x.entry?.disabled===true&&x.returnPortal?.disabled===true;
 const noPartial=(flag)=>!flag||flag.status==="done";
 const transactionDone=(x)=>x.gate.getFlag(NS,ROUTE)?.status==="done";
-function crookedActor(actorId){
- const a=game.actors.get(actorId);
- const art=a?.prototypeToken?.texture?.src||a?.img||"";
- return !!a&&a.type==="npc"&&/crooked man/i.test(a.name)&&art.length>4&&
- !/mystery-man|mystery|svg|icons\/svg\/mystery/i.test(art);
-}
 async function alter(region,behaviorId,disabled){
  const b=region?.behaviors.get(behaviorId);
  if(!b||b.disabled===disabled)return;
@@ -74,7 +65,7 @@ export function checkAqueductRouteForWater(currentStatus){
   return{status:"ready",commissioned:false};
  }
  if(route?.status!=="done"||!isDone(x.gate.getFlag(NS,GEAR))||!isDone(x.gate.getFlag(NS,HANDLE))||
-    x.trigger?.disabled!==false)return{status:"reconcile"};
+    x.trigger?.disabled!==true)return{status:"reconcile"};
  const expected=aqueductPortalsForWater(true,currentStatus);
  if((x.entry.disabled===!expected.entryEnabled)&&(x.returnPortal.disabled===!expected.returnEnabled))
   return{status:"ready",commissioned:true};
@@ -110,7 +101,7 @@ export async function confirmAqueductPortalsWaterStage(newStatus){
  await x.gate.setFlag(NS,ROUTE,{...record,waterStage:newStatus});
  return{status:"ready",waterStage:newStatus};
 }
-export async function commissionAqueductForGameplay({crookedManActorId,gmConfirmed=false}={}){
+export async function commissionAqueductForGameplay({gmConfirmed=false}={}){
  if(!gm())return{status:"not-elected-gm"};
  if(gmConfirmed!==true)return{status:"explicit-gm-confirmation-required"};
  const x=objects();if(!topology(x))return{status:"invalid-topology"};
@@ -119,7 +110,7 @@ export async function commissionAqueductForGameplay({crookedManActorId,gmConfirm
     x.pond.background.src!=="Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png")return{status:"water-not-drained"};
  const result=canCommissionAqueduct({water:x.sluice.getFlag(NS,"cavPondBathWaterState"),
   gear:x.gate.getFlag(NS,GEAR),handle:x.gate.getFlag(NS,HANDLE),mechanical:x.gate.getFlag(NS,MECHANICAL),
-  existingTransaction:x.gate.getFlag(NS,ROUTE),actorReady:crookedActor(crookedManActorId),
+  existingTransaction:x.gate.getFlag(NS,ROUTE),
   allTransitDisabled:transitDisabled(x)&&x.exit.disabled&&x.reentry.disabled&&x.trigger.disabled,
   aqEmpty:x.aq.tokens.size===0});
   if(result!=="ready")return{status:result};
@@ -145,33 +136,66 @@ export async function commissionAqueductForGameplay({crookedManActorId,gmConfirm
    dryBathLandingExists:!!game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("R2Pg9eHODtb1C1Yk")
   });
   if(!routeProof.ready)return{status:routeProof.reason};
- const reserve={version:1,status:"reserved",crookedManActorId,initiatedBy:game.user.id,priorWater:"open"};
+ const reserve={version:1,status:"reserved",source:"original-aqueduct-gear-handle-sluice",initiatedBy:game.user.id,priorWater:"open"};
  await x.gate.setFlag(NS,ROUTE,reserve);
- // Only the elected GM may commission this after the physical Crooked Man Actor exists.
- // Enable fallback first; let the first-chase trigger arm before opening Pond entry.
+ // Puzzle-only commissioning: GM roleplays any haunt independently at a later checkpoint.
+ if(x.trigger.disabled!==true)throw Error("Haunt trigger must remain disabled");
  await alter(x.returnRegion,RETURN,false);
- await alter(x.south,CHASE_TRIGGER,false);
  await x.gate.setFlag(NS,MECHANICAL,{...x.gate.getFlag(NS,MECHANICAL),traversalEnabled:true});
  await alter(x.gate,ENTRANCE,false);
  await x.gate.setFlag(NS,ROUTE,{...reserve,status:"done",waterStage:"open"});
- return{status:"commissioned",actorId:crookedManActorId,entryAndReturnEnabled:true,chaseTriggerEnabled:true};
+ return{status:"commissioned",entryAndReturnEnabled:true,chaseTriggerEnabled:false};
 }
-export async function unlockForestWellAfterChaseGM(){
+const tokenCenter=(token,scene)=>({
+ x:token.x+token.width*scene.grid.size/2,
+ y:token.y+token.height*scene.grid.size/2,elevation:0
+});
+export async function unlockForestWellFromNorthGM({tokenId,userId}={}){
  if(!gm())return{status:"not-elected-gm"};
  const x=objects();if(!topology(x))return{status:"invalid-topology"};
+ if(x.trigger.disabled!==true)return{status:"haunt-trigger-must-remain-disabled"};
  const old=x.north.getFlag(NS,WELL);
  if(old?.status==="reserved")return{status:"reconcile"};
- if(old?.status==="done"&&x.exit.disabled===false&&x.reentry.disabled===false)return{status:"already"};
- const result=canUnlockForestWell({chase:x.south.getFlag(NS,CHASE_STATE),
-  route:x.gate.getFlag(NS,ROUTE),alreadyUnlocked:old?.status==="done"});
- if(result!=="ready")return{status:result};
- if(!x.exit.disabled||!x.reentry.disabled)return{status:"reconcile"};
- await x.north.setFlag(NS,WELL,{version:1,status:"reserved",unlockedBy:game.user.id});
- await alter(x.north,WELL_EXIT,false);
+ if(old?.status==="done")return !x.exit.disabled&&!x.reentry.disabled?{status:"already"}:{status:"reconcile"};
+ if(old)return{status:"reconcile"};
+ const user=game.users.get(userId),token=x.aq.tokens.get(tokenId),actor=token?.actor;
+ const present=!!user?.active&&!user.isGM&&!!token&&!token.hidden&&
+  actor?.type==="character"&&actor.testUserPermission(user,"OWNER")&&
+  x.north.testPoint(tokenCenter(token,x.aq));
+ const route=x.gate.getFlag(NS,ROUTE);
+ const decision=canUnlockForestWell({route,northReached:present});
+ if(decision!=="ready")return{status:decision};
+ if(x.gate.getFlag(NS,MECHANICAL)?.traversalEnabled!==true||
+  x.entry.disabled||x.returnPortal.disabled||!x.exit.disabled||!x.reentry.disabled)
+  return{status:"route-unsafe"};
+ const reserved={version:1,status:"reserved",source:"north-aqueduct-physical-arrival",
+  actorId:actor.id,tokenId:token.id,playerId:user.id,routeVersion:route.version};
+ await x.north.setFlag(NS,WELL,reserved);
+ // Open return first, then the outbound Forest Well route; preserve both after water refill.
  await alter(x.mouth,WELL_REENTRY,false);
- await x.north.setFlag(NS,WELL,{version:1,status:"done",unlockedBy:game.user.id,independentOfSluice:true});
+ await alter(x.north,WELL_EXIT,false);
+ const done={...reserved,status:"done",independentOfSluice:true};
+ await x.north.setFlag(NS,WELL,done);
+ if(x.north.getFlag(NS,WELL)?.status!=="done"||x.exit.disabled||x.reentry.disabled)
+  throw Error("Forest Well DONE receipt or native portals uncertain");
  return{status:"unlocked",forestWellReentryPersistsAfterRefill:true};
 }
+export async function handleForestWellNorthRegionEvent(region,event){
+ if(!gm()||region?.parent?.id!==AQ||region?.id!==WELL_NORTH||
+  !["tokenMoveIn","tokenMoveWithin"].includes(event?.name))return;
+ const token=event?.data?.token?.document??event?.data?.token;
+ const tokenId=token?.id??event?.data?.tokenId;
+ const userId=event?.userId??event?.data?.userId;
+ if(!tokenId||!userId)return;
+ const result=await unlockForestWellFromNorthGM({tokenId,userId});
+ if(result.status==="unlocked"){
+  try{await ChatMessage.create({speaker:{alias:"Forest Well"},whisper:[userId],
+   content:"<p>The northern well shaft opens a passage into the forest, with a way back to the Aqueduct.</p>"})}
+  catch(e){console.warn("[CAV Forest Well] message delivery unavailable",e)}
+ }
+ return result;
+}
+
 export function describeAqueductRouting(){
  if(!gm())return{status:"not-elected-gm"};
  const x=objects();
@@ -181,5 +205,5 @@ export function describeAqueductRouting(){
   chase:x.south?.getFlag(NS,CHASE_STATE)?.status||null,well:x.north?.getFlag(NS,WELL)||null,
   portDisabled:{pondEntry:x.entry?.disabled,aqPondReturn:x.returnPortal?.disabled,
    aqWellExit:x.exit?.disabled,fmWellReentry:x.reentry?.disabled,firstChase:x.trigger?.disabled},
-  defaultTestPolicy:"Do not commission before Crooked Man NPC Actor art and GM confirmation exist"};
+  defaultTestPolicy:"Original Gear and Handle plus authentic drained Pond/Bath commission the route; owner-GM haunts stay optional"};
 }

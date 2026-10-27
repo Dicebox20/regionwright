@@ -1,4 +1,5 @@
 import {assessCavAqueductPartProof} from "./studio-cav-aqueduct-part-proof.js";
+import {commissionAqueductForGameplay} from "./studio-cav-aqueduct-routing.js";
 import {assessCavDrainedPickupWaterReady} from "./studio-cav-drained-pickups.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",REG="CAVPONDAQGATE001",PORT="CAVPONDAQPORT001",AQ="CAVAQ01Scene0001";
@@ -70,6 +71,10 @@ async function installPart(req,uid){
  if(r.getFlag(NS,GEAR_FLAG)?.status==="done"&&r.getFlag(NS,HANDLE_FLAG)?.status==="done"){
   // Mechanical progression only. Traversal requires a separately audited Aqueduct return route.
   await r.setFlag(NS,READY,{status:"ready",version:1,portal:PORT,traversalEnabled:false});
+  // The original physical Gear+Handle puzzle commissions ordinary travel, not a haunt.
+  const route=await commissionAqueductForGameplay({gmConfirmed:true});
+  if(route.status!=="commissioned")
+   console.warn("[CAV Aqueduct] genuine puzzle complete; route requires GM reconciliation",route.status);
  }
  return "installed";
 }
