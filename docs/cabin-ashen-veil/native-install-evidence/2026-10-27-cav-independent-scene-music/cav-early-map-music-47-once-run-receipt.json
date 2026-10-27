@@ -1,0 +1,18 @@
+{
+  "started": true,
+  "macroReturn": null,
+  "macroFlag": {
+    "version": 1,
+    "status": "original",
+    "pending": null,
+    "sceneCount": 47,
+    "adoptedYard": 1,
+    "newSources": 46,
+    "requestedGroveCount": 8,
+    "phase": "early",
+    "macroSourceSHA256": "3e3daee0c2b092840da7dceadcbcc736a49803780eb1445805bdcbc5e8779de1",
+    "lastVerified": 0,
+    "nonGMTested": false
+  },
+  "soundCount": 11
+}

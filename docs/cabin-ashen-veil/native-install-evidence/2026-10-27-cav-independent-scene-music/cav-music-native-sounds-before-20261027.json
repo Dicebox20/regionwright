@@ -1,0 +1,2039 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "scenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "Aqueduct — Water Channels",
+      "width": 5760,
+      "height": 4320,
+      "dimensions": {
+        "width": 5760,
+        "height": 4320,
+        "sceneWidth": 5760,
+        "sceneHeight": 4320,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.33,
+        "tone": "Underground flowing water and copper conduits",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png"
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "name": "Attic — Central Room",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Attic Atmosphere",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.12,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "NXJ3eAZaNl9DluwD",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.3,
+        "tone": "Dry rafters and settled dust",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-a01-central-attic-approved-v002.png"
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "name": "Attic — East Storage",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Attic Atmosphere",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.12,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "y8h1RVNDeErcueX0",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.3,
+        "tone": "Dry rafters and settled dust",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-a04-east-attic-storage-approved-v002.png"
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "name": "Attic — North Storage",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Attic Atmosphere",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.12,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "6lTIWeudNH3glsqH",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.3,
+        "tone": "Dry rafters and settled dust",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png"
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "name": "Attic — West Storage",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Attic Atmosphere",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.12,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "9ovSKzoGkDzzaxQc",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.3,
+        "tone": "Dry rafters and settled dust",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-a02-west-attic-storage-approved-v001.png"
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "name": "Basement — Inner Room",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Basement Atmosphere",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.16,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "4N604tU83zOiCaFr",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.43,
+        "tone": "Thick, sealed masonry and still air",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png"
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "name": "Basement — Supply Closet",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Basement Atmosphere",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.16,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "Q59dBQGz6Vawaj7u",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.35,
+        "tone": "Cold stone, dormant machinery",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-b03-basement-supply-closet-approved-v001.png"
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "name": "Basement — Workroom",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Basement Atmosphere",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.16,
+          "levels": [
+            "dchHarnessLevel1"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "Urjpn5RW7uwyxPDn",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.37,
+        "tone": "Tarnished mechanical fittings and cold stone",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png"
+    },
+    {
+      "id": "CAVBATHScene0001",
+      "name": "Bathhouse — Interior A",
+      "width": 2160,
+      "height": 1440,
+      "dimensions": {
+        "width": 2160,
+        "height": 1440,
+        "sceneWidth": 2160,
+        "sceneHeight": 1440,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.23,
+        "tone": "Cool mineral-hazed bathhouse",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png"
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "name": "Bathhouse — Interior B",
+      "width": 2160,
+      "height": 1440,
+      "dimensions": {
+        "width": 2160,
+        "height": 1440,
+        "sceneWidth": 2160,
+        "sceneHeight": 1440,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Exposed, damp, drained bathing chambers",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png"
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "name": "F1 — Dining Room",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Dusty domestic silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-G01_Dining_V003_OWNER_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "name": "F1 — Entrance Hall",
+      "width": 960,
+      "height": 720,
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "sceneWidth": 960,
+        "sceneHeight": 720,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Ground Atmosphere",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+          "x": 480,
+          "y": 360,
+          "radius": 36,
+          "volume": 0.12,
+          "levels": [
+            "defaultLevel0000"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "Lfbs2CACZfFjZGGb",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Dusty domestic silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-g02_foyer_with_basement-stairwell_owner-approved.png"
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "name": "F1 — Family Room",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Dusty domestic silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-G09_Rear_Family_Room_V002_OWNER_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "name": "F1 — Great Room",
+      "width": 840,
+      "height": 960,
+      "dimensions": {
+        "width": 840,
+        "height": 960,
+        "sceneWidth": 840,
+        "sceneHeight": 960,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 3,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Ground Atmosphere",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+          "x": 420,
+          "y": 480,
+          "radius": 36,
+          "volume": 0.18,
+          "levels": [
+            "defaultLevel0000"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "mSRfMV58TIgizVOC",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.5,
+        "tone": "Broad shadowed room, familiar but neglected",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png"
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "name": "F1 — Kitchen",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Dusty domestic silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-G03_Kitchen_V001_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "name": "F1 — Pantry",
+      "width": 1448,
+      "height": 1086,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086,
+        "sceneWidth": 1448,
+        "sceneHeight": 1086,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Dusty domestic silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-G04_Pantry_V002_OWNER_APPROVED_NORTH_DOOR_2026-10-25.png"
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "F1 — Study",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.23,
+        "tone": "Ordered papers and tarnished metalwork",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "F2 — Art Studio",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "CAV Halloween - Ground Atmosphere",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+          "x": 768,
+          "y": 512,
+          "radius": 58,
+          "volume": 0.18,
+          "levels": [
+            "defaultLevel0000"
+          ],
+          "easing": true,
+          "walls": true,
+          "hidden": false,
+          "repeat": true,
+          "locked": false,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "elevation": 0,
+          "flags": {
+            "dicebox-campaign-helper": {
+              "halloweenAmbience": "2026-10-24-v001",
+              "source": "owner-approved-existing-music"
+            }
+          },
+          "_id": "Bp3jFT9Iw1vMPUr9",
+          "effects": {
+            "base": {
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          }
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Dusty pigments and worn canvases",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png"
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "name": "F2 — Guest Room",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Quiet upper-floor unease",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-U03_Guest_Bedroom_V001_FINAL_ART_PASS_2026-10-24.png"
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "name": "F2 — Main Bedroom",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Quiet upper-floor unease",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png"
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "name": "F2 — Nursery",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.21,
+        "tone": "Faded nursery and silent cradle",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-U01_Nursery_V001_FINAL_ART_PASS_2026-10-24.png"
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "F2 — Small Bedroom",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.22,
+        "tone": "Well-loved books and a quiet small bedroom",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-U05_Sophias_Bedroom_V004_OWNER_APPROVED_SOUTH_DOOR_REMOVED_2026-10-24.png"
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "name": "F2 — Upper Landing",
+      "width": 1440,
+      "height": 1800,
+      "dimensions": {
+        "width": 2320,
+        "height": 3120,
+        "sceneWidth": 1440,
+        "sceneHeight": 1800,
+        "sceneX": 440,
+        "sceneY": 660,
+        "gridDistance": 5,
+        "gridSize": 220
+      },
+      "grid": {
+        "size": 220,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 2,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Quiet upper-floor unease",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png"
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "F2 — Workroom",
+      "width": 1448,
+      "height": 1086,
+      "dimensions": {
+        "width": 1448,
+        "height": 1086,
+        "sceneWidth": 1448,
+        "sceneHeight": 1086,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Hardened wax and disused crafting tools",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVEXT01Yard0001",
+      "name": "Grounds — Front Yard",
+      "width": 7200,
+      "height": 4800,
+      "dimensions": {
+        "width": 7200,
+        "height": 4800,
+        "sceneWidth": 7200,
+        "sceneHeight": 4800,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 240
+      },
+      "grid": {
+        "size": 240,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 1,
+      "tokenCount": 0,
+      "sounds": [
+        {
+          "name": "",
+          "path": "Music/Elwynn%20Forest-Music.mp3",
+          "levels": [
+            "defaultLevel0000"
+          ],
+          "x": 3697,
+          "y": 2844,
+          "radius": 317.5,
+          "elevation": 0,
+          "volume": 0.72,
+          "easing": true,
+          "hidden": false,
+          "walls": true,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          },
+          "effects": {
+            "base": {
+              "type": "",
+              "intensity": 5
+            },
+            "muffled": {
+              "intensity": 5
+            }
+          },
+          "_id": "VycoO0Tl8O20uL8L",
+          "repeat": false,
+          "locked": false,
+          "flags": {}
+        }
+      ],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.15,
+        "tone": "Wet leaves and an abandoned carriage",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png"
+    },
+    {
+      "id": "CAVEXT05Scene001",
+      "name": "Grounds — Gazebo",
+      "width": 1920,
+      "height": 1440,
+      "dimensions": {
+        "width": 1920,
+        "height": 1440,
+        "sceneWidth": 1920,
+        "sceneHeight": 1440,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.25,
+        "tone": "Moss and vines over a deserted gazebo",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png"
+    },
+    {
+      "id": "CAVEXT06Scene001",
+      "name": "Grounds — Greenhouse",
+      "width": 1920,
+      "height": 1440,
+      "dimensions": {
+        "width": 1920,
+        "height": 1440,
+        "sceneWidth": 1920,
+        "sceneHeight": 1440,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Clouded glass and tangled vegetation",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png"
+    },
+    {
+      "id": "xx1rWBiWMLxJPlrw",
+      "name": "Grounds — Outbuilding",
+      "width": 1254,
+      "height": 1254,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254,
+        "sceneWidth": 1254,
+        "sceneHeight": 1254,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Weathered timber and sheltered silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png"
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "Grounds — Pond",
+      "width": 5760,
+      "height": 4320,
+      "dimensions": {
+        "width": 5760,
+        "height": 4320,
+        "sceneWidth": 5760,
+        "sceneHeight": 4320,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 1,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.19,
+        "tone": "Still black pond and damp sluice stones",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png"
+    },
+    {
+      "id": "CAVEXT08Scene001",
+      "name": "Grounds — Rear Terrace",
+      "width": 1535,
+      "height": 1024,
+      "dimensions": {
+        "width": 1535,
+        "height": 1024,
+        "sceneWidth": 1535,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.23,
+        "tone": "Weathered estate grounds in late autumn",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-08_Rear_Deck_Family_Grounds_FINAL_OWNER_APPROVED_FENCE_FLUSH_2026-10-24.png"
+    },
+    {
+      "id": "CAVEXT03Scene001",
+      "name": "Grounds — Small Shack",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 1,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.24,
+        "tone": "Weathered timber and sheltered silence",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-03_Donovans_Shack_V002_OWNER_APPROVED_2026-10-24.png"
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "name": "Grounds — Waterside Clearing",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.23,
+        "tone": "Weathered estate grounds in late autumn",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png"
+    },
+    {
+      "id": "CAVTRAILScene001",
+      "name": "Grounds — Woodland Path",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.23,
+        "tone": "Weathered estate grounds in late autumn",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png"
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "name": "Grove — Central Clearing",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.28,
+        "tone": "Weathered stone and old rosebeds",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png"
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "name": "Grove — East Walk",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-06_eastern-grove-walk_four-way_owner-pass.png"
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "name": "Grove — North Walk",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-02_northern-processional-walk_owner-pass.png"
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "name": "Grove — Northeast Path",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-03_northeast-grove-corner_owner-pass.png"
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "Grove — Northwest Path",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png"
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "name": "Grove — South Walk",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-08_southern-grove-walk_visual-pass.png"
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "name": "Grove — Southeast Path",
+      "width": 2880,
+      "height": 2880,
+      "dimensions": {
+        "width": 2880,
+        "height": 2880,
+        "sceneWidth": 2880,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-09_southeast-grove-corner_sun-bust_owner-accepted.png"
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "name": "Grove — Southwest Path",
+      "width": 2880,
+      "height": 2880,
+      "dimensions": {
+        "width": 2880,
+        "height": 2880,
+        "sceneWidth": 2880,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-07_southwest-grove-corner_bust_visual-pass.png"
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "name": "Grove — West Entrance",
+      "width": 4320,
+      "height": 2880,
+      "dimensions": {
+        "width": 4320,
+        "height": 2880,
+        "sceneWidth": 4320,
+        "sceneHeight": 2880,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.29,
+        "tone": "Mossy memorial paths beneath bare branches",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/sg-04_western-entrance_visual-pass.png"
+    },
+    {
+      "id": "LhtyO17QenuCExsb",
+      "name": "Roof — Chimney",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.28,
+        "tone": "Weathered shingles and exposed wind",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png"
+    },
+    {
+      "id": "hLU4DzVctEGdsuaz",
+      "name": "Underground — Deep Chamber",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.45,
+        "tone": "Heavy silence over ancient stone",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/und-03-voss-ritual-chamber-approved-v003.png"
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "name": "Underground — Entry Passage",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.41,
+        "tone": "Damp enclosed stone",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png"
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "name": "Underground — Old Rooms",
+      "width": 1536,
+      "height": 1024,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "sceneWidth": 1536,
+        "sceneHeight": 1024,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.41,
+        "tone": "Damp enclosed stone",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png"
+    },
+    {
+      "id": "CAVFM01Scene0001",
+      "name": "Woods — Winding Trails",
+      "width": 5760,
+      "height": 4320,
+      "dimensions": {
+        "width": 5760,
+        "height": 4320,
+        "sceneWidth": 5760,
+        "sceneHeight": 4320,
+        "sceneX": 0,
+        "sceneY": 0,
+        "gridDistance": 5,
+        "gridSize": 120
+      },
+      "grid": {
+        "size": 120,
+        "distance": 5,
+        "units": "ft"
+      },
+      "soundCount": 0,
+      "tokenCount": 0,
+      "sounds": [],
+      "playlist": null,
+      "flags": {
+        "version": 1,
+        "phase": "early",
+        "darknessLevel": 0.25,
+        "tone": "Tangled autumn hedges and shaded roots",
+        "fxManaged": true,
+        "crimsonVeil": false
+      },
+      "background": "Maps/cabin-in-the-ashen-veil/fm-unified_northwestern-forest-maze_owner-approved.png"
+    }
+  ],
+  "players": [
+    {
+      "id": "7itvRuNstPT0hw7x",
+      "scene": "CAVEXT03Scene001"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "CAVHALLOWEENPL01",
+      "name": "CAV - Halloween Atmosphere (Players)",
+      "sounds": [
+        {
+          "name": "Haunted Cabin - Dark Tidings",
+          "path": "Music/Ambience%20-%20Dark%20Tidings.mp3"
+        },
+        {
+          "name": "Haunted Cabin - Distant Rain",
+          "path": "Music/Ambience%20-%20Horror%20Rain.mp3"
+        }
+      ]
+    },
+    {
+      "id": "wCAdbnhg4uZ41GPU",
+      "name": "Playlist",
+      "sounds": [
+        {
+          "name": "CITCV - Carriage Yard",
+          "path": "Music/Elwynn%20Forest-Music.mp3"
+        }
+      ]
+    }
+  ]
+}

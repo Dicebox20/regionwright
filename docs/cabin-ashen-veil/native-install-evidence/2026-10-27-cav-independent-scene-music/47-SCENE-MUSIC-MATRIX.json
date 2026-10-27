@@ -1,0 +1,956 @@
+{
+  "datePacific": "2026-10-27",
+  "world": "cabin-in-the-ashen-veil",
+  "activeMoodPhase": "early",
+  "scenes": [
+    {
+      "sceneId": "CAVAQ01Scene0001",
+      "name": "Aqueduct — Water Channels",
+      "track": "The River pt1.mp3",
+      "path": "Music/The%20River%20pt1.mp3",
+      "volume": 0.15,
+      "soundId": "CAVMUSIC00000001",
+      "center": {
+        "x": 2880,
+        "y": 2160
+      },
+      "radiusInSceneUnits": 158,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVBATHScene0001",
+      "name": "Bathhouse — Interior A",
+      "track": "Dungeon - Caverns.mp3",
+      "path": "Music/Dungeon%20-%20Caverns.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000002",
+      "center": {
+        "x": 1080,
+        "y": 720
+      },
+      "radiusInSceneUnits": 62,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "8yLMRDvxyw58dydh",
+      "name": "Bathhouse — Interior B",
+      "track": "Dungeon - Caverns.mp3",
+      "path": "Music/Dungeon%20-%20Caverns.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000003",
+      "center": {
+        "x": 1080,
+        "y": 720
+      },
+      "radiusInSceneUnits": 62,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT01Yard0001",
+      "name": "Grounds — Front Yard",
+      "track": "Elwynn Forest-Music.mp3",
+      "path": "Music/Elwynn%20Forest-Music.mp3",
+      "volume": 0.22,
+      "soundId": "VycoO0Tl8O20uL8L",
+      "center": {
+        "x": 3600,
+        "y": 2400
+      },
+      "radiusInSceneUnits": 98,
+      "fullAreaCovered": true,
+      "source": "Original yard music retained",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT02Scene001",
+      "name": "Grounds — Pond",
+      "track": "The River pt1.mp3",
+      "path": "Music/The%20River%20pt1.mp3",
+      "volume": 0.15,
+      "soundId": "CAVMUSIC00000005",
+      "center": {
+        "x": 2880,
+        "y": 2160
+      },
+      "radiusInSceneUnits": 158,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT03Scene001",
+      "name": "Grounds — Small Shack",
+      "track": "Wilderness Music - Night Camp.mp3",
+      "path": "Music/Wilderness%20Music%20-%20Night%20Camp.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000006",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "xx1rWBiWMLxJPlrw",
+      "name": "Grounds — Outbuilding",
+      "track": "Wilderness Music - Night Camp.mp3",
+      "path": "Music/Wilderness%20Music%20-%20Night%20Camp.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000007",
+      "center": {
+        "x": 627,
+        "y": 627
+      },
+      "radiusInSceneUnits": 45,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT05Scene001",
+      "name": "Grounds — Gazebo",
+      "track": "Feywild - Lake Dreamgrove.mp3",
+      "path": "Music/Feywild%20-%20Lake%20Dreamgrove.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000008",
+      "center": {
+        "x": 960,
+        "y": 720
+      },
+      "radiusInSceneUnits": 58,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT06Scene001",
+      "name": "Grounds — Greenhouse",
+      "track": "Dark Forest Ambient Music - (Royalty Free).mp3",
+      "path": "Music/Dark%20Forest%20Ambient%20Music%20-%20(Royalty%20Free).mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000009",
+      "center": {
+        "x": 960,
+        "y": 720
+      },
+      "radiusInSceneUnits": 58,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT07Scene001",
+      "name": "Grounds — Waterside Clearing",
+      "track": "The River pt1.mp3",
+      "path": "Music/The%20River%20pt1.mp3",
+      "volume": 0.15,
+      "soundId": "CAVMUSIC00000010",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVEXT08Scene001",
+      "name": "Grounds — Rear Terrace",
+      "track": "Autumn Ambience - Relaxing Wind and Forest Sounds - D&D Ambience.mp3",
+      "path": "Music/Autumn%20Ambience%20-%20Relaxing%20Wind%20and%20Forest%20Sounds%20-%20D%26D%20Ambience.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000011",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVTRAILScene001",
+      "name": "Grounds — Woodland Path",
+      "track": "Wilderness Music - Calm Forest.mp3",
+      "path": "Music/Wilderness%20Music%20-%20Calm%20Forest.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000012",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVFM01Scene0001",
+      "name": "Woods — Winding Trails",
+      "track": "Dark Forest Ambient Music - (Royalty Free).mp3",
+      "path": "Music/Dark%20Forest%20Ambient%20Music%20-%20(Royalty%20Free).mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000013",
+      "center": {
+        "x": 2880,
+        "y": 2160
+      },
+      "radiusInSceneUnits": 158,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "UNEdA6iy6nk1Xuga",
+      "name": "Attic — Central Room",
+      "track": "Ambience - Horror Rain.mp3",
+      "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+      "volume": 0.14,
+      "soundId": "CAVMUSIC00000014",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "KwpmPrYgEC7KQVCZ",
+      "name": "Attic — West Storage",
+      "track": "Ambience - Horror Rain.mp3",
+      "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+      "volume": 0.14,
+      "soundId": "CAVMUSIC00000015",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "gDqaEOR4qaB5IOut",
+      "name": "Attic — North Storage",
+      "track": "Ambience - Horror Rain.mp3",
+      "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+      "volume": 0.14,
+      "soundId": "CAVMUSIC00000016",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "nyF5EX0JiEu23C3p",
+      "name": "Attic — East Storage",
+      "track": "Ambience - Horror Rain.mp3",
+      "path": "Music/Ambience%20-%20Horror%20Rain.mp3",
+      "volume": 0.14,
+      "soundId": "CAVMUSIC00000017",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "G6NMonfCwMvNzipL",
+      "name": "Basement — Workroom",
+      "track": "Dungeon Music - Stealth 2.mp3",
+      "path": "Music/Dungeon%20Music%20-%20Stealth%202.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000018",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "tjTpG2RVZNoCqRLh",
+      "name": "Basement — Inner Room",
+      "track": "Ambience - Dark Tidings.mp3",
+      "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000019",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "ThVGl68hUmiOhWEA",
+      "name": "Basement — Supply Closet",
+      "track": "Ambience - Dark Tidings.mp3",
+      "path": "Music/Ambience%20-%20Dark%20Tidings.mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000020",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG01Scene0001",
+      "name": "F1 — Dining Room",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000021",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG02Scene0001",
+      "name": "F1 — Entrance Hall",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000022",
+      "center": {
+        "x": 480,
+        "y": 360
+      },
+      "radiusInSceneUnits": 33,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG03Scene0001",
+      "name": "F1 — Kitchen",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000023",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG04Scene0001",
+      "name": "F1 — Pantry",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000024",
+      "center": {
+        "x": 724,
+        "y": 543
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG05Scene0001",
+      "name": "F1 — Study",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000025",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG06GreatRoom",
+      "name": "F1 — Great Room",
+      "track": "Dungeon Music - Stealth 1.mp3",
+      "path": "Music/Dungeon%20Music%20-%20Stealth%201.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000026",
+      "center": {
+        "x": 420,
+        "y": 480
+      },
+      "radiusInSceneUnits": 35,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHG09Scene0001",
+      "name": "F1 — Family Room",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000027",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "LhtyO17QenuCExsb",
+      "name": "Roof — Chimney",
+      "track": "Dark Forest Ambient Music - (Royalty Free).mp3",
+      "path": "Music/Dark%20Forest%20Ambient%20Music%20-%20(Royalty%20Free).mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000028",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU01Scene0001",
+      "name": "F2 — Nursery",
+      "track": "Memories (Sad Music Box) by Michael Ortega.mp3",
+      "path": "Music/Memories%20(Sad%20Music%20Box)%20by%20Michael%20Ortega.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000029",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "gGgUHlHdI7RFrbUh",
+      "name": "F2 — Upper Landing",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000030",
+      "center": {
+        "x": 1160,
+        "y": 1560
+      },
+      "radiusInSceneUnits": 34,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU03Scene0001",
+      "name": "F2 — Guest Room",
+      "track": "Mystical Theme - RPG Toolkit.mp3",
+      "path": "Music/Mystical%20Theme%20-%20RPG%20Toolkit.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000031",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU04Scene0001",
+      "name": "F2 — Main Bedroom",
+      "track": "Memories (Sad Music Box) by Michael Ortega.mp3",
+      "path": "Music/Memories%20(Sad%20Music%20Box)%20by%20Michael%20Ortega.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000032",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU05Scene0001",
+      "name": "F2 — Small Bedroom",
+      "track": "Memories (Sad Music Box) by Michael Ortega.mp3",
+      "path": "Music/Memories%20(Sad%20Music%20Box)%20by%20Michael%20Ortega.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000033",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU07Scene0001",
+      "name": "F2 — Art Studio",
+      "track": "Dungeon Music - Stealth 1.mp3",
+      "path": "Music/Dungeon%20Music%20-%20Stealth%201.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000034",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVHU08Scene0001",
+      "name": "F2 — Workroom",
+      "track": "Dungeon Music - Stealth 2.mp3",
+      "path": "Music/Dungeon%20Music%20-%20Stealth%202.mp3",
+      "volume": 0.17,
+      "soundId": "CAVMUSIC00000035",
+      "center": {
+        "x": 724,
+        "y": 543
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG01Scene0001",
+      "name": "Grove — Northwest Path",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000036",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG02Scene0001",
+      "name": "Grove — North Walk",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000037",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG03Scene0001",
+      "name": "Grove — Northeast Path",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000038",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG04Scene0001",
+      "name": "Grove — West Entrance",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000039",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG05Scene0001",
+      "name": "Grove — Central Clearing",
+      "track": "The Queen of Air and Darkness.mp3",
+      "path": "Music/The%20Queen%20of%20Air%20and%20Darkness.mp3",
+      "volume": 0.16,
+      "soundId": "CAVMUSIC00000040",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG06Scene0001",
+      "name": "Grove — East Walk",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000041",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG07Scene0001",
+      "name": "Grove — Southwest Path",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000042",
+      "center": {
+        "x": 1440,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 93,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG08Scene0001",
+      "name": "Grove — South Walk",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000043",
+      "center": {
+        "x": 2160,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 116,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CAVSG09Scene0001",
+      "name": "Grove — Southeast Path",
+      "track": "Demon Slayer - The Smell of Fear.mp3",
+      "path": "Music/Demon%20Slayer%20-%20The%20Smell%20of%20Fear.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000044",
+      "center": {
+        "x": 1440,
+        "y": 1440
+      },
+      "radiusInSceneUnits": 93,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": true,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "CN5fkK2QLUELBGGR",
+      "name": "Underground — Entry Passage",
+      "track": "Underdark Path.mp3",
+      "path": "Music/Underdark%20Path.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000045",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "ywpIpQDrkMLIgUP0",
+      "name": "Underground — Old Rooms",
+      "track": "Underdark Path.mp3",
+      "path": "Music/Underdark%20Path.mp3",
+      "volume": 0.19,
+      "soundId": "CAVMUSIC00000046",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    },
+    {
+      "sceneId": "hLU4DzVctEGdsuaz",
+      "name": "Underground — Deep Chamber",
+      "track": "Shadow Temple.mp3",
+      "path": "Music/Shadow%20Temple.mp3",
+      "volume": 0.18,
+      "soundId": "CAVMUSIC00000047",
+      "center": {
+        "x": 768,
+        "y": 512
+      },
+      "radiusInSceneUnits": 46,
+      "fullAreaCovered": true,
+      "source": "New GM Sound Layer emitter",
+      "perimeterSmellOfFear": false,
+      "gmVerified": true,
+      "noDistanceEasing": true,
+      "wallOcclusionDisabled": true,
+      "repeat": true
+    }
+  ],
+  "originalSoundCount": 11,
+  "newMusicSoundCount": 46,
+  "reusedYardMusicSoundCount": 1,
+  "originalNonMusicAmbientEffectsPreserved": 10,
+  "currentAmbientSoundTotal": 57,
+  "originalCeremonialPerimeterCount": 8,
+  "macroSourceSHA256": "e954a16a4aeeb9104cc8bfa963365667d82c1403afec6d6cbbbdccfb4800ee07",
+  "independentGmVerified": true,
+  "nonGmClientAudiblyVerified": false
+}
