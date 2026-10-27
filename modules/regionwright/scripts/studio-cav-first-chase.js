@@ -24,7 +24,7 @@ export async function handleCabinFirstChaseRegionEvent(region,event){
  const state=newFirstChaseState(participants,token.actor.id);
  await region.setFlag(NS,LEDGER,state);
  // No forced movement/capture. The GM adjudicates explicit skill checks against DC 13.
- try{await ChatMessage.create({speaker:{alias:"The Aqueduct"},content:"<p>Behind you, an impossible scraping echoes down the masonry tunnel. Something tall pulls itself into view. The only way is forward, toward the distant shaft. <strong>First pursuit begins: DC 13, three successes before two failures.</strong></p>"})}
+ try{await ChatMessage.create({speaker:{alias:"The Aqueduct"},content:"<p>An impossible scraping echoes down the masonry tunnel. Somewhere behind you, a towering silhouette unfolds from the dark. Its limbs strike stone in slow, uneven beats.</p>"})}
  catch(e){console.warn("[CAV First Chase] started, narrative delivery failed",e)}
 }
 export async function recordCabinFirstChaseGMResult({actorId,tactic,total,expectedRound}={}){

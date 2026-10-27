@@ -89,10 +89,10 @@ export function installCabinAqueductGateGMService(){
   try{result=await installPart(req,author);}catch(e){console.error("[CAV Aqueduct] reserved item installation uncertain",e)}
   finally{globalThis[LOCK]=false}
   const words={installed:"The original "+(req.part==="gear"?"gear":"handle")+" fits into the ancient gate housing.",
-   water:"The gate's fixtures remain inaccessible beneath the pond. Drain the water first.",
-   missing:"This fitting requires its original recovered mechanical part.",
+   water:"The drowned fixtures lie too far beneath the rippling surface to examine.",
+   missing:"The vacant fitting bears strange circular scratches and a rim of old grease.",
    already:"That part has already been fitted.",
-   denied:"Approach the exposed gate with your own character.",
+   denied:"The exposed machinery remains beyond reach.",
    reconcile:"The mechanism requires Gamemaster reconciliation."};
   try{await ChatMessage.create({speaker:{alias:"Aqueduct Gate"},whisper:[author],content:"<p>"+(words[result]||"The gate does not respond.")+"</p>"});}catch(e){}
  };
@@ -114,10 +114,10 @@ export async function handleCabinAqueductGateRegionEvent(region,event){
     const water=gateWaterDrained();
    const stage=aqueductGearStage(region.getFlag(NS,GEAR_FLAG),region.getFlag(NS,HANDLE_FLAG));
    const next=near&&water?nextAqueductPart(stage,!!sourceCopy(actor,"gear"),!!sourceCopy(actor,"handle")):null;
-   const label=next==="gear"?"Install Replacement Gear":next==="handle"?"Install Gate Handle":"Close";
+   const label=next==="gear"?"Test Toothed Fitting":next==="handle"?"Test Smooth Fitting":"Close";
    const description=!water?"The gate remains mostly submerged; its metal sockets are out of reach.":stage==="both"?
      "Both original parts are seated. The immense gate begins to unlock; the inner passage awaits its safety interlocks.":
-     stage==="reconcile"?"The mechanism needs the Gamemaster's attention.":"Two separate sockets await a machined gear and a heavy turning handle.";
+     stage==="reconcile"?"The mechanism needs the Gamemaster's attention.":"Two hollow fittings sit side by side: one ringed with narrow teeth, the other worn smooth by countless turns.";
    await foundry.applications.api.DialogV2.prompt({window:{title:"Aqueduct Gate"},content:'<figure style="max-width:600px;margin:auto"><img alt="Gate cropped from owner-approved pond map" src="'+ART+'" style="display:block;max-width:100%"><figcaption>'+description+'</figcaption></figure>',
     ok:{label,callback:async()=>{if(!next)return true;const gm=game.users.activeGM;if(!gm?.active)return false;
      await ChatMessage.create({content:"<p>You seat the mechanical part in the Aqueduct gate.</p>",whisper:[gm.id,game.user.id],

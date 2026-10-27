@@ -117,9 +117,9 @@ export function installSophiaRescueGMService(){
   try{out=await keyRescue(req,sender)}catch(e){console.error("[CAV Sophia] release uncertain",e)}
   finally{globalThis[BUSY]=false}
   const messages={released:"The original iron key turns in Sophia's lock. The captive's way out is clear.",
-   "not-captured":"The bedroom is not holding a captive.","missing-original-key":"You need the original iron key from the Parents' coat.",
+   "not-captured":"The bedroom is not holding a captive.","missing-original-key":"The old lock catches firmly, and the door does not yield.",
    "captive-location-reconcile":"The bedroom must be checked by the Gamemaster.","portal-state-reconcile":"The locked door requires Gamemaster reconciliation.",
-   denied:"Approach Sophia's door with your own character.","not-near-door":"Stand beside the door to use the key."};
+   denied:"The distant doorway gives nothing away.","not-near-door":"The weathered keyhole remains beyond reach."};
   try{await ChatMessage.create({speaker:{alias:"Sophia's Door"},whisper:[sender],content:"<p>"+(messages[out.status]||"The old lock remains still.")+"</p>"})}catch(e){}
  };
  globalThis[HOOK]={version:1,hookId:Hooks.on("createChatMessage",handler)};return true;
@@ -142,8 +142,8 @@ export async function handleSophiaRescueRegionEvent(region,event){
    const x=token?.x+(token?.width||0)*canvas.scene.grid.size/2,y=token?.y+(token?.height||0)*canvas.scene.grid.size/2;
    const eligible=!!token&&region.testPoint({x,y,elevation:0})&&hasKey(token.actor);
    await foundry.applications.api.DialogV2.prompt({window:{title:"Rescue from Sophia's Bedroom"},
-    content:"<p>The bedroom is sealed. The original iron key can release the captive without forcing the door.</p>",
-    ok:{label:eligible?"Unlock for Captive":"Close",callback:async()=>{
+    content:"<p>The bedroom is sealed. From beyond the battered ironwork comes a faint, uncertain sound.</p>",
+    ok:{label:eligible?"Try the Lock":"Close",callback:async()=>{
      if(!eligible)return true;const gm=game.users.activeGM;if(!gm?.active)return false;
      await ChatMessage.create({content:"<p>You use the original iron key.</p>",whisper:[gm.id,game.user.id],
       flags:{[NS]:{cavSophiaKeyRescueRequest:{version:1,action:"key-rescue",sceneId:GALLERY,regionId:DOOR,tokenId:token.id}}}});

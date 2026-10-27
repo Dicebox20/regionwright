@@ -1,0 +1,481 @@
+{
+  "schema": "dicebox.cav.player-puzzle-nonspoiler-prose/v1",
+  "datePacific": "2026-10-27",
+  "ownerDirective": "Audit all text and remove direct player-facing puzzle solution instructions, retain environmental clues and unchanged game mechanics",
+  "scope": {
+    "world": "cabin-in-the-ashen-veil",
+    "scenes": 47,
+    "regions": 250,
+    "executableNativeScriptsAudited": 60,
+    "nativeRegionScriptsChanged": 11,
+    "sourceModulesChanged": 8,
+    "journalPagesEnumerated": 331,
+    "worldItemsReviewed": 78,
+    "actorItemsReviewed": 326,
+    "GMmacrosEnumerated": 19,
+    "historicalChatMessagesReviewed": 52,
+    "totalQuotedPassagesChanged": 70,
+    "GMmacrosChanged": 1
+  },
+  "styleRules": [
+    "Player descriptions show sensory detail, physical affordances, atmospheric observations and consequences, never solution commands.",
+    "Do not name the exact required puzzle item, item origin, character, order, combination, roll DC, or explicit success threshold before discovery.",
+    "Mechanical permission/provenance/safety/reward checks remain in code and GM-only prompts; only player-visible messages change.",
+    "Interaction controls may retain concise functional labels but must not identify the puzzle-solving item or answer.",
+    "Never silently regenerate old ChatMessages, GM-only documentation, archived source snapshots, or DnD item rule mechanics.",
+    "After every text patch, verify exact live source old/new, original event/disabled/flags, test full source and preserve a chronological handoff."
+  ],
+  "moduleChanges": [
+    {
+      "file": "studio-cav-aqueduct-gate.js",
+      "pairs": [
+        [
+          "The gate's fixtures remain inaccessible beneath the pond. Drain the water first.",
+          "The drowned fixtures lie too far beneath the rippling surface to examine."
+        ],
+        [
+          "This fitting requires its original recovered mechanical part.",
+          "The vacant fitting bears strange circular scratches and a rim of old grease."
+        ],
+        [
+          "Approach the exposed gate with your own character.",
+          "The exposed machinery remains beyond reach."
+        ],
+        [
+          "Two separate sockets await a machined gear and a heavy turning handle.",
+          "Two hollow fittings sit side by side: one ringed with narrow teeth, the other worn smooth by countless turns."
+        ],
+        [
+          "Install Replacement Gear",
+          "Test Toothed Fitting"
+        ],
+        [
+          "Install Gate Handle",
+          "Test Smooth Fitting"
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-basement-nightstand.js",
+      "pairs": [
+        [
+          "The cellar gate requires its original Weathered Key.",
+          "The old lock catches fast. Rust flakes tumble from its iron plate."
+        ],
+        [
+          "Approach the fixture with an owned character.",
+          "The fixture is too distant to make out in detail."
+        ],
+        [
+          "The broken drawer needs the Screwdriver from the drained Bathhouse.",
+          "The swollen drawer catches on something concealed inside its frame."
+        ],
+        [
+          "The heavy, corroded lock bears the familiar teeth of your Weathered Key.",
+          "A heavy corroded lock hangs at the stairhead. Faint scratches mark the worn keyway."
+        ],
+        [
+          "Use Weathered Key",
+          "Try the Latch"
+        ],
+        [
+          "A nightstand drawer has jammed badly; its fastener could be freed with a narrow screwdriver.",
+          "A nightstand drawer is wedged tightly in its warped frame. A tarnished metal fastener glints in the narrow seam."
+        ],
+        [
+          "Repair with Screwdriver",
+          "Examine the Fastener"
+        ],
+        [
+          " Select your character and stand beside the fixture.",
+          " The details are difficult to make out from here."
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-drained-pickups.js",
+      "pairs": [
+        [
+          "Ask the GM to reconcile this claim.",
+          "The cloudy water hides the object once more."
+        ],
+        [
+          "Your character must approach the fixture.",
+          "The object remains beyond reach."
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-first-chase.js",
+      "pairs": [
+        [
+          "Behind you, an impossible scraping echoes down the masonry tunnel. Something tall pulls itself into view. The only way is forward, toward the distant shaft. <strong>First pursuit begins: DC 13, three successes before two failures.</strong>",
+          "An impossible scraping echoes down the masonry tunnel. Somewhere behind you, a towering silhouette unfolds from the dark. Its limbs strike stone in slow, uneven beats."
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-sluice.js",
+      "pairs": [
+        [
+          "The square socket needs its original iron crank.",
+          "The vacant square socket bears a rim of old grease and flecks of rust."
+        ],
+        [
+          "The sluice is not ready to accept this crank.",
+          "The mechanism remains stiff, and the square fitting will not budge."
+        ],
+        [
+          "The Gamemaster must reconcile the fitted mechanism.",
+          "The sluice shudders, then falls quiet."
+        ],
+        [
+          "Select one of your characters near the sluice control to fit the crank or inspect the mechanism.",
+          "From here, the stone sluice is difficult to examine."
+        ],
+        [
+          "The crank is fitted. Move your character into the sluice control area before opening or closing the gate.",
+          "The distant wheel remains too far away to examine closely."
+        ],
+        [
+          "The original Crank is fitted. The gate is open; the Pond and Bathhouse pools have drained.",
+          "The old mechanism has shifted; the pond and Bathhouse pools lie drained."
+        ],
+        [
+          "The original Crank is fitted. The gate is closed; the Pond and Bathhouse pools remain full.",
+          "The great gate stands closed. Dark water lies still in the pond and Bathhouse pools."
+        ],
+        [
+          "The stone sluice has an empty square mounting socket. An iron crank would fit here.",
+          "The stone sluice bears an empty square mounting socket, dark with old oil."
+        ],
+        [
+          "Install Original Crank",
+          "Try the Square Socket"
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-sophia-confinement.js",
+      "pairs": [
+        [
+          "You need the original iron key from the Parents' coat.",
+          "The old lock catches firmly, and the door does not yield."
+        ],
+        [
+          "Approach Sophia's door with your own character.",
+          "The distant doorway gives nothing away."
+        ],
+        [
+          "Stand beside the door to use the key.",
+          "The weathered keyhole remains beyond reach."
+        ],
+        [
+          "The bedroom is sealed. The original iron key can release the captive without forcing the door.",
+          "The bedroom is sealed. From beyond the battered ironwork comes a faint, uncertain sound."
+        ],
+        [
+          "Unlock for Captive",
+          "Try the Lock"
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-sune-relief.js",
+      "pairs": [
+        [
+          "Stand by the northern relief with one selected character.",
+          "The northern relief seems strangely distant from here."
+        ]
+      ]
+    },
+    {
+      "file": "studio-cav-water-controller.js",
+      "pairs": [
+        [
+          "The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
+          "The mechanism shudders under a strange weight, as though the distant channels still hold something fast."
+        ],
+        [
+          "The Aqueduct route lacks a completed commissioning receipt. The Gamemaster must reconcile it before changing the sluice.",
+          "The deep channels answer with an uneasy grinding sound; the wheel holds fast."
+        ],
+        [
+          "The Bathhouse contains old separate-room documents with incomplete dry egress. Ask the Gamemaster to reconcile them.",
+          "A dull shudder rises from the distant Bathhouse, but the channels do not change."
+        ],
+        [
+          "The Boiler, basin, or Rosewater Regions on the unified Bathhouse map need a Gamemaster safety check before changing water.",
+          "Something within the Bathhouse pipes resists the turning wheel."
+        ],
+        [
+          "Only an authorized nearby character can operate this sluice.",
+          "From here, the controls are beyond reach."
+        ],
+        [
+          "The original Crank must be fitted before the wheel will turn.",
+          "The bare spindle turns without purchase; the great wheel remains motionless."
+        ],
+        [
+          "The sluice has stopped partway through. Gamemaster inspection is required before using it again.",
+          "The mechanism grinds to an uneasy stop. No water moves."
+        ]
+      ]
+    }
+  ],
+  "nativeBehaviorChanges": [
+    {
+      "id": "3nhNHvdSWo9ix10a",
+      "uuid": "Scene.CAVEXT01Yard0001.Region.CAV01R0000000008.RegionBehavior.3nhNHvdSWo9ix10a",
+      "disabled": false,
+      "originalSha256": "c0623e82535d9b0c372e31fd74a9dfd95a4e6149c0599b5b8b8ad0c82bd62e31",
+      "revisedSha256": "b8a8a89b1064c21ba3efdbd4cc09dce451de9775bd808b0edd973271a1c0d580",
+      "pairs": [
+        [
+          "The family carriage sits beneath its rotten canopy. A substantial iron lock holds the door shut. The keyhole is shaped for a long, old-fashioned key. Bring the character holding the carriage key up to the door to open it.",
+          "The family carriage sags beneath its rotting canopy, its lacquered panels dulled by years of neglect. A heavy iron lock holds the door fast, its surface pitted with rust. Beyond the warped glass, the interior waits in darkness. The handle rattles beneath your touch, but the door refuses to yield."
+        ]
+      ]
+    },
+    {
+      "id": "i6UNtWSFFaZgkdZD",
+      "uuid": "Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001.RegionBehavior.i6UNtWSFFaZgkdZD",
+      "disabled": false,
+      "originalSha256": "212584fe6c6eb0780a711b5e9ee23a34cf854c4518cd91d53175af15158a840d",
+      "revisedSha256": "9ed45c08cb89a7040acd67ab47a48e38caee5f77549802c0b650bada00361ae6",
+      "pairs": [
+        [
+          "Select exactly one character token to try the mechanism.",
+          "The distant clock face seems impossible to examine from here."
+        ],
+        [
+          "Move your character closer to the clock to fit the hands.",
+          "From here, the worn clock face is difficult to examine."
+        ],
+        [
+          "One or both recovered clock hands lack a completed original award.",
+          "The old clock face remains bare; the workings within are silent."
+        ],
+        [
+          "Both recovered hands can be fitted to the empty hub.",
+          "Two worn fittings mark the center of the clock face."
+        ],
+        [
+          "Choose where to set each hand before engaging the mechanism.",
+          "A circle of faded numerals surrounds the empty clock face."
+        ],
+        [
+          "Both clock hands must be positioned.",
+          "The mechanism stirs but fails to catch."
+        ]
+      ]
+    },
+    {
+      "id": "CAV06FIRECLICK01",
+      "uuid": "Scene.CAVHG06GreatRoom.Region.G0HM92QQtEfyZcFi.RegionBehavior.CAV06FIRECLICK01",
+      "disabled": false,
+      "originalSha256": "9f49ff8b2461178b59dee2db6a7669c48033d9bc45545cfa2a85a7179550f717",
+      "revisedSha256": "0e0c88cb2c612e95f7459407ae67eab00677e9ddb97c035a1ea9532f05609be4",
+      "pairs": [
+        [
+          "Requires Tinderbox in your character's inventory.",
+          "The old wood refuses to catch fire."
+        ],
+        [
+          "<strong>Required: Tinderbox</strong>",
+          "<strong>The kindling is cold.</strong>"
+        ],
+        [
+          "Select your character token in this Scene to use the fireplace.",
+          "The hearth remains out of reach."
+        ],
+        [
+          "Required: Tinderbox in your character's inventory.",
+          "The cold kindling yields no spark."
+        ]
+      ]
+    },
+    {
+      "id": "CAVEXT03BOXBEH01",
+      "uuid": "Scene.CAVEXT03Scene001.Region.CAVEXT03BOXREG01.RegionBehavior.CAVEXT03BOXBEH01",
+      "disabled": false,
+      "originalSha256": "8150402b76bc18457900701b69b0e19a0327d8e4381883cac4b16cb0d915fbb4",
+      "revisedSha256": "1915c3b4b6950d5b0580a25a37cdefaa204663d3eb263a86cc88759d15de26c4",
+      "pairs": [
+        [
+          "Select exactly one owned character near this item to interact.",
+          "The lockbox is difficult to examine from here."
+        ]
+      ]
+    },
+    {
+      "id": "CAVHG05NOTE00001",
+      "uuid": "Scene.CAVHG05Scene0001.Region.CAVB3E32BD6B01BD.RegionBehavior.CAVHG05NOTE00001",
+      "disabled": false,
+      "originalSha256": "7f8d5d97c7209d6f7e2153818b5e9f10dcf9afcdbe708641ec8f58aaef66dd8f",
+      "revisedSha256": "9a2972b91350e8ab6b7fffcadd6b6c1a52b9c887ab10cfc5a856da44803dfd3a",
+      "pairs": [
+        [
+          "Select exactly one owned character near this item to interact.",
+          "The writing on the desk remains indistinct from here."
+        ]
+      ]
+    },
+    {
+      "id": "CAVPRIVYRETBH001",
+      "uuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1.RegionBehavior.CAVPRIVYRETBH001",
+      "disabled": true,
+      "originalSha256": "44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71",
+      "revisedSha256": "daf190dd77e77c2c69976a0f70ae25da9fb561b4533bf62a14ee05bd72e2ee6a",
+      "pairs": [
+        [
+          "An unpleasant opening hides a tiny metallic glint. Once the Crimson Veil is genuinely active, a careful tool may recover the key without a roll, or an official DC 12 Sleight of Hand or Survival check may be retried after failure. The Copper Tiny Key cannot be awarded just by entering this Region.",
+          "A pinprick of metal glitters far below the rim. A sour smell rises from the darkness, and a faint scraping sound echoes under the stone."
+        ],
+        [
+          "A Copper Tiny Key may become recoverable here after an authenticated Privy retrieval. Until then the spot is empty.",
+          "Only stale air and damp stone meet your gaze. Something deeper may have shifted beyond sight."
+        ]
+      ]
+    },
+    {
+      "id": "CAVPRIVYKEYBH001",
+      "uuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1.RegionBehavior.CAVPRIVYKEYBH001",
+      "disabled": true,
+      "originalSha256": "b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d",
+      "revisedSha256": "a8537c405bdd88739621cc0e1701f13d25018fb65e16fcfa42221705ce9d49e5",
+      "pairs": [
+        [
+          "An unpleasant opening hides a tiny metallic glint. Once the Crimson Veil is genuinely active, a careful tool may recover the key without a roll, or an official DC 12 Sleight of Hand or Survival check may be retried after failure. The Copper Tiny Key cannot be awarded just by entering this Region.",
+          "A pinprick of metal glitters far below the rim. A sour smell rises from the darkness, and a faint scraping sound echoes under the stone."
+        ],
+        [
+          "A Copper Tiny Key may become recoverable here after an authenticated Privy retrieval. Until then the spot is empty.",
+          "Only stale air and damp stone meet your gaze. Something deeper may have shifted beyond sight."
+        ]
+      ]
+    },
+    {
+      "id": "CAVLANTERNBEH001",
+      "uuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1.RegionBehavior.CAVLANTERNBEH001",
+      "disabled": false,
+      "originalSha256": "3cd7547b4f941a7f7a707bb86d6977f96d45e38563fc9b247d02ef0242e8029b",
+      "revisedSha256": "039c84dd1edb6f8e941cde833ba25781a2cce5134058513c795930aa6d347a4b",
+      "pairs": [
+        [
+          "A silver lock clasps the old family chest. Only its proper tiny key will turn.",
+          "A tarnished silver lock binds the family chest, its narrow keyway scarred by years of use."
+        ],
+        [
+          "A single spare candle wick lies among old supplies. The concealed workshop must be reached legitimately.",
+          "A short strand of pale fiber rests among the dusty workshop tools."
+        ],
+        [
+          "body=\"A weathered lantern hangs amid thick cobwebs. Oil: \"+(o===\"done\"?\"installed\":\"missing\")+\n       \". Wick: \"+(w===\"done\"?\"installed\":\"missing\")+\".\";",
+          "body=\"A weathered lantern hangs amid thick cobwebs. Its glass is clouded and the brass housing has darkened with age.\";"
+        ],
+        [
+          " It is prepared, but the ignition and eye-reveal mechanism have not yet been commissioned.",
+          " A faint odor of lamp oil lingers beneath the dust."
+        ]
+      ]
+    },
+    {
+      "id": "CAVHOPECHSTBEH01",
+      "uuid": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1.RegionBehavior.CAVHOPECHSTBEH01",
+      "disabled": false,
+      "originalSha256": "c1db0b18787cb3b47f9e3a3e53454f123dbb267296867e5b6bf46b7aa1886186",
+      "revisedSha256": "1a8387e3c40d89a0974b8361dc4cc49fcdb44cce3df5a5348433c3866f06fddc",
+      "pairs": [
+        [
+          "A silver lock clasps the old family chest. Only its proper tiny key will turn.",
+          "A tarnished silver lock binds the family chest, its narrow keyway scarred by years of use."
+        ],
+        [
+          "A single spare candle wick lies among old supplies. The concealed workshop must be reached legitimately.",
+          "A short strand of pale fiber rests among the dusty workshop tools."
+        ],
+        [
+          "body=\"A weathered lantern hangs amid thick cobwebs. Oil: \"+(o===\"done\"?\"installed\":\"missing\")+\n       \". Wick: \"+(w===\"done\"?\"installed\":\"missing\")+\".\";",
+          "body=\"A weathered lantern hangs amid thick cobwebs. Its glass is clouded and the brass housing has darkened with age.\";"
+        ],
+        [
+          " It is prepared, but the ignition and eye-reveal mechanism have not yet been commissioned.",
+          " A faint odor of lamp oil lingers beneath the dust."
+        ]
+      ]
+    },
+    {
+      "id": "CAVWICKSHELFBEH1",
+      "uuid": "Scene.CAVHU08Scene0001.Region.CAVBE5639AEC2179.RegionBehavior.CAVWICKSHELFBEH1",
+      "disabled": false,
+      "originalSha256": "ec40a5c37bab7b6bd167fcd8c9820e6172d0b44e399b08853d1ae8070fe5b8c7",
+      "revisedSha256": "e5f0c96c1dc5ad808374a664a79216dbe9c67f155d575820e857664492757be1",
+      "pairs": [
+        [
+          "A silver lock clasps the old family chest. Only its proper tiny key will turn.",
+          "A tarnished silver lock binds the family chest, its narrow keyway scarred by years of use."
+        ],
+        [
+          "A single spare candle wick lies among old supplies. The concealed workshop must be reached legitimately.",
+          "A short strand of pale fiber rests among the dusty workshop tools."
+        ],
+        [
+          "body=\"A weathered lantern hangs amid thick cobwebs. Oil: \"+(o===\"done\"?\"installed\":\"missing\")+\n       \". Wick: \"+(w===\"done\"?\"installed\":\"missing\")+\".\";",
+          "body=\"A weathered lantern hangs amid thick cobwebs. Its glass is clouded and the brass housing has darkened with age.\";"
+        ],
+        [
+          " It is prepared, but the ignition and eye-reveal mechanism have not yet been commissioned.",
+          " A faint odor of lamp oil lingers beneath the dust."
+        ]
+      ]
+    },
+    {
+      "id": "CAVVKEYPLINTH001",
+      "uuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114.RegionBehavior.CAVVKEYPLINTH001",
+      "disabled": true,
+      "originalSha256": "683e3bf75e97fd4f6a25b936f2ebee2ecb95b90368fae9ae59a5c93defb6d7ee",
+      "revisedSha256": "8627f2d7b0f8f409f14da952f4abe5436a62c3329f1a07788e2f7946deecaf81",
+      "pairs": [
+        [
+          "three original components and its separate turning mechanism must be completed before this item can be claimed. It has not been awarded.",
+          "mechanism sleeps beneath the stone. The Keystone remains beyond reach."
+        ]
+      ]
+    }
+  ],
+  "auditNotes": [
+    "Only live text sources and modules were edited. Archived original source snapshots remain unchanged for provenance.",
+    "The 331 journal page records include blank/image/title-only records; no puzzle instruction detected in available page text by targeted search.",
+    "Historical ChatMessages are preserved as chronological record; no targeted explicit instruction found.",
+    "GM-only approval dialogs, technical provenance statuses and standard DnD item descriptions are not treated as player puzzle instructions.",
+    "Foundry in-session Regionwright API caches previous module file imports; a coordinated reload is needed before new module-script prose reliably appears.",
+    "Script source integrity is GM-verified; actual non-GM clickthrough/visibility tests are separate and not claimed here.",
+    "Original First Chest (024) player dialog macro updated without changing numeral/digit-wheel calculation; the macro name and secret solution remain GM-only and unchanged."
+  ],
+  "receipts": {
+    "liveEarly": "utility-harness/artifacts/cav-player-facing-native-seven-behaviors-guarded-write-20261027.json",
+    "liveLater": "utility-harness/artifacts/cav-player-prose-late-native-four-guarded-updates-20261027.json",
+    "independent": "utility-harness/artifacts/cav-player-facing-all-eleven-native-sources-independent-GM-proof-20261027.json",
+    "moduleInitial": "utility-harness/artifacts/cav-player-prose-five-modules-real-deploy-20261027.json",
+    "moduleSecond": "utility-harness/artifacts/cav-player-facing-second-module-UI-three-source-patch-deploy-20261027.json",
+    "moduleThird": "utility-harness/artifacts/cav-player-prose-sune-chase-narration-no-mechanics-changed-20261027.json",
+    "inventory": "utility-harness/artifacts/cav-player-facing-comprehensive-text-inventory-after-edits-20261027.json",
+    "macro": "utility-harness/artifacts/cav-player-facing-first-chest-macro-narration-original-in-place-20261027.json",
+    "independentModulesAndMacro": "utility-harness/artifacts/cav-player-facing-eight-modules-and-chest-macro-independent-postread-20261027.json"
+  },
+  "macroChanges": [
+    {
+      "uuid": "Macro.CAVCHEST024MAC01",
+      "beforeSha256": "4908b0fd7da164a1eb33ddca1820ec143d47112414543e48c3e38bdbc5e46ef6",
+      "afterSha256": "68cc97e5c2d789f0c7137e72674a9834c6ae67ce7c04c039afd06ece70318ba9",
+      "kind": "Original GM macro whose prompt is displayed to player; in-place script command only",
+      "replacements": [
+        [
+          "The chest has three numbered tumblers. Enter the combination.",
+          "Three numbered tumblers sit beneath a scarred brass plate, their markings worn smooth by age."
+        ]
+      ]
+    }
+  ]
+}

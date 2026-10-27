@@ -77,7 +77,7 @@ export async function handleCabinSuneReliefRegionEvent(region,event){
    const token=owned.length===1?owned[0].document:null;
    const pt=token&&{x:token.x+token.width*canvas.scene.grid.size/2,y:token.y+token.height*canvas.scene.grid.size/2,elevation:0};
    const near=!!pt&&region.testPoint(pt),D=foundry.applications.api.DialogV2;
-   if(!near){await D.prompt({window:{title:"Sune's Memorial"},content:"<p>Stand by the northern relief with one selected character.</p>",ok:{label:"Close"},rejectClose:false});return;}
+   if(!near){await D.prompt({window:{title:"Sune's Memorial"},content:"<p>The northern relief seems strangely distant from here.</p>",ok:{label:"Close"},rejectClose:false});return;}
    const stage=suneReliefStage(region.getFlag(NS,"cavSuneBustSequence")?.status==="completed",
     region.getFlag("regionwright","slidingMosaic")?.persistent?.status,
     region.getFlag(NS,GOLD_FLAG)?.status==="done",region.getFlag(NS,KEY_FLAG)?.status==="done");

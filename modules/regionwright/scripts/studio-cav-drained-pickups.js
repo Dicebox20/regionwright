@@ -78,7 +78,7 @@ export function installCabinDrainedPickupsGMService(){
   const u=message.user;if(!req||!u||u.id!==author||u.isGM||!u.active||globalThis[LOCK])return;
   globalThis[LOCK]=true;let status;
   try{status=await CLAIM_ITEM(req,author);}catch(e){console.error("[CAV Drained] item claim uncertain",e);status="reconcile"}finally{globalThis[LOCK]=false}
-  const feedback={done:"You recover the "+(F[req.regionId]?.name||"item")+".",hidden:"The object remains submerged.",already:"That item has already been taken.",reconcile:"Ask the GM to reconcile this claim.",denied:"Your character must approach the fixture."};
+  const feedback={done:"You recover the "+(F[req.regionId]?.name||"item")+".",hidden:"The object remains submerged.",already:"That item has already been taken.",reconcile:"The cloudy water hides the object once more.",denied:"The object remains beyond reach."};
   try{await ChatMessage.create({speaker:{alias:"Drained Waterway"},whisper:[author],content:"<p>"+(feedback[status]||"Nothing happens.")+"</p>"});}catch(e){}
  };
  globalThis[HOOK]={version:1,hookId:Hooks.on("createChatMessage",h)};return true;

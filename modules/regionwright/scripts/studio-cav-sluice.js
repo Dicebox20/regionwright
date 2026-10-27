@@ -100,7 +100,7 @@ export function installCabinSluiceCrankGMService(){
   catch(e){console.error("[CAV Sluice] uncertain crank transaction; check reserved ledger",e);result="reconcile";}
   finally{globalThis[BUSY]=false;}
   if(result==="installed")return;
-  const messages={denied:"You cannot work the machinery from here.",blocked:"The sluice is not ready to accept this crank.",reconcile:"The Gamemaster must reconcile the fitted mechanism.", "missing-crank":"The square socket needs its original iron crank."};
+  const messages={denied:"You cannot work the machinery from here.",blocked:"The mechanism remains stiff, and the square fitting will not budge.",reconcile:"The sluice shudders, then falls quiet.", "missing-crank":"The vacant square socket bears a rim of old grease and flecks of rust."};
   try{await ChatMessage.create({speaker:{alias:"The Sluice Gate"},
     content:"<p>"+(messages[result]||"The mechanism remains still.")+"</p>",whisper:[sender]});}
   catch(e){console.warn("[CAV Sluice] private feedback unavailable",e);}
@@ -141,14 +141,14 @@ export async function handleCabinSluiceRegionEvent(region,event){
    const stageAction=installed&&safelyConfigured&&!busy&&atStageControls?
      flood?.status==="closed"?"open":flood?.status==="open"?"close":null:null;
    const DialogV2=foundry.applications.api.DialogV2;
-   const description=!withinReach?"Select one of your characters near the sluice control to fit the crank or inspect the mechanism.":
-      installed&&!atStageControls?"The crank is fitted. Move your character into the sluice control area before opening or closing the gate.":installed?
-     flood?.status==="open"?"The original Crank is fitted. The gate is open; the Pond and Bathhouse pools have drained.":
-     "The original Crank is fitted. The gate is closed; the Pond and Bathhouse pools remain full.":
-     "The stone sluice has an empty square mounting socket. An iron crank would fit here.";
+   const description=!withinReach?"From here, the stone sluice is difficult to examine.":
+      installed&&!atStageControls?"The distant wheel remains too far away to examine closely.":installed?
+     flood?.status==="open"?"The old mechanism has shifted; the pond and Bathhouse pools lie drained.":
+     "The great gate stands closed. Dark water lies still in the pond and Bathhouse pools.":
+     "The stone sluice bears an empty square mounting socket, dark with old oil.";
    const body='<figure style="max-width:650px;margin:auto;text-align:center"><img alt="Close-up of the pond sluice gate from the approved map" src="'+IMAGE+'" style="display:block;max-width:100%;max-height:68vh;margin:auto;border:1px solid #86755b"/><figcaption style="font-style:italic;margin:0.7rem 0">'+description+'</figcaption></figure>';
    await DialogV2.prompt({window:{title:"The Sluice Gate"},content:body,
-    ok:{label:eligible?"Install Original Crank":stageAction==="open"?"Open Sluice":stageAction==="close"?"Close Sluice":"Close",callback:async()=>{
+    ok:{label:eligible?"Try the Square Socket":stageAction==="open"?"Open Sluice":stageAction==="close"?"Close Sluice":"Close",callback:async()=>{
      if(!eligible&&!stageAction)return true;
      const gm=game.users.activeGM;if(!gm?.active){ui.notifications?.warn("The Gamemaster is unavailable.");return false;}
      const flag=eligible?{cavSluiceInstallRequest:{version:1,action:"install-crank",sceneId:SCENE,regionId:REGION,tokenId:token.id}}:

@@ -96,8 +96,8 @@ export function installCabinBasementNightstandGMService(){
   catch(e){console.error("[CAV] Basement/Nightstand reserved action uncertain",e)}
   finally{globalThis[LOCK]=false}
   const feedback={unlocked:"The weathered key fits. The cellar latch releases; the stairway opens.",
-   locked:"The cellar gate requires its original Weathered Key.",denied:"Approach the fixture with an owned character.",
-   needTool:"The broken drawer needs the Screwdriver from the drained Bathhouse.",
+   locked:"The old lock catches fast. Rust flakes tumble from its iron plate.",denied:"The fixture is too distant to make out in detail.",
+   needTool:"The swollen drawer catches on something concealed inside its frame.",
    repaired:"The screwdriver frees the seized mechanism. Something heavy is tucked inside the drawer.",
    blocked:"The drawer is still stuck.",claimed:"You take the Aqueduct Gate Handle from the repaired drawer.",
    already:"This fixture has already yielded its secret.",reconcile:"A Gamemaster must reconcile the saved fixture state."};
@@ -125,17 +125,17 @@ export async function handleCabinBasementNightstandRegionEvent(region,event){
     nightstandStage(region.getFlag(NS,REPAIR),region.getFlag(NS,CLAIM));
    let action=null,label="Close",msg="";
    if(role==="basement"){
-    msg=stage==="unlocked"?"The stairwell into the basement stands unlocked.":stage==="ready"?"The heavy, corroded lock bears the familiar teeth of your Weathered Key.":"A rusted latch blocks the descent into the basement.";
-    if(stage==="ready"&&c){action="unlock";label="Use Weathered Key"}
+    msg=stage==="unlocked"?"The stairwell into the basement stands unlocked.":stage==="ready"?"A heavy corroded lock hangs at the stairhead. Faint scratches mark the worn keyway.":"A rusted latch blocks the descent into the basement.";
+    if(stage==="ready"&&c){action="unlock";label="Try the Latch"}
    }else{
-    msg=stage==="empty"?"The repaired drawer is empty.":stage==="handle"?"The freed drawer now exposes a heavy gate handle.":stage==="reconcile"?"The stuck mechanism needs Gamemaster attention.":"A nightstand drawer has jammed badly; its fastener could be freed with a narrow screwdriver.";
-    if(c&&stage==="repair"&&exactItem(c.actor,DRIVER,"Screwdriver","cavBathScrewdriverSourceUuid",DRIVER_ORIGIN)){action="repair";label="Repair with Screwdriver"}
+    msg=stage==="empty"?"The repaired drawer is empty.":stage==="handle"?"The freed drawer now exposes a heavy gate handle.":stage==="reconcile"?"The stuck mechanism needs Gamemaster attention.":"A nightstand drawer is wedged tightly in its warped frame. A tarnished metal fastener glints in the narrow seam.";
+    if(c&&stage==="repair"&&exactItem(c.actor,DRIVER,"Screwdriver","cavBathScrewdriverSourceUuid",DRIVER_ORIGIN)){action="repair";label="Examine the Fastener"}
     else if(c&&stage==="handle"&&assessCavNightstandRepairProof({
       repair:region.getFlag(NS,REPAIR),
       screwdriverClaim:game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("CAVBATHSCRDRY001")?.getFlag(NS,"cavDrainedPickupClaim")
      }).ready){action="claim";label="Take Gate Handle"}
    }
-   if(!c)msg+=" Select your character and stand beside the fixture.";
+   if(!c)msg+=" The details are difficult to make out from here.";
    const content=(role==="nightstand"?'<figure style="max-width:540px;margin:auto"><img alt="Nightstand detail from approved Parents Bedroom" src="'+ART+'" style="max-width:100%;display:block"></figure>':"")+"<p>"+msg+"</p>";
    await foundry.applications.api.DialogV2.prompt({window:{title:role==="basement"?"Basement Stairwell":"Broken Parents' Nightstand"},content,ok:{label,callback:async()=>{
     if(!action)return true;const gm=game.users.activeGM;if(!gm?.active)return false;

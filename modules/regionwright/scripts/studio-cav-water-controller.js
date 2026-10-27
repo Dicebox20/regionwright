@@ -196,14 +196,14 @@ export function installCabinSluiceWaterService(){
   catch(e){console.error("[CAV Sluice] partial visual/portal transaction; GM must reconcile reserved marker",e);}
   finally{globalThis[LOCK]=false;}
   const output={done:req.action==="open"?"The gate shudders open. Water drains from the pond and the bathhouse pools.":"The sluice closes, and water refills the pond and bathhouse pools.",
-   unsafe:"The mechanism resists while someone remains by the water, in the Bathhouse, or inside the Aqueduct. Clear the area first.",
-   "aqueduct-route-active":"The Aqueduct route lacks a completed commissioning receipt. The Gamemaster must reconcile it before changing the sluice.",
-   "underground-unsafe":"The Bathhouse contains old separate-room documents with incomplete dry egress. Ask the Gamemaster to reconcile them.",
-   "unified-bath-reconcile":"The Boiler, basin, or Rosewater Regions on the unified Bathhouse map need a Gamemaster safety check before changing water.",
-   denied:"Only an authorized nearby character can operate this sluice.",
-   "crank-needed":"The original Crank must be fitted before the wheel will turn.",
+   unsafe:"The mechanism shudders under a strange weight, as though the distant channels still hold something fast.",
+   "aqueduct-route-active":"The deep channels answer with an uneasy grinding sound; the wheel holds fast.",
+   "underground-unsafe":"A dull shudder rises from the distant Bathhouse, but the channels do not change.",
+   "unified-bath-reconcile":"Something within the Bathhouse pipes resists the turning wheel.",
+   denied:"From here, the controls are beyond reach.",
+   "crank-needed":"The bare spindle turns without purchase; the great wheel remains motionless.",
    blocked:"The flood controls remain locked.",
-   reconcile:"The sluice has stopped partway through. Gamemaster inspection is required before using it again."};
+   reconcile:"The mechanism grinds to an uneasy stop. No water moves."};
   try{await ChatMessage.create({speaker:{alias:"The Sluice Gate"},whisper:[authorId],content:"<p>"+(output[result]||"The gate refuses to budge.")+"</p>"});}
   catch(e){console.warn("[CAV Sluice] GM state receipt preserved, narration failed",e);}
  };
