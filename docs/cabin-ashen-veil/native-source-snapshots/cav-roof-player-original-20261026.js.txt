@@ -1,0 +1,54 @@
+// Roof Chimney Clock / CAV owner-approved handless artwork v001.
+// Player click-to-inspect: NO inventory mutation, reward, or world flags are written here.
+const SCENE='LhtyO17QenuCExsb',RID='CAVROOFCLOCKR001',NS='dicebox-campaign-helper';
+const ART='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/roof-clock-handless-owner-approved-preview-320-v001.avif';
+const SLOT='__CAV_ROOFCLOCK_POINTER_v001',MODAL='__CAV_ROOFCLOCK_MODAL_v001';
+if(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==RID)return;
+const ev=event?.name;
+if(ev==='behaviorUnviewed'||ev==='behaviorDeactivated'){
+ const old=globalThis[SLOT];if(old?.handler&&canvas?.stage)canvas.stage.off('pointertap',old.handler);
+ delete globalThis[SLOT];return;
+}
+if(ev!=='behaviorViewed'||game.user?.isGM)return;
+const previous=globalThis[SLOT];if(previous?.handler&&canvas?.stage)canvas.stage.off('pointertap',previous.handler);
+const handler=async e=>{
+ if(!canvas?.ready||canvas.scene?.id!==SCENE||game.user?.isGM||(e.button!==undefined&&e.button!==0))return;
+ const point=canvas.stage.toLocal(e.global);
+ if(!region.testPoint({x:point.x,y:point.y,elevation:0}))return;
+ if(globalThis[MODAL])return;
+ globalThis[MODAL]=true;
+ try{
+  const tokens=canvas.tokens?.controlled?.filter(t=>t.actor?.testUserPermission(game.user,'OWNER'))||[];
+  const doc=tokens.length===1?tokens[0].document:null,actor=doc?.actor||null;
+  const hasHour=actor?.items.some(i=>i.name==='Grandfather Clock Hour Hand'&&i.getFlag(NS,'cavGrandfatherClockRewardSourceUuid')==='Item.HVZnNaV2SxNWck6H'&&i.getFlag(NS,'cavGrandfatherClockRewardRegionUuid')==='Scene.CAVHG06GreatRoom.Region.MrWgTyGg0d0DI53Q');
+  const hasMinute=actor?.items.some(i=>i.name==='Attic Clock Minute Hand'&&i.getFlag(NS,'cavAtticLootSourceUuid')==='Item.smvovibxtjJ9NW56'&&i.getFlag(NS,'cavAtticLootRegionUuid')==='Scene.nyF5EX0JiEu23C3p.Region.UtXhS68vd1czWfTG');
+  const solved=region.getFlag(NS,'cavRoofClockClaim')?.status==='done';
+  const id='cav-roof-clock-panel-v001';
+  let opts='<option value="">— Hour —</option>';for(let n=1;n<=12;n++)opts+='<option value="'+n+'">'+n+'</option>';
+  let mins='<option value="">— Minute —</option>';for(let n=0;n<60;n+=5)mins+='<option value="'+n+'">'+String(n).padStart(2,'0')+'</option>';
+  const status=solved?'The clock has already yielded its gear.':!doc?'Select exactly one character token to try the mechanism.':(!hasHour||!hasMinute)?'The mechanism is missing one or both authentic clock hands.':'Both recovered hands can be fitted to the empty hub.';
+  const content='<div id="'+id+'" style="max-width:600px;margin:auto;text-align:center">'+
+   '<img src="'+ART+'" alt="Approved close-up of the rooftop clock with both hands absent" style="display:block;max-width:100%;max-height:59vh;margin:auto;border:1px solid #80664b;border-radius:4px"/>'+
+   '<p style="margin:0.8rem 0">'+status+'</p>'+
+   (hasHour&&hasMinute&&!solved?'<div style="display:flex;justify-content:center;gap:0.65rem"><label>Hour hand<br/><select id="cav-roof-hour">'+opts+'</select></label><label>Minute hand<br/><select id="cav-roof-minute">'+mins+'</select></label></div><small>Choose where to set each hand before engaging the mechanism.</small>':'')+
+   '</div>';
+  await foundry.applications.api.DialogV2.prompt({
+   window:{title:'The Roof Chimney Clock'},content,
+   ok:{label:hasHour&&hasMinute&&!solved?'Engage Mechanism':'Close',callback:async()=>{
+    if(!hasHour||!hasMinute||solved||!doc)return true;
+    const hour=document.getElementById('cav-roof-hour')?.value,minute=document.getElementById('cav-roof-minute')?.value;
+    if(!hour||minute==null||minute===''){ui.notifications?.warn('Both clock hands must be positioned.');return false;}
+    const gm=game.users.activeGM;
+    if(!gm?.active){ui.notifications?.warn('The clock mechanism is unavailable without the GM.');return false;}
+    await ChatMessage.create({
+     content:'<p>You adjust the hands of the roof clock and listen for the mechanism.</p>',
+     whisper:[gm.id,game.user.id],
+     flags:{[NS]:{cavRoofClockAttempt:{version:1,action:'roof-clock-attempt',sceneId:SCENE,regionId:RID,tokenId:doc.id,hour:Number(hour),minute:Number(minute)}}}
+    });
+    return true;
+   }},rejectClose:false
+  });
+ }catch(err){console.warn('[CAV roof clock] player visual failed',err);}
+ finally{globalThis[MODAL]=false;}
+};
+if(canvas?.stage){canvas.stage.on('pointertap',handler);globalThis[SLOT]={handler};}
