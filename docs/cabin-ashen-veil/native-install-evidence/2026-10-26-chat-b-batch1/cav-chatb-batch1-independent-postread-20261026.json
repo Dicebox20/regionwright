@@ -1,0 +1,136 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "pass": true,
+  "items": [
+    {
+      "name": "Silver Tiny Key",
+      "worldCount": 1,
+      "sourceId": "IY8fuUG5P0yWIZIh",
+      "folderId": "N6X80ycvxaPIszHg",
+      "type": "loot",
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Silver Tiny Key"
+      },
+      "descriptionPresent": true,
+      "actorCopies": 0
+    },
+    {
+      "name": "Ornate Music Box",
+      "worldCount": 1,
+      "sourceId": "YaKs6z2AWlEAlyzx",
+      "folderId": "N6X80ycvxaPIszHg",
+      "type": "loot",
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Ornate Music Box"
+      },
+      "descriptionPresent": true,
+      "actorCopies": 0
+    },
+    {
+      "name": "Prayer of Protection",
+      "worldCount": 1,
+      "sourceId": "5jwy75XyFezukf3b",
+      "folderId": "N6X80ycvxaPIszHg",
+      "type": "loot",
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Prayer of Protection"
+      },
+      "descriptionPresent": true,
+      "actorCopies": 0
+    },
+    {
+      "name": "Wick",
+      "worldCount": 1,
+      "sourceId": "o0g8PyGRIbdwVM3m",
+      "folderId": "N6X80ycvxaPIszHg",
+      "type": "loot",
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Wick"
+      },
+      "descriptionPresent": true,
+      "actorCopies": 0
+    }
+  ],
+  "fixtures": [
+    {
+      "scene": "CAVHU04Scene0001",
+      "id": "CAVHU04HOPECHST1",
+      "exists": true,
+      "name": "H-U04 - Hope Chest (late Silver Key)",
+      "behaviors": 0,
+      "shape": [
+        1100,
+        688,
+        185,
+        132
+      ],
+      "flagged": {
+        "status": "physical-fixture-staged",
+        "source": "2026-10-26-owner-live-batch1",
+        "purpose": "chest-and-music-box",
+        "basis": "approved v003 map, visibly banded trunk in southeast room; no puzzle behaviors"
+      },
+      "expectedShape": [
+        1100,
+        688,
+        185,
+        132
+      ]
+    },
+    {
+      "scene": "CAVEXT05Scene001",
+      "id": "CAVEXT05LANTERN1",
+      "exists": true,
+      "name": "EXT-05 - Gazebo Hanging Lantern (Wick and Lamp Oil)",
+      "behaviors": 0,
+      "shape": [
+        920,
+        375,
+        105,
+        135
+      ],
+      "flagged": {
+        "status": "physical-fixture-staged",
+        "source": "2026-10-26-owner-live-batch1",
+        "purpose": "gazebo-lantern",
+        "basis": "owner-approved map, suspended lantern in gazebo at approximate x970,y425; no puzzle behaviors"
+      },
+      "expectedShape": [
+        920,
+        375,
+        105,
+        135
+      ]
+    }
+  ],
+  "notable": [
+    {
+      "scene": "CAVHU05Scene0001",
+      "region": "CAVB0FDF8543F6D9",
+      "exists": true,
+      "behaviorCount": 1
+    },
+    {
+      "scene": "CAVSG01Scene0001",
+      "region": "gksvZIqj8jWdqzn7",
+      "exists": true,
+      "behaviorCount": 1
+    },
+    {
+      "scene": "CAVHG05Scene0001",
+      "region": "CAVHG05RETURN001",
+      "exists": true,
+      "behaviorCount": 1
+    }
+  ],
+  "sceneCount": 47
+}

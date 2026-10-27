@@ -130,3 +130,15 @@ L1-E code and tests are new isolated files; no shared `studio-campaign.js`, modu
 | Permanent rehydrate | Canonical Keystone door stays unlocked after legitimate lever press; return and outer gate remain safe. | `planInnerDoorRehydrate` restores only original UND-01↔UND-02 paired portals/collision when both absent and current source Item remains installed. Doesn't grant rewards, alter outer gate, or trigger Voss. | Chat A elected GM adapter needs reserve/effect/native reread/done and uncertain state reconciliation. Source receipt origin label isn't authentication. |
 
 **Boundary:** Pure L1-L source ONLY, not native live Foundry implementation. No fabricated Keystone Item UUID, custom Voss travel Region, bonus encounter, alternate portal, new map, modifications to Chat A source checkout or module registry. Complete turn-local Cabin pure suite **1,155/1,155**, 156 new cases, 38 test files, source Node syntax PASS. No native player gameplay acceptance.
+## Turn 13 — OWNED LIVE INSTALLATION BATCH 1 (2026-10-26 owner exception)
+| Live document | Exact verified Foundry UUID | Installed status / remaining conditions |
+| --- | --- | --- |
+| Silver Tiny Key | `Item.IY8fuUG5P0yWIZIh` | Real original `loot` GM source created, 0 actor copies; late SG-01 NW chase marker/claim Behavior **NOT** installed or player-tested |
+| Ornate Music Box | `Item.YaKs6z2AWlEAlyzx` | Real `loot` source GM library only; Parents chest unlock/claim not wired |
+| Prayer of Protection | `Item.5jwy75XyFezukf3b` | Real `loot` source; original readable prayer Journal text pending approval/recovery, does not automatically open Studio |
+| Wick | `Item.o0g8PyGRIbdwVM3m` | Real `loot` source; H-U08 shelving Region exists, Wick trigger not wired |
+| H-U04 Hope Chest fixture | `Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1` | Approved physical map Region created, zero Behaviors, no player gate/pickup |
+| EXT-05 hanging lantern fixture | `Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1` | Approved physical map Region created, zero Behaviors, no oil/wick/eye effect yet |
+| H-G05 Rufus fixture | **NOT created** | Original dog art overlaps existing Study arrival/return travel Regions; reject guessed Region geometry, design safe hit test |
+| SG-01 late chase | Existing NW bust Region `Scene.CAVSG01Scene0001.Region.gksvZIqj8jWdqzn7` preserved | Existing early Winder Behavior unchanged. Second chase still blocked by first chase/Crooked Man/Waterworks/warning receipt; older SG-05 naming conflict must not misroute |
+**Live verification:** independent elected-GM postread PASS; 47 Scenes, four Items unique with zero Actor copies, two Regions with zero Behaviors; no progression flags or existing Region touched. Full source regressions still 1155/1155. Live fixtures are structural, NOT playable. Evidence and scripts archived under `docs/cabin-ashen-veil/native-install-evidence/2026-10-26-chat-b-batch1/`. Chat B now authorized to own only disjoint late-game native work; Chat A early/mid remains unchanged.
