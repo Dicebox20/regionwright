@@ -1,0 +1,119 @@
+{
+  "status": "independent-GM-after-installer-postwrite-script-exception",
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "results": [
+    {
+      "kind": "charged-source",
+      "region": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTPOWER001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTPOWER001.RegionBehavior.CAVVPOWERBEH0001",
+      "disabled": true,
+      "sourceMatches": true,
+      "sourceSha256": "bb0ca1c2e7473a4be33e78092c3f8be22cec75445818dddb9dc134bfff21fb48",
+      "expectedSha256": "bb0ca1c2e7473a4be33e78092c3f8be22cec75445818dddb9dc134bfff21fb48",
+      "eventList": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "stage": {
+        "version": 1,
+        "status": "source-installed-disabled-pending-original-producer",
+        "itemSourceUuid": "Item.pbmUZPfC3WnsBRgi",
+        "sourceSceneId": "CAVHG05Scene0001",
+        "kind": "charged-source",
+        "nativePlayerTested": false,
+        "recipeNeedsOriginalGMRewardBridge": true,
+        "statusOfVaultDoor": "sealed",
+        "noItemGranted": true
+      },
+      "ledger": null,
+      "regionStage": "dormant-uncommissioned",
+      "verified": true
+    },
+    {
+      "kind": "gond-half",
+      "region": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTGOND0001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTGOND0001.RegionBehavior.CAVVGONDBEH00001",
+      "disabled": true,
+      "sourceMatches": true,
+      "sourceSha256": "8f1ed7200963d56a65c870ff4fe34cac66b802554effbb0e4cacd704e44689bb",
+      "expectedSha256": "8f1ed7200963d56a65c870ff4fe34cac66b802554effbb0e4cacd704e44689bb",
+      "eventList": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "stage": {
+        "version": 1,
+        "status": "source-installed-disabled-pending-original-producer",
+        "itemSourceUuid": "Item.o9G3UJjEe2QX1ZH0",
+        "sourceSceneId": "CAVHU05Scene0001",
+        "kind": "gond-half",
+        "nativePlayerTested": false,
+        "recipeNeedsOriginalGMRewardBridge": true,
+        "statusOfVaultDoor": "sealed",
+        "noItemGranted": true
+      },
+      "ledger": null,
+      "regionStage": "dormant-uncommissioned",
+      "verified": true
+    },
+    {
+      "kind": "sune-half",
+      "region": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTSUNE0001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTSUNE0001.RegionBehavior.CAVVSUNEBEH00001",
+      "disabled": true,
+      "sourceMatches": true,
+      "sourceSha256": "90e21c7c4fe456a8e7bcc59cde4c0fe5aad85d24832978b95d3fa78e3fa8b26c",
+      "expectedSha256": "90e21c7c4fe456a8e7bcc59cde4c0fe5aad85d24832978b95d3fa78e3fa8b26c",
+      "eventList": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "stage": {
+        "version": 1,
+        "status": "source-installed-disabled-pending-original-producer",
+        "itemSourceUuid": "Item.t9uCIpsKeSvtC31w",
+        "sourceSceneId": "CAVHU07Scene0001",
+        "kind": "sune-half",
+        "nativePlayerTested": false,
+        "recipeNeedsOriginalGMRewardBridge": true,
+        "statusOfVaultDoor": "sealed",
+        "noItemGranted": true
+      },
+      "ledger": null,
+      "regionStage": "dormant-uncommissioned",
+      "verified": true
+    }
+  ],
+  "workshopRegions": 8,
+  "vaultRegions": 3,
+  "originalItems": [
+    {
+      "uuid": "Item.pbmUZPfC3WnsBRgi",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.o9G3UJjEe2QX1ZH0",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.t9uCIpsKeSvtC31w",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.CAVKEYSTONEITEM1",
+      "status": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "actorItemCopies": [],
+  "unchanged": {
+    "turn": true,
+    "outbound": true,
+    "return": true,
+    "keystonePlinth": true,
+    "foyerReturn": true,
+    "firstChase": true,
+    "secondChase": true
+  }
+}

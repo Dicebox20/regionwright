@@ -1,0 +1,573 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": [
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "H-G05 - Allens Study",
+      "count": 3,
+      "regions": [
+        {
+          "id": "CAVB9AA3D7BE9560",
+          "name": "Allen Study ? Great Room-side interior",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB3E32BD6B01BD",
+          "name": "Allen Study ? writing desk",
+          "flags": [],
+          "behaviors": [
+            {
+              "id": "CAVHG05NOTE00001",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "// Owner-approved map-object player inspection; no Foundry world writes or item grants.\nconst CONFIG={\"region\":\"CAVB3E32BD6B01BD\",\"kind\":\"note\",\"alt\":\"Owner-approved closeup of a handwritten note on the Study desk\",\"key\":\"study-note\",\"image\":\"worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/father-study-587-note-owner-map-crop-v001.png\",\"scene\":\"CAVHG05Scene0001\",\"title\":\"Allen\\u0027s Desk - The Note\"};\nconst NS='dicebox-campaign-helper',SLO",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVHG05RETURN001",
+          "name": "H-G05 - Return to Great Room",
+          "flags": [
+            "puzzleFamily",
+            "kind",
+            "placement"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHG05RETURNB01",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "count": 8,
+      "regions": [
+        {
+          "id": "woZ98KXx0RsWIPpl",
+          "name": "Southern Aqueduct Access",
+          "flags": [],
+          "behaviors": [
+            {
+              "id": "CAVAQCHASETRIG01",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.firstChase?.handleRegionEvent(region, event);",
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qOxNY7T7UaRxjrjX",
+          "name": "North Bridge ? interior walkway",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "Q5DqqnOXPmf7ivqD",
+          "name": "East Bridge ? interior walkway",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "kmPmr5ijLCEOJNk3",
+          "name": "Waterworks Annex ? observation",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "A84K235zGzM9lGrT",
+          "name": "West Bridge ? interior walkway",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "CAVAQ01RETURN001",
+          "name": "AQ-01 - Southern Return to Pond Gate",
+          "flags": [
+            "chainNode",
+            "requiresSafeWaterStage"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQ01RETBEH001",
+              "disabled": true,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLNORTH01",
+          "name": "AQ-01 - North Aqueduct Tunnel to Forest Well",
+          "flags": [
+            "chainNode",
+            "stage",
+            "inferredWaypointFromApprovedMap"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQWELLPORT001",
+              "disabled": true,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            },
+            {
+              "id": "CAVAQWELLACCESS1",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.aqueductRoutes?.handleForestWellNorthRegionEvent(region, event);",
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLARRV001",
+          "name": "AQ-01 - Arrival from Forest Well",
+          "flags": [
+            "chainNode",
+            "passive"
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "H-U05 - Sophias Bedroom",
+      "count": 4,
+      "regions": [
+        {
+          "id": "CAVB0FDF8543F6D9",
+          "name": "Sophia Bedroom ? stuffed bear observation",
+          "flags": [],
+          "behaviors": [
+            {
+              "id": "aZlQOQfF6gPrMaye",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "// Owner-approved Sophia Bedroom stuffed bear. Native player click close-up and GM-authored item on approach.\nconst NS='dicebox-campaign-helper',SCENE='CAVHU05Scene0001',RID='CAVB0FDF8543F6D9';\nconst SOURCE='Item.mN1dk0qlr7hyfupk',LEDGER='cavSophiaBearEyeClaim';\nconst IMAGE='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/sophia-stuffed-bear-approved-crop-v001.png';\nconst CLICK='__CAV_SOPHIA_BEAR_CLICK_v001',LOCK='__CAV_SOPHIA_BEAR_BUSY_v00",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVB994894A7432F",
+          "name": "Sophia Bedroom ? bookcase observation",
+          "flags": [],
+          "behaviors": [
+            {
+              "id": "LRYrBIQNN92SCJai",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "// Sophia bookcase: owner-approved zoom; storybook titles and slot assignments NOT assumed.\nconst SCENE='CAVHU05Scene0001',RID='CAVB994894A7432F',SLOT='__CAV_SOPHIA_BOOKS_INSPECT_v001';\nconst IMG='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/sophia-bookcase-approved-crop-v001.png';\nif(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==RID)return;\nconst ev=event?.name,prior=globalThis[SLOT",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVHU05ARRIVE001",
+          "name": "H-U05 - Arrival from Upper Gallery",
+          "flags": [
+            "branch",
+            "role",
+            "stage",
+            "provenance"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVHU05RETURN001",
+          "name": "H-U05 - Return to Upper Gallery",
+          "flags": [
+            "branch",
+            "role",
+            "stage",
+            "provenance"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHU05RETURNB01",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "count": 6,
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "flags": [
+            "cavFirstActRegion",
+            "cavVerifiedNativeInstallReceiptV1"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "// H-U07 Dahlia's Studio - mirror socket and paired vanity key discovery (v001)\n// Native Foundry v14 ExecuteScript, dispatched only by a character's token movement.\n// Authority: elected active GM only. The player does not need GM rights or a Macro.\nif (!['tokenMoveIn', 'tokenMoveWithin'].includes(event?.name)) return;\nif (!game.ready || game.world?.id!=='cabin-in-the-ashen-veil' || game.version!=='14.367') return;\nif (!game.user?.isGM || game.u",
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "flags": [
+            "routeKey",
+            "kind",
+            "owner"
+          ],
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "flags": [
+            "routeKey",
+            "kind",
+            "owner"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVSTUDIORETURN1",
+          "name": "H-U07 - Return landing from Candle Workshop",
+          "flags": [
+            "cavLateSuneEastFixture"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVSUNEACTION001",
+          "name": "H-U07 - Sune east shrine: separate prayer reading place",
+          "flags": [
+            "cavLateSuneEastFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVSUNEPRAYBEH01",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "const NS='dicebox-campaign-helper';\nif(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil'||\n  scene?.id!=='CAVHU07Scene0001'||region?.id!=='CAVSUNEACTION001')return;\nif(!['behaviorViewed','behaviorUnviewed','behaviorDeactivated'].includes(event?.name))return;\nconst key='__CAV_B21_SUNE_ALTAR_'+region.id;\nif(event.name!=='behaviorViewed'){\n const prior=globalThis[key];\n if(prior?.handler&&canvas?.stage)canvas.stage.off('pointertap',prior.hand",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVSUNEEASTPASS1",
+          "name": "H-U07 - Concealed EAST Sune passage (sealed)",
+          "flags": [
+            "cavLateSuneEastFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVSUNEOUTTELE01",
+              "disabled": true,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "name": "H-B01 - Allens Basement Workshop",
+      "count": 8,
+      "regions": [
+        {
+          "id": "CAVB9C0F653A2A6F",
+          "name": "Basement Workshop ? stairhead",
+          "flags": [],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBABA9513F73A3",
+          "name": "Basement Workshop ? central bench",
+          "flags": [],
+          "behaviors": [
+            {
+              "id": "CAVVTURNBEH00001",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "if(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil')return;\nif(scene?.id!=='G6NMonfCwMvNzipL')return;\n// DORMANT read-only source. No Item, ledger, portal or GM mutations.\nif(event?.name!=='behaviorViewed'||game.user?.isGM)return;\nreturn;\n// Joined Emblem Turning Control — The rose and gear mechanism cannot be turned until the three separate authentic items have been seated, after legitimate basement access. No fourth inventory piece is r",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVBASEMENTRET01",
+          "name": "H-B01 - Return Up Basement Stairs",
+          "flags": [
+            "chainNode",
+            "source"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBASEMENTPRT01",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVVAULTLAND0001",
+          "name": "CAV - return-landing-workshop",
+          "flags": [
+            "cavLateVaultWorkshopFixture"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVVAULTPOWER001",
+          "name": "CAV - charged-source",
+          "flags": [
+            "cavLateVaultWorkshopFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVPOWERBEH0001",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "if(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil')return;\nif(scene?.id!=='G6NMonfCwMvNzipL')return;\n// DORMANT read-only source. No Item, ledger, portal or GM mutations.\nif(event?.name!=='behaviorViewed'||game.user?.isGM)return;\nreturn;\n// Gondian Power Source Socket — This recess accepts only its proper original component. The Keystone is the Vault reward, not an input. No item is consumed or awarded by inspecting this uncommissioned f",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVVAULTGOND0001",
+          "name": "CAV - gond-half",
+          "flags": [
+            "cavLateVaultWorkshopFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVGONDBEH00001",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "if(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil')return;\nif(scene?.id!=='G6NMonfCwMvNzipL')return;\n// DORMANT read-only source. No Item, ledger, portal or GM mutations.\nif(event?.name!=='behaviorViewed'||game.user?.isGM)return;\nreturn;\n// Gond Emblem Half Socket — This recess accepts only its proper original component. The Keystone is the Vault reward, not an input. No item is consumed or awarded by inspecting this uncommissioned fixtu",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVVAULTSUNE0001",
+          "name": "CAV - sune-half",
+          "flags": [
+            "cavLateVaultWorkshopFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVSUNEBEH00001",
+              "disabled": true,
+              "type": "executeScript",
+              "sourceSnippet": "if(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil')return;\nif(scene?.id!=='G6NMonfCwMvNzipL')return;\n// DORMANT read-only source. No Item, ledger, portal or GM mutations.\nif(event?.name!=='behaviorViewed'||game.user?.isGM)return;\nreturn;\n// Sune Emblem Half Socket — This recess accepts only its proper original component. The Keystone is the Vault reward, not an input. No item is consumed or awarded by inspecting this uncommissioned fixtu",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVVAULTDOOR0001",
+          "name": "CAV - workshop-to-vault-sealed",
+          "flags": [
+            "cavLateVaultWorkshopFixture"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVOUTTEL000001",
+              "disabled": true,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "name": "H-G02 - Foyer and Basement Stairwell",
+      "count": 6,
+      "regions": [
+        {
+          "id": "R5cXlNtcmh9FbENe",
+          "name": "H-G02 - Great Room Doorway",
+          "flags": [
+            "routeKey",
+            "kind"
+          ],
+          "behaviors": [
+            {
+              "id": "OTPlgV81qeu3vwfI",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2pa02tkPswd4Cn5b",
+          "name": "H-G02 - Arrival from Great Room",
+          "flags": [
+            "routeKey",
+            "kind"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVFOYERPORCH001",
+          "name": "H-G02 - Arrival from Front Porch",
+          "flags": [
+            "routeKey",
+            "kind",
+            "measuredMap"
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVFOYEREXIT0001",
+          "name": "H-G02 - Return to Cabin Porch",
+          "flags": [
+            "routeKey",
+            "kind",
+            "measuredMap"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVFOYERRETURN01",
+              "disabled": false,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVFOYERBASEDR01",
+          "name": "H-G02 - Locked Weathered-Key Basement Stair",
+          "flags": [
+            "chainNode",
+            "gate",
+            "origin",
+            "interaction"
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBASEMENTBEH01",
+              "disabled": false,
+              "type": "executeScript",
+              "sourceSnippet": "await game.modules.get(\"regionwright\")?.api?.campaign?.cabin?.successors?.handleRegionEvent(region, event);",
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            },
+            {
+              "id": "CAVFOYERBASPORT1",
+              "disabled": true,
+              "type": "teleportToken",
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVFOYERBASEAR01",
+          "name": "H-G02 - Arrival from Basement",
+          "flags": [
+            "chainNode",
+            "passive"
+          ],
+          "behaviors": []
+        }
+      ]
+    }
+  ]
+}
