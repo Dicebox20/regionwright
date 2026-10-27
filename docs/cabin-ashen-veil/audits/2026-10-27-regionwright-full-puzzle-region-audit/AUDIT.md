@@ -1,5 +1,8 @@
 # Cabin in the Ashen Veil — Read-only global Regionwright Puzzle Region audit
 
+> **CURRENT LIVE CORRECTION (14:03 PDT):** The three owner-supplied Aqueduct Regions ALL EXIST (11 Aqueduct Regions / 148 Walls now), but each has 0 puzzle Behaviors. The older missing-physical-Region findings below are a historical 13:38 snapshot; see the corrective section at the end. No new Region creation is needed.
+
+
 Date 2026-10-27 PDT, approximately 13:38–13:49. Project owner requested all Regions supposed to have Regionwright puzzles checked, specifically missing Aqueduct Waterworks pressure. AUDIT ONLY — no native Foundry world, Region, Behavior, module, actor, Item, token or Chat A source writes.
 
 ## Authority, method and evidence
@@ -64,3 +67,20 @@ The Regionwright Puzzles & Locks module has 10 standalone visual demo families (
 5. **CONTINUITY** inspect custom Greenhouse and roof/lock pieces for user-visible UI parity, not blindly reconfigure as new Regionwright families. Recheck Rosewater overlap and 027 source. Run global player dependency test after installations. No Chat A checkout/Foundry writes during this audit.
 
 **Status:** 2 confirmed missing Regionwright campaign puzzle integrations; 3 installed puzzle families (Sune Mosaic, Boiler, Rosewater), 2 Boiler scene instances and 1 Rosewater instance; other scripted puzzle Region gaps recorded as integration/readiness findings, not falsely classified as missing. All claims bounded to current elected-GM native read-only evidence, no gameplay playtest or reward mutation.
+## LIVE CORRECTION 2026-10-27 14:03 PDT — owner supplied real Region UUIDs
+
+The original 13:38–13:49 audit above is a valid HISTORICAL SNAPSHOT, but it became stale for **Aqueduct physical Region presence**. A new separate elected-GM read-only world inspection following the owner's direct UUID identification found original `Scene.CAVAQ01Scene0001` now has **11 Regions and 148 Walls** (earlier snapshot 8 Regions / 143 Walls). These world changes occurred between observations; actor/worker responsible and cause are NOT established.
+
+**All three owner-specified physical Regions ACTUALLY EXIST in current live Foundry:**
+
+| Exact Region UUID | Present name / rectangle | Native RegionBehavior count | Region puzzle flags | Corrected classification |
+| --- | --- | --- | --- | --- |
+| `Scene.CAVAQ01Scene0001.Region.Aa4VBYBx3MRxr1H8` | Gondian Charging Station x3007,y46,w300,h240 | **0** | none | Physical Region EXISTS; Gondian charger Behavior and true source/Veil state wiring not installed |
+| `Scene.CAVAQ01Scene0001.Region.WdVwSJ9NJYOL8IYl` | Region x1116,y3093,w540,h180, owner identifies Five-Valve Pressure Puzzle | **0** | none | Physical Region EXISTS; five-valve Regionwright puzzle Behavior and authoritative pressure service not installed |
+| `Scene.CAVAQ01Scene0001.Region.9Rq8tVF0CrLGkYcT` | Region (2) x402,y3630,w180,h180, owner identifies Water Obstruction | **0** | none | Physical Region EXISTS; obstruction interaction Behavior and authoritative obstruction-restoration proof not installed |
+
+No need to add/recreate these three Region documents. The earlier phrases "missing pressure Region", "missing obstruction Region", and "missing charger Region" were WRONG as a description of the CURRENT live world. Amend repair plan: **preserve these exact three owner-identified Regions; ADD the required puzzle behaviors/logic and connect the authoritative state, without overlapping new Regions or replacing original observation `kmPmr5ijLCEOJNk3`**. Existing original observation remains separate. A valid outcome may require appropriate panel names, but do not rename without a justified workflow.
+
+The Regionwright Waterworks UI/engine demo already exists but defaults are placeholders and not owner-approved canonical valve pressures. No story completion, player action or reward is certified merely by Region presence. No Foundry documents were modified during this recheck. The precise new live read-only scene census is `LIVE-RECHECK-2026-10-27-1403.json`, capturing all 11 Region IDs and the three verified shapes/empty Behavior arrays.
+
+Keep both earlier and later snapshots as chronological evidence; the later evidence governs CURRENT presence claims. Other earlier puzzle checks (Sophia Spine absent, Sune sliding mosaic / Boiler / Rosewater installed) were not individually rechecked in this narrow corrective inspection.
