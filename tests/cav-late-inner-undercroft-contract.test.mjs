@@ -7,7 +7,7 @@ import {
  planInnerRefugeThresholdCrossing,planRefugeNarrativeInspection,planInnerDoorRehydrate
 } from "../modules/regionwright/scripts/studio-cav-late-inner-undercroft-contract.js";
 
-const TEST_ONLY_KEYSTONE="Item.NOT_A_VERIFIED_WORLD_KEYSTONE";
+const TEST_ONLY_KEYSTONE="Item.CAVKEYSTONEITEM1";
 const base=(scene=UND01_APPROACH)=>({
  version:INNER_UNDERCROFT_CONTRACT_VERSION,
  origin:"elected-gm-readback",worldId:"cabin-in-the-ashen-veil",

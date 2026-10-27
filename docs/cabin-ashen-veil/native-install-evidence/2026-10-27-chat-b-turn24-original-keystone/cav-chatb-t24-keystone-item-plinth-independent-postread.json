@@ -1,0 +1,19 @@
+{
+  "status": "Keystone-item-and-Vault-plinth-native-independent-GM-proof",
+  "gm": "Gamemaster 1",
+  "world": "cabin-in-the-ashen-veil",
+  "sourceItemUuid": "Item.CAVKEYSTONEITEM1",
+  "sourceStatus": "GM_LIBRARY_ONLY",
+  "sourceNewAuthority": "2026-10-27-owner-delegated-cav-keystone-source",
+  "sourceDescriptionSHA256": "510fb50b5b973e7351cc564a7a1750dd41a769f676f211d5fd8ec8b04308c36c",
+  "plinthRegionUuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114",
+  "behaviorUuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114.RegionBehavior.CAVVKEYPLINTH001",
+  "behaviorDisabled": true,
+  "scriptSHA256": "683e3bf75e97fd4f6a25b936f2ebee2ecb95b90368fae9ae59a5c93defb6d7ee",
+  "expectedScriptSHA256": "683e3bf75e97fd4f6a25b936f2ebee2ecb95b90368fae9ae59a5c93defb6d7ee",
+  "actorKeystoneCopies": 0,
+  "worldKeystoneCount": 1,
+  "allInnerBehaviorsDisabled": true,
+  "originalCrookedChasesDeferred": true,
+  "pass": true
+}

@@ -79,7 +79,7 @@ const pickup=(patch={})=>({
  currentWorldKeystoneItemReadbackVerified:true,
  keystoneSourceApprovedByOwnerOrExistingCanonVerified:true,
  // This is an INERT TEST FIXTURE, never a claimed live Foundry source UUID.
- keystoneSourceUuid:"Item.FIXTURE_NOT_AN_ACTUAL_WORLD_ITEM",
+ keystoneSourceUuid:"Item.CAVKEYSTONEITEM1",
  keystoneSourceName:"Keystone",keystoneSourceType:"loot",
  keystoneSourceDistinctFromEveryVaultInputVerified:true,
  keystoneSourceNotStagedAtBathReliquaryVerified:true,

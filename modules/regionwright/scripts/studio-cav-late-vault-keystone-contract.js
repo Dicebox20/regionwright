@@ -11,6 +11,7 @@ export const ORIGINAL_GOND_HALF="Item.o9G3UJjEe2QX1ZH0";
 export const ORIGINAL_SUNE_HALF="Item.t9uCIpsKeSvtC31w";
 export const HISTORICAL_COMPLETED_EMBLEM="Item.vbDWTbnAZg65ErSS";
 export const ORIGINAL_SCRYING_BOWL="Item.1n5LONw3nYIy61O9";
+export const ORIGINAL_KEYSTONE="Item.CAVKEYSTONEITEM1"; // Owner delegated 2026-10-27: native GM source receipt required
 export const VAULT_SOCKET_KINDS=Object.freeze(["charged-source","gond-half","sune-half"]);
 const SOURCES=Object.freeze({
  "charged-source":ORIGINAL_GONDIAN_SOURCE,
@@ -155,12 +156,11 @@ export function planVaultKeystonePickup(r){
     r.keystoneGrantLedgerStatus!=="none"||
     r.originalPlinthRewardPhysicalVisibleVerified!==true)
    return {action:"gm-review",reason:"vault-plinth-or-claim-state-not-ready"};
- // Keystone UUID is deliberately UNRESOLVED. The October 24 creation receipt
- // has no Keystone Item! Chat A must independently find a current approved source
- // or run the established owner-authorized Item creation workflow and reread it.
+ // T24 owner-authorized original Keystone Item.CAVKEYSTONEITEM1 now exists in the GM library.
+ // Its presence alone is NOT a reward receipt: prove the original Vault plinth pickup.
  if(r.currentWorldKeystoneItemReadbackVerified!==true||
     r.keystoneSourceApprovedByOwnerOrExistingCanonVerified!==true||
-    !itemId(r.keystoneSourceUuid)||
+    r.keystoneSourceUuid!==ORIGINAL_KEYSTONE||
     r.keystoneSourceName!=="Keystone"||r.keystoneSourceType!=="loot"||
     r.keystoneSourceUuid===ORIGINAL_SCRYING_BOWL||
     r.keystoneSourceUuid===HISTORICAL_COMPLETED_EMBLEM||

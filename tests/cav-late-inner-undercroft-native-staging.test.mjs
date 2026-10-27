@@ -14,8 +14,8 @@ test('all fixed physical Regions fit approved native maps and do not overlap',()
 test('different Keystone recess and explicit stone lever must remain separate',()=>{
  assert.notEqual(STAGES[0].id,STAGES[1].id);
  assert.equal(rectOverlap(STAGES[0].rect,STAGES[1].rect),false);
- assert.equal(OWNER_LOCK.originalKeystoneItemUuid,null);
- assert.equal(OWNER_LOCK.originalKeystoneVerified,false);
+ assert.equal(OWNER_LOCK.originalKeystoneItemUuid,"Item.CAVKEYSTONEITEM1");
+ assert.equal(OWNER_LOCK.originalKeystoneVerified,true);
 });
 test('original existing physical Keystone wall Region reused rather than overwritten',()=>{
  assert.equal(STAGES[0].original,true);
@@ -40,7 +40,7 @@ test('north door only aims into original passive UND02 western entry',()=>{
  ['Scene.ywpIpQDrkMLIgUP0.Region.CAVB74BDED08299D']);
 });
 test('no duplicate Keystone source Item or story progress synthesized',()=>{
- assert.equal(OWNER_LOCK.originalKeystoneItemUuid,null);
+ assert.equal(OWNER_LOCK.originalKeystoneItemUuid,"Item.CAVKEYSTONEITEM1");
  for(const b of STAGES.filter(s=>s.behaviorId&&!s.destination).map(behavior)){
   const script=b.system.source;
   for(const dis of ['createEmbeddedDocuments','setFlag(','update(','teleportToken'])

@@ -24,7 +24,7 @@ export const STAGES=Object.freeze([
   destination:'Scene.CN5fkK2QLUELBGGR.Region.CAVUNDRETURN0001'}
 ]);
 export const OWNER_LOCK=Object.freeze({
- source:'LOCK-13',originalKeystoneItemUuid:null,originalKeystoneVerified:false,
+ source:'LOCK-13',originalKeystoneItemUuid:"Item.CAVKEYSTONEITEM1",originalKeystoneVerified:true,
  keyAction:'Insert genuine Keystone into chest-high carved recess',
  leverAction:'Separately press the stone lever after authentic Keystone insertion',
  doorAction:'Cross north physical door only after the lever permanently opens it',
@@ -40,7 +40,7 @@ export function planValid(){
   for(const other of STAGES)if(s!==other&&s.sceneId===other.sceneId&&rectOverlap(s.rect,other.rect))return false;
  }
  return STAGES.filter(s=>s.behaviorId).length===4&&
- STAGES.filter(s=>!s.behaviorId).length===1&&OWNER_LOCK.originalKeystoneItemUuid===null;
+ STAGES.filter(s=>!s.behaviorId).length===1&&OWNER_LOCK.originalKeystoneItemUuid==="Item.CAVKEYSTONEITEM1";
 }
 export function behavior(stage){
  if(!stage.behaviorId)throw Error('Passive');

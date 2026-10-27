@@ -9,6 +9,7 @@ export const UND02_REFUGE="ywpIpQDrkMLIgUP0";
 export const SG05_CLEARING="CAVSG05Scene0001";
 export const HB02_VAULT="tjTpG2RVZNoCqRLh";
 export const ORIGINAL_SUNE_BOWL="Item.1n5LONw3nYIy61O9";
+export const ORIGINAL_KEYSTONE="Item.CAVKEYSTONEITEM1"; // Owner delegated, GM_LIBRARY_ONLY until Vault plinth claim
 export const ORIGINAL_GOND_HALF="Item.o9G3UJjEe2QX1ZH0";
 export const ORIGINAL_SUNE_HALF="Item.t9uCIpsKeSvtC31w";
 const text=v=>typeof v==="string"&&v.trim().length>0;
@@ -34,7 +35,7 @@ const outerOpen=r=>r.outerUndercroftGateLedger==="open"&&
  r.originalSG05SceneId===SG05_CLEARING;
 const keystone=r=>r.currentWorldKeystoneTemplateReverified===true&&
  r.originalKeystoneSourceOwnerApprovedVerified===true&&
- itemUuid(r.keystoneTemplateUuid)&&
+ r.keystoneTemplateUuid===ORIGINAL_KEYSTONE&&
  r.keystoneSourceName==="Keystone"&&r.keystoneSourceType==="loot"&&
  r.keystoneTemplateUuid!==ORIGINAL_SUNE_BOWL&&
  r.keystoneTemplateUuid!==ORIGINAL_GOND_HALF&&

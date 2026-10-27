@@ -1,0 +1,22 @@
+{
+  "status": "one-disabled-original-keystone-vault-plinth-behavior-installed",
+  "v": {
+    "world": "cabin-in-the-ashen-veil",
+    "electedGM": "Gamemaster 1",
+    "sceneUuid": "Scene.tjTpG2RVZNoCqRLh",
+    "regionUuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114",
+    "originalRegionBehaviors": 0,
+    "sourceUuid": "Item.CAVKEYSTONEITEM1",
+    "actorKeystoneCopies": 0,
+    "stageBehaviorId": "CAVVKEYPLINTH001",
+    "currentVaultRegions": 2,
+    "willRemainDisabled": true
+  },
+  "installed": {
+    "uuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114.RegionBehavior.CAVVKEYPLINTH001",
+    "disabled": true,
+    "sourceChars": 1268,
+    "sourceUuid": "Item.CAVKEYSTONEITEM1"
+  },
+  "originalVaultUnchanged": true
+}

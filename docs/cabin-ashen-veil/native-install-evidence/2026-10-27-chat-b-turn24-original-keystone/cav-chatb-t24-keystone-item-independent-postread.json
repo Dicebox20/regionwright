@@ -1,0 +1,17 @@
+{
+  "status": "original-Keystone-world-source-independent-elected-gm-readback",
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "uuid": "Item.CAVKEYSTONEITEM1",
+  "itemQuantity": 1,
+  "ownerAuthorised": "2026-10-27-owner-delegated-cav-keystone-source",
+  "libraryOnly": "GM_LIBRARY_ONLY",
+  "actorCopies": 0,
+  "worldKeystoneMatches": 1,
+  "vaultPlinth": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114",
+  "plinthBehaviors": 0,
+  "itemDescriptionSHA256": "510fb50b5b973e7351cc564a7a1750dd41a769f676f211d5fd8ec8b04308c36c",
+  "sourceDescriptionSHA256": "510fb50b5b973e7351cc564a7a1750dd41a769f676f211d5fd8ec8b04308c36c",
+  "originalInnerPortalsDisabled": true,
+  "pass": true
+}
