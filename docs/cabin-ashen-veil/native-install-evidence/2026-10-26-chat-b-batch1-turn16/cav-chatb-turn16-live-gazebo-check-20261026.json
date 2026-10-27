@@ -1,0 +1,400 @@
+{
+  "scenes": [
+    {
+      "id": "CAVEXT05Scene001",
+      "name": "EXT-05 - Forgotten Gazebo",
+      "w": 1920,
+      "h": 1440,
+      "art": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png",
+      "regions": [
+        {
+          "id": "CAVB011A44F1CAA7",
+          "name": "Gazebo Path ? approach",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1420,
+              "y": 940,
+              "width": 210,
+              "height": 190,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB036319A07D36",
+          "name": "Gazebo Steps ? landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 770,
+              "y": 600,
+              "width": 190,
+              "height": 180,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVEXT05LANTERN1",
+          "name": "EXT-05 - Gazebo Hanging Lantern (Wick and Lamp Oil)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 920,
+              "y": 375,
+              "width": 105,
+              "height": 135,
+              "rotation": 0,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVLANTERNBEH001",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ],
+          "flags": {
+            "cavLateBatch1": {
+              "status": "physical-fixture-staged",
+              "source": "2026-10-26-owner-live-batch1",
+              "purpose": "gazebo-lantern",
+              "basis": "owner-approved map, suspended lantern in gazebo at approximate x970,y425; no puzzle behaviors"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "w": 1536,
+      "h": 1024,
+      "art": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "vanity",
+              "sourceMap": "H-U07 v017",
+              "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+              "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+              "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+              "rewardUuids": [
+                "Item.CAVBRASSKEYVAN01",
+                "Item.CAVCARRIAGEKEY01"
+              ],
+              "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+            }
+          }
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 65,
+              "y": 395,
+              "width": 125,
+              "height": 165,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "departure",
+            "owner": "dicebox-router-v001"
+          }
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 220,
+              "y": 435,
+              "width": 120,
+              "height": 120,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "passive-arrival",
+            "owner": "dicebox-router-v001"
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "H-U08 - Candle Workshop",
+      "w": 1448,
+      "h": 1086,
+      "art": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVB78B258E0A0BB",
+          "name": "Candle Workshop ? central crafting table",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 575,
+              "y": 400,
+              "width": 260,
+              "height": 220,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBE5639AEC2179",
+          "name": "Candle Workshop ? shelving observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 435,
+              "y": 115,
+              "width": 240,
+              "height": 175,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVWICKSHELFBEH1",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "eye": {
+    "name": "Rufus’s Second Glass Eye",
+    "type": "loot",
+    "folder": "N6X80ycvxaPIszHg",
+    "img": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Rufus_Second_Button_Eye.png",
+    "system": {
+      "quantity": 1,
+      "description": {
+        "value": "<p>A second dark glass eye with the same unusual size and fastening as its counterpart. Fine cobweb fibers cling to the edges, and a trace of soot has settled into the join.</p><p>The eye is inert in your palm, yet it seems made with more care than simple taxidermy would require.</p>",
+        "chat": ""
+      },
+      "identifier": "rufuss-second-glass-eye",
+      "source": {
+        "revision": 1,
+        "rules": "2024"
+      },
+      "identified": true,
+      "unidentified": {
+        "description": ""
+      },
+      "container": null,
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      },
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "rarity": "",
+      "properties": [],
+      "type": {
+        "value": "",
+        "subtype": ""
+      }
+    },
+    "flags": {
+      "dicebox-campaign-helper": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Rufus’s Second Glass Eye"
+        }
+      },
+      "dnd5e": {
+        "riders": {
+          "activity": []
+        }
+      }
+    },
+    "_id": "QIH1ugEWGOO1U6LN",
+    "effects": [],
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "4c2ow5laZtzUNigr": 3
+    },
+    "_stats": {
+      "coreVersion": "14.367",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3",
+      "createdTime": 1792872928456,
+      "modifiedTime": 1792879093896,
+      "lastModifiedBy": "4c2ow5laZtzUNigr",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "oil": {
+    "name": "Lamp Oil",
+    "type": "loot",
+    "folder": "N6X80ycvxaPIszHg",
+    "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+    "system": {
+      "quantity": 1,
+      "description": {
+        "value": "<p>A modest supply of oil useful for fueling an ordinary lantern. It was kept among the tools and equipment in Donovan’s Shack.</p><p>The oil must be used with a proper wick and lantern; it does not provide either part on its own.</p>",
+        "chat": ""
+      },
+      "identifier": "sluice-crank",
+      "source": {
+        "revision": 1,
+        "rules": "2024"
+      },
+      "identified": true,
+      "unidentified": {
+        "description": ""
+      },
+      "container": null,
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      },
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "rarity": "",
+      "properties": [],
+      "type": {
+        "value": "",
+        "subtype": ""
+      }
+    },
+    "flags": {
+      "dicebox-campaign-helper": {
+        "cavPuzzleSourceNode": "oil",
+        "cavPuzzleSourceScene": "CAVEXT03Scene001",
+        "cavPuzzleSourceObject": "donovan-worktable-lantern",
+        "sourceTemplateUuid": "Item.g3VYdgc1qkgkHGvn",
+        "artPlacementAuthority": "INFERRED_FROM_OWNER_APPROVED_MAP_LANTERN"
+      },
+      "cabinPuzzleItem": {
+        "source": "owner-corrected-2026-10-20-puzzle-chain",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Lamp Oil"
+      }
+    },
+    "_id": "CAVLAMPOIL000001",
+    "effects": [],
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "4c2ow5laZtzUNigr": 3
+    },
+    "_stats": {
+      "coreVersion": "14.367",
+      "systemId": "dnd5e",
+      "systemVersion": "5.3.3",
+      "createdTime": 1792951696102,
+      "modifiedTime": 1792951696102,
+      "lastModifiedBy": "4c2ow5laZtzUNigr",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "eyeActorCopies": [],
+  "journals": []
+}
