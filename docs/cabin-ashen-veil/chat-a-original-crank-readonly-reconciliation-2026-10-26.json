@@ -1,0 +1,72 @@
+{
+  "schema": "dicebox.cav.chat-a-crank-reconciliation-readonly/v1",
+  "dateLocal": "2026-10-26",
+  "ownerMessage": "resume",
+  "chat": "A",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "startingCommit": "fb8ef607d4cf892557db402e5041c93294b3a79d",
+    "added": [
+      "modules/regionwright/scripts/studio-cav-crank-reconciliation.js",
+      "tests/cav-original-crank-readonly-reconciliation.test.mjs"
+    ],
+    "modified": [
+      "modules/regionwright/scripts/studio-campaign.js"
+    ],
+    "testCount": 110,
+    "testsPass": 110,
+    "testsFail": 0,
+    "newTests": 9,
+    "sha": {
+      "registry": "BCF4855989A63E33C703D40D52FD8652E74104C59D75C7B282BC310F12F3774C",
+      "diagnostic": "7AB389895C05B766CD889E17C3DE4428A5B786AE4BE4601424595EE1D628E620"
+    },
+    "installedSourceMatches": true
+  },
+  "api": "game.modules.get('regionwright').api.campaign.cabin.crankReconciliation.describe()",
+  "gm": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "readOnlyBaselineClaim": null,
+    "readOnlyBaselineFitting": null,
+    "readOnlyBaselineWater": null,
+    "readOnlyBaselineTransaction": null,
+    "taggedCranks": 0,
+    "actorCount": 6,
+    "gmListeners": {
+      "study": true,
+      "crank": true,
+      "water": true
+    },
+    "reloadCount": 1,
+    "activeSourceVerified": true,
+    "postReloadStatus": "not-claimed",
+    "requiresGM": false,
+    "syntheticReservedStatus": "reserved-award-item-not-found",
+    "syntheticReservedRequiresGM": true,
+    "originalSluiceEnabled": true,
+    "rosewaterDisabled": true,
+    "chatMessages": 54,
+    "nativeWrites": 0
+  },
+  "scope": "source-only read-only reconciliation; NEVER automatically retry reserved create/delete or advance Crank/Water",
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-study587-crank-claim-readonly-baseline-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-crank-readonly-reconciliation-postreload-gm-20261026.json"
+  ],
+  "classification": {
+    "sourceBuilt": true,
+    "installed": true,
+    "gmRuntimeVerified": true,
+    "actualPlayerPlaytested": false
+  },
+  "next": [
+    "Original 587 client request/source authenticity and reserved ledger reconciliation audit",
+    "No duplicated Item, forced quest flags or automatic recovery",
+    "Chat B separate late-game source work"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless native transcript"
+}
