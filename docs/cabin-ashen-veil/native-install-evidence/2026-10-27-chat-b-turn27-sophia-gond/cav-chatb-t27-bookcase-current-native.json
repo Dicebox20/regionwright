@@ -1,0 +1,19 @@
+{
+  "source": "// Sophia bookcase: owner-approved zoom; storybook titles and slot assignments NOT assumed.\nconst SCENE='CAVHU05Scene0001',RID='CAVB994894A7432F',SLOT='__CAV_SOPHIA_BOOKS_INSPECT_v001';\nconst IMG='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/sophia-bookcase-approved-crop-v001.png';\nif(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==RID)return;\nconst ev=event?.name,prior=globalThis[SLOT];\nif(ev==='behaviorUnviewed'||ev==='behaviorDeactivated'){\n if(prior?.handler&&canvas?.stage)canvas.stage.off('pointertap',prior.handler);\n delete globalThis[SLOT];return;\n}\nif(ev!=='behaviorViewed'||game.user?.isGM)return;\nif(prior?.handler&&canvas?.stage)canvas.stage.off('pointertap',prior.handler);\nconst handler=async e=>{\n if(!canvas?.ready||canvas.scene?.id!==SCENE||game.user.isGM||(e.button!==undefined&&e.button!==0))return;\n const pt=canvas.stage.toLocal(e.global);\n if(!region.testPoint({x:pt.x,y:pt.y,elevation:0}))return;\n if(globalThis[SLOT+'_MODAL'])return;globalThis[SLOT+'_MODAL']=true;\n try{await foundry.applications.api.DialogV2.prompt({\n  window:{title:'Sophia\\u2019s Bookcase'},\n  content:'<figure style=\"max-width:570px;margin:auto;text-align:center\"><img src=\"'+IMG+'\" alt=\"Close-up of the books and keepsakes on Sophia\\u2019s bookcase\" style=\"display:block;max-width:100%;max-height:67vh;margin:auto\"/><figcaption style=\"font-style:italic;margin:0.6rem\">The shelves hold stories and keepsakes arranged with care. Several familiar bindings catch your eye.</figcaption></figure>',\n  ok:{label:'Close',callback:()=>true},rejectClose:false\n });}finally{globalThis[SLOT+'_MODAL']=false;}\n};\nif(canvas?.stage){canvas.stage.on('pointertap',handler);globalThis[SLOT]={handler};}",
+  "behaviorDisabled": false,
+  "regionBehaviors": 1,
+  "item": {
+    "id": "o9G3UJjEe2QX1ZH0",
+    "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+    "flags": {
+      "cabinPuzzleItem": {
+        "source": "2026-10-24-approved-puzzle-chain",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Gond Emblem Half"
+      }
+    }
+  },
+  "walls": 0,
+  "tiles": 0,
+  "sourceRegionFlags": null
+}

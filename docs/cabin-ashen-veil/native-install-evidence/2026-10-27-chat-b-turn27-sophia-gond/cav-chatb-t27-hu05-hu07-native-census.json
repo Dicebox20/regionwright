@@ -1,0 +1,442 @@
+{
+  "scenes": [
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "H-U05 - Sophias Bedroom",
+      "src": "Maps/cabin-in-the-ashen-veil/H-U05_Sophias_Bedroom_V004_OWNER_APPROVED_SOUTH_DOOR_REMOVED_2026-10-24.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVB0FDF8543F6D9",
+          "name": "Sophia Bedroom ? stuffed bear observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1070,
+              "y": 515,
+              "width": 200,
+              "height": 175,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "aZlQOQfF6gPrMaye",
+              "name": "Sophia Bear — Inspect and Authentic First Eye",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ],
+              "length": 4375,
+              "preview": "// Owner-approved Sophia Bedroom stuffed bear. Native player click close-up and GM-authored item on approach.\nconst NS='dicebox-campaign-helper',SCENE='CAVHU05Scene0001',RID='CAVB0FDF8543F6D9';\nconst SOURCE='Item.mN1dk0qlr7hyfupk',LEDGER='cavSophiaBearEyeClaim';\nconst IMAGE='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/"
+            }
+          ]
+        },
+        {
+          "id": "CAVB994894A7432F",
+          "name": "Sophia Bedroom ? bookcase observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 930,
+              "y": 135,
+              "width": 220,
+              "height": 170,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "LRYrBIQNN92SCJai",
+              "name": "Sophia Bookcase — Player Close-up Only",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ],
+              "length": 1747,
+              "preview": "// Sophia bookcase: owner-approved zoom; storybook titles and slot assignments NOT assumed.\nconst SCENE='CAVHU05Scene0001',RID='CAVB994894A7432F',SLOT='__CAV_SOPHIA_BOOKS_INSPECT_v001';\nconst IMG='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/sophia-bookcase-approved-crop-v001.png';\nif(game.world?.id!=='cabin-in-the-ashe"
+            }
+          ]
+        },
+        {
+          "id": "CAVHU05ARRIVE001",
+          "name": "H-U05 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 630,
+              "y": 730,
+              "width": 170,
+              "height": 130,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "branch": "cav-old-iron-key-sophia-v001",
+            "role": "arrival",
+            "stage": "SOURCE_GEOMETRY",
+            "provenance": "owner-approved-puzzle-chain-and-map"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVHU05RETURN001",
+          "name": "H-U05 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 640,
+              "y": 905,
+              "width": 175,
+              "height": 106,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "branch": "cav-old-iron-key-sophia-v001",
+            "role": "return",
+            "stage": "SOURCE_GEOMETRY",
+            "provenance": "owner-approved-puzzle-chain-and-map"
+          },
+          "behaviors": [
+            {
+              "id": "CAVHU05RETURNB01",
+              "name": "H-U05 → Upper Gallery",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ],
+      "tiles": []
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "src": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "vanity",
+              "sourceMap": "H-U07 v017",
+              "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+              "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+              "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+              "rewardUuids": [
+                "Item.CAVBRASSKEYVAN01",
+                "Item.CAVCARRIAGEKEY01"
+              ],
+              "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+            },
+            "cavVerifiedNativeInstallReceiptV1": {
+              "version": 1,
+              "status": "NATIVE_BEHAVIOR_INSTALLED_GM_VERIFIED",
+              "world": "cabin-in-the-ashen-veil",
+              "verifiedBy": "Chat A exact elected-GM readback",
+              "sourceBranch": "codex/cav-sune-integration-20261026",
+              "sourceCommit": "17ea82bda1a0da04a233f9173630cb8763b7cd2a",
+              "verifiedDate": "2026-10-26",
+              "behaviorId": "CAVVANITYBEH0001",
+              "sourceSha256": "744a523cc0e90b01a6ea91dc7145e7e8cfce4a9ed094b292edd4f4e845d2dfbd",
+              "originalHistoricalField": "cavFirstActRegion.status",
+              "originalHistoricalValue": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED",
+              "testStatus": "INSTALLATION_ONLY_NOT_PLAYER_ACCEPTED"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "name": "H-U07 - Dahlia Vanity: Mirror reveals two keys",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ],
+              "length": 4112,
+              "preview": "// H-U07 Dahlia's Studio - mirror socket and paired vanity key discovery (v001)\n// Native Foundry v14 ExecuteScript, dispatched only by a character's token movement.\n// Authority: elected active GM only. The player does not need GM rights or a Macro.\nif (!['tokenMoveIn', 'tokenMoveWithin'].includes(event?.name)) return;\nif (!gam"
+            }
+          ]
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 65,
+              "y": 395,
+              "width": 125,
+              "height": 165,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "departure",
+            "owner": "dicebox-router-v001"
+          },
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "name": "Dahlia Art Studio → Upper Gallery",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 220,
+              "y": 435,
+              "width": 120,
+              "height": 120,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "passive-arrival",
+            "owner": "dicebox-router-v001"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVSTUDIORETURN1",
+          "name": "H-U07 - Return landing from Candle Workshop",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1020,
+              "y": 765,
+              "width": 145,
+              "height": 145,
+              "rotation": 0,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "studio-return-arrival",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVSUNEACTION001",
+          "name": "H-U07 - Sune east shrine: separate prayer reading place",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1120,
+              "y": 350,
+              "width": 130,
+              "height": 180,
+              "rotation": 0,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "sune-altar",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSUNEPRAYBEH01",
+              "name": "Sune shrine reading — DISABLED until native original prayer authority",
+              "type": "executeScript",
+              "disabled": true,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ],
+              "length": 1331,
+              "preview": "const NS='dicebox-campaign-helper';\nif(!game?.ready||game.world?.id!=='cabin-in-the-ashen-veil'||\n  scene?.id!=='CAVHU07Scene0001'||region?.id!=='CAVSUNEACTION001')return;\nif(!['behaviorViewed','behaviorUnviewed','behaviorDeactivated'].includes(event?.name))return;\nconst key='__CAV_B21_SUNE_ALTAR_'+region.id;\nif(event.name!=='be"
+            }
+          ]
+        },
+        {
+          "id": "CAVSUNEEASTPASS1",
+          "name": "H-U07 - Concealed EAST Sune passage (sealed)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1320,
+              "y": 625,
+              "width": 150,
+              "height": 155,
+              "rotation": 0,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "gridBased": false
+            }
+          ],
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "studio-east-departure",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSUNEOUTTELE01",
+              "name": "Sune east passage — SEALED until real Protection reading",
+              "type": "teleportToken",
+              "disabled": true,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ],
+      "tiles": []
+    }
+  ],
+  "items": [
+    {
+      "id": "Qplmy8JR7plDYLiY",
+      "name": "The Knight Who Befriended a Dragon",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "DLGIhHc0RDqh0YVt",
+      "name": "Moonlight and the Missing Stars",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "TO69wBYN8sRJuxtH",
+      "name": "Felix Fox and the Forgotten Kingdom",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "c3oKW8YkklE8slnX",
+      "name": "Whispers of the Little Witch",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "HV7XjKmgqVITSEvW",
+      "name": "The Clockmaker’s Starless Sky",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "gmTsIOqc3qFBc3zA",
+      "name": "Princess Penelope and the Sea of Stars",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "o9G3UJjEe2QX1ZH0",
+      "name": "Gond Emblem Half",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    },
+    {
+      "id": "t9uCIpsKeSvtC31w",
+      "name": "Sune Emblem Half",
+      "type": "loot",
+      "status": "GM_LIBRARY_ONLY",
+      "folder": "N6X80ycvxaPIszHg"
+    }
+  ]
+}
