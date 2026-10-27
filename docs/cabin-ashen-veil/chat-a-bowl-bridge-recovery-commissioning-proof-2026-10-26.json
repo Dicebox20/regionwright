@@ -1,0 +1,17 @@
+{
+    "failures":  0,
+    "bridgeChatIdentityVerified":  false,
+    "base":  "b1f926418facb5d1e483fadf7bb7fd7c166743d1",
+    "nativeBowlPickupInstalled":  false,
+    "focusedTests":  19,
+    "deployedHash":  "70732E8FD211AC2BC6887EBE2EA9EEC572BBE807BDADC47F68F909F92D758C65",
+    "bridgeRestored":  true,
+    "moduleDiskVerified":  true,
+    "schema":  "dicebox.cav.chat-a-bowl-recovery-v1",
+    "files":  43,
+    "foundryRuntimeReadback":  false,
+    "compatibilityTestingDeferred":  true,
+    "sourceTests":  236,
+    "ownerPickupApproval":  false,
+    "date":  "2026-10-26"
+}
