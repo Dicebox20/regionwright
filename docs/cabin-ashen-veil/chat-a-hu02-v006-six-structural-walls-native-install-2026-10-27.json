@@ -1,0 +1,42 @@
+{
+    "chatBUndercroftUntouched":  true,
+    "wallCountBefore":  0,
+    "independentElectedGM":  "PASS",
+    "existingTokensUnmoved":  true,
+    "ownerApprovedArt":  "h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+    "independentReadback":  "utility-harness/artifacts/cav-chat-a-hu02-six-partial-structural-walls-independent-GM-postread-20261027.json",
+    "bottomBoundaryDeferredForRealPCs":  true,
+    "sourceTestsPassed":  273,
+    "totalWorldRegions":  250,
+    "wallCountAfter":  6,
+    "datePacific":  "2026-10-27",
+    "actualNonGMPlayerTests":  false,
+    "wallBuild":  "cav-hu02-v006-partial-perimeter-walls-2026-10-27",
+    "totalWorldBehaviors":  140,
+    "totalWorldWalls":  61,
+    "sourceTestsFailed":  0,
+    "scene":  "gGgUHlHdI7RFrbUh",
+    "ownerDelegatedApproval":  true,
+    "sophiaAndAtticGatesPreserved":  true,
+    "sceneSize":  [
+                      1440,
+                      1800
+                  ],
+    "sourceBefore":  "c3b35b0c0f6ade862c55993f91fad14adb242b8e",
+    "nativeSameCall":  "PASS",
+    "sceneArtUnchanged":  true,
+    "fullWallPerimeterClosed":  false,
+    "newTests":  5,
+    "nativeReceipt":  "utility-harness/artifacts/cav-chat-a-hu02-owner-approved-six-partial-structural-walls-install-20261027.json",
+    "schema":  "dicebox.cav.hu02-owner-delegated-six-walls-v1",
+    "testFiles":  51,
+    "newNativeWallIDs":  [
+                             "CAVHU02WALL00001",
+                             "CAVHU02WALL00002",
+                             "CAVHU02WALL00003",
+                             "CAVHU02WALL00004",
+                             "CAVHU02WALL00005",
+                             "CAVHU02WALL00006"
+                         ],
+    "sceneRegions":  14
+}

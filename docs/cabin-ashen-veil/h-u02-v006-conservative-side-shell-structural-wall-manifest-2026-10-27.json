@@ -1,0 +1,90 @@
+{
+    "schema":  "dicebox.cav.hu02.v006.partial-structural-wall/v1",
+    "world":  "cabin-in-the-ashen-veil",
+    "scene":  "gGgUHlHdI7RFrbUh",
+    "originalOwnerApprovedArt":  "Maps/cabin-in-the-ashen-veil/h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+    "sceneSize":  [
+                      1440,
+                      1800
+                  ],
+    "status":  "APPROVED_BY_CAMPAIGN_OWNER_DELEGATE_FOR_GUARDED_INSTALL",
+    "phase":  "PARTIAL_PERIMETER_SIDES_AND_NORTH_FRAME_NO_SOUTH_CLOSURE",
+    "ownerDelegateApproval":  "owner delegated all Cabin creative and technical decisions 2026-10-26",
+    "intent":  "Native movement/light/sight/sound blocking exterior wall segments around FIVE existing and enabled/disabled original Region portals; leave staircase and lower shell open because TWO existing PC tokens currently stand south of visual lower wall",
+    "movementBlock":  20,
+    "lightBlock":  20,
+    "sightBlock":  20,
+    "soundBlock":  20,
+    "doorType":  0,
+    "segments":  [
+                     {
+                         "id":  "CAVHU02WALL00001",
+                         "name":  "west-upper-sidewall",
+                         "c":  [
+                                   100,
+                                   340,
+                                   100,
+                                   510
+                               ]
+                     },
+                     {
+                         "id":  "CAVHU02WALL00002",
+                         "name":  "west-lower-sidewall",
+                         "c":  [
+                                   100,
+                                   770,
+                                   100,
+                                   1540
+                               ]
+                     },
+                     {
+                         "id":  "CAVHU02WALL00003",
+                         "name":  "east-upper-sidewall",
+                         "c":  [
+                                   1365,
+                                   340,
+                                   1365,
+                                   510
+                               ]
+                     },
+                     {
+                         "id":  "CAVHU02WALL00004",
+                         "name":  "east-lower-sidewall",
+                         "c":  [
+                                   1365,
+                                   770,
+                                   1365,
+                                   1540
+                               ]
+                     },
+                     {
+                         "id":  "CAVHU02WALL00005",
+                         "name":  "north-left-frame",
+                         "c":  [
+                                   415,
+                                   65,
+                                   580,
+                                   65
+                               ]
+                     },
+                     {
+                         "id":  "CAVHU02WALL00006",
+                         "name":  "north-right-frame",
+                         "c":  [
+                                   875,
+                                   65,
+                                   1080,
+                                   65
+                               ]
+                     }
+                 ],
+    "pending":  "Full perimeter SOUTH collision closure intentionally deferred until two original player characters south of illustrated wall are safely repositioned/cleared by genuine player action or explicit owner-controlled staging, and north diagonal jambs inspected. Never claim wall completeness nor real player acceptance from this phase.",
+    "preserved":  [
+                      "original 14 H-U02 Regions and their UUIDs",
+                      "five original outgoing/return teleport pairs",
+                      "Sophia locked source scripts",
+                      "Attic Hook gated source and original disabled portals",
+                      "two player token coordinates",
+                      "all Chat B late-game and Undercroft source/objects"
+                  ]
+}
