@@ -1,0 +1,85 @@
+{
+  "schema": "dicebox.cav.chat-a-larger-batch-three-successor-guards/v1",
+  "dateLocal": "2026-10-26",
+  "ownerDirective": "Lets start installing slightly larger batches, start doing installations and instpections in one turn",
+  "chat": "A",
+  "workflow": "PREPARE-INSPECT-BUILD-VERIFY-CATALOGUE; 2-3 adjacent fixes plus live inspections in one bounded turn",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "beforeCommit": "ef569be1d4da7355f5a4499e54ec135947b8255f",
+    "modified": [
+      "modules/regionwright/scripts/studio-cav-basement-nightstand.js",
+      "modules/regionwright/scripts/studio-cav-aqueduct-gate.js"
+    ],
+    "newModules": [
+      "modules/regionwright/scripts/studio-cav-successor-pickup-proof.js",
+      "modules/regionwright/scripts/studio-cav-aqueduct-part-proof.js"
+    ],
+    "newTests": [
+      "tests/cav-successor-original-drained-pickup-proof.test.mjs",
+      "tests/cav-aqueduct-original-parts-and-drain-proof.test.mjs"
+    ],
+    "newTestsCount": 18,
+    "fullTestsPassed": 162,
+    "fullTestsFailed": 0,
+    "sourceInstalledShaMatches": true,
+    "sha": {
+      "successor": "C62F4652A3BBACE1BC9610407278A4CF54617CDF2338ACF2DC7371F2CD32E3D2",
+      "aqueductPart": "A830DB8DF52CD5D5558C2E354F615C98C99F50D570062EFAAD8F9ED33FE0F408",
+      "basementNightstand": "D33D5A9970C8E2930093F5FB1A4ED3A2A9177B40B5F886D74012796570533C2E",
+      "aqueductGate": "0DFA3CD107AF2D33FABDCE04096ED7449B8D89EABD3195CFBAB1E84A42BDEE05"
+    }
+  },
+  "live": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "activeElectedGM": "Gamemaster 1",
+    "scenes": 47,
+    "chatMessages": 54,
+    "boiler": {
+      "status": "ready",
+      "pairedVariants": 2,
+      "canon": [
+        2,
+        1
+      ],
+      "bothSessions": null,
+      "changed": false
+    },
+    "basementPortalDisabled": true,
+    "aqueductPortalDisabled": true,
+    "rosewaterDisabled": true,
+    "pondArtwork": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+    "trailFullBathDestination": "Scene.CAVBATHScene0001.Region.R2Pg9eHODtb1C1Yk",
+    "allRewardWaterRepairAndAQFlags": null,
+    "taggedSuccessorItems": 0,
+    "GMListeners": {
+      "boiler": true,
+      "basement": true,
+      "aqueduct": true,
+      "drained": true
+    },
+    "sourceReloadOnce": true,
+    "positiveAfterReloadReadback": true,
+    "realWorldStoryWrites": 0,
+    "realPlayerGameplayTests": 0
+  },
+  "tests": {
+    "authenticWeatherKeyGrantedPureAccepted": true,
+    "reservedWeatherKeyRejected": true,
+    "authenticHandleGrantedAndRepairedPureAccepted": true,
+    "reservedHandleRejected": true,
+    "handleMissingRepairRejected": true
+  },
+  "onHostEvidence": [
+    "utility-harness/artifacts/cav-chat-a-batch-original-boiler-weathered-basement-nightstand-baseline-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-large-batch-three-downstream-guard-and-boiler-postreload-gm-20261026.json"
+  ],
+  "next": [
+    "Continue next 2-3 source dependency edges with same enlarged batch/inspection workflow",
+    "No forced player puzzle progress, Crooked Man Actor or first chase commissioning",
+    "No Chat B native world writes"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless native transcript"
+}

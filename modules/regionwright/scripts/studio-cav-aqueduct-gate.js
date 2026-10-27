@@ -1,3 +1,5 @@
+import {assessCavAqueductPartProof} from "./studio-cav-aqueduct-part-proof.js";
+import {assessCavDrainedPickupWaterReady} from "./studio-cav-drained-pickups.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",REG="CAVPONDAQGATE001",PORT="CAVPONDAQPORT001",AQ="CAVAQ01Scene0001";
 const GEAR="Item.wDKqETOykWEdKF1Z",GEAR_ORIGIN="Scene.LhtyO17QenuCExsb.Region.CAVROOFCLOCKR001";
@@ -16,10 +18,37 @@ function elected(){return game?.ready&&game.world?.id===WORLD&&game.user?.isGM&&
 function tokenCenter(t,scene){return{x:t.x+t.width*scene.grid.size/2,y:t.y+t.height*scene.grid.size/2,elevation:0};}
 function sourceCopy(actor,part){
  const uuid=part==="gear"?GEAR:HANDLE,origin=part==="gear"?GEAR_ORIGIN:HANDLE_ORIGIN;
- const f=part==="gear"?"cavRoofGearSourceUuid":"cavGateHandleSourceUuid";
- const r=part==="gear"?"cavRoofGearRegionUuid":"cavGateHandleSourceRegionUuid";
- const name=part==="gear"?"Replacement Gear":"Aqueduct Gate Handle";
- return actor.items.find(i=>i.type==="loot"&&i.name===name&&i.getFlag(NS,f)===uuid&&i.getFlag(NS,r)===origin);
+ const flag=part==="gear"?"cavRoofGearSourceUuid":"cavGateHandleSourceUuid";
+ const srcRegionFlag=part==="gear"?"cavRoofGearRegionUuid":"cavGateHandleSourceRegionUuid";
+ const extraFlag=part==="gear"?"cavRoofGearPuzzle":"cavParentsNightstandSource";
+ const ids=origin.split("."),reg=game.scenes.get(ids[1])?.regions.get(ids[3]);
+ const item=game.items.get(uuid.slice(5));
+ const all=game.actors.contents.flatMap(a=>a.items.contents.flatMap(i=>{
+  const src=i.getFlag(NS,flag),orig=i.getFlag(NS,srcRegionFlag);
+  if(src!==uuid&&orig!==origin)return[];
+  return[{actorId:a.id,id:i.id,name:i.name,type:i.type,quantity:i.system?.quantity,
+   sourceUuid:src,originUuid:orig,marker:i.getFlag(NS,extraFlag)}];
+ }));
+ const screw=game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("CAVBATHSCRDRY001")?.getFlag(NS,"cavDrainedPickupClaim");
+ const repair=game.scenes.get("CAVHU04Scene0001")?.regions.get("CAVPARENTNIGHT01")?.getFlag(NS,"cavNightstandRepaired");
+ const claim=reg?.getFlag(NS,part==="gear"?"cavRoofClockClaim":"cavNightstandHandleClaim");
+ const proof=assessCavAqueductPartProof({
+  part,claim,regionUuid:reg?.uuid,actorId:actor?.id,
+  source:item&&{uuid:item.uuid,name:item.name,type:item.type,quantity:item.system?.quantity},
+  items:all,nightstandRepair:repair,screwdriverClaim:screw
+ });
+ return proof.ready?actor.items.get(proof.itemId):null;
+}
+function gateWaterDrained(){
+ const pond=game.scenes.get(POND),gate=pond?.regions.get("CAVEXT02SLUICE01");
+ const trail=game.scenes.get("CAVTRAILScene001")?.regions.get("13g6uK1QrR9PFOzA")?.behaviors.get("ZbrhX0nnaLvLA5Zh");
+ const proof=assessCavDrainedPickupWaterReady({
+  crank:gate?.getFlag(NS,"cavSluiceCrankInstall"),water:gate?.getFlag(NS,"cavPondBathWaterState"),
+  transaction:gate?.getFlag(NS,"cavSluiceStageTransaction"),pondBackground:pond?.background?.src,
+  trailPortal:trail&&{id:trail.id,type:trail.type,disabled:trail.disabled,destinations:[...(trail.system?.destinations??[])]},
+  dryBathLandingExists:!!game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("R2Pg9eHODtb1C1Yk")
+ });
+ return proof.ready;
 }
 async function installPart(req,uid){
  if(!elected()||req?.version!==1||!["gear","handle"].includes(req.part)||
@@ -27,9 +56,7 @@ async function installPart(req,uid){
  const s=game.scenes.get(POND),r=s?.regions.get(REG),user=game.users.get(uid),token=s?.tokens.get(req.tokenId),actor=token?.actor;
  if(!r||!user?.active||user.isGM||!token||token.hidden||actor?.type!=="character"||
  !actor.testUserPermission(user,"OWNER")||!r.testPoint(tokenCenter(token,s)))return "denied";
- const sluice=s.regions.get("CAVEXT02SLUICE01"),water=sluice?.getFlag(NS,"cavPondBathWaterState");
- if(water?.status!=="open"||water?.pond!=="drained"||s.background.src!=="Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png"||
- sluice?.getFlag(NS,"cavSluiceStageTransaction")?.status!=="done")return "water";
+ if(!gateWaterDrained())return "water";
  const ledger=req.part==="gear"?GEAR_FLAG:HANDLE_FLAG;
  const old=r.getFlag(NS,ledger);if(old?.status==="done")return "already";if(old)return "reconcile";
  const original=sourceCopy(actor,req.part);if(!original)return "missing";
@@ -79,8 +106,7 @@ export async function handleCabinAqueductGateRegionEvent(region,event){
   try{
    const owned=canvas.tokens.controlled.filter(t=>t.actor?.type==="character"&&t.actor.testUserPermission(game.user,"OWNER"));
    const token=owned.length===1?owned[0].document:null,actor=token?.actor,near=!!token&&region.testPoint(tokenCenter(token,canvas.scene));
-   const src=canvas.scene.regions.get("CAVEXT02SLUICE01")?.getFlag(NS,"cavPondBathWaterState");
-   const water=src?.status==="open"&&src?.pond==="drained";
+    const water=gateWaterDrained();
    const stage=aqueductGearStage(region.getFlag(NS,GEAR_FLAG),region.getFlag(NS,HANDLE_FLAG));
    const next=near&&water?nextAqueductPart(stage,!!sourceCopy(actor,"gear"),!!sourceCopy(actor,"handle")):null;
    const label=next==="gear"?"Install Replacement Gear":next==="handle"?"Install Gate Handle":"Close";

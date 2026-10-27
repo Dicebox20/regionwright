@@ -1,4 +1,5 @@
-﻿const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
+import {assessCavSuccessorPickup,assessCavNightstandRepairProof} from "./studio-cav-successor-pickup-proof.js";
+const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const FOYER="CAVHG02Scene0001",FREG="CAVFOYERBASEDR01",FPORT="CAVFOYERBASPORT1";
 const BASE="G6NMonfCwMvNzipL",ARRIVAL="CAVB9C0F653A2A6F",FOYER_RETURN="CAVFOYERBASEAR01";
 const PARENTS="CAVHU04Scene0001",NREG="CAVPARENTNIGHT01";
@@ -20,7 +21,23 @@ function context(uid,sceneId,regionId,tokenId){
  return{user,scene,region,token,actor};
 }
 function exactItem(actor,uuid,name,flag,origin){
- return actor.items.find(i=>i.name===name&&i.type==="loot"&&i.getFlag(NS,flag)===uuid&&i.getFlag(NS,"cavDrainedPickupRegionUuid")===origin&&i.getFlag(NS,"cavDrainedPickupSourceUuid")===uuid);
+ const kind=uuid===WEATHER?"weather":uuid===DRIVER?"screwdriver":null;
+ if(!kind)return null;
+ const ids=origin.split(".");
+ const region=game.scenes.get(ids[1])?.regions.get(ids[3]);
+ const source=game.items.get(uuid.split(".")[1]);
+ const items=game.actors.contents.flatMap(a=>a.items.contents.flatMap(i=>{
+  const id=i.getFlag(NS,"cavDrainedPickupSourceUuid"),special=i.getFlag(NS,flag);
+  if(id!==uuid&&special!==uuid)return[];
+  return[{actorId:a.id,id:i.id,name:i.name,type:i.type,quantity:i.system?.quantity,
+   sourceUuid:id,originUuid:i.getFlag(NS,"cavDrainedPickupRegionUuid"),markerUuid:special}];
+ }));
+ const proof=assessCavSuccessorPickup({
+  kind,source:source&&{uuid:source.uuid,name:source.name,type:source.type,quantity:source.system?.quantity},
+  regionUuid:region?.uuid,claim:region?.getFlag(NS,"cavDrainedPickupClaim"),
+  actorId:actor?.id,items
+ });
+ return proof.ready?actor.items.get(proof.itemId):null;
 }
 async function openBasement(req,uid){
  if(req?.version!==1||req.action!=="unlock"||req.sceneId!==FOYER||req.regionId!==FREG)return "denied";
@@ -51,7 +68,9 @@ async function handleNightstand(req,uid){
   await c.region.setFlag(NS,REPAIR,{status:"done",actorId:c.actor.id,toolSourceUuid:DRIVER});
   return "repaired";
  }
- if(repair?.status!=="done")return "blocked";
+  if(repair?.status!=="done")return "blocked";
+  const driverPickup=game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("CAVBATHSCRDRY001")?.getFlag(NS,"cavDrainedPickupClaim");
+  if(!assessCavNightstandRepairProof({repair,screwdriverClaim:driverPickup}).ready)return "reconcile";
  if(claim?.status==="done")return "already";
  if(claim)return "reconcile";
  const item=game.items.get("nRVZJL9JOwEwfnLq");
@@ -111,7 +130,10 @@ export async function handleCabinBasementNightstandRegionEvent(region,event){
    }else{
     msg=stage==="empty"?"The repaired drawer is empty.":stage==="handle"?"The freed drawer now exposes a heavy gate handle.":stage==="reconcile"?"The stuck mechanism needs Gamemaster attention.":"A nightstand drawer has jammed badly; its fastener could be freed with a narrow screwdriver.";
     if(c&&stage==="repair"&&exactItem(c.actor,DRIVER,"Screwdriver","cavBathScrewdriverSourceUuid",DRIVER_ORIGIN)){action="repair";label="Repair with Screwdriver"}
-    else if(c&&stage==="handle"){action="claim";label="Take Gate Handle"}
+    else if(c&&stage==="handle"&&assessCavNightstandRepairProof({
+      repair:region.getFlag(NS,REPAIR),
+      screwdriverClaim:game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("CAVBATHSCRDRY001")?.getFlag(NS,"cavDrainedPickupClaim")
+     }).ready){action="claim";label="Take Gate Handle"}
    }
    if(!c)msg+=" Select your character and stand beside the fixture.";
    const content=(role==="nightstand"?'<figure style="max-width:540px;margin:auto"><img alt="Nightstand detail from approved Parents Bedroom" src="'+ART+'" style="max-width:100%;display:block"></figure>':"")+"<p>"+msg+"</p>";
