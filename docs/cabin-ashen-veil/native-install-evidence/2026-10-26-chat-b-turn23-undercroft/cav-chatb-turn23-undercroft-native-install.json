@@ -1,0 +1,54 @@
+{
+  "status": "original-inner-keystone-refuge-physical-staged-dormant",
+  "current": {
+    "gm": "Gamemaster 1",
+    "world": "cabin-in-the-ashen-veil",
+    "outer": "Scene.CN5fkK2QLUELBGGR",
+    "refuge": "Scene.ywpIpQDrkMLIgUP0",
+    "originalOuterRegions": 2,
+    "originalRefugeRegions": 2,
+    "originalWall": "Scene.CN5fkK2QLUELBGGR.Region.CAVB67AABD1B35C6",
+    "existingWallBehaviors": 0,
+    "plannedRegions": [
+      "CAVUNDLEVER00001",
+      "CAVUNDCROSS00001",
+      "CAVUNDRETURN0001",
+      "CAVREFRETURN0001"
+    ],
+    "plannedDisabledBehaviors": [
+      "CAVUNDKEYBEH0001",
+      "CAVUNDLEVBEH0001",
+      "CAVUNDOUTTEL0001",
+      "CAVREFBACKTEL001"
+    ],
+    "keystoneOriginalSourceMissing": true
+  },
+  "created": [
+    {
+      "kind": "return-landing-und01",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDRETURN0001",
+      "disabled": null
+    },
+    {
+      "kind": "separate-stone-lever",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDLEVER00001",
+      "disabled": true
+    },
+    {
+      "kind": "inner-stone-door-threshold",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDCROSS00001",
+      "disabled": true
+    },
+    {
+      "kind": "refuge-inner-return-threshold",
+      "uuid": "Scene.ywpIpQDrkMLIgUP0.Region.CAVREFRETURN0001",
+      "disabled": true
+    }
+  ],
+  "originalWallAdded": {
+    "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVB67AABD1B35C6.RegionBehavior.CAVUNDKEYBEH0001",
+    "disabled": true
+  },
+  "innerDoorStillSealed": true,
+  "originalKeystoneStillMissing": true
+}

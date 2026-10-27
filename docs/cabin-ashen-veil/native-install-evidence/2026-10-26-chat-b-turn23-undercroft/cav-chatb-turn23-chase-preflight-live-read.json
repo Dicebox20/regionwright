@@ -1,0 +1,771 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "scenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "map": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "width": 5760,
+      "height": 4320,
+      "regions": [
+        {
+          "id": "woZ98KXx0RsWIPpl",
+          "name": "Southern Aqueduct Access",
+          "behaviors": [
+            {
+              "id": "CAVAQCHASETRIG01",
+              "name": "First Crooked Man Chase — staged, disabled",
+              "type": "executeScript",
+              "disabled": true,
+              "sourceLength": 107,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qOxNY7T7UaRxjrjX",
+          "name": "North Bridge ? interior walkway",
+          "behaviors": []
+        },
+        {
+          "id": "Q5DqqnOXPmf7ivqD",
+          "name": "East Bridge ? interior walkway",
+          "behaviors": []
+        },
+        {
+          "id": "kmPmr5ijLCEOJNk3",
+          "name": "Waterworks Annex ? observation",
+          "behaviors": []
+        },
+        {
+          "id": "A84K235zGzM9lGrT",
+          "name": "West Bridge ? interior walkway",
+          "behaviors": []
+        },
+        {
+          "id": "CAVAQ01RETURN001",
+          "name": "AQ-01 - Southern Return to Pond Gate",
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "requiresSafeWaterStage": true
+          },
+          "behaviors": [
+            {
+              "id": "CAVAQ01RETBEH001",
+              "name": "Return to Exposed Pond Gate",
+              "type": "teleportToken",
+              "disabled": true,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLNORTH01",
+          "name": "AQ-01 - North Aqueduct Tunnel to Forest Well",
+          "flags": {
+            "chainNode": "aqueduct_to_forest_well",
+            "stage": "DISABLED_UNTIL_CHASE",
+            "inferredWaypointFromApprovedMap": true
+          },
+          "behaviors": [
+            {
+              "id": "CAVAQWELLPORT001",
+              "name": "Climb to Forest Well",
+              "type": "teleportToken",
+              "disabled": true,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLARRV001",
+          "name": "AQ-01 - Arrival from Forest Well",
+          "flags": {
+            "chainNode": "forest_well_reverse_return",
+            "passive": true
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "SG-01 - Northwest Grove Corner",
+      "map": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+      "width": 4320,
+      "height": 2880,
+      "regions": [
+        {
+          "id": "gksvZIqj8jWdqzn7",
+          "name": "Grove Bust - NW Moon - Winder",
+          "flags": {
+            "objectKey": "cav:grove:bust:nw:v1",
+            "stage": "GEOMETRY_ONLY",
+            "puzzle": "LOCK-01",
+            "order": "SW NE NW SE",
+            "interaction": "Clockwork Winder explicit click",
+            "source": "owner-approved corner-map art"
+          },
+          "behaviors": [
+            {
+              "id": "7nHv3rf66mG8PJJS",
+              "name": "Sune NW Bust — Player Close-up (inspection only)",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 3527,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ShkRIARUalZ2eK3s",
+          "name": "Travel to SG-02",
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG2",
+            "kind": "exit",
+            "side": "E"
+          },
+          "behaviors": [
+            {
+              "id": "suPl4dBD6qd7TH6c",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G8tpIOde3QfrfVcm",
+          "name": "Arrival from SG-02",
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG2",
+            "kind": "landing",
+            "side": "E"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "Ke9KCBPqRGFWdZwb",
+          "name": "Travel to SG-04",
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG4",
+            "kind": "exit",
+            "side": "S"
+          },
+          "behaviors": [
+            {
+              "id": "8mNdehcRoIEOIiLQ",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7Y8AmKQIQUj3HVg9",
+          "name": "Arrival from SG-04",
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG4",
+            "kind": "landing",
+            "side": "S"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVSG01CHASETRG1",
+          "name": "SG-01 - Late Crooked Man chase review approach",
+          "flags": {
+            "cavLateSG01": {
+              "version": 1,
+              "status": "dormant-uncommissioned",
+              "kind": "late-chase",
+              "source": "2026-10-26-approved-owner-SG01-art",
+              "required": [
+                "first-chase",
+                "waterworks",
+                "allen-warning",
+                "crooked-man"
+              ]
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSG01CHASEBEH1",
+              "name": "late-chase — DISABLED, upstream blocked",
+              "type": "executeScript",
+              "disabled": true,
+              "sourceLength": 1132,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVSG01SILVERKEY",
+          "name": "SG-01 - Silver Tiny Key ground recovery marker",
+          "flags": {
+            "cavLateSG01": {
+              "version": 1,
+              "status": "dormant-uncommissioned",
+              "kind": "silver-marker",
+              "source": "2026-10-26-approved-owner-SG01-art",
+              "required": [
+                "first-chase",
+                "waterworks",
+                "allen-warning",
+                "crooked-man"
+              ]
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSG01SILVRBEH1",
+              "name": "silver-marker — DISABLED, upstream blocked",
+              "type": "executeScript",
+              "disabled": true,
+              "sourceLength": 1133,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "name": "H-U04 - Parents Bedroom",
+      "map": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVHU04ARRIVE001",
+          "name": "H-U04 - Arrival from Upper Gallery",
+          "flags": {
+            "cavRoomKey": "H-U04",
+            "kind": "arrival",
+            "authoritativeSource": "H-U04 owner v003 and existing H-U02 parent doorway"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVHU04RETURN001",
+          "name": "H-U04 - Return to Upper Gallery",
+          "flags": {
+            "cavRoomKey": "H-U04",
+            "kind": "exit",
+            "authoritativeSource": "H-U04 owner v003 and existing H-U02 parent doorway"
+          },
+          "behaviors": [
+            {
+              "id": "CAVHU04RETURNB01",
+              "name": "Parents Bedroom - Return to Gallery",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVHU04COATREG01",
+          "name": "H-U04 - Hanging Coat / Old Iron Key",
+          "flags": {
+            "branch": "cav-old-iron-key-sophia-v001",
+            "role": "key-source",
+            "stage": "SOURCE_GEOMETRY",
+            "provenance": "owner-approved-puzzle-chain-and-map"
+          },
+          "behaviors": [
+            {
+              "id": "CAVHU04COATBEH01",
+              "name": "Parents Coat — Inspect and Original Iron Key",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 4060,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVPARENTNIGHT01",
+          "name": "H-U04 - Broken Nightstand / Gate Handle",
+          "flags": {
+            "chainNode": "parents_nightstand_repair",
+            "tool": "Item.CAVBATHSCREW0001",
+            "origin": "Scene.8yLMRDvxyw58dydh.Region.CAVBATHSCRDRY001",
+            "reward": "Item.nRVZJL9JOwEwfnLq",
+            "interaction": "explicit click; repair then separate claim",
+            "playerGameplayTested": false
+          },
+          "behaviors": [
+            {
+              "id": "CAVPARENTNITBE01",
+              "name": "CAV - Broken Nightstand Click",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 107,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVHU04HOPECHST1",
+          "name": "H-U04 - Hope Chest (late Silver Key)",
+          "flags": {
+            "cavLateBatch1": {
+              "status": "physical-fixture-staged",
+              "source": "2026-10-26-owner-live-batch1",
+              "purpose": "chest-and-music-box",
+              "basis": "approved v003 map, visibly banded trunk in southeast room; no puzzle behaviors"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVHOPECHSTBEH01",
+              "name": "Chat B late hope — GM guarded actions",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 9609,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            },
+            {
+              "id": "CAVPRAYERBOXBEH1",
+              "name": "Ornate Music Box — GM-guarded authentic Prayer recovery",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 7797,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "map": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "vanity",
+              "sourceMap": "H-U07 v017",
+              "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+              "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+              "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+              "rewardUuids": [
+                "Item.CAVBRASSKEYVAN01",
+                "Item.CAVCARRIAGEKEY01"
+              ],
+              "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+            },
+            "cavVerifiedNativeInstallReceiptV1": {
+              "version": 1,
+              "status": "NATIVE_BEHAVIOR_INSTALLED_GM_VERIFIED",
+              "world": "cabin-in-the-ashen-veil",
+              "verifiedBy": "Chat A exact elected-GM readback",
+              "sourceBranch": "codex/cav-sune-integration-20261026",
+              "sourceCommit": "17ea82bda1a0da04a233f9173630cb8763b7cd2a",
+              "verifiedDate": "2026-10-26",
+              "behaviorId": "CAVVANITYBEH0001",
+              "sourceSha256": "744a523cc0e90b01a6ea91dc7145e7e8cfce4a9ed094b292edd4f4e845d2dfbd",
+              "originalHistoricalField": "cavFirstActRegion.status",
+              "originalHistoricalValue": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED",
+              "testStatus": "INSTALLATION_ONLY_NOT_PLAYER_ACCEPTED"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "name": "H-U07 - Dahlia Vanity: Mirror reveals two keys",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 4112,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "departure",
+            "owner": "dicebox-router-v001"
+          },
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "name": "Dahlia Art Studio → Upper Gallery",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "passive-arrival",
+            "owner": "dicebox-router-v001"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVSTUDIORETURN1",
+          "name": "H-U07 - Return landing from Candle Workshop",
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "studio-return-arrival",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVSUNEACTION001",
+          "name": "H-U07 - Sune east shrine: separate prayer reading place",
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "sune-altar",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSUNEPRAYBEH01",
+              "name": "Sune shrine reading — DISABLED until native original prayer authority",
+              "type": "executeScript",
+              "disabled": true,
+              "sourceLength": 1331,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVSUNEEASTPASS1",
+          "name": "H-U07 - Concealed EAST Sune passage (sealed)",
+          "flags": {
+            "cavLateSuneEastFixture": {
+              "version": 1,
+              "kind": "studio-east-departure",
+              "storyCode": "H-U07",
+              "originalMapVerified": true,
+              "status": "dormant-uncommissioned",
+              "canonicalGate": "Music Box original Protection Item; elected GM explicit altar reading",
+              "nativePlayerTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVSUNEOUTTELE01",
+              "name": "Sune east passage — SEALED until real Protection reading",
+              "type": "teleportToken",
+              "disabled": true,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "map": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "width": 5760,
+      "height": 4320,
+      "regions": [
+        {
+          "id": "5RJkabcJJbVAI4WY",
+          "name": "EXT-02 - Return to Carriage Yard",
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "exit"
+          },
+          "behaviors": [
+            {
+              "id": "yaNCRIbv3Y8Dho0X",
+              "name": "Confirm travel",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wwls4eQRInzw8RxS",
+          "name": "EXT-02 - Arrival from Carriage Yard",
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "landing"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVROWBOATREG001",
+          "name": "EXT-02 - Old Rowboat Investigation (Oars Required)",
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "pond_sunken_rowboat_mirror",
+              "activation": "player token moves to moored rowboat with Oars; narrates investigating older sunken boat",
+              "requiresItemUuid": "Item.CAVOARSPOND00001",
+              "rewardUuid": "Item.CAVMIRRORSUNK001",
+              "map": "ext-02_pond_full_owner-approved.png",
+              "regionPlacement": "measured visible western dock and moored rowboat x1250 y1470 w510 h510"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVMIRRORBEH0001",
+              "name": "EXT-02 - Retrieve Ornate Mirror (Oars Required)",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 3705,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVEXT02SLUICE01",
+          "name": "EXT-02 - Sluice Control Inspection",
+          "flags": {
+            "cavPuzzleChainNode": "pond_drained",
+            "kind": "sluice-control-inspect-only",
+            "sourceVersion": "v001",
+            "visualGate": "BATHHOUSE_DRAINED_VISUAL_NOT_APPROVED",
+            "noDrainActivation": false,
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+            "requiresCrankOriginal": "Item.g3VYdgc1qkgkHGvn",
+            "cavSluiceInstallController": {
+              "version": 1,
+              "status": "crank-install-available",
+              "drainEnabled": true,
+              "requiresBathDrainedArtwork": false,
+              "interaction": "explicit inspect and install from original 587 lockbox",
+              "approvedBathDrainedSceneUuid": "Scene.8yLMRDvxyw58dydh",
+              "stageControllerVersion": 1,
+              "stageMode": "elected-GM guarded, no tokens in water/baths"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVEXT02SLCBEH01",
+              "name": "EXT-02 Sluice Gate — Approved Map Detail (Inspection Only)",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 103,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVEXT02HLOGR001",
+          "name": "EXT-02 - Fallen Hollow Log Observation",
+          "flags": {
+            "cavPuzzleChainNode": "book_pond",
+            "sourceVersion": "v002",
+            "kind": "player-visual-inspection-and-elected-gm-once-only-original-book-claim",
+            "originalMap": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/pond-fallen-log-original-owner-map-crop-v001.png",
+            "placementStatus": "PROVISIONAL_APPROVED_MAP_VISIBLE_FALLEN_LOG",
+            "rewardItemUuid": "Item.TO69wBYN8sRJuxtH",
+            "rewardAssignment": "OWNER_CANON_2026_10_18_FELIX_FOX",
+            "disableItemGrant": false
+          },
+          "behaviors": [
+            {
+              "id": "CAVEXT02HLOGB001",
+              "name": "Pond Hollow Log — Felix Fox Approved Close-up and Original Book Request",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 3876,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDWEATHER01",
+          "name": "EXT-02 - Weathered Key at Drained Pond Stair",
+          "flags": {
+            "cavDrainedPickupFixture": {
+              "version": 1,
+              "itemSourceUuid": "Item.CAVWEATHERKEY001",
+              "stage": "sluice-open-only",
+              "interaction": "explicit click, never token-enter",
+              "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-pond-drained-weathered-stairs-crop-20261026.png",
+              "playerGameplayTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVPONDWEATHB001",
+              "name": "CAV - Explicit Drained Item Pickup",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 111,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDAQGATE001",
+          "name": "EXT-02 - Aqueduct Gate Gear and Handle Sockets",
+          "flags": {
+            "chainNode": "pond_aqueduct_gate",
+            "prerequisite": "sluice drained",
+            "originalGear": "Item.wDKqETOykWEdKF1Z",
+            "originalHandle": "Item.nRVZJL9JOwEwfnLq",
+            "ownerApprovedCrop": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-aqueduct-gate-owner-map-crop-20261026.png",
+            "requiresReturnRoute": true,
+            "traversalStatus": "STAGED_DISABLED"
+          },
+          "behaviors": [
+            {
+              "id": "CAVPONDAQBEH0001",
+              "name": "CAV - Install Aqueduct Gate Parts",
+              "type": "executeScript",
+              "disabled": false,
+              "sourceLength": 109,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated"
+              ]
+            },
+            {
+              "id": "CAVPONDAQPORT001",
+              "name": "Enter Aqueduct via Exposed Gate",
+              "type": "teleportToken",
+              "disabled": true,
+              "events": [
+                "tokenExit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDAQARRV001",
+          "name": "EXT-02 - Arrival from Aqueduct Gate",
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "passive": true
+          },
+          "behaviors": []
+        }
+      ]
+    }
+  ],
+  "actors": [],
+  "silver": {
+    "uuid": "Item.IY8fuUG5P0yWIZIh",
+    "status": "GM_LIBRARY_ONLY"
+  },
+  "modules": [
+    {
+      "id": "dicebox-campaign-helper",
+      "version": "0.1.15"
+    },
+    {
+      "id": "regionwright",
+      "version": "0.2.0"
+    },
+    {
+      "id": "regionwright-puzzles-locks",
+      "version": "0.1.2"
+    }
+  ]
+}

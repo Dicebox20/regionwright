@@ -1,0 +1,141 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "outerCount": 5,
+  "refugeCount": 3,
+  "originalOuterStairPassive": true,
+  "originalRefugeArrivalPassive": true,
+  "originalRefugeObservationPassive": true,
+  "rows": [
+    {
+      "kind": "keystone-recess",
+      "id": "CAVB67AABD1B35C6",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVB67AABD1B35C6",
+      "shape": {
+        "type": "rectangle",
+        "x": 660,
+        "y": 130,
+        "width": 220,
+        "height": 175,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "rotation": 0,
+        "gridBased": false
+      },
+      "behaviorId": "CAVUNDKEYBEH0001",
+      "behaviorType": "executeScript",
+      "disabled": true,
+      "behaviorCount": 1,
+      "destinations": null,
+      "flag": null,
+      "exactShape": true
+    },
+    {
+      "kind": "separate-stone-lever",
+      "id": "CAVUNDLEVER00001",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDLEVER00001",
+      "shape": {
+        "type": "rectangle",
+        "x": 976,
+        "y": 210,
+        "width": 145,
+        "height": 146,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "behaviorId": "CAVUNDLEVBEH0001",
+      "behaviorType": "executeScript",
+      "disabled": true,
+      "behaviorCount": 1,
+      "destinations": null,
+      "flag": "dormant-no-original-keystone",
+      "exactShape": true
+    },
+    {
+      "kind": "inner-stone-door-threshold",
+      "id": "CAVUNDCROSS00001",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDCROSS00001",
+      "shape": {
+        "type": "rectangle",
+        "x": 645,
+        "y": 342,
+        "width": 248,
+        "height": 132,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "behaviorId": "CAVUNDOUTTEL0001",
+      "behaviorType": "teleportToken",
+      "disabled": true,
+      "behaviorCount": 1,
+      "destinations": [
+        "Scene.ywpIpQDrkMLIgUP0.Region.CAVB74BDED08299D"
+      ],
+      "flag": "dormant-no-original-keystone",
+      "exactShape": true
+    },
+    {
+      "kind": "return-landing-und01",
+      "id": "CAVUNDRETURN0001",
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDRETURN0001",
+      "shape": {
+        "type": "rectangle",
+        "x": 468,
+        "y": 482,
+        "width": 148,
+        "height": 125,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "disabled": null,
+      "behaviorCount": 0,
+      "destinations": null,
+      "flag": "dormant-no-original-keystone",
+      "exactShape": true
+    },
+    {
+      "kind": "refuge-inner-return-threshold",
+      "id": "CAVREFRETURN0001",
+      "uuid": "Scene.ywpIpQDrkMLIgUP0.Region.CAVREFRETURN0001",
+      "shape": {
+        "type": "rectangle",
+        "x": 427,
+        "y": 359,
+        "width": 142,
+        "height": 175,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "behaviorId": "CAVREFBACKTEL001",
+      "behaviorType": "teleportToken",
+      "disabled": true,
+      "behaviorCount": 1,
+      "destinations": [
+        "Scene.CN5fkK2QLUELBGGR.Region.CAVUNDRETURN0001"
+      ],
+      "flag": "dormant-no-original-keystone",
+      "exactShape": true
+    }
+  ],
+  "keystoneSourceExists": false,
+  "crookedFirstDisabled": true,
+  "crookedSecondDisabled": true,
+  "silverDormant": true,
+  "silverRestore": "restored-original-dormant-per-owner-deferral",
+  "silverClaim": null,
+  "actorSilverCopies": 0,
+  "pass": true
+}

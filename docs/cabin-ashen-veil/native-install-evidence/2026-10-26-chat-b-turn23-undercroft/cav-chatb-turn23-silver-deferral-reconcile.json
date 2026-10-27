@@ -1,0 +1,26 @@
+{
+  "status": "native-silver-original-dormant-restored-after-partial-attempt",
+  "world": "cabin-in-the-ashen-veil",
+  "originalRegion": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY",
+  "originalBehavior": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY.RegionBehavior.CAVSG01SILVRBEH1",
+  "currentDisabled": true,
+  "sourceMatchesLegacy": true,
+  "events": [
+    "tokenMoveIn",
+    "tokenMoveWithin"
+  ],
+  "retainedReconciliation": {
+    "status": "restored-original-dormant-per-owner-deferral",
+    "version": 1,
+    "source": "2026-10-26-owner-delegated-CAV-technical-approval",
+    "originalSilverSourceUuid": "Item.IY8fuUG5P0yWIZIh",
+    "requiredDropRegionUuid": "Scene.CAVSG01Scene0001.Region.CAVSG01CHASETRG1",
+    "note": "Owner directed defer Crooked Man work; attempted guarded Silver installer had reserved before reporting postupdate error; independently verified zero reward and restored old source.",
+    "foundryWriter": "elected-GM",
+    "replayForbidden": true
+  },
+  "firstDisabled": true,
+  "lateDisabled": true,
+  "silverClaim": null,
+  "drop": null
+}

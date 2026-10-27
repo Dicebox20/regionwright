@@ -1,0 +1,828 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": [
+    {
+      "id": "CAVSG05Scene0001",
+      "exists": true,
+      "name": "SG-05 - Memorial Clearing",
+      "art": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png",
+      "width": 4320,
+      "height": 2880,
+      "regions": [
+        {
+          "id": "L15BdSqcbCOLPnIN",
+          "name": "SG-05 - Mosaic Discovery - North Statue",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                2000,
+                720,
+                2320,
+                720,
+                2320,
+                825,
+                2000,
+                825
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "Q8Hr2Dnw6hBpWNjr",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:sg05:region:mosaic-discovery:v1",
+            "phase": "PREPARED_GEOMETRY_ONLY",
+            "requires": "grove.bustsSolved",
+            "source": "owner-approved SG-05 map measured 4320x2880",
+            "inspection": "northern behind-statue path; behavior pending",
+            "cavSuneReliefInstall": {
+              "version": 1,
+              "status": "click-behavior-configured",
+              "interaction": "explicit player pointer click; never on tokenEnter",
+              "sourceItemUuids": [
+                "Item.CAVSUNEGPBAG0001",
+                "Item.CAVSTUDYBRASS001"
+              ]
+            }
+          }
+        },
+        {
+          "id": "wCHOIBHKEZYIER6E",
+          "name": "Travel to SG-04",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 78,
+              "y": 1290,
+              "width": 120,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "uL25KBfp8NYy9wgq",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG4-SG5",
+            "kind": "exit",
+            "side": "W"
+          }
+        },
+        {
+          "id": "4jvK2Ghmvkn1LhaM",
+          "name": "Arrival from SG-04",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG4-SG5",
+            "kind": "landing",
+            "side": "W"
+          }
+        },
+        {
+          "id": "vpZI5S0vVcYxDHXI",
+          "name": "Arrival from SG-06",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "width": 120,
+              "height": 144,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG5-SG6",
+            "kind": "landing",
+            "side": "E"
+          }
+        },
+        {
+          "id": "ktyQvjNWXPSJmlPH",
+          "name": "Travel to SG-06",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4122,
+              "y": 1290,
+              "width": 120,
+              "height": 300,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "Q8LyBAA2ObV8yApf",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG5-SG6",
+            "kind": "exit",
+            "side": "E"
+          }
+        },
+        {
+          "id": "p53pE6bS9tpuCkxD",
+          "name": "Travel to SG-02",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 78,
+              "width": 300,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "d0S3WXT52XErVb6P",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG2-SG5",
+            "kind": "exit",
+            "side": "N"
+          }
+        },
+        {
+          "id": "YKgNexU3dxwPpODd",
+          "name": "Arrival from SG-02",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 240,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG2-SG5",
+            "kind": "landing",
+            "side": "N"
+          }
+        },
+        {
+          "id": "ouFnsUZgbZjNwDe7",
+          "name": "Travel to SG-08",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2682,
+              "width": 300,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "uqy2arR9iTZBOqgI",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG5-SG8",
+            "kind": "exit",
+            "side": "S"
+          }
+        },
+        {
+          "id": "x9R7eutZzvwcK6Bd",
+          "name": "Arrival from SG-08",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "width": 144,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG5-SG8",
+            "kind": "landing",
+            "side": "S"
+          }
+        }
+      ]
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "exists": true,
+      "name": "UND-01 - Undercroft Approach Keystone Door",
+      "art": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVBB3383706E610",
+          "name": "Undercroft Approach ? southern stairhead",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 635,
+              "y": 630,
+              "width": 210,
+              "height": 165,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB67AABD1B35C6",
+          "name": "Undercroft Approach ? keystone wall",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 660,
+              "y": 130,
+              "width": 220,
+              "height": 175,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "exists": true,
+      "name": "UND-02 - Donovan Sophia Sealed Refuge",
+      "art": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVB74BDED08299D",
+          "name": "Sealed Refuge ? western entry",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 205,
+              "y": 355,
+              "width": 205,
+              "height": 185,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB49066EB37281",
+          "name": "Sealed Refuge ? center observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 700,
+              "y": 390,
+              "width": 235,
+              "height": 205,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "exists": true,
+      "name": "H-G06 - Great Room",
+      "art": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png",
+      "width": 840,
+      "height": 960,
+      "regions": [
+        {
+          "id": "CAV06R0000000001",
+          "name": "H-G06 - Foyer Doorway",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                342.5,
+                849.5,
+                523.5,
+                849.5,
+                523.5,
+                920.5,
+                342.5,
+                920.5
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "EZeDVLPQQ9t02Q6t",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:h-g06:region:1",
+            "intendedDestination": "H-G02",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        {
+          "id": "CAV06R0000000002",
+          "name": "H-G06 - Dining Room Doorway",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                47,
+                335,
+                140,
+                335,
+                140,
+                532,
+                47,
+                532
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "objectKey": "cav:h-g06:region:2",
+            "intendedDestination": "H-G01",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        {
+          "id": "CAV06R0000000003",
+          "name": "H-G06 - Allen Study Doorway",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                723,
+                362,
+                807,
+                362,
+                807,
+                558,
+                723,
+                558
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHG06STUDYT001",
+              "type": "teleportToken",
+              "disabled": true
+            },
+            {
+              "id": "CAVHG06STUDYG001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:h-g06:region:3",
+            "intendedDestination": "H-G05",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        {
+          "id": "CAV06R0000000004",
+          "name": "H-G06 - Rear Family Room Doorway",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                347,
+                34,
+                515,
+                34,
+                515,
+                120,
+                347,
+                120
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "YqvFIKvjGM8JSQv5",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:h-g06:region:4",
+            "intendedDestination": "H-G09",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        {
+          "id": "CAV06R0000000005",
+          "name": "H-G06 - Upstairs Staircase",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": [
+                669,
+                18.5,
+                763,
+                18.5,
+                763,
+                381.5,
+                669,
+                381.5
+              ],
+              "hole": false,
+              "origin": null
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "shReQrRjUoub0D9y",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:h-g06:region:5",
+            "intendedDestination": "H-U02",
+            "inertUntilPuzzleAndTransitionPhase": true
+          }
+        },
+        {
+          "id": "MrWgTyGg0d0DI53Q",
+          "name": "H-G06 - Grandfather Clock",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 86,
+              "y": 52,
+              "width": 60,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "SAshGMH5A3AsJC0Y",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "G0HM92QQtEfyZcFi",
+          "name": "H-G06 - Fireplace",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 151,
+              "y": 21,
+              "width": 180,
+              "height": 180,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAV06FIRECLICK01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "S7QJ3qEWYLWSdu3f",
+          "name": "H-G06 - Arrival from Foyer",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 363,
+              "y": 736.5,
+              "width": 120,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:foyer-greatroom:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "ibN7AGsY4AlG582M",
+          "name": "chest",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 112,
+              "y": 654,
+              "width": 120,
+              "height": 60,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAV024CHESTBEH01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "m3E7MaZTx6fvqXok",
+          "name": "H-G06 - Arrival from Upper Landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 610,
+              "y": 465,
+              "width": 120,
+              "height": 120,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:greatroom-upperlanding:v1",
+            "kind": "landing",
+            "build": "h-u02-provisional-v1"
+          }
+        },
+        {
+          "id": "t1RsI3HkKj3JJY16",
+          "name": "H-G06 - Arrival from Rear Family Room",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "y": 161,
+              "width": 120,
+              "height": 120,
+              "x": 367,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:greatroom-rearfamily:v001",
+            "kind": "passive-arrival",
+            "creationAuthority": "owner-requested-20261025"
+          }
+        },
+        {
+          "id": "CAVHG06STUDYAR01",
+          "name": "H-G06 - Passive Arrival from Allen Study",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 545,
+              "y": 346,
+              "width": 105,
+              "height": 100,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "puzzleFamily": "cav-allen-study-587-lockbox-v002",
+            "role": "passive-arrival",
+            "placement": "PROVISIONAL_OWNER_ART"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "exists": true,
+      "name": "H-B02 - Secured Keystone Vault",
+      "art": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+      "width": 1536,
+      "height": 1024,
+      "regions": [
+        {
+          "id": "CAVB1F6B8321128A",
+          "name": "Keystone Vault ? inside western threshold",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 180,
+              "y": 360,
+              "width": 200,
+              "height": 190,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB799A5357A114",
+          "name": "Keystone Vault ? dais observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 705,
+              "y": 380,
+              "width": 210,
+              "height": 190,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "vbDWTbnAZg65ErSS",
+      "name": "Completed Gond–Sune Emblem",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Completed Gond–Sune Emblem"
+        }
+      }
+    },
+    {
+      "id": "VjdQNwil7pPKzkHU",
+      "name": "Dust of Dryness",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Dust of Dryness"
+        }
+      }
+    },
+    {
+      "id": "o9G3UJjEe2QX1ZH0",
+      "name": "Gond Emblem Half",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Gond Emblem Half"
+        }
+      }
+    },
+    {
+      "id": "t9uCIpsKeSvtC31w",
+      "name": "Sune Emblem Half",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Sune Emblem Half"
+        }
+      }
+    },
+    {
+      "id": "1n5LONw3nYIy61O9",
+      "name": "Sune’s Scrying Bowl",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Sune’s Scrying Bowl"
+        }
+      }
+    }
+  ]
+}
