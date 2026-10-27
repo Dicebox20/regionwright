@@ -1,0 +1,53 @@
+// H-U07 Dahlia's Studio - mirror socket and paired vanity key discovery (v001)
+// Native Foundry v14 ExecuteScript, dispatched only by a character's token movement.
+// Authority: elected active GM only. The player does not need GM rights or a Macro.
+if (!['tokenMoveIn', 'tokenMoveWithin'].includes(event?.name)) return;
+if (!game.ready || game.world?.id!=='cabin-in-the-ashen-veil' || game.version!=='14.367') return;
+if (!game.user?.isGM || game.users.activeGM?.id!==game.user.id) return;
+const SCENE_ID='CAVHU07Scene0001', REGION_ID='CAVVANITYREG0001';
+const SCOPE='dicebox-campaign-helper', LEDGER='cavVanityKeysClaim';
+const MIRROR='Item.CAVMIRRORSUNK001';
+const REWARDS=['Item.CAVBRASSKEYVAN01','Item.CAVCARRIAGEKEY01'];
+if (scene?.id!==SCENE_ID || region?.id!==REGION_ID) return;
+const candidate=event.data?.token?.document??event.data?.token;
+const token=scene.tokens.get(candidate?.id??event.data?.tokenId);
+if (!token || token.hidden || !token.actorId) return;
+const actor=token.actor;
+if (!actor || actor.type!=='character') return;
+const owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));
+const eventUserId=event.userId??event.data?.userId??null;
+const player=eventUserId ? owners.find(u=>u.id===eventUserId) : owners.length===1 ? owners[0] : null;
+if (!player) return;
+const hasMirror=actor.items.contents.some(i=>i.getFlag?.(SCOPE,'cavPickupSourceUuid')===MIRROR &&
+  i.getFlag?.(SCOPE,'cavPickupRegionUuid')==='Scene.CAVEXT02Scene001.Region.CAVROWBOATREG001');
+if (!hasMirror) return;
+const existing=region.getFlag(SCOPE,LEDGER);
+if (existing?.status==='done' || existing?.status==='reserved') return;
+const alreadyGranted=game.actors.contents.some(a=>a.items.contents.some(i=>
+  REWARDS.includes(i.getFlag?.(SCOPE,'cavVanityRewardSourceUuid')) &&
+  i.getFlag?.(SCOPE,'cavVanityRewardRegionUuid')===region.uuid));
+if (alreadyGranted) return; // lost ledger: reconcile existing Item, don't duplicate
+const sources=REWARDS.map(uuid=>game.items.get(uuid.slice(5)));
+if (sources.some((x,i)=>!x || x.uuid!==REWARDS[i])) return;
+if (sources[0].name!=='Brass Tiny Key #1' || sources[1].name!=='Carriage Key') return;
+const BUSY='__CAV_HU07_VANITY_REWARD_BUSY__';
+const pending=globalThis[BUSY]??(globalThis[BUSY]=new Set());
+if (pending.has(REGION_ID)) return;
+pending.add(REGION_ID);
+try {
+  await region.setFlag(SCOPE,LEDGER,{status:'reserved',actorId:actor.id,tokenId:token.id,mirrorUuid:MIRROR,rewardUuids:REWARDS});
+  const docs=sources.map(item=>{
+    const value=item.toObject();delete value._id;
+    value.flags={...value.flags,[SCOPE]:{...value.flags?.[SCOPE],cavVanityRewardSourceUuid:item.uuid,
+      cavVanityRewardRegionUuid:region.uuid,cavFirstActReward:'art_studio_vanity_after_mirror'}};
+    return value;
+  });
+  const created=await actor.createEmbeddedDocuments('Item',docs);
+  if(created.length!==2)throw Error('Vanity reward partial response; claim reservation requires review');
+  await region.setFlag(SCOPE,LEDGER,{status:'done',actorId:actor.id,tokenId:token.id,mirrorUuid:MIRROR,
+    rewardUuids:REWARDS,embeddedItemIds:created.map(i=>i.id)});
+  try {await ChatMessage.create({speaker:{alias:'Dahlia Vanity'},
+    content:'<p>The ornate mirror settles into the old vanity frame. Two hidden drawers ease open, revealing a tiny brass key and an iron carriage key.</p>',whisper:[player.id]});}
+  catch(chatErr){console.warn('[CAV Vanity] Keys granted, but private narrative delivery failed',chatErr)}
+} catch(err){console.error('[CAV Vanity] Outcome uncertain, reserved claim preserved for recovery',err)}
+finally {pending.delete(REGION_ID)}

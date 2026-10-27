@@ -1,0 +1,81 @@
+// CAV Grandfather Clock, owner-approved H-G06, source v001.
+// Player Region click inspects approved scene crop; GM token approach + genuine Vanity key awards Hour Hand once.
+// Native RegionBehavior executeScript; no player-side privileged item mutation.
+const SCENE='CAVHG06GreatRoom', REGION='MrWgTyGg0d0DI53Q';
+const SCOPE='dicebox-campaign-helper', CLAIM='cavGrandfatherClockHourHandClaim';
+const KEY='Item.CAVBRASSKEYVAN01', REWARD='Item.HVZnNaV2SxNWck6H';
+const VANITY='Scene.CAVHU07Scene0001.Region.CAVVANITYREG0001';
+const ART='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/grandfather-clock-map-crop-v001.png';
+const POINTER='__CAV_CLOCK_POINTER_V001__', BUSY='__CAV_CLOCK_REWARD_BUSY_V001__';
+if(game.world?.id!=='cabin-in-the-ashen-veil'||game.version!=='14.367'||scene?.id!==SCENE||region?.id!==REGION)return;
+const evt=event?.name, prev=globalThis[POINTER];
+if(evt==='behaviorUnviewed'||evt==='behaviorDeactivated'){
+ if(prev?.handler&&canvas?.stage)canvas.stage.off('pointertap',prev.handler);
+ delete globalThis[POINTER];return;
+}
+if(evt==='behaviorViewed'&&!game.user?.isGM){
+ if(prev?.handler&&canvas?.stage)canvas.stage.off('pointertap',prev.handler);
+ const onClick=async e=>{
+  if(!canvas.ready||canvas.scene?.id!==SCENE||game.user.isGM||e.button!==undefined&&e.button!==0)return;
+  const point=canvas.stage.toLocal(e.global);
+  if(!region.testPoint({x:point.x,y:point.y,elevation:0}))return;
+  const modalBusy='__CAV_CLOCK_INSPECT_MODAL_V001__';
+  if(globalThis[modalBusy])return;
+  globalThis[modalBusy]=true;
+  try{
+   const solved=region.getFlag(SCOPE,CLAIM)?.status==='done';
+   const caption=solved
+    ? 'The hidden compartment within the clock has already been opened.'
+    : 'The grandfather clock stands motionless. Behind the worn face and battered case, a tiny brass keyhole catches your eye. A suitable key might turn the mechanism.';
+   await foundry.applications.api.DialogV2.prompt({
+    window:{title:'The Grandfather Clock'},
+    content:'<figure style="max-width:560px;margin:auto;text-align:center">'+
+     '<img src="'+ART+'" alt="Close-up of the old grandfather clock" style="display:block;max-height:65vh;max-width:100%;margin:auto;border:1px solid #775f48;border-radius:4px" />'+
+     '<figcaption style="margin:0.7rem;font-style:italic">'+caption+'</figcaption></figure>',
+    ok:{label:'Close',callback:()=>true},rejectClose:false
+   });
+  }finally{globalThis[modalBusy]=false;}
+ };
+ if(canvas?.stage){canvas.stage.on('pointertap',onClick);globalThis[POINTER]={handler:onClick,scene:SCENE};}
+ return;
+}
+if(!['tokenMoveIn','tokenMoveWithin'].includes(evt))return;
+if(!game.ready||!game.user?.isGM||game.users.activeGM?.id!==game.user.id)return;
+const incoming=event.data?.token?.document??event.data?.token;
+const token=scene.tokens.get(incoming?.id??event.data?.tokenId);
+if(!token||token.hidden||!token.actorId||token.actor?.type!=='character')return;
+const actor=token.actor;
+const owners=game.users.contents.filter(u=>u.active&&!u.isGM&&actor.testUserPermission(u,'OWNER'));
+const sender=event.userId??event.data?.userId??null;
+const player=sender?owners.find(u=>u.id===sender):(owners.length===1?owners[0]:null);
+if(!player)return;
+const genuine=actor.items.contents.some(i=>i.name==='Brass Tiny Key #1'&&
+ i.getFlag?.(SCOPE,'cavVanityRewardSourceUuid')===KEY&&
+ i.getFlag?.(SCOPE,'cavVanityRewardRegionUuid')===VANITY);
+if(!genuine)return;
+const existing=region.getFlag(SCOPE,CLAIM);
+if(existing?.status==='reserved'||existing?.status==='done')return;
+const source=game.items.get('HVZnNaV2SxNWck6H');
+if(!source||source.uuid!==REWARD||source.name!=='Grandfather Clock Hour Hand')return;
+const granted=game.actors.contents.some(a=>a.items.contents.some(i=>
+ i.getFlag?.(SCOPE,'cavGrandfatherClockRewardSourceUuid')===REWARD&&
+ i.getFlag?.(SCOPE,'cavGrandfatherClockRewardRegionUuid')===region.uuid));
+if(granted)return;
+const pending=globalThis[BUSY]??(globalThis[BUSY]=new Set());
+if(pending.has(REGION))return;
+pending.add(REGION);
+try{
+ await region.setFlag(SCOPE,CLAIM,{status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:REWARD,requiredKeyUuid:KEY});
+ const item=source.toObject();delete item._id;
+ item.flags={...item.flags,[SCOPE]:{
+  ...item.flags?.[SCOPE],cavGrandfatherClockRewardSourceUuid:REWARD,
+  cavGrandfatherClockRewardRegionUuid:region.uuid,cavPuzzleReward:'clock_after_vanity_brass_key'
+ }};
+ const created=await actor.createEmbeddedDocuments('Item',[item]);
+ if(created.length!==1)throw Error('Clock reward ambiguous; reserved ledger preserved');
+ await region.setFlag(SCOPE,CLAIM,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:REWARD,embeddedItemId:created[0].id});
+ try{await ChatMessage.create({speaker:{alias:'The Grandfather Clock'},
+  content:'<p>The little brass key turns with a dry click. A narrow compartment slips free, holding the oversized hour hand of another clock.</p>',
+  whisper:[player.id]});}catch(e){console.warn('[CAV Clock] Item granted, private whisper failed',e);}
+}catch(err){console.error('[CAV Clock] Outcome uncertain, reserved ledger retained',err);}
+finally{pending.delete(REGION);}

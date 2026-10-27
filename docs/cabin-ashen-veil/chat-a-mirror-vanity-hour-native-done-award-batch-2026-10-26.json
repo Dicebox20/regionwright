@@ -1,0 +1,30 @@
+{
+    "workstream":  "Chat A",
+    "addedTests":  13,
+    "vanityNewSha":  "744a523cc0e90b01a6ea91dc7145e7e8cfce4a9ed094b292edd4f4e845d2dfbd",
+    "nativeInstall":  "installed-gm-readback-pass",
+    "receiptPaths":  [
+                         "utility-harness/artifacts/cav-chat-a-vanity-hour-two-original-done-boundaries-install-20261026.json",
+                         "utility-harness/artifacts/cav-chat-a-firstact-mirror-vanity-hour-independent-gm-postread-20261026.json"
+                     ],
+    "hourNewSha":  "7964c9604084220eb7d9d83958e0351da2b2d8afcb347afec95450ea8daa96ef",
+    "teleports":  75,
+    "vanityOldSha":  "8be78e1904677af764b63989db85749833895fa32aa0610a7863974e2d26c182",
+    "stageClaimsChanged":  false,
+    "behaviors":  120,
+    "nativeScripts":  45,
+    "playerAcceptance":  false,
+    "schema":  "dicebox.cav.first-act-done-award-proof-v1",
+    "sourceTests":  198,
+    "foundry":  "14.367",
+    "hourOldSha":  "7acc56464e73dbf26527d6883154e05f928400c7b983bd646e92fe97dacd3786",
+    "gm":  "Gamemaster 1",
+    "chatBModified":  false,
+    "world":  "cabin-in-the-ashen-veil",
+    "regions":  232,
+    "date":  "2026-10-26",
+    "independentGMReadback":  "PASS",
+    "scenes":  47,
+    "sourceBase":  "df73f0d303983e48d67d621181672ef64f368e40",
+    "failedTests":  0
+}
