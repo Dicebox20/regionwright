@@ -1,3 +1,4 @@
+import {assessCavAqueductCommissioningProof} from "./studio-cav-aqueduct-route-proof.js";
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil";
 const POND="CAVEXT02Scene001",AQ="CAVAQ01Scene0001",FM="CAVFM01Scene0001",CONTROL="CAVEXT02SLUICE01";
 const GATE="CAVPONDAQGATE001",ENTRANCE="CAVPONDAQPORT001",RETURN="CAVAQ01RETBEH001",AQ_RETURN="CAVAQ01RETURN001";
@@ -121,7 +122,29 @@ export async function commissionAqueductForGameplay({crookedManActorId,gmConfirm
   existingTransaction:x.gate.getFlag(NS,ROUTE),actorReady:crookedActor(crookedManActorId),
   allTransitDisabled:transitDisabled(x)&&x.exit.disabled&&x.reentry.disabled&&x.trigger.disabled,
   aqEmpty:x.aq.tokens.size===0});
- if(result!=="ready")return{status:result};
+  if(result!=="ready")return{status:result};
+  // Future explicit commissioning: item-grant ledgers must match consumed gear/handle IDs.
+  // No Crooked Man chase, portal or world changes are made during this check.
+  const roof=game.scenes.get("LhtyO17QenuCExsb")?.regions.get("CAVROOFCLOCKR001");
+  const parents=game.scenes.get("CAVHU04Scene0001")?.regions.get("CAVPARENTNIGHT01");
+  const driver=game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("CAVBATHSCRDRY001");
+  const trail=game.scenes.get("CAVTRAILScene001")?.regions.get("13g6uK1QrR9PFOzA")?.behaviors.get("ZbrhX0nnaLvLA5Zh");
+  const routeProof=assessCavAqueductCommissioningProof({
+   gearLedger:x.gate.getFlag(NS,GEAR),handleLedger:x.gate.getFlag(NS,HANDLE),
+   mechanical:x.gate.getFlag(NS,MECHANICAL),
+   roofGearClaim:roof?.getFlag(NS,"cavRoofClockClaim"),
+   nightstandHandleClaim:parents?.getFlag(NS,"cavNightstandHandleClaim"),
+   nightstandRepair:parents?.getFlag(NS,"cavNightstandRepaired"),
+   screwdriverClaim:driver?.getFlag(NS,"cavDrainedPickupClaim"),
+   crank:x.sluice.getFlag(NS,"cavSluiceCrankInstall"),
+   water:x.sluice.getFlag(NS,"cavPondBathWaterState"),
+   transaction:x.sluice.getFlag(NS,"cavSluiceStageTransaction"),
+   pondBackground:x.pond.background.src,
+   trailPortal:trail&&{id:trail.id,type:trail.type,disabled:trail.disabled,
+    destinations:[...(trail.system?.destinations??[])]},
+   dryBathLandingExists:!!game.scenes.get("8yLMRDvxyw58dydh")?.regions.get("R2Pg9eHODtb1C1Yk")
+  });
+  if(!routeProof.ready)return{status:routeProof.reason};
  const reserve={version:1,status:"reserved",crookedManActorId,initiatedBy:game.user.id,priorWater:"open"};
  await x.gate.setFlag(NS,ROUTE,reserve);
  // Only the elected GM may commission this after the physical Crooked Man Actor exists.

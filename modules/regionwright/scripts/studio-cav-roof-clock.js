@@ -1,3 +1,4 @@
+import {assessCavRoofClockHandsGM} from "./studio-cav-roof-hands-proof.js";
 // Approved Roof Clock GM Macro migrated unmodified from Foundry Macro rEo3v6pIjbAzxVw1.
 // Original active GM marker prevents duplicate listeners. No gameplay state changed on import.
 export function installCabinRoofClockGMService(){
@@ -24,9 +25,8 @@ const fn=async(message,options,authorId)=>{
   const rect=region.shapes[0],cx=rect.x+rect.width/2,cy=rect.y+rect.height/2;
   if(!Number.isFinite(bx)||!Number.isFinite(by)||Math.hypot(bx-cx,by-cy)>400)return;
   if(!Number.isInteger(req.hour)||!Number.isInteger(req.minute)||req.hour<1||req.hour>12||req.minute<0||req.minute>55||req.minute%5!==0)return;
-  const hour=actor.items.find(i=>i.name==='Grandfather Clock Hour Hand'&&i.getFlag(NS,'cavGrandfatherClockRewardSourceUuid')===HOUR&&i.getFlag(NS,'cavGrandfatherClockRewardRegionUuid')==='Scene.CAVHG06GreatRoom.Region.MrWgTyGg0d0DI53Q');
-  const minute=actor.items.find(i=>i.name==='Attic Clock Minute Hand'&&i.getFlag(NS,'cavAtticLootSourceUuid')===MINUTE&&i.getFlag(NS,'cavAtticLootRegionUuid')==='Scene.nyF5EX0JiEu23C3p.Region.UtXhS68vd1czWfTG');
-  if(!hour||!minute)return;
+  // Trust only the original DONE Grandfather and Attic Item receipts.
+  if(!assessCavRoofClockHandsGM(actor).ready)return;
   const existing=region.getFlag(NS,LEDGER);
   if(existing?.status==='done'||existing?.status==='reserved'||pending.has(RID))return;
   if(req.hour!==12||req.minute!==0){

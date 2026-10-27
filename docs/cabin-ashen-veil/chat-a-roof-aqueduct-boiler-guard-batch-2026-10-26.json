@@ -1,0 +1,82 @@
+{
+  "schema": "dicebox.cav.chat-a-roof-aqueduct-boiler-batch/v1",
+  "dateLocal": "2026-10-26",
+  "ownerMessage": "continue next turn",
+  "chat": "A",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "base": "0e83bfdbdd3c13e45fc8f619e8c43a1d073f771b",
+    "added": [
+      "modules/regionwright/scripts/studio-cav-roof-hands-proof.js",
+      "modules/regionwright/scripts/studio-cav-aqueduct-route-proof.js",
+      "tests/cav-roof-hour-minute-completed-receipts.test.mjs",
+      "tests/cav-aqueduct-future-route-commissioning-proof.test.mjs"
+    ],
+    "modified": [
+      "modules/regionwright/scripts/studio-cav-roof-clock.js",
+      "modules/regionwright/scripts/studio-cav-aqueduct-routing.js"
+    ],
+    "newTests": 15,
+    "totalPassed": 177,
+    "failures": 0,
+    "sourceSha": {
+      "roofHelper": "F70358F9FB1B6ED0E919D2707C89CF3EA299970BA9623A3A0DB776FB07C3E2AF",
+      "roofHandler": "8E1893E01810ECF0B3B3EB043D6E742704F885AFDCBB11E55D7E565C6A3D3A66",
+      "aqHelper": "6C178202673F7E6965295321F5FD3E87A6543D5D3CEFFCE533CDE44CFBFB930E",
+      "aqRouting": "93E0709F01C3178D22B09A943BF0496E10C695A458B40536FE9DCBD0D972A93E"
+    }
+  },
+  "native": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "scenes": 47,
+    "chatMessages": 54,
+    "roofGrandClaim": null,
+    "roofAtticClaim": null,
+    "roofGearClaim": null,
+    "aqueductGear": null,
+    "aqueductHandle": null,
+    "aqueductMechanic": null,
+    "aqueductRoute": null,
+    "sluiceCrank": null,
+    "water": null,
+    "waterTransaction": null,
+    "aqEntryDisabled": true,
+    "chaseTriggerDisabled": true,
+    "rosewaterDisabled": true,
+    "boiler": {
+      "status": "ready",
+      "canon": [
+        2,
+        1
+      ],
+      "variants": 2,
+      "sessions": null,
+      "changed": false
+    },
+    "gmSourceReloads": 1,
+    "actualGameplayProgressWrites": 0,
+    "ordinaryPlayerTests": 0
+  },
+  "pureChecks": {
+    "validHandDone": true,
+    "reservedHourDenied": true,
+    "validAqueductRouteDone": true,
+    "reservedHandleDenied": true,
+    "staleWaterTransactionDenied": true
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-roof-input-hands-live-actor-receipts-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-roof-original-hour-minute-player-native-sources-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-roof-aqueduct-boiler-batch-postreload-gm-verified-20261026.json"
+  ],
+  "next": [
+    "Early/mid original Roof Clock native player-side preflight parity and other genuine source gaps only",
+    "No invented Boiler downstream Item/door",
+    "Owner-deferred Crooked Man Actor/first chase and real PC acceptance",
+    "Chat B separate late-game branch"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless export"
+}
