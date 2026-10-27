@@ -4,7 +4,7 @@ import {matchRosewaterOwnerApprovedSymbols} from "../../regionwright-puzzles-loc
 
 const NS="dicebox-campaign-helper",WORLD="cabin-in-the-ashen-veil",SCENE=CAV_ROSEWATER_SCENE;
 const APPROVAL="cavRosewaterBowlPickupApproval",CLAIM="cavRosewaterBowlClaim",REQUEST="cavRosewaterBowlRequest";
-const BEHAVIOR="CAVROSEBOWLPICK001",HOOK="__CAV_ROSEWATER_BOWL_GM_SERVICE_001",LOCK="__CAV_ROSEWATER_BOWL_GM_BUSY_001";
+const BEHAVIOR="CAVROSEBOWLPICK1",HOOK="__CAV_ROSEWATER_BOWL_GM_SERVICE_001",LOCK="__CAV_ROSEWATER_BOWL_GM_BUSY_001";
 const ORIGINAL="Item.1n5LONw3nYIy61O9";
 const SCRIPT='await game.modules.get("regionwright")?.api?.campaign?.cabin?.rosewaterBowl?.handleRegionEvent(region, event);';
 const EVENTS=["behaviorViewed","behaviorUnviewed","behaviorDeactivated"];
