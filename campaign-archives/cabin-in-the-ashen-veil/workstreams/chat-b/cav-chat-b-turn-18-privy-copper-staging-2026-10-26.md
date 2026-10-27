@@ -1,0 +1,34 @@
+# CAV Chat B Turn 18 — Original EXT-04 Privy Copper Native Staging
+
+**Pacific date:** 2026-10-26 ~21:53 PDT. **Scope:** Owner-authorized Chat B *disjoint* late-game native Foundry staging in SAME world as Chat A. **Status:** 2 new real Regions / 2 native DISABLED read-only Behaviors; no original key granted, no Crimson Veil transition, no actual player acceptance.
+
+## PREPARE / physical and source authority
+- Chat B source parent: `11408658e474034a578451720261137a38d693cf`, independent branch `codex/cav-late-game-chat-b-20261026` initially clean. Chat A separate checkout last observed `830d48788bcfae13a760c73ad2cbc129be68c63c` READ ONLY, its changed/untracked files left intact.
+- Exact Foundry 14.367 elected `Gamemaster 1`, `cabin-in-the-ashen-veil`, CFT Dev Chrome localhost GM verified. Native original EXT-04 scene `Scene.xx1rWBiWMLxJPlrw` map `Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png` size 1254×1254.
+- Visually inspected approved Privy opening and floor. Preflight checked both original native portal Regions:
+  - `Scene.xx1rWBiWMLxJPlrw.Region.zVgVWvnpPetxlF5e` includes enabled original `RegionBehavior.6DZj3FUaLavsdqgA` `teleportToken` return to Carriage Yard
+  - `Scene.xx1rWBiWMLxJPlrw.Region.663WrP9V8tPPOLvt` is original passive arrival, 0 Behaviors.
+- Original quest `Item.D1LRRg4n7y7pRWvk` is `Copper Tiny Key` type `loot` with original `GM_LIBRARY_ONLY` library provenance; zero character copies. Its icon is a generic Foundry key ring, **not an approved custom visible Tile**, so no key art/Tile was invented.
+- Current AQ-01 `Scene.CAVAQ01Scene0001` has no authenticated canonical Crimson Veil ledger or charged source transition. The genuine Copper unlock remains post-Veil. Current unified Bathhouse imagery shows pools, boiler and small rooms, but no independently approved **BATH-02 glass Soap Case physical point**; its Region is absent. Chat A is simultaneously installing/reviewing unified Bathhouse. Chat B avoided this possible shared-Scene collision and made NO Bathhouse native changes.
+
+## BUILD — two exact original Privy Regions, both inert until real Veil source
+New isolated source `modules/regionwright/scripts/studio-cav-late-privy-copper-native-staging.js`, reviewed with 15 pure/static tests. It records the owner-approved retrieval choices, explicit player action and genuine elected-GM authority, unique Item source, once-only active Crimson Veil source proof, retryable DC 12 Sleight of Hand or Survival, and a reasonable-tools nonroll alternative. The two generated native Region bodies are read-only and intentionally **DISABLED** until the actual canonical Veil charger and proper GM-action service are installed. They contain NO Item grant, global phase mutation, chat socket or teleport effect.
+
+- NEW `Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1`: approved privy opening rectangle x760,y400,160×195; one disabled `RegionBehavior.CAVPRIVYRETBH001`; source SHA256 `44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71`.
+- NEW `Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1`: separate floor recovery rectangle x785,y630,130×130; one disabled `RegionBehavior.CAVPRIVYKEYBH001`; source SHA256 `b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d`.
+- Geometry checked against all existing Region shapes, both existing portals, each other and any tokens. Native creation used exact elected-GM `Scene.createEmbeddedDocuments('Region', [...], {keepId:true})` once, with a successful no-write preflight and unchanged approved source map. Both carry `dicebox-campaign-helper.cavLatePrivyCopperFixture.status=dormant-uncommissioned`, and no story reward ledger.
+
+## VERIFY / source evidence and bounds
+- Independent separate read-only elected-GM browser script returned `pass:true` for exact 2 Region IDs, 2 disabled native Behavior IDs, fixed rects, original source byte-for-byte canonical hashes, 4 total Privy Regions, original enabled yard return + passive arrival preserved, original world Copper source valid, ZERO actor copies, canonical Crimson Veil still null.
+- Prior independent late Greenhouse `CAVEXT06LYEMIX01`, Gazebo `CAVLANTERNIGNIT1` and earlier SG-01 northwest Winder remain enabled/unchanged.
+- Complete isolated Cabin tests `1215/1215 PASS across 43 files`, including **15 new cases**, new source Node syntax and generated native Region async script syntax PASS. This is **source+native installation evidence, NOT actual nonGM playtesting or a functioning Copper recovery UI**.
+- Installer JSON SHA256 `F7FFC2B1DC4DC121524680F61103FBD76968DD6C6430CEB98C9591EE1332BF07`, independent native postread JSON SHA256 `CF960D60094E906C7440317229621809CC1DB12CB7E9CF095030CDD792E496D9`. Guarded read-only audit, one-time installer, receipts under `docs/cabin-ashen-veil/native-install-evidence/2026-10-26-chat-b-batch2-turn18/`. **Do not replay installer.**
+
+## Next exact work — necessary to make chain playable
+1. Chat A / authoritative AQ-01 source-charge service must actually commit once-only Crimson Veil with verified charged Gondian original `Item.pbmUZPfC3WnsBRgi`, then persist native authoritative phase. Do NOT invent/read fake statuses, enable Privy retrieval prematurely or force first chase state.
+2. Commission GM-controlled Privy retrieval/visible Copper original separate pickup within installed two Regions; skill DC12 retry or approved careful tools, exact original item unique reserve→effect→independent reread→done, never game-state change simply from stepping into original Region. Original custom Copper marker artwork still needs owner approval if desired.
+3. Reconcile owner-assigned BATH-02 glass Soap Case position on **unified** Bathhouse with Chat A's concurrent bath Region work. Establish original Copper custody, Veil active, unlocked case, and authentic Lye `Item.vDR4cJU35iODR6gh` claim. This unlocks already-installed Greenhouse Lye-only Plant Killer, then magical Thorn Dock/Boathouse Devotion chain.
+4. Preserve Chat A checkout and all existing Bathhouse/Privy travel Region ownership. Full Prayer/Studio Journal and Sune altar and Rufus Study geometry remain independent later blockers.
+5. Maintain the **one ongoing Chat B conversation transcript**, same file `campaign-archives/cabin-in-the-ashen-veil/workstreams/chat-b/transcripts/chat-b-conversation-2026-10-26-part01.md` in the DCH archive branch, appended between turns; no new transcript file/index required.
+
+**Transcription:** Available current user message “continue” and this turn's truthful status are recorded in the existing living document. Historic skipped messages remain honestly marked; no full-platform export was invented.

@@ -1,0 +1,82 @@
+{
+  "scene": {
+    "id": "xx1rWBiWMLxJPlrw",
+    "name": "EXT-04 - Privy",
+    "map": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+    "w": 1254,
+    "h": 1254,
+    "regions": [
+      {
+        "id": "zVgVWvnpPetxlF5e",
+        "name": "EXT-04 - Return to Carriage Yard",
+        "flags": {
+          "routeKey": "cav:travel:yard-privy:v1",
+          "kind": "return"
+        },
+        "shape": [
+          {
+            "type": "rectangle",
+            "x": 460,
+            "y": 785,
+            "width": 300,
+            "height": 180,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "behaviors": [
+          {
+            "id": "6DZj3FUaLavsdqgA",
+            "type": "teleportToken",
+            "disabled": false
+          }
+        ]
+      },
+      {
+        "id": "663WrP9V8tPPOLvt",
+        "name": "EXT-04 - Arrival from Carriage Yard",
+        "flags": {
+          "routeKey": "cav:travel:yard-privy:v1",
+          "kind": "landing"
+        },
+        "shape": [
+          {
+            "type": "rectangle",
+            "x": 535,
+            "y": 450,
+            "width": 180,
+            "height": 170,
+            "hole": false,
+            "anchorX": 0,
+            "anchorY": 0,
+            "rotation": 0,
+            "gridBased": false
+          }
+        ],
+        "behaviors": []
+      }
+    ],
+    "tokens": []
+  },
+  "item": {
+    "id": "D1LRRg4n7y7pRWvk",
+    "uuid": "Item.D1LRRg4n7y7pRWvk",
+    "name": "Copper Tiny Key",
+    "type": "loot",
+    "img": "icons/sundries/misc/key-ring-long-gold.webp",
+    "flags": {
+      "cabinPuzzleItem": {
+        "source": "2026-10-24-approved-puzzle-chain",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Copper Tiny Key"
+      }
+    }
+  },
+  "itemActorCopies": [],
+  "veilSceneFlag": null,
+  "extraVeilSettings": [],
+  "modules": []
+}
