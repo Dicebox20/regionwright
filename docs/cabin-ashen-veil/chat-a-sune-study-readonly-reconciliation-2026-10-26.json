@@ -1,0 +1,65 @@
+{
+  "schema": "dicebox.cav.chat-a-sune-study-reconciliation/v1",
+  "dateLocal": "2026-10-26",
+  "ownerMessage": "resume",
+  "chat": "A",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "baseCommit": "55d4c233b2267e7f960ea902cab7bd25ca999e7f",
+    "addedModule": "modules/regionwright/scripts/studio-cav-sune-study-reconciliation.js",
+    "modifiedRegistry": "modules/regionwright/scripts/studio-campaign.js",
+    "addedTests": "tests/cav-sune-study-readonly-reconciliation.test.mjs",
+    "testCount": 137,
+    "testFailures": 0,
+    "newTests": 12,
+    "sha": {
+      "registry": "35F151217CAC0FBB24EC34BA4C55F36377B4A9C44D8CEADDF50BBBD4D342C744",
+      "module": "5967F35F8C3A4FAAB3838FDC3A23CFC5BECB0512AE288780F239DC7FDCD414ED"
+    },
+    "installedSourceShaMatches": true
+  },
+  "runtime": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "activeElectedGm": "Gamemaster 1",
+    "readOnlyApi": "game.modules.get('regionwright').api.campaign.cabin.suneStudyReconciliation.describe()",
+    "postReloadVerified": true,
+    "liveStatus": "not-started",
+    "requiresGM": false,
+    "goldStatus": "gold-unclaimed",
+    "keyStatus": "key-unclaimed",
+    "doorStatus": "study-door-locked",
+    "goldLedger": null,
+    "keyLedger": null,
+    "doorLedger": null,
+    "taggedSuneItems": 0,
+    "originalPortalDisabled": true,
+    "sourceGoldExists": true,
+    "sourceBrassKeyExists": true,
+    "syntheticReservedGoldRequiringGM": true,
+    "syntheticPortalWithoutLedgerRequiringGM": true,
+    "studyNote": null,
+    "originalCrank": null,
+    "water": null,
+    "chatMessages": 54,
+    "worldWrites": 0
+  },
+  "deployment": {
+    "gmGameTabReloads": 1,
+    "newRegionBehaviors": 0,
+    "existingRegionBehaviorEdits": 0,
+    "ordinaryPlayerGameplayTests": 0,
+    "sourceOnlyDiagnostic": true
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-sune-gold-key-door-reconcile-baseline-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-sune-study-reconciliation-after-reload-gm-20261026.json"
+  ],
+  "next": [
+    "Preserve user-deferred actual player acceptance",
+    "No automatic reserved Item creation/deletion or Study teleport changes",
+    "Keep Chat B separate late-game source scope"
+  ],
+  "transcriptFidelity": "available-message reconstruction, not lossless chat export"
+}

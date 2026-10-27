@@ -1,0 +1,37 @@
+# Cabin in the Ashen Veil — Chat A Sune Gold / Brass Study Key / Study Door Reconciliation
+
+Date: 2026-10-26 Pacific. Owner direction: "resume". Scope: Chat A early/midgame source, live Foundry module and elected-GM inspection. Chat B late-game development remains isolated. Workflow: PREPARE → INSPECT → BUILD → VERIFY → CATALOGUE.
+
+## PREPARE and original source authority
+Source checkout: Dicebox20/regionwright, branch codex/cav-sune-integration-20261026, starting commit 55d4c233b2267e7f960ea902cab7bd25ca999e7f. Live elected Gamemaster 1, Foundry 14.367 world cabin-in-the-ashen-veil. Foundry TCP 30000 and Chrome Dev CDP 9224 online. Original Sune award service in studio-cav-sune-relief.js: after bust and mosaic completion, original Gold source Item.CAVSUNEGPBAG0001, Sune's Cloth Bag (1,000 gp), is awarded by RESERVED → actor embedded Item creation → DONE; after Gold DONE, original Brass Key source Item.CAVSTUDYBRASS001 is awarded via the same one-time transaction. Original Item flags include cavSuneReliefSourceUuid, cavSuneReliefRegionUuid, cavSuneReliefReward, and on the Key cavStudyKeySourceUuid and cavStudyKeySourceRegionUuid. Neither transaction is automatically retried after uncertain outcome. The native original Study Door ledger and portal are independent: cavStudyDoorUnlocked uses RESERVED → enable original disabled portal → DONE; an interrupted interval requires GM inspection.
+
+## Native GM baseline before change
+Original Sune Grove Scene.CAVSG05Scene0001.Region.L15BdSqcbCOLPnIN, original Great Room Study Door Scene.CAVHG06GreatRoom.Region.CAV06R0000000003. Sune Gold Claim NULL, Brass Key Claim NULL, Study Door ledger NULL. Mosaic locked. No source-tagged embedded Actor rewards. Original Gold source Item exists as container with 1000 gp; original Key exists as loot Brass Key quantity 1. Original Study Door portal CAVHG06STUDYT001 is disabled with only Scene.CAVHG05Scene0001.Region.CAVB9AA3D7BE9560 as existing Study landing. Original native door gate remains enabled and its previous safety proof is installed. Study 587 and Sune GM service registered; 54 prior messages. Elected-GM native baseline receipt: utility-harness/artifacts/cav-chat-a-sune-gold-key-door-reconcile-baseline-20261026.json.
+
+An initial read-only CDP helper had a missing JavaScript brace and was rejected by node --check before any browser operation. Corrected the helper in place and read the original state. No native write or gameplay action was performed for this baseline.
+
+## BUILD — GM-only read-only topology diagnostic
+NEW source modules/regionwright/scripts/studio-cav-sune-study-reconciliation.js exports:
+- assessCavSuneStudyReconciliation: pure, structured receipt classification of original Gold, Key, Study Door, portal, Actor Item identities and step ordering.
+- describeCavSuneStudyReconciliationGM: checks exact ready world and elected Gamemaster identity, reads original Grove/Study Region flags, original World source Items, original portal metadata, actual tagged embedded Items on Actors. Non-GM/wrong world/unready access returns denied.
+
+A small registry-only addition in existing studio-campaign.js exposes:
+game.modules.get("regionwright").api.campaign.cabin.suneStudyReconciliation.describe()
+
+Normal statuses: not-started, sune-rewards-in-progress, key-awarded-door-locked, study-door-unlocked. The report separates gold, key and door statuses rather than hiding which stage is suspect. For both Gold and Key it distinguishes RESERVED with a tagged embedded Item visible vs absent (either requires manual GM reconciliation), missing completed Item, duplicate tagged Items, incompatible source/Grove/reward tags, wrong claimant Actor/Item ID, orphan Items without ledger, unknown transaction statuses. It recognizes original Gold and Key DONE only when the recorded embedded Item ID and actor match an authentic original Item. For Study Door it distinguishes an original locked/unstarted state, RESERVED unlock with portal still locked vs enabled, portal enabled without unlock ledger, DONE with portal locked, mismatched done ledger claimant, missing landing, or extra/foreign portal destination. Chronological violation (Key before Gold DONE or Door before Key DONE) is surfaced as a conflict.
+
+Pure and GM adapter code contains NO setFlag/unsetFlag, embedded Item creation/deletion, Scene/Token/Portal update or message creation. The report is advisory and never enables gameplay, retries a reserved transaction or changes award authority. It does not replace the native Study Door safety gate or player click UI.
+
+## VERIFY
+Added tests/cav-sune-study-readonly-reconciliation.test.mjs with 12 pure/contract tests: GM guard, untouched baseline, both Sune RESERVED award windows, authentic Gold+Key awards, duplicate/foreign-provenance Items, orphan and out-of-order stages, Study Door RESERVED and portal state combinations, correct original DONE portal, extra/wrong landing and public API no-mutation invariant. Focused test suite 12/12 PASS. Full non-destructive Cabin regression suite 137 PASS / 0 FAIL (125 prior), node --test --test-concurrency=1. Source+installed existing Regionwright module scripts SHA256 equal:
+- studio-campaign.js: 35F151217CAC0FBB24EC34BA4C55F36377B4A9C44D8CEADDF50BBBD4D342C744
+- studio-cav-sune-study-reconciliation.js: 5967F35F8C3A4FAAB3838FDC3A23CFC5BECB0512AE288780F239DC7FDCD414ED
+
+ONE guarded current /game page reload committed under elected-GM and no-state-change preflight. Separate independent read-only elected GM after reload dynamically imported the new source and invoked actual registered API. Live response: status=not-started, requiresGM=false, gold=gold-unclaimed, key=key-unclaimed, door=study-door-locked, original tagged Item count=0, original Gold/Key/Door ledgers NULL, portal disabled. Pure synthetic RESERVED Gold classified gold-reserved-item-not-found; synthetic unexpectedly enabled portal without ledger classified study-portal-enabled-without-ledger, both requiring GM. Original Sune/587 GM listeners registered, actual 587 note and Crank/water flags NULL, ChatMessages 54. Positive local evidence: utility-harness/artifacts/cav-chat-a-sune-study-reconciliation-after-reload-gm-20261026.json. No live Item, Actor, Token, Region, Behavior, portal, quest or story-state write, and no actual player gameplay test.
+
+## Boundaries and next step
+The actual Sune mosaic remains locked; neither Gold nor Key was awarded; Study Door remains disabled/locked. Real player acceptance remains owner-deferred along with first Crooked Man chase. Chat B should not modify Chat A shared registry/Sune/StudyDoor or installed Foundry. Future GM can call the read-only diagnostics before deciding whether a genuinely reserved award or portal change requires manual evidence-preserving intervention. Never repair a reserved Item or portal automatically or replay a potentially completed creation/deletion.
+
+Next Chat A safe task: inspect remaining original Sune relief and Study Door player acceptance prerequisites or another unverified early/midgame link in order. Do not fabricate puzzle/award/door completion to enable the later 587 Crank, Pond/Bath drain, or Rosewater. The original 3-ring Rosewater solution remains [1,3,2] with owner-approved Rose, Sun, Moth, Thorn; its native Region remains disabled until real synchronized water drain. Original Sune Bowl unique location remains undecided.
+
+Classification: SOURCE BUILT/DEPLOYED, 137/137 PASS, elected-GM runtime VERIFIED. Actual non-GM gameplay NOT PLAYTESTED.
