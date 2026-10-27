@@ -1,0 +1,32 @@
+{
+    "scenes":  47,
+    "addedTests":  4,
+    "dateLocal":  "2026-10-26",
+    "stagedRosewater":  [
+                            976,
+                            826,
+                            108,
+                            115
+                        ],
+    "baseCommit":  "3d17007137bdc0a52f133c083737d5bc020ad1b2",
+    "ownerBowlPickupApproved":  false,
+    "sourceBehaviorEdits":  0,
+    "nativeProof":  "utility-harness/artifacts/cav-chat-a-bath-click-separation-native-point-proof-20261026.json",
+    "schema":  "dicebox.cav.chat-a-bath-click-priority/v1",
+    "playerAcceptance":  false,
+    "workstream":  "Chat A",
+    "worldEdits":  0,
+    "drainedScrewdriver":  [
+                               870,
+                               710,
+                               360,
+                               330
+                           ],
+    "testFiles":  43,
+    "regions":  239,
+    "behaviors":  126,
+    "scriptHash":  "305D50CDD6EFBEA963C30EFB8A2DBA0FEB82BE48E203B1ABDB1E88D5AE7BCC7E",
+    "status":  "NATIVE_POINT_CLASSIFICATION_PASS_OWNER_APPROVAL_PENDING",
+    "testsPassed":  242,
+    "ownerRingGeometryApproved":  false
+}
