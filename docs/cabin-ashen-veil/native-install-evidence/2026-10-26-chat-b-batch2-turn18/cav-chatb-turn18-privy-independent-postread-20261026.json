@@ -1,0 +1,85 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "electedGM": "Gamemaster 1",
+  "checked": [
+    {
+      "kind": "retrieval",
+      "regionUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1",
+      "behaviorUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1.RegionBehavior.CAVPRIVYRETBH001",
+      "exactSource": true,
+      "sourceSHA256": "44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71",
+      "expectedSHA256": "44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71",
+      "disabled": true,
+      "behaviorCount": 1,
+      "stage": "dormant-uncommissioned",
+      "rect": [
+        760,
+        400,
+        160,
+        195
+      ],
+      "expectedRect": [
+        760,
+        400,
+        160,
+        195
+      ],
+      "noReward": true,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ]
+    },
+    {
+      "kind": "key-marker",
+      "regionUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1",
+      "behaviorUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1.RegionBehavior.CAVPRIVYKEYBH001",
+      "exactSource": true,
+      "sourceSHA256": "b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d",
+      "expectedSHA256": "b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d",
+      "disabled": true,
+      "behaviorCount": 1,
+      "stage": "dormant-uncommissioned",
+      "rect": [
+        785,
+        630,
+        130,
+        130
+      ],
+      "expectedRect": [
+        785,
+        630,
+        130,
+        130
+      ],
+      "noReward": true,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ]
+    }
+  ],
+  "originalPrivyExit": {
+    "uuid": "Scene.xx1rWBiWMLxJPlrw.Region.zVgVWvnpPetxlF5e",
+    "behavior": "teleportToken",
+    "disabled": false
+  },
+  "originalArrival": {
+    "uuid": "Scene.xx1rWBiWMLxJPlrw.Region.663WrP9V8tPPOLvt",
+    "behaviors": 0
+  },
+  "originalCopper": {
+    "uuid": "Item.D1LRRg4n7y7pRWvk",
+    "name": "Copper Tiny Key",
+    "type": "loot",
+    "source": "GM_LIBRARY_ONLY"
+  },
+  "actorCopies": 0,
+  "canonicalVeilCurrent": null,
+  "earlierGreenhousePreserved": true,
+  "earlierGazeboPreserved": true,
+  "originalNorthwestBustPreserved": true
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion":1,
+  "datePacific":"2026-10-26",
+  "turn":3,
+  "workstream":"cav-chat-b-late-game",
+  "repo":"Dicebox20/regionwright",
+  "branch":"codex/cav-late-game-chat-b-20261026",
+  "parentCommit":"d5c9be286daca7fd3d4ad438fa0dc09cee3adc66",
+  "chatAObservedCommit":"54faf5c29b75cd8ef4b3ea26eda6d3ed0f2db9a8",
+  "workPackage":"L1-C music box + prayer and Studio altar + Candle Workshop Wick",
+  "scope":"source-only",
+  "files":["modules/regionwright/scripts/studio-cav-late-music-prayer-contract.js","modules/regionwright/scripts/studio-cav-late-workshop-wick-contract.js","tests/cav-late-music-prayer-contract.test.mjs","tests/cav-late-workshop-wick-contract.test.mjs"],
+  "exports":["planMusicBoxClaim(receipt)","planPrayerProtectionClaim(receipt)","planStudioPrayerPassage(receipt)","planWorkshopWickPickup(receipt)"],
+  "tests":{"new":68,"passed":189,"total":189,"files":29,"syntax":"pass","layer":"pure-local-fixture","foundryRuntime":false,"nonGMGameplay":false},
+  "liveWorldWrites":false,
+  "installedModuleWrites":false,
+  "chatASharedRegistryWrites":false,
+  "sourceItemUUIDsReadback":false,
+  "unresolved":["Hope Chest Region UUID","Music Box Item original UUID","Prayer Item original UUID","Wick original UUID","H-G07 altar/portal and H-G08 return Regions","original Prayer Journal read action","safe landing"],
+  "ownerReview":"required-before-integration",
+  "transcript":"available-message-reconstruction-not-lossless"
+}

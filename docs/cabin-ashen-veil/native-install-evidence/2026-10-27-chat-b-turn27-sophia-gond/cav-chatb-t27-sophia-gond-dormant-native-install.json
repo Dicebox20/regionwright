@@ -1,0 +1,41 @@
+{
+  "status": "Sophia-original-bookcase-hidden-Gond-tile-and-disabled-native-issuer-installed",
+  "summary": {
+    "world": "cabin-in-the-ashen-veil",
+    "scene": "Scene.CAVHU05Scene0001",
+    "gm": "Gamemaster 1",
+    "originalBookcase": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+    "originalBehavior": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F.RegionBehavior.LRYrBIQNN92SCJai",
+    "oldSourceUnchanged": true,
+    "existingRegions": 4,
+    "existingTiles": 0,
+    "originalSixBooks": [
+      "Item.Qplmy8JR7plDYLiY",
+      "Item.DLGIhHc0RDqh0YVt",
+      "Item.TO69wBYN8sRJuxtH",
+      "Item.c3oKW8YkklE8slnX",
+      "Item.HV7XjKmgqVITSEvW",
+      "Item.gmTsIOqc3qFBc3zA"
+    ],
+    "originalGondSource": "Item.o9G3UJjEe2QX1ZH0",
+    "addedBehaviorSourceChars": 7078,
+    "addedTile": "CAVHU05GONDTILE1",
+    "disabled": true,
+    "hidden": true,
+    "originalReturnActive": true,
+    "noIssuerLedger": true
+  },
+  "addedTile": {
+    "uuid": "Scene.CAVHU05Scene0001.Tile.CAVHU05GONDTILE1",
+    "hidden": true
+  },
+  "addedBehavior": {
+    "uuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F.RegionBehavior.CAVGONDREWARD001",
+    "disabled": true
+  },
+  "originalCloseupStillEnabled": true,
+  "originalReturnStillEnabled": true,
+  "noPlayerGondReward": true,
+  "noSpineCompletionFlag": true,
+  "expectedScriptSHA256": "8508ed49a25ef8603a36b21588740d2400a21ebf51a558e792bc81ff1e6d57f9"
+}

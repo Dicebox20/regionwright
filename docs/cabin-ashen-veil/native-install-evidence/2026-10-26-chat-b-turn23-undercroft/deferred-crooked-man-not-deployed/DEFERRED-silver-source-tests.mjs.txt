@@ -1,0 +1,97 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import{SCENE,SILVER_MARKER,SILVER_BEHAVIOR,CHASE_REGION,ORIGINAL_WINDER,
+ ORIGINAL_ITEM,DROP_LEDGER,CLAIM_LEDGER,ALLOWED_DROP_MODES,
+ nativeSilverRecoverySource}from '../modules/regionwright/scripts/studio-cav-late-silver-original-recovery-native.js';
+const s=nativeSilverRecoverySource();
+const AF=Object.getPrototypeOf(async function(){}).constructor;
+test('owner-later SG-01 actual NW anchor, not superseded SG-05',()=>{
+ assert.equal(SCENE,'CAVSG01Scene0001');
+ assert.equal(SILVER_MARKER,'CAVSG01SILVERKEY');
+ assert.equal(SILVER_BEHAVIOR,'CAVSG01SILVRBEH1');
+ assert.equal(CHASE_REGION,'CAVSG01CHASETRG1');
+ assert.equal(ORIGINAL_WINDER,'gksvZIqj8jWdqzn7');
+ assert.equal(ORIGINAL_ITEM,'Item.IY8fuUG5P0yWIZIh');
+ assert.equal(DROP_LEDGER,'cavLateSecondChaseKeyDrop');
+ assert.equal(CLAIM_LEDGER,'cavLateSecondChaseSilverKeyClaim');
+ assert.deepEqual(ALLOWED_DROP_MODES,['late-chase-resolved','post-veil-gm-recovery']);
+});
+test('native original Silver recovery async Region script compiles',()=>{
+ assert.doesNotThrow(()=>new AF('region','event',s));
+});
+test('exact elected GM/Foundry version, original Scene, marker Region guard',()=>{
+ for(const p of ["game.version!=='14.367'","game.world?.id!==WORLD",
+  "scene?.id!==SCENE","region?.id!==MARK",
+  "game.users?.activeGM?.id!==game.user.id"])assert.ok(s.includes(p),p);
+});
+test('protects original first-act northwest winder source and actor Item uniqueness',()=>{
+ for(const p of ['gksvZIqj8jWdqzn7',
+  "winder.behaviors.get('7nHv3rf66mG8PJJS')",
+  "game.actors.contents.some","i.name==='Silver Tiny Key'",
+  "getFlag(NS,'cavLateSilverKeySourceUuid')"])assert.ok(s.includes(p),p);
+});
+test('only trusted native source-ready key-drop modes may permit original claim',()=>{
+ for(const p of ["drop?.status!=='available'","drop.world!==WORLD",
+  "drop.sourceUuid!==SOURCE","drop.sceneId!==SCENE",
+  "drop.markerRegionId!==MARK","drop.chaseRegionId!==CHASE",
+  "drop.electedGMAdjudicationVerified",
+  "late-chase-resolved","post-veil-gm-recovery"])assert.ok(s.includes(p),p);
+});
+test('normal chase key drop requires the source-completed second chase, waterworks, warning, first chase',()=>{
+ for(const p of ["drop.resolvedChaseReceiptStatus!=='done'",
+  "drop.prerequisitesWaterworksVerified!==true",
+  "drop.allenWarningReadVerified!==true",
+  "drop.firstChaseNativeReceiptVerified!==true"])assert.ok(s.includes(p),p);
+});
+test('post-Veil recovery never itself launches chase, requires original verified Veil',()=>{
+ assert.ok(s.includes("drop.actualOriginalCrimsonVeilVerified"));
+ assert.ok(s.includes("drop.recoveryWithoutPlayerChase!==true"));
+ assert.ok(!s.includes("activateCrookedMan"));
+ assert.ok(!s.includes("teleportToken"));
+});
+test('accurate first chase escaped-pending-well-exit semantics',()=>{
+ assert.ok(s.includes("first?.status==='escaped_pending_well_exit'&&well?.status==='done'"));
+ assert.ok(s.includes("first?.status==='captured'"));
+ assert.ok(s.includes("cavForestWellUnlockTransaction"));
+ assert.ok(s.includes("if(!firstResolved)return"));
+});
+test('no reward unless owner-controlled PC token inside original key Region',()=>{
+ for(const p of ["token.actor?.type!=='character'","actor.testUserPermission(u,'OWNER')",
+  "region.testPoint(center)","owners.length===1",
+  "Dialogue","player"])assert.ok(s.includes(p)||p==='Dialogue'&&s.includes('DialogV2.confirm'),p);
+});
+test('must be explicit GM approval for the actual character pickup',()=>{
+ assert.ok(s.includes("DialogV2.confirm"));
+ assert.ok(s.includes("Approve only after this player explicitly elects to take the key"));
+ assert.ok(s.includes("yes:{label:'Approve original key pickup'}"));
+});
+test('one unique item award reserve -> create -> original native readback -> done',()=>{
+ const a=s.indexOf("status:'reserved'"),b=s.indexOf("actor.createEmbeddedDocuments('Item'"),c=s.indexOf("status:'done'");
+ assert.ok(a>=0&&b>a&&c>b);
+ for(const p of ["cavLateSilverKeySourceUuid:SOURCE",
+  "cavLateSilverKeyDropSceneId:SCENE",
+  "cavLateSilverKeyDropRegionUuid:MARK",
+  "embeddedItemId:item.id","sourceMode:drop.mode",
+  "Partial key source grant; reserved ledger","Uncertain silver finalization"])
+ assert.ok(s.includes(p),p);
+});
+test('prayer Music Box downstream original Hope source receipt compatibility',()=>{
+ assert.ok(s.includes("cavLateSecondChaseSilverKeyClaim"));
+ assert.ok(s.includes("sourceUuid:SOURCE"));
+ assert.ok(s.includes("embeddedItemId:item.id"));
+ assert.ok(s.includes("cavLateSilverKeyDropRegionUuid:MARK"));
+ assert.ok(s.includes("cavLateSilverKeyDropSceneId:SCENE"));
+});
+test('does not manufacture any first chase, waterworks, NPC, drop certificate or art',()=>{
+ for(const disallowed of ["new Actor(", "Actor.create",
+  "createEmbeddedDocuments('Region'", "setFlag(NS,'cavLateSecondChaseKeyDrop'",
+  "setFlag(NS,'cavFirstAqueductChase'",
+  "setFlag(NS,'cavWaterworks",
+  "game.socket.emit","deleteEmbeddedDocuments","foundry.canvas"])
+ assert.ok(!s.includes(disallowed),disallowed);
+});
+test('one source script and a second run cannot reset finished or reserved state',()=>{
+ assert.ok(s.includes("region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim')"));
+ assert.ok(s.includes("if(region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim'))return"));
+ assert.ok(s.includes("if(region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim')||"));
+});

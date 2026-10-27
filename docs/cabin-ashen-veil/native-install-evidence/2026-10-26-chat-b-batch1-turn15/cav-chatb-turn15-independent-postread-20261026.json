@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "checks": [
+    {
+      "kind": "late-chase",
+      "uuid": "Scene.CAVSG01Scene0001.Region.CAVSG01CHASETRG1",
+      "behaviorUuid": "Scene.CAVSG01Scene0001.Region.CAVSG01CHASETRG1.RegionBehavior.CAVSG01CHASEBEH1",
+      "behaviorCount": 1,
+      "sourceMatches": true,
+      "status": "dormant-uncommissioned",
+      "isDisabled": true,
+      "behaviorEvents": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "shapeMatches": true,
+      "claimState": null
+    },
+    {
+      "kind": "silver-marker",
+      "uuid": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY",
+      "behaviorUuid": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY.RegionBehavior.CAVSG01SILVRBEH1",
+      "behaviorCount": 1,
+      "sourceMatches": true,
+      "status": "dormant-uncommissioned",
+      "isDisabled": true,
+      "behaviorEvents": [
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ],
+      "shapeMatches": true,
+      "claimState": null
+    }
+  ],
+  "originals": {
+    "nwWinderActive": true,
+    "firstChaseDisabled": true,
+    "firstChaseNotTriggered": true,
+    "studioVanityPreserved": true,
+    "hopeBehaviorStillEnabled": true,
+    "silverSourceWorldCount": 1,
+    "silverActorCopies": 0
+  }
+}

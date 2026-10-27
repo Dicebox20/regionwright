@@ -1,0 +1,68 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "originalBookcaseSourceSHA256": "263d8df82e8b7a573373c466df2cc9723ea611bbedfe8dcab34b2f0db57194f8",
+  "newBehaviorSourceSHA256": "8508ed49a25ef8603a36b21588740d2400a21ebf51a558e792bc81ff1e6d57f9",
+  "expectedBehaviorSourceSHA256": "8508ed49a25ef8603a36b21588740d2400a21ebf51a558e792bc81ff1e6d57f9",
+  "behaviorUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F.RegionBehavior.CAVGONDREWARD001",
+  "disabled": true,
+  "tile": {
+    "uuid": "Scene.CAVHU05Scene0001.Tile.CAVHU05GONDTILE1",
+    "hidden": true,
+    "locked": true,
+    "x": 1000,
+    "y": 177,
+    "width": 66,
+    "height": 66,
+    "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+    "flag": {
+      "version": 1,
+      "status": "hidden-original-bookcase",
+      "sceneId": "CAVHU05Scene0001",
+      "bookcaseRegionId": "CAVB994894A7432F",
+      "rewardUuid": "Item.o9G3UJjEe2QX1ZH0",
+      "requiresSpineOrder": true,
+      "requiresSixthVeilBook": true,
+      "actorRewardIssued": false,
+      "nonGmTested": false
+    }
+  },
+  "originalCloseupUnchanged": true,
+  "originalReturnActive": true,
+  "originalSourceItems": [
+    {
+      "uuid": "Item.Qplmy8JR7plDYLiY",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.DLGIhHc0RDqh0YVt",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.TO69wBYN8sRJuxtH",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.c3oKW8YkklE8slnX",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.HV7XjKmgqVITSEvW",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.gmTsIOqc3qFBc3zA",
+      "status": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "originalGond": {
+    "uuid": "Item.o9G3UJjEe2QX1ZH0",
+    "status": "GM_LIBRARY_ONLY"
+  },
+  "rewardLedger": null,
+  "spineLedger": null,
+  "compartmentLedger": null,
+  "actorGondCopies": 0,
+  "vaultSocketDisabled": true
+}

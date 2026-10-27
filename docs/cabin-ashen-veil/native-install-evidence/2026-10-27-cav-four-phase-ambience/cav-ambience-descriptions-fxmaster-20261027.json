@@ -1,0 +1,1310 @@
+{
+  "fxmaster": {
+    "version": "8.3.6",
+    "apiPresets": [
+      "play",
+      "stop",
+      "toggle",
+      "switch",
+      "list",
+      "listActive",
+      "listValid",
+      "hasFxmasterPlus",
+      "hasFxmaster"
+    ],
+    "apiEffects": [
+      "particles",
+      "filters",
+      "play",
+      "stop",
+      "toggle"
+    ],
+    "presetNames": [],
+    "globalApi": [
+      "stopSceneEffects",
+      "stopRegionEffects",
+      "startRegionEffects",
+      "presets",
+      "effects"
+    ]
+  },
+  "firstYard": {
+    "env": {
+      "darknessLevel": 0.15,
+      "darknessLock": false,
+      "globalLight": {
+        "enabled": false,
+        "alpha": 0.5,
+        "bright": false,
+        "color": null,
+        "coloration": 1,
+        "luminosity": 0,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "cycle": true,
+      "base": {
+        "hue": 0,
+        "intensity": 0,
+        "luminosity": 0,
+        "saturation": 0,
+        "shadows": 0
+      },
+      "dark": {
+        "hue": 0.7138888888888889,
+        "intensity": 0.15,
+        "luminosity": -0.25,
+        "saturation": 0,
+        "shadows": 0.4
+      }
+    },
+    "fx": {
+      "parameterRangeMigrationVersion": 1,
+      "effects": {
+        "core_rain": {
+          "type": "rain",
+          "options": {
+            "belowTokens": false,
+            "belowTiles": false,
+            "belowForeground": false,
+            "tint": {
+              "apply": false,
+              "value": "#FFFFFF"
+            },
+            "soundFxEnabled": false,
+            "topDown": false,
+            "splash": true,
+            "splashDensity": 0.2,
+            "splashScale": 0.2,
+            "direction": 285,
+            "synchronizedDirection": false,
+            "scale": 0.5,
+            "speed": 0.2,
+            "lifetime": 0.25,
+            "density": 0.4,
+            "alpha": 1,
+            "backgroundEnabled": false,
+            "backgroundMode": "accumulate",
+            "backgroundDuration": 180,
+            "backgroundGroundMovementSpeed": 0.04,
+            "backgroundCoverage": 0.65,
+            "backgroundPatchSize": 0.85,
+            "backgroundFillVariation": 0.7,
+            "backgroundOpacity": 0.28,
+            "backgroundReflectionStrength": 0.58,
+            "backgroundShimmerStrength": 0.42,
+            "backgroundShimmerSpeed": 0.14,
+            "backgroundInteractionEnabled": false,
+            "backgroundInteractionRadius": 0.5,
+            "backgroundInteractionStrength": 0.75,
+            "backgroundInteractionLiftChance": 0.35,
+            "backgroundInteractionElevationThreshold": 5,
+            "backgroundInteractionSettleTime": 1.4,
+            "darknessActivationEnabled": false,
+            "darknessActivationRange": {
+              "min": 0,
+              "max": 1
+            }
+          }
+        }
+      }
+    },
+    "weather": "fog"
+  },
+  "greatRoom": {
+    "env": {
+      "darknessLevel": 0.5,
+      "darknessLock": false,
+      "globalLight": {
+        "enabled": false,
+        "alpha": 0.5,
+        "bright": false,
+        "color": null,
+        "coloration": 1,
+        "luminosity": 0,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "cycle": true,
+      "base": {
+        "hue": 0,
+        "intensity": 0,
+        "luminosity": 0,
+        "saturation": 0,
+        "shadows": 0
+      },
+      "dark": {
+        "hue": 0.7138888888888889,
+        "intensity": 0,
+        "luminosity": -0.25,
+        "saturation": 0,
+        "shadows": 0
+      }
+    },
+    "fx": {
+      "parameterRangeMigrationVersion": 1
+    }
+  },
+  "journals": [
+    {
+      "id": "9dngVaa6ctgFAqd2",
+      "name": "Cabin in the Ashen Veil — Area Read-Aloud Descriptions",
+      "pages": [
+        {
+          "name": "H-G01 — Dining Room",
+          "text": " The dining room has the dignified wear of a place that once hosted countless family meals. A long wooden table occupies the center, its finish faded to a dull patchwork beneath a thick mantle of dust. Several chairs stand at awkward angles"
+        },
+        {
+          "name": "H-G02 — Foyer",
+          "text": " The foyer is small, but its timber paneling and carefully fitted floorboards speak of a house built to last. Time has been less kind to the furnishings: a crooked coatrack leans against the wall, the finish on the boards has worn gray, and"
+        },
+        {
+          "name": "H-G03 — Kitchen",
+          "text": " A broad stone hearth anchors this old kitchen, its firebox black with soot from years of use and its ash long since gone cold. Once-practical counters have warped along the edges, and the surfaces are rough with dust and tiny cracks. Utens"
+        },
+        {
+          "name": "H-G04 — Pantry",
+          "text": " The pantry is narrow and close, its shelves bowed beneath jars, chipped crockery, and the small remnants of ordinary household storage. Dust has collected so deeply on some shelves that the outlines of former containers remain visible as c"
+        },
+        {
+          "name": "H-G05 — Allen's Study",
+          "text": " This study bears the marks of a meticulous mind, even after decades without care. A heavy work desk is crowded with aging papers, curling sketches, books with softened spines, and small pieces of tarnished metalwork. The leather and wood o"
+        },
+        {
+          "name": "H-G06 — Great Room",
+          "text": " The Great Room stretches before you beneath tall, darkened timbers, its old herringbone floor scuffed by generations of footsteps and dulled by decades of dust. A faded sofa and worn armchairs face a low table, their upholstery sun-bleache"
+        },
+        {
+          "name": "H-G09 — Rear Family Room",
+          "text": " The rear family room is smaller and more intimate than the Great Room, furnished for quiet evenings rather than guests. A once-colorful rug lies faded across the boards, its edges curling and its pattern nearly erased by time. Soft furnish"
+        },
+        {
+          "name": "H-U01 — Nursery",
+          "text": " The nursery is a little room of pale, timeworn colors, where the woodwork has yellowed and the paint has cracked into fine lines. A small cradle rests near a dresser, both coated in soft layers of dust, and delicate decorations remain wher"
+        },
+        {
+          "name": "H-U02 — Upper Landing",
+          "text": " The stairs deliver you onto an upper landing lined with doors, where the polished floorboards have become dull and uneven with age. Old scratches follow the usual paths between the rooms, and the railing is smooth in places where countless"
+        },
+        {
+          "name": "H-U03 — Guest Bedroom",
+          "text": " The guest bedroom appears to have been arranged with care and then left to age in silence. A bed stands against the wall, its coverlet faded and drawn tight over a mattress that has slowly sagged. An old travel chest rests nearby, with tar"
+        },
+        {
+          "name": "H-U04 — Parents' Bedroom",
+          "text": " The parents' bedroom is spacious enough to feel comfortable, though time has stripped away most of its warmth. A broad bed dominates the room beneath a coverlet whose colors have faded to subdued, dusty shades. Beside it, a small cabinet s"
+        },
+        {
+          "name": "H-U05 — Sophia's Bedroom",
+          "text": " This small bedroom holds the unmistakable shape of a child's world, preserved beneath decades of dust. A narrow bed stands near a bookshelf whose edges have been rounded by use, and well-loved storybooks lean together between its worn supp"
+        },
+        {
+          "name": "H-U07 — Dahlia's Art Studio",
+          "text": " The art studio has the weary beauty of a room where color once mattered greatly. Canvases lean along the walls, their surfaces gray with dust and their edges spotted with age; an easel stands among jars of hardened pigment and worn brushes"
+        },
+        {
+          "name": "H-U08 — Candle Workshop",
+          "text": " The candle workshop is a narrow, crowded space whose working surfaces have not been cleared in decades. A sturdy bench supports wax molds, old tools, and vessels stained by repeated use. Pale wax has hardened into ridges and drips along th"
+        },
+        {
+          "name": "H-A01 — Central Attic",
+          "text": " The attic opens beneath steep rafters and heavy crossbeams darkened by years of trapped heat and winter damp. Dust lies thick over a central workbench, storage boxes, and the objects left beneath the sloping roof. Three enclosed storage-ro"
+        },
+        {
+          "name": "H-A02 — West Attic Storage",
+          "text": " The western storage room is cramped beneath the roof's descending slope. Old crates and practical field equipment have been stacked wherever they would fit, alongside worn boards and fragments of carpentry. The crates are gray with dust, t"
+        },
+        {
+          "name": "H-A03 — North Attic Storage",
+          "text": " Boxes, folded garments, and ordinary family possessions occupy the northern attic storage room in quiet disorder. The rough timbers overhead are streaked by years of temperature changes, and dust has settled into every fold of cloth. Some "
+        },
+        {
+          "name": "H-A04 — East Attic Storage",
+          "text": " The eastern storage room holds a mixture of covered furniture, household odds and ends, and old repair materials, all crowded beneath the slanted roof. Brass fittings that once gleamed are now dull and mottled; wooden handles have dried pa"
+        },
+        {
+          "name": "H-R01 — Roof and Chimney Clock",
+          "text": " Out on the roof, years of rain and autumn weather have roughened the shingles and stained the masonry around the chimney. Moss clings to sheltered joints, and the roofline dips and rises along timbers that have slowly settled with age. Bes"
+        },
+        {
+          "name": "H-B01 — Allen's Basement Workshop",
+          "text": " The basement workshop is colder and more severe than the living quarters above. Heavy stone walls, timber supports, and long workbenches enclose an intricate collection of machinery and stored fittings. Copper has tarnished to dark brown a"
+        },
+        {
+          "name": "H-B02 — Secured Vault",
+          "text": " Thick, close-fitted stonework gives this chamber a solidity unlike the timber rooms upstairs. Its heavy threshold and substantial metal fittings have darkened with age, though the careful craftsmanship beneath them remains clear. A plinth "
+        },
+        {
+          "name": "H-B03 — Basement Supply Closet",
+          "text": " The basement supply closet is little more than a narrow pocket of shelves cut off from the larger workshop. Spare fittings, old containers, and practical repair materials are packed into the cramped space, many powdered with stone dust. Ru"
+        },
+        {
+          "name": "SG-01 — Northwest Grove Corner",
+          "text": " The northwestern garden walk bends beside a low wall almost buried under years of moss and leaf litter. A carved stone bust stands in a shallow alcove, its features softened by rain, frost, and the slow stain of creeping vines. Broken rose"
+        },
+        {
+          "name": "SG-02 — Northern Processional Walk",
+          "text": " A straight garden walk runs between low, rose-cut stone borders whose once-neat edges have long been swallowed by moss. Fallen leaves pack the cracks in the paving, and small plants have taken root where the mortar failed. The path has the"
+        },
+        {
+          "name": "SG-03 — Northeast Grove Corner",
+          "text": " At the northeastern corner, the path makes a sharp turn around aged garden masonry. A weathered stone bust rests in an alcove near the bend, its surface pitted by seasons of rain and cold. Bare branches hang above the wall, their shadows c"
+        },
+        {
+          "name": "SG-04 — Western Grove Walk",
+          "text": " The western grove walk follows the remnants of a carefully bordered garden path. Low masonry, once crisp and even, has become a patchwork of moss, frost cracks, and creeping ivy. Old rose canes arch across the edges, and the earth beneath "
+        },
+        {
+          "name": "SG-05 — Memorial Clearing",
+          "text": " The garden opens into a memorial clearing where the years seem written into every stone. A standing statue of Sune rises from a weathered pedestal, its robes carefully carved and its open hands worn smooth at the edges. Old rosebeds crowd "
+        },
+        {
+          "name": "SG-06 — Eastern Grove Walk",
+          "text": " Here the eastern walk spreads into an old garden crossroads beneath bare, overreaching branches. Remains of rose trellises lean beside the paving, their supports split and darkened by years outdoors. Moss fills the joints of the low stone "
+        },
+        {
+          "name": "SG-07 — Southwest Grove Corner",
+          "text": " The southwestern corner of the grove turns beside a carved bust set among old ornamental stonework. Rain has darkened the pedestal, while ivy climbs the walls around it and clings to the seams. The paving has sunk unevenly under the slow p"
+        },
+        {
+          "name": "SG-08 — Southern Grove Walk",
+          "text": " The southern walk follows a line of stepping stones nearly lost beneath leaves and thin winter-brown grass. The old path still holds its shape, but moss has spread over its edges and delicate roots lace through the gaps. Sparse garden shru"
+        },
+        {
+          "name": "SG-09 — Southeast Grove Corner",
+          "text": " The southeastern path bends between low, weather-stained walls and the remains of a once-ornamental garden bed. A stone bust overlooks the corner from its alcove, its carved details softened by many years of frost and rain. Pale lichen fle"
+        },
+        {
+          "name": "FM-01 — Iron Gate Entrance",
+          "text": " An old wrought-iron gate marks the entrance to a garden maze whose careful design has long since been overtaken by growth. Rust roughens the ironwork, and the stone posts on either side are dark with moss. Beyond them, high hedges press cl"
+        },
+        {
+          "name": "FM-02 — Lower Hedge Switchbacks",
+          "text": " The maze path folds back upon itself between dense hedgerows that have grown ragged with age. Roots lift old stones beneath your feet, while broken fragments of paving peek through patches of dark soil. Around each bend, the same mottled g"
+        },
+        {
+          "name": "FM-03 — Northern Forks",
+          "text": " The northern stretches of the maze open into branching walks, where gaps in the old hedges offer glimpses of other estate buildings. In one direction, a weathered gazebo stands beyond the foliage; in another, clouded panes catch the light "
+        },
+        {
+          "name": "FM-04 — Rootbound Well Clearing",
+          "text": " The tangled hedge walks give way to a small clearing centered on an ancient stone well. Thick roots have grown around its base, lifting the surrounding flagstones and slipping into cracks in the masonry. The well's rim is darkened by rain "
+        },
+        {
+          "name": "EXT-01 — Carriage Yard",
+          "text": " The forest road broadens into an old carriage yard, where wheel-rutted earth and gravel circle a leafless tree. A wooden carriage rests off to one side, its paint faded, iron rims rusted, and leather fittings stiff from years in the open. "
+        },
+        {
+          "name": "EXT-02 — Pond and Sluice Gate — full",
+          "text": " The pond lies broad and still beneath the autumn trees, its dark surface reflecting the bare branches along the banks. Old stonework and a metal sluice frame one part of the shoreline, their edges worn smooth and stained by years of water "
+        },
+        {
+          "name": "EXT-02 — Pond and Sluice Gate — drained",
+          "text": " The pond has emptied into a broad basin of slick mud, wet stones, and tangled water plants. Dark bands on the shore mark where the water once stood, and old masonry has emerged from beneath years of silt. Stone steps now descend across the"
+        },
+        {
+          "name": "EXT-03 — Donovan's Shack",
+          "text": " Donovan's shack is a modest groundskeeper's building, its planks gray with age and its roof patched by seasons of bad weather. Inside, a narrow cot and rough work surfaces share the space with tools, rope, and stored supplies. Dust has set"
+        },
+        {
+          "name": "EXT-04 — Privy",
+          "text": " The privy is a plain, weather-beaten structure standing apart from the main house. Its boards are stained dark where rain has soaked into them, and the roof edges have grown uneven from years of exposure. Fallen leaves and low weeds crowd "
+        },
+        {
+          "name": "EXT-05 — Forgotten Gazebo",
+          "text": " The forgotten gazebo stands beneath the weight of creeping vines, its once-elegant stonework discolored by moss and rain. The remains of a timber canopy show cracked beams and weather-softened edges, with fallen leaves gathered around the "
+        },
+        {
+          "name": "EXT-06 — Greenhouse",
+          "text": " The greenhouse's glass panes have gone milky with grime and weather, softening the autumn daylight that reaches the interior. Planter beds overflow with vines and leggy growth, pushing past the straight lines of an older, carefully organiz"
+        },
+        {
+          "name": "EXT-07 — Boathouse Clearing",
+          "text": " A solitary timber boathouse stands in a woodland clearing beside a narrow edge of pond water. Its boards have turned silver-gray with rain and age, and rope, old boating gear, and weathered timbers rest inside its simple opening. A short d"
+        },
+        {
+          "name": "EXT-08 — Rear Deck and Family Grounds",
+          "text": " The rear of the cabin opens onto a deck whose boards have been bleached by years of sun and darkened wherever rainwater gathered. Its steps are worn at the center, the railing dry and splintered in places. Old outdoor furniture rests among"
+        },
+        {
+          "name": "BATH-05 — Entrance and Changing Room",
+          "text": " The bathhouse entrance opens into a changing room lined with wooden benches and modest places to set clothing. Its tiled floor is worn smooth along the usual routes, the grout darkened by long-vanished moisture. Hooks and small storage spa"
+        },
+        {
+          "name": "BATH-01 — Main Bath — filled",
+          "text": " A broad bathing pool occupies the heart of this carefully constructed room, its still surface mirroring pale light from above. Rose-patterned tiles surround the water, their colors muted by mineral deposits and a long accumulation of grime"
+        },
+        {
+          "name": "BATH-01 — Main Bath — drained",
+          "text": " The great bath lies empty, exposing a floor of rose-patterned tiles dark with moisture. Streaks of mineral residue mark the former waterline along the pool walls, and beads of water cling to the old stone steps. The carved patterns are cle"
+        },
+        {
+          "name": "BATH-02 — Herbal Room",
+          "text": " The herbal preparation room is crowded with shelves, old vessels, and the remains of a workshop once kept tidy and purposeful. Dried herbs have faded into brittle bunches, and dust clings to the rims of jars and small containers. A brass d"
+        },
+        {
+          "name": "BATH-03 — Boiler Room",
+          "text": " A heavy boiler dominates this room, its curved metal shell surrounded by copper pipes, valve wheels, and round-faced gauges. Tarnish has spread over the machinery, leaving dark patches on brass fittings and green-blue stains near old joint"
+        },
+        {
+          "name": "BATH-06 — Warm Bath",
+          "text": " This smaller bathing room holds a tiled plunge pool and a narrow stretch of floor along its edge. The tiles were once carefully patterned, but their finish has worn dull, and dark mineral lines mark where water repeatedly stood. A masonry "
+        },
+        {
+          "name": "BATH-07 — Cold Bath",
+          "text": " The cold bath is a compact, private room centered on a small pool sunk into aging stone tile. Its rim has been polished by years of use, though the surface is now roughened in spots by deposits and grit. Pale staining follows the old water"
+        },
+        {
+          "name": "BATH-08 — Mechanical Room",
+          "text": " The mechanical room is cramped with branching pipes, fittings, and the practical workings that once supported the baths. A maintenance grate lies beneath rust-flecked metalwork, while a tool rack and battered containers occupy the remainin"
+        },
+        {
+          "name": "BATH-04 — Rosewater Reliquary",
+          "text": " Below the bathhouse lies a dry, stone-lined chamber with a noticeably quieter and more deliberate design. Carved roses decorate parts of the masonry, their edges worn by age but still graceful in the dim light. A simple plinth stands withi"
+        },
+        {
+          "name": "AQ-01 — Main Aqueduct",
+          "text": " The aqueduct spreads into a vast underground arrangement of walkways, water channels, stone piers, and heavy brass machinery. Old copper conduits run along the walls, their surfaces streaked green with age, while iron gates and mechanical "
+        },
+        {
+          "name": "AQ-02 — Waterworks Service Gallery",
+          "text": " The waterworks gallery is a narrower maze of valves, gauges, and service pipes branching away from the main aqueduct. Three substantial control assemblies stand among walls stained by condensation and old mineral deposits. Roots have found"
+        },
+        {
+          "name": "UND-01 — Undercroft Approach",
+          "text": " The descent ends in a damp stone passage whose walls bear the marks of careful cutting and much older weathering. Moisture gathers between the blocks, leaving dark streaks beneath the joints, and the steps are worn shallow toward their cen"
+        },
+        {
+          "name": "UND-02 — Sealed Refuge",
+          "text": " Beyond the heavy masonry lies a small underground shelter whose scattered belongings have been left to decay in the dark. Old tools lie among broken wood and crumbled fabric, and parts of the walls bear scratches and worn marks. Dust has s"
+        },
+        {
+          "name": "UND-03 — Ritual Chamber",
+          "text": " The underground passage opens into a broad chamber with a substantial area of open floor and a central stonework feature. The masonry is old, its edges softened by moisture and age, and the surfaces catch little of the light carried into t"
+        },
+        {
+          "name": "EXT-TRAIL — Forest Trail Fork",
+          "text": " An old woodland trail winds between mossy boundary stones and trees dressed in the faded golds and reds of late autumn. Time has softened the original path into the forest floor, with roots crossing the compacted earth and fallen leaves co"
+        }
+      ]
+    },
+    {
+      "id": "CAVPRAYERDEVOTN1",
+      "name": "Prayer of Devotion",
+      "pages": [
+        {
+          "name": "Prayer of Devotion",
+          "text": " Bright Lady, I offer no perfect face and no spotless soul. \n I offer the lamp I keep alight for someone lost, the hand I extend when mine is shaking, and the promise to cherish what the darkness would erase. \n Teach me to see worth beneath"
+        }
+      ]
+    },
+    {
+      "id": "CAVPRAYERPROTECT",
+      "name": "Prayer of Protection",
+      "pages": [
+        {
+          "name": "Prayer of Protection",
+          "text": " Lady of the Rose, let beauty be a shelter, not a prize. \n Where fear has shut a door, lay your hand upon its latch. \n Guard the names spoken softly in this house, the hands that reach through darkness, and the hearts that tremble yet do no"
+        }
+      ]
+    },
+    {
+      "id": "CytHYx6KpqeLQh5w",
+      "name": "CPR - Descriptions",
+      "pages": [
+        {
+          "name": "Info",
+          "text": " Thank you for using this module! If you find any bugs or please either make a  Github  issue or bug report on our  Discord . Do not pester tposney, Zhell, or any other module authors with bugs or issues related to this module.  Extended in"
+        },
+        {
+          "name": "Shadow Blade Sword",
+          "text": ""
+        },
+        {
+          "name": "Dragon Breath",
+          "text": ""
+        },
+        {
+          "name": "Flaming Sphere: Ram",
+          "text": ""
+        },
+        {
+          "name": "Binding Strike",
+          "text": ""
+        },
+        {
+          "name": "Shared Resistances",
+          "text": ""
+        },
+        {
+          "name": "Interposing Hand",
+          "text": ""
+        },
+        {
+          "name": "Claws (Slaad Only)",
+          "text": ""
+        },
+        {
+          "name": "Forceful Hand",
+          "text": ""
+        },
+        {
+          "name": "Grave Bolt (Skeletal Only)",
+          "text": ""
+        },
+        {
+          "name": "Flyby (Air Only)",
+          "text": ""
+        },
+        {
+          "name": "Psychic Slam (Star Spawn Only)",
+          "text": ""
+        },
+        {
+          "name": "Berserk Lashing (Clay Only)",
+          "text": ""
+        },
+        {
+          "name": "Heated Body (Metal Only)",
+          "text": ""
+        },
+        {
+          "name": "Stone Lethargy (Stone Only)",
+          "text": ""
+        },
+        {
+          "name": "Immutable Form",
+          "text": ""
+        },
+        {
+          "name": "Clenched Fist",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Construct Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Grasping Hand",
+          "text": ""
+        },
+        {
+          "name": "Terror Frenzy (Fury Only)",
+          "text": ""
+        },
+        {
+          "name": "Rotting Claw (Putrid Only): Paralyze",
+          "text": ""
+        },
+        {
+          "name": "Fortified Position",
+          "text": ""
+        },
+        {
+          "name": "Whispering Aura (Star Spawn Only)",
+          "text": ""
+        },
+        {
+          "name": "Shred",
+          "text": ""
+        },
+        {
+          "name": "Claws (Yugoloth Only)",
+          "text": ""
+        },
+        {
+          "name": "Fuming",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Undead Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Aberrant Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Protector",
+          "text": ""
+        },
+        {
+          "name": "Primal Bond",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Bestial Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Vigilant",
+          "text": ""
+        },
+        {
+          "name": "Shortsword (Fey Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Irrepressible Dance",
+          "text": ""
+        },
+        {
+          "name": "Flame Seed",
+          "text": ""
+        },
+        {
+          "name": "Haunt Creature (Reaper Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Deathly Touch (Ghostly Only)",
+          "text": ""
+        },
+        {
+          "name": "Breath Weapon",
+          "text": ""
+        },
+        {
+          "name": "Slam (Construct Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Bite (Demon Only)",
+          "text": ""
+        },
+        {
+          "name": "Dust Devil: Contact",
+          "text": ""
+        },
+        {
+          "name": "Magic Resistance (Fiendish Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Shadow Stealth (Fear Only)",
+          "text": ""
+        },
+        {
+          "name": "Force Strike",
+          "text": ""
+        },
+        {
+          "name": "Healing Touch (Celestial Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Tricksy",
+          "text": ""
+        },
+        {
+          "name": "Regeneration (Slaad Only)",
+          "text": ""
+        },
+        {
+          "name": "Mirthful",
+          "text": ""
+        },
+        {
+          "name": "Fey Step (Fey Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Weight of Sorrow (Despair Only)",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Draconic Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Pack Tactics (Land and Water Only)",
+          "text": ""
+        },
+        {
+          "name": "Dreadful Scream",
+          "text": ""
+        },
+        {
+          "name": "Fiery Teleportation",
+          "text": ""
+        },
+        {
+          "name": "Evasion",
+          "text": ""
+        },
+        {
+          "name": "Deflect Attack",
+          "text": ""
+        },
+        {
+          "name": "Amorphous Form (Air, Fire, and Water Only)",
+          "text": ""
+        },
+        {
+          "name": "Death Throes (Demon Only)",
+          "text": ""
+        },
+        {
+          "name": "Radiant Bow (Avenger Only)",
+          "text": ""
+        },
+        {
+          "name": "Bite (Drake Companion)",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Fey Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Mending (Homunculus Servant)",
+          "text": ""
+        },
+        {
+          "name": "Slam (Animated Object)",
+          "text": ""
+        },
+        {
+          "name": "Force-Empowered Slam",
+          "text": ""
+        },
+        {
+          "name": "Healing Spirit: Heal",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Fiendish Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Rend (Draconic Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Channel Magic",
+          "text": ""
+        },
+        {
+          "name": "Amphibious",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Elemental Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Festering Aura (Putrid Only)",
+          "text": ""
+        },
+        {
+          "name": "Draconic Essence",
+          "text": ""
+        },
+        {
+          "name": "Infused Strikes",
+          "text": ""
+        },
+        {
+          "name": "Maul (Bestial Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Investment of the Chain Master: Familiar Resistance",
+          "text": ""
+        },
+        {
+          "name": "Reaping Scythe (Reaper Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Repair",
+          "text": ""
+        },
+        {
+          "name": "Incorporeal Passage (Ghostly Only)",
+          "text": ""
+        },
+        {
+          "name": "Devil's Sight (Devil Only)",
+          "text": ""
+        },
+        {
+          "name": "Rotting Claw (Putrid Only)",
+          "text": ""
+        },
+        {
+          "name": "Guardian of Faith: Damage",
+          "text": ""
+        },
+        {
+          "name": "Force-Empowered Rend",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Celestial Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Shadow Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Multiattack (Reaper Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Eye Ray (Beholderkin Only)",
+          "text": ""
+        },
+        {
+          "name": "Maul",
+          "text": ""
+        },
+        {
+          "name": "Incorporeal Movement (Reaper Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Chilling Rend",
+          "text": ""
+        },
+        {
+          "name": "Hurl Flame (Devil Only)",
+          "text": ""
+        },
+        {
+          "name": "Flamethrower",
+          "text": ""
+        },
+        {
+          "name": "Radiant Mace (Defender Only)",
+          "text": ""
+        },
+        {
+          "name": "Water Breathing (Water Only)",
+          "text": ""
+        },
+        {
+          "name": "Charge",
+          "text": ""
+        },
+        {
+          "name": "Flyby",
+          "text": ""
+        },
+        {
+          "name": "Fiery Teleportation: Damage",
+          "text": ""
+        },
+        {
+          "name": "Flaming Sphere: End Turn",
+          "text": ""
+        },
+        {
+          "name": "Slam (Elemental Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Explosive Cannon",
+          "text": ""
+        },
+        {
+          "name": "Mending (Eldritch Cannon)",
+          "text": ""
+        },
+        {
+          "name": "Force Ballista",
+          "text": ""
+        },
+        {
+          "name": "Mending (Steel Defender)",
+          "text": ""
+        },
+        {
+          "name": "Homunculus Servant: Channel Magic",
+          "text": ""
+        },
+        {
+          "name": "Magnificent Feast",
+          "text": ""
+        },
+        {
+          "name": "Radiant Weapon: Light",
+          "text": ""
+        },
+        {
+          "name": "Wild Surge: Intangible Spirit Explode",
+          "text": ""
+        },
+        {
+          "name": "Protective Bond: Damage",
+          "text": ""
+        },
+        {
+          "name": "Guardian Armor: Thunder Gauntlets",
+          "text": ""
+        },
+        {
+          "name": "Mote of Potential Heal",
+          "text": ""
+        },
+        {
+          "name": "Repulsion Shield: Push",
+          "text": ""
+        },
+        {
+          "name": "Radiant Weapon: Blind",
+          "text": ""
+        },
+        {
+          "name": "Predatory Strike",
+          "text": ""
+        },
+        {
+          "name": "Summon Wildfire Spirit: Damage",
+          "text": ""
+        },
+        {
+          "name": "Mote of Potential Attack",
+          "text": ""
+        },
+        {
+          "name": "Homunculus Servant: Command",
+          "text": ""
+        },
+        {
+          "name": "Infiltrator Armor: Lightning Launcher",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Transformation",
+          "text": ""
+        },
+        {
+          "name": "Helm of Awareness",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Flight",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Swiftness",
+          "text": ""
+        },
+        {
+          "name": "Mind Sharpener",
+          "text": ""
+        },
+        {
+          "name": "Arcane Propulsion Gauntlet",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Resilience",
+          "text": ""
+        },
+        {
+          "name": "Wild Shape: Revert",
+          "text": ""
+        },
+        {
+          "name": "Heart of Homunculus Servant",
+          "text": ""
+        },
+        {
+          "name": "Boots of the Winding Path",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Boldness",
+          "text": ""
+        },
+        {
+          "name": "Armor of Magical Strength: Resist Prone",
+          "text": ""
+        },
+        {
+          "name": "Mutagencraft: Flush Mutagens",
+          "text": ""
+        },
+        {
+          "name": "Experimental Elixir: Healing",
+          "text": ""
+        },
+        {
+          "name": "Spell-Refueling Ring",
+          "text": ""
+        },
+        {
+          "name": "Weakening Strike",
+          "text": ""
+        },
+        {
+          "name": "Tenacity",
+          "text": ""
+        },
+        {
+          "name": "Flourish",
+          "text": ""
+        },
+        {
+          "name": "Cleave",
+          "text": ""
+        },
+        {
+          "name": "Lacerate",
+          "text": ""
+        },
+        {
+          "name": "Piercing Shot",
+          "text": ""
+        },
+        {
+          "name": "Mastery: Topple",
+          "text": ""
+        },
+        {
+          "name": "Spotlight Omnisearch Summon",
+          "text": ""
+        },
+        {
+          "name": "Disarming Strike",
+          "text": ""
+        },
+        {
+          "name": "Mobile Shot",
+          "text": ""
+        },
+        {
+          "name": "DMG Cleave",
+          "text": ""
+        },
+        {
+          "name": "Firearm",
+          "text": ""
+        },
+        {
+          "name": "Backbreaker",
+          "text": ""
+        },
+        {
+          "name": "Brace (Ranged)",
+          "text": ""
+        },
+        {
+          "name": "Grapple: Escape",
+          "text": ""
+        },
+        {
+          "name": "Heartstopper",
+          "text": ""
+        },
+        {
+          "name": "Piercing Strike",
+          "text": ""
+        },
+        {
+          "name": "Rush",
+          "text": ""
+        },
+        {
+          "name": "Brace (Melee)",
+          "text": ""
+        },
+        {
+          "name": "Concussive Smash",
+          "text": ""
+        },
+        {
+          "name": "Pommel Strike",
+          "text": ""
+        },
+        {
+          "name": "Hamstring Shot",
+          "text": ""
+        },
+        {
+          "name": "Maiming Strike",
+          "text": ""
+        },
+        {
+          "name": "Topple",
+          "text": ""
+        },
+        {
+          "name": "Prepare",
+          "text": ""
+        },
+        {
+          "name": "Miscellany Card",
+          "text": ""
+        },
+        {
+          "name": "Patch",
+          "text": ""
+        },
+        {
+          "name": "Spell Scroll",
+          "text": ""
+        },
+        {
+          "name": "Gems",
+          "text": ""
+        },
+        {
+          "name": "Potion of Fire Breath Attack",
+          "text": ""
+        },
+        {
+          "name": "Window",
+          "text": ""
+        },
+        {
+          "name": "Rowboat",
+          "text": ""
+        },
+        {
+          "name": "Iron Door",
+          "text": ""
+        },
+        {
+          "name": "Crimson Mist",
+          "text": ""
+        },
+        {
+          "name": "Silver Coffer",
+          "text": ""
+        },
+        {
+          "name": "Gemstone",
+          "text": ""
+        },
+        {
+          "name": "Jewlery",
+          "text": ""
+        },
+        {
+          "name": "Wooden Ladder",
+          "text": ""
+        },
+        {
+          "name": "Pit",
+          "text": ""
+        },
+        {
+          "name": "Grappler: Pin",
+          "text": ""
+        },
+        {
+          "name": "Disengage",
+          "text": ""
+        },
+        {
+          "name": "Underwater",
+          "text": ""
+        },
+        {
+          "name": "Ready Action",
+          "text": ""
+        },
+        {
+          "name": "Check Cover",
+          "text": ""
+        },
+        {
+          "name": "Grapple",
+          "text": ""
+        },
+        {
+          "name": "Healing Surge",
+          "text": ""
+        },
+        {
+          "name": "Ready Spell",
+          "text": ""
+        },
+        {
+          "name": "Squeeze",
+          "text": ""
+        },
+        {
+          "name": "Help",
+          "text": ""
+        },
+        {
+          "name": "Stabilize",
+          "text": ""
+        },
+        {
+          "name": "Hide",
+          "text": ""
+        },
+        {
+          "name": "Fall",
+          "text": ""
+        },
+        {
+          "name": "Shove",
+          "text": ""
+        },
+        {
+          "name": "Dodge",
+          "text": ""
+        },
+        {
+          "name": "Dash",
+          "text": ""
+        },
+        {
+          "name": "Search",
+          "text": ""
+        },
+        {
+          "name": "Influence",
+          "text": ""
+        },
+        {
+          "name": "Jump",
+          "text": ""
+        },
+        {
+          "name": "Knock Out",
+          "text": ""
+        },
+        {
+          "name": "Suffocation",
+          "text": ""
+        },
+        {
+          "name": "Ready",
+          "text": ""
+        },
+        {
+          "name": "Circle Cast",
+          "text": ""
+        },
+        {
+          "name": "Magic",
+          "text": ""
+        },
+        {
+          "name": "Study",
+          "text": ""
+        },
+        {
+          "name": "Mount",
+          "text": ""
+        },
+        {
+          "name": "Attack",
+          "text": ""
+        },
+        {
+          "name": "Psychic Slam (Mind Flayer Only)",
+          "text": ""
+        },
+        {
+          "name": "Whispering Aura (Mind Flayer Only)",
+          "text": ""
+        },
+        {
+          "name": "Beast's Strike (Sky)",
+          "text": ""
+        },
+        {
+          "name": "Beast's Strike (Land)",
+          "text": ""
+        },
+        {
+          "name": "Rend (Bestial Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Fey Blade (Fey Spirit)",
+          "text": ""
+        },
+        {
+          "name": "Fiery Strike (Devil Only)",
+          "text": ""
+        },
+        {
+          "name": "Beast's Strike (Sea)",
+          "text": ""
+        },
+        {
+          "name": "Thunder Pulse",
+          "text": ""
+        },
+        {
+          "name": "Force Demolisher",
+          "text": ""
+        },
+        {
+          "name": "Lightning Launcher",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "nhgN8c13pNLWjdCM",
+      "name": "sequencerDatabase",
+      "pages": []
+    }
+  ],
+  "macros": [],
+  "sceneFlags": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "fx": {
+        "parameterRangeMigrationVersion": 1
+      }
+    }
+  ]
+}

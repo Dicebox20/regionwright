@@ -1,0 +1,913 @@
+{
+  "status": "owner-approved-47-spoilerfree-scene-titles-installed-no-ids-changed",
+  "pre": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "originals": [
+      {
+        "id": "CAVAQ01Scene0001",
+        "uuid": "Scene.CAVAQ01Scene0001",
+        "oldName": "AQ-01 - Unified Aqueduct Network",
+        "newName": "Aqueduct — Water Channels",
+        "art": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+        "walls": 148,
+        "tiles": 0,
+        "regions": 11,
+        "behaviors": 4,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVBATHScene0001",
+        "uuid": "Scene.CAVBATHScene0001",
+        "oldName": "BATH - Unified Bathhouse Surface",
+        "newName": "Bathhouse — Interior A",
+        "art": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "8yLMRDvxyw58dydh",
+        "uuid": "Scene.8yLMRDvxyw58dydh",
+        "oldName": "BATH-DRAINED - Unified Bathhouse Surface",
+        "newName": "Bathhouse — Interior B",
+        "art": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 9,
+        "behaviors": 5,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVEXT01Yard0001",
+        "uuid": "Scene.CAVEXT01Yard0001",
+        "oldName": "EXT-01 - Carriage Yard and Cabin Front",
+        "newName": "Grounds — Front Yard",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+        "walls": 7,
+        "tiles": 0,
+        "regions": 15,
+        "behaviors": 8,
+        "active": true,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVEXT02Scene001",
+        "uuid": "Scene.CAVEXT02Scene001",
+        "oldName": "EXT-02 - Pond and Sluice Gate",
+        "newName": "Grounds — Pond",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 8,
+        "behaviors": 7,
+        "active": false,
+        "navigation": true,
+        "sort": 100000
+      },
+      {
+        "id": "CAVEXT03Scene001",
+        "uuid": "Scene.CAVEXT03Scene001",
+        "oldName": "EXT-03 - Donovans Shack",
+        "newName": "Grounds — Small Shack",
+        "art": "Maps/cabin-in-the-ashen-veil/EXT-03_Donovans_Shack_V002_OWNER_APPROVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 1,
+        "regions": 5,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "xx1rWBiWMLxJPlrw",
+        "uuid": "Scene.xx1rWBiWMLxJPlrw",
+        "oldName": "EXT-04 - Privy",
+        "newName": "Grounds — Outbuilding",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 4,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 200000
+      },
+      {
+        "id": "CAVEXT05Scene001",
+        "uuid": "Scene.CAVEXT05Scene001",
+        "oldName": "EXT-05 - Forgotten Gazebo",
+        "newName": "Grounds — Gazebo",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png",
+        "walls": 0,
+        "tiles": 1,
+        "regions": 4,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVEXT06Scene001",
+        "uuid": "Scene.CAVEXT06Scene001",
+        "oldName": "EXT-06 - Greenhouse Interior",
+        "newName": "Grounds — Greenhouse",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVEXT07Scene001",
+        "uuid": "Scene.CAVEXT07Scene001",
+        "oldName": "EXT-07 - Boathouse Clearing",
+        "newName": "Grounds — Waterside Clearing",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 0,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVEXT08Scene001",
+        "uuid": "Scene.CAVEXT08Scene001",
+        "oldName": "EXT-08 - Rear Deck and Family Grounds",
+        "newName": "Grounds — Rear Terrace",
+        "art": "Maps/cabin-in-the-ashen-veil/EXT-08_Rear_Deck_Family_Grounds_FINAL_OWNER_APPROVED_FENCE_FLUSH_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 0,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVTRAILScene001",
+        "uuid": "Scene.CAVTRAILScene001",
+        "oldName": "EXT-TRAIL - Grove Bathhouse Fork",
+        "newName": "Grounds — Woodland Path",
+        "art": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVFM01Scene0001",
+        "uuid": "Scene.CAVFM01Scene0001",
+        "oldName": "FM - Northwestern Forest Maze",
+        "newName": "Woods — Winding Trails",
+        "art": "Maps/cabin-in-the-ashen-veil/fm-unified_northwestern-forest-maze_owner-approved.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 4,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "UNEdA6iy6nk1Xuga",
+        "uuid": "Scene.UNEdA6iy6nk1Xuga",
+        "oldName": "H-A01 - Central Attic",
+        "newName": "Attic — Central Room",
+        "art": "Maps/cabin-in-the-ashen-veil/h-a01-central-attic-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 9,
+        "behaviors": 4,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "KwpmPrYgEC7KQVCZ",
+        "uuid": "Scene.KwpmPrYgEC7KQVCZ",
+        "oldName": "H-A02 - West Attic Storage",
+        "newName": "Attic — West Storage",
+        "art": "Maps/cabin-in-the-ashen-veil/h-a02-west-attic-storage-approved-v001.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "gDqaEOR4qaB5IOut",
+        "uuid": "Scene.gDqaEOR4qaB5IOut",
+        "oldName": "H-A03 - North Attic Storage",
+        "newName": "Attic — North Storage",
+        "art": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "nyF5EX0JiEu23C3p",
+        "uuid": "Scene.nyF5EX0JiEu23C3p",
+        "oldName": "H-A04 - East Attic Storage",
+        "newName": "Attic — East Storage",
+        "art": "Maps/cabin-in-the-ashen-veil/h-a04-east-attic-storage-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "G6NMonfCwMvNzipL",
+        "uuid": "Scene.G6NMonfCwMvNzipL",
+        "oldName": "H-B01 - Allens Basement Workshop",
+        "newName": "Basement — Workroom",
+        "art": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 8,
+        "behaviors": 6,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "tjTpG2RVZNoCqRLh",
+        "uuid": "Scene.tjTpG2RVZNoCqRLh",
+        "oldName": "H-B02 - Secured Keystone Vault",
+        "newName": "Basement — Inner Room",
+        "art": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "ThVGl68hUmiOhWEA",
+        "uuid": "Scene.ThVGl68hUmiOhWEA",
+        "oldName": "H-B03 - Basement Supply Closet",
+        "newName": "Basement — Supply Closet",
+        "art": "Maps/cabin-in-the-ashen-veil/h-b03-basement-supply-closet-approved-v001.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 2,
+        "behaviors": 0,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG01Scene0001",
+        "uuid": "Scene.CAVHG01Scene0001",
+        "oldName": "H-G01 - Dining Room",
+        "newName": "F1 — Dining Room",
+        "art": "Maps/cabin-in-the-ashen-veil/H-G01_Dining_V003_OWNER_APPROVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 2,
+        "behaviors": 0,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG02Scene0001",
+        "uuid": "Scene.CAVHG02Scene0001",
+        "oldName": "H-G02 - Foyer and Basement Stairwell",
+        "newName": "F1 — Entrance Hall",
+        "art": "Maps/cabin-in-the-ashen-veil/h-g02_foyer_with_basement-stairwell_owner-approved.png",
+        "walls": 10,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 4,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG03Scene0001",
+        "uuid": "Scene.CAVHG03Scene0001",
+        "oldName": "H-G03 - Kitchen",
+        "newName": "F1 — Kitchen",
+        "art": "Maps/cabin-in-the-ashen-veil/H-G03_Kitchen_V001_APPROVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 4,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG04Scene0001",
+        "uuid": "Scene.CAVHG04Scene0001",
+        "oldName": "H-G04 - Pantry",
+        "newName": "F1 — Pantry",
+        "art": "Maps/cabin-in-the-ashen-veil/H-G04_Pantry_V002_OWNER_APPROVED_NORTH_DOOR_2026-10-25.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 2,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG05Scene0001",
+        "uuid": "Scene.CAVHG05Scene0001",
+        "oldName": "H-G05 - Allens Study",
+        "newName": "F1 — Study",
+        "art": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png",
+        "walls": 6,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG06GreatRoom",
+        "uuid": "Scene.CAVHG06GreatRoom",
+        "oldName": "H-G06 - Great Room",
+        "newName": "F1 — Great Room",
+        "art": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png",
+        "walls": 25,
+        "tiles": 0,
+        "regions": 12,
+        "behaviors": 8,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHG09Scene0001",
+        "uuid": "Scene.CAVHG09Scene0001",
+        "oldName": "H-G09 - Rear Family Room",
+        "newName": "F1 — Family Room",
+        "art": "Maps/cabin-in-the-ashen-veil/H-G09_Rear_Family_Room_V002_OWNER_APPROVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 4,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "LhtyO17QenuCExsb",
+        "uuid": "Scene.LhtyO17QenuCExsb",
+        "oldName": "H-R01 - Roof Chimney Clock",
+        "newName": "Roof — Chimney",
+        "art": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 2,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU01Scene0001",
+        "uuid": "Scene.CAVHU01Scene0001",
+        "oldName": "H-U01 - Nursery",
+        "newName": "F2 — Nursery",
+        "art": "Maps/cabin-in-the-ashen-veil/H-U01_Nursery_V001_FINAL_ART_PASS_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "gGgUHlHdI7RFrbUh",
+        "uuid": "Scene.gGgUHlHdI7RFrbUh",
+        "oldName": "H-U02 - Upper Gallery and Landing",
+        "newName": "F2 — Upper Landing",
+        "art": "Maps/cabin-in-the-ashen-veil/h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+        "walls": 6,
+        "tiles": 0,
+        "regions": 14,
+        "behaviors": 10,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU03Scene0001",
+        "uuid": "Scene.CAVHU03Scene0001",
+        "oldName": "H-U03 - Guest Bedroom",
+        "newName": "F2 — Guest Room",
+        "art": "Maps/cabin-in-the-ashen-veil/H-U03_Guest_Bedroom_V001_FINAL_ART_PASS_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU04Scene0001",
+        "uuid": "Scene.CAVHU04Scene0001",
+        "oldName": "H-U04 - Parents Bedroom",
+        "newName": "F2 — Main Bedroom",
+        "art": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png",
+        "walls": 7,
+        "tiles": 0,
+        "regions": 5,
+        "behaviors": 5,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU05Scene0001",
+        "uuid": "Scene.CAVHU05Scene0001",
+        "oldName": "H-U05 - Sophias Bedroom",
+        "newName": "F2 — Small Bedroom",
+        "art": "Maps/cabin-in-the-ashen-veil/H-U05_Sophias_Bedroom_V004_OWNER_APPROVED_SOUTH_DOOR_REMOVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 1,
+        "regions": 4,
+        "behaviors": 5,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU07Scene0001",
+        "uuid": "Scene.CAVHU07Scene0001",
+        "oldName": "H-U07 - Dahlia Art Studio",
+        "newName": "F2 — Art Studio",
+        "art": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 4,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVHU08Scene0001",
+        "uuid": "Scene.CAVHU08Scene0001",
+        "oldName": "H-U08 - Candle Workshop",
+        "newName": "F2 — Workroom",
+        "art": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 4,
+        "behaviors": 2,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG01Scene0001",
+        "uuid": "Scene.CAVSG01Scene0001",
+        "oldName": "SG-01 - Northwest Grove Corner",
+        "newName": "Grove — Northwest Path",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 7,
+        "behaviors": 5,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG02Scene0001",
+        "uuid": "Scene.CAVSG02Scene0001",
+        "oldName": "SG-02 - Northern Processional Walk",
+        "newName": "Grove — North Walk",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-02_northern-processional-walk_owner-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG03Scene0001",
+        "uuid": "Scene.CAVSG03Scene0001",
+        "oldName": "SG-03 - Northeast Grove Corner",
+        "newName": "Grove — Northeast Path",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-03_northeast-grove-corner_owner-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 5,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG04Scene0001",
+        "uuid": "Scene.CAVSG04Scene0001",
+        "oldName": "SG-04 - Western Grove Entrance",
+        "newName": "Grove — West Entrance",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-04_western-entrance_visual-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 8,
+        "behaviors": 4,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG05Scene0001",
+        "uuid": "Scene.CAVSG05Scene0001",
+        "oldName": "SG-05 - Memorial Clearing",
+        "newName": "Grove — Central Clearing",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 9,
+        "behaviors": 5,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG06Scene0001",
+        "uuid": "Scene.CAVSG06Scene0001",
+        "oldName": "SG-06 - Eastern Grove Walk",
+        "newName": "Grove — East Walk",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-06_eastern-grove-walk_four-way_owner-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG07Scene0001",
+        "uuid": "Scene.CAVSG07Scene0001",
+        "oldName": "SG-07 - Southwest Grove Corner",
+        "newName": "Grove — Southwest Path",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-07_southwest-grove-corner_bust_visual-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 5,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG08Scene0001",
+        "uuid": "Scene.CAVSG08Scene0001",
+        "oldName": "SG-08 - Southern Grove Walk",
+        "newName": "Grove — South Walk",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-08_southern-grove-walk_visual-pass.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 6,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CAVSG09Scene0001",
+        "uuid": "Scene.CAVSG09Scene0001",
+        "oldName": "SG-09 - Southeast Grove Corner",
+        "newName": "Grove — Southeast Path",
+        "art": "Maps/cabin-in-the-ashen-veil/sg-09_southeast-grove-corner_sun-bust_owner-accepted.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 5,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "CN5fkK2QLUELBGGR",
+        "uuid": "Scene.CN5fkK2QLUELBGGR",
+        "oldName": "UND-01 - Undercroft Approach Keystone Door",
+        "newName": "Underground — Entry Passage",
+        "art": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 5,
+        "behaviors": 3,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "ywpIpQDrkMLIgUP0",
+        "uuid": "Scene.ywpIpQDrkMLIgUP0",
+        "oldName": "UND-02 - Donovan Sophia Sealed Refuge",
+        "newName": "Underground — Old Rooms",
+        "art": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 3,
+        "behaviors": 1,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      },
+      {
+        "id": "hLU4DzVctEGdsuaz",
+        "uuid": "Scene.hLU4DzVctEGdsuaz",
+        "oldName": "UND-03 - Voss Ritual Chamber",
+        "newName": "Underground — Deep Chamber",
+        "art": "Maps/cabin-in-the-ashen-veil/und-03-voss-ritual-chamber-approved-v003.png",
+        "walls": 0,
+        "tiles": 0,
+        "regions": 2,
+        "behaviors": 0,
+        "active": false,
+        "navigation": true,
+        "sort": 0
+      }
+    ],
+    "sceneCount": 47,
+    "newNamesDistinct": true,
+    "sophiaExactSpineConfiguredDisabled": true,
+    "sceneDocumentsWillNotBeReplaced": true,
+    "oldTwoLegacyInstallerMacrosReferenceSceneTitles": true,
+    "noRegionsOrBehaviorsOrSceneIdsModified": true,
+    "nonGmUsersActive": 1
+  },
+  "post": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "oldName": "AQ-01 - Unified Aqueduct Network",
+      "newName": "Aqueduct — Water Channels"
+    },
+    {
+      "id": "CAVBATHScene0001",
+      "oldName": "BATH - Unified Bathhouse Surface",
+      "newName": "Bathhouse — Interior A"
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "oldName": "BATH-DRAINED - Unified Bathhouse Surface",
+      "newName": "Bathhouse — Interior B"
+    },
+    {
+      "id": "CAVEXT01Yard0001",
+      "oldName": "EXT-01 - Carriage Yard and Cabin Front",
+      "newName": "Grounds — Front Yard"
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "oldName": "EXT-02 - Pond and Sluice Gate",
+      "newName": "Grounds — Pond"
+    },
+    {
+      "id": "CAVEXT03Scene001",
+      "oldName": "EXT-03 - Donovans Shack",
+      "newName": "Grounds — Small Shack"
+    },
+    {
+      "id": "xx1rWBiWMLxJPlrw",
+      "oldName": "EXT-04 - Privy",
+      "newName": "Grounds — Outbuilding"
+    },
+    {
+      "id": "CAVEXT05Scene001",
+      "oldName": "EXT-05 - Forgotten Gazebo",
+      "newName": "Grounds — Gazebo"
+    },
+    {
+      "id": "CAVEXT06Scene001",
+      "oldName": "EXT-06 - Greenhouse Interior",
+      "newName": "Grounds — Greenhouse"
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "oldName": "EXT-07 - Boathouse Clearing",
+      "newName": "Grounds — Waterside Clearing"
+    },
+    {
+      "id": "CAVEXT08Scene001",
+      "oldName": "EXT-08 - Rear Deck and Family Grounds",
+      "newName": "Grounds — Rear Terrace"
+    },
+    {
+      "id": "CAVTRAILScene001",
+      "oldName": "EXT-TRAIL - Grove Bathhouse Fork",
+      "newName": "Grounds — Woodland Path"
+    },
+    {
+      "id": "CAVFM01Scene0001",
+      "oldName": "FM - Northwestern Forest Maze",
+      "newName": "Woods — Winding Trails"
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "oldName": "H-A01 - Central Attic",
+      "newName": "Attic — Central Room"
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "oldName": "H-A02 - West Attic Storage",
+      "newName": "Attic — West Storage"
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "oldName": "H-A03 - North Attic Storage",
+      "newName": "Attic — North Storage"
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "oldName": "H-A04 - East Attic Storage",
+      "newName": "Attic — East Storage"
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "oldName": "H-B01 - Allens Basement Workshop",
+      "newName": "Basement — Workroom"
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "oldName": "H-B02 - Secured Keystone Vault",
+      "newName": "Basement — Inner Room"
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "oldName": "H-B03 - Basement Supply Closet",
+      "newName": "Basement — Supply Closet"
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "oldName": "H-G01 - Dining Room",
+      "newName": "F1 — Dining Room"
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "oldName": "H-G02 - Foyer and Basement Stairwell",
+      "newName": "F1 — Entrance Hall"
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "oldName": "H-G03 - Kitchen",
+      "newName": "F1 — Kitchen"
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "oldName": "H-G04 - Pantry",
+      "newName": "F1 — Pantry"
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "oldName": "H-G05 - Allens Study",
+      "newName": "F1 — Study"
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "oldName": "H-G06 - Great Room",
+      "newName": "F1 — Great Room"
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "oldName": "H-G09 - Rear Family Room",
+      "newName": "F1 — Family Room"
+    },
+    {
+      "id": "LhtyO17QenuCExsb",
+      "oldName": "H-R01 - Roof Chimney Clock",
+      "newName": "Roof — Chimney"
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "oldName": "H-U01 - Nursery",
+      "newName": "F2 — Nursery"
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "oldName": "H-U02 - Upper Gallery and Landing",
+      "newName": "F2 — Upper Landing"
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "oldName": "H-U03 - Guest Bedroom",
+      "newName": "F2 — Guest Room"
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "oldName": "H-U04 - Parents Bedroom",
+      "newName": "F2 — Main Bedroom"
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "oldName": "H-U05 - Sophias Bedroom",
+      "newName": "F2 — Small Bedroom"
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "oldName": "H-U07 - Dahlia Art Studio",
+      "newName": "F2 — Art Studio"
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "oldName": "H-U08 - Candle Workshop",
+      "newName": "F2 — Workroom"
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "oldName": "SG-01 - Northwest Grove Corner",
+      "newName": "Grove — Northwest Path"
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "oldName": "SG-02 - Northern Processional Walk",
+      "newName": "Grove — North Walk"
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "oldName": "SG-03 - Northeast Grove Corner",
+      "newName": "Grove — Northeast Path"
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "oldName": "SG-04 - Western Grove Entrance",
+      "newName": "Grove — West Entrance"
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "oldName": "SG-05 - Memorial Clearing",
+      "newName": "Grove — Central Clearing"
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "oldName": "SG-06 - Eastern Grove Walk",
+      "newName": "Grove — East Walk"
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "oldName": "SG-07 - Southwest Grove Corner",
+      "newName": "Grove — Southwest Path"
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "oldName": "SG-08 - Southern Grove Walk",
+      "newName": "Grove — South Walk"
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "oldName": "SG-09 - Southeast Grove Corner",
+      "newName": "Grove — Southeast Path"
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "oldName": "UND-01 - Undercroft Approach Keystone Door",
+      "newName": "Underground — Entry Passage"
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "oldName": "UND-02 - Donovan Sophia Sealed Refuge",
+      "newName": "Underground — Old Rooms"
+    },
+    {
+      "id": "hLU4DzVctEGdsuaz",
+      "oldName": "UND-03 - Voss Ritual Chamber",
+      "newName": "Underground — Deep Chamber"
+    }
+  ],
+  "changes": 47,
+  "noPuzzleProgressChanged": true
+}

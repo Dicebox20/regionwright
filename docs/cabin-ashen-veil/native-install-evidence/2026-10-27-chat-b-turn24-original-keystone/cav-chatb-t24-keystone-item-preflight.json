@@ -1,0 +1,263 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "version": "14.367",
+  "systemId": "dnd5e",
+  "systemVersion": "5.3.3",
+  "gm": "Gamemaster 1",
+  "itemFolders": [
+    {
+      "id": "N6X80ycvxaPIszHg",
+      "name": "Cabin in the Ashen Veil — Puzzle Items",
+      "folder": null
+    }
+  ],
+  "originals": [
+    {
+      "id": "1n5LONw3nYIy61O9",
+      "name": "Sune’s Scrying Bowl",
+      "type": "loot",
+      "uuid": "Item.1n5LONw3nYIy61O9",
+      "folder": "N6X80ycvxaPIszHg",
+      "folderName": "Cabin in the Ashen Veil — Puzzle Items",
+      "img": "icons/containers/kitchenware/bowl-clay-brown.webp",
+      "system": {
+        "quantity": 1,
+        "description": {
+          "value": "<p>A sacred scrying bowl that once belonged to the family’s half-elven mother, a painter and devoted cleric of Sune Firehair. Its shape is simple and lovely, its rim worked with softened floral carving.</p><p>She once used it as a focus for watching over Sophia while painting. In the hollow of the stone, the faintest reflection seems to linger longer than it should.</p>",
+          "chat": ""
+        },
+        "identifier": "sunes-scrying-bowl",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Sune’s Scrying Bowl"
+        }
+      }
+    },
+    {
+      "id": "o9G3UJjEe2QX1ZH0",
+      "name": "Gond Emblem Half",
+      "type": "loot",
+      "uuid": "Item.o9G3UJjEe2QX1ZH0",
+      "folder": "N6X80ycvxaPIszHg",
+      "folderName": "Cabin in the Ashen Veil — Puzzle Items",
+      "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+      "system": {
+        "quantity": 1,
+        "description": {
+          "value": "<p>Half of a finely engineered circular emblem, edged with Gondian gearwork. The delicate teeth, pins, and curved rim are all functional, yet their arrangement is as graceful as an illustration.</p><p>The flat cut edge looks intentional. It invites the eye to imagine another piece joining it, but offers no sign of where that piece might be.</p>",
+          "chat": ""
+        },
+        "identifier": "gond-emblem-half",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Gond Emblem Half"
+        }
+      }
+    },
+    {
+      "id": "t9uCIpsKeSvtC31w",
+      "name": "Sune Emblem Half",
+      "type": "loot",
+      "uuid": "Item.t9uCIpsKeSvtC31w",
+      "folder": "N6X80ycvxaPIszHg",
+      "folderName": "Cabin in the Ashen Veil — Puzzle Items",
+      "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+      "system": {
+        "quantity": 1,
+        "description": {
+          "value": "<p>One curved half of a circular emblem, ornamented with Sune’s floral and graceful motifs. Delicate metal petals wind toward a precisely machined inner edge.</p><p>For all its beauty, this is not merely jewelry. The edge has the unmistakable shape of a fitting designed to meet another engineered piece.</p>",
+          "chat": ""
+        },
+        "identifier": "sune-emblem-half",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Sune Emblem Half"
+        }
+      }
+    },
+    {
+      "id": "vbDWTbnAZg65ErSS",
+      "name": "Completed Gond–Sune Emblem",
+      "type": "loot",
+      "uuid": "Item.vbDWTbnAZg65ErSS",
+      "folder": "N6X80ycvxaPIszHg",
+      "folderName": "Cabin in the Ashen Veil — Puzzle Items",
+      "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+      "system": {
+        "quantity": 1,
+        "description": {
+          "value": "<p>Two curved pieces lock into a single circular mechanical emblem. Gond’s precise gears and Sune’s curling floral ornamentation meet at the seam without a visible gap.</p><p>At its center, the figures of Gond and Sune appear arm in arm—a personal joining of invention and beauty. The back is made to engage with something larger than the emblem itself.</p>",
+          "chat": ""
+        },
+        "identifier": "completed-gondsune-emblem",
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "rarity": "",
+        "properties": [],
+        "type": {
+          "value": "",
+          "subtype": ""
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "4c2ow5laZtzUNigr": 3
+      },
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Completed Gond–Sune Emblem"
+        }
+      }
+    }
+  ],
+  "existing": [],
+  "actorCopies": [],
+  "vault": {
+    "uuid": "Scene.tjTpG2RVZNoCqRLh",
+    "name": "H-B02 - Secured Keystone Vault",
+    "art": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+    "count": 2,
+    "plinth": {
+      "uuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114",
+      "name": "Keystone Vault ? dais observation",
+      "shape": [
+        {
+          "type": "rectangle",
+          "x": 705,
+          "y": 380,
+          "width": 210,
+          "height": 190,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "rotation": 0,
+          "gridBased": false
+        }
+      ],
+      "behaviorCount": 0
+    }
+  },
+  "outer": {
+    "uuid": "Scene.CN5fkK2QLUELBGGR",
+    "wall": {
+      "uuid": "Scene.CN5fkK2QLUELBGGR.Region.CAVB67AABD1B35C6",
+      "behaviors": [
+        {
+          "id": "CAVUNDKEYBEH0001",
+          "disabled": true
+        }
+      ]
+    }
+  },
+  "refuge": {
+    "uuid": "Scene.ywpIpQDrkMLIgUP0",
+    "regions": 3
+  }
+}

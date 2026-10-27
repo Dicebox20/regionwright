@@ -1,0 +1,71 @@
+{
+    "enabledBehaviors":  112,
+    "sceneCount":  47,
+    "waterworksCanonicalPressureValuesApproved":  false,
+    "auditOnly":  true,
+    "greenhouseCustomRegionPresent":  true,
+    "aqueductObservationBehaviors":  0,
+    "confirmedMissingCampaignIntegrations":  [
+                                                 "waterworks-pressure-AQ01",
+                                                 "spine-mosaic-HU05"
+                                             ],
+    "nonGmPlaytest":  false,
+    "sophiaRegion":  "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+    "behaviorCount":  141,
+    "chatASourceWrites":  0,
+    "directRegionwrightPuzzleTargetCount":  1,
+    "sophiaSpineMosaicConfigured":  false,
+    "datePacific":  "2026-10-27",
+    "schemaVersion":  1,
+    "boilerFilledAndDrainedEnabled":  true,
+    "aqWaterworksPressureRegionPresent":  false,
+    "evidence":  [
+                     "cav-regionwright-campaign-full-audit-20261027.json",
+                     "cav-regionwright-pressure-runtime-capabilities-20261027.json",
+                     "cav-regionwright-direct-configured-targets-20261027.json",
+                     "cav-regionwright-script-spotchecks-20261027.json"
+                 ],
+    "world":  "cabin-in-the-ashen-veil",
+    "aq01WallCount":  143,
+    "disabledBehaviors":  29,
+    "greenhouseDirectRegionwrightMixingConfigured":  false,
+    "regionCount":  250,
+    "aqueductWaterworksObservationRegion":  "Scene.CAVAQ01Scene0001.Region.kmPmr5ijLCEOJNk3",
+    "worldDocumentWrites":  0,
+    "rosewaterDrainedEnabled":  true,
+    "currentAQ01RegionCount":  8,
+    "suneSlidingMosaicConfigured":  true,
+    "currentLiveCorrection":  {
+                                  "checked":  "2026-10-27 14:03 PDT",
+                                  "priorSceneRegionCount":  8,
+                                  "currentSceneRegionCount":  11,
+                                  "priorWallCount":  143,
+                                  "currentWallCount":  148,
+                                  "physicalAqueductPuzzleRegionsPresent":  true,
+                                  "missingBehaviors":  3,
+                                  "worldWrites":  0,
+                                  "ids":  [
+                                              "Aa4VBYBx3MRxr1H8",
+                                              "WdVwSJ9NJYOL8IYl",
+                                              "9Rq8tVF0CrLGkYcT"
+                                          ],
+                                  "evidence":  "LIVE-RECHECK-2026-10-27-1403.json",
+                                  "recommendation":  "Use exact three existing Regions, add audited native puzzle Behaviors and authoritative engine/claim integration; do not make duplicate Regions."
+                              },
+    "postTurn28CurrentSophia":  {
+                                    "datePacific":  "2026-10-27 14:40 PDT",
+                                    "exists":  true,
+                                    "uuid":  "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+                                    "nativeRegionwrightSpineConfigured":  true,
+                                    "nativeRegionwrightBehaviorId":  "dxrQM6HJPGqfAh5t",
+                                    "nativeRegionwrightBehaviorDisabled":  true,
+                                    "originalCloseupEnabled":  true,
+                                    "gondRewardStillDisabled":  true,
+                                    "actualSourceBookRewardState":  "not-authentically-acquired",
+                                    "imageSupportedByCurrentlyInstalledModule":  false,
+                                    "independentReadbackPass":  true,
+                                    "spoilerSafeSceneNamesVerified":  47,
+                                    "sceneIdsChanged":  0,
+                                    "testsPass":  1362
+                                }
+}

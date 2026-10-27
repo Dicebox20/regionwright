@@ -1,0 +1,98 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "originalStudioVanityPreserved": true,
+  "originalGalleryTravelPreserved": true,
+  "originalWorkshopWickPreserved": true,
+  "gazeboStillPreserved": true,
+  "prayerCustodyStillGMOnly": true,
+  "actorPrayerCopyCount": 0,
+  "disabledNativeBehaviorCount": 3,
+  "stages": [
+    {
+      "kind": "sune-altar",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEACTION001",
+      "behaviorId": "CAVSUNEPRAYBEH01",
+      "disabled": true,
+      "destination": null,
+      "sourceHash": "c24e291d3eea436ce46c850e870f87eff59c7fccc92b1231c8d52ad7d6933087",
+      "expectedSourceHash": "c24e291d3eea436ce46c850e870f87eff59c7fccc92b1231c8d52ad7d6933087",
+      "verified": true,
+      "rect": [
+        1120,
+        350,
+        130,
+        180
+      ]
+    },
+    {
+      "kind": "studio-east-departure",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEEASTPASS1",
+      "behaviorId": "CAVSUNEOUTTELE01",
+      "disabled": true,
+      "destination": [
+        "Scene.CAVHU08Scene0001.Region.CAVWORKARRIVAL01"
+      ],
+      "sourceHash": null,
+      "expectedSourceHash": null,
+      "verified": true,
+      "rect": [
+        1320,
+        625,
+        150,
+        155
+      ]
+    },
+    {
+      "kind": "studio-return-arrival",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSTUDIORETURN1",
+      "behaviorId": null,
+      "disabled": null,
+      "destination": null,
+      "sourceHash": null,
+      "expectedSourceHash": null,
+      "verified": true,
+      "rect": [
+        1020,
+        765,
+        145,
+        145
+      ]
+    },
+    {
+      "kind": "workshop-entry-arrival",
+      "uuid": "Scene.CAVHU08Scene0001.Region.CAVWORKARRIVAL01",
+      "behaviorId": null,
+      "disabled": null,
+      "destination": null,
+      "sourceHash": null,
+      "expectedSourceHash": null,
+      "verified": true,
+      "rect": [
+        235,
+        425,
+        145,
+        140
+      ]
+    },
+    {
+      "kind": "workshop-return-departure",
+      "uuid": "Scene.CAVHU08Scene0001.Region.CAVWORKRETURN001",
+      "behaviorId": "CAVWORKBACKTEL01",
+      "disabled": true,
+      "destination": [
+        "Scene.CAVHU07Scene0001.Region.CAVSTUDIORETURN1"
+      ],
+      "sourceHash": null,
+      "expectedSourceHash": null,
+      "verified": true,
+      "rect": [
+        210,
+        615,
+        150,
+        145
+      ]
+    }
+  ]
+}

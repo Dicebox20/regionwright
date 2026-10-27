@@ -1,0 +1,48 @@
+{
+  "status": "two-dormant-owner-art-grove-regions-verified",
+  "sourceScene": "CAVSG01Scene0001",
+  "installed": [
+    {
+      "id": "CAVSG01CHASETRG1",
+      "uuid": "Scene.CAVSG01Scene0001.Region.CAVSG01CHASETRG1",
+      "behavior": "Scene.CAVSG01Scene0001.Region.CAVSG01CHASETRG1.RegionBehavior.CAVSG01CHASEBEH1",
+      "disabled": true,
+      "status": "dormant-uncommissioned",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 2220,
+          "y": 950,
+          "width": 250,
+          "height": 195,
+          "rotation": 0,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "gridBased": false
+        }
+      ]
+    },
+    {
+      "id": "CAVSG01SILVERKEY",
+      "uuid": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY",
+      "behavior": "Scene.CAVSG01Scene0001.Region.CAVSG01SILVERKEY.RegionBehavior.CAVSG01SILVRBEH1",
+      "disabled": true,
+      "status": "dormant-uncommissioned",
+      "shapes": [
+        {
+          "type": "rectangle",
+          "x": 1950,
+          "y": 1450,
+          "width": 190,
+          "height": 170,
+          "rotation": 0,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "gridBased": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "hopeRegion": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1",
+  "newBehavior": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1.RegionBehavior.CAVPRAYERBOXBEH1",
+  "oldBehavior": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1.RegionBehavior.CAVHOPECHSTBEH01",
+  "allChecks": {
+    "sourceMatches": true,
+    "sourceSHA256": "70f9133223c4acf48df34a63975095b18f9ce6dc7a04822b4967847b342a54e1",
+    "sourceExpectedSHA256": "70f9133223c4acf48df34a63975095b18f9ce6dc7a04822b4967847b342a54e1",
+    "originalSourceValid": true,
+    "activeOriginalHope": true,
+    "currentNativeActive": true,
+    "originalStateUnchanged": true,
+    "originalsUngrant": true,
+    "lateSilverStillDormant": true,
+    "fullPrayerJournalSource": true,
+    "roomRoutePreserved": true,
+    "originalSceneName": true
+  },
+  "behaviorEvents": [
+    "behaviorViewed",
+    "behaviorUnviewed",
+    "behaviorDeactivated",
+    "tokenMoveIn",
+    "tokenMoveWithin"
+  ],
+  "originalItems": [
+    {
+      "uuid": "Item.IY8fuUG5P0yWIZIh",
+      "name": "Silver Tiny Key",
+      "type": "loot",
+      "sourceStatus": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.YaKs6z2AWlEAlyzx",
+      "name": "Ornate Music Box",
+      "type": "loot",
+      "sourceStatus": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.5jwy75XyFezukf3b",
+      "name": "Prayer of Protection",
+      "type": "loot",
+      "sourceStatus": "GM_LIBRARY_ONLY",
+      "journal": "JournalEntry.CAVPRAYERPROTECT"
+    }
+  ],
+  "prayerLedger": null,
+  "actorQuestCopies": 0,
+  "notes": "Installed native GM-assisted original box reading handler, fail closed while silver recovery dormant. No player test."
+}

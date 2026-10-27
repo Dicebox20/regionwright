@@ -1,0 +1,646 @@
+{
+  "catalog": "() => Object.freeze(STANDALONE_PUZZLES.map(puzzle => ({ ...puzzle, targetRequired: false, executable: true, visual: true })))",
+  "standalone": "async function openStandalonePuzzle(puzzleId, { seed } = {}) {\n  if (!isStandalonePuzzleId(puzzleId)) throw new Error(\"That standalone Regionwright puzzle is unavailable.\");\n  const opener = OPENERS[String(puzzleId).slice(PREFIX.length)];\n  if (typeof opener !== \"function\") throw new Error(\"That visual Regionwright Studio puzzle is unavailable.\");\n  return opener({ seed });\n}",
+  "puzzleHUD": {
+    "version": "1.2.0",
+    "catalog": "[function]",
+    "available": "[function]",
+    "deploy": "[function]",
+    "open": "[function]",
+    "installSocket": "[function]"
+  },
+  "waterworksVisibleKeys": [
+    "boilerCampaign"
+  ],
+  "annex": {
+    "uuid": "Scene.CAVAQ01Scene0001.Region.kmPmr5ijLCEOJNk3",
+    "shape": [
+      {
+        "type": "rectangle",
+        "x": 1240,
+        "y": 2720,
+        "width": 300,
+        "height": 260,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "rotation": 0,
+        "gridBased": false
+      }
+    ],
+    "flags": {},
+    "behaviors": 0,
+    "walls": 143
+  },
+  "boiler": {
+    "uuid": "Scene.CAVBATHScene0001.Region.CAVBBOILERCTRL01",
+    "flags": {
+      "cavUnifiedBathFixtureKey": "boiler-controls",
+      "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+      "phase": "PASSIVE_GM_REVIEW",
+      "behaviorStatus": "NONE",
+      "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+      "intendedUse": "pressure-wheel UI hook; not activated",
+      "pairedVariant": true,
+      "cavUnifiedBathPuzzleBinding": {
+        "version": 1,
+        "status": "ENABLED",
+        "puzzleKind": "boiler-pressure",
+        "provider": "regionwright-puzzles-locks",
+        "api": "boilerCampaign",
+        "waterVariant": "filled",
+        "gmReceiptRequired": true,
+        "approvalStatus": "GM-script-reviewed-source-tests-pass",
+        "nativeBehaviorInstalled": true,
+        "ownerPuzzleGeometryReview": true,
+        "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+        "originalUiDemoUnchanged": true,
+        "playerAcceptanceTesting": "DEFERRED"
+      }
+    }
+  },
+  "rose": {
+    "uuid": "Scene.8yLMRDvxyw58dydh.Region.CAVBROSEWATER001",
+    "flags": {
+      "cavUnifiedBathFixtureKey": "rosewater-ring-main-drain",
+      "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+      "phase": "COMMISSIONED",
+      "behaviorStatus": "NONE",
+      "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+      "intendedUse": "drained-only Rosewater three-ring puzzle; script intentionally not yet attached",
+      "pairedVariant": false,
+      "overlapsDrainedScrewdriver": true,
+      "ownerReviewRequired": false,
+      "cavUnifiedBathPuzzleBinding": {
+        "version": 1,
+        "status": "ENABLED",
+        "puzzleKind": "rosewater-rings",
+        "provider": "regionwright-puzzles-locks",
+        "api": "rosewater",
+        "waterVariant": "drained-only",
+        "gmReceiptRequired": true,
+        "approvalStatus": "OWNER_APPROVED",
+        "nativeBehaviorInstalled": true,
+        "ownerPuzzleGeometryReview": false,
+        "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+        "overlapsExistingPickupRegionId": "CAVBATHSCRDRY001",
+        "clickExclusionImplementedInSource": true,
+        "delegatedOwnerApproval": true,
+        "commissioningMode": "gated-until-original-sluice-proof"
+      },
+      "cavRosewaterApprovedSymbols": {
+        "status": "OWNER_APPROVED",
+        "approvalSource": "owner",
+        "symbols": [
+          "rose",
+          "sun",
+          "moth",
+          "thorn"
+        ],
+        "approvedDate": "2026-10-26",
+        "ownerDecision": "Yes I approve",
+        "visualReference": "Skyrim-style rotating concentric rings",
+        "scope": "Four Rosewater ring identifiers, not separate Bowl pickup or original map artwork",
+        "source": "direct campaign conversation",
+        "version": 1
+      },
+      "cavRosewaterRingGeometryApproval": {
+        "version": 1,
+        "status": "OWNER_APPROVED",
+        "approvalSource": "owner",
+        "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+        "regionId": "CAVBROSEWATER001",
+        "sceneId": "8yLMRDvxyw58dydh",
+        "rectangle": {
+          "x": 976,
+          "y": 826,
+          "width": 108,
+          "height": 115
+        },
+        "clickPriorityMaskExisting": true,
+        "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png"
+      },
+      "cavRosewaterBowlPickupApproval": {
+        "version": 1,
+        "status": "OWNER_APPROVED",
+        "approvalSource": "owner",
+        "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+        "sceneId": "8yLMRDvxyw58dydh",
+        "regionId": "CAVROSEBOWLREG01",
+        "regionUuid": "Scene.8yLMRDvxyw58dydh.Region.CAVROSEBOWLREG01",
+        "placementName": "North Reliquary Ceremonial Rug",
+        "geometry": {
+          "x": 977,
+          "y": 375,
+          "width": 108,
+          "height": 88
+        },
+        "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+        "approvedByDelegate": true,
+        "originalSourceItemUuid": "Item.1n5LONw3nYIy61O9"
+      }
+    }
+  },
+  "greenhouse": {
+    "uuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867",
+    "behaviors": [
+      {
+        "id": "CAVEXT06LYEMIX01",
+        "type": "executeScript",
+        "disabled": false
+      }
+    ]
+  },
+  "puzzleTaggedRegions": [
+    {
+      "scene": "CAVBATHScene0001",
+      "id": "CAVBBOILERCTRL01",
+      "name": "BATH - Boiler Pressure Controls",
+      "flags": {
+        "cavUnifiedBathFixtureKey": "boiler-controls",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "PASSIVE_GM_REVIEW",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "pressure-wheel UI hook; not activated",
+        "pairedVariant": true,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "boiler-pressure",
+          "provider": "regionwright-puzzles-locks",
+          "api": "boilerCampaign",
+          "waterVariant": "filled",
+          "gmReceiptRequired": true,
+          "approvalStatus": "GM-script-reviewed-source-tests-pass",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": true,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "originalUiDemoUnchanged": true,
+          "playerAcceptanceTesting": "DEFERRED"
+        }
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "8yLMRDvxyw58dydh",
+      "id": "CAVBBOILERCTRL01",
+      "name": "BATH - Boiler Pressure Controls",
+      "flags": {
+        "cavUnifiedBathFixtureKey": "boiler-controls",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "PASSIVE_GM_REVIEW",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "pressure-wheel UI hook; not activated",
+        "pairedVariant": true,
+        "overlapsDrainedScrewdriver": false,
+        "ownerReviewRequired": true,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "boiler-pressure",
+          "provider": "regionwright-puzzles-locks",
+          "api": "boilerCampaign",
+          "waterVariant": "drained",
+          "gmReceiptRequired": true,
+          "approvalStatus": "GM-script-reviewed-source-tests-pass",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": true,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "originalUiDemoUnchanged": true,
+          "playerAcceptanceTesting": "DEFERRED"
+        }
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "8yLMRDvxyw58dydh",
+      "id": "CAVBROSEWATER001",
+      "name": "BATH-DRAINED - Rosewater Ring Area at Main Pool Drain",
+      "flags": {
+        "cavUnifiedBathFixtureKey": "rosewater-ring-main-drain",
+        "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+        "phase": "COMMISSIONED",
+        "behaviorStatus": "NONE",
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "intendedUse": "drained-only Rosewater three-ring puzzle; script intentionally not yet attached",
+        "pairedVariant": false,
+        "overlapsDrainedScrewdriver": true,
+        "ownerReviewRequired": false,
+        "cavUnifiedBathPuzzleBinding": {
+          "version": 1,
+          "status": "ENABLED",
+          "puzzleKind": "rosewater-rings",
+          "provider": "regionwright-puzzles-locks",
+          "api": "rosewater",
+          "waterVariant": "drained-only",
+          "gmReceiptRequired": true,
+          "approvalStatus": "OWNER_APPROVED",
+          "nativeBehaviorInstalled": true,
+          "ownerPuzzleGeometryReview": false,
+          "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+          "overlapsExistingPickupRegionId": "CAVBATHSCRDRY001",
+          "clickExclusionImplementedInSource": true,
+          "delegatedOwnerApproval": true,
+          "commissioningMode": "gated-until-original-sluice-proof"
+        },
+        "cavRosewaterApprovedSymbols": {
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "symbols": [
+            "rose",
+            "sun",
+            "moth",
+            "thorn"
+          ],
+          "approvedDate": "2026-10-26",
+          "ownerDecision": "Yes I approve",
+          "visualReference": "Skyrim-style rotating concentric rings",
+          "scope": "Four Rosewater ring identifiers, not separate Bowl pickup or original map artwork",
+          "source": "direct campaign conversation",
+          "version": 1
+        },
+        "cavRosewaterRingGeometryApproval": {
+          "version": 1,
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+          "regionId": "CAVBROSEWATER001",
+          "sceneId": "8yLMRDvxyw58dydh",
+          "rectangle": {
+            "x": 976,
+            "y": 826,
+            "width": 108,
+            "height": 115
+          },
+          "clickPriorityMaskExisting": true,
+          "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png"
+        },
+        "cavRosewaterBowlPickupApproval": {
+          "version": 1,
+          "status": "OWNER_APPROVED",
+          "approvalSource": "owner",
+          "approvalBasis": "Cabin campaign owner expressly delegated creative/technical decision authority to coordinator on 2026-10-26; coordinator selected placement after inspection of owner-approved unified drained map.",
+          "sceneId": "8yLMRDvxyw58dydh",
+          "regionId": "CAVROSEBOWLREG01",
+          "regionUuid": "Scene.8yLMRDvxyw58dydh.Region.CAVROSEBOWLREG01",
+          "placementName": "North Reliquary Ceremonial Rug",
+          "geometry": {
+            "x": 977,
+            "y": 375,
+            "width": 108,
+            "height": 88
+          },
+          "artwork": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+          "approvedByDelegate": true,
+          "originalSourceItemUuid": "Item.1n5LONw3nYIy61O9"
+        }
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVEXT02Scene001",
+      "id": "CAVEXT02SLUICE01",
+      "name": "EXT-02 - Sluice Control Inspection",
+      "flags": {
+        "cavPuzzleChainNode": "pond_drained",
+        "kind": "sluice-control-inspect-only",
+        "sourceVersion": "v001",
+        "visualGate": "BATHHOUSE_DRAINED_VISUAL_NOT_APPROVED",
+        "noDrainActivation": false,
+        "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+        "requiresCrankOriginal": "Item.g3VYdgc1qkgkHGvn",
+        "cavSluiceInstallController": {
+          "version": 1,
+          "status": "crank-install-available",
+          "drainEnabled": true,
+          "requiresBathDrainedArtwork": false,
+          "interaction": "explicit inspect and install from original 587 lockbox",
+          "approvedBathDrainedSceneUuid": "Scene.8yLMRDvxyw58dydh",
+          "stageControllerVersion": 1,
+          "stageMode": "elected-GM guarded, no tokens in water/baths"
+        }
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVEXT02Scene001",
+      "id": "CAVEXT02HLOGR001",
+      "name": "EXT-02 - Fallen Hollow Log Observation",
+      "flags": {
+        "cavPuzzleChainNode": "book_pond",
+        "sourceVersion": "v002",
+        "kind": "player-visual-inspection-and-elected-gm-once-only-original-book-claim",
+        "originalMap": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+        "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/pond-fallen-log-original-owner-map-crop-v001.png",
+        "placementStatus": "PROVISIONAL_APPROVED_MAP_VISIBLE_FALLEN_LOG",
+        "rewardItemUuid": "Item.TO69wBYN8sRJuxtH",
+        "rewardAssignment": "OWNER_CANON_2026_10_18_FELIX_FOX",
+        "disableItemGrant": false
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVEXT03Scene001",
+      "id": "CAVEXT03BOXREG01",
+      "name": "Donovan Shack - 587 Lockbox",
+      "flags": {
+        "puzzleFamily": "cav-allen-study-587-lockbox-v001",
+        "kind": "lockbox",
+        "placement": "PROVISIONAL_OWNER_ART_AND_EXISTING_LANDINGS"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "UNEdA6iy6nk1Xuga",
+      "id": "iiUiIaQxybYR73lH",
+      "name": "H-A01 - Return down the Ladder",
+      "flags": {
+        "routeKey": "cav:travel:gallery-central-attic:v001",
+        "kind": "departure",
+        "gate": "Ladder Hook",
+        "needsPuzzleIntegration": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "KwpmPrYgEC7KQVCZ",
+      "id": "82gAoSwyIPu8EdQs",
+      "name": "H-A02 - Clockwork Winder in Storage Box",
+      "flags": {
+        "itemSourceUuid": "Item.JdxWT2pmO0aRrv3l",
+        "puzzleChainNode": "winder",
+        "layoutSource": "owner-approved-attic-room-art",
+        "physicalPlacement": "provisional_approved_map_container_choice",
+        "asset": "attic-winder-box-map-crop-v001.png",
+        "requiredGate": "cavAtticLadderLowered"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "gDqaEOR4qaB5IOut",
+      "id": "CAVATTICBOOKR001",
+      "name": "H-A03 - North Attic Shelves - Storybook Inspect",
+      "flags": {
+        "cavPuzzleChainNode": "attic_book",
+        "kind": "approved-original-map-observation-only",
+        "sourceArt": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png",
+        "approvedCloseup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/attic-north-storage-shelf-original-approved-crop-v001.png",
+        "sourceVersion": "v001",
+        "rewardItemUuid": null,
+        "disableItemGrant": true,
+        "storybookTitle": "UNRESOLVED_CANON",
+        "placementStatus": "PROVISIONAL_ORIGINAL_MAP_VISUAL_INSPECTION"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "nyF5EX0JiEu23C3p",
+      "id": "UtXhS68vd1czWfTG",
+      "name": "H-A04 - Attic Minute Hand in Storage Crate",
+      "flags": {
+        "itemSourceUuid": "Item.smvovibxtjJ9NW56",
+        "puzzleChainNode": "minute",
+        "layoutSource": "owner-approved-attic-room-art",
+        "physicalPlacement": "provisional_approved_map_container_choice",
+        "asset": "attic-minute-hand-crate-map-crop-v001.png",
+        "requiredGate": "cavAtticLadderLowered"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG05Scene0001",
+      "id": "CAVHG05RETURN001",
+      "name": "H-G05 - Return to Great Room",
+      "flags": {
+        "puzzleFamily": "cav-allen-study-587-lockbox-v001",
+        "kind": "return",
+        "placement": "PROVISIONAL_OWNER_ART_AND_EXISTING_LANDINGS"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAV06R0000000001",
+      "name": "H-G06 - Foyer Doorway",
+      "flags": {
+        "objectKey": "cav:h-g06:region:1",
+        "intendedDestination": "H-G02",
+        "inertUntilPuzzleAndTransitionPhase": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAV06R0000000002",
+      "name": "H-G06 - Dining Room Doorway",
+      "flags": {
+        "objectKey": "cav:h-g06:region:2",
+        "intendedDestination": "H-G01",
+        "inertUntilPuzzleAndTransitionPhase": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAV06R0000000003",
+      "name": "H-G06 - Allen Study Doorway",
+      "flags": {
+        "objectKey": "cav:h-g06:region:3",
+        "intendedDestination": "H-G05",
+        "inertUntilPuzzleAndTransitionPhase": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAV06R0000000004",
+      "name": "H-G06 - Rear Family Room Doorway",
+      "flags": {
+        "objectKey": "cav:h-g06:region:4",
+        "intendedDestination": "H-G09",
+        "inertUntilPuzzleAndTransitionPhase": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAV06R0000000005",
+      "name": "H-G06 - Upstairs Staircase",
+      "flags": {
+        "objectKey": "cav:h-g06:region:5",
+        "intendedDestination": "H-U02",
+        "inertUntilPuzzleAndTransitionPhase": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "id": "CAVHG06STUDYAR01",
+      "name": "H-G06 - Passive Arrival from Allen Study",
+      "flags": {
+        "puzzleFamily": "cav-allen-study-587-lockbox-v002",
+        "role": "passive-arrival",
+        "placement": "PROVISIONAL_OWNER_ART"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "LhtyO17QenuCExsb",
+      "id": "CAVFLUEBOOKREG01",
+      "name": "H-R01 - Chimney Flue - Storybook Inspect Approach",
+      "flags": {
+        "cavPuzzleChainNode": "flue_book",
+        "kind": "approved-original-map-observation-only",
+        "sourceArt": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png",
+        "approvedCloseup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/roof-chimney-flue-original-approved-crop-v001.png",
+        "sourceVersion": "v001",
+        "rewardItemUuid": null,
+        "disableItemGrant": true,
+        "storybookTitle": "UNRESOLVED_CANON",
+        "placementStatus": "PROVISIONAL_ORIGINAL_MAP_VISUAL_INSPECTION"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "gGgUHlHdI7RFrbUh",
+      "id": "1DJ0FCse01r9J5P5",
+      "name": "H-U02 - Arrival from Central Attic",
+      "flags": {
+        "routeKey": "cav:travel:gallery-central-attic:v001",
+        "kind": "passive-arrival",
+        "gate": "Ladder Hook",
+        "needsPuzzleIntegration": true
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVSG01Scene0001",
+      "id": "gksvZIqj8jWdqzn7",
+      "name": "Grove Bust - NW Moon - Winder",
+      "flags": {
+        "objectKey": "cav:grove:bust:nw:v1",
+        "stage": "GEOMETRY_ONLY",
+        "puzzle": "LOCK-01",
+        "order": "SW NE NW SE",
+        "interaction": "Clockwork Winder explicit click",
+        "source": "owner-approved corner-map art"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVSG03Scene0001",
+      "id": "BfKhb34dSEfVTf2e",
+      "name": "Grove Bust - NE Star - Winder",
+      "flags": {
+        "objectKey": "cav:grove:bust:ne:v1",
+        "stage": "GEOMETRY_ONLY",
+        "puzzle": "LOCK-01",
+        "order": "SW NE NW SE",
+        "interaction": "Clockwork Winder explicit click",
+        "source": "owner-approved corner-map art"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVSG05Scene0001",
+      "id": "L15BdSqcbCOLPnIN",
+      "name": "SG-05 - Mosaic Discovery - North Statue",
+      "flags": {
+        "objectKey": "cav:sg05:region:mosaic-discovery:v1",
+        "phase": "PREPARED_GEOMETRY_ONLY",
+        "requires": "grove.bustsSolved",
+        "source": "owner-approved SG-05 map measured 4320x2880",
+        "inspection": "northern behind-statue path; behavior pending",
+        "cavSuneReliefInstall": {
+          "version": 1,
+          "status": "click-behavior-configured",
+          "interaction": "explicit player pointer click; never on tokenEnter",
+          "sourceItemUuids": [
+            "Item.CAVSUNEGPBAG0001",
+            "Item.CAVSTUDYBRASS001"
+          ]
+        }
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper",
+        "regionwright"
+      ]
+    },
+    {
+      "scene": "CAVSG07Scene0001",
+      "id": "0JAM9urrHnAxVUgM",
+      "name": "Grove Bust - SW Rose - Winder",
+      "flags": {
+        "objectKey": "cav:grove:bust:sw:v1",
+        "stage": "GEOMETRY_ONLY",
+        "puzzle": "LOCK-01",
+        "order": "SW NE NW SE",
+        "interaction": "Clockwork Winder explicit click",
+        "source": "owner-approved corner-map art"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    },
+    {
+      "scene": "CAVSG09Scene0001",
+      "id": "BrugKqcQyDImUvwt",
+      "name": "Grove Bust - SE Sun - Winder",
+      "flags": {
+        "objectKey": "cav:grove:bust:se:v1",
+        "stage": "GEOMETRY_ONLY",
+        "puzzle": "LOCK-01",
+        "order": "SW NE NW SE",
+        "interaction": "Clockwork Winder explicit click",
+        "source": "owner-approved corner-map art"
+      },
+      "otherKeys": [
+        "dicebox-campaign-helper"
+      ]
+    }
+  ]
+}

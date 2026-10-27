@@ -1,0 +1,30 @@
+# Cabin in the Ashen Veil — Chat B Turn 19, actual Studio/Workshop identity correction
+
+**Pacific 2026-10-26 after 22:08.** Bound source-only late-game integration correction. **NO Foundry writes**, no player acceptance, no item/region/phase/source-charge grants. Owner continues requiring established DiceBox PREPARE, VERIFY, CATALOGUE and one living conversation transcript, updated between turns.
+
+## PREPARE — exact current source and authoritative world
+- Chat B independent worktree branch `codex/cav-late-game-chat-b-20261026` clean parent `f85f9cb1a11a131e00bb7530f5d45d9aa3bb6b35`; Chat A `C:\Users\rujie\Documents\Region Editor` branch `codex/cav-sune-integration-20261026` observed read-only HEAD `17ea82bda1a0da04a233f9173630cb8763b7cd2a` initially, later `b1f926418facb5d1e483fadf7bb7fd7c166743d1`. All A untracked and tracked files preserved.
+- Original elected Foundry v14.367 world `cabin-in-the-ashen-veil` and `Gamemaster 1` independently verified in Chrome for Testing Dev.
+- Current native Art Studio `Scene.CAVHU07Scene0001` = **H-U07 Dahlia Art Studio** with approved v017 map. Its Vanity Region `CAVVANITYREG0001` has enabled `CAVVANITYBEH0001` and must NOT be altered or overlapped by hypothetical Sune altar. Original return/arrival preserved. Exact native Candle Workshop `Scene.CAVHU08Scene0001` = **H-U08 Candle Workshop**, v002 approved art, original Wick shelf `CAVBE5639AEC2179` contains previously enabled `CAVWICKSHELFBEH1`. Incorrect historical proposed `CAVHG07Scene0001` and `CAVHG08Scene0001` do NOT exist.
+- Original `Item.GXLYq6Tf4OgPNbkU` Prayer of Devotion exists world GM_LIBRARY_ONLY, original `Item.5jwy75XyFezukf3b` Prayer of Protection GM_LIBRARY_ONLY; their world Item descriptions are short narrative synopses, **NOT a full readable approved prayer**. No player-readable Journal found for either. Google Drive exact title search matched only unrelated campaign documents, not acceptable as CAV source.
+- Physical Pond and Boathouse source audit: real Pond `CAVEXT02Scene001` has existing active water/sluice and original rowboat Regions. Boathouse `CAVEXT07Scene001` owner-approved visual 4320x2880 only 3 passive existing Regions (forest trail, porch landing and dock landing), no Prayer pickup Region, no Tiles. No certified Boat↔Boathouse safe paired portal or original Prayer location. DO NOT invent physical Item location or teleport; both prerequisites remain open. Aqueduct canonical Crimson Veil native charge/phase not certified and original Copper remains dormant.
+
+## BUILD — four-file pure-source correction, not a live install
+- `modules/regionwright/scripts/studio-cav-late-workshop-wick-contract.js`: replace obsolete blueprint H-G07/H-G08 with exact actual native H-U07 and H-U08; require `studioSceneId=CAVHU07Scene0001` and `workshopSceneId=CAVHU08Scene0001` for source-only `planStudioPrayerPassage`; require real H-U08 scene in `planWorkshopWickPickup`.
+- `modules/regionwright/scripts/studio-cav-late-dock-devotion-contract.js`: `planSuneDevotionHalf` now checks `studioCode=H-U07` AND exact native `sceneId=CAVHU07Scene0001`. No Prayer of Protection substitution.
+- Update the two matching tests to use real native IDs instead of old codes or synthetic Scene IDs, plus **4 NEW** regression cases: strict native Studio/Workshop IDs, rejecting obsolete IDs, and rejecting Boathouse Devotion pickup without original full Journal.
+- Preservation: all routines still return GM **review decisions only**; an asserted `origin=elected-gm-readback` string is not authority/authentication. This source does not install any new Region, mutate flags or allow premature items. Existing live T13–T18 native documents remain as independently verified before this turn.
+
+## VERIFY
+- Native current GM source JSON in `docs/cabin-ashen-veil/native-install-evidence/2026-10-26-chat-b-turn19-readonly-identity/`, containing actual Studio and Workshop exact scene IDs, Region behaviors, original prayer Item descriptions and missing Journals, plus actual Pond/Boathouse scene census. Read-only; no mutating command ran.
+- Relevant paired source suites **131/131 PASS** with 4 new regression cases. Full Cabin **1,219/1,219 PASS across 43 files**, Node syntax on both source files PASS. No ordinary-player tests, native Studio passage, safe Boathouse teleport, owner-approved full Prayer or certified Prayer Item handout.
+- Git source changes 4 files only plus this dated handoff, metadata, appended existing progress/matrix and read-only evidence scripts/JSON. No modifications to Chat A source checkout or shared Foundry registry.
+
+## Next bounded actions and owner/Chat A blockers
+1. Complete/certify original Aqueduct charged Gondian source and once-only Crimson Veil; only then commission already installed DISABLED Privy Copper pickup. No fake flag or forced stage.
+2. Resolve unified Bathhouse `BATH-02` original glass Soap Case physical source location and ownership with Chat A before any shared Bath Region edit. Then authenticated original Copper→Soap Lye claim→already-installed Greenhouse Lye-only Plant Killer. Waterworks Annex genuine restore separate, NOT same as Pond/Bath drained.
+3. Recover **owner-approved full player-readable original Prayer of Protection AND Devotion text**, establish handout/Journal and exact claim provenance. Decide H-U07 Sune altar action geometry avoiding original active Vanity; verify H-U07→H-U08 safe **paired** native portal/landing.
+4. Approve original actual Boathouse Devotion pickup point and safe Pond/Boathouse route and Thorn Dock fixture; until then no guessed source Region or automatic Prayer reward.
+5. Append to the SAME Chat B living conversation transcript `campaign-archives/cabin-in-the-ashen-veil/workstreams/chat-b/transcripts/chat-b-conversation-2026-10-26-part01.md`, no new transcript/index.
+
+This is a source correction checkpoint, **not** another installed puzzle.

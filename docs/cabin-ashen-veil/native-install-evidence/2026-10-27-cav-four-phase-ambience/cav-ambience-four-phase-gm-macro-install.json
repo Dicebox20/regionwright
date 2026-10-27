@@ -1,0 +1,11 @@
+{
+  "created": true,
+  "id": "CAVAMBIENCEMACR1",
+  "name": "CAV — Ambience Phases (GM)",
+  "commandLength": 75506,
+  "scope": "global",
+  "phase": "original",
+  "worldSceneCount": 47,
+  "readOnlySceneCreate": true,
+  "sourceSHA256": "fbb298bad1053484545048e98a9c73162b7e707862cfc34507c0bc09dc3f65be"
+}

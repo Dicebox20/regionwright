@@ -1,0 +1,19 @@
+{
+  "schemaVersion":1,
+  "turn":26,
+  "datePacific":"2026-10-27",
+  "attemptedInstallerRequestId":"cav-chatb-t26-original-3socket-authenticated-sources-install-20261027-01",
+  "attemptedInstallerExitCode":1,
+  "attemptedInstallerError":"ReferenceError: v is not defined in postwrite verification: script referenced v.regions after the three Region-level native updates completed",
+  "installerReplayed":false,
+  "unmodifiedOriginalInstallerScriptSaved":true,
+  "independentReadback":"cav-chatb-t26-vault-three-transaction-sources-independent-postread.json",
+  "independentCurrentElectedGMCheckPass":true,
+  "actualDisabledNativeSourceUpdates":3,
+  "sourceScriptsByteMatch":true,
+  "newItemsOrProgression":0,
+  "allVaultBehaviorsDisabled":true,
+  "allOriginalCrookedChasesDeferred":true,
+  "reconciliation":"ACCEPT_AS_VERIFIED_NO_REPLAY: all 3 native source scripts installed and remain disabled; native region counts and original party Items/progression unchanged.",
+  "nextAction":"Do not replay this one-time installer. Source provider contract integration required before enabling, followed by separate player acceptance."
+}

@@ -1,0 +1,22 @@
+{
+ "schemaVersion":1,
+ "type":"interturn-conversation-continuity-checkpoint",
+ "datePacific":"2026-10-26",
+ "betweenTurns":"T16_TO_T17",
+ "userRequest":"Record dialogue between turns and establish rules for all project chats",
+ "projectGlobalPolicy":"docs/PROJECT-WIDE-CHAT-TRANSCRIPTION-AND-INTERTURN-CONTINUITY-RULES-2026-10-26.md",
+ "canonicalProjectContract":"Dicebox20/dicebox-campaign-helper:main:AGENTS.md",
+ "canonicalKbDecision":"D-2026-10-26-ALL-CHATS-INTERTURN-TRANSCRIPTS",
+ "kbSchemaDeltaVerification":"PASS in-memory SQLite against canonical schema",
+ "archiveBranch":"codex/cav-chat-b-late-handoffs-20261026",
+ "transcript":"campaign-archives/cabin-in-the-ashen-veil/workstreams/chat-b/transcripts/chat-b-conversation-2026-10-26-part01.md",
+ "index":"campaign-archives/cabin-in-the-ashen-veil/workstreams/chat-b/transcripts/INDEX.md",
+ "coverage":"PARTIAL_VERBATIM",
+ "lastValidSequence":"M0023",
+ "erratum":"ERRATUM-0001 invalidates duplicate M0024",
+ "gaps":["GAP-0001: no full platform-native export; unavailable/skipped messages and exact timestamps"],
+ "sourceParentCommit":"5e8e9dba58e8ae2c7d9cd4a21f4435b9333d0d73",
+ "newFoundryWrites":false,
+ "chatAWorktreeWrites":false,
+ "next":"Append all subsequent user-visible conversation including between technical turns; next owner development cue starts T17"
+}

@@ -1,0 +1,14 @@
+﻿import test from "node:test";
+import assert from "node:assert/strict";
+import {assessSecondChaseEligibility} from "../modules/regionwright/scripts/studio-cav-late-second-chase-contract.js";
+const valid = () => ({version:1,origin:"elected-gm-readback",scene:"SG-01",actorId:"actor",tokenId:"token",ownedTokenAtNorthwestBust:true,firstChaseCompleted:true,waterworksRestored:true,allenWarningRead:true,crimsonVeilStarted:false,secondChaseStatus:"not-started"});
+test("complete GM readback permits review, never launches a chase",()=>assert.equal(assessSecondChaseEligibility(valid()).eligible,true));
+for(const k of ["firstChaseCompleted","waterworksRestored","allenWarningRead"])test("missing "+k+" fails closed",()=>{const r=valid();r[k]=false;assert.deepEqual(assessSecondChaseEligibility(r).missing,[k]);});
+test("early winder alone is not a gate",()=>assert.equal(assessSecondChaseEligibility({winderUsed:true}).eligible,false));
+test("player-origin claims are rejected",()=>assert.equal(assessSecondChaseEligibility({...valid(),origin:"client"}).eligible,false));
+test("wrong map fails closed",()=>assert.equal(assessSecondChaseEligibility({...valid(),scene:"SG-05"}).eligible,false));
+test("must stand at authentic NW bust",()=>assert.equal(assessSecondChaseEligibility({...valid(),ownedTokenAtNorthwestBust:false}).eligible,false));
+test("second chase cannot repeat",()=>assert.equal(assessSecondChaseEligibility({...valid(),secondChaseStatus:"completed"}).eligible,false));
+test("uncertain chase state cannot repeat",()=>assert.equal(assessSecondChaseEligibility({...valid(),secondChaseStatus:"reserved"}).eligible,false));
+test("Veil skips hostile chase",()=>assert.equal(assessSecondChaseEligibility({...valid(),crimsonVeilStarted:true}).eligible,false));
+test("missing receipt fails closed",()=>assert.equal(assessSecondChaseEligibility(null).eligible,false));

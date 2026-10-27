@@ -1,0 +1,45 @@
+{
+  "status": "installed-owner-gazebo-ignition-and-eye-marker",
+  "checks": {
+    "world": "cabin-in-the-ashen-veil",
+    "sceneId": "CAVEXT05Scene001",
+    "originalLanternId": "CAVLANTERNBEH001",
+    "originalItem": "Item.QIH1ugEWGOO1U6LN",
+    "originalEyeImage": "worlds/cabin-in-the-ashen-veil/assets/puzzle-items-approved/Rufus_Second_Button_Eye.png",
+    "rect": {
+      "x": 690,
+      "y": 390,
+      "width": 150,
+      "height": 145
+    },
+    "visual": {
+      "x": 735,
+      "y": 427,
+      "width": 60,
+      "height": 60
+    },
+    "nativeItemsUnique": true,
+    "markerCollisionCount": 0,
+    "sourceLengths": [
+      5397,
+      5395
+    ]
+  },
+  "created": [
+    {
+      "type": "Region",
+      "uuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05EYE2MARK",
+      "behaviorUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05EYE2MARK.RegionBehavior.CAVEXT05EYE2BEH1"
+    },
+    {
+      "type": "Tile",
+      "uuid": "Scene.CAVEXT05Scene001.Tile.CAVEXT05EYE2TILE",
+      "hidden": true
+    },
+    {
+      "type": "RegionBehavior",
+      "uuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1.RegionBehavior.CAVLANTERNIGNIT1",
+      "enabled": true
+    }
+  ]
+}

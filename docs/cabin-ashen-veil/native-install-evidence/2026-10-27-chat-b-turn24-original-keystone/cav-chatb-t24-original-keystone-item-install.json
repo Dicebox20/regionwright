@@ -1,0 +1,40 @@
+{
+  "status": "original-keystone-owner-authored-world-source-installed-gm-library-only",
+  "preflight": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "system": "dnd5e 5.3.3",
+    "sourceFolderId": "N6X80ycvxaPIszHg",
+    "plinthUuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114",
+    "keystoneRecess": "Scene.CN5fkK2QLUELBGGR.Region.CAVB67AABD1B35C6",
+    "originalSourceUuids": [
+      "Item.pbmUZPfC3WnsBRgi",
+      "Item.o9G3UJjEe2QX1ZH0",
+      "Item.t9uCIpsKeSvtC31w",
+      "Item.vbDWTbnAZg65ErSS",
+      "Item.1n5LONw3nYIy61O9",
+      "Item.VjdQNwil7pPKzkHU"
+    ],
+    "existingKeystones": 0,
+    "playerKeystoneCopies": 0,
+    "authorizedNewSource": "2026-10-27-owner-delegated-cav-keystone-source",
+    "newWorldItem": "CAVKEYSTONEITEM1",
+    "noPlayerGrant": true,
+    "noPortalChange": true
+  },
+  "installed": {
+    "uuid": "Item.CAVKEYSTONEITEM1",
+    "id": "CAVKEYSTONEITEM1",
+    "name": "Keystone",
+    "type": "loot",
+    "folder": "N6X80ycvxaPIszHg",
+    "ownership": 0,
+    "quantity": 1,
+    "source": "2026-10-27-owner-delegated-cav-keystone-source",
+    "status": "GM_LIBRARY_ONLY",
+    "claimStatus": "NOT_CLAIMED",
+    "plinthUuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVB799A5357A114"
+  },
+  "noPlayerCopies": true,
+  "itemTemplateSHA256": "dd9c16e0149084659e911e71c2e3e2c010fdf055ba70c5b290379245ccb583b2"
+}

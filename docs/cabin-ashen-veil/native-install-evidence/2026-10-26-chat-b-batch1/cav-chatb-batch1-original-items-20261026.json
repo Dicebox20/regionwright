@@ -1,0 +1,78 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "folderId": "N6X80ycvxaPIszHg",
+  "requested": [
+    "Silver Tiny Key",
+    "Ornate Music Box",
+    "Prayer of Protection",
+    "Wick"
+  ],
+  "collisionCount": 0,
+  "actorCollisionCount": 0,
+  "originalGondianSourceVerified": true,
+  "commit": true,
+  "status": "created-verified-no-actor-grants",
+  "items": [
+    {
+      "id": "IY8fuUG5P0yWIZIh",
+      "uuid": "Item.IY8fuUG5P0yWIZIh",
+      "name": "Silver Tiny Key",
+      "type": "loot",
+      "folderId": "N6X80ycvxaPIszHg",
+      "foundInWorld": true,
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Silver Tiny Key"
+      },
+      "descriptionOk": true,
+      "img": "icons/sundries/misc/key-steel.webp"
+    },
+    {
+      "id": "5jwy75XyFezukf3b",
+      "uuid": "Item.5jwy75XyFezukf3b",
+      "name": "Prayer of Protection",
+      "type": "loot",
+      "folderId": "N6X80ycvxaPIszHg",
+      "foundInWorld": true,
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Prayer of Protection"
+      },
+      "descriptionOk": true,
+      "img": "icons/svg/item-bag.svg"
+    },
+    {
+      "id": "YaKs6z2AWlEAlyzx",
+      "uuid": "Item.YaKs6z2AWlEAlyzx",
+      "name": "Ornate Music Box",
+      "type": "loot",
+      "folderId": "N6X80ycvxaPIszHg",
+      "foundInWorld": true,
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Ornate Music Box"
+      },
+      "descriptionOk": true,
+      "img": "icons/svg/item-bag.svg"
+    },
+    {
+      "id": "o0g8PyGRIbdwVM3m",
+      "uuid": "Item.o0g8PyGRIbdwVM3m",
+      "name": "Wick",
+      "type": "loot",
+      "folderId": "N6X80ycvxaPIszHg",
+      "foundInWorld": true,
+      "flag": {
+        "source": "2026-10-26-owner-approved-batch1",
+        "status": "GM_LIBRARY_ONLY",
+        "itemKey": "Wick"
+      },
+      "descriptionOk": true,
+      "img": "icons/sundries/lights/candle-unlit-grey.webp"
+    }
+  ]
+}

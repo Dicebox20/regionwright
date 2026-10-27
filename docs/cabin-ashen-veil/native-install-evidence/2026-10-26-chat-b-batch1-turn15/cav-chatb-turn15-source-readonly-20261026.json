@@ -1,0 +1,683 @@
+{
+  "scenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "exists": true,
+      "map": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "flags": {
+        "cavStructuralSceneKey": "AQ-01",
+        "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+        "ownerPlacesWalls": true,
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "manifestId": "AQ-UNIFIED-01",
+        "approvedArtSha256": "8b91c5c941a0b37231a83b062fb62adfc501c6c33401e9a1d6c2cab75444842c",
+        "alternateBackground": null,
+        "regionBehaviorCount": 0,
+        "cavRevealOriginalTokenVision": true
+      },
+      "regions": [
+        {
+          "id": "woZ98KXx0RsWIPpl",
+          "name": "Southern Aqueduct Access",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2720,
+              "y": 3090,
+              "w": 270,
+              "h": 270
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQCHASETRIG01",
+              "type": "executeScript",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "id": "qOxNY7T7UaRxjrjX",
+          "name": "North Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2690,
+              "y": 570,
+              "w": 280,
+              "h": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "Q5DqqnOXPmf7ivqD",
+          "name": "East Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3910,
+              "y": 1400,
+              "w": 270,
+              "h": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "kmPmr5ijLCEOJNk3",
+          "name": "Waterworks Annex ? observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1240,
+              "y": 2720,
+              "w": 300,
+              "h": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "A84K235zGzM9lGrT",
+          "name": "West Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2060,
+              "y": 1400,
+              "w": 270,
+              "h": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVAQ01RETURN001",
+          "name": "AQ-01 - Southern Return to Pond Gate",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2920,
+              "y": 3510,
+              "w": 300,
+              "h": 255
+            }
+          ],
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "requiresSafeWaterStage": true
+          },
+          "behaviors": [
+            {
+              "id": "CAVAQ01RETBEH001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLNORTH01",
+          "name": "AQ-01 - North Aqueduct Tunnel to Forest Well",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2630,
+              "y": 160,
+              "w": 400,
+              "h": 350
+            }
+          ],
+          "flags": {
+            "chainNode": "aqueduct_to_forest_well",
+            "stage": "DISABLED_UNTIL_CHASE",
+            "inferredWaypointFromApprovedMap": true
+          },
+          "behaviors": [
+            {
+              "id": "CAVAQWELLPORT001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "id": "CAVAQWELLARRV001",
+          "name": "AQ-01 - Arrival from Forest Well",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2710,
+              "y": 805,
+              "w": 320,
+              "h": 220
+            }
+          ],
+          "flags": {
+            "chainNode": "forest_well_reverse_return",
+            "passive": true
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "exists": true,
+      "map": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "flags": {
+        "cavStructuralSceneKey": "EXT-02",
+        "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+        "ownerPlacesWalls": true,
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "manifestId": "EXT-02-FULL",
+        "approvedArtSha256": "f4b397db05c688f4f152eb63d60d9d708530a7d93fecaa9ab028084fed51a28c",
+        "alternateBackground": {
+          "path": "Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png",
+          "sha256": "e29bdbb680613ead432593c2dbf3f32452ebb1c1c8bd968be5144a88dea2903a",
+          "bytes": 3899788,
+          "dims": [
+            1448,
+            1086
+          ]
+        },
+        "regionBehaviorCount": 0,
+        "cavRevealOriginalTokenVision": true
+      },
+      "regions": [
+        {
+          "id": "5RJkabcJJbVAI4WY",
+          "name": "EXT-02 - Return to Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 260,
+              "y": 1880,
+              "w": 370,
+              "h": 430
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "exit"
+          },
+          "behaviors": [
+            {
+              "id": "yaNCRIbv3Y8Dho0X",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "wwls4eQRInzw8RxS",
+          "name": "EXT-02 - Arrival from Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 910,
+              "y": 1970,
+              "w": 250,
+              "h": 230
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "landing"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "CAVROWBOATREG001",
+          "name": "EXT-02 - Old Rowboat Investigation (Oars Required)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1250,
+              "y": 1470,
+              "w": 510,
+              "h": 510
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "pond_sunken_rowboat_mirror",
+              "activation": "player token moves to moored rowboat with Oars; narrates investigating older sunken boat",
+              "requiresItemUuid": "Item.CAVOARSPOND00001",
+              "rewardUuid": "Item.CAVMIRRORSUNK001",
+              "map": "ext-02_pond_full_owner-approved.png",
+              "regionPlacement": "measured visible western dock and moored rowboat x1250 y1470 w510 h510"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVMIRRORBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVEXT02SLUICE01",
+          "name": "EXT-02 - Sluice Control Inspection",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1843,
+              "y": 2655,
+              "w": 435,
+              "h": 325
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "pond_drained",
+            "kind": "sluice-control-inspect-only",
+            "sourceVersion": "v001",
+            "visualGate": "BATHHOUSE_DRAINED_VISUAL_NOT_APPROVED",
+            "noDrainActivation": false,
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+            "requiresCrankOriginal": "Item.g3VYdgc1qkgkHGvn",
+            "cavSluiceInstallController": {
+              "version": 1,
+              "status": "crank-install-available",
+              "drainEnabled": true,
+              "requiresBathDrainedArtwork": false,
+              "interaction": "explicit inspect and install from original 587 lockbox",
+              "approvedBathDrainedSceneUuid": "Scene.8yLMRDvxyw58dydh",
+              "stageControllerVersion": 1,
+              "stageMode": "elected-GM guarded, no tokens in water/baths"
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVEXT02SLCBEH01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVEXT02HLOGR001",
+          "name": "EXT-02 - Fallen Hollow Log Observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3760,
+              "y": 2980,
+              "w": 820,
+              "h": 420
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "book_pond",
+            "sourceVersion": "v002",
+            "kind": "player-visual-inspection-and-elected-gm-once-only-original-book-claim",
+            "originalMap": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/pond-fallen-log-original-owner-map-crop-v001.png",
+            "placementStatus": "PROVISIONAL_APPROVED_MAP_VISIBLE_FALLEN_LOG",
+            "rewardItemUuid": "Item.TO69wBYN8sRJuxtH",
+            "rewardAssignment": "OWNER_CANON_2026_10_18_FELIX_FOX",
+            "disableItemGrant": false
+          },
+          "behaviors": [
+            {
+              "id": "CAVEXT02HLOGB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDWEATHER01",
+          "name": "EXT-02 - Weathered Key at Drained Pond Stair",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2575,
+              "y": 1030,
+              "w": 590,
+              "h": 600
+            }
+          ],
+          "flags": {
+            "cavDrainedPickupFixture": {
+              "version": 1,
+              "itemSourceUuid": "Item.CAVWEATHERKEY001",
+              "stage": "sluice-open-only",
+              "interaction": "explicit click, never token-enter",
+              "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-pond-drained-weathered-stairs-crop-20261026.png",
+              "playerGameplayTested": false
+            }
+          },
+          "behaviors": [
+            {
+              "id": "CAVPONDWEATHB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDAQGATE001",
+          "name": "EXT-02 - Aqueduct Gate Gear and Handle Sockets",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2500,
+              "y": 620,
+              "w": 720,
+              "h": 395
+            }
+          ],
+          "flags": {
+            "chainNode": "pond_aqueduct_gate",
+            "prerequisite": "sluice drained",
+            "originalGear": "Item.wDKqETOykWEdKF1Z",
+            "originalHandle": "Item.nRVZJL9JOwEwfnLq",
+            "ownerApprovedCrop": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-aqueduct-gate-owner-map-crop-20261026.png",
+            "requiresReturnRoute": true,
+            "traversalStatus": "STAGED_DISABLED"
+          },
+          "behaviors": [
+            {
+              "id": "CAVPONDAQBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            },
+            {
+              "id": "CAVPONDAQPORT001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "id": "CAVPONDAQARRV001",
+          "name": "EXT-02 - Arrival from Aqueduct Gate",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2530,
+              "y": 1690,
+              "w": 300,
+              "h": 220
+            }
+          ],
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "passive": true
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "name": "SG-01 - Northwest Grove Corner",
+      "exists": true,
+      "map": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+      "flags": {
+        "cavStructuralSceneKey": "SG-01",
+        "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+        "ownerPlacesWalls": true,
+        "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+        "manifestId": "SG-01",
+        "approvedArtSha256": "29772eb5c2fba227d64a6b2f9baa761001b674fc60588393c4fb03e81a48c883",
+        "alternateBackground": null,
+        "regionBehaviorCount": 0,
+        "cavRevealOriginalTokenVision": true
+      },
+      "regions": [
+        {
+          "id": "gksvZIqj8jWdqzn7",
+          "name": "Grove Bust - NW Moon - Winder",
+          "shapes": [
+            {
+              "type": "polygon",
+              "points": 8
+            }
+          ],
+          "flags": {
+            "objectKey": "cav:grove:bust:nw:v1",
+            "stage": "GEOMETRY_ONLY",
+            "puzzle": "LOCK-01",
+            "order": "SW NE NW SE",
+            "interaction": "Clockwork Winder explicit click",
+            "source": "owner-approved corner-map art"
+          },
+          "behaviors": [
+            {
+              "id": "7nHv3rf66mG8PJJS",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "ShkRIARUalZ2eK3s",
+          "name": "Travel to SG-02",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 4122,
+              "y": 1290,
+              "w": 120,
+              "h": 300
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG2",
+            "kind": "exit",
+            "side": "E"
+          },
+          "behaviors": [
+            {
+              "id": "suPl4dBD6qd7TH6c",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "G8tpIOde3QfrfVcm",
+          "name": "Arrival from SG-02",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3960,
+              "y": 1368,
+              "w": 120,
+              "h": 144
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG2",
+            "kind": "landing",
+            "side": "E"
+          },
+          "behaviors": []
+        },
+        {
+          "id": "Ke9KCBPqRGFWdZwb",
+          "name": "Travel to SG-04",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2010,
+              "y": 2682,
+              "w": 300,
+              "h": 120
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG4",
+            "kind": "exit",
+            "side": "S"
+          },
+          "behaviors": [
+            {
+              "id": "8mNdehcRoIEOIiLQ",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "7Y8AmKQIQUj3HVg9",
+          "name": "Arrival from SG-04",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2088,
+              "y": 2520,
+              "w": 144,
+              "h": 120
+            }
+          ],
+          "flags": {
+            "group": "grove-grid-v1",
+            "key": "SG1-SG4",
+            "kind": "landing",
+            "side": "S"
+          },
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "H-G05 - Allens Study",
+      "exists": true,
+      "map": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png",
+      "flags": {
+        "cavRoomKey": "H-G05",
+        "artApproval": "APPROVED_V003_2026-10-24",
+        "driveId": "17NFBP_74FEHdfp531ystCwp_-gQ_j9if",
+        "artSha256": "c3ec08180f80d5d6304824840029bf46e4785d6ac95e01e2c0b43c32a02bd5a4",
+        "travelStatus": "pending-approved-topology"
+      },
+      "regions": [
+        {
+          "id": "CAVB9AA3D7BE9560",
+          "name": "Allen Study ? Great Room-side interior",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 515,
+              "w": 185,
+              "h": 175
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB3E32BD6B01BD",
+          "name": "Allen Study ? writing desk",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 640,
+              "y": 360,
+              "w": 235,
+              "h": 210
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHG05NOTE00001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVHG05RETURN001",
+          "name": "H-G05 - Return to Great Room",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 540,
+              "w": 140,
+              "h": 155
+            }
+          ],
+          "flags": {
+            "puzzleFamily": "cav-allen-study-587-lockbox-v001",
+            "kind": "return",
+            "placement": "PROVISIONAL_OWNER_ART_AND_EXISTING_LANDINGS"
+          },
+          "behaviors": [
+            {
+              "id": "CAVHG05RETURNB01",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAVHG07Scene0001",
+      "exists": false,
+      "regions": []
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "H-U08 - Candle Workshop",
+      "exists": true,
+      "map": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "flags": {
+        "cavRoomKey": "H-U08",
+        "artApproval": "OWNER_APPROVED_V002_2026-10-24",
+        "driveId": "1525xxM8dQn4iIZ8UJ-X4eTTqQEZh4MCp",
+        "artSha256": "806e936e3b6311f0897e485f03028e6baac76f1b34ad85ea94c8391e672588f8",
+        "travelStatus": "pending-approved-measurement"
+      },
+      "regions": [
+        {
+          "id": "CAVB78B258E0A0BB",
+          "name": "Candle Workshop ? central crafting table",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 575,
+              "y": 400,
+              "w": 260,
+              "h": 220
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBE5639AEC2179",
+          "name": "Candle Workshop ? shelving observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 435,
+              "y": 115,
+              "w": 240,
+              "h": 175
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVWICKSHELFBEH1",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gmJournal": [],
+  "actor": []
+}

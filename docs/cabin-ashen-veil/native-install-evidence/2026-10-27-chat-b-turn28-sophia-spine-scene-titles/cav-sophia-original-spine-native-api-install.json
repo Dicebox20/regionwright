@@ -1,0 +1,185 @@
+{
+  "status": "Sophia-original-bookcase-native-Regionwright-six-book-registered-and-gated",
+  "baseline": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "originalRegionUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+    "originalName": "Sophia Bedroom ? bookcase observation",
+    "originalRegionCount": 4,
+    "originalBehaviorCount": 2,
+    "originalZoomId": "LRYrBIQNN92SCJai",
+    "originalGondTile": "CAVHU05GONDTILE1",
+    "originalTileHidden": true,
+    "originalPuzzleSetting": false,
+    "originalRegionSetting": false,
+    "originalGondActors": 0,
+    "sixBooks": [
+      {
+        "uuid": "Item.Qplmy8JR7plDYLiY",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/the-knight-who-befriended-a-dragon.png",
+        "name": "The Knight Who Befriended a Dragon"
+      },
+      {
+        "uuid": "Item.DLGIhHc0RDqh0YVt",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/moonlight-and-the-missing-stars.png",
+        "name": "Moonlight and the Missing Stars"
+      },
+      {
+        "uuid": "Item.TO69wBYN8sRJuxtH",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/felix-fox-and-the-forgotten-kingdom.png",
+        "name": "Felix Fox and the Forgotten Kingdom"
+      },
+      {
+        "uuid": "Item.c3oKW8YkklE8slnX",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/whispers-of-the-little-witch.png",
+        "name": "Whispers of the Little Witch"
+      },
+      {
+        "uuid": "Item.HV7XjKmgqVITSEvW",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/the-clockmakers-starless-sky.png",
+        "name": "The Clockmaker’s Starless Sky"
+      },
+      {
+        "uuid": "Item.gmTsIOqc3qFBc3zA",
+        "img": "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/princess-penelope-and-the-sea-of-stars.png",
+        "name": "Princess Penelope and the Sea of Stars"
+      }
+    ],
+    "expectedNativeConfig": {
+      "version": 1,
+      "seed": "cav-original-1442-1447",
+      "books": [
+        {
+          "id": "book-1",
+          "title": "The Knight Who Befriended a "
+        },
+        {
+          "id": "book-2",
+          "title": "Moonlight and the Missing St"
+        },
+        {
+          "id": "book-3",
+          "title": "Felix Fox and the Forgotten "
+        },
+        {
+          "id": "book-4",
+          "title": "Whispers of the Little Witch"
+        },
+        {
+          "id": "book-5",
+          "title": "The Clockmaker's Starless Sk"
+        },
+        {
+          "id": "book-6",
+          "title": "Princess Penelope and the Se"
+        }
+      ],
+      "solution": [
+        "book-1",
+        "book-2",
+        "book-3",
+        "book-4",
+        "book-5",
+        "book-6"
+      ]
+    },
+    "expectedSourceFlag": {
+      "version": 1,
+      "status": "configured-disabled-await-authentic-sixth-veil",
+      "originalBookcaseUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+      "originalItemIds": [
+        "Item.Qplmy8JR7plDYLiY",
+        "Item.DLGIhHc0RDqh0YVt",
+        "Item.TO69wBYN8sRJuxtH",
+        "Item.c3oKW8YkklE8slnX",
+        "Item.HV7XjKmgqVITSEvW",
+        "Item.gmTsIOqc3qFBc3zA"
+      ],
+      "originalPublicationYears": [
+        1442,
+        1443,
+        1444,
+        1445,
+        1446,
+        1447
+      ],
+      "configBookToOriginalUuid": {
+        "book-1": "Item.Qplmy8JR7plDYLiY",
+        "book-2": "Item.DLGIhHc0RDqh0YVt",
+        "book-3": "Item.TO69wBYN8sRJuxtH",
+        "book-4": "Item.c3oKW8YkklE8slnX",
+        "book-5": "Item.HV7XjKmgqVITSEvW",
+        "book-6": "Item.gmTsIOqc3qFBc3zA"
+      },
+      "originalCloseupBehaviorId": "LRYrBIQNN92SCJai",
+      "originalGondRewardBehaviorId": "CAVGONDREWARD001",
+      "originalGondTileId": "CAVHU05GONDTILE1",
+      "originalGondWorldItemUuid": "Item.o9G3UJjEe2QX1ZH0",
+      "nativeSpineCompletionVerified": false,
+      "nativeVeilSixthPickupVerified": false,
+      "rewardGranted": false,
+      "nativePlayerTested": false,
+      "originalRegionwrightApiUsed": true
+    },
+    "installedModuleImagesSupported": false,
+    "noActiveNonGmInScene": true,
+    "originalZoomSourceSHA256": "263d8df82e8b7a573373c466df2cc9723ea611bbedfe8dcab34b2f0db57194f8",
+    "originalGondSourceSHA256": "8508ed49a25ef8603a36b21588740d2400a21ebf51a558e792bc81ff1e6d57f9"
+  },
+  "registered": {
+    "regionUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+    "name": "Sophia's Bookcase — Six Storybooks",
+    "behaviorUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F.RegionBehavior.dxrQM6HJPGqfAh5t",
+    "behaviorDisabled": true,
+    "type": "executeScript",
+    "events": [
+      "tokenEnter"
+    ],
+    "nativeConfig": {
+      "version": 1,
+      "seed": "cav-original-1442-1447",
+      "books": [
+        {
+          "id": "book-1",
+          "title": "The Knight Who Befriended a "
+        },
+        {
+          "id": "book-2",
+          "title": "Moonlight and the Missing St"
+        },
+        {
+          "id": "book-3",
+          "title": "Felix Fox and the Forgotten "
+        },
+        {
+          "id": "book-4",
+          "title": "Whispers of the Little Witch"
+        },
+        {
+          "id": "book-5",
+          "title": "The Clockmaker's Starless Sk"
+        },
+        {
+          "id": "book-6",
+          "title": "Princess Penelope and the Se"
+        }
+      ],
+      "solution": [
+        "book-1",
+        "book-2",
+        "book-3",
+        "book-4",
+        "book-5",
+        "book-6"
+      ]
+    },
+    "nativePersistentStatus": "locked",
+    "rewardDisabled": true,
+    "originalCloseupEnabled": true,
+    "GondTileHidden": true,
+    "stageStatus": "configured-disabled-await-authentic-sixth-veil",
+    "sourceSha256": "27481f6fe3903a851c7ab45687ff9893ba086dd319eb0fec677858d72c2c0f86"
+  },
+  "noItemGranted": true,
+  "noVeilCompletionCreated": true
+}

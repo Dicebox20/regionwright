@@ -1,0 +1,57 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "pass": true,
+  "srcHashes": {
+    "parts": "3cd7547b4f941a7f7a707bb86d6977f96d45e38563fc9b247d02ef0242e8029b",
+    "partsExpected": "3cd7547b4f941a7f7a707bb86d6977f96d45e38563fc9b247d02ef0242e8029b",
+    "ignite": "600fbc83365dbf1dbabc940a6f83592111de4dc19c674318381252e288e2041d",
+    "igniteExpected": "600fbc83365dbf1dbabc940a6f83592111de4dc19c674318381252e288e2041d",
+    "eyeClaim": "f85e0673b55f91656604fa9dbcd08dcbf5542eea4d73ad36d701da077f3507b1",
+    "eyeClaimExpected": "f85e0673b55f91656604fa9dbcd08dcbf5542eea4d73ad36d701da077f3507b1"
+  },
+  "documents": {
+    "lanternUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1",
+    "lanternBehaviors": 2,
+    "markerUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05EYE2MARK",
+    "markerBehaviorUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05EYE2MARK.RegionBehavior.CAVEXT05EYE2BEH1",
+    "tileUuid": "Scene.CAVEXT05Scene001.Tile.CAVEXT05EYE2TILE",
+    "hidden": true,
+    "markerShape": [
+      {
+        "type": "rectangle",
+        "x": 690,
+        "y": 390,
+        "width": 150,
+        "height": 145,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    ],
+    "markerLedger": {
+      "status": "hidden",
+      "sourceUuid": "Item.QIH1ugEWGOO1U6LN"
+    },
+    "eyeCopies": 0,
+    "originalWickIntact": true,
+    "originalWinderIntact": true,
+    "originalEye": "Item.QIH1ugEWGOO1U6LN"
+  },
+  "story": [
+    {
+      "key": "cavLateGazeboOil",
+      "status": "none"
+    },
+    {
+      "key": "cavLateGazeboWick",
+      "status": "none"
+    },
+    {
+      "key": "cavLateGazeboIgnition",
+      "status": "none"
+    }
+  ]
+}

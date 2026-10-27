@@ -1,0 +1,63 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "pass": true,
+  "checks": [
+    {
+      "kind": "hope",
+      "sourceMatches": true,
+      "hash": "c1db0b18787cb3b47f9e3a3e53454f123dbb267296867e5b6bf46b7aa1886186",
+      "expectedHash": "c1db0b18787cb3b47f9e3a3e53454f123dbb267296867e5b6bf46b7aa1886186",
+      "eventsMatch": true,
+      "zeroPuzzleProgress": true,
+      "behaviorOk": true
+    },
+    {
+      "kind": "wick",
+      "sourceMatches": true,
+      "hash": "ec40a5c37bab7b6bd167fcd8c9820e6172d0b44e399b08853d1ae8070fe5b8c7",
+      "expectedHash": "ec40a5c37bab7b6bd167fcd8c9820e6172d0b44e399b08853d1ae8070fe5b8c7",
+      "eventsMatch": true,
+      "zeroPuzzleProgress": true,
+      "behaviorOk": true
+    },
+    {
+      "kind": "lantern",
+      "sourceMatches": true,
+      "hash": "3cd7547b4f941a7f7a707bb86d6977f96d45e38563fc9b247d02ef0242e8029b",
+      "expectedHash": "3cd7547b4f941a7f7a707bb86d6977f96d45e38563fc9b247d02ef0242e8029b",
+      "eventsMatch": true,
+      "zeroPuzzleProgress": true,
+      "behaviorOk": true
+    }
+  ],
+  "library": [
+    {
+      "name": "Silver Tiny Key",
+      "count": 1,
+      "sourceUuid": "Item.IY8fuUG5P0yWIZIh",
+      "flag": "GM_LIBRARY_ONLY"
+    },
+    {
+      "name": "Ornate Music Box",
+      "count": 1,
+      "sourceUuid": "Item.YaKs6z2AWlEAlyzx",
+      "flag": "GM_LIBRARY_ONLY"
+    },
+    {
+      "name": "Prayer of Protection",
+      "count": 1,
+      "sourceUuid": "Item.5jwy75XyFezukf3b",
+      "flag": "GM_LIBRARY_ONLY"
+    },
+    {
+      "name": "Wick",
+      "count": 1,
+      "sourceUuid": "Item.o0g8PyGRIbdwVM3m",
+      "flag": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "actorCopies": 0,
+  "originalStudyReturnExists": true,
+  "originalNorthwestWinderExists": true
+}

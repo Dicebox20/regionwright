@@ -1,0 +1,14 @@
+CAV READONLY REGIONWRIGHT AUDIT CHECKS 2026-10-27
+world=PASS
+sceneCount=PASS
+regions=PASS
+behaviors=PASS
+activeCount=PASS
+aqueductHas8Regions=PASS
+annexIsPassive=PASS
+noPressureRegion=PASS
+onePersistedRegionwrightFlag=PASS
+sophiaNoSpineTarget=PASS
+sophiaHasOriginalBookcase=PASS
+criticalTwo=PASS
+auditOnly=PASS

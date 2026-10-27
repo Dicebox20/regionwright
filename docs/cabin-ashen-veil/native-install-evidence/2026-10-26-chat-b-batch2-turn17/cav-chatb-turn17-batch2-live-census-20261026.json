@@ -1,0 +1,1488 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gameVersion": "14.367",
+  "scenes": [
+    {
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "id": "CAVAQ01Scene0001",
+      "width": 5760,
+      "height": 4320,
+      "src": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "regions": [
+        {
+          "id": "woZ98KXx0RsWIPpl",
+          "name": "Southern Aqueduct Access",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2720,
+              "y": 3090,
+              "width": 270,
+              "height": 270
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQCHASETRIG01",
+              "type": "executeScript",
+              "disabled": true
+            }
+          ]
+        },
+        {
+          "id": "qOxNY7T7UaRxjrjX",
+          "name": "North Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2690,
+              "y": 570,
+              "width": 280,
+              "height": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "Q5DqqnOXPmf7ivqD",
+          "name": "East Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3910,
+              "y": 1400,
+              "width": 270,
+              "height": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "kmPmr5ijLCEOJNk3",
+          "name": "Waterworks Annex ? observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1240,
+              "y": 2720,
+              "width": 300,
+              "height": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "A84K235zGzM9lGrT",
+          "name": "West Bridge ? interior walkway",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2060,
+              "y": 1400,
+              "width": 270,
+              "height": 260
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVAQ01RETURN001",
+          "name": "AQ-01 - Southern Return to Pond Gate",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2920,
+              "y": 3510,
+              "width": 300,
+              "height": 255
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQ01RETBEH001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ],
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "requiresSafeWaterStage": true
+          }
+        },
+        {
+          "id": "CAVAQWELLNORTH01",
+          "name": "AQ-01 - North Aqueduct Tunnel to Forest Well",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2630,
+              "y": 160,
+              "width": 400,
+              "height": 350
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVAQWELLPORT001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ],
+          "flags": {
+            "chainNode": "aqueduct_to_forest_well",
+            "stage": "DISABLED_UNTIL_CHASE",
+            "inferredWaypointFromApprovedMap": true
+          }
+        },
+        {
+          "id": "CAVAQWELLARRV001",
+          "name": "AQ-01 - Arrival from Forest Well",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2710,
+              "y": 805,
+              "width": 320,
+              "height": 220
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "chainNode": "forest_well_reverse_return",
+            "passive": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "BATH - Unified Bathhouse Surface",
+      "id": "CAVBATHScene0001",
+      "width": 2160,
+      "height": 1440,
+      "src": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "regions": [
+        {
+          "id": "SLovYxFAWVAMFzXg",
+          "name": "BATH - Return to Trail Fork",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1920,
+              "y": 95,
+              "width": 170,
+              "height": 145
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "EK3UbdrVWwe28PmW",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "R2Pg9eHODtb1C1Yk",
+          "name": "BATH - Arrival from Trail Fork",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1810,
+              "y": 345,
+              "width": 165,
+              "height": 160
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "CAVBBOILERVESL01",
+          "name": "BATH - Boiler Vessel Machinery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 370,
+              "y": 635,
+              "width": 300,
+              "height": 238
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "boiler-vessel",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "mechanical fixture; no scripts",
+            "pairedVariant": true
+          }
+        },
+        {
+          "id": "CAVBBOILERCTRL01",
+          "name": "BATH - Boiler Pressure Controls",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 365,
+              "y": 938,
+              "width": 280,
+              "height": 250
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBOILERSCRPT01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "boiler-controls",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "pressure-wheel UI hook; not activated",
+            "pairedVariant": true,
+            "cavUnifiedBathPuzzleBinding": {
+              "version": 1,
+              "status": "ENABLED",
+              "puzzleKind": "boiler-pressure",
+              "provider": "regionwright-puzzles-locks",
+              "api": "boilerCampaign",
+              "waterVariant": "filled",
+              "gmReceiptRequired": true,
+              "approvalStatus": "GM-script-reviewed-source-tests-pass",
+              "nativeBehaviorInstalled": true,
+              "ownerPuzzleGeometryReview": true,
+              "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+              "originalUiDemoUnchanged": true,
+              "playerAcceptanceTesting": "DEFERRED"
+            }
+          }
+        },
+        {
+          "id": "CAVBSIDENORTH001",
+          "name": "BATH - North Side Basin",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1420,
+              "y": 630,
+              "width": 200,
+              "height": 170
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "north-side-basin",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "physical basin; puzzle identity unconfirmed",
+            "pairedVariant": true
+          }
+        },
+        {
+          "id": "CAVBSIDESOUTH001",
+          "name": "BATH - South Side Basin",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1420,
+              "y": 890,
+              "width": 215,
+              "height": 205
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "south-side-basin",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "physical basin; puzzle identity unconfirmed",
+            "pairedVariant": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "BATH-DRAINED - Unified Bathhouse Surface",
+      "id": "8yLMRDvxyw58dydh",
+      "width": 2160,
+      "height": 1440,
+      "src": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+      "regions": [
+        {
+          "id": "SLovYxFAWVAMFzXg",
+          "name": "BATH - Return to Trail Fork",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1920,
+              "y": 95,
+              "width": 170,
+              "height": 145
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "EK3UbdrVWwe28PmW",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "R2Pg9eHODtb1C1Yk",
+          "name": "BATH - Arrival from Trail Fork",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1810,
+              "y": 345,
+              "width": 165,
+              "height": 160
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "CAVBATHSCRDRY001",
+          "name": "BATH-DRAINED - Screwdriver beside Main Pool Drain",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 870,
+              "y": 710,
+              "width": 360,
+              "height": 330
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBATHSCRBEH001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavDrainedPickupFixture": {
+              "version": 1,
+              "itemSourceUuid": "Item.CAVBATHSCREW0001",
+              "stage": "sluice-open-only",
+              "interaction": "explicit click, never token-enter",
+              "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-bath-drained-floor-screwdriver-crop-20261026.png",
+              "playerGameplayTested": false
+            }
+          }
+        },
+        {
+          "id": "CAVBBOILERVESL01",
+          "name": "BATH - Boiler Vessel Machinery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 370,
+              "y": 635,
+              "width": 300,
+              "height": 238
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "boiler-vessel",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "mechanical fixture; no scripts",
+            "pairedVariant": true,
+            "overlapsDrainedScrewdriver": false,
+            "ownerReviewRequired": true
+          }
+        },
+        {
+          "id": "CAVBBOILERCTRL01",
+          "name": "BATH - Boiler Pressure Controls",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 365,
+              "y": 938,
+              "width": 280,
+              "height": 250
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBOILERSCRPT01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "boiler-controls",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "pressure-wheel UI hook; not activated",
+            "pairedVariant": true,
+            "overlapsDrainedScrewdriver": false,
+            "ownerReviewRequired": true,
+            "cavUnifiedBathPuzzleBinding": {
+              "version": 1,
+              "status": "ENABLED",
+              "puzzleKind": "boiler-pressure",
+              "provider": "regionwright-puzzles-locks",
+              "api": "boilerCampaign",
+              "waterVariant": "drained",
+              "gmReceiptRequired": true,
+              "approvalStatus": "GM-script-reviewed-source-tests-pass",
+              "nativeBehaviorInstalled": true,
+              "ownerPuzzleGeometryReview": true,
+              "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+              "originalUiDemoUnchanged": true,
+              "playerAcceptanceTesting": "DEFERRED"
+            }
+          }
+        },
+        {
+          "id": "CAVBSIDENORTH001",
+          "name": "BATH - North Side Basin",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1420,
+              "y": 630,
+              "width": 200,
+              "height": 170
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "north-side-basin",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "physical basin; puzzle identity unconfirmed",
+            "pairedVariant": true,
+            "overlapsDrainedScrewdriver": false,
+            "ownerReviewRequired": true
+          }
+        },
+        {
+          "id": "CAVBSIDESOUTH001",
+          "name": "BATH - South Side Basin",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1420,
+              "y": 890,
+              "width": 215,
+              "height": 205
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "south-side-basin",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "physical basin; puzzle identity unconfirmed",
+            "pairedVariant": true,
+            "overlapsDrainedScrewdriver": false,
+            "ownerReviewRequired": true
+          }
+        },
+        {
+          "id": "CAVBROSEWATER001",
+          "name": "BATH-DRAINED - Rosewater Ring Area at Main Pool Drain",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 976,
+              "y": 826,
+              "width": 108,
+              "height": 115
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVROSEWATERSCR1",
+              "type": "executeScript",
+              "disabled": true
+            }
+          ],
+          "flags": {
+            "cavUnifiedBathFixtureKey": "rosewater-ring-main-drain",
+            "installBatch": "cav-unified-bath-fixtures-20261026-v1",
+            "phase": "PASSIVE_GM_REVIEW",
+            "behaviorStatus": "NONE",
+            "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+            "intendedUse": "drained-only Rosewater three-ring puzzle; script intentionally not yet attached",
+            "pairedVariant": false,
+            "overlapsDrainedScrewdriver": true,
+            "ownerReviewRequired": true,
+            "cavUnifiedBathPuzzleBinding": {
+              "version": 1,
+              "status": "STAGED_DISABLED",
+              "puzzleKind": "rosewater-rings",
+              "provider": "regionwright-puzzles-locks",
+              "api": "rosewater",
+              "waterVariant": "drained-only",
+              "gmReceiptRequired": true,
+              "approvalStatus": "awaiting-four-owner-approved-symbols",
+              "nativeBehaviorInstalled": false,
+              "ownerPuzzleGeometryReview": true,
+              "sourceCommit": "cav-unified-bath-puzzle-wiring-20261026",
+              "overlapsExistingPickupRegionId": "CAVBATHSCRDRY001",
+              "clickExclusionImplementedInSource": true
+            },
+            "cavRosewaterApprovedSymbols": {
+              "status": "OWNER_APPROVED",
+              "approvalSource": "owner",
+              "symbols": [
+                "rose",
+                "sun",
+                "moth",
+                "thorn"
+              ],
+              "approvedDate": "2026-10-26",
+              "ownerDecision": "Yes I approve",
+              "visualReference": "Skyrim-style rotating concentric rings",
+              "scope": "Four Rosewater ring identifiers, not separate Bowl pickup or original map artwork",
+              "source": "direct campaign conversation",
+              "version": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "id": "CAVEXT02Scene001",
+      "width": 5760,
+      "height": 4320,
+      "src": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "regions": [
+        {
+          "id": "5RJkabcJJbVAI4WY",
+          "name": "EXT-02 - Return to Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 260,
+              "y": 1880,
+              "width": 370,
+              "height": 430
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "yaNCRIbv3Y8Dho0X",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "wwls4eQRInzw8RxS",
+          "name": "EXT-02 - Arrival from Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 910,
+              "y": 1970,
+              "width": 250,
+              "height": 230
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:yard-pond:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "CAVROWBOATREG001",
+          "name": "EXT-02 - Old Rowboat Investigation (Oars Required)",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1250,
+              "y": 1470,
+              "width": 510,
+              "height": 510
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVMIRRORBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "pond_sunken_rowboat_mirror",
+              "activation": "player token moves to moored rowboat with Oars; narrates investigating older sunken boat",
+              "requiresItemUuid": "Item.CAVOARSPOND00001",
+              "rewardUuid": "Item.CAVMIRRORSUNK001",
+              "map": "ext-02_pond_full_owner-approved.png",
+              "regionPlacement": "measured visible western dock and moored rowboat x1250 y1470 w510 h510"
+            }
+          }
+        },
+        {
+          "id": "CAVEXT02SLUICE01",
+          "name": "EXT-02 - Sluice Control Inspection",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1843,
+              "y": 2655,
+              "width": 435,
+              "height": 325
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVEXT02SLCBEH01",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "pond_drained",
+            "kind": "sluice-control-inspect-only",
+            "sourceVersion": "v001",
+            "visualGate": "BATHHOUSE_DRAINED_VISUAL_NOT_APPROVED",
+            "noDrainActivation": false,
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/ext02-sluice-gate-approved-crop-v001.png",
+            "requiresCrankOriginal": "Item.g3VYdgc1qkgkHGvn",
+            "cavSluiceInstallController": {
+              "version": 1,
+              "status": "crank-install-available",
+              "drainEnabled": true,
+              "requiresBathDrainedArtwork": false,
+              "interaction": "explicit inspect and install from original 587 lockbox",
+              "approvedBathDrainedSceneUuid": "Scene.8yLMRDvxyw58dydh",
+              "stageControllerVersion": 1,
+              "stageMode": "elected-GM guarded, no tokens in water/baths"
+            }
+          }
+        },
+        {
+          "id": "CAVEXT02HLOGR001",
+          "name": "EXT-02 - Fallen Hollow Log Observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3760,
+              "y": 2980,
+              "width": 820,
+              "height": 420
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVEXT02HLOGB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavPuzzleChainNode": "book_pond",
+            "sourceVersion": "v002",
+            "kind": "player-visual-inspection-and-elected-gm-once-only-original-book-claim",
+            "originalMap": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+            "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/pond-fallen-log-original-owner-map-crop-v001.png",
+            "placementStatus": "PROVISIONAL_APPROVED_MAP_VISIBLE_FALLEN_LOG",
+            "rewardItemUuid": "Item.TO69wBYN8sRJuxtH",
+            "rewardAssignment": "OWNER_CANON_2026_10_18_FELIX_FOX",
+            "disableItemGrant": false
+          }
+        },
+        {
+          "id": "CAVPONDWEATHER01",
+          "name": "EXT-02 - Weathered Key at Drained Pond Stair",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2575,
+              "y": 1030,
+              "width": 590,
+              "height": 600
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVPONDWEATHB001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavDrainedPickupFixture": {
+              "version": 1,
+              "itemSourceUuid": "Item.CAVWEATHERKEY001",
+              "stage": "sluice-open-only",
+              "interaction": "explicit click, never token-enter",
+              "closeup": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-pond-drained-weathered-stairs-crop-20261026.png",
+              "playerGameplayTested": false
+            }
+          }
+        },
+        {
+          "id": "CAVPONDAQGATE001",
+          "name": "EXT-02 - Aqueduct Gate Gear and Handle Sockets",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2500,
+              "y": 620,
+              "width": 720,
+              "height": 395
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVPONDAQBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            },
+            {
+              "id": "CAVPONDAQPORT001",
+              "type": "teleportToken",
+              "disabled": true
+            }
+          ],
+          "flags": {
+            "chainNode": "pond_aqueduct_gate",
+            "prerequisite": "sluice drained",
+            "originalGear": "Item.wDKqETOykWEdKF1Z",
+            "originalHandle": "Item.nRVZJL9JOwEwfnLq",
+            "ownerApprovedCrop": "worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/cav-aqueduct-gate-owner-map-crop-20261026.png",
+            "requiresReturnRoute": true,
+            "traversalStatus": "STAGED_DISABLED"
+          }
+        },
+        {
+          "id": "CAVPONDAQARRV001",
+          "name": "EXT-02 - Arrival from Aqueduct Gate",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2530,
+              "y": 1690,
+              "width": 300,
+              "height": 220
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "chainNode": "aqueduct_return",
+            "passive": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "EXT-04 - Privy",
+      "id": "xx1rWBiWMLxJPlrw",
+      "width": 1254,
+      "height": 1254,
+      "src": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+      "regions": [
+        {
+          "id": "zVgVWvnpPetxlF5e",
+          "name": "EXT-04 - Return to Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 460,
+              "y": 785,
+              "width": 300,
+              "height": 180
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "6DZj3FUaLavsdqgA",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-privy:v1",
+            "kind": "return"
+          }
+        },
+        {
+          "id": "663WrP9V8tPPOLvt",
+          "name": "EXT-04 - Arrival from Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 535,
+              "y": 450,
+              "width": 180,
+              "height": 170
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:yard-privy:v1",
+            "kind": "landing"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EXT-06 - Greenhouse Interior",
+      "id": "CAVEXT06Scene001",
+      "width": 1920,
+      "height": 1440,
+      "src": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png",
+      "regions": [
+        {
+          "id": "CAVB22FBB1C7077B",
+          "name": "Greenhouse South Entrance ? interior landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 850,
+              "y": 990,
+              "width": 230,
+              "height": 200
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB6E433D528867",
+          "name": "Greenhouse Controls ? observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1450,
+              "y": 330,
+              "width": 250,
+              "height": 230
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB8E20313B8F53",
+          "name": "Greenhouse Planting Beds ? observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 710,
+              "y": 370,
+              "width": 200,
+              "height": 200
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "EXT-07 - Boathouse Clearing",
+      "id": "CAVEXT07Scene001",
+      "width": 4320,
+      "height": 2880,
+      "src": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+      "regions": [
+        {
+          "id": "CAVB295859043E3B",
+          "name": "Boathouse Forest Trail ? clearing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2750,
+              "y": 970,
+              "width": 310,
+              "height": 310
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBDC8953715C50",
+          "name": "Boathouse Porch ? landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1140,
+              "y": 1090,
+              "width": 290,
+              "height": 280
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBBFF38CB54B53",
+          "name": "Boathouse Dock ? landing",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1190,
+              "y": 1450,
+              "width": 300,
+              "height": 250
+            }
+          ],
+          "behaviors": []
+        }
+      ]
+    },
+    {
+      "name": "EXT-TRAIL - Grove Bathhouse Fork",
+      "id": "CAVTRAILScene001",
+      "width": 4320,
+      "height": 2880,
+      "src": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png",
+      "regions": [
+        {
+          "id": "pTIy0ErhYjSVIP5u",
+          "name": "EXT-TRAIL - Arrival from Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 354,
+              "y": 830,
+              "width": 220,
+              "height": 210
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:yard-fork:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "UgRMdpoxyshXAFwq",
+          "name": "EXT-TRAIL - Return to Carriage Yard",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 110,
+              "y": 760,
+              "width": 260,
+              "height": 340
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "I7exFrmw0zVboyHm",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:yard-fork:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "vOwnKQFQnVUnBymL",
+          "name": "EXT-TRAIL - To Sune Grove",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2473,
+              "y": 2640,
+              "width": 350,
+              "height": 245
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "F7b2sKgtZN1rSwXu",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:fork-sg04:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "oVGU1TRcDhaxFtAq",
+          "name": "EXT-TRAIL - Arrival from Sune Grove",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2540,
+              "y": 2420,
+              "width": 260,
+              "height": 210
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:fork-sg04:v1",
+            "kind": "landing"
+          }
+        },
+        {
+          "id": "13g6uK1QrR9PFOzA",
+          "name": "EXT-TRAIL - To Bathhouse",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 3272,
+              "y": 181,
+              "width": 350,
+              "height": 255
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "ZbrhX0nnaLvLA5Zh",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "exit"
+          }
+        },
+        {
+          "id": "N5LomZ7TrVBMoExk",
+          "name": "EXT-TRAIL - Arrival from Bathhouse",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 2760,
+              "y": 740,
+              "width": 250,
+              "height": 210
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:fork-bath:v1",
+            "kind": "landing"
+          }
+        }
+      ]
+    },
+    {
+      "name": "H-B01 - Allens Basement Workshop",
+      "id": "G6NMonfCwMvNzipL",
+      "width": 1536,
+      "height": 1024,
+      "src": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+      "regions": [
+        {
+          "id": "CAVB9C0F653A2A6F",
+          "name": "Basement Workshop ? stairhead",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 660,
+              "y": 620,
+              "width": 190,
+              "height": 170
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBABA9513F73A3",
+          "name": "Basement Workshop ? central bench",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 770,
+              "y": 315,
+              "width": 220,
+              "height": 185
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBASEMENTRET01",
+          "name": "H-B01 - Return Up Basement Stairs",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 670,
+              "y": 785,
+              "width": 190,
+              "height": 180
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVBASEMENTPRT01",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "chainNode": "basement_return",
+            "source": "H-G02 foyer"
+          }
+        }
+      ]
+    },
+    {
+      "name": "H-G05 - Allens Study",
+      "id": "CAVHG05Scene0001",
+      "width": 1536,
+      "height": 1024,
+      "src": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVB9AA3D7BE9560",
+          "name": "Allen Study ? Great Room-side interior",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 240,
+              "y": 515,
+              "width": 185,
+              "height": 175
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVB3E32BD6B01BD",
+          "name": "Allen Study ? writing desk",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 640,
+              "y": 360,
+              "width": 235,
+              "height": 210
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHG05NOTE00001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "CAVHG05RETURN001",
+          "name": "H-G05 - Return to Great Room",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 90,
+              "y": 540,
+              "width": 140,
+              "height": 155
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVHG05RETURNB01",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "puzzleFamily": "cav-allen-study-587-lockbox-v001",
+            "kind": "return",
+            "placement": "PROVISIONAL_OWNER_ART_AND_EXISTING_LANDINGS"
+          }
+        }
+      ]
+    },
+    {
+      "name": "H-U07 - Dahlia Art Studio",
+      "id": "CAVHU07Scene0001",
+      "width": 1536,
+      "height": 1024,
+      "src": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "vanity",
+              "sourceMap": "H-U07 v017",
+              "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+              "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+              "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+              "rewardUuids": [
+                "Item.CAVBRASSKEYVAN01",
+                "Item.CAVCARRIAGEKEY01"
+              ],
+              "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+            }
+          }
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 65,
+              "y": 395,
+              "width": 125,
+              "height": 165
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "type": "teleportToken",
+              "disabled": false
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "departure",
+            "owner": "dicebox-router-v001"
+          }
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 220,
+              "y": 435,
+              "width": 120,
+              "height": 120
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "passive-arrival",
+            "owner": "dicebox-router-v001"
+          }
+        }
+      ]
+    },
+    {
+      "name": "H-U08 - Candle Workshop",
+      "id": "CAVHU08Scene0001",
+      "width": 1448,
+      "height": 1086,
+      "src": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "regions": [
+        {
+          "id": "CAVB78B258E0A0BB",
+          "name": "Candle Workshop ? central crafting table",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 575,
+              "y": 400,
+              "width": 260,
+              "height": 220
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBE5639AEC2179",
+          "name": "Candle Workshop ? shelving observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 435,
+              "y": 115,
+              "width": 240,
+              "height": 175
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVWICKSHELFBEH1",
+              "type": "executeScript",
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "vbDWTbnAZg65ErSS",
+      "uuid": "Item.vbDWTbnAZg65ErSS",
+      "name": "Completed Gond–Sune Emblem",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Completed Gond–Sune Emblem"
+        }
+      }
+    },
+    {
+      "id": "JMDPINZvucCc0s9j",
+      "uuid": "Item.JMDPINZvucCc0s9j",
+      "name": "Copper Ore",
+      "type": "loot",
+      "folder": "dKegSpGbILUFdtIk"
+    },
+    {
+      "id": "D1LRRg4n7y7pRWvk",
+      "uuid": "Item.D1LRRg4n7y7pRWvk",
+      "name": "Copper Tiny Key",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Copper Tiny Key"
+        }
+      }
+    },
+    {
+      "id": "vDR4cJU35iODR6gh",
+      "uuid": "Item.vDR4cJU35iODR6gh",
+      "name": "Lye",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Lye"
+        }
+      }
+    },
+    {
+      "id": "YNWpGEGB17mqDFWe",
+      "uuid": "Item.YNWpGEGB17mqDFWe",
+      "name": "Plant Killer",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Plant Killer"
+        }
+      }
+    },
+    {
+      "id": "GXLYq6Tf4OgPNbkU",
+      "uuid": "Item.GXLYq6Tf4OgPNbkU",
+      "name": "Prayer of Devotion",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Prayer of Devotion"
+        }
+      }
+    },
+    {
+      "id": "t9uCIpsKeSvtC31w",
+      "uuid": "Item.t9uCIpsKeSvtC31w",
+      "name": "Sune Emblem Half",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Sune Emblem Half"
+        }
+      }
+    },
+    {
+      "id": "pbmUZPfC3WnsBRgi",
+      "uuid": "Item.pbmUZPfC3WnsBRgi",
+      "name": "Uncharged Gondian Power Source",
+      "type": "loot",
+      "folder": "N6X80ycvxaPIszHg",
+      "flags": {
+        "cabinPuzzleItem": {
+          "source": "2026-10-24-approved-puzzle-chain",
+          "status": "GM_LIBRARY_ONLY",
+          "itemKey": "Uncharged Gondian Power Source"
+        }
+      }
+    }
+  ],
+  "journals": [],
+  "actorSources": [
+    {
+      "actor": "uN72D4yHNrQHmPuh",
+      "name": "Oath of Devotion"
+    },
+    {
+      "actor": "uN72D4yHNrQHmPuh",
+      "name": "Oath of Devotion Spells"
+    },
+    {
+      "actor": "uN72D4yHNrQHmPuh",
+      "name": "Aura of Devotion"
+    }
+  ]
+}

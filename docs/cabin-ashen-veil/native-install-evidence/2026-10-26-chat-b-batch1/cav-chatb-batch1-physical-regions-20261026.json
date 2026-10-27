@@ -1,0 +1,63 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "status": "two-original-physical-regions-created-verified-no-behaviors",
+  "created": [
+    {
+      "sceneId": "CAVHU04Scene0001",
+      "sceneName": "H-U04 - Parents Bedroom",
+      "regionId": "CAVHU04HOPECHST1",
+      "uuid": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1",
+      "regionName": "H-U04 - Hope Chest (late Silver Key)",
+      "shape": [
+        {
+          "type": "rectangle",
+          "x": 1100,
+          "y": 688,
+          "width": 185,
+          "height": 132,
+          "rotation": 0,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "gridBased": false
+        }
+      ],
+      "behaviors": 0,
+      "flag": {
+        "status": "physical-fixture-staged",
+        "source": "2026-10-26-owner-live-batch1",
+        "purpose": "chest-and-music-box",
+        "basis": "approved v003 map, visibly banded trunk in southeast room; no puzzle behaviors"
+      }
+    },
+    {
+      "sceneId": "CAVEXT05Scene001",
+      "sceneName": "EXT-05 - Forgotten Gazebo",
+      "regionId": "CAVEXT05LANTERN1",
+      "uuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1",
+      "regionName": "EXT-05 - Gazebo Hanging Lantern (Wick and Lamp Oil)",
+      "shape": [
+        {
+          "type": "rectangle",
+          "x": 920,
+          "y": 375,
+          "width": 105,
+          "height": 135,
+          "rotation": 0,
+          "hole": false,
+          "anchorX": 0,
+          "anchorY": 0,
+          "gridBased": false
+        }
+      ],
+      "behaviors": 0,
+      "flag": {
+        "status": "physical-fixture-staged",
+        "source": "2026-10-26-owner-live-batch1",
+        "purpose": "gazebo-lantern",
+        "basis": "owner-approved map, suspended lantern in gazebo at approximate x970,y425; no puzzle behaviors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "sourceSHA256": "d3ad8040e862e27f37163df21f3a3ea7b78f49f2f83480d76aff5b194aa7bdf9",
+  "expectedSourceSHA256": "d3ad8040e862e27f37163df21f3a3ea7b78f49f2f83480d76aff5b194aa7bdf9",
+  "sourceMatch": true,
+  "behaviorUuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867.RegionBehavior.CAVEXT06LYEMIX01",
+  "enabled": true,
+  "nativeEvents": [
+    "behaviorViewed",
+    "behaviorUnviewed",
+    "behaviorDeactivated",
+    "tokenMoveIn",
+    "tokenMoveWithin"
+  ],
+  "regionUuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867",
+  "originalItems": [
+    {
+      "id": "vDR4cJU35iODR6gh",
+      "uuid": "Item.vDR4cJU35iODR6gh",
+      "name": "Lye",
+      "flag": "GM_LIBRARY_ONLY"
+    },
+    {
+      "id": "YNWpGEGB17mqDFWe",
+      "uuid": "Item.YNWpGEGB17mqDFWe",
+      "name": "Plant Killer",
+      "flag": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "ledgers": {
+    "mix": null,
+    "reward": null,
+    "waterworks": null,
+    "soapCaseCount": 0
+  },
+  "actorRewardCount": 0,
+  "firstChaseDisabled": true,
+  "nwWinderPreserved": true,
+  "gazeboIgnitionPreserved": true
+}

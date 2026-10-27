@@ -1,0 +1,128 @@
+// Chat B T23: owner-authorized silver original pickup from correct SG-01 NW.
+// The second Crooked Man chase is not fabricated by pickup. An independent
+// elected-GM native chase/adjudication MUST create key-drop proof, or an
+// explicitly adjudicated post-Veil recovery MUST do so first.
+// This source does not create the Crooked Man Actor, award without proof,
+// claim the first chase completed, or alter early NW Winder puzzle.
+export const SCENE='CAVSG01Scene0001';
+export const SILVER_MARKER='CAVSG01SILVERKEY';
+export const SILVER_BEHAVIOR='CAVSG01SILVRBEH1';
+export const CHASE_REGION='CAVSG01CHASETRG1';
+export const ORIGINAL_WINDER='gksvZIqj8jWdqzn7';
+export const ORIGINAL_ITEM='Item.IY8fuUG5P0yWIZIh';
+export const DROP_LEDGER='cavLateSecondChaseKeyDrop';
+export const CLAIM_LEDGER='cavLateSecondChaseSilverKeyClaim';
+export const ALLOWED_DROP_MODES=Object.freeze(['late-chase-resolved','post-veil-gm-recovery']);
+const body=String.raw`
+const NS='dicebox-campaign-helper',WORLD='cabin-in-the-ashen-veil',
+SOURCE='Item.IY8fuUG5P0yWIZIh',SCENE='CAVSG01Scene0001',
+MARK='CAVSG01SILVERKEY',CHASE='CAVSG01CHASETRG1',ORIGINAL='gksvZIqj8jWdqzn7';
+if(!game?.ready||game.version!=='14.367'||game.world?.id!==WORLD||
+ scene?.id!==SCENE||region?.id!==MARK)return;
+const KEY='__CAV_CHATB_SILVER_'+region.id,evt=event?.name;
+const status=key=>region.getFlag(NS,key)?.status??'none';
+if(['behaviorUnviewed','behaviorDeactivated'].includes(evt)){
+ const old=globalThis[KEY];if(old?.handler&&canvas?.stage)canvas.stage.off('pointertap',old.handler);
+ delete globalThis[KEY];return;
+}
+if(evt==='behaviorViewed'&&!game.user.isGM){
+ if(globalThis[KEY]?.handler&&canvas?.stage)canvas.stage.off('pointertap',globalThis[KEY].handler);
+ const fn=async e=>{
+  if(!canvas.ready||canvas.scene?.id!==SCENE||game.user.isGM)return;
+  const xy=canvas.stage.toLocal(e.global);
+  if(!region.testPoint({x:xy.x,y:xy.y,elevation:0}))return;
+  const dropped=game.scenes.get(SCENE)?.regions.get(CHASE)?.getFlag(NS,'cavLateSecondChaseKeyDrop');
+  const content=status('cavLateSecondChaseSilverKeyClaim')==='done'?
+   'The tiny silver key has been recovered. The stone lip is empty.':
+   dropped?.status==='available'?
+    'Beside the old northwestern stone bust, an impossibly small silver key waits in the fallen leaves. Ask the GM to confirm a deliberate pickup.':
+    'The old stone lip holds no key yet. The northwestern grove remembers a pursuit that has not occurred.';
+  await foundry.applications.api.DialogV2.prompt({window:{title:'Northwest Grove — Silver Key'},
+   content:'<p>'+content+'</p>',ok:{label:'Close',callback:()=>true},rejectClose:false});
+ };
+ if(canvas?.stage){canvas.stage.on('pointertap',fn);globalThis[KEY]={handler:fn};}
+ return;
+}
+if(!['tokenMoveIn','tokenMoveWithin'].includes(evt))return;
+if(!game.user?.isGM||game.users?.activeGM?.id!==game.user.id)return;
+const s=game.scenes.get(SCENE),chase=s?.regions.get(CHASE),winder=s?.regions.get(ORIGINAL);
+if(!chase||!winder||!winder.behaviors.get('7nHv3rf66mG8PJJS'))return;
+const sourceItem=game.items.get('IY8fuUG5P0yWIZIh');
+if(!sourceItem||sourceItem.uuid!==SOURCE||sourceItem.name!=='Silver Tiny Key'||
+ sourceItem.type!=='loot'||sourceItem.getFlag(NS,'cabinPuzzleItem')?.status!=='GM_LIBRARY_ONLY')return;
+const drop=chase.getFlag(NS,'cavLateSecondChaseKeyDrop');
+if(drop?.status!=='available'||drop.world!==WORLD||
+ drop.sourceUuid!==SOURCE||drop.sceneId!==SCENE||
+ drop.markerRegionId!==MARK||drop.chaseRegionId!==CHASE||
+ !['late-chase-resolved','post-veil-gm-recovery'].includes(drop.mode)||
+ !drop.electedGMAdjudicationVerified||typeof drop.adjudicatedByGMId!=='string')return;
+if(drop.mode==='late-chase-resolved'&&
+ (drop.resolvedChaseReceiptStatus!=='done'||
+  drop.prerequisitesWaterworksVerified!==true||
+  drop.allenWarningReadVerified!==true||
+  drop.firstChaseNativeReceiptVerified!==true))return;
+if(drop.mode==='post-veil-gm-recovery'&&
+ (!drop.actualOriginalCrimsonVeilVerified||
+  drop.recoveryWithoutPlayerChase!==true))return;
+const first=game.scenes.get('CAVAQ01Scene0001')?.regions.get('woZ98KXx0RsWIPpl')?.getFlag(NS,'cavFirstAqueductChase');
+const well=game.scenes.get('CAVAQ01Scene0001')?.regions.get('CAVAQWELLNORTH01')?.getFlag(NS,'cavForestWellUnlockTransaction');
+const firstResolved=first?.status==='captured'||
+ (first?.status==='escaped_pending_well_exit'&&well?.status==='done')||
+ (first?.status==='escaped'&&well?.status==='done');
+if(!firstResolved)return;
+if(region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim'))return;
+if(game.actors.contents.some(a=>a.items.some(i=>i.name==='Silver Tiny Key'||
+ i.getFlag(NS,'cavLateSilverKeySourceUuid')===SOURCE)))return;
+const raw=event.data?.token?.document??event.data?.token;
+const token=s.tokens.get(raw?.id??event.data?.tokenId);
+if(!token||token.hidden||token.actor?.type!=='character')return;
+const actor=token.actor;
+const owners=game.users.contents.filter(u=>u.active&&!u.isGM&&actor.testUserPermission(u,'OWNER'));
+const sender=event.userId??event.data?.userId??null;
+const player=sender?owners.find(u=>u.id===sender):owners.length===1?owners[0]:null;
+if(!player)return;
+const center={x:token.x+token.width*s.grid.size/2,y:token.y+token.height*s.grid.size/2,elevation:0};
+if(!region.testPoint(center))return;
+const BUSY=KEY+'_GM_BUSY';if(globalThis[BUSY])return;
+globalThis[BUSY]=true;
+try{
+ const ok=await foundry.applications.api.DialogV2.confirm({
+  window:{title:'Recover Silver Tiny Key — GM adjudication'},
+  content:'<p>Approve only after this player explicitly elects to take the key lying by the NW bust. The authenticated second chase or post-Veil recovery source must already have placed the unique original key here. No pursuit is triggered by this pickup.</p>',
+  yes:{label:'Approve original key pickup'},no:{label:'Cancel',callback:()=>false},
+  rejectClose:false});
+ if(!ok)return;
+ const live=chase.getFlag(NS,'cavLateSecondChaseKeyDrop');
+ if(region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim')||
+    JSON.stringify(live)!==JSON.stringify(drop)||
+    game.actors.contents.some(a=>a.items.some(i=>i.name==='Silver Tiny Key')))return;
+ await region.setFlag(NS,'cavLateSecondChaseSilverKeyClaim',{
+  status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:SOURCE,
+  sourceMode:drop.mode,chaseDropRegionUuid:chase.uuid});
+ const reserved=region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim');
+ if(reserved?.status!=='reserved'||reserved.actorId!==actor.id)throw Error('Uncertain key reservation');
+ const data=sourceItem.toObject();delete data._id;
+ data.flags={...data.flags,[NS]:{...data.flags?.[NS],
+  cavLateSilverKeySourceUuid:SOURCE,cavLateSilverKeyDropSceneId:SCENE,
+  cavLateSilverKeyDropRegionUuid:MARK,
+  cavLateSilverKeyOriginalChaseRegionUuid:chase.uuid,
+  cavLateSilverKeyPickupOrigin:drop.mode}};
+ const made=await actor.createEmbeddedDocuments('Item',[data]);
+ const item=made?.length===1?actor.items.get(made[0].id):null;
+ if(!item||item.getFlag(NS,'cavLateSilverKeySourceUuid')!==SOURCE||
+   item.getFlag(NS,'cavLateSilverKeyDropRegionUuid')!==MARK)
+  throw Error('Partial key source grant; reserved ledger, do not retry');
+ await region.setFlag(NS,'cavLateSecondChaseSilverKeyClaim',{
+  status:'done',actorId:actor.id,tokenId:token.id,
+  sourceUuid:SOURCE,sourceMode:drop.mode,embeddedItemId:item.id,
+  chaseDropRegionUuid:chase.uuid});
+ const done=region.getFlag(NS,'cavLateSecondChaseSilverKeyClaim');
+ if(done?.status!=='done'||done.embeddedItemId!==item.id)
+  throw Error('Uncertain silver finalization; reconcile without replay');
+ try{await ChatMessage.create({speaker:{alias:'Northwest Grove'},whisper:[player.id],
+  content:'<p>You recover the one original Silver Tiny Key from the fallen leaves beside the northwest bust.</p>'})}
+ catch(e){console.warn('[CAV Silver] Item delivered, notification unavailable',e);}
+}catch(e){console.error('[CAV Silver] Native grant uncertain; preserve reservation and inspect original Item',e)}
+finally{globalThis[BUSY]=false}
+`;
+export function nativeSilverRecoverySource(){return body.trim();}

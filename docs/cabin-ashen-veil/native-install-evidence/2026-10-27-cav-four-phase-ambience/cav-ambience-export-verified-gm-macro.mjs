@@ -1,0 +1,11 @@
+import{readFileSync,writeFileSync}from'node:fs';
+import{pathToFileURL}from'node:url';
+import{createHash}from'node:crypto';
+const root=String.raw`C:/Users/rujie/Documents/CAV-Chat-B-Late-Game`;
+const fx=await import(pathToFileURL(root+'/modules/regionwright/scripts/studio-cav-ambience-four-phase.js').href);
+const before=JSON.parse(readFileSync(new URL('./cav-ambience-four-phase-originals-and-preflight.json',import.meta.url)));
+const body=fx.buildMacroCommand(before.plan,before.originals);
+const hash=createHash('sha256').update(body).digest('hex');
+if(hash!==before.macroCommandSHA256)throw Error('Generated backup macro differs from installed original SHA');
+writeFileSync(new URL('./CAV-GM-AMBience-4-Phase-Macro.js',import.meta.url),body+'\n');
+console.log(JSON.stringify({exported:true,hash,bytes:Buffer.byteLength(body),phaseNames:fx.PHASES}));

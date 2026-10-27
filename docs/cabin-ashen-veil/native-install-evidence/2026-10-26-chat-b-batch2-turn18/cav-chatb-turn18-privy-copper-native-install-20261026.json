@@ -1,0 +1,87 @@
+{
+  "status": "two-original-privy-copper-dormant-physical-fixtures-installed",
+  "prior": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "sourceScene": "xx1rWBiWMLxJPlrw",
+    "originalExit": "Scene.xx1rWBiWMLxJPlrw.Region.zVgVWvnpPetxlF5e",
+    "originalArrival": "Scene.xx1rWBiWMLxJPlrw.Region.663WrP9V8tPPOLvt",
+    "originalCopper": "Item.D1LRRg4n7y7pRWvk",
+    "currentRegions": 2,
+    "currentTokens": 0,
+    "newStages": [
+      {
+        "id": "CAVPRIVYRETRIEV1",
+        "rect": {
+          "x": 760,
+          "y": 400,
+          "width": 160,
+          "height": 195
+        },
+        "behaviorId": "CAVPRIVYRETBH001",
+        "hash": "44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71",
+        "sourceLength": 1781
+      },
+      {
+        "id": "CAVPRIVYKEYMARK1",
+        "rect": {
+          "x": 785,
+          "y": 630,
+          "width": 130,
+          "height": 130
+        },
+        "behaviorId": "CAVPRIVYKEYBH001",
+        "hash": "b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d",
+        "sourceLength": 1782
+      }
+    ]
+  },
+  "created": [
+    {
+      "regionUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1",
+      "behaviorUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYRETRIEV1.RegionBehavior.CAVPRIVYRETBH001",
+      "disabled": true,
+      "behaviorEvents": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "rect": {
+        "type": "rectangle",
+        "x": 760,
+        "y": 400,
+        "width": 160,
+        "height": 195,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "sha256": "44e65b4f3e785d62c7630b8591f3847593257c5b2f3747755c3244b544fbed71"
+    },
+    {
+      "regionUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1",
+      "behaviorUuid": "Scene.xx1rWBiWMLxJPlrw.Region.CAVPRIVYKEYMARK1.RegionBehavior.CAVPRIVYKEYBH001",
+      "disabled": true,
+      "behaviorEvents": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated"
+      ],
+      "rect": {
+        "type": "rectangle",
+        "x": 785,
+        "y": 630,
+        "width": 130,
+        "height": 130,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      },
+      "sha256": "b65c8e060992a11f9812c0a48c37dad8e874408046a0f28250e6e78d4360d90d"
+    }
+  ]
+}

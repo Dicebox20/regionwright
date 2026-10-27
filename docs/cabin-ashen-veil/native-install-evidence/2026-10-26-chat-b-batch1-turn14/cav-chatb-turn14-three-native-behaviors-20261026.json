@@ -1,0 +1,61 @@
+{
+  "status": "native-behaviors-preflight-pass-no-writes",
+  "world": "cabin-in-the-ashen-veil",
+  "electedGM": "Gamemaster 1",
+  "plans": [
+    {
+      "kind": "hope",
+      "sceneId": "CAVHU04Scene0001",
+      "regionUuid": "Scene.CAVHU04Scene0001.Region.CAVHU04HOPECHST1",
+      "regionId": "CAVHU04HOPECHST1",
+      "regionName": "H-U04 - Hope Chest (late Silver Key)",
+      "priorBehaviors": 0,
+      "sourceHash": "bc13f6952263dd058421ed7db262f8b8213cf344d15d1d152e16e3f4912ab62f",
+      "sourceLength": 9611,
+      "behaviorId": "CAVHOPECHSTBEH01",
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ]
+    },
+    {
+      "kind": "wick",
+      "sceneId": "CAVHU08Scene0001",
+      "regionUuid": "Scene.CAVHU08Scene0001.Region.CAVBE5639AEC2179",
+      "regionId": "CAVBE5639AEC2179",
+      "regionName": "Candle Workshop ? shelving observation",
+      "priorBehaviors": 0,
+      "sourceHash": "21fa6adb6a9ae22c4bc4bd54adecce325b6fa2ce7b7b54118dc379196cb660dd",
+      "sourceLength": 9615,
+      "behaviorId": "CAVWICKSHELFBEH1",
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ]
+    },
+    {
+      "kind": "lantern",
+      "sceneId": "CAVEXT05Scene001",
+      "regionUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1",
+      "regionId": "CAVEXT05LANTERN1",
+      "regionName": "EXT-05 - Gazebo Hanging Lantern (Wick and Lamp Oil)",
+      "priorBehaviors": 0,
+      "sourceHash": "90c49dcb0004713e15b0404ab864bf4582ff5bb5eee15378cde1c8aba027c5e8",
+      "sourceLength": 9623,
+      "behaviorId": "CAVLANTERNBEH001",
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ]
+    }
+  ]
+}

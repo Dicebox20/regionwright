@@ -1,0 +1,33 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "previousHopeId": "CAVHOPECHSTBEH01",
+  "remainingInstalled": [
+    {
+      "kind": "wick",
+      "regionUuid": "Scene.CAVHU08Scene0001.Region.CAVBE5639AEC2179",
+      "behaviorUuid": "Scene.CAVHU08Scene0001.Region.CAVBE5639AEC2179.RegionBehavior.CAVWICKSHELFBEH1",
+      "sourceLength": 9613,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ]
+    },
+    {
+      "kind": "lantern",
+      "regionUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1",
+      "behaviorUuid": "Scene.CAVEXT05Scene001.Region.CAVEXT05LANTERN1.RegionBehavior.CAVLANTERNBEH001",
+      "sourceLength": 9621,
+      "events": [
+        "behaviorViewed",
+        "behaviorUnviewed",
+        "behaviorDeactivated",
+        "tokenMoveIn",
+        "tokenMoveWithin"
+      ]
+    }
+  ]
+}
