@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "datePacific": "2026-10-26",
+  "campaign": "cabin-in-the-ashen-veil",
+  "contentProvenance": "OWNER_AUTHORIZED_NEW_TEXT_2026-10-26",
+  "ownerAuthorization": "you can make up your own prayer text",
+  "status": "SOURCE_ONLY_NOT_INSTALLED",
+  "journalDefaultOwnership": 0,
+  "prayers": [
+    {
+      "title": "Prayer of Protection",
+      "itemUuid": "Item.5jwy75XyFezukf3b",
+      "existingItemRole": "GM_LIBRARY_ONLY original quest loot",
+      "proposedJournalId": "CAVPRAYERPROTECT",
+      "canonicalAcquisition": "original Ornate Music Box, after original Hope Chest and Silver Key",
+      "canonicalUse": "Read at H-U07 Sune altar; actual H-U08 Workshop passage only after verified source",
+      "lines": [
+        "Lady of the Rose, let beauty be a shelter, not a prize.",
+        "Where fear has shut a door, lay your hand upon its latch.",
+        "Guard the names spoken softly in this house, the hands that reach through darkness, and the hearts that tremble yet do not turn away.",
+        "Let no cruel thing wear the face of love; let no false voice lead the living from the living.",
+        "If a way was hidden for the sake of mercy, show it only to those who come to protect.",
+        "By rose, by candle, by the kindness we remember, keep us from harm, and guide us safely home."
+      ],
+      "readableHtml": "<p>Lady of the Rose, let beauty be a shelter, not a prize.</p>\n<p>Where fear has shut a door, lay your hand upon its latch.</p>\n<p>Guard the names spoken softly in this house, the hands that reach through darkness, and the hearts that tremble yet do not turn away.</p>\n<p>Let no cruel thing wear the face of love; let no false voice lead the living from the living.</p>\n<p>If a way was hidden for the sake of mercy, show it only to those who come to protect.</p>\n<p>By rose, by candle, by the kindness we remember, keep us from harm, and guide us safely home.</p>"
+    },
+    {
+      "title": "Prayer of Devotion",
+      "itemUuid": "Item.GXLYq6Tf4OgPNbkU",
+      "existingItemRole": "GM_LIBRARY_ONLY original quest loot",
+      "proposedJournalId": "CAVPRAYERDEVOTN1",
+      "canonicalAcquisition": "Boathouse via original full-Pond rowboat and cleared magical thorn dock",
+      "canonicalUse": "Separate H-U07 Sune altar reading before single original Sune half review",
+      "lines": [
+        "Bright Lady, I offer no perfect face and no spotless soul.",
+        "I offer the lamp I keep alight for someone lost, the hand I extend when mine is shaking, and the promise to cherish what the darkness would erase.",
+        "Teach me to see worth beneath ruin, to mend before I judge, and to carry beauty where none is left to see.",
+        "Let love be measured not in promises, but in the kindness we choose when kindness is hardest.",
+        "By the rose that blooms through ash, I offer my devotion—not for what I hope to gain, but for what I refuse to abandon."
+      ],
+      "readableHtml": "<p>Bright Lady, I offer no perfect face and no spotless soul.</p>\n<p>I offer the lamp I keep alight for someone lost, the hand I extend when mine is shaking, and the promise to cherish what the darkness would erase.</p>\n<p>Teach me to see worth beneath ruin, to mend before I judge, and to carry beauty where none is left to see.</p>\n<p>Let love be measured not in promises, but in the kindness we choose when kindness is hardest.</p>\n<p>By the rose that blooms through ash, I offer my devotion—not for what I hope to gain, but for what I refuse to abandon.</p>"
+    }
+  ],
+  "integration": {
+    "gmPreflightRequired": true,
+    "newItemCreated": false,
+    "foundryWritePerformed": false,
+    "nonGmAcceptanceTested": false,
+    "neverAutoGrant": true,
+    "neverAutoTeleport": true,
+    "nativeJournalMustStayHiddenUntilEarned": true
+  }
+}
