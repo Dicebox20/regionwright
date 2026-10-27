@@ -51,5 +51,21 @@
                                           ],
                                   "evidence":  "LIVE-RECHECK-2026-10-27-1403.json",
                                   "recommendation":  "Use exact three existing Regions, add audited native puzzle Behaviors and authoritative engine/claim integration; do not make duplicate Regions."
-                              }
+                              },
+    "postTurn28CurrentSophia":  {
+                                    "datePacific":  "2026-10-27 14:40 PDT",
+                                    "exists":  true,
+                                    "uuid":  "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+                                    "nativeRegionwrightSpineConfigured":  true,
+                                    "nativeRegionwrightBehaviorId":  "dxrQM6HJPGqfAh5t",
+                                    "nativeRegionwrightBehaviorDisabled":  true,
+                                    "originalCloseupEnabled":  true,
+                                    "gondRewardStillDisabled":  true,
+                                    "actualSourceBookRewardState":  "not-authentically-acquired",
+                                    "imageSupportedByCurrentlyInstalledModule":  false,
+                                    "independentReadbackPass":  true,
+                                    "spoilerSafeSceneNamesVerified":  47,
+                                    "sceneIdsChanged":  0,
+                                    "testsPass":  1362
+                                }
 }
