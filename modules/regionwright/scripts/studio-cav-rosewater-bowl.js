@@ -61,7 +61,7 @@ function context(){
   ringBehavior.system?.source==='await game.modules.get("regionwright")?.api?.campaign?.cabin?.rosewaterRings?.handleRegionEvent(region, event);'&&
   ringBehavior.system?.events.size===3&&
   ["behaviorViewed","behaviorUnviewed","behaviorDeactivated"].every(e=>ringBehavior.system.events.has(e));
- const nativeReady=fixture?.uuid===approval?.regionUuid&&fixture.id!==ring?.id&&
+ const nativeReady=!!fixture&&!!approval&&!!ring&&fixture.uuid===approval.regionUuid&&fixture.id!==ring.id&&
   fixture.behaviors.size===1&&behavior?.disabled===false&&behavior?.type==="executeScript"&&
   behavior.system?.source===SCRIPT&&behavior.system.events.size===EVENTS.length&&
   EVENTS.every(e=>behavior.system.events.has(e));

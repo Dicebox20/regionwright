@@ -1,0 +1,34 @@
+{
+    "ownerFixtureApproved":  false,
+    "newTests":  2,
+    "freshFoundryImportPass":  true,
+    "existingRuntimeApiStillCachedOldFunction":  true,
+    "behaviors":  123,
+    "activeRuntimeReloaded":  false,
+    "fullOverlap":  true,
+    "tests":  238,
+    "originalScrewdriverRectangle":  [
+                                         870,
+                                         710,
+                                         360,
+                                         330
+                                     ],
+    "schema":  "dicebox.cav.chat-a-bowl-nullfixture-2026-10-26-v1",
+    "sourceHash":  "180BF7800E3AC5395257373E40BABA9A6DB60479A0E5AD203D93EBBEF0D25AB0",
+    "rosewaterRectangle":  [
+                               976,
+                               826,
+                               108,
+                               115
+                           ],
+    "deployedDiskShaMatch":  true,
+    "localDate":  "2026-10-26",
+    "rosewaterBehaviorDisabled":  true,
+    "world":  "cabin-in-the-ashen-veil",
+    "regions":  234,
+    "failed":  0,
+    "actualPlayerAcceptance":  false,
+    "baseCommit":  "0b4a30f0efe69642e95d81be221ad688ed54859d",
+    "scenes":  47,
+    "bowlCopies":  0
+}

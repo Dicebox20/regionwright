@@ -1,4 +1,4 @@
-﻿import test from "node:test";
+import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {assessOriginalCavBowlReward} from "../modules/regionwright/scripts/studio-cav-rosewater-bowl.js";
@@ -96,7 +96,7 @@ test("GM runtime requires explicit Player request, ownership and viewed dry Scen
 });
 test("GM runtime verifies original native Behavior and event set before release",()=>{
  const s=readFileSync(new URL("../modules/regionwright/scripts/studio-cav-rosewater-bowl.js",import.meta.url),"utf8");
- for(const fragment of ["fixture?.uuid===approval?.regionUuid","fixture.id!==ring?.id","fixture.behaviors.size===1",
+ for(const fragment of ["fixture.uuid===approval.regionUuid","fixture.id!==ring.id","fixture.behaviors.size===1",
   'behavior?.type==="executeScript"',"behavior.system?.source===SCRIPT","behavior.system.events.size===EVENTS.length",
   "EVENTS.every(e=>behavior.system.events.has(e))"])
  assert.ok(s.includes(fragment),fragment);
@@ -130,4 +130,47 @@ test("Bowl runtime verifies commissioned ring identity, events and full DONE rec
    'ringReceipt?.status!=="done"','ringReceipt?.version!==1',
    'JSON.stringify(ringReceipt.positions)!=="[1,3,2]"',
    'typeof ringReceipt.lastMessageId!=="string"'])assert.ok(s.includes(required),required);
+});
+
+test("GM Bowl describe returns owner-fixture-approval-missing, not a null dereference",async()=>{
+ const module=await import("../modules/regionwright/scripts/studio-cav-rosewater-bowl.js");
+ const saved=globalThis.game;
+ let writes=0;
+ const ring={id:"CAVBROSEWATER001",behaviors:new Map([["CAVROSEWATERSCR1",{disabled:true,type:"executeScript"}]]),
+  getFlag(_ns,key){if(key==="cavUnifiedBathPuzzleBinding")return{status:"STAGED_DISABLED"};return null},
+  setFlag(){writes++;throw Error("Read-only test must not write")}};
+ const bowl=item();
+ const sluice={getFlag(){return null}};
+ const scene={regions:new Map([["CAVBROSEWATER001",ring]])};
+ try{
+  globalThis.game={ready:true,world:{id:"cabin-in-the-ashen-veil"},
+   user:{id:"GM",isGM:true},users:{activeGM:{id:"GM"}},
+   scenes:new Map([[S,scene],["CAVEXT02Scene001",{regions:new Map([["CAVEXT02SLUICE01",sluice]])}]]),
+   items:new Map([["1n5LONw3nYIy61O9",bowl]])};
+  const result=module.describeOriginalCavBowlPickupGM();
+  assert.equal(result.status,"owner-fixture-approval-missing");
+  assert.equal(result.nativeReady,false);
+  assert.equal(result.ringNativeReady,false);
+  assert.equal(result.approvedFixture,false);
+  assert.equal(result.claimStatus,null);
+  assert.equal(result.sluiceReady,false);
+  assert.equal(writes,0);
+  ring.getFlag=(_ns,key)=>key==="cavRosewaterBowlPickupApproval"?
+   {status:"OWNER_APPROVED",approvalSource:"owner",sceneId:S,
+    regionId:"UNINSTALLED_OWNER_FIXTURE",regionUuid:"Scene."+S+".Region.UNINSTALLED_OWNER_FIXTURE"}:
+   key==="cavUnifiedBathPuzzleBinding"?{status:"STAGED_DISABLED"}:null;
+  const notInstalled=module.describeOriginalCavBowlPickupGM();
+  assert.equal(notInstalled.status,"owner-fixture-approval-missing");
+  assert.equal(notInstalled.nativeReady,false);
+  assert.equal(writes,0);
+ }finally{
+  if(saved===undefined)delete globalThis.game;
+  else globalThis.game=saved;
+ }
+});
+
+test("Missing fixture source must explicitly guard null before comparing undefined UUIDs",()=>{
+ const src=readFileSync(new URL("../modules/regionwright/scripts/studio-cav-rosewater-bowl.js",import.meta.url),"utf8");
+ assert.ok(src.includes("const nativeReady=!!fixture&&!!approval&&!!ring&&"),"Absent owner fixture must fail closed");
+ assert.ok(!src.includes("fixture?.uuid===approval?.regionUuid&&fixture.id"),"Original unsafe equality must be removed");
 });
