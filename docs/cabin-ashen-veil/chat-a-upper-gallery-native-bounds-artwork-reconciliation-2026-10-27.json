@@ -1,0 +1,30 @@
+{
+    "totalScenes":  47,
+    "art":  "h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+    "sceneSize":  [
+                      1440,
+                      1800
+                  ],
+    "sourceHead":  "f8542fec3fcab9a1f84a6c015fec9cd4d33730cb",
+    "playerTests":  false,
+    "walllessScenes":  42,
+    "affectedSceneCount":  2,
+    "offSceneRegionCount":  8,
+    "allOutOfBoundsRects":  9,
+    "sceneRegions":  14,
+    "receipt":  "utility-harness/artifacts/cav-chat-a-original-scene-rect-bounds-geo-audit-20261027.json",
+    "schema":  "dicebox.cav.hu02-original-native-art-mismatch-20261027/v1",
+    "sourceTestsLastVerified":  253,
+    "auditedOnly":  true,
+    "localDate":  "2026-10-27",
+    "sceneWalls":  0,
+    "world":  "cabin-in-the-ashen-veil",
+    "installedBehaviorChanges":  0,
+    "artSha256":  "89F276946506C45CE9F9D6AA6B08664A7029D8BAF90A18D9AECD6758DC06CB6C",
+    "sceneId":  "gGgUHlHdI7RFrbUh",
+    "imageSize":  [
+                      1086,
+                      1448
+                  ],
+    "worldRegions":  244
+}
