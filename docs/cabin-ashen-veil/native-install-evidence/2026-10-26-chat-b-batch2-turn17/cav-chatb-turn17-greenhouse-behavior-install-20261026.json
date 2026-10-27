@@ -1,0 +1,26 @@
+{
+  "status": "installed-original-greenhouse-mixer-native-behavior",
+  "common": {
+    "world": "cabin-in-the-ashen-veil",
+    "sceneId": "CAVEXT06Scene001",
+    "regionId": "CAVB6E433D528867",
+    "regionUuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867",
+    "originalLyeUuid": "Item.vDR4cJU35iODR6gh",
+    "originalPlantKillerUuid": "Item.YNWpGEGB17mqDFWe",
+    "priorBehaviorCount": 0,
+    "waterworksRestoreLedger": null,
+    "recognizedSoapCaseRegions": 0,
+    "scriptLength": 6886
+  },
+  "behaviorId": "CAVEXT06LYEMIX01",
+  "behaviorUuid": "Scene.CAVEXT06Scene001.Region.CAVB6E433D528867.RegionBehavior.CAVEXT06LYEMIX01",
+  "events": [
+    "behaviorViewed",
+    "behaviorUnviewed",
+    "behaviorDeactivated",
+    "tokenMoveIn",
+    "tokenMoveWithin"
+  ],
+  "sourceLength": 6886,
+  "disabled": false
+}
