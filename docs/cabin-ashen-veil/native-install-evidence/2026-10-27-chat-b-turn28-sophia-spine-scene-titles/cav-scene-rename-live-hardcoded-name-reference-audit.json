@@ -1,0 +1,1823 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": [
+    {
+      "id": "CAVAQ01Scene0001",
+      "uuid": "Scene.CAVAQ01Scene0001",
+      "name": "AQ-01 - Unified Aqueduct Network",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/aqueducts_unified_gondian_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "AQ-01",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "AQ-UNIFIED-01",
+          "approvedArtSha256": "8b91c5c941a0b37231a83b062fb62adfc501c6c33401e9a1d6c2cab75444842c",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVBATHScene0001",
+      "uuid": "Scene.CAVBATHScene0001",
+      "name": "BATH - Unified Bathhouse Surface",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "BATH-UNIFIED",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "BATH-UNIFIED-01",
+          "approvedArtSha256": "a878d19046b4ba79adbac36c620a53c8648fe5cfed1504469978fae0a353b132",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "8yLMRDvxyw58dydh",
+      "uuid": "Scene.8yLMRDvxyw58dydh",
+      "name": "BATH-DRAINED - Unified Bathhouse Surface",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/bathhouse_unified_surface_drained_owner-approved_2026-10-26.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "BATH-DRAINED",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "BATH-DRAINED-01",
+          "approvedArtSha256": "337d84929ca93eaf29527124f33ffa26dad24082ffcf4659cca6c7932892c11e",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true,
+          "cavWaterVariant": "drained",
+          "cavVariantOfSceneUuid": "Scene.CAVBATHScene0001",
+          "cavWaterVariantStaged": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT01Yard0001",
+      "uuid": "Scene.CAVEXT01Yard0001",
+      "name": "EXT-01 - Carriage Yard and Cabin Front",
+      "navigation": true,
+      "sort": 0,
+      "active": true,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-01_carriage-yard_visual-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-01",
+          "phase": "STRUCTURAL_SHELL_TEST",
+          "specVersion": "cav-ext01-structural-shell-v001",
+          "approvedArtSha256": "d957783eeedfe640da78c8f1eeadda5135c66da05c0f3f04c9eb952f9ab34d1c",
+          "imageEdition": "OCT23_V10_ARCHIVE_VISUAL_PASS",
+          "laterAcceptedArtNotYetDeployed": true,
+          "geometryStatus": "PROVISIONAL_EXT01_300x200FT",
+          "discoveries": 0,
+          "regionBehaviorCount": 0,
+          "ownerPuzzleDeferral": true
+        },
+        "regionwright": {
+          "bossEngine": {
+            "version": 5,
+            "active": false,
+            "sceneUuid": "Scene.CAVEXT01Yard0001",
+            "phase": "shielded",
+            "round": 0,
+            "phaseStartedRound": 0,
+            "roundsInPhase": 0,
+            "shieldTempHp": 500,
+            "shieldTempMax": 500,
+            "puzzles": {
+              "1": {
+                "index": 1,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "2": {
+                "index": 2,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "3": {
+                "index": 3,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "4": {
+                "index": 4,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "5": {
+                "index": 5,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "6": {
+                "index": 6,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              }
+            },
+            "puzzlesComplete": 0,
+            "redirectComplete": 0,
+            "timingComplete": 0,
+            "plating": {
+              "active": false,
+              "disabled": false
+            },
+            "weaknessExposed": false,
+            "weakness": {
+              "pins": [
+                {
+                  "index": 1,
+                  "dc": 17,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 2,
+                  "dc": 18,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 3,
+                  "dc": 19,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 4,
+                  "dc": 20,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 5,
+                  "dc": 21,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 6,
+                  "dc": 22,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 7,
+                  "dc": 23,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 8,
+                  "dc": 24,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 9,
+                  "dc": 25,
+                  "removed": false,
+                  "shot": false
+                }
+              ],
+              "pinsRemoved": 0,
+              "shotsLanded": 0
+            },
+            "linkLoad": 0,
+            "linkLoadMax": 100,
+            "linkLoadThisRound": 0,
+            "linkSaturated": false,
+            "linkSaturationEndsRound": null,
+            "vectorCharges": 3,
+            "vectorEvasionSpent": false,
+            "anchor": {
+              "active": false,
+              "tokenUuid": null,
+              "untilRound": null
+            },
+            "transmitterExposed": false,
+            "transmitterWindowEndsRound": null,
+            "directiveHp": 360,
+            "directiveMaxHp": 360,
+            "arachnidHp": 720,
+            "arachnidMaxHp": 720,
+            "timers": {
+              "pocketCollapse": 0,
+              "frenzy": 0,
+              "overdrive": 0
+            },
+            "overdriveLevel": 0,
+            "criticalFailure": false,
+            "pocketDimension": {
+              "active": false,
+              "andrewTokenUuid": null,
+              "tactalTokenUuid": null
+            },
+            "puzzleDoors": {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            },
+            "breach": {
+              "open": false,
+              "holderTokenUuid": null,
+              "collapse": 0
+            },
+            "dotEffects": [],
+            "regions": {},
+            "narration": [],
+            "lastEvent": "Boss Engine v5 loaded. Reset the encounter before starting.",
+            "updatedAt": 1792885246899
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1,
+          "effects": {
+            "core_rain": {
+              "type": "rain",
+              "options": {
+                "belowTokens": false,
+                "belowTiles": false,
+                "belowForeground": false,
+                "tint": {
+                  "apply": false,
+                  "value": "#FFFFFF"
+                },
+                "soundFxEnabled": false,
+                "topDown": false,
+                "splash": true,
+                "splashDensity": 0.2,
+                "splashScale": 0.2,
+                "direction": 285,
+                "synchronizedDirection": false,
+                "scale": 0.5,
+                "speed": 0.2,
+                "lifetime": 0.25,
+                "density": 0.4,
+                "alpha": 1,
+                "backgroundEnabled": false,
+                "backgroundMode": "accumulate",
+                "backgroundDuration": 180,
+                "backgroundGroundMovementSpeed": 0.04,
+                "backgroundCoverage": 0.65,
+                "backgroundPatchSize": 0.85,
+                "backgroundFillVariation": 0.7,
+                "backgroundOpacity": 0.28,
+                "backgroundReflectionStrength": 0.58,
+                "backgroundShimmerStrength": 0.42,
+                "backgroundShimmerSpeed": 0.14,
+                "backgroundInteractionEnabled": false,
+                "backgroundInteractionRadius": 0.5,
+                "backgroundInteractionStrength": 0.75,
+                "backgroundInteractionLiftChance": 0.35,
+                "backgroundInteractionElevationThreshold": 5,
+                "backgroundInteractionSettleTime": 1.4,
+                "darknessActivationEnabled": false,
+                "darknessActivationRange": {
+                  "min": 0,
+                  "max": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "CAVEXT02Scene001",
+      "uuid": "Scene.CAVEXT02Scene001",
+      "name": "EXT-02 - Pond and Sluice Gate",
+      "navigation": true,
+      "sort": 100000,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-02",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "EXT-02-FULL",
+          "approvedArtSha256": "f4b397db05c688f4f152eb63d60d9d708530a7d93fecaa9ab028084fed51a28c",
+          "alternateBackground": {
+            "path": "Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png",
+            "sha256": "e29bdbb680613ead432593c2dbf3f32452ebb1c1c8bd968be5144a88dea2903a",
+            "bytes": 3899788,
+            "dims": [
+              1448,
+              1086
+            ]
+          },
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT03Scene001",
+      "uuid": "Scene.CAVEXT03Scene001",
+      "name": "EXT-03 - Donovans Shack",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-03_Donovans_Shack_V002_OWNER_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "EXT-03",
+          "artApproval": "OWNER_APPROVED_V002_2026-10-24",
+          "driveId": "1DTndLijFZ3yNnEuGG0KYu8GCKNwihW88",
+          "artSha256": "3da06e29e7bfed7a0130db6f6f37b0e14f602bb0c57fea54e2eca54d3a345007",
+          "travelStatus": "pending-measured-regions"
+        }
+      }
+    },
+    {
+      "id": "xx1rWBiWMLxJPlrw",
+      "uuid": "Scene.xx1rWBiWMLxJPlrw",
+      "name": "EXT-04 - Privy",
+      "navigation": true,
+      "sort": 200000,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-04-privy-approved-v001.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:a1e1928f-9511-4911-bf37-9e2b31758f0b",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "a1e1928f-9511-4911-bf37-9e2b31758f0b",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT05Scene001",
+      "uuid": "Scene.CAVEXT05Scene001",
+      "name": "EXT-05 - Forgotten Gazebo",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-05_forgotten-gazebo_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-05",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "EXT-05",
+          "approvedArtSha256": "9750d785c05078bec3014f00ea139f37b6d6340560a475c2a462cb9673cf45b2",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT06Scene001",
+      "uuid": "Scene.CAVEXT06Scene001",
+      "name": "EXT-06 - Greenhouse Interior",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-06_greenhouse-interior_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-06",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "EXT-06",
+          "approvedArtSha256": "f69bdc6b5e85da64cf3f3a7c53fd223346d58b5fba1d40e703f290d2d074a6cf",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT07Scene001",
+      "uuid": "Scene.CAVEXT07Scene001",
+      "name": "EXT-07 - Boathouse Clearing",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-07_boathouse_clearing_edited_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-07",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "EXT-07",
+          "approvedArtSha256": "37553712296cda930faf7f8a1439cc2026bfdf498e5fddae3d0ca2185f687ba8",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVEXT08Scene001",
+      "uuid": "Scene.CAVEXT08Scene001",
+      "name": "EXT-08 - Rear Deck and Family Grounds",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/EXT-08_Rear_Deck_Family_Grounds_FINAL_OWNER_APPROVED_FENCE_FLUSH_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "EXT-08",
+          "artApproval": "FINAL_OWNER_APPROVED_FENCE_FLUSH_2026-10-24",
+          "driveId": "149akKGhEQ3CKx_W4YJVl-rf31NoMEBl3",
+          "artSha256": "94b24ae8b94ecc1fab597b6cdefbe9ed2db869e236528ed502e2f4d3669b4a16",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "CAVTRAILScene001",
+      "uuid": "Scene.CAVTRAILScene001",
+      "name": "EXT-TRAIL - Grove Bathhouse Fork",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/ext-trail_grove-bathhouse-fork_pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "EXT-TRAIL",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "EXT-TRAIL",
+          "approvedArtSha256": "b0b089f80314d6715f72caba7096fc796083da93ac0ad8ffd6a7ddbb891cb4a3",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVFM01Scene0001",
+      "uuid": "Scene.CAVFM01Scene0001",
+      "name": "FM - Northwestern Forest Maze",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/fm-unified_northwestern-forest-maze_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "FM-UNIFIED",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "FM-UNIFIED-01",
+          "approvedArtSha256": "9ff3c83d0e906581b93fe701bd920f1d6e2899b5ce9700b298637f591ff6b7cf",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "UNEdA6iy6nk1Xuga",
+      "uuid": "Scene.UNEdA6iy6nk1Xuga",
+      "name": "H-A01 - Central Attic",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a01-central-attic-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:3127d538-6000-4402-b298-0639b62baa0b",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "3127d538-6000-4402-b298-0639b62baa0b",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "KwpmPrYgEC7KQVCZ",
+      "uuid": "Scene.KwpmPrYgEC7KQVCZ",
+      "name": "H-A02 - West Attic Storage",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a02-west-attic-storage-approved-v001.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:9cc8a06f-f974-4dd5-a5c2-1f2b6b1b6ccf",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "9cc8a06f-f974-4dd5-a5c2-1f2b6b1b6ccf",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "gDqaEOR4qaB5IOut",
+      "uuid": "Scene.gDqaEOR4qaB5IOut",
+      "name": "H-A03 - North Attic Storage",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a03-north-attic-storage-approved-v001.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:7438259f-731c-46aa-b6ba-c1e5f6e82088",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "7438259f-731c-46aa-b6ba-c1e5f6e82088",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "nyF5EX0JiEu23C3p",
+      "uuid": "Scene.nyF5EX0JiEu23C3p",
+      "name": "H-A04 - East Attic Storage",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-a04-east-attic-storage-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:b51a021c-e44d-4442-8523-2b29829b1cea",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "b51a021c-e44d-4442-8523-2b29829b1cea",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "uuid": "Scene.G6NMonfCwMvNzipL",
+      "name": "H-B01 - Allens Basement Workshop",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:be62ee54-c161-4d20-bc0c-ebf7b5673d05",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "be62ee54-c161-4d20-bc0c-ebf7b5673d05",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "uuid": "Scene.tjTpG2RVZNoCqRLh",
+      "name": "H-B02 - Secured Keystone Vault",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:f8a70fa3-f3aa-498c-9a6d-a01666a8c131",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "f8a70fa3-f3aa-498c-9a6d-a01666a8c131",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "uuid": "Scene.ThVGl68hUmiOhWEA",
+      "name": "H-B03 - Basement Supply Closet",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-b03-basement-supply-closet-approved-v001.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:635da615-bcb2-4f44-bbc6-184bd42df749",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "635da615-bcb2-4f44-bbc6-184bd42df749",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "uuid": "Scene.CAVHG01Scene0001",
+      "name": "H-G01 - Dining Room",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-G01_Dining_V003_OWNER_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-G01",
+          "artApproval": "OWNER_APPROVED_V003_2026-10-24",
+          "driveId": "1H6n1xy1qS6Pz8dEF1SXXlXyQ8GQ69tMc",
+          "artSha256": "1aa4345d6aa69dadc335e82cb9e33af7e38f4de7056acb6565e02e8aba9792b8",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "uuid": "Scene.CAVHG02Scene0001",
+      "name": "H-G02 - Foyer and Basement Stairwell",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-g02_foyer_with_basement-stairwell_owner-approved.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "H-G02",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "H-G02",
+          "approvedArtSha256": "34c5e7dab1193893ef6e557745e85821362f76741464567a73120a689cb6b1e8",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "uuid": "Scene.CAVHG03Scene0001",
+      "name": "H-G03 - Kitchen",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-G03_Kitchen_V001_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-G03",
+          "artApproval": "OWNER_APPROVED_V001_2026-10-24",
+          "driveId": "1YZ9cuuMvu-YkNpU6mvHWpB89pT2CCnxC",
+          "artSha256": "6432e5b37e3f9d114529dbe52f44b37e6a73b228ff7d6fe1f3cdf6f24d1fd70c",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "uuid": "Scene.CAVHG04Scene0001",
+      "name": "H-G04 - Pantry",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-G04_Pantry_V002_OWNER_APPROVED_NORTH_DOOR_2026-10-25.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-G04",
+          "artApproval": "OWNER_APPROVED_NORTH_DOOR_2026_10_25",
+          "artSha256": "8db61f0ffc3e0f382cf182f5f2831de7a82e39e2f65fbfdea3e5aa5cfb6c6370",
+          "artSource": "ChatGPT-current-conversation",
+          "travelStatus": "KITCHEN_SOUTH_PANTRY_NORTH_NATIVE_RECIPROCAL_ROUTE_INSTALLED_PLAYER_TEST_DEFERRED"
+        }
+      }
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "uuid": "Scene.CAVHG05Scene0001",
+      "name": "H-G05 - Allens Study",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-G05_Allens_Study_V003_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-G05",
+          "artApproval": "APPROVED_V003_2026-10-24",
+          "driveId": "17NFBP_74FEHdfp531ystCwp_-gQ_j9if",
+          "artSha256": "c3ec08180f80d5d6304824840029bf46e4785d6ac95e01e2c0b43c32a02bd5a4",
+          "travelStatus": "pending-approved-topology"
+        }
+      }
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "uuid": "Scene.CAVHG06GreatRoom",
+      "name": "H-G06 - Great Room",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-g06-great-room-aged-fifty-years-approved-2026-10-23.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "H-G06",
+          "phase": "STRUCTURAL_SHELL_TEST",
+          "specVersion": "cav-h-g06-structural-shell-v001",
+          "approvedArtSha256": "c7e5305718d5aea1ddbcd374d0374f51b714bf6d860adf0cc0aabb3a29a4f0ee",
+          "geometryStatus": "PROVISIONAL_CANDIDATE_B_NOT_CANON",
+          "discoveryCount": 0,
+          "regionBehaviorCount": 0,
+          "ownerPuzzleDeferral": true,
+          "cavRevealOriginalTokenVision": true
+        },
+        "regionwright": {
+          "bossEngine": {
+            "version": 5,
+            "active": false,
+            "sceneUuid": "Scene.CAVHG06GreatRoom",
+            "phase": "shielded",
+            "round": 0,
+            "phaseStartedRound": 0,
+            "roundsInPhase": 0,
+            "shieldTempHp": 500,
+            "shieldTempMax": 500,
+            "puzzles": {
+              "1": {
+                "index": 1,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "2": {
+                "index": 2,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "3": {
+                "index": 3,
+                "kind": "redirect",
+                "owner": "Sprocket",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "4": {
+                "index": 4,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "5": {
+                "index": 5,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              },
+              "6": {
+                "index": 6,
+                "kind": "timing",
+                "owner": "Dalton",
+                "completed": false,
+                "doorUuid": null,
+                "completedRound": null
+              }
+            },
+            "puzzlesComplete": 0,
+            "redirectComplete": 0,
+            "timingComplete": 0,
+            "plating": {
+              "active": false,
+              "disabled": false
+            },
+            "weaknessExposed": false,
+            "weakness": {
+              "pins": [
+                {
+                  "index": 1,
+                  "dc": 17,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 2,
+                  "dc": 18,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 3,
+                  "dc": 19,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 4,
+                  "dc": 20,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 5,
+                  "dc": 21,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 6,
+                  "dc": 22,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 7,
+                  "dc": 23,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 8,
+                  "dc": 24,
+                  "removed": false,
+                  "shot": false
+                },
+                {
+                  "index": 9,
+                  "dc": 25,
+                  "removed": false,
+                  "shot": false
+                }
+              ],
+              "pinsRemoved": 0,
+              "shotsLanded": 0
+            },
+            "linkLoad": 0,
+            "linkLoadMax": 100,
+            "linkLoadThisRound": 0,
+            "linkSaturated": false,
+            "linkSaturationEndsRound": null,
+            "vectorCharges": 3,
+            "vectorEvasionSpent": false,
+            "anchor": {
+              "active": false,
+              "tokenUuid": null,
+              "untilRound": null
+            },
+            "transmitterExposed": false,
+            "transmitterWindowEndsRound": null,
+            "directiveHp": 360,
+            "directiveMaxHp": 360,
+            "arachnidHp": 720,
+            "arachnidMaxHp": 720,
+            "timers": {
+              "pocketCollapse": 0,
+              "frenzy": 0,
+              "overdrive": 0
+            },
+            "overdriveLevel": 0,
+            "criticalFailure": false,
+            "pocketDimension": {
+              "active": false,
+              "andrewTokenUuid": null,
+              "tactalTokenUuid": null
+            },
+            "puzzleDoors": {
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            },
+            "breach": {
+              "open": false,
+              "holderTokenUuid": null,
+              "collapse": 0
+            },
+            "dotEffects": [],
+            "regions": {},
+            "narration": [],
+            "lastEvent": "Boss Engine v5 loaded. Reset the encounter before starting.",
+            "updatedAt": 1792887515637
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "uuid": "Scene.CAVHG09Scene0001",
+      "name": "H-G09 - Rear Family Room",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-G09_Rear_Family_Room_V002_OWNER_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-G09",
+          "artApproval": "OWNER_APPROVED_V002_2026-10-24",
+          "driveId": "13GzECRbA7a3WBZlPDJ8ldzvs1zUS8A_D",
+          "artSha256": "cc0b515bba296ab6bfe4c5b1dece03c3c22c7ff9793c0c94793bac8193a80af6",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "LhtyO17QenuCExsb",
+      "uuid": "Scene.LhtyO17QenuCExsb",
+      "name": "H-R01 - Roof Chimney Clock",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-r01-roof-chimney-clock-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:168f6fee-3671-4163-b45d-4a6ed2b29b1d",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "168f6fee-3671-4163-b45d-4a6ed2b29b1d",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "uuid": "Scene.CAVHU01Scene0001",
+      "name": "H-U01 - Nursery",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-U01_Nursery_V001_FINAL_ART_PASS_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-U01",
+          "artApproval": "OWNER_APPROVED_V001_2026-10-24",
+          "driveId": "1Fo6BuY51iPgh8OEWbUyEm_LrFnGigQQa",
+          "artSha256": "8d5e42dd32512539413d0d80807bd3c62210e8bbb3570b16a154848e44e0eb43",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "uuid": "Scene.gGgUHlHdI7RFrbUh",
+      "name": "H-U02 - Upper Gallery and Landing",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-u02-upper-landing-owner-approved-textfree-v006-2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "sceneCode": "H-U02",
+          "status": "PROVISIONAL_STRUCTURAL_V2_ENTRANCES_INSTALLED",
+          "blueprint": "ashen_house_blueprint_geometry_v1.json",
+          "notCanonArt": true,
+          "blueprintDoors": [
+            "H-U04",
+            "H-U01",
+            "H-U05",
+            "H-U03",
+            "H-A01"
+          ],
+          "newMapAsset": "Maps/cabin-in-the-ashen-veil/h-u02-upper-gallery-with-entrances-v002.png"
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "uuid": "Scene.CAVHU03Scene0001",
+      "name": "H-U03 - Guest Bedroom",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-U03_Guest_Bedroom_V001_FINAL_ART_PASS_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-U03",
+          "artApproval": "OWNER_APPROVED_V001_2026-10-24",
+          "driveId": "19Asl4skVNRIKpfAtcvOunepBKji2VVHT",
+          "artSha256": "c93de7b43304636a6277c5e725dffde57cd3783300a629137cdd7e772174d652",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "uuid": "Scene.CAVHU04Scene0001",
+      "name": "H-U04 - Parents Bedroom",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-U04_Parents_Bedroom_V003_OWNER_APPROVED_CLOSED_WINDOW_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-U04",
+          "artApproval": "OWNER_APPROVED_V003_2026-10-24",
+          "driveId": "1fwM2HXswTzYcybjPBj1wHFNuWsoH4r66",
+          "artSha256": "aa35b9cd39aeecd7bb614296a7b1bbc4f7583b9ed6f9ea56dc84e61bd311f8fc"
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "uuid": "Scene.CAVHU05Scene0001",
+      "name": "H-U05 - Sophias Bedroom",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-U05_Sophias_Bedroom_V004_OWNER_APPROVED_SOUTH_DOOR_REMOVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-U05",
+          "artApproval": "OWNER_APPROVED_V004_SOUTH_DOOR_REMOVED",
+          "driveId": "1dTByLC6H6pBB6bv0tMuUCU8GxNWjaTt_",
+          "artSha256": "fc4fb9dce77ec2e5f853d046c1380d798dfb1a9a4a5925dc87e5523dd3bbccec",
+          "travelGate": "Old Iron Key required; not installed"
+        }
+      }
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "uuid": "Scene.CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavEarlyAct": {
+            "canonicalScene": "H-U07",
+            "artVersion": "v017 2026-10-24",
+            "artSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+            "status": "SCENE_SHELL_ONLY__NO_WALLS_REGIONS_OR_PLAYER_TRAVEL",
+            "doNotAlterArtwork": true
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "uuid": "Scene.CAVHU08Scene0001",
+      "name": "H-U08 - Candle Workshop",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavRoomKey": "H-U08",
+          "artApproval": "OWNER_APPROVED_V002_2026-10-24",
+          "driveId": "1525xxM8dQn4iIZ8UJ-X4eTTqQEZh4MCp",
+          "artSha256": "806e936e3b6311f0897e485f03028e6baac76f1b34ad85ea94c8391e672588f8",
+          "travelStatus": "pending-approved-measurement"
+        }
+      }
+    },
+    {
+      "id": "CAVSG01Scene0001",
+      "uuid": "Scene.CAVSG01Scene0001",
+      "name": "SG-01 - Northwest Grove Corner",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-01_northwest-grove-corner_moon-bust_owner-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-01",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-01",
+          "approvedArtSha256": "29772eb5c2fba227d64a6b2f9baa761001b674fc60588393c4fb03e81a48c883",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG02Scene0001",
+      "uuid": "Scene.CAVSG02Scene0001",
+      "name": "SG-02 - Northern Processional Walk",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-02_northern-processional-walk_owner-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-02",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-02",
+          "approvedArtSha256": "ca5f806cecec8e4a30f62d07d6595c645ce02c55824f300a4babc6ad9aa235be",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG03Scene0001",
+      "uuid": "Scene.CAVSG03Scene0001",
+      "name": "SG-03 - Northeast Grove Corner",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-03_northeast-grove-corner_owner-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-03",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-03",
+          "approvedArtSha256": "cc5a181651827fa43d8ac603c92733105d30fbf1c3d48f2d08230e2e98dc56e4",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG04Scene0001",
+      "uuid": "Scene.CAVSG04Scene0001",
+      "name": "SG-04 - Western Grove Entrance",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-04_western-entrance_visual-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-04",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-04",
+          "approvedArtSha256": "a34706750bf3805f3554a8f72ed1fb34acc168757014425c7c9eccd5c870b696",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG05Scene0001",
+      "uuid": "Scene.CAVSG05Scene0001",
+      "name": "SG-05 - Memorial Clearing",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-05_memorial-clearing_dormant_owner-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-05",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-05",
+          "approvedArtSha256": "3fd75029dd49397d93b6d580a9695fbce5e89766bcf2105ec7934e58f800edfc",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG06Scene0001",
+      "uuid": "Scene.CAVSG06Scene0001",
+      "name": "SG-06 - Eastern Grove Walk",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-06_eastern-grove-walk_four-way_owner-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-06",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-06",
+          "approvedArtSha256": "780cc6b499ed01e67bcdc2a00a98dacdbb4a03e5fb31358489d5eba2ab0db1b3",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG07Scene0001",
+      "uuid": "Scene.CAVSG07Scene0001",
+      "name": "SG-07 - Southwest Grove Corner",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-07_southwest-grove-corner_bust_visual-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-07",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-07",
+          "approvedArtSha256": "921beb78d4c27de0f52b6dfb9d42c6302e95916632ce661b44eb5bd491a3009b",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG08Scene0001",
+      "uuid": "Scene.CAVSG08Scene0001",
+      "name": "SG-08 - Southern Grove Walk",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-08_southern-grove-walk_visual-pass.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-08",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-08",
+          "approvedArtSha256": "e033ccb7b5acbcbb7b444259ab336810b9d1760ddd161fe87a8447add3b58ce8",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CAVSG09Scene0001",
+      "uuid": "Scene.CAVSG09Scene0001",
+      "name": "SG-09 - Southeast Grove Corner",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/sg-09_southeast-grove-corner_sun-bust_owner-accepted.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "cavStructuralSceneKey": "SG-09",
+          "phase": "BACKGROUND_ONLY_OWNER_WALLS",
+          "ownerPlacesWalls": true,
+          "geometryStatus": "PROVISIONAL_OWNER_TO_SET_WALLS_AND_APPROVE_SCALE",
+          "manifestId": "SG-09",
+          "approvedArtSha256": "681806132e2b56fa75c72224751aac8658ebd52c76e6a076b2dea6bb557ce7a9",
+          "alternateBackground": null,
+          "regionBehaviorCount": 0,
+          "cavRevealOriginalTokenVision": true
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "CN5fkK2QLUELBGGR",
+      "uuid": "Scene.CN5fkK2QLUELBGGR",
+      "name": "UND-01 - Undercroft Approach Keystone Door",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/und-01-undercroft-approach-keystone-door-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:f04263f6-482e-44d1-88b2-a0b0e26328ab",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "f04263f6-482e-44d1-88b2-a0b0e26328ab",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "ywpIpQDrkMLIgUP0",
+      "uuid": "Scene.ywpIpQDrkMLIgUP0",
+      "name": "UND-02 - Donovan Sophia Sealed Refuge",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/und-02-donovan-sophia-sealed-refuge-approved-v002.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:94e28d31-dd61-4802-a101-8ed343805cd4",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "94e28d31-dd61-4802-a101-8ed343805cd4",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    },
+    {
+      "id": "hLU4DzVctEGdsuaz",
+      "uuid": "Scene.hLU4DzVctEGdsuaz",
+      "name": "UND-03 - Voss Ritual Chamber",
+      "navigation": true,
+      "sort": 0,
+      "active": false,
+      "background": "Maps/cabin-in-the-ashen-veil/und-03-voss-ritual-chamber-approved-v003.png",
+      "flags": {
+        "dicebox-campaign-helper": {
+          "stableId": "dbx:scene:a46610b2-48de-4cf5-a364-ddfc4ef1712d",
+          "localOperations": {
+            "owner": "local-playwright-native-operations-v1",
+            "worldId": "cabin-in-the-ashen-veil",
+            "operationId": "a46610b2-48de-4cf5-a364-ddfc4ef1712d",
+            "version": "1.0.0"
+          }
+        },
+        "fxmaster": {
+          "parameterRangeMigrationVersion": 1
+        }
+      }
+    }
+  ],
+  "hardcodedNameCandidates": [
+    {
+      "scene": "CAVEXT01Yard0001",
+      "region": "CAV01R0000000006",
+      "behavior": "CAVOARSBEHAV0001",
+      "disabled": false,
+      "name": "EXT-01 - Donovan Shack Wooden Oars (Player Move In)",
+      "hits": [
+        ".name !== 'tokenMoveIn'",
+        ".name!=='Wooden Oars'"
+      ]
+    },
+    {
+      "scene": "CAVEXT01Yard0001",
+      "region": "CAV01R0000000008",
+      "behavior": "3nhNHvdSWo9ix10a",
+      "disabled": false,
+      "name": "Carriage Key & Hook - Player Inspect / GM Gated Reward",
+      "hits": [
+        ".name==='Carriage Key'",
+        ".name!=='Ladder Hook'"
+      ]
+    },
+    {
+      "scene": "CAVEXT02Scene001",
+      "region": "CAVROWBOATREG001",
+      "behavior": "CAVMIRRORBEH0001",
+      "disabled": false,
+      "name": "EXT-02 - Retrieve Ornate Mirror (Oars Required)",
+      "hits": [
+        ".name==='Wooden Oars'",
+        ".name!=='Ornate Mirror'"
+      ]
+    },
+    {
+      "scene": "CAVEXT03Scene001",
+      "region": "CAVEXT03OILREG01",
+      "behavior": "CAVEXT03OILBEH01",
+      "disabled": false,
+      "name": "Donovan Worktable Lantern — Inspect and Once-only Lamp Oil",
+      "hits": [
+        ".name!=='Lamp Oil'"
+      ]
+    },
+    {
+      "scene": "xx1rWBiWMLxJPlrw",
+      "region": "CAVPRIVYRETRIEV1",
+      "behavior": "CAVPRIVYRETBH001",
+      "disabled": true,
+      "name": "LATE Copper — DISABLED until canonical Crimson Veil",
+      "hits": [
+        ".name==='behaviorUnviewed'",
+        ".name==='behaviorDeactivated'"
+      ]
+    },
+    {
+      "scene": "xx1rWBiWMLxJPlrw",
+      "region": "CAVPRIVYKEYMARK1",
+      "behavior": "CAVPRIVYKEYBH001",
+      "disabled": true,
+      "name": "LATE Copper — DISABLED until canonical Crimson Veil",
+      "hits": [
+        ".name==='behaviorUnviewed'",
+        ".name==='behaviorDeactivated'"
+      ]
+    },
+    {
+      "scene": "CAVEXT05Scene001",
+      "region": "CAVEXT05LANTERN1",
+      "behavior": "CAVLANTERNBEH001",
+      "disabled": false,
+      "name": "Chat B late lantern - GM guarded actions",
+      "hits": [
+        ".name===\"Silver Tiny Key\""
+      ]
+    },
+    {
+      "scene": "CAVEXT06Scene001",
+      "region": "CAVB6E433D528867",
+      "behavior": "CAVEXT06LYEMIX01",
+      "disabled": false,
+      "name": "Greenhouse — Lye-only mixer (GM guarded)",
+      "hits": [
+        ".name===\"behaviorViewed\"",
+        ".name!==\"Lye\"",
+        ".name!==\"Plant Killer\"",
+        ".name===\"Lye\""
+      ]
+    },
+    {
+      "scene": "G6NMonfCwMvNzipL",
+      "region": "CAVBABA9513F73A3",
+      "behavior": "CAVVTURNBEH00001",
+      "disabled": true,
+      "name": "Vault turn-joined-emblem — DORMANT original source review",
+      "hits": [
+        ".name!=='behaviorViewed'"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "region": "CAV06R0000000003",
+      "behavior": "CAVHG06STUDYG001",
+      "disabled": false,
+      "name": "Allen Study Original Brass Key Unlock",
+      "hits": [
+        ".name==='Brass Key'"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "region": "MrWgTyGg0d0DI53Q",
+      "behavior": "SAshGMH5A3AsJC0Y",
+      "disabled": false,
+      "name": "Grandfather Clock — Inspect and Vanity Brass Key Hour Hand",
+      "hits": [
+        ".name==='Brass Tiny Key #1'",
+        ".name!=='Grandfather Clock Hour Hand'"
+      ]
+    },
+    {
+      "scene": "CAVHG06GreatRoom",
+      "region": "ibN7AGsY4AlG582M",
+      "behavior": "CAV024CHESTBEH01",
+      "disabled": false,
+      "name": "First Chest - Enter Code 024",
+      "hits": [
+        ".name === 'behaviorViewed'",
+        ".name === 'tokenMoveIn'"
+      ]
+    },
+    {
+      "scene": "LhtyO17QenuCExsb",
+      "region": "CAVROOFCLOCKR001",
+      "behavior": "i6UNtWSFFaZgkdZD",
+      "disabled": false,
+      "name": "Roof Clock — Approved Handless Inspect + Hand Placement (No Player Grants)",
+      "hits": [
+        ".name==='Grandfather Clock Hour Hand'",
+        ".name==='Attic Clock Minute Hand'"
+      ]
+    },
+    {
+      "scene": "gGgUHlHdI7RFrbUh",
+      "region": "UV4YAstBe0WCuLcM",
+      "behavior": "CAVHU02SOPHGATE1",
+      "disabled": false,
+      "name": "Sophia Door — Unlock Only With Original Coat Iron Key",
+      "hits": [
+        ".name==='Old Iron Key'"
+      ]
+    },
+    {
+      "scene": "gGgUHlHdI7RFrbUh",
+      "region": "UOudBnxOGVlAlPoa",
+      "behavior": "8gISLbFWqUhxy9e8",
+      "disabled": false,
+      "name": "Attic Hatch — Inspect / Hook Lowers Ladder (GM Gated)",
+      "hits": [
+        ".name==='Ladder Hook'"
+      ]
+    },
+    {
+      "scene": "CAVHU04Scene0001",
+      "region": "CAVHU04COATREG01",
+      "behavior": "CAVHU04COATBEH01",
+      "disabled": false,
+      "name": "Parents Coat — Inspect and Original Iron Key",
+      "hits": [
+        ".name!=='Old Iron Key'"
+      ]
+    },
+    {
+      "scene": "CAVHU04Scene0001",
+      "region": "CAVHU04HOPECHST1",
+      "behavior": "CAVHOPECHSTBEH01",
+      "disabled": false,
+      "name": "Chat B late hope — GM guarded actions",
+      "hits": [
+        ".name===\"Silver Tiny Key\""
+      ]
+    },
+    {
+      "scene": "CAVHU04Scene0001",
+      "region": "CAVHU04HOPECHST1",
+      "behavior": "CAVPRAYERBOXBEH1",
+      "disabled": false,
+      "name": "Ornate Music Box — GM-guarded authentic Prayer recovery",
+      "hits": [
+        ".name==='Silver Tiny Key'",
+        ".name!=='Ornate Music Box'",
+        ".name!=='Prayer of Protection'",
+        ".name==='Prayer of Protection'"
+      ]
+    },
+    {
+      "scene": "CAVHU05Scene0001",
+      "region": "CAVB994894A7432F",
+      "behavior": "CAVGONDREWARD001",
+      "disabled": true,
+      "name": "Sophia in-room original Gond Half — DISABLED until authentic spine Veil",
+      "hits": [
+        ".name!=='Gond Emblem Half'",
+        ".name==='Gond Emblem Half'"
+      ]
+    },
+    {
+      "scene": "CAVHU07Scene0001",
+      "region": "CAVVANITYREG0001",
+      "behavior": "CAVVANITYBEH0001",
+      "disabled": false,
+      "name": "H-U07 - Dahlia Vanity: Mirror reveals two keys",
+      "hits": [
+        ".name==='Ornate Mirror'",
+        ".name!=='Brass Tiny Key #1'",
+        ".name!=='Carriage Key'"
+      ]
+    },
+    {
+      "scene": "CAVHU07Scene0001",
+      "region": "CAVSUNEACTION001",
+      "behavior": "CAVSUNEPRAYBEH01",
+      "disabled": true,
+      "name": "Sune shrine reading — DISABLED until native original prayer authority",
+      "hits": [
+        ".name!=='behaviorViewed'"
+      ]
+    },
+    {
+      "scene": "CAVHU08Scene0001",
+      "region": "CAVBE5639AEC2179",
+      "behavior": "CAVWICKSHELFBEH1",
+      "disabled": false,
+      "name": "Chat B late wick - GM guarded actions",
+      "hits": [
+        ".name===\"Silver Tiny Key\""
+      ]
+    },
+    {
+      "scene": "CAVSG01Scene0001",
+      "region": "gksvZIqj8jWdqzn7",
+      "behavior": "7nHv3rf66mG8PJJS",
+      "disabled": false,
+      "name": "Sune NW Bust — Player Close-up (inspection only)",
+      "hits": [
+        ".name==='Clockwork Winder'"
+      ]
+    },
+    {
+      "scene": "CAVSG03Scene0001",
+      "region": "BfKhb34dSEfVTf2e",
+      "behavior": "3x5OYcE0I0Kw2hiq",
+      "disabled": false,
+      "name": "Sune NE Bust — Player Close-up (inspection only)",
+      "hits": [
+        ".name==='Clockwork Winder'"
+      ]
+    },
+    {
+      "scene": "CAVSG07Scene0001",
+      "region": "0JAM9urrHnAxVUgM",
+      "behavior": "ImB4fPSpWYyMKY48",
+      "disabled": false,
+      "name": "Sune SW Bust — Player Close-up (inspection only)",
+      "hits": [
+        ".name==='Clockwork Winder'"
+      ]
+    },
+    {
+      "scene": "CAVSG09Scene0001",
+      "region": "BrugKqcQyDImUvwt",
+      "behavior": "A239wwKq1MEIcI2w",
+      "disabled": false,
+      "name": "Sune SE Bust — Player Close-up (inspection only)",
+      "hits": [
+        ".name==='Clockwork Winder'"
+      ]
+    }
+  ],
+  "actorCount": 7,
+  "currentUsers": [
+    {
+      "name": "Gamemaster 1",
+      "isGM": true,
+      "active": true,
+      "viewedScene": "CAVEXT01Yard0001"
+    },
+    {
+      "name": "Gamemaster 2",
+      "isGM": true,
+      "active": false,
+      "viewedScene": null
+    },
+    {
+      "name": "August",
+      "isGM": false,
+      "active": false,
+      "viewedScene": null
+    },
+    {
+      "name": "Bentis",
+      "isGM": false,
+      "active": false,
+      "viewedScene": null
+    },
+    {
+      "name": "Dyscid",
+      "isGM": false,
+      "active": true,
+      "viewedScene": "CAVEXT01Yard0001"
+    },
+    {
+      "name": "Eli",
+      "isGM": false,
+      "active": false,
+      "viewedScene": null
+    },
+    {
+      "name": "Excaliber",
+      "isGM": false,
+      "active": false,
+      "viewedScene": null
+    },
+    {
+      "name": "Menapawz.",
+      "isGM": false,
+      "active": false,
+      "viewedScene": null
+    }
+  ],
+  "settingWorldLanguage": "en"
+}

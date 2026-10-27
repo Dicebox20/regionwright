@@ -1,0 +1,129 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "scenesCorrect": 47,
+  "sceneCount": 47,
+  "mismatch": [],
+  "liveActivationChanges": [],
+  "restoredWriteSettings": {
+    "puzzleWrites": false,
+    "regionWrites": false
+  },
+  "sophia": {
+    "sceneName": "F2 — Small Bedroom",
+    "regionName": "Sophia's Bookcase — Six Storybooks",
+    "regionUuid": "Scene.CAVHU05Scene0001.Region.CAVB994894A7432F",
+    "originalCloseupEnabled": true,
+    "spinePuzzleConfigured": true,
+    "originalRegionwrightBehaviorId": "dxrQM6HJPGqfAh5t",
+    "originalRegionwrightBehaviorDisabled": true,
+    "fullSixStorybooks": 6,
+    "liveModuleArtSupport": false,
+    "originalArtworkAssetPathsInStage": [
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/the-knight-who-befriended-a-dragon.png",
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/moonlight-and-the-missing-stars.png",
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/felix-fox-and-the-forgotten-kingdom.png",
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/whispers-of-the-little-witch.png",
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/the-clockmakers-starless-sky.png",
+      "worlds/cabin-in-the-ashen-veil/assets/book-spine-mosaic-v001/princess-penelope-and-the-sea-of-stars.png"
+    ],
+    "originalRewardDisabled": true,
+    "originalGondTileHidden": true,
+    "sourceLocked": "locked",
+    "noFakeClaims": true,
+    "zeroActorBookCopies": true,
+    "zeroActorGond": true
+  },
+  "sampleNames": [
+    {
+      "id": "G6NMonfCwMvNzipL",
+      "name": "Basement — Workroom",
+      "same": true
+    },
+    {
+      "id": "tjTpG2RVZNoCqRLh",
+      "name": "Basement — Inner Room",
+      "same": true
+    },
+    {
+      "id": "ThVGl68hUmiOhWEA",
+      "name": "Basement — Supply Closet",
+      "same": true
+    },
+    {
+      "id": "CAVHG01Scene0001",
+      "name": "F1 — Dining Room",
+      "same": true
+    },
+    {
+      "id": "CAVHG02Scene0001",
+      "name": "F1 — Entrance Hall",
+      "same": true
+    },
+    {
+      "id": "CAVHG03Scene0001",
+      "name": "F1 — Kitchen",
+      "same": true
+    },
+    {
+      "id": "CAVHG04Scene0001",
+      "name": "F1 — Pantry",
+      "same": true
+    },
+    {
+      "id": "CAVHG05Scene0001",
+      "name": "F1 — Study",
+      "same": true
+    },
+    {
+      "id": "CAVHG06GreatRoom",
+      "name": "F1 — Great Room",
+      "same": true
+    },
+    {
+      "id": "CAVHG09Scene0001",
+      "name": "F1 — Family Room",
+      "same": true
+    },
+    {
+      "id": "CAVHU01Scene0001",
+      "name": "F2 — Nursery",
+      "same": true
+    },
+    {
+      "id": "gGgUHlHdI7RFrbUh",
+      "name": "F2 — Upper Landing",
+      "same": true
+    },
+    {
+      "id": "CAVHU03Scene0001",
+      "name": "F2 — Guest Room",
+      "same": true
+    },
+    {
+      "id": "CAVHU04Scene0001",
+      "name": "F2 — Main Bedroom",
+      "same": true
+    },
+    {
+      "id": "CAVHU05Scene0001",
+      "name": "F2 — Small Bedroom",
+      "same": true
+    },
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "F2 — Art Studio",
+      "same": true
+    }
+  ],
+  "historicalOldMacroTitleReferences": 2,
+  "concurrentRegionAdditionObserved": {
+    "sceneId": "CAVEXT03Scene001",
+    "oldRegionCount": 5,
+    "newRegionCount": 6,
+    "originUnknown": true,
+    "notPartOfThisNameOnlyInstall": true
+  },
+  "playerPlaytested": false
+}
