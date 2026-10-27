@@ -1,0 +1,47 @@
+{
+  "schema": "dicebox.cav.oars-shack-approved-migration-payload/v1",
+  "world": "cabin-in-the-ashen-veil",
+  "approved": "Owner explicitly approved moving original Oars pickup Behavior to Shack Interior Region and deleting original Behavior, updating Rowboat, preserving Skaal Tel authentic claim",
+  "from": {
+    "scene": "CAVEXT01Yard0001",
+    "region": "CAV01R0000000006",
+    "behavior": "CAVOARSBEHAV0001",
+    "oldSourceSha": "fdfe8b39afa1fb4bf77416b05fefc11aae8936eef9436a1a593e96fbc17888e2"
+  },
+  "to": {
+    "scene": "CAVEXT03Scene001",
+    "region": "TWKOyz83JjJu94E7",
+    "behavior": "CAVOARSBEHAV0001",
+    "newSourceSha": "70c3a180a15e83aa0c5fd0b19dc8245d1d28ec6cdfd2a46f0841619659f3367e"
+  },
+  "rowboat": {
+    "scene": "CAVEXT02Scene001",
+    "region": "CAVROWBOATREG001",
+    "behavior": "CAVMIRRORBEH0001",
+    "oldSourceSha": "e310f3684eb4299cd4cc9171c0d4098e5a5c87548505f5edeac252eaac65ad09",
+    "newSourceSha": "44739c30f0dc05062a5dc501175157becfa3d0baaffca1f38ca66ad94e985242"
+  },
+  "claimCarryForward": {
+    "status": "done",
+    "actorId": "xO3hc9r0vR6CqU1W",
+    "tokenId": "0JLHTOSjGOHEoagB",
+    "sourceUuid": "Item.CAVOARSPOND00001",
+    "itemId": "Ggb9lJYYtaXsZS8e",
+    "migratedFromRegionUuid": "Scene.CAVEXT01Yard0001.Region.CAV01R0000000006",
+    "migrationStatus": "AUTHENTIC_DONE_CLAIM_PRESERVED",
+    "migrationReason": "Owner-directed Oars placement correction 2026-10-27"
+  },
+  "originalActorItem": {
+    "actorId": "xO3hc9r0vR6CqU1W",
+    "itemId": "Ggb9lJYYtaXsZS8e",
+    "sourceFlag": "Item.CAVOARSPOND00001",
+    "regionFlag": "Scene.CAVEXT01Yard0001.Region.CAV01R0000000006"
+  },
+  "newOarsSource": "// CAV opening pickup, v001. Native Foundry 14 Region ExecuteScript.\n// A player-controlled character physically moves into the Shack Interior Oars Region.\n// GM-authoritative world/Actor document writes; no GM clicks, macros or external sockets.\nif (event?.name !== 'tokenMoveIn') return;\nif (game.world?.id !== 'cabin-in-the-ashen-veil' || game.version !== '14.367') return;\nif (!game.user?.isGM || game.users.activeGM?.id !== game.user.id) return;\nconst SCENE='CAVEXT03Scene001';\nconst REGION='TWKOyz83JjJu94E7';\nconst ITEM_ID='CAVOARSPOND00001';\nconst SCOPE='dicebox-campaign-helper';\nconst STATE_KEY='cavOarsPickup';\nif (scene?.id !== SCENE || region?.id !== REGION) return;\nconst candidate=event.data?.token?.document ?? event.data?.token;\nconst token=scene.tokens.get(candidate?.id ?? event.data?.tokenId);\nif (!token || token.hidden || token.actorId == null) return;\nconst actor=token.actor;\nif (!actor || actor.type!=='character') return;\nconst moverId=event.userId ?? event.data?.userId ?? null;\nconst owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));\nconst player=moverId ? owners.find(u=>u.id===moverId) : owners.length===1 ? owners[0] : null;\nif (!player) return;\nconst source=game.items.get(ITEM_ID);\nif (!source || source.uuid!==`Item.${ITEM_ID}` || source.name!=='Wooden Oars') return;\nconst claim=region.getFlag(SCOPE,STATE_KEY);\nif (claim?.status==='done' || claim?.status==='reserved') return;\n// Global source-Item uniqueness also protects the completed historic Yard pickup.\nconst hasReward=game.actors.contents.some(a=>a.items.contents.some(i=>\n  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===source.uuid));\nif (hasReward) return; // missing ledger: stop, never blindly duplicate\nconst busy=globalThis.__CAV_EARLY_OARS_PENDING__ ?? (globalThis.__CAV_EARLY_OARS_PENDING__ = new Set());\nif (busy.has(REGION)) return;\nbusy.add(REGION);\ntry {\n  await region.setFlag(SCOPE, STATE_KEY, {status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid});\n  const reward=source.toObject();delete reward._id;\n  reward.flags={...reward.flags,[SCOPE]:{\n    ...reward.flags?.[SCOPE],cavPickupSourceUuid:source.uuid,cavPickupRegionUuid:region.uuid,\n    cavFirstActPickup:'donovans_shack_freely_available'}};\n  const created=await actor.createEmbeddedDocuments('Item',[reward]);\n  if (created.length!==1) throw Error('Expected exactly one Oars Item');\n  await region.setFlag(SCOPE,STATE_KEY,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid,itemId:created[0].id});\n  await ChatMessage.create({speaker:{alias:'Donovan’s Shack'},\n    content:'<p>Two worn wooden oars rest against the timber wall of the shack. They are heavy, damp, and surprisingly sound.</p>',\n    whisper:[player.id]});\n} catch(err) {\n  console.error('[CAV Early Oars] Reward outcome requires inspection; reserved claim retained.',err);\n} finally {busy.delete(REGION)}",
+  "newRowboatSource": "// CAV pond mirror pickup, v001. Native Foundry 14 Region ExecuteScript.\r\n// A player-controlled character moves to the approved pond rowboat at the dock.\r\n// GM-authoritative world/Actor document writes; no GM clicks, macros or external sockets.\r\nif (!['tokenMoveIn','tokenMoveWithin'].includes(event?.name)) return;\r\nif (game.world?.id !== 'cabin-in-the-ashen-veil' || game.version !== '14.367') return;\r\nif (!game.user?.isGM || game.users.activeGM?.id !== game.user.id) return;\r\nconst SCENE='CAVEXT02Scene001';\r\nconst REGION='CAVROWBOATREG001';\r\nconst ITEM_ID='CAVMIRRORSUNK001';\r\nconst SCOPE='dicebox-campaign-helper';\r\nconst STATE_KEY='cavPondMirrorPickup';\r\nif (scene?.id !== SCENE || region?.id !== REGION) return;\r\nconst candidate=event.data?.token?.document ?? event.data?.token;\r\nconst token=scene.tokens.get(candidate?.id ?? event.data?.tokenId);\r\nif (!token || token.hidden || token.actorId == null) return;\r\nconst actor=token.actor;\r\nif (!actor || actor.type!=='character') return;\r\nconst moverId=event.userId ?? event.data?.userId ?? null;\r\nconst owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));\r\nconst player=moverId ? owners.find(u=>u.id===moverId) : owners.length===1 ? owners[0] : null;\r\nif (!player) return;\r\n// Require the authenticated DONE Shack Oars pickup. Preserve verified, pre-migration Yard item provenance.\nconst oarsRegion=game.scenes.get('CAVEXT03Scene001')?.regions.get('TWKOyz83JjJu94E7');\nconst oarsClaim=oarsRegion?.getFlag(SCOPE,'cavOarsPickup');\nconst historicRegion=game.scenes.get('CAVEXT01Yard0001')?.regions.get('CAV01R0000000006');\nconst historicClaim=historicRegion?.getFlag(SCOPE,'cavOarsPickup');\nconst migratedLegacy=oarsClaim?.migratedFromRegionUuid===historicRegion?.uuid&&\n historicClaim?.status==='done'&&historicClaim.actorId===oarsClaim?.actorId&&\n historicClaim.itemId===oarsClaim?.itemId&&historicClaim.sourceUuid===oarsClaim?.sourceUuid;\nconst ownsOars=oarsRegion?.uuid==='Scene.CAVEXT03Scene001.Region.TWKOyz83JjJu94E7'&&\n oarsClaim?.status==='done'&&oarsClaim.actorId===actor.id&&\n oarsClaim.sourceUuid==='Item.CAVOARSPOND00001'&&typeof oarsClaim.itemId==='string'&&\n actor.items.contents.filter(i=>i.id===oarsClaim.itemId&&i.name==='Wooden Oars'&&\n  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===oarsClaim.sourceUuid&&\n  (i.getFlag?.(SCOPE,'cavPickupRegionUuid')===oarsRegion.uuid||\n   (migratedLegacy&&i.getFlag?.(SCOPE,'cavPickupRegionUuid')===historicRegion.uuid))).length===1;\nif (!ownsOars) return;\r\nconst source=game.items.get(ITEM_ID);\r\nif (!source || source.uuid!==`Item.${ITEM_ID}` || source.name!=='Ornate Mirror') return;\r\nconst claim=region.getFlag(SCOPE,STATE_KEY);\r\nif (claim?.status==='done' || claim?.status==='reserved') return;\r\nconst hasReward=game.actors.contents.some(a=>a.items.contents.some(i=>\r\n  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===source.uuid &&\r\n  i.getFlag?.(SCOPE,'cavPickupRegionUuid')===region.uuid));\r\nif (hasReward) return; // missing ledger: stop, never blindly duplicate\r\nconst busy=globalThis.__CAV_EARLY_MIRROR_PENDING__ ?? (globalThis.__CAV_EARLY_MIRROR_PENDING__ = new Set());\r\nif (busy.has(REGION)) return;\r\nbusy.add(REGION);\r\ntry {\r\n  await region.setFlag(SCOPE, STATE_KEY, {status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid});\r\n  const reward=source.toObject();delete reward._id;\r\n  reward.flags={...reward.flags,[SCOPE]:{\r\n    ...reward.flags?.[SCOPE],cavPickupSourceUuid:source.uuid,cavPickupRegionUuid:region.uuid,\r\n    cavFirstActPickup:'pond_full_sunken_rowboat_retrieval'}};\r\n  const created=await actor.createEmbeddedDocuments('Item',[reward]);\r\n  if (created.length!==1) throw Error('Expected exactly one Oars Item');\r\n  await region.setFlag(SCOPE,STATE_KEY,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid,itemId:created[0].id});\r\n  await ChatMessage.create({speaker:{alias:'The Old Rowboat'},\r\n    content:'<p>With the wooden oars, you reach an older rowboat beneath the water and retrieve an ornate mirror from the wreck.</p>',\r\n    whisper:[player.id]});\r\n} catch(err) {\r\n  console.error('[CAV Pond Mirror] Reward outcome requires inspection; reserved claim retained.',err);\r\n} finally {busy.delete(REGION)}",
+  "originalSnapshotPath": "utility-harness/artifacts/cav-owner-oars-shack-migration-original-live-preflight-20261027.json",
+  "sourceChanges": {
+    "oarsSourceMechanics": "New location constants; global source Item duplicate guard; wording updated",
+    "rowboatProof": "Requires authentic new Shack DONE plus original matching item; allows original historic Yard item provenance only when original DONE claim matches exact ID and actor"
+  }
+}
