@@ -1,0 +1,110 @@
+{
+  "pass": true,
+  "world": "cabin-in-the-ashen-veil",
+  "gm": "Gamemaster 1",
+  "regionCounts": {
+    "workshopRegionCount": 8,
+    "vaultRegionCount": 3,
+    "workshopArt": "Maps/cabin-in-the-ashen-veil/h-b01-allens-basement-workshop-approved-v002.png",
+    "vaultArt": "Maps/cabin-in-the-ashen-veil/h-b02-secured-keystone-vault-approved-v003.png"
+  },
+  "currentOriginals": {
+    "stair": true,
+    "foyerReturn": true,
+    "vaultEntry": true,
+    "keystoneDais": true,
+    "chasesDeferred": true
+  },
+  "actorQuestCopies": 0,
+  "disabledNativeBehaviors": 6,
+  "rows": [
+    {
+      "kind": "charged-source",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTPOWER001",
+      "behaviorId": "CAVVPOWERBEH0001",
+      "disabled": true,
+      "sourceSHA256": "c0d9759fd8c181ad6b1edd78c7d1fb1adcff677a4252e24d417836c102c6c660",
+      "destinations": null,
+      "verified": true
+    },
+    {
+      "kind": "gond-half",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTGOND0001",
+      "behaviorId": "CAVVGONDBEH00001",
+      "disabled": true,
+      "sourceSHA256": "0fbd0691a4cceab3f1a022f70cbacc9eb7cfa4354ef8b756a2735278ecbc408a",
+      "destinations": null,
+      "verified": true
+    },
+    {
+      "kind": "sune-half",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTSUNE0001",
+      "behaviorId": "CAVVSUNEBEH00001",
+      "disabled": true,
+      "sourceSHA256": "5a75b6edfaa899a844be6dfe8614dc8392791ac72d6982bc3f8a16feaba2fa2e",
+      "destinations": null,
+      "verified": true
+    },
+    {
+      "kind": "turn-joined-emblem",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVBABA9513F73A3",
+      "behaviorId": "CAVVTURNBEH00001",
+      "disabled": true,
+      "sourceSHA256": "01a068e1861063d50ffe37fa5d861836105d136f565162d7ede3fb2318a2d7cc",
+      "destinations": null,
+      "verified": true
+    },
+    {
+      "kind": "workshop-to-vault-sealed",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTDOOR0001",
+      "behaviorId": "CAVVOUTTEL000001",
+      "disabled": true,
+      "sourceSHA256": null,
+      "destinations": [
+        "Scene.tjTpG2RVZNoCqRLh.Region.CAVB1F6B8321128A"
+      ],
+      "verified": true
+    },
+    {
+      "kind": "return-landing-workshop",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTLAND0001",
+      "disabled": null,
+      "sourceSHA256": null,
+      "destinations": null,
+      "verified": true
+    },
+    {
+      "kind": "vault-to-workshop-return",
+      "uuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVVAULTBACK0001",
+      "behaviorId": "CAVVBACKTEL00001",
+      "disabled": true,
+      "sourceSHA256": null,
+      "destinations": [
+        "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTLAND0001"
+      ],
+      "verified": true
+    }
+  ],
+  "items": [
+    {
+      "uuid": "Item.pbmUZPfC3WnsBRgi",
+      "name": "Uncharged Gondian Power Source",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.o9G3UJjEe2QX1ZH0",
+      "name": "Gond Emblem Half",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.t9uCIpsKeSvtC31w",
+      "name": "Sune Emblem Half",
+      "status": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.CAVKEYSTONEITEM1",
+      "name": "Keystone",
+      "status": "GM_LIBRARY_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "status": "vault-workshop-three-physical-sockets-joined-turn-and-two-way-sealed-native-installed",
+  "preview": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "originalWorkshop": "Scene.G6NMonfCwMvNzipL",
+    "originalVault": "Scene.tjTpG2RVZNoCqRLh",
+    "sourceItems": [
+      {
+        "kind": "charged-source",
+        "uuid": "Item.pbmUZPfC3WnsBRgi",
+        "status": "GM_LIBRARY_ONLY"
+      },
+      {
+        "kind": "gond-half",
+        "uuid": "Item.o9G3UJjEe2QX1ZH0",
+        "status": "GM_LIBRARY_ONLY"
+      },
+      {
+        "kind": "sune-half",
+        "uuid": "Item.t9uCIpsKeSvtC31w",
+        "status": "GM_LIBRARY_ONLY"
+      }
+    ],
+    "originalKeystoneReward": "Item.CAVKEYSTONEITEM1",
+    "workshopOldRegionCount": 3,
+    "vaultOldRegionCount": 2,
+    "oldBench": "Scene.G6NMonfCwMvNzipL.Region.CAVBABA9513F73A3",
+    "oldFoyerReturnActive": true,
+    "originalVaultPlinthDisabled": true,
+    "intendedNewRegions": 6,
+    "intendedDisabledBehaviors": 6,
+    "noStoryFlagWriters": true,
+    "noActorItemClones": true,
+    "plan": [
+      {
+        "kind": "charged-source",
+        "id": "CAVVAULTPOWER001",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 610,
+          "y": 365,
+          "width": 130,
+          "height": 125
+        },
+        "behaviorId": "CAVVPOWERBEH0001",
+        "disabled": true,
+        "destinations": []
+      },
+      {
+        "kind": "gond-half",
+        "id": "CAVVAULTGOND0001",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 1020,
+          "y": 358,
+          "width": 125,
+          "height": 132
+        },
+        "behaviorId": "CAVVGONDBEH00001",
+        "disabled": true,
+        "destinations": []
+      },
+      {
+        "kind": "sune-half",
+        "id": "CAVVAULTSUNE0001",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 890,
+          "y": 515,
+          "width": 130,
+          "height": 98
+        },
+        "behaviorId": "CAVVSUNEBEH00001",
+        "disabled": true,
+        "destinations": []
+      },
+      {
+        "kind": "turn-joined-emblem",
+        "id": "CAVBABA9513F73A3",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 770,
+          "y": 315,
+          "width": 220,
+          "height": 185
+        },
+        "behaviorId": "CAVVTURNBEH00001",
+        "disabled": true,
+        "destinations": []
+      },
+      {
+        "kind": "workshop-to-vault-sealed",
+        "id": "CAVVAULTDOOR0001",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 1325,
+          "y": 535,
+          "width": 150,
+          "height": 165
+        },
+        "behaviorId": "CAVVOUTTEL000001",
+        "disabled": true,
+        "destinations": [
+          "Scene.tjTpG2RVZNoCqRLh.Region.CAVB1F6B8321128A"
+        ]
+      },
+      {
+        "kind": "return-landing-workshop",
+        "id": "CAVVAULTLAND0001",
+        "scene": "G6NMonfCwMvNzipL",
+        "rect": {
+          "x": 1095,
+          "y": 730,
+          "width": 150,
+          "height": 130
+        },
+        "behaviorId": null,
+        "disabled": null,
+        "destinations": []
+      },
+      {
+        "kind": "vault-to-workshop-return",
+        "id": "CAVVAULTBACK0001",
+        "scene": "tjTpG2RVZNoCqRLh",
+        "rect": {
+          "x": 50,
+          "y": 397,
+          "width": 118,
+          "height": 148
+        },
+        "behaviorId": "CAVVBACKTEL00001",
+        "disabled": true,
+        "destinations": [
+          "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTLAND0001"
+        ]
+      }
+    ]
+  },
+  "created": [
+    {
+      "kind": "return-landing-workshop",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTLAND0001",
+      "behavior": null,
+      "disabled": null
+    },
+    {
+      "kind": "charged-source",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTPOWER001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTPOWER001.RegionBehavior.CAVVPOWERBEH0001",
+      "disabled": true
+    },
+    {
+      "kind": "gond-half",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTGOND0001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTGOND0001.RegionBehavior.CAVVGONDBEH00001",
+      "disabled": true
+    },
+    {
+      "kind": "sune-half",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTSUNE0001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTSUNE0001.RegionBehavior.CAVVSUNEBEH00001",
+      "disabled": true
+    },
+    {
+      "kind": "workshop-to-vault-sealed",
+      "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTDOOR0001",
+      "behavior": "Scene.G6NMonfCwMvNzipL.Region.CAVVAULTDOOR0001.RegionBehavior.CAVVOUTTEL000001",
+      "disabled": true
+    },
+    {
+      "kind": "vault-to-workshop-return",
+      "uuid": "Scene.tjTpG2RVZNoCqRLh.Region.CAVVAULTBACK0001",
+      "behavior": "Scene.tjTpG2RVZNoCqRLh.Region.CAVVAULTBACK0001.RegionBehavior.CAVVBACKTEL00001",
+      "disabled": true
+    }
+  ],
+  "originalBenchTurn": {
+    "uuid": "Scene.G6NMonfCwMvNzipL.Region.CAVBABA9513F73A3.RegionBehavior.CAVVTURNBEH00001",
+    "disabled": true
+  },
+  "workshopNewRegionCount": 8,
+  "vaultNewRegionCount": 3,
+  "allNativeBehaviorsDisabled": true,
+  "noItemsGranted": true,
+  "noDoorOpened": true
+}
