@@ -2,6 +2,7 @@ import { ascendancyAPI, installAscendancySocket } from "./ascendancy.js";
 import { installCabinSuneWinderService } from "./studio-cav-sune.js";
 import { installCabinSuneReliefService, handleCabinSuneReliefRegionEvent } from "./studio-cav-sune-relief.js";
 import { installCabin587GMService } from "./studio-cav-587.js";
+import { installCabinFreePickupClickGMService } from "./studio-cav-free-pickup-click.js";
 import { installCabinSluiceCrankGMService, handleCabinSluiceRegionEvent } from "./studio-cav-sluice.js";
 import { installCabinSluiceWaterService } from "./studio-cav-water-controller.js";
 import {describeCavCrankReconciliationGM} from "./studio-cav-crank-reconciliation.js";
@@ -35,6 +36,7 @@ export function installStudioCampaign(api) {
   installCabinSuneWinderService();
   installCabinSuneReliefService();
   installCabin587GMService();
+  installCabinFreePickupClickGMService();
   installCabinSluiceCrankGMService();
   installCabinSluiceWaterService();
   installCabinDrainedPickupsGMService();
