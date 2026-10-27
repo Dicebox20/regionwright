@@ -1,0 +1,53 @@
+{
+    "guestReturn":  "dMdq36QOZUhvttza",
+    "nativeInstall":  "PASS",
+    "failedTests":  0,
+    "guestReturnRect":  [
+                            850,
+                            550,
+                            220,
+                            200
+                        ],
+    "nurseryReturnRect":  [
+                              360,
+                              560,
+                              220,
+                              200
+                          ],
+    "playerAcceptance":  false,
+    "nurseryRegion":  "aZ8eagmbvZUcPJ0g",
+    "reusedOriginalPortals":  true,
+    "ownerDelegatedCreativeDecision":  true,
+    "datePacific":  "2026-10-27",
+    "visualInspection":  "real V006 WEST and EAST wooden side-wall doors",
+    "nurseryReturn":  "GOxaHb5OuQwPj6IC",
+    "fullSourceTests":  268,
+    "nativeReceipt":  "utility-harness/artifacts/cav-chat-a-hu02-v006-side-nursery-guest-four-region-guarded-native-install-20261027.json",
+    "allOriginalTokenPositionsUnchanged":  true,
+    "oldOutOfBounds":  2,
+    "readbackReceipt":  "utility-harness/artifacts/cav-chat-a-hu02-v006-nursery-guest-independent-gm-postread-20261027.json",
+    "guestRect":  [
+                      1110,
+                      535,
+                      235,
+                      205
+                  ],
+    "scene":  "gGgUHlHdI7RFrbUh",
+    "sceneRegions":  14,
+    "sourceBefore":  "8f2cac8cea2c20305bc99472f6b644186761d4d4",
+    "nurseryRect":  [
+                        80,
+                        530,
+                        230,
+                        210
+                    ],
+    "guestRegion":  "M2fZhuvFmw1yZQS9",
+    "globalRegions":  250,
+    "globalBehaviors":  140,
+    "wallsOnH_U02":  0,
+    "newOutOfBounds":  0,
+    "schema":  "dicebox.cav.hu02-side-doors-v1",
+    "testFiles":  50,
+    "newSourceTests":  3,
+    "independentReadback":  "PASS"
+}
