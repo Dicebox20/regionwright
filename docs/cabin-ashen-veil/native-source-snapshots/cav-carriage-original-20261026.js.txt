@@ -1,0 +1,90 @@
+// CAV EXT-01 Family Carriage | Source v001 | Native Foundry RegionBehavior executeScript.
+// Viewer only on non-GM pointer click; GM-authoritative reward on owned-character token entry.
+// Don't alter this script to bypass the Vanity key provenance. Exactly one physical Ladder Hook.
+const SCENE_ID='CAVEXT01Yard0001', REGION_ID='CAV01R0000000008';
+const SCOPE='dicebox-campaign-helper', LEDGER='cavFamilyCarriageHookClaim';
+const ITEM_KEY='Item.CAVCARRIAGEKEY01', ITEM_HOOK='Item.CAVLADDERHOOK001';
+const VANITY='Scene.CAVHU07Scene0001.Region.CAVVANITYREG0001';
+const ART='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/family-carriage-approved-map-closeup-v001.png';
+const POINTER='__CAV_EXT01_CARRIAGE_POINTER_V001__';
+const EVENT=event?.name;
+if (game.world?.id!=='cabin-in-the-ashen-veil' || game.version!=='14.367' ||
+    scene?.id!==SCENE_ID || region?.id!==REGION_ID) return;
+const existing=globalThis[POINTER];
+if (['behaviorUnviewed','behaviorDeactivated'].includes(EVENT)) {
+  if (existing?.handler && canvas?.stage) canvas.stage.off('pointertap',existing.handler);
+  delete globalThis[POINTER];
+  return;
+}
+if (EVENT==='behaviorViewed' && !game.user.isGM) {
+  if (existing?.handler && canvas?.stage) canvas.stage.off('pointertap',existing.handler);
+  const viewer=async(pointer)=>{
+    if (!canvas.ready || canvas.scene?.id!==SCENE_ID || !game.user || game.user.isGM) return;
+    if (pointer.button!==undefined && pointer.button!==0) return;
+    const pos=canvas.stage.toLocal(pointer.global);
+    if (!region.testPoint({x:pos.x,y:pos.y,elevation:0})) return;
+    if (globalThis.__CAV_CARRIAGE_DIALOG_BUSY_V001__) return;
+    const state=region.getFlag(SCOPE,LEDGER);
+    const opened=state?.status==='done';
+    const info=opened
+      ? 'The carriage stands open. The old iron hook has been recovered.'
+      : 'The family carriage sits beneath its rotten canopy. A substantial iron lock holds the door shut. The keyhole is shaped for a long, old-fashioned key. Bring the character holding the carriage key up to the door to open it.';
+    globalThis.__CAV_CARRIAGE_DIALOG_BUSY_V001__=true;
+    try {
+      await foundry.applications.api.DialogV2.prompt({
+        window:{title:'The Family Carriage'},
+        content:'<figure style="max-width:700px;margin:0 auto;text-align:center">' +
+          '<img src="'+ART+'" alt="Old wooden family carriage at the cabin yard" style="display:block;width:100%;height:auto;border:1px solid #79634d;border-radius:4px" />' +
+          '<figcaption style="font-style:italic;margin:0.5rem">'+info+'</figcaption></figure>',
+        ok:{label:'Close',callback:()=>true},rejectClose:false
+      });
+    } finally {globalThis.__CAV_CARRIAGE_DIALOG_BUSY_V001__=false;}
+  };
+  if (canvas?.stage) {
+    canvas.stage.on('pointertap',viewer);
+    globalThis[POINTER]={handler:viewer,sceneId:SCENE_ID,regionId:REGION_ID};
+  }
+  return;
+}
+if (!['tokenMoveIn','tokenMoveWithin'].includes(EVENT)) return;
+if (!game.ready || !game.user?.isGM || game.users.activeGM?.id!==game.user.id) return;
+const candidate=event.data?.token?.document??event.data?.token;
+const token=scene.tokens.get(candidate?.id??event.data?.tokenId);
+if (!token || token.hidden || !token.actorId || !token.actor) return;
+const actor=token.actor;
+if (actor.type!=='character') return;
+const owners=game.users.contents.filter(u=>u.active&&!u.isGM&&actor.testUserPermission(u,'OWNER'));
+const requesterId=event.userId??event.data?.userId??null;
+const player=requesterId?owners.find(u=>u.id===requesterId):(owners.length===1?owners[0]:null);
+if (!player) return;
+const keyPresent=actor.items.contents.some(i=>i.getFlag?.(SCOPE,'cavVanityRewardSourceUuid')===ITEM_KEY &&
+  i.getFlag?.(SCOPE,'cavVanityRewardRegionUuid')===VANITY && i.name==='Carriage Key');
+if (!keyPresent) return;
+const source=game.items.get('CAVLADDERHOOK001');
+if (!source || source.uuid!==ITEM_HOOK || source.name!=='Ladder Hook') return;
+const claim=region.getFlag(SCOPE,LEDGER);
+if (claim?.status==='reserved'||claim?.status==='done') return;
+const already=game.actors.contents.some(a=>a.items.contents.some(i=>
+  i.getFlag?.(SCOPE,'cavCarriageRewardSourceUuid')===ITEM_HOOK &&
+  i.getFlag?.(SCOPE,'cavCarriageRewardRegionUuid')===region.uuid));
+if (already) return;
+const pending=globalThis.__CAV_CARRIAGE_REWARD_PENDING__??(globalThis.__CAV_CARRIAGE_REWARD_PENDING__=new Set());
+if (pending.has(REGION_ID)) return;
+pending.add(REGION_ID);
+try {
+  await region.setFlag(SCOPE,LEDGER,{status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:ITEM_HOOK,prerequisiteUuid:ITEM_KEY});
+  const reward=source.toObject();delete reward._id;
+  reward.flags={...reward.flags,[SCOPE]:{
+    ...reward.flags?.[SCOPE],cavCarriageRewardSourceUuid:ITEM_HOOK,
+    cavCarriageRewardRegionUuid:region.uuid,cavFirstActReward:'family_carriage_after_carriage_key'
+  }};
+  const created=await actor.createEmbeddedDocuments('Item',[reward]);
+  if (created.length!==1) throw Error('Unexpected item grant count. Reserved claim retained.');
+  await region.setFlag(SCOPE,LEDGER,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:ITEM_HOOK,embeddedItemId:created[0].id});
+  try {
+    await ChatMessage.create({speaker:{alias:'The Family Carriage'},
+      content:'<p>The old carriage key turns stiffly in the lock. Inside, among dust and broken upholstery, you discover a long iron ladder hook with a curved tip.</p>',
+      whisper:[player.id]});
+  } catch(chatErr) {console.warn('[CAV Carriage] Hook granted; private message failed.',chatErr);}
+} catch(err) {console.error('[CAV Carriage] Reward outcome uncertain. Reserved ledger retained for reconciliation.',err);}
+finally {pending.delete(REGION_ID);}

@@ -1,0 +1,50 @@
+// CAV pond mirror pickup, v001. Native Foundry 14 Region ExecuteScript.
+// A player-controlled character moves to the approved pond rowboat at the dock.
+// GM-authoritative world/Actor document writes; no GM clicks, macros or external sockets.
+if (!['tokenMoveIn','tokenMoveWithin'].includes(event?.name)) return;
+if (game.world?.id !== 'cabin-in-the-ashen-veil' || game.version !== '14.367') return;
+if (!game.user?.isGM || game.users.activeGM?.id !== game.user.id) return;
+const SCENE='CAVEXT02Scene001';
+const REGION='CAVROWBOATREG001';
+const ITEM_ID='CAVMIRRORSUNK001';
+const SCOPE='dicebox-campaign-helper';
+const STATE_KEY='cavPondMirrorPickup';
+if (scene?.id !== SCENE || region?.id !== REGION) return;
+const candidate=event.data?.token?.document ?? event.data?.token;
+const token=scene.tokens.get(candidate?.id ?? event.data?.tokenId);
+if (!token || token.hidden || token.actorId == null) return;
+const actor=token.actor;
+if (!actor || actor.type!=='character') return;
+const moverId=event.userId ?? event.data?.userId ?? null;
+const owners=game.users.contents.filter(u=>!u.isGM && u.active && actor.testUserPermission(u,'OWNER'));
+const player=moverId ? owners.find(u=>u.id===moverId) : owners.length===1 ? owners[0] : null;
+if (!player) return;
+const ownsOars=actor.items.contents.some(i=>i.getFlag?.(SCOPE,'cavPickupSourceUuid')==='Item.CAVOARSPOND00001' ||
+  (i.name==='Wooden Oars' && i.getFlag?.(SCOPE,'cavFirstActPickup')==='donovans_shack_freely_available'));
+if (!ownsOars) return;
+const source=game.items.get(ITEM_ID);
+if (!source || source.uuid!==`Item.${ITEM_ID}` || source.name!=='Ornate Mirror') return;
+const claim=region.getFlag(SCOPE,STATE_KEY);
+if (claim?.status==='done' || claim?.status==='reserved') return;
+const hasReward=game.actors.contents.some(a=>a.items.contents.some(i=>
+  i.getFlag?.(SCOPE,'cavPickupSourceUuid')===source.uuid &&
+  i.getFlag?.(SCOPE,'cavPickupRegionUuid')===region.uuid));
+if (hasReward) return; // missing ledger: stop, never blindly duplicate
+const busy=globalThis.__CAV_EARLY_MIRROR_PENDING__ ?? (globalThis.__CAV_EARLY_MIRROR_PENDING__ = new Set());
+if (busy.has(REGION)) return;
+busy.add(REGION);
+try {
+  await region.setFlag(SCOPE, STATE_KEY, {status:'reserved',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid});
+  const reward=source.toObject();delete reward._id;
+  reward.flags={...reward.flags,[SCOPE]:{
+    ...reward.flags?.[SCOPE],cavPickupSourceUuid:source.uuid,cavPickupRegionUuid:region.uuid,
+    cavFirstActPickup:'pond_full_sunken_rowboat_retrieval'}};
+  const created=await actor.createEmbeddedDocuments('Item',[reward]);
+  if (created.length!==1) throw Error('Expected exactly one Oars Item');
+  await region.setFlag(SCOPE,STATE_KEY,{status:'done',actorId:actor.id,tokenId:token.id,sourceUuid:source.uuid,itemId:created[0].id});
+  await ChatMessage.create({speaker:{alias:'The Old Rowboat'},
+    content:'<p>With the wooden oars, you reach an older rowboat beneath the water and retrieve an ornate mirror from the wreck.</p>',
+    whisper:[player.id]});
+} catch(err) {
+  console.error('[CAV Pond Mirror] Reward outcome requires inspection; reserved claim retained.',err);
+} finally {busy.delete(REGION)}

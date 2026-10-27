@@ -1,0 +1,76 @@
+// CAV owner-placed H-U02 lower-right Attic Hatch; v001.
+// Client-side approved-map close-up, plus GM-authoritative Ladder Hook deployment on legitimate token approach.
+// The native Attic entry and return teleports were previously installed DISABLED and are enabled only after GM hook success.
+const WORLD='cabin-in-the-ashen-veil',S='gGgUHlHdI7RFrbUh',REG='UOudBnxOGVlAlPoa';
+const AS='UNEdA6iy6nk1Xuga',RETURN='iiUiIaQxybYR73lH';
+const GO='u8olskrLpj6mnsdx',BACK='QvxlDnpZFq9APBSt';
+const SCOPE='dicebox-campaign-helper',LEDGER='cavAtticLadderLowered';
+const HOOK='Item.CAVLADDERHOOK001';
+const SOURCE='Scene.CAVEXT01Yard0001.Region.CAV01R0000000008';
+const ART='worlds/cabin-in-the-ashen-veil/assets/puzzle-closeups/attic-hatch-approved-map-crop-v001.png';
+const POINTER='__CAV_ATTIC_HATCH_POINTER_V001__',BUSY='__CAV_ATTIC_HATCH_BUSY_V001__';
+if(game.world?.id!==WORLD||game.version!=='14.367'||scene?.id!==S||region?.id!==REG)return;
+const eventName=event?.name,listener=globalThis[POINTER];
+if(['behaviorUnviewed','behaviorDeactivated'].includes(eventName)){
+ if(listener?.handler&&canvas?.stage)canvas.stage.off('pointertap',listener.handler);
+ delete globalThis[POINTER];return;
+}
+if(eventName==='behaviorViewed'&&!game.user?.isGM){
+ if(listener?.handler&&canvas?.stage)canvas.stage.off('pointertap',listener.handler);
+ const onClick=async e=>{
+  if(!canvas?.ready||canvas.scene?.id!==S||game.user.isGM||e.button!==undefined&&e.button!==0)return;
+  const pos=canvas.stage.toLocal(e.global);
+  if(!region.testPoint({x:pos.x,y:pos.y,elevation:0}))return;
+  if(globalThis.__CAV_ATTIC_VIEW_BUSY_V001__)return;
+  globalThis.__CAV_ATTIC_VIEW_BUSY_V001__=true;
+  try {
+   const ready=region.getFlag(SCOPE,LEDGER)?.status==='done';
+   const text=ready?
+    'The concealed ladder has been lowered. The attic lies above.':
+    'Among the old boards is an attic hatch with a recessed iron ring. Something with a hooked end could draw the ladder down.';
+   await foundry.applications.api.DialogV2.prompt({
+    window:{title:'Attic Hatch'},
+    content:'<figure style="max-width:560px;margin:auto;text-align:center"><img src="'+ART+'" alt="Close-up of an old wooden attic hatch" style="display:block;max-width:100%;max-height:65vh;margin:auto;border:1px solid #735e47;border-radius:4px" /><figcaption style="margin:0.65rem;font-style:italic">'+text+'</figcaption></figure>',
+    ok:{label:'Close',callback:()=>true},rejectClose:false
+   });
+  }finally{globalThis.__CAV_ATTIC_VIEW_BUSY_V001__=false;}
+ };
+ if(canvas?.stage){canvas.stage.on('pointertap',onClick);globalThis[POINTER]={handler:onClick};}
+ return;
+}
+if(!['tokenMoveIn','tokenMoveWithin'].includes(eventName))return;
+if(!game.ready||!game.user.isGM||game.users.activeGM?.id!==game.user.id)return;
+const doc=event.data?.token?.document??event.data?.token;
+const token=scene.tokens.get(doc?.id??event.data?.tokenId);
+if(!token||token.hidden||!token.actorId||token.actor?.type!=='character')return;
+const actor=token.actor;
+const owners=game.users.contents.filter(u=>u.active&&!u.isGM&&actor.testUserPermission(u,'OWNER'));
+const sender=event.userId??event.data?.userId??null;
+const player=sender?owners.find(u=>u.id===sender):(owners.length===1?owners[0]:null);
+if(!player)return;
+const genuine=actor.items.contents.some(i=>i.name==='Ladder Hook'&&
+ i.getFlag?.(SCOPE,'cavCarriageRewardSourceUuid')===HOOK&&
+ i.getFlag?.(SCOPE,'cavCarriageRewardRegionUuid')===SOURCE);
+if(!genuine)return;
+const state=region.getFlag(SCOPE,LEDGER);
+if(state?.status==='done'||state?.status==='reserved')return;
+const entry=region.behaviors.get(GO),destination=game.scenes.get(AS),returnRegion=destination?.regions.get(RETURN);
+const back=returnRegion?.behaviors.get(BACK);
+if(!entry||!back||entry.type!=='teleportToken'||back.type!=='teleportToken'||!entry.disabled||!back.disabled)return;
+if(![...entry.system.destinations].includes('Scene.UNEdA6iy6nk1Xuga.Region.CAVB0770FFEA68BC')||
+ ![...back.system.destinations].includes('Scene.gGgUHlHdI7RFrbUh.Region.1DJ0FCse01r9J5P5'))return;
+const busy=globalThis[BUSY]??(globalThis[BUSY]=new Set());
+if(busy.has(REG))return;
+busy.add(REG);
+try{
+ await region.setFlag(SCOPE,LEDGER,{status:'reserved',actorId:actor.id,tokenId:token.id,hookSourceUuid:HOOK,requiredCarriageUuid:SOURCE});
+ // Recovery-safe sequence: open the return path before the outward route.
+ await returnRegion.updateEmbeddedDocuments('RegionBehavior',[{_id:BACK,disabled:false}]);
+ await region.updateEmbeddedDocuments('RegionBehavior',[{_id:GO,disabled:false}]);
+ if(entry.disabled||back.disabled)throw Error('Attic pair did not activate; reserved ledger requires reconciliation');
+ await region.setFlag(SCOPE,LEDGER,{status:'done',actorId:actor.id,tokenId:token.id,hookSourceUuid:HOOK,entryBehaviorId:GO,returnBehaviorId:BACK});
+ try{await ChatMessage.create({speaker:{alias:'Attic Hatch'},
+  content:'<p>You catch the recessed ring with the ladder hook and pull. The concealed ladder unfolds with a long groan, giving access to the attic.</p>',
+  whisper:[player.id]});}catch(e){console.warn('[CAV Attic] Ladder lowered; whisper failed',e);}
+}catch(err){console.error('[CAV Attic] Outcome uncertain; reserved ledger retained for reconciliation',err);}
+finally{busy.delete(REG);}

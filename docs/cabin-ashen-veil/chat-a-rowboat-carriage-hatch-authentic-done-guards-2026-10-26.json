@@ -1,0 +1,46 @@
+{
+    "foundry":  "14.367",
+    "atticPortals":  "both remain disabled",
+    "initialScripts":  45,
+    "scenes":  47,
+    "workstream":  "Chat A early-midgame",
+    "oarsOriginalClaim":  "DONE with matching actor embedded original Item",
+    "priorRegionwrightCommit":  "830d48788bcfae13a760c73ad2cbc129be68c63c",
+    "independentPostread":  "PASS",
+    "teleports":  75,
+    "tests":  217,
+    "nativeWrite":  "installed-gm-readback-pass",
+    "gameWorld":  "cabin-in-the-ashen-veil",
+    "executeScripts":  46,
+    "realPlayerAcceptance":  false,
+    "newLateGameScript":  "CAVEXT06LYEMIX01",
+    "date":  "2026-10-26",
+    "gm":  "Gamemaster 1",
+    "chatBModified":  false,
+    "initialBehaviorCount":  120,
+    "otherCheckedClaims":  "NULL",
+    "newTests":  19,
+    "changedScripts":  [
+                           {
+                               "sha":  "e310f3684eb4299cd4cc9171c0d4098e5a5c87548505f5edeac252eaac65ad09",
+                               "id":  "CAVMIRRORBEH0001",
+                               "kind":  "rowboat"
+                           },
+                           {
+                               "sha":  "c0623e82535d9b0c372e31fd74a9dfd95a4e6149c0599b5b8ad0c82bd62e31",
+                               "id":  "3nhNHvdSWo9ix10a",
+                               "kind":  "carriage"
+                           },
+                           {
+                               "sha":  "6b673d12f662c0ea95570c048e32e5f0bd7da359ef1699d2931d6862b02547d0",
+                               "id":  "8gISLbFWqUhxy9e8",
+                               "kind":  "hatch"
+                           }
+                       ],
+    "failures":  0,
+    "timezone":  "America/Los_Angeles",
+    "schema":  "dicebox.cav.chat-a-opening-triple-proof-v1",
+    "behaviors":  121,
+    "testFiles":  42,
+    "regions":  232
+}
