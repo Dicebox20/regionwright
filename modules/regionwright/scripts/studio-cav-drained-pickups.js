@@ -1,3 +1,4 @@
+import {evaluateSluiceRecordedPrestate} from "./studio-cav-water-state.js";
 const NS="dicebox-campaign-helper",W="cabin-in-the-ashen-veil",P="CAVEXT02Scene001",G="CAVEXT02SLUICE01",D="8yLMRDvxyw58dydh";
 const F={
  CAVPONDWEATHER01:{scene:P,item:"CAVWEATHERKEY001",name:"Weathered Key",art:"cav-pond-drained-weathered-stairs-crop-20261026.png"},
@@ -13,11 +14,42 @@ export const drainedPickupDecision=(stage,flag)=>stage!=="open"?"hidden":flag?.s
 export const shouldHandleDrainedPickupClick=({fixtureId,insideFixture=false,insideRosewaterRing=false}={})=>
  insideFixture&&!(fixtureId==="CAVBATHSCRDRY001"&&insideRosewaterRing);
 
+// Read-only fail-closed source proof for BOTH original underwater item fixtures.
+// The previous done flag alone is NOT sufficient: a close transaction may be
+// stale while water flags are manipulated. No item or scene writes in this helper.
+export function assessCavDrainedPickupWaterReady({
+ crank=null,water=null,transaction=null,pondBackground=null,
+ trailPortal=null,dryBathLandingExists=false
+}={}){
+ const failed=reason=>({ready:false,reason});
+ const proof=evaluateSluiceRecordedPrestate({crank,water,transaction});
+ if(!proof.ready)return failed("original-sluice-"+proof.reason);
+ if(proof.reason!=="previous-stage-committed"||water?.status!=="open"||
+  water?.pond!=="drained"||water?.bath!=="drained"||
+  transaction?.operation!=="open"||transaction?.committedState!=="open")
+  return failed("original-drained-stage-not-committed");
+ if(pondBackground!=="Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png")
+  return failed("original-pond-drained-art-not-active");
+ if(!dryBathLandingExists)return failed("original-dry-bath-landing-missing");
+ if(trailPortal?.id!=="ZbrhX0nnaLvLA5Zh"||
+  trailPortal?.type!=="teleportToken"||trailPortal?.disabled!==false||
+  !Array.isArray(trailPortal?.destinations)||trailPortal.destinations.length!==1||
+  trailPortal.destinations[0]!=="Scene."+D+".Region.R2Pg9eHODtb1C1Yk")
+  return failed("original-trail-dry-bath-route-not-committed");
+ return {ready:true,reason:"original-committed-drained-stage"};
+}
 function DRY(){
- const p=game.scenes.get(P),g=p?.regions.get(G),t=game.scenes.get("CAVTRAILScene001")?.regions.get("13g6uK1QrR9PFOzA")?.behaviors.get("ZbrhX0nnaLvLA5Zh");
- return g?.getFlag(NS,"cavSluiceStageTransaction")?.status==="done"&&g.getFlag(NS,"cavPondBathWaterState")?.status==="open"&&g.getFlag(NS,"cavPondBathWaterState")?.bath==="drained"&&
- p.background.src==="Maps/cabin-in-the-ashen-veil/ext-02_pond_drained_owner-approved.png"&&
- t?.system.destinations.has("Scene."+D+".Region.R2Pg9eHODtb1C1Yk");
+ const p=game.scenes.get(P),g=p?.regions.get(G),
+  t=game.scenes.get("CAVTRAILScene001")?.regions.get("13g6uK1QrR9PFOzA")?.behaviors.get("ZbrhX0nnaLvLA5Zh");
+ const portal=t&&{id:t.id,type:t.type,disabled:t.disabled,
+  destinations:t.system?.destinations?[...t.system.destinations]:[]};
+ return assessCavDrainedPickupWaterReady({
+  crank:g?.getFlag(NS,"cavSluiceCrankInstall"),
+  water:g?.getFlag(NS,"cavPondBathWaterState"),
+  transaction:g?.getFlag(NS,"cavSluiceStageTransaction"),
+  pondBackground:p?.background?.src,trailPortal:portal,
+  dryBathLandingExists:!!game.scenes.get(D)?.regions.get("R2Pg9eHODtb1C1Yk")
+ }).ready;
 }
 async function CLAIM_ITEM(req,author){
  if(!GM()||req?.version!==1||req.action!=="pickup")return "denied";

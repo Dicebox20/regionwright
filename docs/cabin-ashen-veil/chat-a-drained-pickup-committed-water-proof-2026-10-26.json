@@ -1,0 +1,54 @@
+{
+  "schema": "dicebox.cav.chat-a-drained-pickup-receipt-proof/v1",
+  "dateLocal": "2026-10-26",
+  "owner": "Lets continue",
+  "chat": "A",
+  "source": {
+    "repo": "Dicebox20/regionwright",
+    "branch": "codex/cav-sune-integration-20261026",
+    "beforeCommit": "7f7b9b1efabe5ce4943214b9e4c539875f6be1f0",
+    "modified": "modules/regionwright/scripts/studio-cav-drained-pickups.js",
+    "addedTest": "tests/cav-drained-pickup-water-receipt-proof.test.mjs",
+    "regressionsPassed": 144,
+    "regressionsFailed": 0,
+    "newTests": 7,
+    "installedModuleSha256": "305D50CDD6EFBEA963C30EFB8A2DBA0FEB82BE48E203B1ABDB1E88D5AE7BCC7E",
+    "sourceMatchesInstalled": true
+  },
+  "live": {
+    "world": "cabin-in-the-ashen-veil",
+    "foundry": "14.367",
+    "gm": "Gamemaster 1",
+    "elected": true,
+    "crank": null,
+    "water": null,
+    "stageTransaction": null,
+    "pondArt": "Maps/cabin-in-the-ashen-veil/ext-02_pond_full_owner-approved.png",
+    "trailTarget": "Scene.CAVBATHScene0001.Region.R2Pg9eHODtb1C1Yk",
+    "originalWeatheredKeyRegionEnabled": true,
+    "originalScrewdriverRegionEnabled": true,
+    "originalRosewaterRegionDisabled": true,
+    "taggedPickups": 0,
+    "gmPickupServiceRegistered": true,
+    "messages": 54,
+    "worldStoryWrites": 0,
+    "sourceReloadCount": 1,
+    "afterReloadSourceVerified": true
+  },
+  "pureChecks": {
+    "validCommittedDrain": true,
+    "missingCrankDenied": true,
+    "staleCloseTransactionDenied": true,
+    "extraPortalTargetDenied": true
+  },
+  "evidence": [
+    "utility-harness/artifacts/cav-chat-a-drained-pickup-after-reload-gm-proof-20261026.json",
+    "utility-harness/artifacts/cav-chat-a-pond-bath-pickup-original-topology-audit-20261026.cjs"
+  ],
+  "next": [
+    "Inspect previously unaudited downstream pickup-to-Boiler dependency",
+    "Do not force gameplay drain or Item pickup",
+    "Chat B late-game source remains separate"
+  ],
+  "fidelity": "available-message reconstruction not full native chat export"
+}
