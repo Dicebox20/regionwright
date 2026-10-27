@@ -1,0 +1,181 @@
+{
+  "status": "five-original-sune-workshop-physical-fixtures-installed-dormant",
+  "context": {
+    "world": "cabin-in-the-ashen-veil",
+    "gm": "Gamemaster 1",
+    "existingStudioRegions": 3,
+    "existingWorkshopRegions": 2,
+    "originalVanity": "Scene.CAVHU07Scene0001.Region.CAVVANITYREG0001",
+    "originalWick": "Scene.CAVHU08Scene0001.Region.CAVBE5639AEC2179",
+    "originalPrayer": "Item.5jwy75XyFezukf3b",
+    "actorProtectionCopies": 0,
+    "proposals": [
+      {
+        "kind": "sune-altar",
+        "id": "CAVSUNEACTION001",
+        "sceneId": "CAVHU07Scene0001",
+        "shape": {
+          "x": 1120,
+          "y": 350,
+          "width": 130,
+          "height": 180
+        },
+        "behaviorId": "CAVSUNEPRAYBEH01",
+        "behaviorDisabled": true,
+        "destination": []
+      },
+      {
+        "kind": "studio-east-departure",
+        "id": "CAVSUNEEASTPASS1",
+        "sceneId": "CAVHU07Scene0001",
+        "shape": {
+          "x": 1320,
+          "y": 625,
+          "width": 150,
+          "height": 155
+        },
+        "behaviorId": "CAVSUNEOUTTELE01",
+        "behaviorDisabled": true,
+        "destination": [
+          "Scene.CAVHU08Scene0001.Region.CAVWORKARRIVAL01"
+        ]
+      },
+      {
+        "kind": "studio-return-arrival",
+        "id": "CAVSTUDIORETURN1",
+        "sceneId": "CAVHU07Scene0001",
+        "shape": {
+          "x": 1020,
+          "y": 765,
+          "width": 145,
+          "height": 145
+        },
+        "behaviorId": null,
+        "behaviorDisabled": null,
+        "destination": []
+      },
+      {
+        "kind": "workshop-entry-arrival",
+        "id": "CAVWORKARRIVAL01",
+        "sceneId": "CAVHU08Scene0001",
+        "shape": {
+          "x": 235,
+          "y": 425,
+          "width": 145,
+          "height": 140
+        },
+        "behaviorId": null,
+        "behaviorDisabled": null,
+        "destination": []
+      },
+      {
+        "kind": "workshop-return-departure",
+        "id": "CAVWORKRETURN001",
+        "sceneId": "CAVHU08Scene0001",
+        "shape": {
+          "x": 210,
+          "y": 615,
+          "width": 150,
+          "height": 145
+        },
+        "behaviorId": "CAVWORKBACKTEL01",
+        "behaviorDisabled": true,
+        "destination": [
+          "Scene.CAVHU07Scene0001.Region.CAVSTUDIORETURN1"
+        ]
+      }
+    ]
+  },
+  "created": [
+    {
+      "kind": "studio-return-arrival",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSTUDIORETURN1",
+      "behaviorUuid": null,
+      "disabled": null,
+      "shape": {
+        "type": "rectangle",
+        "x": 1020,
+        "y": 765,
+        "width": 145,
+        "height": 145,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    },
+    {
+      "kind": "workshop-entry-arrival",
+      "uuid": "Scene.CAVHU08Scene0001.Region.CAVWORKARRIVAL01",
+      "behaviorUuid": null,
+      "disabled": null,
+      "shape": {
+        "type": "rectangle",
+        "x": 235,
+        "y": 425,
+        "width": 145,
+        "height": 140,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    },
+    {
+      "kind": "sune-altar",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEACTION001",
+      "behaviorUuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEACTION001.RegionBehavior.CAVSUNEPRAYBEH01",
+      "disabled": true,
+      "shape": {
+        "type": "rectangle",
+        "x": 1120,
+        "y": 350,
+        "width": 130,
+        "height": 180,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    },
+    {
+      "kind": "studio-east-departure",
+      "uuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEEASTPASS1",
+      "behaviorUuid": "Scene.CAVHU07Scene0001.Region.CAVSUNEEASTPASS1.RegionBehavior.CAVSUNEOUTTELE01",
+      "disabled": true,
+      "shape": {
+        "type": "rectangle",
+        "x": 1320,
+        "y": 625,
+        "width": 150,
+        "height": 155,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    },
+    {
+      "kind": "workshop-return-departure",
+      "uuid": "Scene.CAVHU08Scene0001.Region.CAVWORKRETURN001",
+      "behaviorUuid": "Scene.CAVHU08Scene0001.Region.CAVWORKRETURN001.RegionBehavior.CAVWORKBACKTEL01",
+      "disabled": true,
+      "shape": {
+        "type": "rectangle",
+        "x": 210,
+        "y": 615,
+        "width": 150,
+        "height": 145,
+        "rotation": 0,
+        "hole": false,
+        "anchorX": 0,
+        "anchorY": 0,
+        "gridBased": false
+      }
+    }
+  ]
+}

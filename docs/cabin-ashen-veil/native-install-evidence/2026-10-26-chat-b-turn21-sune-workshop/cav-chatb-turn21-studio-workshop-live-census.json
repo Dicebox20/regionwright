@@ -1,0 +1,215 @@
+{
+  "world": "cabin-in-the-ashen-veil",
+  "scenes": [
+    {
+      "id": "CAVHU07Scene0001",
+      "name": "H-U07 - Dahlia Art Studio",
+      "map": "Maps/cabin-in-the-ashen-veil/h-u07-dahlia-art-studio-approved-v017-2026-10-24.png",
+      "width": 1536,
+      "height": 1024,
+      "gridSize": 120,
+      "regions": [
+        {
+          "id": "CAVVANITYREG0001",
+          "name": "H-U07 - Dahlia Vanity — Mirror Socket",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 1270,
+              "y": 310,
+              "width": 200,
+              "height": 255,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVVANITYBEH0001",
+              "name": "H-U07 - Dahlia Vanity: Mirror reveals two keys",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ],
+              "sourceLength": 4112
+            }
+          ],
+          "flags": {
+            "cavFirstActRegion": {
+              "chainNode": "vanity",
+              "sourceMap": "H-U07 v017",
+              "exactMapSha256": "67C9E5C84FF120D65600648DDB014E30A00F1EC6226C6E309E994DB54AAB4704",
+              "geometryEvidence": "inspected unchanged approved map upper-right rose mirror vanity in natural pixels",
+              "requiresSourceItemUuid": "Item.CAVMIRRORSUNK001",
+              "rewardUuids": [
+                "Item.CAVBRASSKEYVAN01",
+                "Item.CAVCARRIAGEKEY01"
+              ],
+              "status": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED"
+            },
+            "cavVerifiedNativeInstallReceiptV1": {
+              "version": 1,
+              "status": "NATIVE_BEHAVIOR_INSTALLED_GM_VERIFIED",
+              "world": "cabin-in-the-ashen-veil",
+              "verifiedBy": "Chat A exact elected-GM readback",
+              "sourceBranch": "codex/cav-sune-integration-20261026",
+              "sourceCommit": "17ea82bda1a0da04a233f9173630cb8763b7cd2a",
+              "verifiedDate": "2026-10-26",
+              "behaviorId": "CAVVANITYBEH0001",
+              "sourceSha256": "744a523cc0e90b01a6ea91dc7145e7e8cfce4a9ed094b292edd4f4e845d2dfbd",
+              "originalHistoricalField": "cavFirstActRegion.status",
+              "originalHistoricalValue": "REGION_GEOMETRY_ONLY_BEHAVIOR_NOT_INSTALLED",
+              "testStatus": "INSTALLATION_ONLY_NOT_PLAYER_ACCEPTED"
+            }
+          }
+        },
+        {
+          "id": "VM6Kcyhrhgh55uFJ",
+          "name": "H-U07 - Return to Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 65,
+              "y": 395,
+              "width": 125,
+              "height": 165,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "4Yqj8PlTMqwQTKSm",
+              "name": "Dahlia Art Studio → Upper Gallery",
+              "type": "teleportToken",
+              "disabled": false,
+              "events": [
+                "tokenExit"
+              ],
+              "destination": "Scene.gGgUHlHdI7RFrbUh.Region.pL0UiBSyEoINWzZQ"
+            }
+          ],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "departure",
+            "owner": "dicebox-router-v001"
+          }
+        },
+        {
+          "id": "RjThT2Q19mYKv6DS",
+          "name": "H-U07 - Arrival from Upper Gallery",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 220,
+              "y": 435,
+              "width": 120,
+              "height": 120,
+              "gridBased": false,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0
+            }
+          ],
+          "behaviors": [],
+          "flags": {
+            "routeKey": "cav:travel:gallery-art-studio:v001",
+            "kind": "passive-arrival",
+            "owner": "dicebox-router-v001"
+          }
+        }
+      ],
+      "tokens": [],
+      "tiles": []
+    },
+    {
+      "id": "CAVHU08Scene0001",
+      "name": "H-U08 - Candle Workshop",
+      "map": "Maps/cabin-in-the-ashen-veil/H-U08_Candle_Workshop_V002_OWNER_APPROVED_2026-10-24.png",
+      "width": 1448,
+      "height": 1086,
+      "gridSize": 120,
+      "regions": [
+        {
+          "id": "CAVB78B258E0A0BB",
+          "name": "Candle Workshop ? central crafting table",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 575,
+              "y": 400,
+              "width": 260,
+              "height": 220,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": []
+        },
+        {
+          "id": "CAVBE5639AEC2179",
+          "name": "Candle Workshop ? shelving observation",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 435,
+              "y": 115,
+              "width": 240,
+              "height": 175,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "rotation": 0,
+              "gridBased": false
+            }
+          ],
+          "behaviors": [
+            {
+              "id": "CAVWICKSHELFBEH1",
+              "name": "Chat B late wick - GM guarded actions",
+              "type": "executeScript",
+              "disabled": false,
+              "events": [
+                "behaviorViewed",
+                "behaviorUnviewed",
+                "behaviorDeactivated",
+                "tokenMoveIn",
+                "tokenMoveWithin"
+              ],
+              "sourceLength": 9613
+            }
+          ]
+        }
+      ],
+      "tokens": [],
+      "tiles": []
+    }
+  ],
+  "prayers": [
+    {
+      "uuid": "Item.5jwy75XyFezukf3b",
+      "name": "Prayer of Protection",
+      "journal": "JournalEntry.CAVPRAYERPROTECT",
+      "library": "GM_LIBRARY_ONLY"
+    },
+    {
+      "uuid": "Item.GXLYq6Tf4OgPNbkU",
+      "name": "Prayer of Devotion",
+      "journal": "JournalEntry.CAVPRAYERDEVOTN1",
+      "library": "GM_LIBRARY_ONLY"
+    }
+  ],
+  "playerPrayers": []
+}
